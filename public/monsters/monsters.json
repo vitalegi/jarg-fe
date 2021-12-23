@@ -1,11 +1,11 @@
 [
     {
-      "id": "007",
+      "monsterId": "007",
       "name": "Squirtle",
       "sprite": "/monsters/sprites/squirtle.png"
     },
     {
-      "id": "004",
+      "monsterId": "004",
       "name": "Charmander",
       "sprite": "/monsters/sprites/charmander.png"
     }

@@ -1,24 +1,24 @@
-import MapConfig from "@/models/Map";
-import Monster from "@/models/Monster";
+import MapContainer from "@/models/Map";
+import { Monster, MonsterIndex } from "@/models/Character";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
 
 @Service()
 export default class GameAssetService {
-  public async getMap(map: string): Promise<MapConfig> {
+  public async getMap(map: string): Promise<MapContainer> {
     const result = await BackendWebService.url(`/maps/${map}.json`)
       .get()
       .call();
-    return result.data as MapConfig;
+    return MapContainer.create(result.data);
   }
-  public async getMonsters(): Promise<Monster[]> {
+  public async getMonstersData(): Promise<MonsterIndex[]> {
     const result = await BackendWebService.url(`/monsters/monsters.json`)
       .get()
       .call();
-    return result.data as Monster[];
+    return result.data.map((data: any) => MonsterIndex.create(data));
   }
-  public getMapSprite(map: MapConfig, name: string): SpriteConfig {
+  public getMapSprite(map: MapContainer, name: string): SpriteConfig {
     const sprite = map.sprites.filter((s) => s.name === name);
     if (sprite) {
       return sprite[0];

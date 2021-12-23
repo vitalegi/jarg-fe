@@ -31,12 +31,32 @@
     {
       "x": 0,
       "y": 0,
-      "sprite": "grass"
+      "spriteModel": "grass"
     },
     {
       "x": 1,
       "y": 0,
-      "sprite": "grass2"
+      "spriteModel": "grass2"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "spriteModel": "grass"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "spriteModel": "grass"
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "spriteModel": "grass"
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "spriteModel": "grass"
     }
   ]
 }

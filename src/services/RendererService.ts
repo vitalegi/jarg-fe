@@ -1,5 +1,5 @@
-import MapConfig from "@/models/Map";
-import Monster from "@/models/Monster";
+import MapContainer from "@/models/Map";
+import { MonsterIndex } from "@/models/Character";
 import * as PIXI from "pixi.js";
 import { Service } from "typedi";
 
@@ -10,7 +10,7 @@ class Asset {
 
 @Service()
 export default class RendererService {
-  async loadAssets(map: MapConfig, monsters: Monster[]) {
+  async loadAssets(map: MapContainer, monsters: MonsterIndex[]) {
     const mapSprites = map.sprites
       .flatMap((sprite) => sprite.sprites)
       .map((sprite) => {

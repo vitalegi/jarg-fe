@@ -11,12 +11,17 @@ import Vue from "vue";
 import * as PIXI from "pixi.js";
 import RendererService from "@/services/RendererService";
 import GameAssetService from "@/services/GameAssetService";
+import MonsterService from "@/services/MonsterService";
+import PlayerService from "@/services/PlayerService";
 import Container from "typedi";
-import MapConfig, { Tile } from "@/models/Map";
+import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
-import Monster from "@/models/Monster";
-
-let squirtle: PIXI.Sprite | null = null;
+import {
+  CharacterType,
+  Monster,
+  MonsterIndex,
+  Stats,
+} from "@/models/Character";
 
 export default Vue.extend({
   name: "GameEngine",
@@ -25,11 +30,10 @@ export default Vue.extend({
     name: "JaRG",
     rendererService: Container.get(RendererService),
     gameAssetService: Container.get<GameAssetService>(GameAssetService),
-    map: new MapConfig(),
-    monsters: new Array<Monster>(),
+    monsterService: Container.get<MonsterService>(MonsterService),
+    playerService: Container.get<PlayerService>(PlayerService),
+    map: new MapContainer(),
     app: new PIXI.Application({ width: 800, height: 600, autoDensity: true }),
-    x: 5,
-    y: 5,
     lastUserAction: 0,
   }),
   methods: {
@@ -38,38 +42,40 @@ export default Vue.extend({
 
       this.map.tiles.forEach((tile) => this.initMapTile(tile));
 
-      squirtle = this.initMonsterSprite(this.monsters[1]);
+      this.map.monsters.push(...this.playerService.getMonsters());
 
-      squirtle.x = 60 * this.x;
-      squirtle.y = 60 * this.y;
-      this.app.stage.addChild(squirtle);
+      this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
 
       this.app.ticker.add(this.gameLoop);
     },
     initMapTile(tile: Tile) {
       const spriteConfig = this.gameAssetService.getMapSprite(
         this.map,
-        tile.sprite
+        tile.spriteModel
       );
-      let sprite;
       if (spriteConfig.type === SpriteType.ANIMATED) {
-        sprite = this.rendererService.createAnimatedSprite(
+        tile.sprite = this.rendererService.createAnimatedSprite(
           spriteConfig.sprites
         );
       } else {
         throw new Error(`Unknown type ${spriteConfig.type}`);
       }
-      sprite.width = this.map.options.tileWidth;
-      sprite.height = this.map.options.tileHeight;
-      sprite.x = tile.x * this.map.options.tileWidth;
-      sprite.y = tile.y * this.map.options.tileHeight;
-      this.app.stage.addChild(sprite);
+      tile.sprite.width = this.map.options.tileWidth;
+      tile.sprite.height = this.map.options.tileHeight;
+      tile.sprite.x = tile.x * this.map.options.tileWidth;
+      tile.sprite.y = tile.y * this.map.options.tileHeight;
+      this.app.stage.addChild(tile.sprite);
     },
     initMonsterSprite(monster: Monster) {
-      const sprite = this.rendererService.createSprite(monster.sprite);
+      const monsterFamily = this.monsterService.getMonster(monster.modelId);
+      const sprite = this.rendererService.createSprite(monsterFamily.sprite);
+      monster.sprite = sprite;
+
       sprite.width = this.map.options.tileWidth;
       sprite.height = this.map.options.tileHeight;
-      return sprite;
+      sprite.x = this.map.options.tileWidth * monster.x;
+      sprite.y = this.map.options.tileHeight * monster.y;
+      this.app.stage.addChild(sprite);
     },
     gameLoop() {
       const now = +new Date();
@@ -77,31 +83,33 @@ export default Vue.extend({
         return;
       }
       this.lastUserAction = now;
-
+      const m = this.map.monsters[0];
       const direction = Math.round(4 * Math.random());
-      if (direction === 0 && this.y > 0) {
-        this.y--;
+      if (direction === 0 && m.y > 0) {
+        m.y--;
       }
-      if (direction === 1 && this.y < 9) {
-        this.y++;
+      if (direction === 1 && m.y < 9) {
+        m.y++;
       }
-      if (direction === 2 && this.x > 0) {
-        this.x--;
+      if (direction === 2 && m.x > 0) {
+        m.x--;
       }
-      if (direction === 3 && this.x < 10) {
-        this.x++;
+      if (direction === 3 && m.x < 10) {
+        m.x++;
       }
-      if (squirtle) {
-        squirtle.x = 60 * this.x;
-        squirtle.y = 60 * this.y;
+      if (m.sprite) {
+        m.sprite.x = 60 * m.x;
+        m.sprite.y = 60 * m.y;
       }
     },
   },
   async mounted() {
     this.$el.appendChild(this.app.view);
     this.map = await this.gameAssetService.getMap("map1");
-    this.monsters = await this.gameAssetService.getMonsters();
-    this.rendererService.loadAssets(this.map, this.monsters).then(this.initMap);
+    this.monsterService.init(await this.gameAssetService.getMonstersData());
+    this.rendererService
+      .loadAssets(this.map, this.monsterService.getMonsters())
+      .then(this.initMap);
   },
 });
 </script>

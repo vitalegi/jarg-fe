@@ -9,4 +9,14 @@ export default class SpriteConfig {
   sprites: string[] = [];
   walkable = false;
   swimmable = false;
+
+  public static create(sprite: any): SpriteConfig {
+    const out = new SpriteConfig();
+    out.name = sprite.name;
+    out.type = sprite.type;
+    out.sprites = sprite.sprites;
+    out.walkable = sprite.walkable;
+    out.swimmable = sprite.swimmable;
+    return out;
+  }
 }
