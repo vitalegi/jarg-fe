@@ -1,0 +1,42 @@
+{
+  "id": 1,
+  "name": "map 1",
+  "options": {
+    "tileWidth": 60,
+    "tileHeight": 60
+  },
+  "sprites": [
+    {
+      "name": "grass",
+      "type": "ANIMATED",
+      "sprites": [
+        "/sprites/backgrounds/grass1.png",
+        "/sprites/backgrounds/grass2.png"
+      ],
+      "walkable": true,
+      "swimmable": false
+    },
+    {
+      "name": "grass2",
+      "type": "ANIMATED",
+      "sprites": [
+        "/sprites/backgrounds/grass3.png",
+        "/sprites/backgrounds/grass4.png"
+      ],
+      "walkable": false,
+      "swimmable": false
+    }
+  ],
+  "tiles": [
+    {
+      "x": 0,
+      "y": 0,
+      "sprite": "grass"
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "sprite": "grass2"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# jarg-fe
+# JARG - Just a RPG Game
 
 ## Project setup
 ```
