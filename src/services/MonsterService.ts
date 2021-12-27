@@ -4,13 +4,14 @@ import {
   MonsterIndex,
   Stats,
 } from "@/models/Character";
-import RandomUtil from "@/utils/RandomUtil";
+import RandomService from "@/services/RandomService";
 import UuidUtil from "@/utils/UuidUtil";
-import { Service } from "typedi";
+import Container, { Service } from "typedi";
 
 @Service()
 export default class MonsterService {
   private monstersIndex = new Map<string, MonsterIndex>();
+  private randomService = Container.get<RandomService>(RandomService);
 
   public init(monsters: MonsterIndex[]): void {
     this.monstersIndex = new Map<string, MonsterIndex>();
@@ -38,7 +39,7 @@ export default class MonsterService {
     monster.uuid = UuidUtil.nextId();
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
-    monster.modelId = RandomUtil.randomInt(2) == 1 ? "004" : "007";
+    monster.modelId = this.randomService.randomInt(2) == 1 ? "004" : "007";
     monster.stats = new Stats();
     monster.stats.hp = 1000;
     monster.stats.atk = 100;

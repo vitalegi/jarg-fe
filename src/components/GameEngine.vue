@@ -22,6 +22,7 @@ import {
   MonsterIndex,
   Stats,
 } from "@/models/Character";
+import { InteractionEvent } from "pixi.js";
 
 export default Vue.extend({
   name: "GameEngine",
@@ -44,8 +45,12 @@ export default Vue.extend({
 
       this.map.monsters.push(...this.playerService.getMonsters());
 
-      this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
+      const enemy = this.monsterService.createMonster(null);
+      enemy.x = 6;
+      enemy.y = 6;
+      this.map.monsters.push(enemy);
 
+      this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
       this.app.ticker.add(this.gameLoop);
     },
     initMapTile(tile: Tile) {
@@ -75,7 +80,14 @@ export default Vue.extend({
       sprite.height = this.map.options.tileHeight;
       sprite.x = this.map.options.tileWidth * monster.x;
       sprite.y = this.map.options.tileHeight * monster.y;
+
+      sprite.interactive = true;
+      sprite.on("pointertap", (e) => this.userInput(e, monster.uuid));
+
       this.app.stage.addChild(sprite);
+    },
+    userInput(e: InteractionEvent, uuid: string): void {
+      console.log(uuid, e.type, e);
     },
     gameLoop() {
       const now = +new Date();
