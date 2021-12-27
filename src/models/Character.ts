@@ -23,6 +23,7 @@ export class Stats {
 
 export default class Character {
   uuid = "";
+  name = "";
   type = CharacterType.MONSTER;
   modelId = "";
   sprite: PIXI.Sprite | null = null;
@@ -30,6 +31,7 @@ export default class Character {
 
   public static create(data: any, out: Character): Character {
     out.uuid = data.uuid;
+    out.name = data.name;
     out.type = data.type;
     out.modelId = data.modelId;
     out.sprite = data.sprite;

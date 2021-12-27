@@ -41,10 +41,12 @@ export default class GameService {
 
   public async init(): Promise<void> {
     this.app = new PIXI.Application({
-      width: 800,
-      height: 600,
       autoDensity: true,
     });
+    this.app.renderer.view.style.position = "absolute";
+    this.app.renderer.view.style.display = "block";
+    this.app.resizeTo = window;
+
     this.map = await this.gameAssetService.getMap("map1");
     this.monsterService.init(await this.gameAssetService.getMonstersData());
     this.rendererService

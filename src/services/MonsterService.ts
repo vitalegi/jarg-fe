@@ -37,6 +37,7 @@ export default class MonsterService {
   public createMonster(ownerId: null | string): Monster {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
+    monster.name = UuidUtil.nextId().substring(0, 10);
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
     monster.modelId = this.randomService.randomInt(2) == 1 ? "004" : "007";

@@ -28,6 +28,7 @@
     }
   ],
   "tiles": [
+    { "x": 0, "y": 0, "spriteModel": "grass" },
     { "x": 0, "y": 1, "spriteModel": "grass2" },
     { "x": 0, "y": 2, "spriteModel": "grass2" },
     { "x": 0, "y": 3, "spriteModel": "grass2" },
@@ -146,6 +147,16 @@
     { "x": 11, "y": 6, "spriteModel": "grass" },
     { "x": 11, "y": 7, "spriteModel": "grass" },
     { "x": 11, "y": 8, "spriteModel": "grass" },
-    { "x": 11, "y": 9, "spriteModel": "grass" }
+    { "x": 11, "y": 9, "spriteModel": "grass" },
+    { "x": 15, "y": 9, "spriteModel": "grass" },
+    { "x": 18, "y": 9, "spriteModel": "grass" },
+    { "x": 21, "y": 9, "spriteModel": "grass" },
+    { "x": 24, "y": 9, "spriteModel": "grass" },
+    { "x": 27, "y": 9, "spriteModel": "grass" },
+    { "x": 10, "y": 10, "spriteModel": "grass" },
+    { "x": 11, "y": 11, "spriteModel": "grass" },
+    { "x": 12, "y": 12, "spriteModel": "grass" },
+    { "x": 13, "y": 13, "spriteModel": "grass" },
+    { "x": 14, "y": 14, "spriteModel": "grass" }
   ]
 }

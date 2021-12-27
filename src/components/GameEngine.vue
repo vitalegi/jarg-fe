@@ -1,9 +1,5 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12"> This is {{ name }}! </v-col>
-    </v-row>
-  </v-container>
+  <div></div>
 </template>
 
 <script lang="ts">
@@ -15,7 +11,6 @@ export default Vue.extend({
   name: "GameEngine",
 
   data: () => ({
-    name: "JaRG",
     gameService: Container.get<GameService>(GameService),
   }),
   methods: {},
