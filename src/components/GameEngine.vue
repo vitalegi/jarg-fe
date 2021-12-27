@@ -10,7 +10,6 @@
 import Vue from "vue";
 import GameService from "@/services/GameService";
 import Container from "typedi";
-import { InteractionEvent } from "pixi.js";
 
 export default Vue.extend({
   name: "GameEngine",

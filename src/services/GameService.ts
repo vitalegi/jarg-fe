@@ -1,5 +1,6 @@
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";
+import { InteractionEvent } from "pixi.js";
 import RendererService from "@/services/RendererService";
 import GameAssetService from "@/services/GameAssetService";
 import MonsterService from "@/services/MonsterService";
@@ -13,7 +14,6 @@ import {
   MonsterIndex,
   Stats,
 } from "@/models/Character";
-import { InteractionEvent } from "pixi.js";
 
 @Service()
 export default class GameService {
@@ -26,14 +26,13 @@ export default class GameService {
   protected playerService = Container.get<PlayerService>(PlayerService);
 
   protected map = new MapContainer();
-  protected app = new PIXI.Application({
-    width: 800,
-    height: 600,
-    autoDensity: true,
-  });
+  protected app : PIXI.Application | null = null;
 
   public getApp(): PIXI.Application {
-    return this.app;
+    if (this.app) {
+      return this.app;
+    }
+    throw new Error("App not initialized");
   }
 
   public async init(): Promise<void> {
@@ -57,7 +56,7 @@ export default class GameService {
         this.map.monsters.push(enemy);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
-        this.app.ticker.add(this.gameLoop);
+        this.getApp().ticker.add(this.gameLoop);
       });
   }
 
@@ -87,7 +86,7 @@ export default class GameService {
     tile.sprite.height = this.map.options.tileHeight;
     tile.sprite.x = tile.x * this.map.options.tileWidth;
     tile.sprite.y = tile.y * this.map.options.tileHeight;
-    this.app.stage.addChild(tile.sprite);
+    this.getApp().stage.addChild(tile.sprite);
   }
 
   public initMonsterSprite(monster: Monster) {
@@ -101,8 +100,8 @@ export default class GameService {
     sprite.y = this.map.options.tileHeight * monster.y;
 
     sprite.interactive = true;
-    sprite.on("pointertap", (e) => this.userInput(e, monster.uuid));
+    sprite.on("pointertap", (e: InteractionEvent) => this.userInput(e, monster.uuid));
 
-    this.app.stage.addChild(sprite);
+    this.getApp().stage.addChild(sprite);
   }
 }
