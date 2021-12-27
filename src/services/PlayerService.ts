@@ -12,6 +12,9 @@ const monsters = [
   monsterService.createMonster(playerId),
 ];
 
+monsters[0].x = 4;
+monsters[0].y = 5;
+
 @Service()
 export default class PlayerService {
   public getPlayerId(): string {
