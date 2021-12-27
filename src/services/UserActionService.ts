@@ -1,14 +1,17 @@
-import { Service } from "typedi";
+import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import { InteractionEvent } from "pixi.js";
 import Point from "@/models/Point";
 import ActionHandler from "@/game-engine/action-handler/ActionHandler";
 import WalkActionHandler from "@/game-engine/action-handler/WalkActionHandler";
 import UserInput from "@/game-engine/action-handler/UserInput";
+import DragScreenHandler from "@/game-engine/DragScreenHandler";
 
 @Service()
 export default class UserActionService {
   protected actionHandler: null | ActionHandler = null;
+  protected dragScreenHandler =
+    Container.get<DragScreenHandler>(DragScreenHandler);
 
   public setActionHandler(actionHandler: ActionHandler | null) {
     this.actionHandler = actionHandler;
@@ -17,10 +20,12 @@ export default class UserActionService {
   public initMonster(uuid: string, sprite: PIXI.Sprite): void {
     sprite.interactive = true;
     sprite.on("pointertap", (e: InteractionEvent) => this.tapMonster(uuid));
+    this.dragScreenHandler.addListener(sprite);
   }
   public initMapTile(position: Point, sprite: PIXI.Sprite): void {
     sprite.interactive = true;
     sprite.on("pointertap", (e: InteractionEvent) => this.tapTile(position));
+    this.dragScreenHandler.addListener(sprite);
   }
 
   public tapMonster(uuid: string): void {

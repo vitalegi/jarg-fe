@@ -28,6 +28,7 @@ export default class GameService {
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
+  protected battleContainer: PIXI.Container | null = null;
 
   public getMap(): MapContainer {
     return this.map;
@@ -52,6 +53,9 @@ export default class GameService {
     this.rendererService
       .loadAssets(this.map, this.monsterService.getMonsters())
       .then(() => {
+        this.battleContainer = new PIXI.Container();
+        this.app?.stage.addChild(this.battleContainer);
+
         this.map.tiles.forEach((tile) => this.initMapTile(tile));
 
         this.map.monsters.push(...this.playerService.getMonsters());
@@ -62,12 +66,19 @@ export default class GameService {
         this.map.monsters.push(enemy);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
-        this.getApp().ticker.add(this.gameLoop);
+        this.getApp().ticker.add(() => this.gameLoop());
       });
   }
 
   public getMonsterById(uuid: string): Monster {
     return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
+  }
+
+  public moveStage(offsetX: number, offsetY: number): void {
+    if (this.app) {
+      this.app.stage.x += offsetX;
+      this.app.stage.y += offsetY;
+    }
   }
 
   protected gameLoop(): void {
@@ -100,7 +111,7 @@ export default class GameService {
 
     this.userActionService.initMapTile(tile.coordinates, tile.sprite);
 
-    this.getApp().stage.addChild(tile.sprite);
+    this.battleContainer?.addChild(tile.sprite);
   }
 
   protected initMonsterSprite(monster: Monster): void {
@@ -120,6 +131,6 @@ export default class GameService {
     }
 
     this.userActionService.initMonster(monster.uuid, sprite);
-    this.getApp().stage.addChild(sprite);
+    this.battleContainer?.addChild(sprite);
   }
 }
