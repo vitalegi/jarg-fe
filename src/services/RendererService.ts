@@ -44,7 +44,7 @@ export default class RendererService {
     return unique;
   }
 
-  createSprite(
+  public createSprite(
     name: string,
     options?: { width?: number; height?: number }
   ): PIXI.Sprite {
@@ -60,7 +60,7 @@ export default class RendererService {
     }
   }
 
-  createAnimatedSprite(
+  public createAnimatedSprite(
     names: string[],
     options?: { width?: number; height?: number }
   ): PIXI.AnimatedSprite {

@@ -1,6 +1,7 @@
 import SpriteConfig from "./SpriteConfig";
 import * as PIXI from "pixi.js";
 import Character, { Monster } from "./Character";
+import Point from "./Point";
 
 export class TileOption {
   tileWidth = 0;
@@ -16,15 +17,13 @@ export class TileOption {
 
 export class Tile {
   spriteModel = "";
-  x = 0;
-  y = 0;
+  coordinates = new Point();
   sprite: PIXI.Sprite | null = null;
 
   public static create(tile: any): Tile {
     const out = new Tile();
     out.spriteModel = tile.spriteModel;
-    out.x = tile.x;
-    out.y = tile.y;
+    out.coordinates = Point.create(tile);
     out.sprite = tile.sprite;
     return out;
   }

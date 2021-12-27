@@ -1,6 +1,5 @@
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";
-import { InteractionEvent } from "pixi.js";
 import RendererService from "@/services/RendererService";
 import GameAssetService from "@/services/GameAssetService";
 import MonsterService from "@/services/MonsterService";
@@ -8,12 +7,10 @@ import PlayerService from "@/services/PlayerService";
 import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
-import {
-  CharacterType,
-  Monster,
-  MonsterIndex,
-  Stats,
-} from "@/models/Character";
+import { Monster } from "@/models/Character";
+import UserActionService from "./UserActionService";
+import CoordinateService from "./CoordinateService";
+import Point from "@/models/Point";
 
 @Service()
 export default class GameService {
@@ -24,10 +21,17 @@ export default class GameService {
     Container.get<GameAssetService>(GameAssetService);
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected playerService = Container.get<PlayerService>(PlayerService);
+  protected userActionService =
+    Container.get<UserActionService>(UserActionService);
+  protected coordinateService =
+    Container.get<CoordinateService>(CoordinateService);
 
   protected map = new MapContainer();
-  protected app : PIXI.Application | null = null;
+  protected app: PIXI.Application | null = null;
 
+  public getMap(): MapContainer {
+    return this.map;
+  }
   public getApp(): PIXI.Application {
     if (this.app) {
       return this.app;
@@ -51,8 +55,8 @@ export default class GameService {
         this.map.monsters.push(...this.playerService.getMonsters());
 
         const enemy = this.monsterService.createMonster(null);
-        enemy.x = 6;
-        enemy.y = 6;
+        enemy.coordinates = new Point(6, 6);
+
         this.map.monsters.push(enemy);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
@@ -60,17 +64,18 @@ export default class GameService {
       });
   }
 
-  protected gameLoop() {
+  public getMonsterById(uuid: string): Monster {
+    return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
+  }
+
+  protected gameLoop(): void {
     const now = +new Date();
     if (now - this.lastUserAction < 100) {
       return;
     }
     this.lastUserAction = now;
   }
-  userInput(e: InteractionEvent, uuid: string): void {
-    console.log(uuid, e.type, e);
-  }
-  public initMapTile(tile: Tile) {
+  protected initMapTile(tile: Tile): void {
     const spriteConfig = this.gameAssetService.getMapSprite(
       this.map,
       tile.spriteModel
@@ -84,24 +89,35 @@ export default class GameService {
     }
     tile.sprite.width = this.map.options.tileWidth;
     tile.sprite.height = this.map.options.tileHeight;
-    tile.sprite.x = tile.x * this.map.options.tileWidth;
-    tile.sprite.y = tile.y * this.map.options.tileHeight;
+
+    this.coordinateService.setTileCoordinates(
+      tile.sprite,
+      tile.coordinates,
+      this.map
+    );
+
+    this.userActionService.initMapTile(tile.coordinates, tile.sprite);
+
     this.getApp().stage.addChild(tile.sprite);
   }
 
-  public initMonsterSprite(monster: Monster) {
+  protected initMonsterSprite(monster: Monster): void {
     const monsterFamily = this.monsterService.getMonster(monster.modelId);
     const sprite = this.rendererService.createSprite(monsterFamily.sprite);
     monster.sprite = sprite;
 
     sprite.width = this.map.options.tileWidth;
     sprite.height = this.map.options.tileHeight;
-    sprite.x = this.map.options.tileWidth * monster.x;
-    sprite.y = this.map.options.tileHeight * monster.y;
 
-    sprite.interactive = true;
-    sprite.on("pointertap", (e: InteractionEvent) => this.userInput(e, monster.uuid));
+    if (monster.coordinates) {
+      this.coordinateService.setTileCoordinates(
+        sprite,
+        monster.coordinates,
+        this.map
+      );
+    }
 
+    this.userActionService.initMonster(monster.uuid, sprite);
     this.getApp().stage.addChild(sprite);
   }
 }

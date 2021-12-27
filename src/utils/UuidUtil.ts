@@ -1,6 +1,6 @@
 import Container from "typedi";
 import RandomService from "@/services/RandomService";
-import TimeUtil from "./TimeUtil";
+import { v4 as uuidv4 } from "uuid";
 
 export default class UuidUtil {
   private static counter = 0;
@@ -11,6 +11,6 @@ export default class UuidUtil {
   }
 
   public static nextId(): string {
-    return `${this.counter++}_${Math.round(TimeUtil.timestamp())}`;
+    return uuidv4();
   }
 }

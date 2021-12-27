@@ -1,4 +1,5 @@
 import * as PIXI from "pixi.js";
+import Point from "./Point";
 
 export class CharacterType {
   public static MONSTER = "MONSTER";
@@ -25,17 +26,22 @@ export default class Character {
   type = CharacterType.MONSTER;
   modelId = "";
   sprite: PIXI.Sprite | null = null;
-  x = 0;
-  y = 0;
+  coordinates: Point | null = null;
 
   public static create(data: any, out: Character): Character {
     out.uuid = data.uuid;
     out.type = data.type;
     out.modelId = data.modelId;
     out.sprite = data.sprite;
-    out.x = data.x;
-    out.y = data.y;
+    out.coordinates = Point.create(data.coordinates);
     return out;
+  }
+
+  public getSprite(): PIXI.Sprite {
+    if (this.sprite) {
+      return this.sprite;
+    }
+    throw new Error("Sprite is null");
   }
 }
 
