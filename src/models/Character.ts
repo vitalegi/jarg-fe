@@ -1,3 +1,4 @@
+import Ability from "@/game-engine/monster-action/Ability";
 import * as PIXI from "pixi.js";
 import Point from "./Point";
 
@@ -50,12 +51,16 @@ export default class Character {
 export class Monster extends Character {
   ownerId: string | null = "";
   stats = new Stats();
+  abilities: Ability[] = [];
 
   public static createMonster(monster: any): Monster {
     const out = new Monster();
     Character.create(monster, out);
     out.ownerId = monster.ownerId;
     out.stats = Stats.create(out.stats);
+    if (monster.abilities) {
+      out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
+    }
     return out;
   }
 }

@@ -12,6 +12,8 @@ import UserActionService from "./UserActionService";
 import CoordinateService from "./CoordinateService";
 import Point from "@/models/Point";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
+import TurnManager from "@/game-engine/turns/TurnManager";
+import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 
 @Service()
 export default class GameService {
@@ -30,6 +32,8 @@ export default class GameService {
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
   protected battleContainer: PIXI.Container | null = null;
+  protected turnManager = new TurnManager();
+  protected leftMenu: LeftMenu | null = null;
 
   public getMap(): MapContainer {
     return this.map;
@@ -67,54 +71,9 @@ export default class GameService {
         this.map.monsters.push(enemy);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
-
-        const leftMenu = new LeftMenu();
-        leftMenu.addEntry(
-          new MenuEntry("a", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaaaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaaaaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaaaaaa", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.addEntry(
-          new MenuEntry("aaaaaaaab", () => {
-            console.log("aaa");
-          })
-        );
-        leftMenu.draw();
+        this.turnManager.addCharacters(this.map.monsters);
+        this.turnManager.initTurns();
+        this.startCharacterTurn();
 
         this.getApp().ticker.add(() => this.gameLoop());
       });
@@ -182,5 +141,45 @@ export default class GameService {
 
     this.userActionService.initMonster(monster.uuid, sprite);
     this.battleContainer?.addChild(sprite);
+  }
+
+  protected async startCharacterTurn(): Promise<void> {
+    console.log(`Remove existing left menu, if present`);
+    this.leftMenu?.destroy();
+    this.leftMenu = null;
+
+    if (!this.turnManager.hasCharacters()) {
+      console.log("No active users, do nothing");
+      return;
+    }
+    const uuid = this.turnManager.activeCharacter();
+    const monster = this.getMonsterById(uuid);
+    const playerId = this.playerService.getPlayerId();
+    if (playerId === monster.ownerId) {
+      console.log(`Monster ${monster.uuid} is owned by player, show menu`);
+      this.leftMenu = new LeftMenu();
+
+      this.leftMenu.addEntry(
+        new MenuEntry(monster.uuid, () => {
+          this.turnManager.next();
+          this.startCharacterTurn();
+        })
+      );
+      this.leftMenu.addEntry(new MenuEntry("Move", () => console.log("move")));
+      this.leftMenu.addEntry(
+        new MenuEntry("Attack", () => console.log("attack"))
+      );
+      this.leftMenu.addEntry(
+        new MenuEntry("End Turn", () => console.log("end turn"))
+      );
+      this.leftMenu.draw();
+    } else {
+      console.log(`Monster ${monster.uuid} is managed by AI, perform action`);
+      const ai = new MonsterAI(monster);
+      await ai.execute();
+      console.log(`Monster action is completed, go to next.`);
+      this.turnManager.next();
+      this.startCharacterTurn();
+    }
   }
 }

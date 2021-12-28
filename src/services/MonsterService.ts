@@ -1,3 +1,4 @@
+import Ability from "@/game-engine/monster-action/Ability";
 import {
   CharacterType,
   Monster,
@@ -45,6 +46,11 @@ export default class MonsterService {
     monster.stats.hp = 1000;
     monster.stats.atk = 100;
     monster.stats.def = 50;
+
+    monster.abilities.push(new Ability("Attacco 1"));
+    monster.abilities.push(new Ability("Attacco 2"));
+    monster.abilities.push(new Ability("Attacco 3"));
+
     return monster;
   }
 }
