@@ -38,14 +38,13 @@ export default class MonsterService {
   public createMonster(ownerId: null | string): Monster {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
+    monster.level = 5;
     monster.name = UuidUtil.nextId().substring(0, 10);
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
     monster.modelId = this.randomService.randomInt(2) == 1 ? "004" : "007";
-    monster.stats = new Stats();
-    monster.stats.hp = 1000;
-    monster.stats.atk = 100;
-    monster.stats.def = 50;
+    monster.baseStats = new Stats(30, 30, 6, 5, 3, 3, 10, 8);
+    monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19);
 
     monster.abilities.push(new Ability("Attacco 1"));
     monster.abilities.push(new Ability("Attacco 2"));

@@ -13,6 +13,10 @@ export default class TurnManager {
     this.turns.push(monster.uuid);
   }
 
+  public removeCharacter(uuid: string): void {
+    this.turns = this.turns.filter((id) => id !== uuid);
+  }
+
   public initTurns(): void {
     return;
   }

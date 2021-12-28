@@ -1,4 +1,4 @@
-import { CharacterType, Monster, Stats } from "@/models/Character";
+import { Monster } from "@/models/Character";
 import Point from "@/models/Point";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";

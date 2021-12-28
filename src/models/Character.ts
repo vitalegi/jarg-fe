@@ -9,14 +9,60 @@ export class CharacterType {
 
 export class Stats {
   hp = 0;
+  maxHP = 0;
   atk = 0;
   def = 0;
+  int = 0;
+  res = 0;
+  hit = 0;
+  dex = 0;
 
-  public static create(data: any): Stats {
+  public constructor(
+    hp = 0,
+    maxHP = 0,
+    atk = 0,
+    def = 0,
+    int = 0,
+    res = 0,
+    hit = 0,
+    dex = 0
+  ) {
+    this.hp = hp;
+    this.maxHP = maxHP;
+    this.atk = atk;
+    this.def = def;
+    this.int = int;
+    this.res = res;
+    this.hit = hit;
+    this.dex = dex;
+  }
+
+  public static fromJson(data: any): Stats {
     const out = new Stats();
+
     out.hp = data.hp;
+    out.maxHP = data.maxHP;
     out.atk = data.atk;
     out.def = data.def;
+    out.int = data.int;
+    out.res = data.res;
+    out.hit = data.hit;
+    out.dex = data.dex;
+
+    return out;
+  }
+
+  public clone(): Stats {
+    const out = new Stats();
+
+    out.hp = this.hp;
+    out.maxHP = this.maxHP;
+    out.atk = this.atk;
+    out.def = this.def;
+    out.int = this.int;
+    out.res = this.res;
+    out.hit = this.hit;
+    out.dex = this.dex;
 
     return out;
   }
@@ -50,14 +96,25 @@ export default class Character {
 
 export class Monster extends Character {
   ownerId: string | null = "";
+  level = 0;
+  /**
+   * Stats at level 1
+   */
+  baseStats = new Stats();
+  /**
+   * Stats at current level, with no buf/debuf
+   */
   stats = new Stats();
+
   abilities: Ability[] = [];
 
-  public static createMonster(monster: any): Monster {
+  public static fromJson(monster: any): Monster {
     const out = new Monster();
     Character.create(monster, out);
     out.ownerId = monster.ownerId;
-    out.stats = Stats.create(out.stats);
+    out.level = monster.level;
+    out.baseStats = Stats.fromJson(out.baseStats);
+    out.stats = Stats.fromJson(out.stats);
     if (monster.abilities) {
       out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
     }

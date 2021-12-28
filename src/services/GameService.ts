@@ -65,10 +65,14 @@ export default class GameService {
 
         this.map.monsters.push(...this.playerService.getMonsters());
 
-        const enemy = this.monsterService.createMonster(null);
-        enemy.coordinates = new Point(6, 6);
-
-        this.map.monsters.push(enemy);
+        const newEnemy = (x: number, y: number) => {
+          const enemy = this.monsterService.createMonster(null);
+          enemy.coordinates = new Point(x, y);
+          this.map.monsters.push(enemy);
+        };
+        newEnemy(7, 8);
+        newEnemy(8, 8);
+        newEnemy(9, 8);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
         this.turnManager.addCharacters(this.map.monsters);
@@ -88,6 +92,27 @@ export default class GameService {
       this.battleContainer.x += offsetX;
       this.battleContainer.y += offsetY;
     }
+  }
+
+  public isDead(uuid: string): boolean {
+    const monster = this.getMonsterById(uuid);
+    return monster.stats.hp <= 0;
+  }
+
+  public die(uuid: string): Promise<void> {
+    const monster = this.getMonsterById(uuid);
+
+    return new Promise<void>((resolve) => {
+      console.log(`Monster ${monster.uuid} died.`);
+      if (monster.sprite) {
+        this.battleContainer?.removeChild(monster.sprite);
+      }
+      this.map.monsters = this.map.monsters.filter(
+        (m) => m.uuid !== monster.uuid
+      );
+      this.turnManager.removeCharacter(uuid);
+      resolve();
+    });
   }
 
   protected gameLoop(): void {
@@ -144,7 +169,6 @@ export default class GameService {
   }
 
   protected async startCharacterTurn(): Promise<void> {
-    console.log(`Remove existing left menu, if present`);
     this.leftMenu?.destroy();
     this.leftMenu = null;
 

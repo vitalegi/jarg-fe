@@ -14,26 +14,27 @@ export default class MonsterAI {
     this.source = source;
   }
 
-  execute(): Promise<void> {
-    return new Promise<void>((resolve) => {
-      this.asyncExecute(resolve);
-    });
-  }
-
-  protected asyncExecute(resolve: () => void): void {
+  public async execute(): Promise<void> {
     const target = this.getTarget();
     if (target === null) {
       return;
     }
-    console.log(`Target: ${target?.uuid}`);
     const action = this.getAction(target);
-    console.log(`Action: ${action.label}`);
     const processor = action.getProcessor(this.source, target);
     const effects = processor.execute();
-    console.log("Effects: ", effects);
     effects.forEach((effect) => effect.apply(target));
-    console.log("Target status", target.stats);
-    resolve();
+
+    console.log(
+      `Target: ${target?.uuid}, action: ${
+        action.label
+      }, effects: ${JSON.stringify(effects)}. HP of ${target.uuid}: ${
+        target.stats.hp
+      }/${target.stats.maxHP}`
+    );
+
+    if (this.gameService.isDead(target.uuid)) {
+      await this.gameService.die(target.uuid);
+    }
   }
 
   protected getTarget(): Monster | null {

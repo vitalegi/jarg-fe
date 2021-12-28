@@ -56,7 +56,7 @@ export class StatActionEffect extends ActionEffect {
 
   protected getNewValue(originalValue: number): number {
     if (this.type === "abs") {
-      return originalValue - this.value;
+      return originalValue + this.value;
     }
     if (this.type === "percentage") {
       return originalValue * (1 + this.value);

@@ -19,10 +19,12 @@ export default class UserActionService {
 
   public initMonster(uuid: string, sprite: PIXI.Sprite): void {
     sprite.interactive = true;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     sprite.on("pointertap", (e: InteractionEvent) => this.tapMonster(uuid));
   }
   public initMapTile(position: Point, sprite: PIXI.Sprite): void {
     sprite.interactive = true;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     sprite.on("pointertap", (e: InteractionEvent) => this.tapTile(position));
     this.dragScreenHandler.addListener(sprite);
   }

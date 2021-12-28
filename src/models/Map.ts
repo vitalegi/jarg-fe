@@ -43,13 +43,13 @@ export default class MapContainer {
     out.name = map.name;
     out.options = TileOption.create(map.options);
     if (map.sprites) {
-      out.sprites = map.sprites.map((s: any) => SpriteConfig.create(s));
+      out.sprites = map.sprites.map(SpriteConfig.create);
     }
     if (map.tiles) {
-      out.tiles = map.tiles.map((tile: any) => Tile.create(tile));
+      out.tiles = map.tiles.map(Tile.create);
     }
     if (map.monsters) {
-      out.monsters = map.monsters.map((m: any) => Monster.createMonster(m));
+      out.monsters = map.monsters.map(Monster.fromJson);
     }
     return out;
   }
