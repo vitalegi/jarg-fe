@@ -11,6 +11,7 @@ import { Monster } from "@/models/Character";
 import UserActionService from "./UserActionService";
 import CoordinateService from "./CoordinateService";
 import Point from "@/models/Point";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 
 @Service()
 export default class GameService {
@@ -66,6 +67,55 @@ export default class GameService {
         this.map.monsters.push(enemy);
 
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
+
+        const leftMenu = new LeftMenu();
+        leftMenu.addEntry(
+          new MenuEntry("a", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaaaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaaaaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaaaaaa", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.addEntry(
+          new MenuEntry("aaaaaaaab", () => {
+            console.log("aaa");
+          })
+        );
+        leftMenu.draw();
+
         this.getApp().ticker.add(() => this.gameLoop());
       });
   }
@@ -74,10 +124,10 @@ export default class GameService {
     return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
   }
 
-  public moveStage(offsetX: number, offsetY: number): void {
-    if (this.app) {
-      this.app.stage.x += offsetX;
-      this.app.stage.y += offsetY;
+  public moveBattleStage(offsetX: number, offsetY: number): void {
+    if (this.battleContainer) {
+      this.battleContainer.x += offsetX;
+      this.battleContainer.y += offsetY;
     }
   }
 

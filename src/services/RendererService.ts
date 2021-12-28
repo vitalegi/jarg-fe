@@ -10,7 +10,7 @@ class Asset {
 
 @Service()
 export default class RendererService {
-  async loadAssets(map: MapContainer, monsters: MonsterIndex[]) {
+  async loadAssets(map: MapContainer, monsters: MonsterIndex[]): Promise<void> {
     const mapSprites = map.sprites
       .flatMap((sprite) => sprite.sprites)
       .map((sprite) => {
@@ -27,7 +27,7 @@ export default class RendererService {
   }
 
   private loadImages(images: Asset[]): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>((resolve) => {
       PIXI.Loader.shared.add(images).load(() => {
         resolve();
       });
@@ -75,7 +75,7 @@ export default class RendererService {
   protected applyOptions(
     sprite: PIXI.Sprite,
     options: { width?: number; height?: number } = { width: 60, height: 60 }
-  ) {
+  ): void {
     if (options.width) {
       sprite.width = options.width;
     }

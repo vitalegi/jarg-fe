@@ -13,14 +13,13 @@ export default class UserActionService {
   protected dragScreenHandler =
     Container.get<DragScreenHandler>(DragScreenHandler);
 
-  public setActionHandler(actionHandler: ActionHandler | null) {
+  public setActionHandler(actionHandler: ActionHandler | null): void {
     this.actionHandler = actionHandler;
   }
 
   public initMonster(uuid: string, sprite: PIXI.Sprite): void {
     sprite.interactive = true;
     sprite.on("pointertap", (e: InteractionEvent) => this.tapMonster(uuid));
-    this.dragScreenHandler.addListener(sprite);
   }
   public initMapTile(position: Point, sprite: PIXI.Sprite): void {
     sprite.interactive = true;

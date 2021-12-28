@@ -37,9 +37,11 @@ export default class DragScreenHandler {
     const diffY = dest.y - this._dragStart.y;
     if (diffX * diffX + diffY * diffY > 1) {
       const gameService = Container.get<GameService>(GameService);
-      console.log(`drag progress ${this._dragStart} => ${dest}`);
-      this._dragStart = dest;
-      gameService.moveStage(diffX, diffY);
+      console.debug(`drag progress ${this._dragStart} => ${dest}`);
+      if (this._dragStart) {
+        this._dragStart = dest;
+      }
+      gameService.moveBattleStage(diffX, diffY);
     }
   }
 }
