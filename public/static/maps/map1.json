@@ -10,8 +10,8 @@
       "name": "grass",
       "type": "ANIMATED",
       "sprites": [
-        "/sprites/backgrounds/grass1.png",
-        "/sprites/backgrounds/grass2.png"
+        "/static/sprites/backgrounds/grass1.png",
+        "/static/sprites/backgrounds/grass2.png"
       ],
       "walkable": true,
       "swimmable": false
@@ -20,8 +20,8 @@
       "name": "grass2",
       "type": "ANIMATED",
       "sprites": [
-        "/sprites/backgrounds/grass3.png",
-        "/sprites/backgrounds/grass4.png"
+        "/static/sprites/backgrounds/grass3.png",
+        "/static/sprites/backgrounds/grass4.png"
       ],
       "walkable": false,
       "swimmable": false

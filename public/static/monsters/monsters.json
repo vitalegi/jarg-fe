@@ -2,11 +2,11 @@
     {
       "monsterId": "007",
       "name": "Squirtle",
-      "sprite": "/monsters/sprites/squirtle.png"
+      "sprite": "/static/monsters/sprites/squirtle.png"
     },
     {
       "monsterId": "004",
       "name": "Charmander",
-      "sprite": "/monsters/sprites/charmander.png"
+      "sprite": "/static/monsters/sprites/charmander.png"
     }
 ]

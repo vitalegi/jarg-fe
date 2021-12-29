@@ -7,13 +7,13 @@ import { BackendWebService } from "./BackendService";
 @Service()
 export default class GameAssetService {
   public async getMap(map: string): Promise<MapContainer> {
-    const result = await BackendWebService.url(`/maps/${map}.json`)
+    const result = await BackendWebService.url(`/static/maps/${map}.json`)
       .get()
       .call();
     return MapContainer.fromJson(result.data);
   }
   public async getMonstersData(): Promise<MonsterIndex[]> {
-    const result = await BackendWebService.url(`/monsters/monsters.json`)
+    const result = await BackendWebService.url(`/static/monsters/monsters.json`)
       .get()
       .call();
     return result.data.map(MonsterIndex.fromJson);

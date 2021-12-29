@@ -31,7 +31,7 @@ export default class SingleTargetAbility {
     const dexRandom = randomService.randomDecimal(0.6, 1);
     const defender = dex * dexRandom;
 
-    const match = attacker >= dex * 100;
+    const match = attacker >= dex;
 
     console.log(
       `accuracy: ${accuracy}, HIT: ${hit}, random: ${hitRandom} => ${attacker}, DEX: ${dex}, random: ${dexRandom} => ${defender}. HIT: ${match}`
