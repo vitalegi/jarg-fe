@@ -10,4 +10,13 @@ export default class RandomService {
   public randomInt(n: number): number {
     return Math.floor(n * Math.random());
   }
+
+  /**
+   * Returns a random decimal in the range [from, to)
+   * @param from
+   * @param to
+   */
+  public randomDecimal(from: number, to: number): number {
+    return from + Math.random() * (to - from);
+  }
 }

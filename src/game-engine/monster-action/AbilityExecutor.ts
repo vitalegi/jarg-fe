@@ -3,9 +3,11 @@ import GameService from "@/services/GameService";
 import Container from "typedi";
 import AbilityName from "../ui/AbilityName";
 import Ability from "./Ability";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
+  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected source: Monster;
   protected target: Monster;
   protected ability: Ability;
@@ -32,7 +34,9 @@ export default class AbilityExecutor {
     );
 
     if (this.gameService.isDead(this.target.uuid)) {
+      const exp = this.levelUpService.getKillExperience(this.target);
       await this.gameService.die(this.target.uuid);
+      await this.levelUpService.gainExperience(this.source, exp);
     }
   }
 
