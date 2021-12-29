@@ -14,6 +14,7 @@ import Point from "@/models/Point";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import TurnManager from "@/game-engine/turns/TurnManager";
 import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
+import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 
 @Service()
 export default class GameService {
@@ -28,6 +29,9 @@ export default class GameService {
     Container.get<UserActionService>(UserActionService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
+  protected monsterActionMenuBuilder = Container.get<MonsterActionMenuBuilder>(
+    MonsterActionMenuBuilder
+  );
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
@@ -115,6 +119,12 @@ export default class GameService {
     });
   }
 
+  public nextTurn() {
+    this.turnManager.next();
+    // async action, completion is not monitored
+    this.startCharacterTurn();
+  }
+
   protected gameLoop(): void {
     const now = +new Date();
     if (now - this.lastUserAction < 100) {
@@ -179,31 +189,26 @@ export default class GameService {
     const uuid = this.turnManager.activeCharacter();
     const monster = this.getMonsterById(uuid);
     const playerId = this.playerService.getPlayerId();
-    if (playerId === monster.ownerId) {
-      console.log(`Monster ${monster.uuid} is owned by player, show menu`);
-      this.leftMenu = new LeftMenu();
 
-      this.leftMenu.addEntry(
-        new MenuEntry(monster.uuid, () => {
-          this.turnManager.next();
-          this.startCharacterTurn();
-        })
-      );
-      this.leftMenu.addEntry(new MenuEntry("Move", () => console.log("move")));
-      this.leftMenu.addEntry(
-        new MenuEntry("Attack", () => console.log("attack"))
-      );
-      this.leftMenu.addEntry(
-        new MenuEntry("End Turn", () => console.log("end turn"))
-      );
-      this.leftMenu.draw();
+    if (playerId === monster.ownerId) {
+      await this.startPlayerTurn(monster);
     } else {
-      console.log(`Monster ${monster.uuid} is managed by AI, perform action`);
-      const ai = new MonsterAI(monster);
-      await ai.execute();
-      console.log(`Monster action is completed, go to next.`);
-      this.turnManager.next();
-      this.startCharacterTurn();
+      await this.startNpcTurn(monster);
     }
+  }
+
+  protected async startPlayerTurn(monster: Monster): Promise<void> {
+    console.log(`Monster ${monster.uuid} is owned by player, show menu`);
+    this.leftMenu = this.monsterActionMenuBuilder.build(monster);
+    this.leftMenu.draw();
+  }
+
+  protected async startNpcTurn(monster: Monster): Promise<void> {
+    console.log(`Monster ${monster.uuid} is managed by AI, perform action`);
+    const ai = new MonsterAI(monster);
+    await ai.execute();
+    console.log(`Monster action is completed, go to next.`);
+    this.turnManager.next();
+    this.startCharacterTurn();
   }
 }

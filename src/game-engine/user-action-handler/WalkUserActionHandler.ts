@@ -1,12 +1,14 @@
 import Point from "@/models/Point";
 import CoordinateService from "@/services/CoordinateService";
 import GameService from "@/services/GameService";
-import UserActionService from "@/services/UserActionService";
 import Container from "typedi";
-import ActionHandler from "./ActionHandler";
+import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
-export default class WalkActionHandler extends ActionHandler {
+/**
+ * TODO delete and move "walk" logic outside
+ */
+export default class WalkUserActionHandler {
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
   protected gameService = Container.get<GameService>(GameService);
@@ -16,17 +18,9 @@ export default class WalkActionHandler extends ActionHandler {
   protected completed = false;
 
   public constructor(source: string) {
-    super();
     this.source = source;
   }
 
-  start(input: UserInput): void {
-    if (input.isMonster() && input.uuid) {
-      this.source = input.uuid;
-    } else {
-      throw new Error("Invalid input, expected a monster.");
-    }
-  }
   process(input: UserInput): void {
     if (this.target) {
       console.debug("Ignore user input, data already provided.");
@@ -37,11 +31,8 @@ export default class WalkActionHandler extends ActionHandler {
       this.target = input.position;
       this.walk(this.source, this.target);
       this.completed = true;
-      super.removeHandler();
+      //super.removeHandler();
     }
-  }
-  isCompleted(): boolean {
-    return this.completed;
   }
 
   walk(source: string, target: Point): void {

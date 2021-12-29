@@ -19,9 +19,25 @@ export default class UserInput {
   }
 
   public isMonster(): boolean {
-    return this.type === "monster";
+    return this.type === "monster" && !!this.uuid;
   }
   public isTerrain(): boolean {
-    return this.type === "terrain";
+    return this.type === "terrain" && !!this.position;
+  }
+  public getMonsterId(): string {
+    if (this.uuid) {
+      return this.uuid;
+    }
+    throw Error(
+      "Malformed UserInput, no UUID provided " + JSON.stringify(this)
+    );
+  }
+  public getPosition(): Point {
+    if (this.position) {
+      return this.position;
+    }
+    throw Error(
+      "Malformed UserInput, no position provided" + JSON.stringify(this)
+    );
   }
 }

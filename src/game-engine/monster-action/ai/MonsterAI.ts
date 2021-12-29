@@ -3,6 +3,7 @@ import GameService from "@/services/GameService";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
 import Ability from "../Ability";
+import AbilityExecutor from "../AbilityExecutor";
 
 export default class MonsterAI {
   protected gameService = Container.get<GameService>(GameService);
@@ -19,22 +20,10 @@ export default class MonsterAI {
     if (target === null) {
       return;
     }
-    const action = this.getAction(target);
-    const processor = action.getProcessor(this.source, target);
-    const effects = processor.execute();
-    effects.forEach((effect) => effect.apply(target));
+    const ability = this.getAbility(target);
 
-    console.log(
-      `Target: ${target?.uuid}, action: ${
-        action.label
-      }, effects: ${JSON.stringify(effects)}. HP of ${target.uuid}: ${
-        target.stats.hp
-      }/${target.stats.maxHP}`
-    );
-
-    if (this.gameService.isDead(target.uuid)) {
-      await this.gameService.die(target.uuid);
-    }
+    const executor = new AbilityExecutor(this.source, target, ability);
+    await executor.execute();
   }
 
   protected getTarget(): Monster | null {
@@ -48,7 +37,7 @@ export default class MonsterAI {
     return enemies[this.randomService.randomInt(enemies.length)];
   }
 
-  protected getAction(target: Monster): Ability {
+  protected getAbility(target: Monster): Ability {
     return this.source.abilities[
       this.randomService.randomInt(this.source.abilities.length)
     ];
