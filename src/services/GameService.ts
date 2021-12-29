@@ -167,9 +167,23 @@ export default class GameService {
   }
 
   public nextTurn() {
+    const activeCharacter = this.turnManager.activeCharacter();
+    const container =
+      this.getBattleContainer()?.getChildByName(activeCharacter);
+    if (container) {
+      const c = container as PIXI.Container;
+      const element = c.getChildByName("activeCharacter");
+      c.removeChild(element);
+    }
+
     this.turnManager.next();
-    // async action, completion is not monitored
-    this.startCharacterTurn();
+
+    if (this.isGameOver(this.playerService.getPlayerId())) {
+      console.log(`Player is defeated, end.`);
+    } else {
+      // async action, completion is not monitored
+      this.startCharacterTurn();
+    }
   }
 
   protected gameLoop(): void {
@@ -232,6 +246,22 @@ export default class GameService {
     console.log(`Monster ${monster.uuid} is owned by player, show menu`);
     this.leftMenu = this.monsterActionMenuBuilder.build(monster);
     this.leftMenu.draw();
+
+    const container = this.getBattleContainer()?.getChildByName(monster.uuid);
+    if (container) {
+      const c = container as PIXI.Container;
+
+      const background = new PIXI.Graphics();
+      background.lineStyle({ width: 2, color: 0xff0000, alpha: 0.9 });
+
+      const width = this.map.options.tileWidth;
+      const height = this.map.options.tileHeight;
+      background.drawEllipse(width / 2, height - 12, width / 4, 4);
+      background.endFill();
+      background.name = "activeCharacter";
+
+      c.addChildAt(background, 0);
+    }
   }
 
   protected async startNpcTurn(monster: Monster): Promise<void> {
@@ -239,12 +269,7 @@ export default class GameService {
     const ai = new MonsterAI(monster);
     await ai.execute();
     console.log(`Monster action is completed, go to next.`);
-    this.turnManager.next();
-    if (this.isGameOver(this.playerService.getPlayerId())) {
-      console.log(`Player is defeated, end.`);
-    } else {
-      this.startCharacterTurn();
-    }
+    this.nextTurn();
   }
 
   protected getBattleContainer(): PIXI.Container | null {

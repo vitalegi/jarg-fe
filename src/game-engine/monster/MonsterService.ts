@@ -65,8 +65,11 @@ export default class MonsterService {
       monster.modelId
     );
     const sprite = this.rendererService.createSprite(monsterFamily.sprite);
+    sprite.name = "sprite";
 
     const container = new PIXI.Container();
+    container.name = monster.uuid;
+
     this.pixiContainerRepository.add(
       monster.uuid,
       ContainersConstants.MONSTER,
