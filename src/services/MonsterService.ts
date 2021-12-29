@@ -45,7 +45,7 @@ export default class MonsterService {
     monster.modelId = this.randomService.randomInt(2) == 1 ? "004" : "007";
     monster.baseStats = new Stats(30, 30, 6, 5, 3, 3, 10, 8);
     monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19);
-
+    monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110);
     monster.abilities.push(new Ability("Attacco 1"));
     monster.abilities.push(new Ability("Attacco 2"));
     monster.abilities.push(new Ability("Attacco 3"));

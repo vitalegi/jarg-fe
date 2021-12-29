@@ -66,6 +66,10 @@ export class Stats {
 
     return out;
   }
+
+  public toString(): string {
+    return `HP=${this.hp}, maxHP=${this.maxHP}, ATK=${this.atk}, DEF=${this.def}, INT=${this.int}, RES=${this.res}, HIT=${this.hit}, DEX=${this.dex}`;
+  }
 }
 
 export default class Character {
@@ -97,6 +101,8 @@ export default class Character {
 export class Monster extends Character {
   ownerId: string | null = "";
   level = 0;
+  experience = 0;
+  currentLevelExperience = 0;
   /**
    * Stats at level 1
    */
@@ -105,6 +111,7 @@ export class Monster extends Character {
    * Stats at current level, with no buf/debuf
    */
   stats = new Stats();
+  growthRates = new Stats();
 
   abilities: Ability[] = [];
 
@@ -113,8 +120,11 @@ export class Monster extends Character {
     Character.create(monster, out);
     out.ownerId = monster.ownerId;
     out.level = monster.level;
+    out.experience = monster.experience;
+    out.currentLevelExperience = monster.currentLevelExperience;
     out.baseStats = Stats.fromJson(out.baseStats);
     out.stats = Stats.fromJson(out.stats);
+    out.growthRates = Stats.fromJson(out.growthRates);
     if (monster.abilities) {
       out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
     }

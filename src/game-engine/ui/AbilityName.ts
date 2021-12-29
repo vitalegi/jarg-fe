@@ -5,7 +5,7 @@ import * as PIXI from "pixi.js";
 export default class AbilityName {
   protected label = "";
   protected options = {
-    duration: 5000,
+    duration: 1000,
     x: 188,
     y: 4,
     text: {

@@ -11,10 +11,11 @@ import { Monster } from "@/models/Character";
 import UserActionService from "./UserActionService";
 import CoordinateService from "./CoordinateService";
 import Point from "@/models/Point";
-import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
+import LeftMenu from "@/game-engine/ui/LeftMenu";
 import TurnManager from "@/game-engine/turns/TurnManager";
 import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 
 @Service()
 export default class GameService {
@@ -78,6 +79,11 @@ export default class GameService {
         newEnemy(8, 8);
         newEnemy(9, 8);
 
+        Container.get<LevelUpService>(LevelUpService).gainExperience(
+          this.playerService.getMonsters()[0],
+          10000
+        );
+
         this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
         this.turnManager.addCharacters(this.map.monsters);
         this.turnManager.initTurns();
@@ -87,6 +93,9 @@ export default class GameService {
       });
   }
 
+  public getMonstersInBattle(): Monster[] {
+    return this.getMap().monsters;
+  }
   public getMonsterById(uuid: string): Monster {
     return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
   }
@@ -101,6 +110,13 @@ export default class GameService {
   public isDead(uuid: string): boolean {
     const monster = this.getMonsterById(uuid);
     return monster.stats.hp <= 0;
+  }
+
+  public isGameOver(playerId: string | null): boolean {
+    return (
+      this.getMonstersInBattle().filter((m) => m.ownerId === playerId)
+        .length === 0
+    );
   }
 
   public die(uuid: string): Promise<void> {
@@ -209,6 +225,10 @@ export default class GameService {
     await ai.execute();
     console.log(`Monster action is completed, go to next.`);
     this.turnManager.next();
-    this.startCharacterTurn();
+    if (this.isGameOver(this.playerService.getPlayerId())) {
+      console.log(`Player is defeated, end.`);
+    } else {
+      this.startCharacterTurn();
+    }
   }
 }
