@@ -1,6 +1,7 @@
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
 import Container from "typedi";
+import AbilityName from "../ui/AbilityName";
 import Ability from "./Ability";
 
 export default class AbilityExecutor {
@@ -18,6 +19,8 @@ export default class AbilityExecutor {
   public async execute(): Promise<void> {
     const processor = this.ability.getProcessor(this.source, this.target);
     const effects = processor.execute();
+    await this.showAbilityName();
+
     effects.forEach((effect) => effect.apply(this.target));
 
     console.log(
@@ -31,5 +34,10 @@ export default class AbilityExecutor {
     if (this.gameService.isDead(this.target.uuid)) {
       await this.gameService.die(this.target.uuid);
     }
+  }
+
+  protected async showAbilityName(): Promise<void> {
+    console.log(`show ability name ${this.ability.label}`);
+    await new AbilityName(this.ability.label).execute();
   }
 }

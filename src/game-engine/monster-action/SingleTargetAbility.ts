@@ -1,5 +1,5 @@
 import { Monster } from "@/models/Character";
-import ActionEffect, { StatActionEffect } from "./ActionEffect";
+import AbilityEffect, { StatAbilityEffect } from "./AbilityEffect";
 
 export default class SingleTargetAbility {
   protected source: Monster;
@@ -10,9 +10,9 @@ export default class SingleTargetAbility {
     this.target = target;
   }
 
-  public execute(): ActionEffect[] {
+  public execute(): AbilityEffect[] {
     const damage = this.computeDamage();
-    return [new StatActionEffect("hp", "abs", -damage)];
+    return [new StatAbilityEffect("hp", "abs", -damage)];
   }
 
   protected computeDamage(): number {

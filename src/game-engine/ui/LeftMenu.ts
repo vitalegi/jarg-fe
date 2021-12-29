@@ -1,7 +1,6 @@
 import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
-import { InteractionEvent } from "pixi.js";
 
 export class MenuEntry {
   label: string;
@@ -20,6 +19,18 @@ export default class LeftMenu {
 
   protected options = {
     frame: { style: { width: 4, color: 0x000000 }, background: 0xffffff },
+    font: {
+      fontFamily: "Courier",
+      fontSize: 20,
+      fill: "#ffffff",
+      stroke: "#000000",
+      strokeThickness: 4,
+    },
+    menuEntry: {
+      height: 28,
+      fill: 0xffffff,
+    },
+    width: 176,
   };
 
   public addEntry(entry: MenuEntry): void {
@@ -60,8 +71,9 @@ export default class LeftMenu {
 
   protected drawMenuEntry(entry: MenuEntry, index: number): void {
     const rectangle = new PIXI.Graphics();
-    rectangle.beginFill(this.options.frame.background);
+    rectangle.beginFill(this.options.menuEntry.fill);
     const frameWidth = this.options.frame.style.width;
+
     rectangle.drawRect(
       frameWidth + 2,
       this.menuEntryHeight() * index + frameWidth + 3,
@@ -73,15 +85,9 @@ export default class LeftMenu {
     rectangle.on("pointertap", () => entry.action());
     this.container?.addChild(rectangle);
 
-    const message = new PIXI.Text(entry.label, {
-      fontFamily: "Courier",
-      fontSize: 36,
-      fill: "#ffffff",
-      stroke: "#000000",
-      strokeThickness: 4,
-    });
-    message.position.x = this.options.frame.style.width + 2;
-    message.position.y = this.menuEntryHeight() * index;
+    const message = new PIXI.Text(entry.label, this.options.font);
+    message.position.x = this.options.frame.style.width + 4;
+    message.position.y = this.menuEntryHeight() * index + 5;
 
     message.interactive = true;
     message.on("pointertap", () => entry.action());
@@ -90,10 +96,10 @@ export default class LeftMenu {
   }
 
   protected menuEntryHeight(): number {
-    return 40;
+    return this.options.menuEntry.height;
   }
 
   protected menuWidth(): number {
-    return 178;
+    return this.options.width;
   }
 }

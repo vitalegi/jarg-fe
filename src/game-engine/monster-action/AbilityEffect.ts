@@ -4,17 +4,17 @@ type Statistic = "hp" | "atk" | "def";
 
 type EffectComputeType = "percentage" | "abs";
 
-export default abstract class ActionEffect {
+export default abstract class AbilityEffect {
   abstract apply(monster: Monster): void;
 }
 
-export class StatActionEffect extends ActionEffect {
+export class StatAbilityEffect extends AbilityEffect {
   stat: Statistic;
   type: EffectComputeType;
   value: number;
 
-  public static fromJson(json: any): StatActionEffect {
-    return new StatActionEffect(json.stat, json.type, json.value);
+  public static fromJson(json: any): StatAbilityEffect {
+    return new StatAbilityEffect(json.stat, json.type, json.value);
   }
 
   public constructor(stat: Statistic, type: EffectComputeType, value: number) {
