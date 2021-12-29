@@ -6,14 +6,7 @@ import MonsterService from "../monster/MonsterService";
 
 const playerId = UuidUtil.nextId();
 
-const monsterService = Container.get<MonsterService>(MonsterService);
-
-const monsters = [
-  monsterService.createMonster(playerId),
-  monsterService.createMonster(playerId),
-];
-
-monsters[0].coordinates = new Point(4, 5);
+const monsters: Monster[] = [];
 
 @Service()
 export default class PlayerRepository {
@@ -21,6 +14,12 @@ export default class PlayerRepository {
     return playerId;
   }
   public getMonsters(): Monster[] {
+    if (monsters.length == 0) {
+      const monsterService = Container.get<MonsterService>(MonsterService);
+      monsters.push(monsterService.createMonster(playerId));
+      monsters.push(monsterService.createMonster(playerId));
+      monsters[0].coordinates = new Point(4, 5);
+    }
     return monsters;
   }
 }
