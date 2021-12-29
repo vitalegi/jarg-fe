@@ -2,20 +2,24 @@ import { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import RendererService from "@/services/RendererService";
 import GameAssetService from "@/services/GameAssetService";
-import MonsterService from "@/services/MonsterService";
-import PlayerService from "@/services/PlayerService";
+import MonsterService from "@/game-engine/MonsterService";
+import PlayerService from "@/game-engine/PlayerService";
 import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
 import { Monster } from "@/models/Character";
 import UserActionService from "./UserActionService";
-import CoordinateService from "./CoordinateService";
+import CoordinateService from "../game-engine/CoordinateService";
 import Point from "@/models/Point";
 import LeftMenu from "@/game-engine/ui/LeftMenu";
 import TurnManager from "@/game-engine/turns/TurnManager";
 import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import MapSpritesRepository, {
+  SpritesConstants,
+} from "@/game-engine/repositories/MapSpritesRepository";
+import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 
 @Service()
 export default class GameService {
@@ -32,6 +36,11 @@ export default class GameService {
     Container.get<CoordinateService>(CoordinateService);
   protected monsterActionMenuBuilder = Container.get<MonsterActionMenuBuilder>(
     MonsterActionMenuBuilder
+  );
+  protected mapSpritesRepository =
+    Container.get<MapSpritesRepository>(MapSpritesRepository);
+  protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
+    MonsterIndexRepository
   );
 
   protected map = new MapContainer();
@@ -59,9 +68,11 @@ export default class GameService {
     this.app.resizeTo = window;
 
     this.map = await this.gameAssetService.getMap("map1");
-    this.monsterService.init(await this.gameAssetService.getMonstersData());
+    this.monsterIndexRepository.init(
+      await this.gameAssetService.getMonstersData()
+    );
     this.rendererService
-      .loadAssets(this.map, this.monsterService.getMonsters())
+      .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
       .then(() => {
         this.battleContainer = new PIXI.Container();
         this.app?.stage.addChild(this.battleContainer);
@@ -84,7 +95,13 @@ export default class GameService {
           10000
         );
 
-        this.map.monsters.forEach((monster) => this.initMonsterSprite(monster));
+        this.map.monsters.forEach((monster) => {
+          const sprite = this.monsterService.createMonsterSprite(
+            monster,
+            this.map.options
+          );
+          this.battleContainer?.addChild(sprite);
+        });
         this.turnManager.addCharacters(this.map.monsters);
         this.turnManager.initTurns();
         this.startCharacterTurn();
@@ -124,8 +141,13 @@ export default class GameService {
 
     return new Promise<void>((resolve) => {
       console.log(`Monster ${monster.uuid} died.`);
-      if (monster.sprite) {
-        this.battleContainer?.removeChild(monster.sprite);
+
+      const sprite = this.mapSpritesRepository.find(
+        monster.uuid,
+        SpritesConstants.MONSTER
+      );
+      if (sprite) {
+        this.battleContainer?.removeChild(sprite);
       }
       this.map.monsters = this.map.monsters.filter(
         (m) => m.uuid !== monster.uuid
@@ -153,44 +175,28 @@ export default class GameService {
       this.map,
       tile.spriteModel
     );
+    let sprite = null;
     if (spriteConfig.type === SpriteType.ANIMATED) {
-      tile.sprite = this.rendererService.createAnimatedSprite(
-        spriteConfig.sprites
+      sprite = this.rendererService.createAnimatedSprite(spriteConfig.sprites);
+      this.mapSpritesRepository.add(
+        tile.uuid,
+        SpritesConstants.MAP_TILE,
+        sprite
       );
     } else {
       throw new Error(`Unknown type ${spriteConfig.type}`);
     }
-    tile.sprite.width = this.map.options.tileWidth;
-    tile.sprite.height = this.map.options.tileHeight;
+    sprite.width = this.map.options.tileWidth;
+    sprite.height = this.map.options.tileHeight;
 
     this.coordinateService.setTileCoordinates(
-      tile.sprite,
+      sprite,
       tile.coordinates,
       this.map
     );
 
-    this.userActionService.initMapTile(tile.coordinates, tile.sprite);
+    this.userActionService.initMapTile(tile.coordinates, sprite);
 
-    this.battleContainer?.addChild(tile.sprite);
-  }
-
-  protected initMonsterSprite(monster: Monster): void {
-    const monsterFamily = this.monsterService.getMonster(monster.modelId);
-    const sprite = this.rendererService.createSprite(monsterFamily.sprite);
-    monster.sprite = sprite;
-
-    sprite.width = this.map.options.tileWidth;
-    sprite.height = this.map.options.tileHeight;
-
-    if (monster.coordinates) {
-      this.coordinateService.setTileCoordinates(
-        sprite,
-        monster.coordinates,
-        this.map
-      );
-    }
-
-    this.userActionService.initMonster(monster.uuid, sprite);
     this.battleContainer?.addChild(sprite);
   }
 

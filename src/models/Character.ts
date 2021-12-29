@@ -1,5 +1,4 @@
 import Ability from "@/game-engine/monster-action/Ability";
-import * as PIXI from "pixi.js";
 import Point from "./Point";
 import Stats from "./Stats";
 
@@ -13,24 +12,15 @@ export default class Character {
   name = "";
   type = CharacterType.MONSTER;
   modelId = "";
-  sprite: PIXI.Sprite | null = null;
   coordinates: Point | null = null;
 
-  public static create(data: any, out: Character): Character {
+  public static fromJson(data: any, out: Character): Character {
     out.uuid = data.uuid;
     out.name = data.name;
     out.type = data.type;
     out.modelId = data.modelId;
-    out.sprite = data.sprite;
-    out.coordinates = Point.create(data.coordinates);
+    out.coordinates = Point.fromJson(data.coordinates);
     return out;
-  }
-
-  public getSprite(): PIXI.Sprite {
-    if (this.sprite) {
-      return this.sprite;
-    }
-    throw new Error("Sprite is null");
   }
 }
 
@@ -53,7 +43,7 @@ export class Monster extends Character {
 
   public static fromJson(monster: any): Monster {
     const out = new Monster();
-    Character.create(monster, out);
+    Character.fromJson(monster, out);
     out.ownerId = monster.ownerId;
     out.level = monster.level;
     out.experience = monster.experience;
@@ -73,7 +63,7 @@ export class MonsterIndex {
   name = "";
   sprite = "";
 
-  public static create(data: any): MonsterIndex {
+  public static fromJson(data: any): MonsterIndex {
     const out = new MonsterIndex();
     out.monsterId = data.monsterId;
     out.name = data.name;

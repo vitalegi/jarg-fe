@@ -7,7 +7,7 @@ export default class Point {
     this.y = y;
   }
 
-  public static create(obj: any): Point {
+  public static fromJson(obj: any): Point {
     const out = new Point();
     if (obj.x) {
       out.x = obj.x;

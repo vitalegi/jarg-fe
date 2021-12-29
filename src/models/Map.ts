@@ -1,14 +1,14 @@
 import SpriteConfig from "./SpriteConfig";
-import * as PIXI from "pixi.js";
-import Character, { Monster } from "./Character";
+import { Monster } from "./Character";
 import Point from "./Point";
+import UuidUtil from "@/utils/UuidUtil";
 
-export class TileOption {
+export class MapOption {
   tileWidth = 0;
   tileHeight = 0;
 
-  public static create(tile: any): TileOption {
-    const out = new TileOption();
+  public static fromJson(tile: any): MapOption {
+    const out = new MapOption();
     out.tileHeight = tile.tileHeight;
     out.tileWidth = tile.tileWidth;
     return out;
@@ -16,15 +16,18 @@ export class TileOption {
 }
 
 export class Tile {
+  uuid = "";
   spriteModel = "";
   coordinates = new Point();
-  sprite: PIXI.Sprite | null = null;
 
-  public static create(tile: any): Tile {
+  public static fromJson(tile: any): Tile {
     const out = new Tile();
+    out.uuid = tile.uuid;
+    if (!out.uuid) {
+      out.uuid = UuidUtil.nextId();
+    }
     out.spriteModel = tile.spriteModel;
-    out.coordinates = Point.create(tile);
-    out.sprite = tile.sprite;
+    out.coordinates = Point.fromJson(tile);
     return out;
   }
 }
@@ -32,21 +35,21 @@ export class Tile {
 export default class MapContainer {
   id = "";
   name = "";
-  options = new TileOption();
+  options = new MapOption();
   sprites: SpriteConfig[] = [];
   tiles: Tile[] = [];
   monsters: Monster[] = [];
 
-  public static create(map: any): MapContainer {
+  public static fromJson(map: any): MapContainer {
     const out = new MapContainer();
     out.id = map.id;
     out.name = map.name;
-    out.options = TileOption.create(map.options);
+    out.options = MapOption.fromJson(map.options);
     if (map.sprites) {
-      out.sprites = map.sprites.map(SpriteConfig.create);
+      out.sprites = map.sprites.map(SpriteConfig.fromJson);
     }
     if (map.tiles) {
-      out.tiles = map.tiles.map(Tile.create);
+      out.tiles = map.tiles.map(Tile.fromJson);
     }
     if (map.monsters) {
       out.monsters = map.monsters.map(Monster.fromJson);

@@ -1,8 +1,7 @@
 import Point from "@/models/Point";
-import CoordinateService from "@/services/CoordinateService";
+import CoordinateService from "@/game-engine/CoordinateService";
 import GameService from "@/services/GameService";
 import Container from "typedi";
-import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
 /**
@@ -39,10 +38,12 @@ export default class WalkUserActionHandler {
     const monster = this.gameService.getMonsterById(source);
 
     monster.coordinates = target;
+    /*
     this.coordinateService.setTileCoordinates(
       monster.getSprite(),
       target,
       this.gameService.getMap()
     );
+    */
   }
 }

@@ -10,7 +10,7 @@ export default class SpriteConfig {
   walkable = false;
   swimmable = false;
 
-  public static create(sprite: any): SpriteConfig {
+  public static fromJson(sprite: any): SpriteConfig {
     const out = new SpriteConfig();
     out.name = sprite.name;
     out.type = sprite.type;

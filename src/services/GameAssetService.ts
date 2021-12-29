@@ -10,13 +10,13 @@ export default class GameAssetService {
     const result = await BackendWebService.url(`/maps/${map}.json`)
       .get()
       .call();
-    return MapContainer.create(result.data);
+    return MapContainer.fromJson(result.data);
   }
   public async getMonstersData(): Promise<MonsterIndex[]> {
     const result = await BackendWebService.url(`/monsters/monsters.json`)
       .get()
       .call();
-    return result.data.map((data: any) => MonsterIndex.create(data));
+    return result.data.map((data: any) => MonsterIndex.fromJson(data));
   }
   public getMapSprite(map: MapContainer, name: string): SpriteConfig {
     const sprite = map.sprites.filter((s) => s.name === name);

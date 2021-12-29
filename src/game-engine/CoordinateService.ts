@@ -1,4 +1,4 @@
-import MapContainer from "@/models/Map";
+import MapContainer, { MapOption } from "@/models/Map";
 import Point from "@/models/Point";
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";
@@ -10,14 +10,14 @@ export default class CoordinateService {
     coordinates: Point,
     map: MapContainer
   ): void {
-    const target = this.getTileCoordinates(coordinates, map);
+    const target = this.getTileCoordinates(coordinates, map.options);
     tile.x = target.x;
     tile.y = target.y;
   }
 
-  public getTileCoordinates(tile: Point, map: MapContainer): Point {
-    const x = tile.x * map.options.tileWidth;
-    const y = tile.y * map.options.tileHeight;
+  public getTileCoordinates(tile: Point, options: MapOption): Point {
+    const x = tile.x * options.tileWidth;
+    const y = tile.y * options.tileHeight;
     return new Point(x, y);
   }
 }
