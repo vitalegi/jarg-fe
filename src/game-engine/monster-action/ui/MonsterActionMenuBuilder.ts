@@ -1,4 +1,3 @@
-import WalkActionHandler from "@/game-engine/user-action-handler/WalkUserActionHandler";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
@@ -6,7 +5,6 @@ import UserActionService from "@/services/UserActionService";
 import Container, { Service } from "typedi";
 import Ability from "../Ability";
 import SelectTargetUserActionHandler from "@/game-engine/user-action-handler/SelectTargetUserActionHandler";
-import Point from "@/models/Point";
 import UserInput from "@/game-engine/user-action-handler/UserInput";
 import AbilityExecutor from "../AbilityExecutor";
 
@@ -14,11 +12,7 @@ import AbilityExecutor from "../AbilityExecutor";
 export default class MonsterActionMenuBuilder {
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
-    leftMenu.addEntry(new MenuEntry(monster.uuid, () => this.nextTurn()));
     leftMenu.addEntry(new MenuEntry("Move", () => console.log("move")));
-    leftMenu.addEntry(new MenuEntry("Attack", () => console.log("attack")));
-    leftMenu.addEntry(new MenuEntry("End Turn", () => console.log("end turn")));
-
     monster.abilities
       .map((ability) => this.abilityMenuEntry(monster, ability))
       .forEach((m) => leftMenu.addEntry(m));

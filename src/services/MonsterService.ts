@@ -1,10 +1,6 @@
 import Ability from "@/game-engine/monster-action/Ability";
-import {
-  CharacterType,
-  Monster,
-  MonsterIndex,
-  Stats,
-} from "@/models/Character";
+import { CharacterType, Monster, MonsterIndex } from "@/models/Character";
+import Stats from "@/models/Stats";
 import RandomService from "@/services/RandomService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";

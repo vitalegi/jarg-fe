@@ -1,4 +1,5 @@
-import { Monster, Stats } from "@/models/Character";
+import { Monster } from "@/models/Character";
+import Stats from "@/models/Stats";
 import { Service } from "typedi";
 
 @Service()
