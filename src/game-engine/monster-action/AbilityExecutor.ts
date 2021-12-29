@@ -23,22 +23,29 @@ export default class AbilityExecutor {
 
   public async execute(): Promise<void> {
     const processor = this.ability.getProcessor(this.source, this.target);
-    const effects = processor.execute();
+
+    const hits = processor.hit();
     await this.showAbilityName();
 
-    effects.forEach((effect) => effect.apply(this.target));
+    if (hits) {
+      const effects = processor.execute();
+      effects.forEach((effect) => effect.apply(this.target));
 
-    console.log(
-      `Target: ${this.target.uuid}, action: ${
-        this.ability.label
-      }, effects: ${JSON.stringify(effects)}. HP of ${this.target.uuid}: ${
-        this.target.stats.hp
-      }/${this.target.stats.maxHP}`
-    );
-    this.healthBarService.updateBar(
-      this.target,
-      this.gameService.getMap().options
-    );
+      console.log(
+        `Target: ${this.target.uuid}, action: ${
+          this.ability.label
+        }, effects: ${JSON.stringify(effects)}. HP of ${this.target.uuid}: ${
+          this.target.stats.hp
+        }/${this.target.stats.maxHP}`
+      );
+      this.healthBarService.updateBar(
+        this.target,
+        this.gameService.getMap().options
+      );
+    } else {
+      // TODO visualizza messaggio "attacco mancato"
+      console.log("Miss");
+    }
 
     if (this.gameService.isDead(this.target.uuid)) {
       const exp = this.levelUpService.getKillExperience(this.target);

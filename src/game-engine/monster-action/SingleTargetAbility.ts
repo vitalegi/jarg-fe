@@ -17,6 +17,28 @@ export default class SingleTargetAbility {
     return [new StatAbilityEffect("hp", "abs", -damage)];
   }
 
+  public hit(): boolean {
+    const randomService = this.randomService();
+
+    // TODO add attack accuracy
+    const accuracy = 100;
+    const hit = this.source.stats.hit;
+    const hitRandom = randomService.randomDecimal(0.8, 1.2);
+
+    const attacker = (accuracy / 100) * hit * hitRandom;
+
+    const dex = this.target.stats.dex;
+    const dexRandom = randomService.randomDecimal(0.6, 1);
+    const defender = dex * dexRandom;
+
+    const match = attacker >= dex * 100;
+
+    console.log(
+      `accuracy: ${accuracy}, HIT: ${hit}, random: ${hitRandom} => ${attacker}, DEX: ${dex}, random: ${dexRandom} => ${defender}. HIT: ${match}`
+    );
+    return match;
+  }
+
   protected computeDamage(): number {
     const randomService = this.randomService();
 

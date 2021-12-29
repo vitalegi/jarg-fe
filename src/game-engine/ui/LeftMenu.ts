@@ -53,6 +53,17 @@ export default class LeftMenu {
     }
   }
 
+  public show(): void {
+    if (this.container) {
+      this.container.visible = true;
+    }
+  }
+  public hide(): void {
+    if (this.container) {
+      this.container.visible = false;
+    }
+  }
+
   protected drawMenuBackground(): void {
     const rectangle = new PIXI.Graphics();
     rectangle.lineStyle(this.options.frame.style);

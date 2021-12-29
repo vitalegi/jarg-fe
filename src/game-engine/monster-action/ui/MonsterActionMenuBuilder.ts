@@ -14,28 +14,38 @@ export default class MonsterActionMenuBuilder {
     const leftMenu = new LeftMenu();
     leftMenu.addEntry(new MenuEntry("Move", () => console.log("move")));
     monster.abilities
-      .map((ability) => this.abilityMenuEntry(monster, ability))
+      .map((ability) => this.abilityMenuEntry(leftMenu, monster, ability))
       .forEach((m) => leftMenu.addEntry(m));
 
     return leftMenu;
   }
 
-  protected abilityMenuEntry(monster: Monster, ability: Ability): MenuEntry {
+  protected abilityMenuEntry(
+    leftMenu: LeftMenu,
+    monster: Monster,
+    ability: Ability
+  ): MenuEntry {
     return new MenuEntry(ability.label, () => {
-      this.selectTargetMonster(monster.uuid).then((target: Monster) => {
-        console.log(`Selected target of ability ${ability.label}: ${target}`);
-        const executor = new AbilityExecutor(monster, target, ability);
-        executor.execute().then(() => {
-          console.log(
-            `User ability ${ability.label} is completed, go to next turn.`
-          );
-          this.nextTurn();
-        });
-      });
+      this.selectTargetMonster(leftMenu, monster.uuid).then(
+        (target: Monster) => {
+          console.log(`Selected target of ability ${ability.label}: ${target}`);
+          const executor = new AbilityExecutor(monster, target, ability);
+          executor.execute().then(() => {
+            console.log(
+              `User ability ${ability.label} is completed, go to next turn.`
+            );
+            this.nextTurn();
+          });
+        }
+      );
     });
   }
 
-  protected async selectTargetMonster(skipUUID: string): Promise<Monster> {
+  protected async selectTargetMonster(
+    leftMenu: LeftMenu,
+    skipUUID: string
+  ): Promise<Monster> {
+    leftMenu.hide();
     const target = await this.selectTarget(skipUUID, false, true);
     console.log(`Selected target ${target}`);
     const gameService = Container.get<GameService>(GameService);
