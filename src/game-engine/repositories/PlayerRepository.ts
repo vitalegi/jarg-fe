@@ -2,7 +2,7 @@ import { Monster } from "@/models/Character";
 import Point from "@/models/Point";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
-import MonsterService from "../MonsterService";
+import MonsterService from "../monster/MonsterService";
 
 const playerId = UuidUtil.nextId();
 

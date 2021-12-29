@@ -2,7 +2,7 @@ import { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import RendererService from "@/services/RendererService";
 import GameAssetService from "@/services/GameAssetService";
-import MonsterService from "@/game-engine/MonsterService";
+import MonsterService from "@/game-engine/monster/MonsterService";
 import PlayerService from "@/game-engine/PlayerService";
 import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
@@ -16,9 +16,12 @@ import TurnManager from "@/game-engine/turns/TurnManager";
 import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
-import MapSpritesRepository, {
+import {
+  PixiSpriteRepository,
+  PixiContainerRepository,
   SpritesConstants,
-} from "@/game-engine/repositories/MapSpritesRepository";
+  ContainersConstants,
+} from "@/game-engine/repositories/PixiRepository";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 
 @Service()
@@ -37,15 +40,18 @@ export default class GameService {
   protected monsterActionMenuBuilder = Container.get<MonsterActionMenuBuilder>(
     MonsterActionMenuBuilder
   );
-  protected mapSpritesRepository =
-    Container.get<MapSpritesRepository>(MapSpritesRepository);
+  protected pixiSpriteRepository =
+    Container.get<PixiSpriteRepository>(PixiSpriteRepository);
+  protected pixiContainerRepository = Container.get<PixiContainerRepository>(
+    PixiContainerRepository
+  );
+
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
-  protected battleContainer: PIXI.Container | null = null;
   protected turnManager = new TurnManager();
   protected leftMenu: LeftMenu | null = null;
 
@@ -74,8 +80,9 @@ export default class GameService {
     this.rendererService
       .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
       .then(() => {
-        this.battleContainer = new PIXI.Container();
-        this.app?.stage.addChild(this.battleContainer);
+        const container = new PIXI.Container();
+        this.setBattleContainer(container);
+        this.app?.stage.addChild(container);
 
         this.map.tiles.forEach((tile) => this.initMapTile(tile));
 
@@ -100,7 +107,7 @@ export default class GameService {
             monster,
             this.map.options
           );
-          this.battleContainer?.addChild(sprite);
+          this.getBattleContainer()?.addChild(sprite);
         });
         this.turnManager.addCharacters(this.map.monsters);
         this.turnManager.initTurns();
@@ -118,9 +125,10 @@ export default class GameService {
   }
 
   public moveBattleStage(offsetX: number, offsetY: number): void {
-    if (this.battleContainer) {
-      this.battleContainer.x += offsetX;
-      this.battleContainer.y += offsetY;
+    const battleContainer = this.getBattleContainer();
+    if (battleContainer) {
+      battleContainer.x += offsetX;
+      battleContainer.y += offsetY;
     }
   }
 
@@ -142,13 +150,14 @@ export default class GameService {
     return new Promise<void>((resolve) => {
       console.log(`Monster ${monster.uuid} died.`);
 
-      const sprite = this.mapSpritesRepository.find(
+      const container = this.pixiContainerRepository.find(
         monster.uuid,
-        SpritesConstants.MONSTER
+        ContainersConstants.MONSTER
       );
-      if (sprite) {
-        this.battleContainer?.removeChild(sprite);
+      if (container) {
+        this.getBattleContainer()?.removeChild(container);
       }
+
       this.map.monsters = this.map.monsters.filter(
         (m) => m.uuid !== monster.uuid
       );
@@ -178,7 +187,7 @@ export default class GameService {
     let sprite = null;
     if (spriteConfig.type === SpriteType.ANIMATED) {
       sprite = this.rendererService.createAnimatedSprite(spriteConfig.sprites);
-      this.mapSpritesRepository.add(
+      this.pixiSpriteRepository.add(
         tile.uuid,
         SpritesConstants.MAP_TILE,
         sprite
@@ -197,7 +206,7 @@ export default class GameService {
 
     this.userActionService.initMapTile(tile.coordinates, sprite);
 
-    this.battleContainer?.addChild(sprite);
+    this.getBattleContainer()?.addChild(sprite);
   }
 
   protected async startCharacterTurn(): Promise<void> {
@@ -236,5 +245,12 @@ export default class GameService {
     } else {
       this.startCharacterTurn();
     }
+  }
+
+  protected getBattleContainer(): PIXI.Container | null {
+    return this.pixiContainerRepository.find("", ContainersConstants.BATTLE);
+  }
+  protected setBattleContainer(container: PIXI.Container): void {
+    this.pixiContainerRepository.add("", ContainersConstants.BATTLE, container);
   }
 }

@@ -16,7 +16,7 @@ export default class UserActionService {
     this.actionHandler = actionHandler;
   }
 
-  public initMonster(uuid: string, sprite: PIXI.Sprite): void {
+  public initMonster(uuid: string, sprite: PIXI.Container): void {
     sprite.interactive = true;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     sprite.on("pointertap", (e: InteractionEvent) => this.tapMonster(uuid));

@@ -8,11 +8,15 @@ import RendererService from "@/services/RendererService";
 import UserActionService from "@/services/UserActionService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
-import CoordinateService from "./CoordinateService";
-import MapSpritesRepository, {
+import CoordinateService from "../CoordinateService";
+import {
+  PixiSpriteRepository,
   SpritesConstants,
-} from "./repositories/MapSpritesRepository";
-import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
+  PixiContainerRepository,
+  ContainersConstants,
+} from "../repositories/PixiRepository";
+import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
+import HealthBarService from "./HealthBarService";
 
 @Service()
 export default class MonsterService {
@@ -21,11 +25,17 @@ export default class MonsterService {
     Container.get<UserActionService>(UserActionService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
-  protected mapSpritesRepository =
-    Container.get<MapSpritesRepository>(MapSpritesRepository);
+  protected pixiSpriteRepository =
+    Container.get<PixiSpriteRepository>(PixiSpriteRepository);
+  protected pixiContainerRepository = Container.get<PixiContainerRepository>(
+    PixiContainerRepository
+  );
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
+  protected healthBarService =
+    Container.get<HealthBarService>(HealthBarService);
+
   public createMonster(ownerId: null | string): Monster {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
@@ -50,28 +60,37 @@ export default class MonsterService {
   public createMonsterSprite(
     monster: Monster,
     options: MapOption
-  ): PIXI.Sprite {
+  ): PIXI.Container {
     const monsterFamily = this.monsterIndexRepository.getMonster(
       monster.modelId
     );
     const sprite = this.rendererService.createSprite(monsterFamily.sprite);
 
-    this.mapSpritesRepository.add(
+    const container = new PIXI.Container();
+    this.pixiContainerRepository.add(
+      monster.uuid,
+      ContainersConstants.MONSTER,
+      container
+    );
+
+    this.pixiSpriteRepository.add(
       monster.uuid,
       SpritesConstants.MONSTER,
       sprite
     );
+
+    container.addChild(sprite);
 
     if (monster.coordinates) {
       const point = this.coordinateService.getTileCoordinates(
         monster.coordinates,
         options
       );
-      sprite.x = point.x;
-      sprite.y = point.y;
+      container.x = point.x;
+      container.y = point.y;
     }
-
-    this.userActionService.initMonster(monster.uuid, sprite);
-    return sprite;
+    this.healthBarService.createBar(container, monster, options);
+    this.userActionService.initMonster(monster.uuid, container);
+    return container;
   }
 }

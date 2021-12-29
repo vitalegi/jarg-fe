@@ -4,10 +4,13 @@ import Container from "typedi";
 import AbilityName from "../ui/AbilityName";
 import Ability from "./Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import HealthBarService from "../monster/HealthBarService";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
+  protected healthBarService =
+    Container.get<HealthBarService>(HealthBarService);
   protected source: Monster;
   protected target: Monster;
   protected ability: Ability;
@@ -31,6 +34,10 @@ export default class AbilityExecutor {
       }, effects: ${JSON.stringify(effects)}. HP of ${this.target.uuid}: ${
         this.target.stats.hp
       }/${this.target.stats.maxHP}`
+    );
+    this.healthBarService.updateBar(
+      this.target,
+      this.gameService.getMap().options
     );
 
     if (this.gameService.isDead(this.target.uuid)) {
