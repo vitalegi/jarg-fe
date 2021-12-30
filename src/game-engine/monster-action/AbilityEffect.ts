@@ -6,6 +6,8 @@ type EffectComputeType = "percentage" | "abs";
 
 export default abstract class AbilityEffect {
   abstract apply(monster: Monster): void;
+
+  abstract textualEffect(monster: Monster): string;
 }
 
 export class StatAbilityEffect extends AbilityEffect {
@@ -27,6 +29,13 @@ export class StatAbilityEffect extends AbilityEffect {
     const value = this.getOriginalValue(monster);
     const newValue = this.getNewValue(value);
     this.setValue(monster, newValue);
+  }
+
+  textualEffect(monster: Monster): string {
+    const value = this.getOriginalValue(monster);
+    const newValue = this.getNewValue(value);
+    const diff = newValue - value;
+    return `${diff} ${this.stat.toUpperCase()}`;
   }
 
   protected getOriginalValue(monster: Monster): number {
@@ -56,10 +65,10 @@ export class StatAbilityEffect extends AbilityEffect {
 
   protected getNewValue(originalValue: number): number {
     if (this.type === "abs") {
-      return originalValue + this.value;
+      return Math.round(originalValue + this.value);
     }
     if (this.type === "percentage") {
-      return originalValue * (1 + this.value);
+      return Math.round(originalValue * (1 + this.value));
     }
     throw new Error(`Unknown type ${this.type}`);
   }

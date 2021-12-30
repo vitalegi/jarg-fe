@@ -17,6 +17,7 @@ import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
+import Drawer from "@/game-engine/ui/Drawer";
 
 @Service()
 export default class GameService {
@@ -43,6 +44,7 @@ export default class GameService {
   protected app: PIXI.Application | null = null;
   protected turnManager = new TurnManager();
   protected leftMenu: LeftMenu | null = null;
+  protected gameLoopHandlers: Drawer[] = [];
 
   public getMap(): MapContainer {
     return this.map;
@@ -171,11 +173,16 @@ export default class GameService {
   }
 
   protected gameLoop(): void {
-    const now = +new Date();
-    if (now - this.lastUserAction < 100) {
-      return;
-    }
-    this.lastUserAction = now;
+    this.gameLoopHandlers
+      .filter((h) => !h.completed())
+      .forEach((h) => {
+        try {
+          h.draw();
+        } catch (e) {
+          console.error(e);
+        }
+      });
+    this.gameLoopHandlers = this.gameLoopHandlers.filter((h) => !h.completed());
   }
   protected initMapTile(tile: Tile): void {
     const spriteConfig = this.gameAssetService.getMapSprite(
@@ -257,5 +264,35 @@ export default class GameService {
       return container as PIXI.Container;
     }
     throw Error(`Container not found`);
+  }
+
+  public getChildContainer(
+    parent: PIXI.Container,
+    name: string
+  ): PIXI.Container {
+    const child = this.findChildContainer(parent, name);
+    if (child) {
+      return child;
+    }
+    throw Error(
+      `Cannot find element ${name} in parent ${
+        parent.name
+      }. Children ${parent.children.map((c) => c.name).join(", ")}`
+    );
+  }
+
+  public findChildContainer(
+    parent: PIXI.Container,
+    name: string
+  ): PIXI.Container | null {
+    const child = parent.getChildByName(name);
+    if (child) {
+      return child as PIXI.Container;
+    }
+    return null;
+  }
+
+  public addGameLoopHandler(drawer: Drawer): void {
+    this.gameLoopHandlers.push(drawer);
   }
 }

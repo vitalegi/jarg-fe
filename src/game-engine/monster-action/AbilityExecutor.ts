@@ -6,6 +6,7 @@ import AbilityName from "../ui/AbilityName";
 import Ability from "./Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
+import TextOverCharacter from "../ui/TextOverCharacter";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
@@ -30,6 +31,12 @@ export default class AbilityExecutor {
 
     if (hits) {
       const effects = processor.execute();
+
+      const msg = effects.map((e) => e.textualEffect(this.target)).join("\n");
+      this.gameService.addGameLoopHandler(
+        new TextOverCharacter(this.target, msg)
+      );
+
       effects.forEach((effect) => effect.apply(this.target));
 
       console.log(
@@ -51,8 +58,8 @@ export default class AbilityExecutor {
         this.gameService.getMap().options
       );
     } else {
-      // TODO visualizza messaggio "attacco mancato"
       console.log("Miss");
+      this.gameService.addGameLoopHandler(TextOverCharacter.miss(this.target));
     }
 
     if (this.gameService.isDead(this.target.uuid)) {
