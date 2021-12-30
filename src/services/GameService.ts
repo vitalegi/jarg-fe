@@ -16,12 +16,6 @@ import TurnManager from "@/game-engine/turns/TurnManager";
 import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
-import {
-  PixiSpriteRepository,
-  PixiContainerRepository,
-  SpritesConstants,
-  ContainersConstants,
-} from "@/game-engine/repositories/PixiRepository";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 
 @Service()
@@ -39,11 +33,6 @@ export default class GameService {
     Container.get<CoordinateService>(CoordinateService);
   protected monsterActionMenuBuilder = Container.get<MonsterActionMenuBuilder>(
     MonsterActionMenuBuilder
-  );
-  protected pixiSpriteRepository =
-    Container.get<PixiSpriteRepository>(PixiSpriteRepository);
-  protected pixiContainerRepository = Container.get<PixiContainerRepository>(
-    PixiContainerRepository
   );
 
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
@@ -82,7 +71,6 @@ export default class GameService {
       .then(() => {
         const container = new PIXI.Container();
         container.name = "BATTLE_CONTAINER";
-        this.setBattleContainer(container);
         this.app?.stage.addChild(container);
 
         this.map.tiles.forEach((tile) => this.initMapTile(tile));
@@ -151,13 +139,8 @@ export default class GameService {
     return new Promise<void>((resolve) => {
       console.log(`Monster ${monster.uuid} died.`);
 
-      const container = this.pixiContainerRepository.find(
-        monster.uuid,
-        ContainersConstants.MONSTER
-      );
-      if (container) {
-        this.getBattleContainer()?.removeChild(container);
-      }
+      const container = this.getBattleContainer().getChildByName(monster.uuid);
+      this.getBattleContainer().removeChild(container);
 
       this.map.monsters = this.map.monsters.filter(
         (m) => m.uuid !== monster.uuid
@@ -202,11 +185,6 @@ export default class GameService {
     let sprite = null;
     if (spriteConfig.type === SpriteType.ANIMATED) {
       sprite = this.rendererService.createAnimatedSprite(spriteConfig.sprites);
-      this.pixiSpriteRepository.add(
-        tile.uuid,
-        SpritesConstants.MAP_TILE,
-        sprite
-      );
     } else {
       throw new Error(`Unknown type ${spriteConfig.type}`);
     }
@@ -273,10 +251,11 @@ export default class GameService {
     this.nextTurn();
   }
 
-  protected getBattleContainer(): PIXI.Container | null {
-    return this.pixiContainerRepository.find("", ContainersConstants.BATTLE);
-  }
-  protected setBattleContainer(container: PIXI.Container): void {
-    this.pixiContainerRepository.add("", ContainersConstants.BATTLE, container);
+  public getBattleContainer(): PIXI.Container {
+    const container = this.getApp().stage.getChildByName("BATTLE_CONTAINER");
+    if (container) {
+      return container as PIXI.Container;
+    }
+    throw Error(`Container not found`);
   }
 }

@@ -9,12 +9,6 @@ import UserActionService from "@/services/UserActionService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
 import CoordinateService from "../CoordinateService";
-import {
-  PixiSpriteRepository,
-  SpritesConstants,
-  PixiContainerRepository,
-  ContainersConstants,
-} from "../repositories/PixiRepository";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 
@@ -25,11 +19,6 @@ export default class MonsterService {
     Container.get<UserActionService>(UserActionService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
-  protected pixiSpriteRepository =
-    Container.get<PixiSpriteRepository>(PixiSpriteRepository);
-  protected pixiContainerRepository = Container.get<PixiContainerRepository>(
-    PixiContainerRepository
-  );
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
@@ -69,19 +58,6 @@ export default class MonsterService {
 
     const container = new PIXI.Container();
     container.name = monster.uuid;
-
-    this.pixiContainerRepository.add(
-      monster.uuid,
-      ContainersConstants.MONSTER,
-      container
-    );
-
-    this.pixiSpriteRepository.add(
-      monster.uuid,
-      SpritesConstants.MONSTER,
-      sprite
-    );
-
     container.addChild(sprite);
 
     if (monster.coordinates) {
