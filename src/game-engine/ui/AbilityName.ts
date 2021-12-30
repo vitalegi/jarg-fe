@@ -1,11 +1,15 @@
 import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
+import Drawer from "./Drawer";
+import TimeUtil from "@/utils/TimeUtil";
 
-export default class AbilityName {
+export default class AbilityName extends Drawer {
+  protected static NAME = "abilityName";
+
   protected label = "";
   protected options = {
-    duration: 1000,
+    duration: 1500,
     x: 188,
     y: 4,
     text: {
@@ -29,24 +33,35 @@ export default class AbilityName {
   };
 
   public constructor(label: string) {
+    super();
     this.label = label;
   }
 
-  public async execute(): Promise<void> {
-    console.log(`Show ability ${this.label}`);
-    const container = this.createText();
-    this.getGameService().getApp().stage.addChild(container);
-    return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        this.getGameService().getApp().stage.removeChild(container);
-        console.log(`Hide ability ${this.label}`);
-        resolve();
-      }, this.options.duration);
-    });
+  protected getName(): string {
+    return "AbilityName";
+  }
+
+  public doDraw(): void {
+    if (this.isFirstDraw()) {
+      console.log(`Show ability ${this.label}`);
+      this.getBattleContainer().addChild(this.createText());
+    }
+    if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
+      console.log(`Remove ability ${this.label}`);
+
+      const parent = this.getBattleContainer();
+      const child = this.getGameService().getChildContainer(
+        parent,
+        AbilityName.NAME
+      );
+      parent.removeChild(child);
+      this.complete();
+    }
   }
 
   protected createText(): PIXI.Container {
     const container = new PIXI.Container();
+    container.name = AbilityName.NAME;
     container.x = this.options.x;
     container.y = this.options.y;
 
@@ -71,5 +86,9 @@ export default class AbilityName {
 
   protected frameWidth(): number {
     return this.options.text.fontWidth * this.label.length;
+  }
+
+  protected getBattleContainer(): PIXI.Container {
+    return this.getGameService().getBattleContainer();
   }
 }

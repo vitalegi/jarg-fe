@@ -7,8 +7,16 @@ export default abstract class Drawer {
   private _drawCount = 0;
   private _startTime = 0;
 
+  private _promises: ((value: void | PromiseLike<void>) => void)[] = [];
+
   public constructor() {
     this._id = UuidUtil.nextId();
+  }
+
+  public notifyWhenCompleted(): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this._promises.push(resolve);
+    });
   }
 
   public draw(): void {
@@ -20,9 +28,12 @@ export default abstract class Drawer {
     this._drawCount++;
 
     const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
-    console.info(
-      `MONITORING Drawer id=${this.getId()}, name=${this.getName()}, time_taken=${duration}ms`
-    );
+    const msg = `MONITORING Drawer id=${this.getId()}, name=${this.getName()}, time_taken=${duration}ms`;
+    if (duration > 5) {
+      console.info(msg);
+    } else {
+      console.debug(msg);
+    }
   }
 
   protected abstract doDraw(): void;
@@ -47,5 +58,6 @@ export default abstract class Drawer {
 
   protected complete(): void {
     this._completed = true;
+    this._promises.forEach((promise) => promise());
   }
 }
