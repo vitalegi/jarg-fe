@@ -81,6 +81,7 @@ export default class GameService {
       .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
       .then(() => {
         const container = new PIXI.Container();
+        container.name = "BATTLE_CONTAINER";
         this.setBattleContainer(container);
         this.app?.stage.addChild(container);
 

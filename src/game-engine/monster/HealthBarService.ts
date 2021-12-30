@@ -2,18 +2,10 @@ import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import { Monster } from "@/models/Character";
 import { MapOption } from "@/models/Map";
-import {
-  PixiContainerRepository,
-  ContainersConstants,
-} from "../repositories/PixiRepository";
 import PlayerService from "../PlayerService";
 
 @Service()
 export default class HealthBarService {
-  protected pixiContainerRepository = Container.get<PixiContainerRepository>(
-    PixiContainerRepository
-  );
-
   options = {
     bar: {
       border: 1,
@@ -33,8 +25,8 @@ export default class HealthBarService {
     const barWidth = this.barWidth(options);
     const barBorder = this.options.bar.border;
     const barHeight = this.options.bar.height;
-    const x = (options.tileWidth - barWidth) / 2;
-    const y = 5;
+    const x = this.x(options);
+    const y = this.y(options);
 
     const background = new PIXI.Graphics();
     background.lineStyle({ width: barBorder, color: 0x000000 });
@@ -43,9 +35,38 @@ export default class HealthBarService {
     background.endFill();
     background.name = "healthBar_background";
 
+    const rectangle = this.createHealthBar(monster, options);
+
+    container.addChild(background);
+    container.addChild(rectangle);
+  }
+
+  public updateBar(
+    container: PIXI.Container,
+    monster: Monster,
+    options: MapOption
+  ): void {
+    const rectangle = container.getChildByName(
+      "healthBar_bar"
+    ) as PIXI.Graphics;
+
+    container.removeChild(rectangle);
+    container.addChild(this.createHealthBar(monster, options));
+  }
+
+  protected createHealthBar(
+    monster: Monster,
+    options: MapOption
+  ): PIXI.Graphics {
+    const barBorder = this.options.bar.border;
+    const x = this.x(options);
+    const y = this.y(options);
+    const barHeight = this.options.bar.height;
+
     const rectangle = new PIXI.Graphics();
     rectangle.lineStyle({ width: barBorder, color: this.barColor(monster) });
     rectangle.beginFill(this.barColor(monster));
+
     rectangle.drawRect(
       x + barBorder,
       y + barBorder,
@@ -55,22 +76,7 @@ export default class HealthBarService {
     rectangle.endFill();
     rectangle.name = "healthBar_bar";
 
-    container.addChild(background);
-    container.addChild(rectangle);
-  }
-
-  public updateBar(monster: Monster, options: MapOption): void {
-    const container = this.pixiContainerRepository.find(
-      monster.uuid,
-      ContainersConstants.MONSTER
-    );
-    if (!container) {
-      return;
-    }
-    const rectangle = container.getChildByName(
-      "healthBar_bar"
-    ) as PIXI.Graphics;
-    rectangle.width = this.healthWidth(monster, options);
+    return rectangle;
   }
 
   protected barWidth(options: MapOption): number {
@@ -78,11 +84,13 @@ export default class HealthBarService {
   }
 
   protected healthWidth(monster: Monster, options: MapOption): number {
-    let health = monster.stats.hp / monster.stats.maxHP;
-    if (health < 0) {
-      health = 0;
+    const health = monster.stats.hp / monster.stats.maxHP;
+    const maxWidth = this.barWidth(options) - 2 * this.options.bar.border;
+    let width = Math.round(health * maxWidth);
+    if (width <= 0) {
+      width = 0;
     }
-    return health * (this.barWidth(options) - 2 * this.options.bar.border);
+    return width;
   }
 
   protected barColor(monster: Monster): number {
@@ -91,5 +99,18 @@ export default class HealthBarService {
       return this.options.fillColor.player;
     }
     return this.options.fillColor.enemy;
+  }
+
+  protected healthX(options: MapOption): number {
+    return this.x(options) + this.options.bar.border;
+  }
+
+  protected x(options: MapOption): number {
+    return (options.tileWidth - this.barWidth(options)) / 2;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected y(options: MapOption): number {
+    return 5;
   }
 }

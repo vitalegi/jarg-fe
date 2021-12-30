@@ -1,3 +1,4 @@
+import * as PIXI from "pixi.js";
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
 import Container from "typedi";
@@ -5,6 +6,7 @@ import AbilityName from "../ui/AbilityName";
 import Ability from "./Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
+import { PixiContainerRepository } from "../repositories/PixiRepository";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
@@ -38,7 +40,16 @@ export default class AbilityExecutor {
           this.target.stats.hp
         }/${this.target.stats.maxHP}`
       );
+
+      const battleContainer = this.gameService
+        .getApp()
+        .stage.getChildByName("BATTLE_CONTAINER") as PIXI.Container;
+      const monsterContainer = battleContainer.getChildByName(
+        this.target.uuid
+      ) as PIXI.Container;
+
       this.healthBarService.updateBar(
+        monsterContainer,
         this.target,
         this.gameService.getMap().options
       );
