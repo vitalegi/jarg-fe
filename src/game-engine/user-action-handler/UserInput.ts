@@ -40,4 +40,14 @@ export default class UserInput {
       "Malformed UserInput, no position provided" + JSON.stringify(this)
     );
   }
+
+  public toString(): string {
+    if (this.isMonster()) {
+      return `UserInput(type=monster, ${this.getMonsterId()})`;
+    }
+    if (this.isTerrain()) {
+      return `UserInput(type=terrain, ${this.getPosition()})`;
+    }
+    return "UNKNOWN";
+  }
 }

@@ -7,17 +7,32 @@ import Ability from "../Ability";
 import SelectTargetUserActionHandler from "@/game-engine/user-action-handler/SelectTargetUserActionHandler";
 import UserInput from "@/game-engine/user-action-handler/UserInput";
 import AbilityExecutor from "../AbilityExecutor";
+import Point from "@/models/Point";
+import MapTraversal from "@/game-engine/MapTraversal";
+import MonsterMove from "../MonsterMove";
 
 @Service()
 export default class MonsterActionMenuBuilder {
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
-    leftMenu.addEntry(new MenuEntry("Move", () => console.log("move")));
+    leftMenu.addEntry(this.move(leftMenu, monster));
     monster.abilities
       .map((ability) => this.abilityMenuEntry(leftMenu, monster, ability))
       .forEach((m) => leftMenu.addEntry(m));
 
     return leftMenu;
+  }
+
+  protected move(leftMenu: LeftMenu, monster: Monster): MenuEntry {
+    return new MenuEntry("Move", () => {
+      leftMenu.hide();
+      this.selectWalkTarget(leftMenu, monster).then((path: Point[]) => {
+        new MonsterMove(monster, path).execute().then(() => {
+          console.log(`Walk to ${path[path.length - 1]} is completed.`);
+          leftMenu.show();
+        });
+      });
+    });
   }
 
   protected abilityMenuEntry(
@@ -28,7 +43,9 @@ export default class MonsterActionMenuBuilder {
     return new MenuEntry(ability.label, () => {
       this.selectTargetMonster(leftMenu, monster.uuid).then(
         (target: Monster) => {
-          console.log(`Selected target of ability ${ability.label}: ${target}`);
+          console.log(
+            `Selected target of ability ${ability.label}: ${target.uuid} / ${target.coordinates}`
+          );
           const executor = new AbilityExecutor(monster, target, ability);
           executor.execute().then(() => {
             console.log(
@@ -52,8 +69,33 @@ export default class MonsterActionMenuBuilder {
     return gameService.getMonsterById(target.getMonsterId());
   }
 
+  protected async selectWalkTarget(
+    leftMenu: LeftMenu,
+    monster: Monster
+  ): Promise<Point[]> {
+    let path: Point[] = [];
+
+    do {
+      const target = await this.selectTarget(null, true, false);
+
+      const gameService = Container.get<GameService>(GameService);
+
+      try {
+        path = new MapTraversal(gameService.getMap(), monster).getPath(
+          target.getPosition()
+        );
+        console.log(`Selected target ${target}`);
+      } catch (e) {
+        console.error(
+          `Failed to find a path between ${monster.coordinates} (${monster.uuid}) and ${target}`
+        );
+      }
+    } while (path.length === 0);
+    return path;
+  }
+
   protected async selectTarget(
-    skipUUID: string,
+    skipUUID: string | null,
     allowTerrains: boolean,
     allowMonsters: boolean
   ): Promise<UserInput> {

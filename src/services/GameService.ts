@@ -204,9 +204,26 @@ export default class GameService {
       this.map
     );
 
+    const coordinates = this.coordinateService.getTileCoordinates(
+      tile.coordinates,
+      this.map.options
+    );
+    const border = new PIXI.Graphics();
+    border.lineStyle({ width: 1, color: 0x000000 });
+    const x1 = coordinates.x;
+    const x2 = coordinates.x + this.map.options.tileWidth;
+    const y1 = coordinates.y;
+    const y2 = coordinates.y + this.map.options.tileHeight - 1;
+    border.moveTo(x1, y1);
+    border.lineTo(x1, y2);
+    border.lineTo(x2, y2);
+    border.lineTo(x2, y1);
+    border.moveTo(x1, y1);
+
     this.userActionService.initMapTile(tile.coordinates, sprite);
 
     this.getBattleContainer()?.addChild(sprite);
+    this.getBattleContainer()?.addChild(border);
   }
 
   protected async startCharacterTurn(): Promise<void> {

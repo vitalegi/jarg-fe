@@ -7,6 +7,10 @@ export default class Point {
     this.y = y;
   }
 
+  public clone(): Point {
+    return new Point(this.x, this.y);
+  }
+
   public static fromJson(obj: any): Point {
     const out = new Point();
     if (obj.x) {

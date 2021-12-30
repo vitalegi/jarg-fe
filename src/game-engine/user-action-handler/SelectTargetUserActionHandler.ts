@@ -3,12 +3,12 @@ import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
 export default class SelectTargetUserActionHandler extends UserActionHandler {
-  protected skipUUID = "";
+  protected skipUUID: string | null = "";
   protected allowTerrains = false;
   protected allowMonsters = false;
 
   public constructor(
-    skipUUID: string,
+    skipUUID: string | null,
     allowTerrains: boolean,
     allowMonsters: boolean
   ) {

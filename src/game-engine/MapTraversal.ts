@@ -23,10 +23,13 @@ class TraversalPoint {
 }
 
 class GraphBuilder {
-  public createGraph(map: MapContainer): Map<string, TraversalPoint> {
+  public createGraph(
+    map: MapContainer,
+    monster: Monster
+  ): Map<string, TraversalPoint> {
     const points = new Map<string, TraversalPoint>();
     map.tiles
-      .filter((tile) => this.canTraverse(tile))
+      .filter((tile) => this.canTraverse(map, monster, tile))
       .forEach((tile) => {
         const traversalPoint = new TraversalPoint(tile.coordinates);
         points.set(TraversalPoint.getId(traversalPoint.point), traversalPoint);
@@ -45,8 +48,27 @@ class GraphBuilder {
     return points;
   }
 
-  protected canTraverse(tile: Tile): boolean {
+  protected canTraverse(
+    map: MapContainer,
+    monster: Monster,
+    tile: Tile
+  ): boolean {
     if (!tile) {
+      return false;
+    }
+
+    const enemiesOnThisTile = map.monsters
+      .filter(
+        (m) =>
+          m.coordinates?.x === tile.coordinates.x &&
+          m.coordinates?.y === tile.coordinates.y
+      )
+      // ignore self
+      .filter((m) => m.uuid !== monster.uuid)
+      // ignore allies
+      .filter((m) => m.ownerId !== monster.ownerId);
+
+    if (enemiesOnThisTile.length > 0) {
       return false;
     }
     return true;
@@ -56,6 +78,7 @@ class GraphBuilder {
 export default class MapTraversal {
   map;
   monster;
+  debug = false;
 
   public constructor(map: MapContainer, monster: Monster) {
     this.map = map;
@@ -63,13 +86,12 @@ export default class MapTraversal {
   }
 
   public getPath(target: Point): Point[] {
-    const points = new Array<TraversalPoint>();
     const start = this.monster.coordinates;
     if (!start) {
       throw Error(`Missing starting point`);
     }
     let now = TimeUtil.timestamp();
-    const graph = new GraphBuilder().createGraph(this.map);
+    const graph = new GraphBuilder().createGraph(this.map, this.monster);
     let duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
     console.log(`MONITORING getGraph duration=${duration}ms`);
 
@@ -77,7 +99,7 @@ export default class MapTraversal {
     const path = this.minimumPath(graph, start, target);
     duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
     console.log(`MONITORING dijkstra duration=${duration}ms`);
-
+    console.log(`Path from ${start} to ${target}: ${path.join(",")}`);
     return path;
   }
 
@@ -103,6 +125,11 @@ export default class MapTraversal {
   }
 
   protected dijkstra(graph: Map<string, TraversalPoint>, start: Point): void {
+    graph.forEach((entry) => {
+      entry.visited = false;
+      entry.cost = INFINITY;
+      entry.previous = null;
+    });
     this.getGraphEntry(graph, start).cost = 0;
 
     const unvisited: TraversalPoint[] = [];
@@ -132,6 +159,14 @@ export default class MapTraversal {
             unvisitedNeighbor.previous = nearestUnvisited;
           }
         });
+    }
+
+    if (this.debug) {
+      graph.forEach((entry) => {
+        console.log(
+          `GRAPH RESULT: from ${start} to ${entry.point} costs ${entry.cost}, prev: ${entry.previous?.point}`
+        );
+      });
     }
   }
 
