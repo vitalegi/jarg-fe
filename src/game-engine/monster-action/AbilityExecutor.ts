@@ -2,12 +2,13 @@ import * as PIXI from "pixi.js";
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
 import Container from "typedi";
-import AbilityName from "../ui/AbilityName";
+import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
-import TextOverCharacter from "../ui/TextOverCharacter";
+import TextOverCharacter from "../ui/TextOverCharacterDrawer";
 import AbilityEffect from "./AbilityEffect";
+import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
@@ -36,7 +37,9 @@ export default class AbilityExecutor {
       const effectsDrawer = this.showAbilityEffects(effects);
       await this.waitCompletion([abilityDrawer, effectsDrawer]);
 
+      const fromHP = this.target.stats.hp;
       effects.forEach((effect) => effect.apply(this.target));
+      const toHP = this.target.stats.hp;
 
       console.log(
         `Target: ${this.target.uuid}, action: ${
@@ -45,17 +48,13 @@ export default class AbilityExecutor {
           this.target.stats.hp
         }/${this.target.stats.maxHP}`
       );
-
-      const battleContainer = this.gameService.getBattleContainer();
-      const monsterContainer = battleContainer.getChildByName(
-        this.target.uuid
-      ) as PIXI.Container;
-
-      this.healthBarService.updateBar(
-        monsterContainer,
+      const healthUpdater = new HealthBarUpdateDrawer(
         this.target,
-        this.gameService.getMap().options
+        fromHP,
+        toHP
       );
+      this.gameService.addGameLoopHandler(healthUpdater);
+      await healthUpdater.notifyWhenCompleted();
     } else {
       console.log("Miss");
       const effectsDrawer = this.showMiss();
@@ -71,7 +70,7 @@ export default class AbilityExecutor {
 
   protected async showAbilityName(): Promise<void> {
     console.log(`show ability name ${this.ability.label}`);
-    const ability = new AbilityName(this.ability.label);
+    const ability = new AbilityNameDrawer(this.ability.label);
     this.gameService.addGameLoopHandler(ability);
     return ability.notifyWhenCompleted();
   }

@@ -5,8 +5,8 @@ import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 
-export default class TextOverCharacter extends Drawer {
-  protected static NAME = "textOverCharacter";
+export default class TextOverCharacterDrawer extends Drawer {
+  protected static NAME = "TextOverCharacterDrawer";
 
   monster;
   text;
@@ -22,8 +22,8 @@ export default class TextOverCharacter extends Drawer {
     },
   };
 
-  public static miss(monster: Monster): TextOverCharacter {
-    return new TextOverCharacter(monster, "MISS");
+  public static miss(monster: Monster): TextOverCharacterDrawer {
+    return new TextOverCharacterDrawer(monster, "MISS");
   }
 
   public constructor(monster: Monster, text: string) {
@@ -33,7 +33,7 @@ export default class TextOverCharacter extends Drawer {
   }
 
   protected getName(): string {
-    return "TextOverCharacter";
+    return "TextOverCharacterDrawer";
   }
 
   public doDraw(): void {
@@ -48,7 +48,9 @@ export default class TextOverCharacter extends Drawer {
       console.log(`Remove text message`);
       const container = this.getMonsterContainer();
       if (container) {
-        const textChild = container.getChildByName(TextOverCharacter.NAME);
+        const textChild = container.getChildByName(
+          TextOverCharacterDrawer.NAME
+        );
         container.removeChild(textChild);
       }
       this.complete();
@@ -57,7 +59,7 @@ export default class TextOverCharacter extends Drawer {
 
   protected createTextMessage(): PIXI.Text {
     const message = new PIXI.Text(this.getText(), this.options.font);
-    message.name = TextOverCharacter.NAME;
+    message.name = TextOverCharacterDrawer.NAME;
     message.position.x = 0;
     message.position.y = 0;
     return message;

@@ -35,7 +35,7 @@ export default class HealthBarService {
     background.endFill();
     background.name = "healthBar_background";
 
-    const rectangle = this.createHealthBar(monster, options);
+    const rectangle = this.createHealthBar(monster, null, options);
 
     container.addChild(background);
     container.addChild(rectangle);
@@ -44,6 +44,7 @@ export default class HealthBarService {
   public updateBar(
     container: PIXI.Container,
     monster: Monster,
+    hp: number | null,
     options: MapOption
   ): void {
     const rectangle = container.getChildByName(
@@ -51,11 +52,12 @@ export default class HealthBarService {
     ) as PIXI.Graphics;
 
     container.removeChild(rectangle);
-    container.addChild(this.createHealthBar(monster, options));
+    container.addChild(this.createHealthBar(monster, hp, options));
   }
 
   protected createHealthBar(
     monster: Monster,
+    hp: number | null,
     options: MapOption
   ): PIXI.Graphics {
     const barBorder = this.options.bar.border;
@@ -70,7 +72,7 @@ export default class HealthBarService {
     rectangle.drawRect(
       x + barBorder,
       y + barBorder,
-      this.healthWidth(monster, options),
+      this.healthWidth(monster, hp, options),
       barHeight
     );
     rectangle.endFill();
@@ -83,8 +85,13 @@ export default class HealthBarService {
     return 0.6 * options.tileWidth;
   }
 
-  protected healthWidth(monster: Monster, options: MapOption): number {
-    const health = monster.stats.hp / monster.stats.maxHP;
+  protected healthWidth(
+    monster: Monster,
+    hp: number | null,
+    options: MapOption
+  ): number {
+    const remainingHP = hp ? hp : monster.stats.hp;
+    const health = remainingHP / monster.stats.maxHP;
     const maxWidth = this.barWidth(options) - 2 * this.options.bar.border;
     let width = Math.round(health * maxWidth);
     if (width <= 0) {

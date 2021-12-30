@@ -4,8 +4,8 @@ import * as PIXI from "pixi.js";
 import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
 
-export default class AbilityName extends Drawer {
-  protected static NAME = "abilityName";
+export default class AbilityNameDrawer extends Drawer {
+  protected static NAME = "AbilityNameDrawer";
 
   protected label = "";
   protected options = {
@@ -38,7 +38,7 @@ export default class AbilityName extends Drawer {
   }
 
   protected getName(): string {
-    return "AbilityName";
+    return "AbilityNameDrawer";
   }
 
   public doDraw(): void {
@@ -52,7 +52,7 @@ export default class AbilityName extends Drawer {
       const parent = this.getBattleContainer();
       const child = this.getGameService().getChildContainer(
         parent,
-        AbilityName.NAME
+        AbilityNameDrawer.NAME
       );
       parent.removeChild(child);
       this.complete();
@@ -61,7 +61,7 @@ export default class AbilityName extends Drawer {
 
   protected createText(): PIXI.Container {
     const container = new PIXI.Container();
-    container.name = AbilityName.NAME;
+    container.name = AbilityNameDrawer.NAME;
     container.x = this.options.x;
     container.y = this.options.y;
 
