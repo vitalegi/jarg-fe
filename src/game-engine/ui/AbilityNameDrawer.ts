@@ -3,6 +3,7 @@ import Container from "typedi";
 import * as PIXI from "pixi.js";
 import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
+import Point from "@/models/Point";
 
 export default class AbilityNameDrawer extends Drawer {
   protected static NAME = "AbilityNameDrawer";
@@ -10,7 +11,6 @@ export default class AbilityNameDrawer extends Drawer {
   protected label = "";
   protected options = {
     duration: 1500,
-    x: 188,
     y: 4,
     text: {
       x: 3,
@@ -44,12 +44,12 @@ export default class AbilityNameDrawer extends Drawer {
   public doDraw(): void {
     if (this.isFirstDraw()) {
       console.log(`Show ability ${this.label}`);
-      this.getBattleContainer().addChild(this.createText());
+      this.getGameService().getApp().stage.addChild(this.createText());
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
       console.log(`Remove ability ${this.label}`);
 
-      const parent = this.getBattleContainer();
+      const parent = this.getGameService().getApp().stage;
       const child = this.getGameService().getChildContainer(
         parent,
         AbilityNameDrawer.NAME
@@ -62,7 +62,9 @@ export default class AbilityNameDrawer extends Drawer {
   protected createText(): PIXI.Container {
     const container = new PIXI.Container();
     container.name = AbilityNameDrawer.NAME;
-    container.x = this.options.x;
+
+    const screenWidth = this.getGameService().getApp().view.width;
+    container.x = screenWidth / 2 - this.frameWidth() / 2;
     container.y = this.options.y;
 
     const rectangle = new PIXI.Graphics();
