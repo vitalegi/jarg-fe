@@ -97,6 +97,14 @@ export default class MonsterInfoDrawer extends Drawer {
         0
       );
 
+      this.container.interactive = true;
+      this.container.on("pointertap", () => {
+        if (this.container) {
+          this.parent.removeChild(this.container);
+        }
+        this.complete();
+      });
+
       this.parent.addChild(this.container);
     }
     if (this.screenResized()) {
