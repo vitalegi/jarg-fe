@@ -2,18 +2,17 @@ import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import TurnManager from "../turns/TurnManager";
-import FrameImpl from "./FrameImpl";
 import MapContainer from "@/models/Map";
+import WindowSizeProxy from "../WindowSizeProxy";
 
 export default class TurnBoxDrawer extends Drawer {
   protected static NAME = "TurnBox";
 
-  protected app: PIXI.Application;
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
   protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected map: MapContainer;
-  protected frame = new FrameImpl();
 
   protected turns: string[] = [];
 
@@ -38,13 +37,8 @@ export default class TurnBoxDrawer extends Drawer {
     },
   };
 
-  public constructor(
-    app: PIXI.Application,
-    parent: PIXI.Container,
-    map: MapContainer
-  ) {
+  public constructor(parent: PIXI.Container, map: MapContainer) {
     super();
-    this.app = app;
     this.parent = parent;
     this.map = map;
   }
@@ -74,12 +68,7 @@ export default class TurnBoxDrawer extends Drawer {
     }
     this.container.height = this.height(newTurns);
     console.log(`Turns have changed from ${this.turns} to ${newTurns}`);
-    // remove existing turns entries
-    this.container.children
-      .filter((c) => c.name !== this.frame.getName())
-      .forEach((c) => this.container?.removeChild(c));
-
-    // add entries
+    // regenerate entries
     this.turns = newTurns;
     this.turns
       .map((id: string, index: number) => this.createTurnEntry(id, index))
@@ -94,14 +83,13 @@ export default class TurnBoxDrawer extends Drawer {
     }
 
     const entry = new PIXI.Text(label, this.options.style.font);
-    entry.x = this.frame.getWidth() + this.options.style.menuEntry.marginLeft;
-    entry.y =
-      this.frame.getWidth() + this.options.style.menuEntry.height * index;
+    entry.x = this.options.style.menuEntry.marginLeft;
+    entry.y = this.options.style.menuEntry.height * index;
     return entry;
   }
   protected x(): number {
     return (
-      this.app.view.width -
+      this.windowSizeProxy.width() -
       this.options.style.rightMargin -
       this.options.style.width
     );

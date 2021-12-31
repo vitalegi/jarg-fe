@@ -21,6 +21,7 @@ import Drawer from "@/game-engine/ui/Drawer";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import RandomService from "./RandomService";
 import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 
 @Service()
 export default class GameService {
@@ -42,6 +43,7 @@ export default class GameService {
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
+  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
@@ -63,6 +65,8 @@ export default class GameService {
     this.app = new PIXI.Application({
       autoDensity: true,
     });
+    this.windowSizeProxy.setApp(this.app);
+
     this.app.renderer.view.style.position = "absolute";
     this.app.renderer.view.style.display = "block";
     this.app.resizeTo = window;
@@ -118,7 +122,7 @@ export default class GameService {
         this.turnManager.addCharacters(this.map.monsters);
         this.turnManager.initTurns();
         this.addGameLoopHandler(
-          new TurnBoxDrawer(this.getApp(), this.getApp().stage, this.map)
+          new TurnBoxDrawer(this.getApp().stage, this.map)
         );
         this.startCharacterTurn();
 
