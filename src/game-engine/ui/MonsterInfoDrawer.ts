@@ -1,9 +1,7 @@
 import { Monster } from "@/models/Character";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import Point from "@/models/Point";
 import FrameImpl from "./FrameImpl";
-import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";

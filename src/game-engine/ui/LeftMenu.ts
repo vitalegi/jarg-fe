@@ -2,6 +2,7 @@ import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
+import DetectEvent from "./DetectEvent";
 
 export class MenuEntry {
   label: string;
@@ -87,17 +88,15 @@ export default class LeftMenu {
       this.menuEntryHeight() - this.frame.getWidth() - 3
     );
     rectangle.endFill();
-    rectangle.interactive = true;
-    rectangle.on("pointertap", () => entry.action());
+
+    new DetectEvent(rectangle, () => entry.action());
     this.container?.addChild(rectangle);
 
     const message = new PIXI.Text(entry.label, this.options.font);
     message.position.x = this.frame.getWidth() + 4;
     message.position.y = this.menuEntryHeight() * index + 5;
 
-    message.interactive = true;
-    message.on("pointertap", () => entry.action());
-
+    new DetectEvent(message, () => entry.action());
     this.container?.addChild(message);
   }
 

@@ -3,6 +3,7 @@ import * as PIXI from "pixi.js";
 import { InteractionEvent } from "pixi.js";
 import Point from "@/models/Point";
 import GameService from "@/services/GameService";
+import DetectEvent from "./ui/DetectEvent";
 
 @Service()
 export default class DragScreenHandler {
