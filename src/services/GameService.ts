@@ -20,6 +20,7 @@ import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepos
 import Drawer from "@/game-engine/ui/Drawer";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import RandomService from "./RandomService";
+import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
 
 @Service()
 export default class GameService {
@@ -44,7 +45,7 @@ export default class GameService {
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
-  protected turnManager = new TurnManager();
+  protected turnManager = Container.get<TurnManager>(TurnManager);
   protected leftMenu: LeftMenu | null = null;
   protected gameLoopHandlers: Drawer[] = [];
 
@@ -116,6 +117,9 @@ export default class GameService {
         });
         this.turnManager.addCharacters(this.map.monsters);
         this.turnManager.initTurns();
+        this.addGameLoopHandler(
+          new TurnBoxDrawer(this.getApp(), this.getApp().stage, this.map)
+        );
         this.startCharacterTurn();
 
         this.getApp().ticker.add(() => this.gameLoop());

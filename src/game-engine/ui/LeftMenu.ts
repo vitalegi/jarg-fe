@@ -1,6 +1,7 @@
 import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
+import FrameImpl from "./FrameImpl";
 
 export class MenuEntry {
   label: string;
@@ -16,9 +17,9 @@ export default class LeftMenu {
   protected container: PIXI.Container | null = null;
   protected gameService = Container.get<GameService>(GameService);
   protected entries: MenuEntry[] = [];
+  protected frame: FrameImpl;
 
   protected options = {
-    frame: { style: { width: 4, color: 0x000000 }, background: 0xffffff },
     font: {
       fontFamily: "Courier",
       fontSize: 20,
@@ -33,6 +34,10 @@ export default class LeftMenu {
     width: 176,
   };
 
+  public constructor(frame: FrameImpl = new FrameImpl()) {
+    this.frame = frame;
+  }
+
   public addEntry(entry: MenuEntry): void {
     this.entries.push(entry);
   }
@@ -41,7 +46,14 @@ export default class LeftMenu {
     this.container = new PIXI.Container();
     this.gameService.getApp().stage.addChild(this.container);
 
-    this.drawMenuBackground();
+    this.container.addChild(
+      this.frame.createFrame(
+        0,
+        0,
+        this.menuWidth(),
+        this.menuEntryHeight() * this.entries.length
+      )
+    );
     this.entries.forEach((entry: MenuEntry, index: number) => {
       this.drawMenuEntry(entry, index);
     });
@@ -64,32 +76,15 @@ export default class LeftMenu {
     }
   }
 
-  protected drawMenuBackground(): void {
-    const rectangle = new PIXI.Graphics();
-    rectangle.lineStyle(this.options.frame.style);
-    rectangle.beginFill(this.options.frame.background);
-    const frameWidth = this.options.frame.style.width;
-    rectangle.drawRect(
-      frameWidth,
-      frameWidth,
-      this.menuWidth() + frameWidth,
-      this.menuEntryHeight() * this.entries.length + frameWidth
-    );
-    rectangle.endFill();
-    rectangle.interactive = true;
-    this.container?.addChild(rectangle);
-  }
-
   protected drawMenuEntry(entry: MenuEntry, index: number): void {
     const rectangle = new PIXI.Graphics();
     rectangle.beginFill(this.options.menuEntry.fill);
-    const frameWidth = this.options.frame.style.width;
 
     rectangle.drawRect(
-      frameWidth + 2,
-      this.menuEntryHeight() * index + frameWidth + 3,
-      this.menuWidth() - frameWidth,
-      this.menuEntryHeight() - frameWidth - 3
+      this.frame.getWidth() + 2,
+      this.menuEntryHeight() * index + this.frame.getWidth() + 3,
+      this.menuWidth() - this.frame.getWidth(),
+      this.menuEntryHeight() - this.frame.getWidth() - 3
     );
     rectangle.endFill();
     rectangle.interactive = true;
@@ -97,7 +92,7 @@ export default class LeftMenu {
     this.container?.addChild(rectangle);
 
     const message = new PIXI.Text(entry.label, this.options.font);
-    message.position.x = this.options.frame.style.width + 4;
+    message.position.x = this.frame.getWidth() + 4;
     message.position.y = this.menuEntryHeight() * index + 5;
 
     message.interactive = true;

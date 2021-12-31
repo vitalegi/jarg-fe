@@ -118,6 +118,6 @@ export default class HealthBarService {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected y(options: MapOption): number {
-    return 5;
+    return options.tileHeight - 12;
   }
 }

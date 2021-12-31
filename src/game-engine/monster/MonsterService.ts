@@ -13,6 +13,19 @@ import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
 
+const names = [
+  "Cino",
+  "Dino",
+  "Gino",
+  "Lino",
+  "Mino",
+  "Nino",
+  "Pino",
+  "Rino",
+  "Tino",
+  "Franco",
+];
+
 @Service()
 export default class MonsterService {
   protected rendererService = Container.get(RendererService);
@@ -30,13 +43,13 @@ export default class MonsterService {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
     monster.level = 5;
-    monster.name = UuidUtil.nextId().substring(0, 10);
+
+    const random = Container.get<RandomService>(RandomService);
+
+    monster.name = names[random.randomInt(names.length)];
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
-    monster.modelId =
-      Container.get<RandomService>(RandomService).randomInt(2) == 1
-        ? "004"
-        : "007";
+    monster.modelId = random.randomInt(2) == 1 ? "004" : "007";
     monster.baseStats = new Stats(30, 30, 6, 5, 3, 3, 10, 8);
     monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19);
     monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110);

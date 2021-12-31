@@ -18,6 +18,7 @@ export default class TurnManager {
   }
 
   public initTurns(): void {
+    // TODO implement
     return;
   }
   public hasCharacters(): boolean {
@@ -32,7 +33,14 @@ export default class TurnManager {
     this.turns.push(...first);
   }
 
-  public getTurns(): string[] {
-    return this.turns;
+  public getTurns(n: number): string[] {
+    const turns: string[] = [];
+    if (this.turns.length === 0) {
+      return turns;
+    }
+    for (let i = 0; i < n; i++) {
+      turns.push(this.turns[i % this.turns.length]);
+    }
+    return turns;
   }
 }
