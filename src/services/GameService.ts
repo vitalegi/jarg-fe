@@ -19,6 +19,7 @@ import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import Drawer from "@/game-engine/ui/Drawer";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
+import RandomService from "./RandomService";
 
 @Service()
 export default class GameService {
@@ -85,14 +86,26 @@ export default class GameService {
           enemy.coordinates = new Point(x, y);
           this.map.monsters.push(enemy);
         };
-        newEnemy(7, 8);
-        newEnemy(8, 8);
-        newEnemy(9, 8);
+        newEnemy(3, 3);
+        newEnemy(4, 3);
+        newEnemy(5, 3);
 
-        Container.get<LevelUpService>(LevelUpService).gainExperience(
+        const levelUpService = Container.get<LevelUpService>(LevelUpService);
+        const randomService = Container.get<RandomService>(RandomService);
+
+        this.map.monsters.forEach((m) => {
+          levelUpService.gainExperience(
+            m,
+            5000 + randomService.randomInt(5000)
+          );
+        });
+        levelUpService.gainExperience(
           this.playerService.getMonsters()[0],
-          10000
+          50000
         );
+        this.map.monsters.forEach((m) => {
+          m.stats.hp = m.stats.maxHP;
+        });
 
         this.map.monsters.forEach((monster) => {
           const sprite = this.monsterService.createMonsterSprite(

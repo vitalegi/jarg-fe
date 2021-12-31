@@ -18,7 +18,10 @@ export default class PlayerRepository {
       const monsterService = Container.get<MonsterService>(MonsterService);
       monsters.push(monsterService.createMonster(playerId));
       monsters.push(monsterService.createMonster(playerId));
-      monsters[0].coordinates = new Point(4, 5);
+      monsters.push(monsterService.createMonster(playerId));
+      monsters[0].coordinates = new Point(1, 1);
+      monsters[1].coordinates = new Point(1, 2);
+      monsters[2].coordinates = new Point(3, 1);
     }
     return monsters;
   }
