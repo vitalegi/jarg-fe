@@ -18,6 +18,7 @@ import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterAct
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import Drawer from "@/game-engine/ui/Drawer";
+import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 
 @Service()
 export default class GameService {
@@ -152,7 +153,7 @@ export default class GameService {
     });
   }
 
-  public nextTurn() {
+  public nextTurn(): void {
     const activeCharacter = this.turnManager.activeCharacter();
     const container =
       this.getBattleContainer()?.getChildByName(activeCharacter);
@@ -237,7 +238,12 @@ export default class GameService {
     const uuid = this.turnManager.activeCharacter();
     const monster = this.getMonsterById(uuid);
     const playerId = this.playerService.getPlayerId();
-
+    console.log(`Focus on ${monster.coordinates}`);
+    if (monster.coordinates) {
+      const focus = new ChangeFocusDrawer(monster.coordinates);
+      this.addGameLoopHandler(focus);
+      await focus.notifyWhenCompleted();
+    }
     if (playerId === monster.ownerId) {
       await this.startPlayerTurn(monster);
     } else {

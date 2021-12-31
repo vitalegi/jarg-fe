@@ -9,6 +9,7 @@ import HealthBarService from "../monster/HealthBarService";
 import TextOverCharacter from "../ui/TextOverCharacterDrawer";
 import AbilityEffect from "./AbilityEffect";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
+import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
@@ -29,6 +30,7 @@ export default class AbilityExecutor {
     const processor = this.ability.getProcessor(this.source, this.target);
 
     const hits = processor.hit();
+    await this.focusTarget();
     const abilityDrawer = this.showAbilityName();
 
     if (hits) {
@@ -66,6 +68,15 @@ export default class AbilityExecutor {
       await this.gameService.die(this.target.uuid);
       await this.levelUpService.gainExperience(this.source, exp);
     }
+  }
+
+  protected focusTarget(): Promise<void> {
+    if (this.target.coordinates) {
+      const focus = new ChangeFocusDrawer(this.target.coordinates);
+      this.gameService.addGameLoopHandler(focus);
+      return focus.notifyWhenCompleted();
+    }
+    return Promise.resolve();
   }
 
   protected async showAbilityName(): Promise<void> {

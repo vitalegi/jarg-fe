@@ -11,6 +11,7 @@ import Container, { Service } from "typedi";
 import CoordinateService from "../CoordinateService";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
+import Point from "@/models/Point";
 
 @Service()
 export default class MonsterService {
@@ -42,7 +43,7 @@ export default class MonsterService {
     monster.abilities.push(new Ability("Attacco 1"));
     monster.abilities.push(new Ability("Attacco 2"));
     monster.abilities.push(new Ability("Attacco 3"));
-
+    monster.coordinates = new Point(0, 0);
     return monster;
   }
 
