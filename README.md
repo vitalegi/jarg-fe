@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/64ba06de-3a22-4013-869f-0696b70cbd14/deploy-status)](https://app.netlify.com/sites/jarg/deploys)
 
-The game is available on [Netlify]<https://jarg.netlify.app>.
+The game is available on [Netlify](https://jarg.netlify.app).
 
 JaRG is a - hopefully not for long - simple RPG game. Game mechanics were inspired by Final Fantasy X and Disgaea.
 

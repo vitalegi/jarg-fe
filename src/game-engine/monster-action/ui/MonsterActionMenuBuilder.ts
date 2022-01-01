@@ -1,7 +1,7 @@
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
-import UserActionService from "@/services/UserActionService";
+import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import Container, { Service } from "typedi";
 import Ability from "../Ability";
 import SelectTargetUserActionHandler from "@/game-engine/user-action-handler/SelectTargetUserActionHandler";
@@ -109,8 +109,11 @@ export default class MonsterActionMenuBuilder {
     );
     const userActionService =
       Container.get<UserActionService>(UserActionService);
-    userActionService.setActionHandler(actionHandler);
-    return await actionHandler.execute();
+
+    userActionService.addActionHandler(actionHandler);
+    const result = await actionHandler.execute();
+    userActionService.removeActionHandler(actionHandler);
+    return result;
   }
 
   protected nextTurn(): void {

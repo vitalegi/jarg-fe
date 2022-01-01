@@ -1,9 +1,12 @@
+import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import Point from "@/models/Point";
-import UserActionService from "@/services/UserActionService";
+import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
 import UserInput from "./UserInput";
 
 export default abstract class UserActionHandler {
+  private _uuid = UuidUtil.nextId();
+
   private resolve: null | ((point: UserInput) => void) = null;
   private reject: null | ((cause: unknown) => void) = null;
 
@@ -14,13 +17,43 @@ export default abstract class UserActionHandler {
     });
   }
 
-  public abstract process(input: UserInput): void;
-
   protected done(target: UserInput): void {
     if (this.resolve) {
       this.resolve(target);
     }
     this.removeHandler();
+  }
+
+  public getUuid(): string {
+    return this._uuid;
+  }
+
+  public acceptTap(): boolean {
+    return false;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public processTap(input: UserInput): void {
+    return;
+  }
+
+  public acceptDrag(): boolean {
+    return false;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public processDragStart(input: UserInput, newPosition: Point): void {
+    return;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public processDragMove(input: UserInput, newPosition: Point): void {
+    return;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public processDragEnd(input: UserInput, newPosition: Point): void {
+    return;
   }
 
   protected fail(cause: unknown): void {
@@ -33,6 +66,8 @@ export default abstract class UserActionHandler {
   private removeHandler(): void {
     const userActionService =
       Container.get<UserActionService>(UserActionService);
-    userActionService.setActionHandler(null);
+    userActionService.removeActionHandler(this);
   }
+
+  public abstract getName(): string;
 }

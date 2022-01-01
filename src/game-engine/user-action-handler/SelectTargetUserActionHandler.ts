@@ -7,6 +7,10 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
   protected allowTerrains = false;
   protected allowMonsters = false;
 
+  public getName(): string {
+    return "SelectTargetUserActionHandler";
+  }
+
   public constructor(
     skipUUID: string | null,
     allowTerrains: boolean,
@@ -18,7 +22,11 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
     this.allowMonsters = allowMonsters;
   }
 
-  process(input: UserInput): void {
+  public acceptTap(): boolean {
+    return true;
+  }
+
+  public processTap(input: UserInput): void {
     if (input.isTerrain() && this.acceptTerrain(input.getPosition())) {
       this.done(input);
     }
@@ -27,6 +35,7 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected acceptTerrain(point: Point): boolean {
     return this.allowTerrains;
   }

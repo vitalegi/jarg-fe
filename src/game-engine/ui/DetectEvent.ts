@@ -94,7 +94,6 @@ export default class DetectEvent {
     }
     if (this.distance(curr, this.lastPoint) > 1) {
       if (this._onDrag) {
-        console.log("EVENT dragMove");
         this._onDrag(e);
       }
       this.lastPoint = curr.clone();

@@ -8,7 +8,7 @@ import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
 import { Monster } from "@/models/Character";
-import UserActionService from "./UserActionService";
+import UserActionService from "../game-engine/user-action-handler/UserActionService";
 import CoordinateService from "../game-engine/CoordinateService";
 import Point from "@/models/Point";
 import LeftMenu from "@/game-engine/ui/LeftMenu";
@@ -22,6 +22,8 @@ import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import RandomService from "./RandomService";
 import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
 import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragScreenUserActionHandler";
+import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
 
 @Service()
 export default class GameService {
@@ -78,6 +80,13 @@ export default class GameService {
     this.rendererService
       .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
       .then(() => {
+        this.userActionService.addActionHandler(
+          new DragScreenUserActionHandler()
+        );
+        this.userActionService.addActionHandler(
+          new CharacterStatsUserActionHandler()
+        );
+
         const container = new PIXI.Container();
         container.name = "BATTLE_CONTAINER";
         this.app?.stage.addChild(container);

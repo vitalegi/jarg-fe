@@ -5,7 +5,7 @@ import { MapOption } from "@/models/Map";
 import Stats from "@/models/Stats";
 import RandomService from "@/services/RandomService";
 import RendererService from "@/services/RendererService";
-import UserActionService from "@/services/UserActionService";
+import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
 import CoordinateService from "../CoordinateService";
