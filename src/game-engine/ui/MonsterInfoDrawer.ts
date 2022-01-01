@@ -85,6 +85,7 @@ export default class MonsterInfoDrawer extends Drawer {
       this.addStat(`RES`, `${f(stats.res)}`, lineY());
       this.addStat(`HIT`, `${f(stats.hit)}`, lineY());
       this.addStat(`DEX`, `${f(stats.dex)}`, lineY());
+      this.addStat(`Speed`, `${f(stats.speed)}`, lineY());
 
       line = 0;
       this.addAbilityLabels(lineY());

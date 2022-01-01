@@ -7,6 +7,7 @@ export default class Stats {
   res = 0;
   hit = 0;
   dex = 0;
+  speed = 0;
 
   public constructor(
     hp = 0,
@@ -16,7 +17,8 @@ export default class Stats {
     int = 0,
     res = 0,
     hit = 0,
-    dex = 0
+    dex = 0,
+    speed = 0
   ) {
     this.hp = hp;
     this.maxHP = maxHP;
@@ -26,6 +28,7 @@ export default class Stats {
     this.res = res;
     this.hit = hit;
     this.dex = dex;
+    this.speed = speed;
   }
 
   public static fromJson(data: any): Stats {
@@ -39,6 +42,7 @@ export default class Stats {
     out.res = data.res;
     out.hit = data.hit;
     out.dex = data.dex;
+    out.speed = data.speed;
 
     return out;
   }
@@ -54,11 +58,12 @@ export default class Stats {
     out.res = this.res;
     out.hit = this.hit;
     out.dex = this.dex;
+    out.speed = this.speed;
 
     return out;
   }
 
   public toString(): string {
-    return `HP=${this.hp}, maxHP=${this.maxHP}, ATK=${this.atk}, DEF=${this.def}, INT=${this.int}, RES=${this.res}, HIT=${this.hit}, DEX=${this.dex}`;
+    return `HP=${this.hp}, maxHP=${this.maxHP}, ATK=${this.atk}, DEF=${this.def}, INT=${this.int}, RES=${this.res}, HIT=${this.hit}, DEX=${this.dex}, speed=${this.speed}`;
   }
 }

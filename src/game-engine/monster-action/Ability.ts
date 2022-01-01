@@ -19,8 +19,37 @@ export class Usages {
     out.max = this.max;
     return out;
   }
+
+  public validate(): void {
+    if (this.current < 0) {
+      throw Error(`Current must be >=0, actual ${this.current}`);
+    }
+    if (this.max < 0) {
+      throw Error(`Max must be >=0, actual ${this.max}`);
+    }
+  }
 }
 
+export class Target {
+  range = 0;
+
+  public static fromJson(json: any): Target {
+    const out = new Target();
+    out.range = json.range;
+    return out;
+  }
+  public clone(): Target {
+    const out = new Target();
+    out.range = this.range;
+    return out;
+  }
+
+  public validate(): void {
+    if (this.range < 0) {
+      throw Error(`Range must be >=0, actual ${this.range}`);
+    }
+  }
+}
 export default class Ability {
   id = "";
   label = "";
@@ -31,6 +60,7 @@ export default class Ability {
   atkStat = "";
   defStat = "";
   usages = new Usages();
+  target = new Target();
 
   public constructor(label = "") {
     this.label = label;
@@ -51,6 +81,7 @@ export default class Ability {
     if (json.usages) {
       out.usages = Usages.fromJson(json.usages);
     }
+    out.target = Target.fromJson(json.target);
     return out;
   }
 
@@ -65,6 +96,7 @@ export default class Ability {
     out.atkStat = this.atkStat;
     out.defStat = this.defStat;
     out.usages = this.usages.clone();
+    out.target = this.target.clone();
     return out;
   }
 

@@ -54,9 +54,19 @@ export default class MonsterService {
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
     monster.modelId = random.randomInt(2) == 1 ? "004" : "007";
-    monster.baseStats = new Stats(30, 30, 6, 5, 3, 3, 10, 8);
-    monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19);
-    monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110);
+    monster.baseStats = new Stats(
+      30,
+      30,
+      6,
+      5,
+      3,
+      3,
+      10,
+      8,
+      10 + random.randomInt(5)
+    );
+    monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19, 20);
+    monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110, 100);
 
     const abilities = this.abilityRepository.getAbilities();
 

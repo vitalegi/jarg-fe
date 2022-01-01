@@ -11,6 +11,9 @@
     "usages": {
       "current": 3,
       "max": 3
+    },
+    "target": {
+      "range": 1
     }
   },
   {
@@ -25,6 +28,9 @@
     "usages": {
       "current": 10,
       "max": 10
+    },
+    "target": {
+      "range": 1
     }
   },
   {
@@ -39,6 +45,9 @@
     "usages": {
       "current": 5,
       "max": 5
+    },
+    "target": {
+      "range": 4
     }
   }
 ]

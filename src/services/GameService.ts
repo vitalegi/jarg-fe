@@ -25,6 +25,7 @@ import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragScreenUserActionHandler";
 import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
+import TimeUtil from "@/utils/TimeUtil";
 
 @Service()
 export default class GameService {
@@ -191,12 +192,14 @@ export default class GameService {
 
   public nextTurn(): void {
     const activeCharacter = this.turnManager.activeCharacter();
-    const container =
-      this.getBattleContainer()?.getChildByName(activeCharacter);
-    if (container) {
-      const c = container as PIXI.Container;
-      const element = c.getChildByName("activeCharacter");
-      c.removeChild(element);
+    if (activeCharacter) {
+      const container =
+        this.getBattleContainer()?.getChildByName(activeCharacter);
+      if (container) {
+        const c = container as PIXI.Container;
+        const element = c.getChildByName("activeCharacter");
+        c.removeChild(element);
+      }
     }
 
     this.turnManager.next();
@@ -210,6 +213,7 @@ export default class GameService {
   }
 
   protected gameLoop(): void {
+    const timestamp = TimeUtil.timestamp();
     this.gameLoopHandlers
       .filter((h) => !h.completed())
       .forEach((h) => {
@@ -219,6 +223,14 @@ export default class GameService {
           console.error(e);
         }
       });
+    const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
+    const msg = `MONITORING Drawers time_taken=${duration}ms`;
+    if (duration > 10) {
+      console.log(msg);
+    } else {
+      console.debug(msg);
+    }
+
     this.gameLoopHandlers = this.gameLoopHandlers.filter((h) => !h.completed());
   }
   protected initMapTile(tile: Tile): void {
@@ -273,6 +285,9 @@ export default class GameService {
       return;
     }
     const uuid = this.turnManager.activeCharacter();
+    if (!uuid) {
+      return;
+    }
     const monster = this.getMonsterById(uuid);
     const playerId = this.playerService.getPlayerId();
     console.log(`Focus on ${monster.coordinates}`);
