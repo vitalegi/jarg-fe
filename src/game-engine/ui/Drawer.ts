@@ -30,7 +30,7 @@ export default abstract class Drawer {
     const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
     const msg = `MONITORING Drawer id=${this.getId()}, name=${this.getName()}, time_taken=${duration}ms`;
     if (duration > 5) {
-      console.info(msg);
+      console.log(msg);
     } else {
       console.debug(msg);
     }

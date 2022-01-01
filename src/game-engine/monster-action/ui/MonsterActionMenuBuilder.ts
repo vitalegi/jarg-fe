@@ -111,9 +111,7 @@ export default class MonsterActionMenuBuilder {
       Container.get<UserActionService>(UserActionService);
 
     userActionService.addActionHandler(actionHandler);
-    const result = await actionHandler.execute();
-    userActionService.removeActionHandler(actionHandler);
-    return result;
+    return await actionHandler.execute();
   }
 
   protected nextTurn(): void {

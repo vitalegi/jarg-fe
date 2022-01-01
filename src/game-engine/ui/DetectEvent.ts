@@ -64,12 +64,16 @@ export default class DetectEvent {
   }
 
   protected pointerup(e: InteractionEvent): void {
+    if (!this.startingPoint) {
+      console.log(`Pointer up but starting point not selected`);
+      return;
+    }
     if (this.drag && this._onDragEnd) {
-      console.log(`EVENT dragEnd`);
+      console.log(`dragEnd ${this.element.name}`);
       this._onDragEnd(e);
     }
     if (!this.drag && this._onTap) {
-      console.log(`EVENT tap`);
+      console.log(`tap ${this.element.name}`);
       this._onTap(e);
     }
 

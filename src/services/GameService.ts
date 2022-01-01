@@ -226,6 +226,7 @@ export default class GameService {
     } else {
       throw new Error(`Unknown type ${spriteConfig.type}`);
     }
+    sprite.name = `${tile.coordinates.x}_${tile.coordinates.y}`;
     sprite.width = this.map.options.tileWidth;
     sprite.height = this.map.options.tileHeight;
 

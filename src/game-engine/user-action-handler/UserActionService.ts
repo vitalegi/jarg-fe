@@ -11,11 +11,27 @@ export default class UserActionService {
 
   public addActionHandler(actionHandler: UserActionHandler): void {
     this.actionHandlers.push(actionHandler);
+    console.log(
+      `Add ActionHandler ${actionHandler.getName()}_${actionHandler.getUuid()}, available: ${this.actionHandlers
+        .map((h) => `${h.getName()}_${h.getUuid()}`)
+        .join(", ")}`
+    );
   }
 
   public removeActionHandler(actionHandler: UserActionHandler): void {
     const index = this.actionHandlers.findIndex(
       (h) => h.getUuid() === actionHandler.getUuid()
+    );
+    if (index === -1) {
+      throw Error(
+        `ActionHandler ${actionHandler.getName()}_${actionHandler.getUuid()} not present.`
+      );
+    }
+    const handler = this.actionHandlers[index];
+    console.log(
+      `Remove ActionHandler ${handler.getName()}_${handler.getUuid()}, available: ${this.actionHandlers
+        .map((h) => `${h.getName()}_${h.getUuid()}`)
+        .join(", ")}`
     );
     this.actionHandlers.splice(index, 1);
   }
@@ -105,12 +121,12 @@ export default class UserActionService {
       accept(h, input, newPosition)
     );
     if (handlers.length === 0) {
-      console.info(`No handler provided for ${action}(${input})`);
+      console.log(`No handler provided for ${action}(${input})`);
       return;
     }
     const handler = handlers[handlers.length - 1];
     if (handlers.length > 1) {
-      console.info(
+      console.log(
         `Multiple handlers for ${action}(${input}), choosen ${handler.getName()}_${handler.getUuid()}, available: ${handlers
           .map((h) => `${h.getName()}_${h.getUuid()}`)
           .join(", ")}`
