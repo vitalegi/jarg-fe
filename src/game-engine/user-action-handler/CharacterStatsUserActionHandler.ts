@@ -1,4 +1,3 @@
-import Point from "@/models/Point";
 import GameService from "@/services/GameService";
 import Container from "typedi";
 import MonsterInfoDrawer from "../ui/MonsterInfoDrawer";

@@ -43,7 +43,7 @@ export class LevelUpService {
   }
 
   protected computeAttributes(monster: Monster): void {
-    const getValue = (stat: (s: Stats) => number) => {
+    const getValue = (stat: (s: Stats) => number): number => {
       return this.getAttributeValue(
         monster.level,
         stat(monster.baseStats),

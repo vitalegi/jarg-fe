@@ -7,20 +7,29 @@ import * as PIXI from "pixi.js";
 export default class WindowSizeProxy {
   protected app: PIXI.Application | null = null;
 
+  protected _width = 0;
+  protected _height = 0;
+
+  public constructor() {
+    setInterval(() => this.update(), 100);
+  }
+
   public setApp(app: PIXI.Application | null): void {
     this.app = app;
+    this.update();
   }
 
   public width(): number {
-    if (this.app) {
-      return this.app?.view.width;
-    }
-    throw Error(`App not configured`);
+    return this._width;
   }
   public height(): number {
+    return this._height;
+  }
+
+  protected update(): void {
     if (this.app) {
-      return this.app?.view.height;
+      this._width = this.app.view.width;
+      this._height = this.app.view.height;
     }
-    throw Error(`App not configured`);
   }
 }

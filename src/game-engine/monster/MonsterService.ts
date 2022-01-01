@@ -12,6 +12,7 @@ import CoordinateService from "../CoordinateService";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
+import AbilityRepository from "../repositories/AbilityRepository";
 
 const names = [
   "Cino",
@@ -36,6 +37,9 @@ export default class MonsterService {
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
+
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
 
@@ -53,9 +57,12 @@ export default class MonsterService {
     monster.baseStats = new Stats(30, 30, 6, 5, 3, 3, 10, 8);
     monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19);
     monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110);
-    monster.abilities.push(new Ability("Attacco 1"));
-    monster.abilities.push(new Ability("Attacco 2"));
-    monster.abilities.push(new Ability("Attacco 3"));
+
+    const abilities = this.abilityRepository.getAbilities();
+
+    monster.abilities.push(
+      abilities[random.randomInt(abilities.length)].clone()
+    );
     monster.coordinates = new Point(0, 0);
     return monster;
   }

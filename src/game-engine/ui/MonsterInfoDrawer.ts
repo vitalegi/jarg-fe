@@ -6,6 +6,7 @@ import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";
 import Ability from "../monster-action/Ability";
+import TimeUtil from "@/utils/TimeUtil";
 
 export default class MonsterInfoDrawer extends Drawer {
   protected static NAME = "MonsterInfoDrawer";
@@ -20,15 +21,25 @@ export default class MonsterInfoDrawer extends Drawer {
   protected options = {
     font: {
       fontFamily: "Courier",
-      fontSize: 22,
+      fontSize: 18,
       fill: "#ffffff",
       stroke: "#000000",
       strokeThickness: 4,
     },
     row: {
-      height: 26,
+      height: 20,
     },
-    cols: [{ leftOffset: 5 }, { leftOffset: 65 }, { leftOffset: 220 }],
+    stats: {
+      cols: [{ leftOffset: 5 }, { leftOffset: 65 }],
+    },
+    abilities: {
+      cols: [
+        { leftOffset: 230 },
+        { leftOffset: 480 },
+        { leftOffset: 560 },
+        { leftOffset: 640 },
+      ],
+    },
   };
 
   public constructor(parent: PIXI.Container, monster: Monster) {
@@ -47,7 +58,6 @@ export default class MonsterInfoDrawer extends Drawer {
       this.container = new PIXI.Container();
       this.container.name = MonsterInfoDrawer.NAME;
 
-      const x1 = this.xCol1();
       let line = 0;
       const lineY = () => {
         const v = this.lineY(line);
@@ -62,6 +72,7 @@ export default class MonsterInfoDrawer extends Drawer {
         return NumberUtil.formatInt(n);
       };
 
+      const x1 = this.statsCol1();
       this.addText(this.monster.name, x1, lineY());
       this.addText(`Lv. ${this.monster.level}`, x1, lineY());
       this.addText(`Exp ${f(this.monster.experience)}`, x1, lineY());
@@ -76,7 +87,7 @@ export default class MonsterInfoDrawer extends Drawer {
       this.addStat(`DEX`, `${f(stats.dex)}`, lineY());
 
       line = 0;
-      this.addText(`Abilities`, this.abilityCol1(), lineY());
+      this.addAbilityLabels(lineY());
       this.monster.abilities.forEach((ability: Ability) =>
         this.addAbility(ability, lineY())
       );
@@ -105,11 +116,14 @@ export default class MonsterInfoDrawer extends Drawer {
 
       this.parent.addChild(this.container);
     }
-    if (this.screenResized()) {
-      this.container.x = this.x();
-      this.container.y = this.y();
-      this.container.width = this.width();
-      this.container.height = this.height();
+
+    if (this.isResized()) {
+      if (this.container) {
+        this.container.x = this.x();
+        this.container.y = this.y();
+        this.container.width = this.width();
+        this.container.height = this.height();
+      }
     }
   }
 
@@ -121,12 +135,25 @@ export default class MonsterInfoDrawer extends Drawer {
   }
 
   protected addStat(stat: string, value: string, y: number): void {
-    this.addText(stat, this.xCol1(), y);
-    this.addText(value, this.xCol2(), y);
+    this.addText(stat, this.statsCol1(), y);
+    this.addText(value, this.statsCol2(), y);
   }
 
+  protected addAbilityLabels(y: number): void {
+    this.addText("Ability", this.abilityCol1(), y);
+    this.addText("Power", this.abilityCol2(), y);
+    this.addText("Prec.", this.abilityCol3(), y);
+    this.addText("PP", this.abilityCol4(), y);
+  }
   protected addAbility(ability: Ability, y: number): void {
     this.addText(ability.label, this.abilityCol1(), y);
+    this.addText(`${ability.power}`, this.abilityCol2(), y);
+    this.addText(`${ability.precision}`, this.abilityCol3(), y);
+    this.addText(
+      `${ability.usages.current}/${ability.usages.max}`,
+      this.abilityCol4(),
+      y
+    );
   }
 
   protected x(): number {
@@ -138,35 +165,41 @@ export default class MonsterInfoDrawer extends Drawer {
   }
 
   protected width(): number {
-    return Math.min(700, Math.round(this.windowSizeProxy.width() * 0.9));
+    return 700;
   }
 
   protected height(): number {
     return this._height;
   }
 
-  protected xCol1(): number {
-    return this.frame.getWidth() + this.options.cols[0].leftOffset;
+  protected statsCol1(): number {
+    return this.frame.getWidth() + this.options.stats.cols[0].leftOffset;
   }
-  protected xCol2(): number {
-    return this.frame.getWidth() + this.options.cols[1].leftOffset;
+  protected statsCol2(): number {
+    return this.frame.getWidth() + this.options.stats.cols[1].leftOffset;
   }
   protected abilityCol1(): number {
-    return this.frame.getWidth() + this.options.cols[2].leftOffset;
+    return this.frame.getWidth() + this.options.abilities.cols[0].leftOffset;
+  }
+  protected abilityCol2(): number {
+    return this.frame.getWidth() + this.options.abilities.cols[1].leftOffset;
+  }
+  protected abilityCol3(): number {
+    return this.frame.getWidth() + this.options.abilities.cols[2].leftOffset;
+  }
+  protected abilityCol4(): number {
+    return this.frame.getWidth() + this.options.abilities.cols[3].leftOffset;
   }
   protected lineY(line: number): number {
     return this.frame.getWidth() + 4 + line * this.options.row.height;
   }
-  protected screenResized(): boolean {
-    if (this.container === null) {
-      return false;
-    }
-    const changed = (n1: number, n2: number) => Math.abs(n1 - n2) < 0.0001;
-    return (
-      changed(this.container.x, this.x()) ||
-      changed(this.container.y, this.y()) ||
-      changed(this.container.width, this.width()) ||
-      changed(this.container.height, this.height())
-    );
+
+  protected monitor<E>(name: string, fn: () => E): E {
+    const startTime = TimeUtil.timestamp();
+    const result = fn();
+
+    const duration = Math.round(100 * (TimeUtil.timestamp() - startTime)) / 100;
+    console.log(`MONITORING ${name}, time_taken=${duration}ms`);
+    return result;
   }
 }

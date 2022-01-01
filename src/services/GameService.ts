@@ -24,6 +24,7 @@ import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
 import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragScreenUserActionHandler";
 import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
+import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 
 @Service()
 export default class GameService {
@@ -45,6 +46,8 @@ export default class GameService {
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
 
   protected map = new MapContainer();
@@ -77,6 +80,8 @@ export default class GameService {
     this.monsterIndexRepository.init(
       await this.gameAssetService.getMonstersData()
     );
+    this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
+
     this.rendererService
       .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
       .then(() => {
@@ -95,48 +100,49 @@ export default class GameService {
 
         this.map.monsters.push(...this.playerService.getMonsters());
 
-        const newEnemy = (x: number, y: number) => {
-          const enemy = this.monsterService.createMonster(null);
-          enemy.coordinates = new Point(x, y);
-          this.map.monsters.push(enemy);
-        };
-        newEnemy(3, 3);
-        newEnemy(4, 3);
-        newEnemy(5, 3);
-
-        const levelUpService = Container.get<LevelUpService>(LevelUpService);
-        const randomService = Container.get<RandomService>(RandomService);
-
-        this.map.monsters.forEach((m) => {
-          levelUpService.gainExperience(
-            m,
-            5000 + randomService.randomInt(5000)
+        this.initDummyBattle().then(() => {
+          this.map.monsters.forEach((monster) => {
+            const sprite = this.monsterService.createMonsterSprite(
+              monster,
+              this.map.options
+            );
+            this.getBattleContainer()?.addChild(sprite);
+          });
+          this.turnManager.addCharacters(this.map.monsters);
+          this.turnManager.initTurns();
+          this.addGameLoopHandler(
+            new TurnBoxDrawer(this.getApp().stage, this.map)
           );
-        });
-        levelUpService.gainExperience(
-          this.playerService.getMonsters()[0],
-          50000
-        );
-        this.map.monsters.forEach((m) => {
-          m.stats.hp = m.stats.maxHP;
-        });
+          this.startCharacterTurn();
 
-        this.map.monsters.forEach((monster) => {
-          const sprite = this.monsterService.createMonsterSprite(
-            monster,
-            this.map.options
-          );
-          this.getBattleContainer()?.addChild(sprite);
+          this.getApp().ticker.add(() => this.gameLoop());
         });
-        this.turnManager.addCharacters(this.map.monsters);
-        this.turnManager.initTurns();
-        this.addGameLoopHandler(
-          new TurnBoxDrawer(this.getApp().stage, this.map)
-        );
-        this.startCharacterTurn();
-
-        this.getApp().ticker.add(() => this.gameLoop());
       });
+  }
+
+  protected async initDummyBattle(): Promise<void> {
+    const newEnemy = (x: number, y: number) => {
+      const enemy = this.monsterService.createMonster(null);
+      enemy.coordinates = new Point(x, y);
+      this.map.monsters.push(enemy);
+    };
+    newEnemy(3, 3);
+    newEnemy(4, 3);
+    newEnemy(5, 3);
+
+    const levelUpService = Container.get<LevelUpService>(LevelUpService);
+    const randomService = Container.get<RandomService>(RandomService);
+
+    for (let i = 0; i < this.map.monsters.length; i++) {
+      await levelUpService.gainExperience(
+        this.map.monsters[i],
+        5000 + randomService.randomInt(5000)
+      );
+    }
+    await levelUpService.gainExperience(this.map.monsters[0], 50000);
+    this.map.monsters.forEach((m) => {
+      m.stats.hp = m.stats.maxHP;
+    });
   }
 
   public getMonstersInBattle(): Monster[] {

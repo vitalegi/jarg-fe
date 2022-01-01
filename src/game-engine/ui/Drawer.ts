@@ -1,5 +1,24 @@
 import TimeUtil from "@/utils/TimeUtil";
 import UuidUtil from "@/utils/UuidUtil";
+import Container from "typedi";
+import WindowSizeProxy from "../WindowSizeProxy";
+
+class IsWindowSizeChanged {
+  protected _lastWidth = 0;
+  protected _lastHeight = 0;
+
+  public isChanged(): boolean {
+    const windowSize = Container.get<WindowSizeProxy>(WindowSizeProxy);
+    const width = windowSize.width();
+    const height = windowSize.height();
+
+    const diffW = width - this._lastWidth;
+    const diffH = height - this._lastHeight;
+    this._lastWidth = width;
+    this._lastHeight = height;
+    return diffW * diffW + diffH * diffH > 1;
+  }
+}
 
 export default abstract class Drawer {
   private _id;
@@ -8,6 +27,7 @@ export default abstract class Drawer {
   private _startTime = 0;
 
   private _promises: ((value: void | PromiseLike<void>) => void)[] = [];
+  private _isResized = new IsWindowSizeChanged();
 
   public constructor() {
     this._id = UuidUtil.nextId();
@@ -59,5 +79,9 @@ export default abstract class Drawer {
   protected complete(): void {
     this._completed = true;
     this._promises.forEach((promise) => promise());
+  }
+
+  protected isResized(): boolean {
+    return this._isResized.isChanged();
   }
 }

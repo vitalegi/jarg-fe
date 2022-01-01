@@ -3,6 +3,7 @@ import { MonsterIndex } from "@/models/Character";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
+import Ability from "@/game-engine/monster-action/Ability";
 
 @Service()
 export default class GameAssetService {
@@ -12,12 +13,25 @@ export default class GameAssetService {
       .call();
     return MapContainer.fromJson(result.data);
   }
+
   public async getMonstersData(): Promise<MonsterIndex[]> {
     const result = await BackendWebService.url(`/static/monsters/monsters.json`)
       .get()
       .call();
     return result.data.map(MonsterIndex.fromJson);
   }
+
+  public async getAbilitiesData(): Promise<Ability[]> {
+    const result = await BackendWebService.url(
+      `/static/monsters/abilities.json`
+    )
+      .get()
+      .call();
+    const abilities = result.data.map(Ability.fromJson) as Ability[];
+    abilities.forEach((a) => a.validate());
+    return abilities;
+  }
+
   public getMapSprite(map: MapContainer, name: string): SpriteConfig {
     const sprite = map.sprites.filter((s) => s.name === name);
     if (sprite) {

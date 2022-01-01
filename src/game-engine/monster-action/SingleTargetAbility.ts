@@ -1,15 +1,18 @@
 import { Monster } from "@/models/Character";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
+import Ability from "./Ability";
 import AbilityEffect, { StatAbilityEffect } from "./AbilityEffect";
 
 export default class SingleTargetAbility {
   protected source: Monster;
   protected target: Monster;
+  protected ability: Ability;
 
-  public constructor(source: Monster, target: Monster) {
+  public constructor(source: Monster, target: Monster, ability: Ability) {
     this.source = source;
     this.target = target;
+    this.ability = ability;
   }
 
   public execute(): AbilityEffect[] {
@@ -20,8 +23,7 @@ export default class SingleTargetAbility {
   public hit(): boolean {
     const randomService = this.randomService();
 
-    // TODO add attack accuracy
-    const accuracy = 100;
+    const accuracy = this.ability.precision;
     const hit = this.source.stats.hit;
     const hitRandom = randomService.randomDecimal(0.8, 1.2);
 
@@ -42,15 +44,23 @@ export default class SingleTargetAbility {
   protected computeDamage(): number {
     const randomService = this.randomService();
 
-    // TODO add power bonus
-    const power = 100;
-    const atk = this.source.stats.atk;
+    const power = this.ability.power;
+
+    let atk = this.source.stats.atk;
+    // TODO move to constants file
+    if (this.ability.atkStat === "int") {
+      atk = this.source.stats.int;
+    }
     const atkRandom = randomService.randomDecimal(0.9, 1.1);
     // TODO add hit bonus
     const atkModifier = 0;
     const attacker = (power / 100) * (atk / 3) * atkRandom * (1 + atkModifier);
 
-    const def = this.target.stats.def;
+    let def = this.target.stats.def;
+    // TODO move to constants file
+    if (this.ability.defStat === "res") {
+      def = this.target.stats.res;
+    }
     const defRandom = randomService.randomDecimal(0.45, 0.6);
     const defModifier = 0;
     const defender = (def / 3) * defRandom * (1 + defModifier);

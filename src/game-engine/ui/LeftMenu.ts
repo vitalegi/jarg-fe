@@ -3,14 +3,17 @@ import Container from "typedi";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
 import DetectEvent from "./DetectEvent";
+import { TextStyle } from "pixi.js";
 
 export class MenuEntry {
   label: string;
   action: () => void;
+  enabled: boolean;
 
-  public constructor(label: string, action: () => void) {
+  public constructor(label: string, action: () => void, enabled = true) {
     this.label = label;
     this.action = action;
+    this.enabled = enabled;
   }
 }
 
@@ -21,12 +24,23 @@ export default class LeftMenu {
   protected frame: FrameImpl;
 
   protected options = {
-    font: {
-      fontFamily: "Courier",
-      fontSize: 20,
-      fill: "#ffffff",
-      stroke: "#000000",
-      strokeThickness: 4,
+    enabled: {
+      font: {
+        fontFamily: "Courier",
+        fontSize: 20,
+        fill: "#ffffff",
+        stroke: "#000000",
+        strokeThickness: 4,
+      },
+    },
+    disabled: {
+      font: {
+        fontFamily: "Courier",
+        fontSize: 20,
+        fill: "#ffffff",
+        stroke: "#999999",
+        strokeThickness: 4,
+      },
     },
     menuEntry: {
       height: 28,
@@ -89,14 +103,18 @@ export default class LeftMenu {
     );
     rectangle.endFill();
 
-    new DetectEvent(rectangle, () => entry.action());
+    if (entry.enabled) {
+      new DetectEvent(rectangle, () => entry.action());
+    }
     this.container?.addChild(rectangle);
 
-    const message = new PIXI.Text(entry.label, this.options.font);
+    const message = new PIXI.Text(entry.label, this.getMenuEntryFont(entry));
     message.position.x = this.frame.getWidth() + 4;
     message.position.y = this.menuEntryHeight() * index + 5;
 
-    new DetectEvent(message, () => entry.action());
+    if (entry.enabled) {
+      new DetectEvent(message, () => entry.action());
+    }
     this.container?.addChild(message);
   }
 
@@ -106,5 +124,12 @@ export default class LeftMenu {
 
   protected menuWidth(): number {
     return this.options.width;
+  }
+
+  protected getMenuEntryFont(entry: MenuEntry): Partial<TextStyle> {
+    if (entry.enabled) {
+      return this.options.enabled.font;
+    }
+    return this.options.disabled.font;
   }
 }

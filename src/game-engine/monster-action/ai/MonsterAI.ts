@@ -21,7 +21,9 @@ export default class MonsterAI {
       return;
     }
     const ability = this.getAbility(target);
-
+    if (!ability) {
+      return;
+    }
     const executor = new AbilityExecutor(this.source, target, ability);
     await executor.execute();
   }
@@ -37,9 +39,12 @@ export default class MonsterAI {
     return enemies[this.randomService.randomInt(enemies.length)];
   }
 
-  protected getAbility(target: Monster): Ability {
-    return this.source.abilities[
-      this.randomService.randomInt(this.source.abilities.length)
-    ];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected getAbility(target: Monster): Ability | null {
+    const abilities = this.source.abilities.filter((a) => a.usages.current > 0);
+    if (abilities.length === 0) {
+      return null;
+    }
+    return abilities[this.randomService.randomInt(abilities.length)];
   }
 }

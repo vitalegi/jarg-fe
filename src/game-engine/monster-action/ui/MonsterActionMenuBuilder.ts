@@ -19,7 +19,7 @@ export default class MonsterActionMenuBuilder {
     monster.abilities
       .map((ability) => this.abilityMenuEntry(leftMenu, monster, ability))
       .forEach((m) => leftMenu.addEntry(m));
-
+    leftMenu.addEntry(this.endTurn());
     return leftMenu;
   }
 
@@ -35,27 +35,37 @@ export default class MonsterActionMenuBuilder {
     });
   }
 
+  protected endTurn(): MenuEntry {
+    return new MenuEntry("End Turn", () => this.nextTurn());
+  }
+
   protected abilityMenuEntry(
     leftMenu: LeftMenu,
     monster: Monster,
     ability: Ability
   ): MenuEntry {
-    return new MenuEntry(ability.label, () => {
-      this.selectTargetMonster(leftMenu, monster.uuid).then(
-        (target: Monster) => {
-          console.log(
-            `Selected target of ability ${ability.label}: ${target.uuid} / ${target.coordinates}`
-          );
-          const executor = new AbilityExecutor(monster, target, ability);
-          executor.execute().then(() => {
+    const enabled = ability.usages.current > 0;
+
+    return new MenuEntry(
+      ability.label,
+      () => {
+        this.selectTargetMonster(leftMenu, monster.uuid).then(
+          (target: Monster) => {
             console.log(
-              `User ability ${ability.label} is completed, go to next turn.`
+              `Selected target of ability ${ability.label}: ${target.uuid} / ${target.coordinates}`
             );
-            this.nextTurn();
-          });
-        }
-      );
-    });
+            const executor = new AbilityExecutor(monster, target, ability);
+            executor.execute().then(() => {
+              console.log(
+                `User ability ${ability.label} is completed, go to next turn.`
+              );
+              this.nextTurn();
+            });
+          }
+        );
+      },
+      enabled
+    );
   }
 
   protected async selectTargetMonster(

@@ -27,6 +27,7 @@ export default class AbilityExecutor {
   }
 
   public async execute(): Promise<void> {
+    this.ability.usages.current--;
     const processor = this.ability.getProcessor(this.source, this.target);
 
     const hits = processor.hit();
