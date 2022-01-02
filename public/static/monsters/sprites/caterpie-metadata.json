@@ -1,0 +1,251 @@
+{
+  "name" : "caterpie",
+  "data" : {
+    "width" : 36.0,
+    "height" : 37.0
+  },
+  "frames" : [ {
+    "file" : "caterpie/caterpie1.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie2.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie3.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie4.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie5.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie6.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie7.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie8.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie9.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie10.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie11.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie12.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie13.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie14.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie15.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie16.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie17.png",
+    "duration" : 150
+  }, {
+    "file" : "caterpie/caterpie18.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie19.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie20.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie21.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie22.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie23.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie24.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie25.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie26.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie27.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie28.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie29.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie30.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie31.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie32.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie33.png",
+    "duration" : 150
+  }, {
+    "file" : "caterpie/caterpie34.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie35.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie36.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie37.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie38.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie39.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie40.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie41.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie42.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie43.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie44.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie45.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie46.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie47.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie48.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie49.png",
+    "duration" : 150
+  }, {
+    "file" : "caterpie/caterpie50.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie51.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie52.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie53.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie54.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie55.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie56.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie57.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie58.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie59.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie60.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie61.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie62.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie63.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie64.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie65.png",
+    "duration" : 150
+  }, {
+    "file" : "caterpie/caterpie66.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie67.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie68.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie69.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie70.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie71.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie72.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie73.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie74.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie75.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie76.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie77.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie78.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie79.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie80.png",
+    "duration" : 50
+  }, {
+    "file" : "caterpie/caterpie81.png",
+    "duration" : 100
+  } ]
+}

@@ -1,0 +1,371 @@
+{
+  "name" : "nidoran-m",
+  "data" : {
+    "width" : 37.0,
+    "height" : 37.0
+  },
+  "frames" : [ {
+    "file" : "nidoran-m/nidoran-m1.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m2.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m3.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m4.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m5.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m6.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m7.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m8.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m9.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m10.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m11.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m12.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m13.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m14.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m15.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m16.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m17.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m18.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m19.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m20.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m21.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m22.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m23.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m24.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m25.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m26.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m27.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m28.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m29.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m30.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m31.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m32.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m33.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m34.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m35.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m36.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m37.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m38.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m39.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m40.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m41.png",
+    "duration" : 150
+  }, {
+    "file" : "nidoran-m/nidoran-m42.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m43.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m44.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m45.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m46.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m47.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m48.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m49.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m50.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m51.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m52.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m53.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m54.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m55.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m56.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m57.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m58.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m59.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m60.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m61.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m62.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m63.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m64.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m65.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m66.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m67.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m68.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m69.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m70.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m71.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m72.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m73.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m74.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m75.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m76.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m77.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m78.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m79.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m80.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m81.png",
+    "duration" : 150
+  }, {
+    "file" : "nidoran-m/nidoran-m82.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m83.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m84.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m85.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m86.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m87.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m88.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m89.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m90.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m91.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m92.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m93.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m94.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m95.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m96.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m97.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m98.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m99.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m100.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m101.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m102.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m103.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m104.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m105.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m106.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m107.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m108.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m109.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m110.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m111.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m112.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m113.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m114.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m115.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m116.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m117.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m118.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m119.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m120.png",
+    "duration" : 50
+  }, {
+    "file" : "nidoran-m/nidoran-m121.png",
+    "duration" : 100
+  } ]
+}

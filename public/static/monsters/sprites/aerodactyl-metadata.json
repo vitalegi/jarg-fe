@@ -1,0 +1,59 @@
+{
+  "name" : "aerodactyl",
+  "data" : {
+    "width" : 93.0,
+    "height" : 81.0
+  },
+  "frames" : [ {
+    "file" : "aerodactyl/aerodactyl1.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl2.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl3.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl4.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl5.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl6.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl7.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl8.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl9.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl10.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl11.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl12.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl13.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl14.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl15.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl16.png",
+    "duration" : 50
+  }, {
+    "file" : "aerodactyl/aerodactyl17.png",
+    "duration" : 50
+  } ]
+}

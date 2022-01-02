@@ -1,0 +1,311 @@
+{
+  "name" : "cloyster",
+  "data" : {
+    "width" : 74.0,
+    "height" : 65.0
+  },
+  "frames" : [ {
+    "file" : "cloyster/cloyster1.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster2.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster3.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster4.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster5.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster6.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster7.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster8.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster9.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster10.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster11.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster12.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster13.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster14.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster15.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster16.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster17.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster18.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster19.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster20.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster21.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster22.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster23.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster24.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster25.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster26.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster27.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster28.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster29.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster30.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster31.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster32.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster33.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster34.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster35.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster36.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster37.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster38.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster39.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster40.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster41.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster42.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster43.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster44.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster45.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster46.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster47.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster48.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster49.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster50.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster51.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster52.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster53.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster54.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster55.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster56.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster57.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster58.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster59.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster60.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster61.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster62.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster63.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster64.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster65.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster66.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster67.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster68.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster69.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster70.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster71.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster72.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster73.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster74.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster75.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster76.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster77.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster78.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster79.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster80.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster81.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster82.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster83.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster84.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster85.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster86.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster87.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster88.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster89.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster90.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster91.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster92.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster93.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster94.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster95.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster96.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster97.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster98.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster99.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster100.png",
+    "duration" : 50
+  }, {
+    "file" : "cloyster/cloyster101.png",
+    "duration" : 100
+  } ]
+}

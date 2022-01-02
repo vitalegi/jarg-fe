@@ -1,0 +1,455 @@
+{
+  "name" : "machop",
+  "data" : {
+    "width" : 51.0,
+    "height" : 50.0
+  },
+  "frames" : [ {
+    "file" : "machop/machop1.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop2.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop3.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop4.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop5.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop6.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop7.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop8.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop9.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop10.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop11.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop12.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop13.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop14.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop15.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop16.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop17.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop18.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop19.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop20.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop21.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop22.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop23.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop24.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop25.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop26.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop27.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop28.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop29.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop30.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop31.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop32.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop33.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop34.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop35.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop36.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop37.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop38.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop39.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop40.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop41.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop42.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop43.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop44.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop45.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop46.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop47.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop48.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop49.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop50.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop51.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop52.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop53.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop54.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop55.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop56.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop57.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop58.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop59.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop60.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop61.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop62.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop63.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop64.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop65.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop66.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop67.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop68.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop69.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop70.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop71.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop72.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop73.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop74.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop75.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop76.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop77.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop78.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop79.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop80.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop81.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop82.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop83.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop84.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop85.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop86.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop87.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop88.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop89.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop90.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop91.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop92.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop93.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop94.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop95.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop96.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop97.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop98.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop99.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop100.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop101.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop102.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop103.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop104.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop105.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop106.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop107.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop108.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop109.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop110.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop111.png",
+    "duration" : 100
+  }, {
+    "file" : "machop/machop112.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop113.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop114.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop115.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop116.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop117.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop118.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop119.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop120.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop121.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop122.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop123.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop124.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop125.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop126.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop127.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop128.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop129.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop130.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop131.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop132.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop133.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop134.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop135.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop136.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop137.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop138.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop139.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop140.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop141.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop142.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop143.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop144.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop145.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop146.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop147.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop148.png",
+    "duration" : 50
+  }, {
+    "file" : "machop/machop149.png",
+    "duration" : 100
+  } ]
+}

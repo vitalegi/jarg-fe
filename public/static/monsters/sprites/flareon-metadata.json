@@ -1,0 +1,365 @@
+{
+  "name" : "flareon",
+  "data" : {
+    "width" : 66.0,
+    "height" : 60.0
+  },
+  "frames" : [ {
+    "file" : "flareon/flareon1.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon2.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon3.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon4.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon5.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon6.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon7.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon8.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon9.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon10.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon11.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon12.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon13.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon14.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon15.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon16.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon17.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon18.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon19.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon20.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon21.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon22.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon23.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon24.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon25.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon26.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon27.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon28.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon29.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon30.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon31.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon32.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon33.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon34.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon35.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon36.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon37.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon38.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon39.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon40.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon41.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon42.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon43.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon44.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon45.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon46.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon47.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon48.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon49.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon50.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon51.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon52.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon53.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon54.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon55.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon56.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon57.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon58.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon59.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon60.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon61.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon62.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon63.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon64.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon65.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon66.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon67.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon68.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon69.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon70.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon71.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon72.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon73.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon74.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon75.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon76.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon77.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon78.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon79.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon80.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon81.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon82.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon83.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon84.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon85.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon86.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon87.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon88.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon89.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon90.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon91.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon92.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon93.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon94.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon95.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon96.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon97.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon98.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon99.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon100.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon101.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon102.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon103.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon104.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon105.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon106.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon107.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon108.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon109.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon110.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon111.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon112.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon113.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon114.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon115.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon116.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon117.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon118.png",
+    "duration" : 50
+  }, {
+    "file" : "flareon/flareon119.png",
+    "duration" : 100
+  } ]
+}

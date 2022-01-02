@@ -1,0 +1,383 @@
+{
+  "name" : "eevee",
+  "data" : {
+    "width" : 49.0,
+    "height" : 47.0
+  },
+  "frames" : [ {
+    "file" : "eevee/eevee1.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee2.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee3.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee4.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee5.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee6.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee7.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee8.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee9.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee10.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee11.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee12.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee13.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee14.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee15.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee16.png",
+    "duration" : 150
+  }, {
+    "file" : "eevee/eevee17.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee18.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee19.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee20.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee21.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee22.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee23.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee24.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee25.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee26.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee27.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee28.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee29.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee30.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee31.png",
+    "duration" : 100
+  }, {
+    "file" : "eevee/eevee32.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee33.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee34.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee35.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee36.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee37.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee38.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee39.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee40.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee41.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee42.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee43.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee44.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee45.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee46.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee47.png",
+    "duration" : 100
+  }, {
+    "file" : "eevee/eevee48.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee49.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee50.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee51.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee52.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee53.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee54.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee55.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee56.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee57.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee58.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee59.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee60.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee61.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee62.png",
+    "duration" : 150
+  }, {
+    "file" : "eevee/eevee63.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee64.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee65.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee66.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee67.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee68.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee69.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee70.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee71.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee72.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee73.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee74.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee75.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee76.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee77.png",
+    "duration" : 100
+  }, {
+    "file" : "eevee/eevee78.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee79.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee80.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee81.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee82.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee83.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee84.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee85.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee86.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee87.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee88.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee89.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee90.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee91.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee92.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee93.png",
+    "duration" : 100
+  }, {
+    "file" : "eevee/eevee94.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee95.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee96.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee97.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee98.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee99.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee100.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee101.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee102.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee103.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee104.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee105.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee106.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee107.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee108.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee109.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee110.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee111.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee112.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee113.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee114.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee115.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee116.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee117.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee118.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee119.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee120.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee121.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee122.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee123.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee124.png",
+    "duration" : 50
+  }, {
+    "file" : "eevee/eevee125.png",
+    "duration" : 100
+  } ]
+}

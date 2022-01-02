@@ -1,0 +1,227 @@
+{
+  "name" : "paras",
+  "data" : {
+    "width" : 48.0,
+    "height" : 38.0
+  },
+  "frames" : [ {
+    "file" : "paras/paras1.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras2.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras3.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras4.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras5.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras6.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras7.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras8.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras9.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras10.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras11.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras12.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras13.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras14.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras15.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras16.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras17.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras18.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras19.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras20.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras21.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras22.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras23.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras24.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras25.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras26.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras27.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras28.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras29.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras30.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras31.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras32.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras33.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras34.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras35.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras36.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras37.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras38.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras39.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras40.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras41.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras42.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras43.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras44.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras45.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras46.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras47.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras48.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras49.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras50.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras51.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras52.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras53.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras54.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras55.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras56.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras57.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras58.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras59.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras60.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras61.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras62.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras63.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras64.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras65.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras66.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras67.png",
+    "duration" : 150
+  }, {
+    "file" : "paras/paras68.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras69.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras70.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras71.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras72.png",
+    "duration" : 50
+  }, {
+    "file" : "paras/paras73.png",
+    "duration" : 100
+  } ]
+}

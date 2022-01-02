@@ -1,0 +1,1137 @@
+{
+	"meta": {
+		"image": "growlithe-spritesheet.png",
+		"size": {"w":660,"h":624},
+		"scale": "1"
+	},
+	"frames": {
+		"growlithe/growlithe1.png":
+		{
+			"frame": {"x":0,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe10.png":
+		{
+			"frame": {"x":55,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe100.png":
+		{
+			"frame": {"x":0,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe101.png":
+		{
+			"frame": {"x":55,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe102.png":
+		{
+			"frame": {"x":110,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe103.png":
+		{
+			"frame": {"x":110,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe104.png":
+		{
+			"frame": {"x":0,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe105.png":
+		{
+			"frame": {"x":55,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe106.png":
+		{
+			"frame": {"x":110,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe107.png":
+		{
+			"frame": {"x":165,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe108.png":
+		{
+			"frame": {"x":165,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe109.png":
+		{
+			"frame": {"x":165,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe11.png":
+		{
+			"frame": {"x":0,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe110.png":
+		{
+			"frame": {"x":55,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe111.png":
+		{
+			"frame": {"x":110,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe112.png":
+		{
+			"frame": {"x":165,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe113.png":
+		{
+			"frame": {"x":220,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe114.png":
+		{
+			"frame": {"x":220,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe115.png":
+		{
+			"frame": {"x":220,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe116.png":
+		{
+			"frame": {"x":220,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe117.png":
+		{
+			"frame": {"x":0,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe118.png":
+		{
+			"frame": {"x":55,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe119.png":
+		{
+			"frame": {"x":110,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe12.png":
+		{
+			"frame": {"x":165,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe120.png":
+		{
+			"frame": {"x":220,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe121.png":
+		{
+			"frame": {"x":275,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe122.png":
+		{
+			"frame": {"x":275,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe123.png":
+		{
+			"frame": {"x":275,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe124.png":
+		{
+			"frame": {"x":275,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe125.png":
+		{
+			"frame": {"x":275,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe126.png":
+		{
+			"frame": {"x":0,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe127.png":
+		{
+			"frame": {"x":55,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe128.png":
+		{
+			"frame": {"x":110,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe129.png":
+		{
+			"frame": {"x":165,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe13.png":
+		{
+			"frame": {"x":220,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe130.png":
+		{
+			"frame": {"x":275,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe131.png":
+		{
+			"frame": {"x":330,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe132.png":
+		{
+			"frame": {"x":330,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe133.png":
+		{
+			"frame": {"x":330,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe134.png":
+		{
+			"frame": {"x":330,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe135.png":
+		{
+			"frame": {"x":330,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe136.png":
+		{
+			"frame": {"x":330,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe137.png":
+		{
+			"frame": {"x":0,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe138.png":
+		{
+			"frame": {"x":55,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe139.png":
+		{
+			"frame": {"x":110,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe14.png":
+		{
+			"frame": {"x":165,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe140.png":
+		{
+			"frame": {"x":220,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe141.png":
+		{
+			"frame": {"x":275,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe15.png":
+		{
+			"frame": {"x":330,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe16.png":
+		{
+			"frame": {"x":385,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe17.png":
+		{
+			"frame": {"x":385,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe18.png":
+		{
+			"frame": {"x":385,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe19.png":
+		{
+			"frame": {"x":385,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe2.png":
+		{
+			"frame": {"x":385,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe20.png":
+		{
+			"frame": {"x":385,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe21.png":
+		{
+			"frame": {"x":385,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe22.png":
+		{
+			"frame": {"x":0,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe23.png":
+		{
+			"frame": {"x":55,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe24.png":
+		{
+			"frame": {"x":110,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe25.png":
+		{
+			"frame": {"x":165,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe26.png":
+		{
+			"frame": {"x":220,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe27.png":
+		{
+			"frame": {"x":275,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe28.png":
+		{
+			"frame": {"x":330,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe29.png":
+		{
+			"frame": {"x":385,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe3.png":
+		{
+			"frame": {"x":440,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe30.png":
+		{
+			"frame": {"x":440,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe31.png":
+		{
+			"frame": {"x":440,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe32.png":
+		{
+			"frame": {"x":440,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe33.png":
+		{
+			"frame": {"x":440,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe34.png":
+		{
+			"frame": {"x":440,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe35.png":
+		{
+			"frame": {"x":440,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe36.png":
+		{
+			"frame": {"x":440,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe37.png":
+		{
+			"frame": {"x":0,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe38.png":
+		{
+			"frame": {"x":55,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe39.png":
+		{
+			"frame": {"x":110,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe4.png":
+		{
+			"frame": {"x":165,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe40.png":
+		{
+			"frame": {"x":220,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe41.png":
+		{
+			"frame": {"x":275,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe42.png":
+		{
+			"frame": {"x":330,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe43.png":
+		{
+			"frame": {"x":385,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe44.png":
+		{
+			"frame": {"x":440,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe45.png":
+		{
+			"frame": {"x":495,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe46.png":
+		{
+			"frame": {"x":495,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe47.png":
+		{
+			"frame": {"x":495,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe48.png":
+		{
+			"frame": {"x":495,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe49.png":
+		{
+			"frame": {"x":495,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe5.png":
+		{
+			"frame": {"x":495,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe50.png":
+		{
+			"frame": {"x":495,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe51.png":
+		{
+			"frame": {"x":495,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe52.png":
+		{
+			"frame": {"x":495,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe53.png":
+		{
+			"frame": {"x":0,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe54.png":
+		{
+			"frame": {"x":55,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe55.png":
+		{
+			"frame": {"x":110,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe56.png":
+		{
+			"frame": {"x":165,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe57.png":
+		{
+			"frame": {"x":220,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe58.png":
+		{
+			"frame": {"x":275,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe59.png":
+		{
+			"frame": {"x":330,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe6.png":
+		{
+			"frame": {"x":385,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe60.png":
+		{
+			"frame": {"x":440,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe61.png":
+		{
+			"frame": {"x":495,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe62.png":
+		{
+			"frame": {"x":550,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe63.png":
+		{
+			"frame": {"x":550,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe64.png":
+		{
+			"frame": {"x":550,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe65.png":
+		{
+			"frame": {"x":550,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe66.png":
+		{
+			"frame": {"x":550,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe67.png":
+		{
+			"frame": {"x":550,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe68.png":
+		{
+			"frame": {"x":550,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe69.png":
+		{
+			"frame": {"x":550,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe7.png":
+		{
+			"frame": {"x":550,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe70.png":
+		{
+			"frame": {"x":550,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe71.png":
+		{
+			"frame": {"x":0,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe72.png":
+		{
+			"frame": {"x":55,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe73.png":
+		{
+			"frame": {"x":110,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe74.png":
+		{
+			"frame": {"x":165,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe75.png":
+		{
+			"frame": {"x":220,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe76.png":
+		{
+			"frame": {"x":275,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe77.png":
+		{
+			"frame": {"x":330,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe78.png":
+		{
+			"frame": {"x":385,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe79.png":
+		{
+			"frame": {"x":440,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe8.png":
+		{
+			"frame": {"x":495,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe80.png":
+		{
+			"frame": {"x":550,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe81.png":
+		{
+			"frame": {"x":605,"y":0,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe82.png":
+		{
+			"frame": {"x":605,"y":52,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe83.png":
+		{
+			"frame": {"x":605,"y":104,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe84.png":
+		{
+			"frame": {"x":605,"y":156,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe85.png":
+		{
+			"frame": {"x":605,"y":208,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe86.png":
+		{
+			"frame": {"x":605,"y":260,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe87.png":
+		{
+			"frame": {"x":605,"y":312,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe88.png":
+		{
+			"frame": {"x":605,"y":364,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe89.png":
+		{
+			"frame": {"x":605,"y":416,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe9.png":
+		{
+			"frame": {"x":605,"y":468,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe90.png":
+		{
+			"frame": {"x":605,"y":520,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe91.png":
+		{
+			"frame": {"x":0,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe92.png":
+		{
+			"frame": {"x":55,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe93.png":
+		{
+			"frame": {"x":110,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe94.png":
+		{
+			"frame": {"x":165,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe95.png":
+		{
+			"frame": {"x":220,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe96.png":
+		{
+			"frame": {"x":275,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe97.png":
+		{
+			"frame": {"x":330,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe98.png":
+		{
+			"frame": {"x":385,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		},
+		"growlithe/growlithe99.png":
+		{
+			"frame": {"x":440,"y":572,"w":55,"h":52},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":55,"h":52},
+			"sourceSize": {"w":55,"h":52}
+		}
+	}
+}

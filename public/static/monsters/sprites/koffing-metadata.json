@@ -1,0 +1,269 @@
+{
+  "name" : "koffing",
+  "data" : {
+    "width" : 91.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "koffing/koffing1.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing2.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing3.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing4.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing5.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing6.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing7.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing8.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing9.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing10.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing11.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing12.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing13.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing14.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing15.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing16.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing17.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing18.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing19.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing20.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing21.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing22.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing23.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing24.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing25.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing26.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing27.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing28.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing29.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing30.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing31.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing32.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing33.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing34.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing35.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing36.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing37.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing38.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing39.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing40.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing41.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing42.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing43.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing44.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing45.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing46.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing47.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing48.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing49.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing50.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing51.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing52.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing53.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing54.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing55.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing56.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing57.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing58.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing59.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing60.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing61.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing62.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing63.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing64.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing65.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing66.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing67.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing68.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing69.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing70.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing71.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing72.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing73.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing74.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing75.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing76.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing77.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing78.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing79.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing80.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing81.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing82.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing83.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing84.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing85.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing86.png",
+    "duration" : 50
+  }, {
+    "file" : "koffing/koffing87.png",
+    "duration" : 100
+  } ]
+}

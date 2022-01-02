@@ -1,0 +1,248 @@
+{
+  "name" : "ditto",
+  "data" : {
+    "width" : 47.0,
+    "height" : 32.0
+  },
+  "frames" : [ {
+    "file" : "ditto/ditto1.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto2.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto3.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto4.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto5.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto6.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto7.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto8.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto9.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto10.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto11.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto12.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto13.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto14.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto15.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto16.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto17.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto18.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto19.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto20.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto21.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto22.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto23.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto24.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto25.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto26.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto27.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto28.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto29.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto30.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto31.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto32.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto33.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto34.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto35.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto36.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto37.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto38.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto39.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto40.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto41.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto42.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto43.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto44.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto45.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto46.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto47.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto48.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto49.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto50.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto51.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto52.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto53.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto54.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto55.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto56.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto57.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto58.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto59.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto60.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto61.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto62.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto63.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto64.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto65.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto66.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto67.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto68.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto69.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto70.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto71.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto72.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto73.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto74.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto75.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto76.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto77.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto78.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto79.png",
+    "duration" : 50
+  }, {
+    "file" : "ditto/ditto80.png",
+    "duration" : 50
+  } ]
+}

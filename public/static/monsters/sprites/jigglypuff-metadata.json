@@ -1,0 +1,341 @@
+{
+  "name" : "jigglypuff",
+  "data" : {
+    "width" : 49.0,
+    "height" : 45.0
+  },
+  "frames" : [ {
+    "file" : "jigglypuff/jigglypuff1.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff2.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff3.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff4.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff5.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff6.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff7.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff8.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff9.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff10.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff11.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff12.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff13.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff14.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff15.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff16.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff17.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff18.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff19.png",
+    "duration" : 150
+  }, {
+    "file" : "jigglypuff/jigglypuff20.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff21.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff22.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff23.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff24.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff25.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff26.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff27.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff28.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff29.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff30.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff31.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff32.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff33.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff34.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff35.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff36.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff37.png",
+    "duration" : 100
+  }, {
+    "file" : "jigglypuff/jigglypuff38.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff39.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff40.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff41.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff42.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff43.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff44.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff45.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff46.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff47.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff48.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff49.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff50.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff51.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff52.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff53.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff54.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff55.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff56.png",
+    "duration" : 150
+  }, {
+    "file" : "jigglypuff/jigglypuff57.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff58.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff59.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff60.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff61.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff62.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff63.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff64.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff65.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff66.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff67.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff68.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff69.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff70.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff71.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff72.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff73.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff74.png",
+    "duration" : 100
+  }, {
+    "file" : "jigglypuff/jigglypuff75.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff76.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff77.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff78.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff79.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff80.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff81.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff82.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff83.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff84.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff85.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff86.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff87.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff88.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff89.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff90.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff91.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff92.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff93.png",
+    "duration" : 150
+  }, {
+    "file" : "jigglypuff/jigglypuff94.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff95.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff96.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff97.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff98.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff99.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff100.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff101.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff102.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff103.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff104.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff105.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff106.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff107.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff108.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff109.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff110.png",
+    "duration" : 50
+  }, {
+    "file" : "jigglypuff/jigglypuff111.png",
+    "duration" : 100
+  } ]
+}

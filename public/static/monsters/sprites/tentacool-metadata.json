@@ -1,0 +1,293 @@
+{
+  "name" : "tentacool",
+  "data" : {
+    "width" : 60.0,
+    "height" : 71.0
+  },
+  "frames" : [ {
+    "file" : "tentacool/tentacool1.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool2.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool3.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool4.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool5.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool6.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool7.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool8.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool9.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool10.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool11.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool12.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool13.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool14.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool15.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool16.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool17.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool18.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool19.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool20.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool21.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool22.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool23.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool24.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool25.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool26.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool27.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool28.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool29.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool30.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool31.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool32.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool33.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool34.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool35.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool36.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool37.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool38.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool39.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool40.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool41.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool42.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool43.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool44.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool45.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool46.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool47.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool48.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool49.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool50.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool51.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool52.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool53.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool54.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool55.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool56.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool57.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool58.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool59.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool60.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool61.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool62.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool63.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool64.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool65.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool66.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool67.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool68.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool69.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool70.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool71.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool72.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool73.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool74.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool75.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool76.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool77.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool78.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool79.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool80.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool81.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool82.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool83.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool84.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool85.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool86.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool87.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool88.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool89.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool90.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool91.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool92.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool93.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool94.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacool/tentacool95.png",
+    "duration" : 100
+  } ]
+}

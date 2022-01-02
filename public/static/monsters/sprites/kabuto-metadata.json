@@ -1,0 +1,209 @@
+{
+  "name" : "kabuto",
+  "data" : {
+    "width" : 39.0,
+    "height" : 41.0
+  },
+  "frames" : [ {
+    "file" : "kabuto/kabuto1.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto2.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto3.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto4.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto5.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto6.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto7.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto8.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto9.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto10.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto11.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto12.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto13.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto14.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto15.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto16.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto17.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto18.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto19.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto20.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto21.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto22.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto23.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto24.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto25.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto26.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto27.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto28.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto29.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto30.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto31.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto32.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto33.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto34.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto35.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto36.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto37.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto38.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto39.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto40.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto41.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto42.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto43.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto44.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto45.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto46.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto47.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto48.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto49.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto50.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto51.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto52.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto53.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto54.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto55.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto56.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto57.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto58.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto59.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto60.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto61.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto62.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto63.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto64.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto65.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto66.png",
+    "duration" : 50
+  }, {
+    "file" : "kabuto/kabuto67.png",
+    "duration" : 100
+  } ]
+}

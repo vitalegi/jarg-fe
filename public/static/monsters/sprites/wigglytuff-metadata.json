@@ -1,0 +1,335 @@
+{
+  "name" : "wigglytuff",
+  "data" : {
+    "width" : 49.0,
+    "height" : 82.0
+  },
+  "frames" : [ {
+    "file" : "wigglytuff/wigglytuff1.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff2.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff3.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff4.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff5.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff6.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff7.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff8.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff9.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff10.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff11.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff12.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff13.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff14.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff15.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff16.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff17.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff18.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff19.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff20.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff21.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff22.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff23.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff24.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff25.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff26.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff27.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff28.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff29.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff30.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff31.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff32.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff33.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff34.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff35.png",
+    "duration" : 150
+  }, {
+    "file" : "wigglytuff/wigglytuff36.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff37.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff38.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff39.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff40.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff41.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff42.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff43.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff44.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff45.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff46.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff47.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff48.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff49.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff50.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff51.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff52.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff53.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff54.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff55.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff56.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff57.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff58.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff59.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff60.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff61.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff62.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff63.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff64.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff65.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff66.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff67.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff68.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff69.png",
+    "duration" : 200
+  }, {
+    "file" : "wigglytuff/wigglytuff70.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff71.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff72.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff73.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff74.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff75.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff76.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff77.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff78.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff79.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff80.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff81.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff82.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff83.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff84.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff85.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff86.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff87.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff88.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff89.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff90.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff91.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff92.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff93.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff94.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff95.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff96.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff97.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff98.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff99.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff100.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff101.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff102.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff103.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff104.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff105.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff106.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff107.png",
+    "duration" : 50
+  }, {
+    "file" : "wigglytuff/wigglytuff108.png",
+    "duration" : 100
+  }, {
+    "file" : "wigglytuff/wigglytuff109.png",
+    "duration" : 100
+  } ]
+}

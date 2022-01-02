@@ -1,0 +1,338 @@
+{
+  "name" : "gastly",
+  "data" : {
+    "width" : 67.0,
+    "height" : 75.0
+  },
+  "frames" : [ {
+    "file" : "gastly/gastly1.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly2.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly3.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly4.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly5.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly6.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly7.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly8.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly9.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly10.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly11.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly12.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly13.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly14.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly15.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly16.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly17.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly18.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly19.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly20.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly21.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly22.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly23.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly24.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly25.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly26.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly27.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly28.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly29.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly30.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly31.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly32.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly33.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly34.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly35.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly36.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly37.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly38.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly39.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly40.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly41.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly42.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly43.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly44.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly45.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly46.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly47.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly48.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly49.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly50.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly51.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly52.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly53.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly54.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly55.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly56.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly57.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly58.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly59.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly60.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly61.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly62.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly63.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly64.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly65.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly66.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly67.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly68.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly69.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly70.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly71.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly72.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly73.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly74.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly75.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly76.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly77.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly78.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly79.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly80.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly81.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly82.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly83.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly84.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly85.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly86.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly87.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly88.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly89.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly90.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly91.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly92.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly93.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly94.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly95.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly96.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly97.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly98.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly99.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly100.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly101.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly102.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly103.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly104.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly105.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly106.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly107.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly108.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly109.png",
+    "duration" : 50
+  }, {
+    "file" : "gastly/gastly110.png",
+    "duration" : 50
+  } ]
+}

@@ -1,0 +1,230 @@
+{
+  "name" : "arbok",
+  "data" : {
+    "width" : 81.0,
+    "height" : 74.0
+  },
+  "frames" : [ {
+    "file" : "arbok/arbok1.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok2.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok3.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok4.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok5.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok6.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok7.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok8.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok9.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok10.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok11.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok12.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok13.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok14.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok15.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok16.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok17.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok18.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok19.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok20.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok21.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok22.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok23.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok24.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok25.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok26.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok27.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok28.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok29.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok30.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok31.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok32.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok33.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok34.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok35.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok36.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok37.png",
+    "duration" : 100
+  }, {
+    "file" : "arbok/arbok38.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok39.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok40.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok41.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok42.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok43.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok44.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok45.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok46.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok47.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok48.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok49.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok50.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok51.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok52.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok53.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok54.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok55.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok56.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok57.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok58.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok59.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok60.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok61.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok62.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok63.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok64.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok65.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok66.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok67.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok68.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok69.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok70.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok71.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok72.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok73.png",
+    "duration" : 50
+  }, {
+    "file" : "arbok/arbok74.png",
+    "duration" : 100
+  } ]
+}

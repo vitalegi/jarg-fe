@@ -1,0 +1,740 @@
+{
+  "name" : "blastoise",
+  "data" : {
+    "width" : 69.0,
+    "height" : 65.0
+  },
+  "frames" : [ {
+    "file" : "blastoise/blastoise1.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise2.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise3.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise4.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise5.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise6.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise7.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise8.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise9.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise10.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise11.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise12.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise13.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise14.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise15.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise16.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise17.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise18.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise19.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise20.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise21.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise22.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise23.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise24.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise25.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise26.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise27.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise28.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise29.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise30.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise31.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise32.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise33.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise34.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise35.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise36.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise37.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise38.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise39.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise40.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise41.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise42.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise43.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise44.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise45.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise46.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise47.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise48.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise49.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise50.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise51.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise52.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise53.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise54.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise55.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise56.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise57.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise58.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise59.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise60.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise61.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise62.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise63.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise64.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise65.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise66.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise67.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise68.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise69.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise70.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise71.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise72.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise73.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise74.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise75.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise76.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise77.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise78.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise79.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise80.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise81.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise82.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise83.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise84.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise85.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise86.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise87.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise88.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise89.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise90.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise91.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise92.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise93.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise94.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise95.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise96.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise97.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise98.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise99.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise100.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise101.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise102.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise103.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise104.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise105.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise106.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise107.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise108.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise109.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise110.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise111.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise112.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise113.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise114.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise115.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise116.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise117.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise118.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise119.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise120.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise121.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise122.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise123.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise124.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise125.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise126.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise127.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise128.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise129.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise130.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise131.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise132.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise133.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise134.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise135.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise136.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise137.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise138.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise139.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise140.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise141.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise142.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise143.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise144.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise145.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise146.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise147.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise148.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise149.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise150.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise151.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise152.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise153.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise154.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise155.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise156.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise157.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise158.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise159.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise160.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise161.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise162.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise163.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise164.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise165.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise166.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise167.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise168.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise169.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise170.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise171.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise172.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise173.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise174.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise175.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise176.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise177.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise178.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise179.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise180.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise181.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise182.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise183.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise184.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise185.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise186.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise187.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise188.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise189.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise190.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise191.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise192.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise193.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise194.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise195.png",
+    "duration" : 100
+  }, {
+    "file" : "blastoise/blastoise196.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise197.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise198.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise199.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise200.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise201.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise202.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise203.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise204.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise205.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise206.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise207.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise208.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise209.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise210.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise211.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise212.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise213.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise214.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise215.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise216.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise217.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise218.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise219.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise220.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise221.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise222.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise223.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise224.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise225.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise226.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise227.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise228.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise229.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise230.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise231.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise232.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise233.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise234.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise235.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise236.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise237.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise238.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise239.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise240.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise241.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise242.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise243.png",
+    "duration" : 50
+  }, {
+    "file" : "blastoise/blastoise244.png",
+    "duration" : 50
+  } ]
+}

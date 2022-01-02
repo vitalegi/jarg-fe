@@ -1,0 +1,416 @@
+{
+  "name" : "marowak",
+  "data" : {
+    "width" : 68.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "marowak/marowak1.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak2.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak3.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak4.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak5.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak6.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak7.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak8.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak9.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak10.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak11.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak12.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak13.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak14.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak15.png",
+    "duration" : 150
+  }, {
+    "file" : "marowak/marowak16.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak17.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak18.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak19.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak20.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak21.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak22.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak23.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak24.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak25.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak26.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak27.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak28.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak29.png",
+    "duration" : 100
+  }, {
+    "file" : "marowak/marowak30.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak31.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak32.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak33.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak34.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak35.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak36.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak37.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak38.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak39.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak40.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak41.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak42.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak43.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak44.png",
+    "duration" : 100
+  }, {
+    "file" : "marowak/marowak45.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak46.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak47.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak48.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak49.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak50.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak51.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak52.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak53.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak54.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak55.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak56.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak57.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak58.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak59.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak60.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak61.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak62.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak63.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak64.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak65.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak66.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak67.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak68.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak69.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak70.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak71.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak72.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak73.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak74.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak75.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak76.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak77.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak78.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak79.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak80.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak81.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak82.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak83.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak84.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak85.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak86.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak87.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak88.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak89.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak90.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak91.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak92.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak93.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak94.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak95.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak96.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak97.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak98.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak99.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak100.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak101.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak102.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak103.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak104.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak105.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak106.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak107.png",
+    "duration" : 150
+  }, {
+    "file" : "marowak/marowak108.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak109.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak110.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak111.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak112.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak113.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak114.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak115.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak116.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak117.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak118.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak119.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak120.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak121.png",
+    "duration" : 100
+  }, {
+    "file" : "marowak/marowak122.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak123.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak124.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak125.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak126.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak127.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak128.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak129.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak130.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak131.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak132.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak133.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak134.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak135.png",
+    "duration" : 50
+  }, {
+    "file" : "marowak/marowak136.png",
+    "duration" : 100
+  } ]
+}

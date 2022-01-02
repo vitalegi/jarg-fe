@@ -1,0 +1,389 @@
+{
+  "name" : "mr-mime",
+  "data" : {
+    "width" : 57.0,
+    "height" : 53.0
+  },
+  "frames" : [ {
+    "file" : "mr-mime/mr-mime1.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime2.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime3.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime4.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime5.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime6.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime7.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime8.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime9.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime10.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime11.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime12.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime13.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime14.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime15.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime16.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime17.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime18.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime19.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime20.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime21.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime22.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime23.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime24.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime25.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime26.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime27.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime28.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime29.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime30.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime31.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime32.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime33.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime34.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime35.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime36.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime37.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime38.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime39.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime40.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime41.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime42.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime43.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime44.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime45.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime46.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime47.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime48.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime49.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime50.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime51.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime52.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime53.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime54.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime55.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime56.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime57.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime58.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime59.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime60.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime61.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime62.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime63.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime64.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime65.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime66.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime67.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime68.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime69.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime70.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime71.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime72.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime73.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime74.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime75.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime76.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime77.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime78.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime79.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime80.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime81.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime82.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime83.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime84.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime85.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime86.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime87.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime88.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime89.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime90.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime91.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime92.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime93.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime94.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime95.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime96.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime97.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime98.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime99.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime100.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime101.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime102.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime103.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime104.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime105.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime106.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime107.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime108.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime109.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime110.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime111.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime112.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime113.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime114.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime115.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime116.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime117.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime118.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime119.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime120.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime121.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime122.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime123.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime124.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime125.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime126.png",
+    "duration" : 50
+  }, {
+    "file" : "mr-mime/mr-mime127.png",
+    "duration" : 100
+  } ]
+}

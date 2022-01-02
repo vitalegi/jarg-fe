@@ -1,0 +1,473 @@
+{
+  "name" : "dodrio",
+  "data" : {
+    "width" : 70.0,
+    "height" : 76.0
+  },
+  "frames" : [ {
+    "file" : "dodrio/dodrio1.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio2.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio3.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio4.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio5.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio6.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio7.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio8.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio9.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio10.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio11.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio12.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio13.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio14.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio15.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio16.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio17.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio18.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio19.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio20.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio21.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio22.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio23.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio24.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio25.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio26.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio27.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio28.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio29.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio30.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio31.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio32.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio33.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio34.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio35.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio36.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio37.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio38.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio39.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio40.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio41.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio42.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio43.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio44.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio45.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio46.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio47.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio48.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio49.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio50.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio51.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio52.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio53.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio54.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio55.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio56.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio57.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio58.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio59.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio60.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio61.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio62.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio63.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio64.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio65.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio66.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio67.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio68.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio69.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio70.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio71.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio72.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio73.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio74.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio75.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio76.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio77.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio78.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio79.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio80.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio81.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio82.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio83.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio84.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio85.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio86.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio87.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio88.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio89.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio90.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio91.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio92.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio93.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio94.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio95.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio96.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio97.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio98.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio99.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio100.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio101.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio102.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio103.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio104.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio105.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio106.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio107.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio108.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio109.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio110.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio111.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio112.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio113.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio114.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio115.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio116.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio117.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio118.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio119.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio120.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio121.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio122.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio123.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio124.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio125.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio126.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio127.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio128.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio129.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio130.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio131.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio132.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio133.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio134.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio135.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio136.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio137.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio138.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio139.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio140.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio141.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio142.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio143.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio144.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio145.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio146.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio147.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio148.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio149.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio150.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio151.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio152.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio153.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio154.png",
+    "duration" : 50
+  }, {
+    "file" : "dodrio/dodrio155.png",
+    "duration" : 100
+  } ]
+}

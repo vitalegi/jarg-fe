@@ -1,0 +1,212 @@
+{
+  "name" : "omanyte",
+  "data" : {
+    "width" : 43.0,
+    "height" : 45.0
+  },
+  "frames" : [ {
+    "file" : "omanyte/omanyte1.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte2.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte3.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte4.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte5.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte6.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte7.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte8.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte9.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte10.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte11.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte12.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte13.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte14.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte15.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte16.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte17.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte18.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte19.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte20.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte21.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte22.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte23.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte24.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte25.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte26.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte27.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte28.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte29.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte30.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte31.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte32.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte33.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte34.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte35.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte36.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte37.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte38.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte39.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte40.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte41.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte42.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte43.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte44.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte45.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte46.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte47.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte48.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte49.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte50.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte51.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte52.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte53.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte54.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte55.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte56.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte57.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte58.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte59.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte60.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte61.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte62.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte63.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte64.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte65.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte66.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte67.png",
+    "duration" : 50
+  }, {
+    "file" : "omanyte/omanyte68.png",
+    "duration" : 50
+  } ]
+}

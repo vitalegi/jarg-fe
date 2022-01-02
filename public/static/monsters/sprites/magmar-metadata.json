@@ -1,0 +1,203 @@
+{
+  "name" : "magmar",
+  "data" : {
+    "width" : 73.0,
+    "height" : 61.0
+  },
+  "frames" : [ {
+    "file" : "magmar/magmar1.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar2.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar3.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar4.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar5.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar6.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar7.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar8.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar9.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar10.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar11.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar12.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar13.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar14.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar15.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar16.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar17.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar18.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar19.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar20.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar21.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar22.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar23.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar24.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar25.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar26.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar27.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar28.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar29.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar30.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar31.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar32.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar33.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar34.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar35.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar36.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar37.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar38.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar39.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar40.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar41.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar42.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar43.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar44.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar45.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar46.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar47.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar48.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar49.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar50.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar51.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar52.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar53.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar54.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar55.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar56.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar57.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar58.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar59.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar60.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar61.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar62.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar63.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar64.png",
+    "duration" : 50
+  }, {
+    "file" : "magmar/magmar65.png",
+    "duration" : 100
+  } ]
+}

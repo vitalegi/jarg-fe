@@ -1,0 +1,849 @@
+{
+	"meta": {
+		"image": "alakazam-spritesheet.png",
+		"size": {"w":930,"h":770},
+		"scale": "1"
+	},
+	"frames": {
+		"alakazam/alakazam1.png":
+		{
+			"frame": {"x":0,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam10.png":
+		{
+			"frame": {"x":93,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam100.png":
+		{
+			"frame": {"x":0,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam101.png":
+		{
+			"frame": {"x":93,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam102.png":
+		{
+			"frame": {"x":186,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam103.png":
+		{
+			"frame": {"x":186,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam104.png":
+		{
+			"frame": {"x":0,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam105.png":
+		{
+			"frame": {"x":93,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam11.png":
+		{
+			"frame": {"x":186,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam12.png":
+		{
+			"frame": {"x":279,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam13.png":
+		{
+			"frame": {"x":279,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam14.png":
+		{
+			"frame": {"x":279,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam15.png":
+		{
+			"frame": {"x":0,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam16.png":
+		{
+			"frame": {"x":93,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam17.png":
+		{
+			"frame": {"x":186,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam18.png":
+		{
+			"frame": {"x":279,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam19.png":
+		{
+			"frame": {"x":0,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam2.png":
+		{
+			"frame": {"x":93,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam20.png":
+		{
+			"frame": {"x":186,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam21.png":
+		{
+			"frame": {"x":279,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam22.png":
+		{
+			"frame": {"x":372,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam23.png":
+		{
+			"frame": {"x":372,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam24.png":
+		{
+			"frame": {"x":372,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam25.png":
+		{
+			"frame": {"x":372,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam26.png":
+		{
+			"frame": {"x":372,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam27.png":
+		{
+			"frame": {"x":0,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam28.png":
+		{
+			"frame": {"x":93,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam29.png":
+		{
+			"frame": {"x":186,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam3.png":
+		{
+			"frame": {"x":279,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam30.png":
+		{
+			"frame": {"x":372,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam31.png":
+		{
+			"frame": {"x":465,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam32.png":
+		{
+			"frame": {"x":465,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam33.png":
+		{
+			"frame": {"x":465,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam34.png":
+		{
+			"frame": {"x":465,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam35.png":
+		{
+			"frame": {"x":465,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam36.png":
+		{
+			"frame": {"x":465,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam37.png":
+		{
+			"frame": {"x":0,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam38.png":
+		{
+			"frame": {"x":93,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam39.png":
+		{
+			"frame": {"x":186,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam4.png":
+		{
+			"frame": {"x":279,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam40.png":
+		{
+			"frame": {"x":372,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam41.png":
+		{
+			"frame": {"x":465,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam42.png":
+		{
+			"frame": {"x":558,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam43.png":
+		{
+			"frame": {"x":558,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam44.png":
+		{
+			"frame": {"x":558,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam45.png":
+		{
+			"frame": {"x":558,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam46.png":
+		{
+			"frame": {"x":558,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam47.png":
+		{
+			"frame": {"x":558,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam48.png":
+		{
+			"frame": {"x":558,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam49.png":
+		{
+			"frame": {"x":0,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam5.png":
+		{
+			"frame": {"x":93,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam50.png":
+		{
+			"frame": {"x":186,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam51.png":
+		{
+			"frame": {"x":279,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam52.png":
+		{
+			"frame": {"x":372,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam53.png":
+		{
+			"frame": {"x":465,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam54.png":
+		{
+			"frame": {"x":558,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam55.png":
+		{
+			"frame": {"x":0,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam56.png":
+		{
+			"frame": {"x":93,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam57.png":
+		{
+			"frame": {"x":186,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam58.png":
+		{
+			"frame": {"x":279,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam59.png":
+		{
+			"frame": {"x":372,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam6.png":
+		{
+			"frame": {"x":465,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam60.png":
+		{
+			"frame": {"x":558,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam61.png":
+		{
+			"frame": {"x":651,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam62.png":
+		{
+			"frame": {"x":651,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam63.png":
+		{
+			"frame": {"x":651,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam64.png":
+		{
+			"frame": {"x":651,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam65.png":
+		{
+			"frame": {"x":651,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam66.png":
+		{
+			"frame": {"x":651,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam67.png":
+		{
+			"frame": {"x":651,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam68.png":
+		{
+			"frame": {"x":651,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam69.png":
+		{
+			"frame": {"x":651,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam7.png":
+		{
+			"frame": {"x":0,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam70.png":
+		{
+			"frame": {"x":93,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam71.png":
+		{
+			"frame": {"x":186,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam72.png":
+		{
+			"frame": {"x":279,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam73.png":
+		{
+			"frame": {"x":372,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam74.png":
+		{
+			"frame": {"x":465,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam75.png":
+		{
+			"frame": {"x":558,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam76.png":
+		{
+			"frame": {"x":651,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam77.png":
+		{
+			"frame": {"x":744,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam78.png":
+		{
+			"frame": {"x":744,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam79.png":
+		{
+			"frame": {"x":744,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam8.png":
+		{
+			"frame": {"x":744,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam80.png":
+		{
+			"frame": {"x":744,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam81.png":
+		{
+			"frame": {"x":744,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam82.png":
+		{
+			"frame": {"x":744,"y":420,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam83.png":
+		{
+			"frame": {"x":744,"y":490,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam84.png":
+		{
+			"frame": {"x":744,"y":560,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam85.png":
+		{
+			"frame": {"x":744,"y":630,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam86.png":
+		{
+			"frame": {"x":0,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam87.png":
+		{
+			"frame": {"x":93,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam88.png":
+		{
+			"frame": {"x":186,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam89.png":
+		{
+			"frame": {"x":279,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam9.png":
+		{
+			"frame": {"x":372,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam90.png":
+		{
+			"frame": {"x":465,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam91.png":
+		{
+			"frame": {"x":558,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam92.png":
+		{
+			"frame": {"x":651,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam93.png":
+		{
+			"frame": {"x":744,"y":700,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam94.png":
+		{
+			"frame": {"x":837,"y":0,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam95.png":
+		{
+			"frame": {"x":837,"y":70,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam96.png":
+		{
+			"frame": {"x":837,"y":140,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam97.png":
+		{
+			"frame": {"x":837,"y":210,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam98.png":
+		{
+			"frame": {"x":837,"y":280,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		},
+		"alakazam/alakazam99.png":
+		{
+			"frame": {"x":837,"y":350,"w":93,"h":70},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":70},
+			"sourceSize": {"w":93,"h":70}
+		}
+	}
+}

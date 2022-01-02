@@ -1,0 +1,323 @@
+{
+  "name" : "magnemite",
+  "data" : {
+    "width" : 38.0,
+    "height" : 32.0
+  },
+  "frames" : [ {
+    "file" : "magnemite/magnemite1.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite2.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite3.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite4.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite5.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite6.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite7.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite8.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite9.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite10.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite11.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite12.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite13.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite14.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite15.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite16.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite17.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite18.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite19.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite20.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite21.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite22.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite23.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite24.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite25.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite26.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite27.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite28.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite29.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite30.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite31.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite32.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite33.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite34.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite35.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite36.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite37.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite38.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite39.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite40.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite41.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite42.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite43.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite44.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite45.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite46.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite47.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite48.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite49.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite50.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite51.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite52.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite53.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite54.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite55.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite56.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite57.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite58.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite59.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite60.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite61.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite62.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite63.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite64.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite65.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite66.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite67.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite68.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite69.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite70.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite71.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite72.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite73.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite74.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite75.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite76.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite77.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite78.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite79.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite80.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite81.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite82.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite83.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite84.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite85.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite86.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite87.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite88.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite89.png",
+    "duration" : 150
+  }, {
+    "file" : "magnemite/magnemite90.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite91.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite92.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite93.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite94.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite95.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite96.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite97.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite98.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite99.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite100.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite101.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite102.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite103.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite104.png",
+    "duration" : 50
+  }, {
+    "file" : "magnemite/magnemite105.png",
+    "duration" : 100
+  } ]
+}

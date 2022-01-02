@@ -1,0 +1,281 @@
+{
+  "name" : "golem",
+  "data" : {
+    "width" : 72.0,
+    "height" : 57.0
+  },
+  "frames" : [ {
+    "file" : "golem/golem1.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem2.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem3.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem4.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem5.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem6.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem7.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem8.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem9.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem10.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem11.png",
+    "duration" : 150
+  }, {
+    "file" : "golem/golem12.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem13.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem14.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem15.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem16.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem17.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem18.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem19.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem20.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem21.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem22.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem23.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem24.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem25.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem26.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem27.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem28.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem29.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem30.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem31.png",
+    "duration" : 100
+  }, {
+    "file" : "golem/golem32.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem33.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem34.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem35.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem36.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem37.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem38.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem39.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem40.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem41.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem42.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem43.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem44.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem45.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem46.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem47.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem48.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem49.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem50.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem51.png",
+    "duration" : 100
+  }, {
+    "file" : "golem/golem52.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem53.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem54.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem55.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem56.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem57.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem58.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem59.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem60.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem61.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem62.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem63.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem64.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem65.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem66.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem67.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem68.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem69.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem70.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem71.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem72.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem73.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem74.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem75.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem76.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem77.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem78.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem79.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem80.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem81.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem82.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem83.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem84.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem85.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem86.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem87.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem88.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem89.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem90.png",
+    "duration" : 50
+  }, {
+    "file" : "golem/golem91.png",
+    "duration" : 100
+  } ]
+}

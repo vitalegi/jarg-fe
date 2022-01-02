@@ -1,0 +1,305 @@
+{
+  "name" : "bulbasaur",
+  "data" : {
+    "width" : 37.0,
+    "height" : 38.0
+  },
+  "frames" : [ {
+    "file" : "bulbasaur/bulbasaur1.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur2.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur3.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur4.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur5.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur6.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur7.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur8.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur9.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur10.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur11.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur12.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur13.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur14.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur15.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur16.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur17.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur18.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur19.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur20.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur21.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur22.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur23.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur24.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur25.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur26.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur27.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur28.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur29.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur30.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur31.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur32.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur33.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur34.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur35.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur36.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur37.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur38.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur39.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur40.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur41.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur42.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur43.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur44.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur45.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur46.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur47.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur48.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur49.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur50.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur51.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur52.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur53.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur54.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur55.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur56.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur57.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur58.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur59.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur60.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur61.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur62.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur63.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur64.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur65.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur66.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur67.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur68.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur69.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur70.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur71.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur72.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur73.png",
+    "duration" : 150
+  }, {
+    "file" : "bulbasaur/bulbasaur74.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur75.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur76.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur77.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur78.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur79.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur80.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur81.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur82.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur83.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur84.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur85.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur86.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur87.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur88.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur89.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur90.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur91.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur92.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur93.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur94.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur95.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur96.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur97.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur98.png",
+    "duration" : 50
+  }, {
+    "file" : "bulbasaur/bulbasaur99.png",
+    "duration" : 100
+  } ]
+}

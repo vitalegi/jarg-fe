@@ -1,0 +1,347 @@
+{
+  "name" : "slowbro",
+  "data" : {
+    "width" : 63.0,
+    "height" : 60.0
+  },
+  "frames" : [ {
+    "file" : "slowbro/slowbro1.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro2.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro3.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro4.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro5.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro6.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro7.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro8.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro9.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro10.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro11.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro12.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro13.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro14.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro15.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro16.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro17.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro18.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro19.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro20.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro21.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro22.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro23.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro24.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro25.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro26.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro27.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro28.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro29.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro30.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro31.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro32.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro33.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro34.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro35.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro36.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro37.png",
+    "duration" : 250
+  }, {
+    "file" : "slowbro/slowbro38.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro39.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro40.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro41.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro42.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro43.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro44.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro45.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro46.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro47.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro48.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro49.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro50.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro51.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro52.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro53.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro54.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro55.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro56.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro57.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro58.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro59.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro60.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro61.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro62.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro63.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro64.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro65.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro66.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro67.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro68.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro69.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro70.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro71.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro72.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro73.png",
+    "duration" : 200
+  }, {
+    "file" : "slowbro/slowbro74.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro75.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro76.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro77.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro78.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro79.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro80.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro81.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro82.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro83.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro84.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro85.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro86.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro87.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro88.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro89.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro90.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro91.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro92.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro93.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro94.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro95.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro96.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro97.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro98.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro99.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro100.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro101.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro102.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro103.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro104.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro105.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro106.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro107.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro108.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro109.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro110.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro111.png",
+    "duration" : 100
+  }, {
+    "file" : "slowbro/slowbro112.png",
+    "duration" : 50
+  }, {
+    "file" : "slowbro/slowbro113.png",
+    "duration" : 100
+  } ]
+}

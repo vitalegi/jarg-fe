@@ -1,0 +1,155 @@
+{
+  "name" : "seel",
+  "data" : {
+    "width" : 62.0,
+    "height" : 47.0
+  },
+  "frames" : [ {
+    "file" : "seel/seel1.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel2.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel3.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel4.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel5.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel6.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel7.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel8.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel9.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel10.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel11.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel12.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel13.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel14.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel15.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel16.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel17.png",
+    "duration" : 150
+  }, {
+    "file" : "seel/seel18.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel19.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel20.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel21.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel22.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel23.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel24.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel25.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel26.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel27.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel28.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel29.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel30.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel31.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel32.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel33.png",
+    "duration" : 150
+  }, {
+    "file" : "seel/seel34.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel35.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel36.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel37.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel38.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel39.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel40.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel41.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel42.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel43.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel44.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel45.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel46.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel47.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel48.png",
+    "duration" : 50
+  }, {
+    "file" : "seel/seel49.png",
+    "duration" : 100
+  } ]
+}

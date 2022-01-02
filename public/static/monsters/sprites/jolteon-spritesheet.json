@@ -1,0 +1,801 @@
+{
+	"meta": {
+		"image": "jolteon-spritesheet.png",
+		"size": {"w":528,"h":441},
+		"scale": "1"
+	},
+	"frames": {
+		"jolteon/jolteon1.png":
+		{
+			"frame": {"x":0,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon10.png":
+		{
+			"frame": {"x":48,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon11.png":
+		{
+			"frame": {"x":96,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon12.png":
+		{
+			"frame": {"x":0,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon13.png":
+		{
+			"frame": {"x":48,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon14.png":
+		{
+			"frame": {"x":96,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon15.png":
+		{
+			"frame": {"x":144,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon16.png":
+		{
+			"frame": {"x":144,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon17.png":
+		{
+			"frame": {"x":0,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon18.png":
+		{
+			"frame": {"x":48,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon19.png":
+		{
+			"frame": {"x":96,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon2.png":
+		{
+			"frame": {"x":144,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon20.png":
+		{
+			"frame": {"x":192,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon21.png":
+		{
+			"frame": {"x":192,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon22.png":
+		{
+			"frame": {"x":192,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon23.png":
+		{
+			"frame": {"x":0,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon24.png":
+		{
+			"frame": {"x":48,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon25.png":
+		{
+			"frame": {"x":96,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon26.png":
+		{
+			"frame": {"x":144,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon27.png":
+		{
+			"frame": {"x":192,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon28.png":
+		{
+			"frame": {"x":240,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon29.png":
+		{
+			"frame": {"x":240,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon3.png":
+		{
+			"frame": {"x":240,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon30.png":
+		{
+			"frame": {"x":240,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon31.png":
+		{
+			"frame": {"x":0,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon32.png":
+		{
+			"frame": {"x":48,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon33.png":
+		{
+			"frame": {"x":96,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon34.png":
+		{
+			"frame": {"x":144,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon35.png":
+		{
+			"frame": {"x":192,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon36.png":
+		{
+			"frame": {"x":240,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon37.png":
+		{
+			"frame": {"x":288,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon38.png":
+		{
+			"frame": {"x":288,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon39.png":
+		{
+			"frame": {"x":288,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon4.png":
+		{
+			"frame": {"x":288,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon40.png":
+		{
+			"frame": {"x":288,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon41.png":
+		{
+			"frame": {"x":0,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon42.png":
+		{
+			"frame": {"x":48,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon43.png":
+		{
+			"frame": {"x":96,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon44.png":
+		{
+			"frame": {"x":144,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon45.png":
+		{
+			"frame": {"x":192,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon46.png":
+		{
+			"frame": {"x":240,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon47.png":
+		{
+			"frame": {"x":288,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon48.png":
+		{
+			"frame": {"x":336,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon49.png":
+		{
+			"frame": {"x":336,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon5.png":
+		{
+			"frame": {"x":336,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon50.png":
+		{
+			"frame": {"x":336,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon51.png":
+		{
+			"frame": {"x":336,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon52.png":
+		{
+			"frame": {"x":336,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon53.png":
+		{
+			"frame": {"x":0,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon54.png":
+		{
+			"frame": {"x":48,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon55.png":
+		{
+			"frame": {"x":96,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon56.png":
+		{
+			"frame": {"x":144,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon57.png":
+		{
+			"frame": {"x":192,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon58.png":
+		{
+			"frame": {"x":240,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon59.png":
+		{
+			"frame": {"x":288,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon6.png":
+		{
+			"frame": {"x":336,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon60.png":
+		{
+			"frame": {"x":384,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon61.png":
+		{
+			"frame": {"x":384,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon62.png":
+		{
+			"frame": {"x":384,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon63.png":
+		{
+			"frame": {"x":384,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon64.png":
+		{
+			"frame": {"x":384,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon65.png":
+		{
+			"frame": {"x":384,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon66.png":
+		{
+			"frame": {"x":384,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon67.png":
+		{
+			"frame": {"x":0,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon68.png":
+		{
+			"frame": {"x":48,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon69.png":
+		{
+			"frame": {"x":96,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon7.png":
+		{
+			"frame": {"x":144,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon70.png":
+		{
+			"frame": {"x":192,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon71.png":
+		{
+			"frame": {"x":240,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon72.png":
+		{
+			"frame": {"x":288,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon73.png":
+		{
+			"frame": {"x":336,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon74.png":
+		{
+			"frame": {"x":384,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon75.png":
+		{
+			"frame": {"x":432,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon76.png":
+		{
+			"frame": {"x":432,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon77.png":
+		{
+			"frame": {"x":432,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon78.png":
+		{
+			"frame": {"x":432,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon79.png":
+		{
+			"frame": {"x":432,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon8.png":
+		{
+			"frame": {"x":432,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon80.png":
+		{
+			"frame": {"x":432,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon81.png":
+		{
+			"frame": {"x":432,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon82.png":
+		{
+			"frame": {"x":0,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon83.png":
+		{
+			"frame": {"x":48,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon84.png":
+		{
+			"frame": {"x":96,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon85.png":
+		{
+			"frame": {"x":144,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon86.png":
+		{
+			"frame": {"x":192,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon87.png":
+		{
+			"frame": {"x":240,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon88.png":
+		{
+			"frame": {"x":288,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon89.png":
+		{
+			"frame": {"x":336,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon9.png":
+		{
+			"frame": {"x":384,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon90.png":
+		{
+			"frame": {"x":432,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon91.png":
+		{
+			"frame": {"x":480,"y":0,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon92.png":
+		{
+			"frame": {"x":480,"y":49,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon93.png":
+		{
+			"frame": {"x":480,"y":98,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon94.png":
+		{
+			"frame": {"x":480,"y":147,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon95.png":
+		{
+			"frame": {"x":480,"y":196,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon96.png":
+		{
+			"frame": {"x":480,"y":245,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon97.png":
+		{
+			"frame": {"x":480,"y":294,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon98.png":
+		{
+			"frame": {"x":480,"y":343,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		},
+		"jolteon/jolteon99.png":
+		{
+			"frame": {"x":480,"y":392,"w":48,"h":49},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":48,"h":49},
+			"sourceSize": {"w":48,"h":49}
+		}
+	}
+}

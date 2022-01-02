@@ -1,0 +1,407 @@
+{
+  "name" : "clefairy",
+  "data" : {
+    "width" : 47.0,
+    "height" : 42.0
+  },
+  "frames" : [ {
+    "file" : "clefairy/clefairy1.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy2.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy3.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy4.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy5.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy6.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy7.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy8.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy9.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy10.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy11.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy12.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy13.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy14.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy15.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy16.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy17.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy18.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy19.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy20.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy21.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy22.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy23.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy24.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy25.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy26.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy27.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy28.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy29.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy30.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy31.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy32.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy33.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy34.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy35.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy36.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy37.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy38.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy39.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy40.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy41.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy42.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy43.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy44.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy45.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy46.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy47.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy48.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy49.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy50.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy51.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy52.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy53.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy54.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy55.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy56.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy57.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy58.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy59.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy60.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy61.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy62.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy63.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy64.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy65.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy66.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy67.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy68.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy69.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy70.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy71.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy72.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy73.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy74.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy75.png",
+    "duration" : 100
+  }, {
+    "file" : "clefairy/clefairy76.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy77.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy78.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy79.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy80.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy81.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy82.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy83.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy84.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy85.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy86.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy87.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy88.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy89.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy90.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy91.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy92.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy93.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy94.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy95.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy96.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy97.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy98.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy99.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy100.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy101.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy102.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy103.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy104.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy105.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy106.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy107.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy108.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy109.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy110.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy111.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy112.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy113.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy114.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy115.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy116.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy117.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy118.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy119.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy120.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy121.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy122.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy123.png",
+    "duration" : 100
+  }, {
+    "file" : "clefairy/clefairy124.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy125.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy126.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy127.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy128.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy129.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy130.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy131.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy132.png",
+    "duration" : 50
+  }, {
+    "file" : "clefairy/clefairy133.png",
+    "duration" : 50
+  } ]
+}

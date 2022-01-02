@@ -1,0 +1,302 @@
+{
+  "name" : "machoke",
+  "data" : {
+    "width" : 60.0,
+    "height" : 71.0
+  },
+  "frames" : [ {
+    "file" : "machoke/machoke1.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke2.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke3.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke4.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke5.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke6.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke7.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke8.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke9.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke10.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke11.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke12.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke13.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke14.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke15.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke16.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke17.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke18.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke19.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke20.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke21.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke22.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke23.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke24.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke25.png",
+    "duration" : 450
+  }, {
+    "file" : "machoke/machoke26.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke27.png",
+    "duration" : 100
+  }, {
+    "file" : "machoke/machoke28.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke29.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke30.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke31.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke32.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke33.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke34.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke35.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke36.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke37.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke38.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke39.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke40.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke41.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke42.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke43.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke44.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke45.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke46.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke47.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke48.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke49.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke50.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke51.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke52.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke53.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke54.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke55.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke56.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke57.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke58.png",
+    "duration" : 450
+  }, {
+    "file" : "machoke/machoke59.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke60.png",
+    "duration" : 100
+  }, {
+    "file" : "machoke/machoke61.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke62.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke63.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke64.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke65.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke66.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke67.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke68.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke69.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke70.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke71.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke72.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke73.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke74.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke75.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke76.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke77.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke78.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke79.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke80.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke81.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke82.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke83.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke84.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke85.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke86.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke87.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke88.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke89.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke90.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke91.png",
+    "duration" : 450
+  }, {
+    "file" : "machoke/machoke92.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke93.png",
+    "duration" : 100
+  }, {
+    "file" : "machoke/machoke94.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke95.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke96.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke97.png",
+    "duration" : 50
+  }, {
+    "file" : "machoke/machoke98.png",
+    "duration" : 100
+  } ]
+}

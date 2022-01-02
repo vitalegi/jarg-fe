@@ -1,0 +1,161 @@
+{
+  "name" : "articuno",
+  "data" : {
+    "width" : 72.0,
+    "height" : 81.0
+  },
+  "frames" : [ {
+    "file" : "articuno/articuno1.png",
+    "duration" : 150
+  }, {
+    "file" : "articuno/articuno2.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno3.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno4.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno5.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno6.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno7.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno8.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno9.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno10.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno11.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno12.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno13.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno14.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno15.png",
+    "duration" : 450
+  }, {
+    "file" : "articuno/articuno16.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno17.png",
+    "duration" : 100
+  }, {
+    "file" : "articuno/articuno18.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno19.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno20.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno21.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno22.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno23.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno24.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno25.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno26.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno27.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno28.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno29.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno30.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno31.png",
+    "duration" : 950
+  }, {
+    "file" : "articuno/articuno32.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno33.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno34.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno35.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno36.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno37.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno38.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno39.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno40.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno41.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno42.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno43.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno44.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno45.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno46.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno47.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno48.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno49.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno50.png",
+    "duration" : 50
+  }, {
+    "file" : "articuno/articuno51.png",
+    "duration" : 100
+  } ]
+}

@@ -1,0 +1,833 @@
+{
+	"meta": {
+		"image": "geodude-spritesheet.png",
+		"size": {"w":549,"h":540},
+		"scale": "1"
+	},
+	"frames": {
+		"geodude/geodude1.png":
+		{
+			"frame": {"x":0,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude10.png":
+		{
+			"frame": {"x":61,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude100.png":
+		{
+			"frame": {"x":0,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude101.png":
+		{
+			"frame": {"x":61,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude102.png":
+		{
+			"frame": {"x":122,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude103.png":
+		{
+			"frame": {"x":122,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude11.png":
+		{
+			"frame": {"x":0,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude12.png":
+		{
+			"frame": {"x":61,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude13.png":
+		{
+			"frame": {"x":122,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude14.png":
+		{
+			"frame": {"x":0,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude15.png":
+		{
+			"frame": {"x":61,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude16.png":
+		{
+			"frame": {"x":122,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude17.png":
+		{
+			"frame": {"x":183,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude18.png":
+		{
+			"frame": {"x":183,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude19.png":
+		{
+			"frame": {"x":183,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude2.png":
+		{
+			"frame": {"x":183,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude20.png":
+		{
+			"frame": {"x":0,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude21.png":
+		{
+			"frame": {"x":61,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude22.png":
+		{
+			"frame": {"x":122,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude23.png":
+		{
+			"frame": {"x":183,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude24.png":
+		{
+			"frame": {"x":244,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude25.png":
+		{
+			"frame": {"x":244,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude26.png":
+		{
+			"frame": {"x":244,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude27.png":
+		{
+			"frame": {"x":244,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude28.png":
+		{
+			"frame": {"x":244,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude29.png":
+		{
+			"frame": {"x":0,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude3.png":
+		{
+			"frame": {"x":61,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude30.png":
+		{
+			"frame": {"x":122,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude31.png":
+		{
+			"frame": {"x":183,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude32.png":
+		{
+			"frame": {"x":244,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude33.png":
+		{
+			"frame": {"x":305,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude34.png":
+		{
+			"frame": {"x":305,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude35.png":
+		{
+			"frame": {"x":305,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude36.png":
+		{
+			"frame": {"x":305,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude37.png":
+		{
+			"frame": {"x":305,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude38.png":
+		{
+			"frame": {"x":305,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude39.png":
+		{
+			"frame": {"x":0,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude4.png":
+		{
+			"frame": {"x":61,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude40.png":
+		{
+			"frame": {"x":122,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude41.png":
+		{
+			"frame": {"x":183,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude42.png":
+		{
+			"frame": {"x":244,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude43.png":
+		{
+			"frame": {"x":305,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude44.png":
+		{
+			"frame": {"x":0,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude45.png":
+		{
+			"frame": {"x":61,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude46.png":
+		{
+			"frame": {"x":122,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude47.png":
+		{
+			"frame": {"x":183,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude48.png":
+		{
+			"frame": {"x":244,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude49.png":
+		{
+			"frame": {"x":305,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude5.png":
+		{
+			"frame": {"x":366,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude50.png":
+		{
+			"frame": {"x":366,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude51.png":
+		{
+			"frame": {"x":366,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude52.png":
+		{
+			"frame": {"x":366,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude53.png":
+		{
+			"frame": {"x":366,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude54.png":
+		{
+			"frame": {"x":366,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude55.png":
+		{
+			"frame": {"x":366,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude56.png":
+		{
+			"frame": {"x":366,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude57.png":
+		{
+			"frame": {"x":0,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude58.png":
+		{
+			"frame": {"x":61,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude59.png":
+		{
+			"frame": {"x":122,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude6.png":
+		{
+			"frame": {"x":183,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude60.png":
+		{
+			"frame": {"x":244,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude61.png":
+		{
+			"frame": {"x":305,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude62.png":
+		{
+			"frame": {"x":366,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude63.png":
+		{
+			"frame": {"x":427,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude64.png":
+		{
+			"frame": {"x":427,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude65.png":
+		{
+			"frame": {"x":427,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude66.png":
+		{
+			"frame": {"x":427,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude67.png":
+		{
+			"frame": {"x":427,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude68.png":
+		{
+			"frame": {"x":427,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude69.png":
+		{
+			"frame": {"x":427,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude7.png":
+		{
+			"frame": {"x":427,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude70.png":
+		{
+			"frame": {"x":427,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude71.png":
+		{
+			"frame": {"x":0,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude72.png":
+		{
+			"frame": {"x":61,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude73.png":
+		{
+			"frame": {"x":122,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude74.png":
+		{
+			"frame": {"x":183,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude75.png":
+		{
+			"frame": {"x":244,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude76.png":
+		{
+			"frame": {"x":305,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude77.png":
+		{
+			"frame": {"x":366,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude78.png":
+		{
+			"frame": {"x":427,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude79.png":
+		{
+			"frame": {"x":488,"y":0,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude8.png":
+		{
+			"frame": {"x":488,"y":45,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude80.png":
+		{
+			"frame": {"x":488,"y":90,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude81.png":
+		{
+			"frame": {"x":488,"y":135,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude82.png":
+		{
+			"frame": {"x":488,"y":180,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude83.png":
+		{
+			"frame": {"x":488,"y":225,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude84.png":
+		{
+			"frame": {"x":488,"y":270,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude85.png":
+		{
+			"frame": {"x":488,"y":315,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude86.png":
+		{
+			"frame": {"x":488,"y":360,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude87.png":
+		{
+			"frame": {"x":488,"y":405,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude88.png":
+		{
+			"frame": {"x":0,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude89.png":
+		{
+			"frame": {"x":61,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude9.png":
+		{
+			"frame": {"x":122,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude90.png":
+		{
+			"frame": {"x":183,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude91.png":
+		{
+			"frame": {"x":244,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude92.png":
+		{
+			"frame": {"x":305,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude93.png":
+		{
+			"frame": {"x":366,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude94.png":
+		{
+			"frame": {"x":427,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude95.png":
+		{
+			"frame": {"x":488,"y":450,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude96.png":
+		{
+			"frame": {"x":0,"y":495,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude97.png":
+		{
+			"frame": {"x":61,"y":495,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude98.png":
+		{
+			"frame": {"x":122,"y":495,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		},
+		"geodude/geodude99.png":
+		{
+			"frame": {"x":183,"y":495,"w":61,"h":45},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":61,"h":45},
+			"sourceSize": {"w":61,"h":45}
+		}
+	}
+}

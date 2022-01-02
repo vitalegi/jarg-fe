@@ -1,0 +1,56 @@
+{
+  "name" : "golbat",
+  "data" : {
+    "width" : 111.0,
+    "height" : 83.0
+  },
+  "frames" : [ {
+    "file" : "golbat/golbat1.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat2.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat3.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat4.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat5.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat6.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat7.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat8.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat9.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat10.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat11.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat12.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat13.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat14.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat15.png",
+    "duration" : 50
+  }, {
+    "file" : "golbat/golbat16.png",
+    "duration" : 50
+  } ]
+}

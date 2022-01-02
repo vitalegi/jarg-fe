@@ -1,0 +1,275 @@
+{
+  "name" : "poliwrath",
+  "data" : {
+    "width" : 81.0,
+    "height" : 58.0
+  },
+  "frames" : [ {
+    "file" : "poliwrath/poliwrath1.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath2.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath3.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath4.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath5.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath6.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath7.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath8.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath9.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath10.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath11.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath12.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath13.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath14.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath15.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath16.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath17.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath18.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath19.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath20.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath21.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath22.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath23.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath24.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath25.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath26.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath27.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath28.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath29.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath30.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath31.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath32.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath33.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath34.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath35.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath36.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath37.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath38.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath39.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath40.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath41.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath42.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath43.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath44.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath45.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath46.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath47.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath48.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath49.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath50.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath51.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath52.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath53.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath54.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath55.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath56.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath57.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath58.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath59.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath60.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath61.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath62.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath63.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath64.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath65.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath66.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath67.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath68.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath69.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath70.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath71.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath72.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath73.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath74.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath75.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath76.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath77.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath78.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath79.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath80.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath81.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath82.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath83.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath84.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath85.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath86.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath87.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath88.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwrath/poliwrath89.png",
+    "duration" : 100
+  } ]
+}

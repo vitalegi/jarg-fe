@@ -1,0 +1,248 @@
+{
+  "name" : "tentacruel",
+  "data" : {
+    "width" : 84.0,
+    "height" : 84.0
+  },
+  "frames" : [ {
+    "file" : "tentacruel/tentacruel1.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel2.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel3.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel4.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel5.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel6.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel7.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel8.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel9.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel10.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel11.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel12.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel13.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel14.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel15.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel16.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel17.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel18.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel19.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel20.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel21.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel22.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel23.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel24.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel25.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel26.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel27.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel28.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel29.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel30.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel31.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel32.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel33.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel34.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel35.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel36.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel37.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel38.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel39.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel40.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel41.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel42.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel43.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel44.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel45.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel46.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel47.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel48.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel49.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel50.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel51.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel52.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel53.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel54.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel55.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel56.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel57.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel58.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel59.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel60.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel61.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel62.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel63.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel64.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel65.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel66.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel67.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel68.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel69.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel70.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel71.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel72.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel73.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel74.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel75.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel76.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel77.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel78.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel79.png",
+    "duration" : 50
+  }, {
+    "file" : "tentacruel/tentacruel80.png",
+    "duration" : 50
+  } ]
+}

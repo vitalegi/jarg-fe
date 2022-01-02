@@ -1,0 +1,155 @@
+{
+  "name" : "electrode",
+  "data" : {
+    "width" : 49.0,
+    "height" : 52.0
+  },
+  "frames" : [ {
+    "file" : "electrode/electrode1.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode2.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode3.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode4.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode5.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode6.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode7.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode8.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode9.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode10.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode11.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode12.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode13.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode14.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode15.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode16.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode17.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode18.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode19.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode20.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode21.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode22.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode23.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode24.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode25.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode26.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode27.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode28.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode29.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode30.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode31.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode32.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode33.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode34.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode35.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode36.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode37.png",
+    "duration" : 500
+  }, {
+    "file" : "electrode/electrode38.png",
+    "duration" : 400
+  }, {
+    "file" : "electrode/electrode39.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode40.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode41.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode42.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode43.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode44.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode45.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode46.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode47.png",
+    "duration" : 50
+  }, {
+    "file" : "electrode/electrode48.png",
+    "duration" : 100
+  }, {
+    "file" : "electrode/electrode49.png",
+    "duration" : 700
+  } ]
+}

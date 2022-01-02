@@ -1,0 +1,705 @@
+{
+	"meta": {
+		"image": "gyarados-spritesheet.png",
+		"size": {"w":918,"h":840},
+		"scale": "1"
+	},
+	"frames": {
+		"gyarados/gyarados1.png":
+		{
+			"frame": {"x":0,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados10.png":
+		{
+			"frame": {"x":102,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados11.png":
+		{
+			"frame": {"x":0,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados12.png":
+		{
+			"frame": {"x":102,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados13.png":
+		{
+			"frame": {"x":204,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados14.png":
+		{
+			"frame": {"x":204,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados15.png":
+		{
+			"frame": {"x":0,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados16.png":
+		{
+			"frame": {"x":102,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados17.png":
+		{
+			"frame": {"x":204,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados18.png":
+		{
+			"frame": {"x":306,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados19.png":
+		{
+			"frame": {"x":306,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados2.png":
+		{
+			"frame": {"x":306,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados20.png":
+		{
+			"frame": {"x":0,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados21.png":
+		{
+			"frame": {"x":102,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados22.png":
+		{
+			"frame": {"x":204,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados23.png":
+		{
+			"frame": {"x":306,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados24.png":
+		{
+			"frame": {"x":408,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados25.png":
+		{
+			"frame": {"x":408,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados26.png":
+		{
+			"frame": {"x":408,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados27.png":
+		{
+			"frame": {"x":408,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados28.png":
+		{
+			"frame": {"x":0,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados29.png":
+		{
+			"frame": {"x":102,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados3.png":
+		{
+			"frame": {"x":204,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados30.png":
+		{
+			"frame": {"x":306,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados31.png":
+		{
+			"frame": {"x":408,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados32.png":
+		{
+			"frame": {"x":0,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados33.png":
+		{
+			"frame": {"x":102,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados34.png":
+		{
+			"frame": {"x":204,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados35.png":
+		{
+			"frame": {"x":306,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados36.png":
+		{
+			"frame": {"x":408,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados37.png":
+		{
+			"frame": {"x":510,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados38.png":
+		{
+			"frame": {"x":510,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados39.png":
+		{
+			"frame": {"x":510,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados4.png":
+		{
+			"frame": {"x":510,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados40.png":
+		{
+			"frame": {"x":510,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados41.png":
+		{
+			"frame": {"x":510,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados42.png":
+		{
+			"frame": {"x":0,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados43.png":
+		{
+			"frame": {"x":102,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados44.png":
+		{
+			"frame": {"x":204,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados45.png":
+		{
+			"frame": {"x":306,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados46.png":
+		{
+			"frame": {"x":408,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados47.png":
+		{
+			"frame": {"x":510,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados48.png":
+		{
+			"frame": {"x":612,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados49.png":
+		{
+			"frame": {"x":612,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados5.png":
+		{
+			"frame": {"x":612,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados50.png":
+		{
+			"frame": {"x":612,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados51.png":
+		{
+			"frame": {"x":612,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados52.png":
+		{
+			"frame": {"x":612,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados53.png":
+		{
+			"frame": {"x":612,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados54.png":
+		{
+			"frame": {"x":0,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados55.png":
+		{
+			"frame": {"x":102,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados56.png":
+		{
+			"frame": {"x":204,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados57.png":
+		{
+			"frame": {"x":306,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados58.png":
+		{
+			"frame": {"x":408,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados59.png":
+		{
+			"frame": {"x":510,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados6.png":
+		{
+			"frame": {"x":612,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados60.png":
+		{
+			"frame": {"x":714,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados61.png":
+		{
+			"frame": {"x":714,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados62.png":
+		{
+			"frame": {"x":714,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados63.png":
+		{
+			"frame": {"x":714,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados64.png":
+		{
+			"frame": {"x":714,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados65.png":
+		{
+			"frame": {"x":714,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados66.png":
+		{
+			"frame": {"x":714,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados67.png":
+		{
+			"frame": {"x":714,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados68.png":
+		{
+			"frame": {"x":0,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados69.png":
+		{
+			"frame": {"x":102,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados7.png":
+		{
+			"frame": {"x":204,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados70.png":
+		{
+			"frame": {"x":306,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados71.png":
+		{
+			"frame": {"x":408,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados72.png":
+		{
+			"frame": {"x":510,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados73.png":
+		{
+			"frame": {"x":612,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados74.png":
+		{
+			"frame": {"x":714,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados75.png":
+		{
+			"frame": {"x":816,"y":0,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados76.png":
+		{
+			"frame": {"x":816,"y":84,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados77.png":
+		{
+			"frame": {"x":816,"y":168,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados78.png":
+		{
+			"frame": {"x":816,"y":252,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados79.png":
+		{
+			"frame": {"x":816,"y":336,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados8.png":
+		{
+			"frame": {"x":816,"y":420,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados80.png":
+		{
+			"frame": {"x":816,"y":504,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados81.png":
+		{
+			"frame": {"x":816,"y":588,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados82.png":
+		{
+			"frame": {"x":816,"y":672,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados83.png":
+		{
+			"frame": {"x":0,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados84.png":
+		{
+			"frame": {"x":102,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados85.png":
+		{
+			"frame": {"x":204,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados86.png":
+		{
+			"frame": {"x":306,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados87.png":
+		{
+			"frame": {"x":408,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		},
+		"gyarados/gyarados9.png":
+		{
+			"frame": {"x":510,"y":756,"w":102,"h":84},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":84},
+			"sourceSize": {"w":102,"h":84}
+		}
+	}
+}

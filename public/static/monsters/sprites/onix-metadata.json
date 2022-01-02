@@ -1,0 +1,305 @@
+{
+  "name" : "onix",
+  "data" : {
+    "width" : 74.0,
+    "height" : 74.0
+  },
+  "frames" : [ {
+    "file" : "onix/onix1.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix2.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix3.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix4.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix5.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix6.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix7.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix8.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix9.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix10.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix11.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix12.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix13.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix14.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix15.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix16.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix17.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix18.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix19.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix20.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix21.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix22.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix23.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix24.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix25.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix26.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix27.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix28.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix29.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix30.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix31.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix32.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix33.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix34.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix35.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix36.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix37.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix38.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix39.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix40.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix41.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix42.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix43.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix44.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix45.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix46.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix47.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix48.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix49.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix50.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix51.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix52.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix53.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix54.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix55.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix56.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix57.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix58.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix59.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix60.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix61.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix62.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix63.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix64.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix65.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix66.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix67.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix68.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix69.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix70.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix71.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix72.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix73.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix74.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix75.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix76.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix77.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix78.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix79.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix80.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix81.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix82.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix83.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix84.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix85.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix86.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix87.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix88.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix89.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix90.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix91.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix92.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix93.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix94.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix95.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix96.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix97.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix98.png",
+    "duration" : 50
+  }, {
+    "file" : "onix/onix99.png",
+    "duration" : 100
+  } ]
+}

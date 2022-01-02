@@ -1,0 +1,293 @@
+{
+  "name" : "gloom",
+  "data" : {
+    "width" : 51.0,
+    "height" : 45.0
+  },
+  "frames" : [ {
+    "file" : "gloom/gloom1.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom2.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom3.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom4.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom5.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom6.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom7.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom8.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom9.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom10.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom11.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom12.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom13.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom14.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom15.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom16.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom17.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom18.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom19.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom20.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom21.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom22.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom23.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom24.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom25.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom26.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom27.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom28.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom29.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom30.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom31.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom32.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom33.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom34.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom35.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom36.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom37.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom38.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom39.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom40.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom41.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom42.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom43.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom44.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom45.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom46.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom47.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom48.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom49.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom50.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom51.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom52.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom53.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom54.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom55.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom56.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom57.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom58.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom59.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom60.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom61.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom62.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom63.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom64.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom65.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom66.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom67.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom68.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom69.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom70.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom71.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom72.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom73.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom74.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom75.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom76.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom77.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom78.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom79.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom80.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom81.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom82.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom83.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom84.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom85.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom86.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom87.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom88.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom89.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom90.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom91.png",
+    "duration" : 100
+  }, {
+    "file" : "gloom/gloom92.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom93.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom94.png",
+    "duration" : 50
+  }, {
+    "file" : "gloom/gloom95.png",
+    "duration" : 100
+  } ]
+}

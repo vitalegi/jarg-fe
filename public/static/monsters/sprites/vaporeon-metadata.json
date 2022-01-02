@@ -1,0 +1,311 @@
+{
+  "name" : "vaporeon",
+  "data" : {
+    "width" : 50.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "vaporeon/vaporeon1.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon2.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon3.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon4.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon5.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon6.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon7.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon8.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon9.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon10.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon11.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon12.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon13.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon14.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon15.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon16.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon17.png",
+    "duration" : 250
+  }, {
+    "file" : "vaporeon/vaporeon18.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon19.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon20.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon21.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon22.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon23.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon24.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon25.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon26.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon27.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon28.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon29.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon30.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon31.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon32.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon33.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon34.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon35.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon36.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon37.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon38.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon39.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon40.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon41.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon42.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon43.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon44.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon45.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon46.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon47.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon48.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon49.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon50.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon51.png",
+    "duration" : 250
+  }, {
+    "file" : "vaporeon/vaporeon52.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon53.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon54.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon55.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon56.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon57.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon58.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon59.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon60.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon61.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon62.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon63.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon64.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon65.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon66.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon67.png",
+    "duration" : 250
+  }, {
+    "file" : "vaporeon/vaporeon68.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon69.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon70.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon71.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon72.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon73.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon74.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon75.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon76.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon77.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon78.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon79.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon80.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon81.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon82.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon83.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon84.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon85.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon86.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon87.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon88.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon89.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon90.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon91.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon92.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon93.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon94.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon95.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon96.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon97.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon98.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon99.png",
+    "duration" : 100
+  }, {
+    "file" : "vaporeon/vaporeon100.png",
+    "duration" : 50
+  }, {
+    "file" : "vaporeon/vaporeon101.png",
+    "duration" : 150
+  } ]
+}

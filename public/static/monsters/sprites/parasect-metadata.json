@@ -1,0 +1,221 @@
+{
+  "name" : "parasect",
+  "data" : {
+    "width" : 62.0,
+    "height" : 63.0
+  },
+  "frames" : [ {
+    "file" : "parasect/parasect1.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect2.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect3.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect4.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect5.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect6.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect7.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect8.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect9.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect10.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect11.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect12.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect13.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect14.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect15.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect16.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect17.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect18.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect19.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect20.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect21.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect22.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect23.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect24.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect25.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect26.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect27.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect28.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect29.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect30.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect31.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect32.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect33.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect34.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect35.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect36.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect37.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect38.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect39.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect40.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect41.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect42.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect43.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect44.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect45.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect46.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect47.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect48.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect49.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect50.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect51.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect52.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect53.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect54.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect55.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect56.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect57.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect58.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect59.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect60.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect61.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect62.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect63.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect64.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect65.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect66.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect67.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect68.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect69.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect70.png",
+    "duration" : 50
+  }, {
+    "file" : "parasect/parasect71.png",
+    "duration" : 100
+  } ]
+}

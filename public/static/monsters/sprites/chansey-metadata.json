@@ -1,0 +1,356 @@
+{
+  "name" : "chansey",
+  "data" : {
+    "width" : 61.0,
+    "height" : 47.0
+  },
+  "frames" : [ {
+    "file" : "chansey/chansey1.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey2.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey3.png",
+    "duration" : 100
+  }, {
+    "file" : "chansey/chansey4.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey5.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey6.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey7.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey8.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey9.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey10.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey11.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey12.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey13.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey14.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey15.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey16.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey17.png",
+    "duration" : 100
+  }, {
+    "file" : "chansey/chansey18.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey19.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey20.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey21.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey22.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey23.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey24.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey25.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey26.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey27.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey28.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey29.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey30.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey31.png",
+    "duration" : 100
+  }, {
+    "file" : "chansey/chansey32.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey33.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey34.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey35.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey36.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey37.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey38.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey39.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey40.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey41.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey42.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey43.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey44.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey45.png",
+    "duration" : 100
+  }, {
+    "file" : "chansey/chansey46.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey47.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey48.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey49.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey50.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey51.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey52.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey53.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey54.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey55.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey56.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey57.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey58.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey59.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey60.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey61.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey62.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey63.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey64.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey65.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey66.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey67.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey68.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey69.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey70.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey71.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey72.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey73.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey74.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey75.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey76.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey77.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey78.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey79.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey80.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey81.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey82.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey83.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey84.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey85.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey86.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey87.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey88.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey89.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey90.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey91.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey92.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey93.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey94.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey95.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey96.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey97.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey98.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey99.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey100.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey101.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey102.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey103.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey104.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey105.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey106.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey107.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey108.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey109.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey110.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey111.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey112.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey113.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey114.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey115.png",
+    "duration" : 50
+  }, {
+    "file" : "chansey/chansey116.png",
+    "duration" : 50
+  } ]
+}

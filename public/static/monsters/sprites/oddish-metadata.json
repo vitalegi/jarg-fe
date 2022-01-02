@@ -1,0 +1,335 @@
+{
+  "name" : "oddish",
+  "data" : {
+    "width" : 38.0,
+    "height" : 50.0
+  },
+  "frames" : [ {
+    "file" : "oddish/oddish1.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish2.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish3.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish4.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish5.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish6.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish7.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish8.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish9.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish10.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish11.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish12.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish13.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish14.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish15.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish16.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish17.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish18.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish19.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish20.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish21.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish22.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish23.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish24.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish25.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish26.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish27.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish28.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish29.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish30.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish31.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish32.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish33.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish34.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish35.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish36.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish37.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish38.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish39.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish40.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish41.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish42.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish43.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish44.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish45.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish46.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish47.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish48.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish49.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish50.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish51.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish52.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish53.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish54.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish55.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish56.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish57.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish58.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish59.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish60.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish61.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish62.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish63.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish64.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish65.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish66.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish67.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish68.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish69.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish70.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish71.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish72.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish73.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish74.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish75.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish76.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish77.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish78.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish79.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish80.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish81.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish82.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish83.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish84.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish85.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish86.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish87.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish88.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish89.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish90.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish91.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish92.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish93.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish94.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish95.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish96.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish97.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish98.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish99.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish100.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish101.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish102.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish103.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish104.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish105.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish106.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish107.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish108.png",
+    "duration" : 50
+  }, {
+    "file" : "oddish/oddish109.png",
+    "duration" : 100
+  } ]
+}

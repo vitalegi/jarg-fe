@@ -1,0 +1,167 @@
+{
+  "name" : "ninetales",
+  "data" : {
+    "width" : 76.0,
+    "height" : 73.0
+  },
+  "frames" : [ {
+    "file" : "ninetales/ninetales1.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales2.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales3.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales4.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales5.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales6.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales7.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales8.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales9.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales10.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales11.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales12.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales13.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales14.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales15.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales16.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales17.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales18.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales19.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales20.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales21.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales22.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales23.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales24.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales25.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales26.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales27.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales28.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales29.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales30.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales31.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales32.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales33.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales34.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales35.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales36.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales37.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales38.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales39.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales40.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales41.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales42.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales43.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales44.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales45.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales46.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales47.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales48.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales49.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales50.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales51.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales52.png",
+    "duration" : 50
+  }, {
+    "file" : "ninetales/ninetales53.png",
+    "duration" : 100
+  } ]
+}

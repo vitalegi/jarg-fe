@@ -1,0 +1,272 @@
+{
+  "name" : "gengar",
+  "data" : {
+    "width" : 79.0,
+    "height" : 65.0
+  },
+  "frames" : [ {
+    "file" : "gengar/gengar1.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar2.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar3.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar4.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar5.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar6.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar7.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar8.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar9.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar10.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar11.png",
+    "duration" : 150
+  }, {
+    "file" : "gengar/gengar12.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar13.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar14.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar15.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar16.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar17.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar18.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar19.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar20.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar21.png",
+    "duration" : 100
+  }, {
+    "file" : "gengar/gengar22.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar23.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar24.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar25.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar26.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar27.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar28.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar29.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar30.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar31.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar32.png",
+    "duration" : 100
+  }, {
+    "file" : "gengar/gengar33.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar34.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar35.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar36.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar37.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar38.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar39.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar40.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar41.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar42.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar43.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar44.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar45.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar46.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar47.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar48.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar49.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar50.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar51.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar52.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar53.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar54.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar55.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar56.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar57.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar58.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar59.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar60.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar61.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar62.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar63.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar64.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar65.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar66.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar67.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar68.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar69.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar70.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar71.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar72.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar73.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar74.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar75.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar76.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar77.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar78.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar79.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar80.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar81.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar82.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar83.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar84.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar85.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar86.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar87.png",
+    "duration" : 50
+  }, {
+    "file" : "gengar/gengar88.png",
+    "duration" : 50
+  } ]
+}

@@ -1,0 +1,197 @@
+{
+  "name" : "tangela",
+  "data" : {
+    "width" : 49.0,
+    "height" : 42.0
+  },
+  "frames" : [ {
+    "file" : "tangela/tangela1.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela2.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela3.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela4.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela5.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela6.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela7.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela8.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela9.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela10.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela11.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela12.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela13.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela14.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela15.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela16.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela17.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela18.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela19.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela20.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela21.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela22.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela23.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela24.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela25.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela26.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela27.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela28.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela29.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela30.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela31.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela32.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela33.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela34.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela35.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela36.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela37.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela38.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela39.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela40.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela41.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela42.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela43.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela44.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela45.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela46.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela47.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela48.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela49.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela50.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela51.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela52.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela53.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela54.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela55.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela56.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela57.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela58.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela59.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela60.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela61.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela62.png",
+    "duration" : 50
+  }, {
+    "file" : "tangela/tangela63.png",
+    "duration" : 100
+  } ]
+}

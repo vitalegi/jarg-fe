@@ -1,0 +1,344 @@
+{
+  "name" : "hitmonlee",
+  "data" : {
+    "width" : 68.0,
+    "height" : 78.0
+  },
+  "frames" : [ {
+    "file" : "hitmonlee/hitmonlee1.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee2.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee3.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee4.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee5.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee6.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee7.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee8.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee9.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee10.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee11.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee12.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee13.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee14.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee15.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee16.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee17.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee18.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee19.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee20.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee21.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee22.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee23.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee24.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee25.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee26.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee27.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee28.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee29.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee30.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee31.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee32.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee33.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee34.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee35.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee36.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee37.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee38.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee39.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee40.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee41.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee42.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee43.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee44.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee45.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee46.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee47.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee48.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee49.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee50.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee51.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee52.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee53.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee54.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee55.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonlee/hitmonlee56.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee57.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee58.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee59.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee60.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee61.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee62.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee63.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee64.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee65.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee66.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee67.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee68.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee69.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee70.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee71.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee72.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee73.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee74.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee75.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee76.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee77.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee78.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee79.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee80.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee81.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee82.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee83.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee84.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee85.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonlee/hitmonlee86.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee87.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee88.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee89.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee90.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee91.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee92.png",
+    "duration" : 100
+  }, {
+    "file" : "hitmonlee/hitmonlee93.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee94.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee95.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee96.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee97.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee98.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee99.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee100.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee101.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee102.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee103.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee104.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee105.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonlee/hitmonlee106.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee107.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee108.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee109.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee110.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee111.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonlee/hitmonlee112.png",
+    "duration" : 50
+  } ]
+}

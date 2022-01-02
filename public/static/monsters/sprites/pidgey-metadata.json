@@ -1,0 +1,131 @@
+{
+  "name" : "pidgey",
+  "data" : {
+    "width" : 43.0,
+    "height" : 48.0
+  },
+  "frames" : [ {
+    "file" : "pidgey/pidgey1.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey2.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey3.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey4.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey5.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey6.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey7.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey8.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey9.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey10.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey11.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey12.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey13.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey14.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey15.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey16.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey17.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey18.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey19.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey20.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey21.png",
+    "duration" : 1950
+  }, {
+    "file" : "pidgey/pidgey22.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey23.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey24.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey25.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey26.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey27.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey28.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey29.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey30.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey31.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey32.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey33.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey34.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey35.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey36.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey37.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey38.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey39.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey40.png",
+    "duration" : 50
+  }, {
+    "file" : "pidgey/pidgey41.png",
+    "duration" : 450
+  } ]
+}

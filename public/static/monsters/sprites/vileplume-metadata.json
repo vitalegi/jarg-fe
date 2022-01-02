@@ -1,0 +1,221 @@
+{
+  "name" : "vileplume",
+  "data" : {
+    "width" : 56.0,
+    "height" : 50.0
+  },
+  "frames" : [ {
+    "file" : "vileplume/vileplume1.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume2.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume3.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume4.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume5.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume6.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume7.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume8.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume9.png",
+    "duration" : 100
+  }, {
+    "file" : "vileplume/vileplume10.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume11.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume12.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume13.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume14.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume15.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume16.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume17.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume18.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume19.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume20.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume21.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume22.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume23.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume24.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume25.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume26.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume27.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume28.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume29.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume30.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume31.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume32.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume33.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume34.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume35.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume36.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume37.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume38.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume39.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume40.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume41.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume42.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume43.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume44.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume45.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume46.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume47.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume48.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume49.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume50.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume51.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume52.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume53.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume54.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume55.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume56.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume57.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume58.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume59.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume60.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume61.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume62.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume63.png",
+    "duration" : 100
+  }, {
+    "file" : "vileplume/vileplume64.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume65.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume66.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume67.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume68.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume69.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume70.png",
+    "duration" : 50
+  }, {
+    "file" : "vileplume/vileplume71.png",
+    "duration" : 100
+  } ]
+}

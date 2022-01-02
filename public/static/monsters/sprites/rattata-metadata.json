@@ -1,0 +1,311 @@
+{
+  "name" : "rattata",
+  "data" : {
+    "width" : 43.0,
+    "height" : 43.0
+  },
+  "frames" : [ {
+    "file" : "rattata/rattata1.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata2.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata3.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata4.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata5.png",
+    "duration" : 150
+  }, {
+    "file" : "rattata/rattata6.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata7.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata8.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata9.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata10.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata11.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata12.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata13.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata14.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata15.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata16.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata17.png",
+    "duration" : 100
+  }, {
+    "file" : "rattata/rattata18.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata19.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata20.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata21.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata22.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata23.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata24.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata25.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata26.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata27.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata28.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata29.png",
+    "duration" : 100
+  }, {
+    "file" : "rattata/rattata30.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata31.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata32.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata33.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata34.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata35.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata36.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata37.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata38.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata39.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata40.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata41.png",
+    "duration" : 150
+  }, {
+    "file" : "rattata/rattata42.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata43.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata44.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata45.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata46.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata47.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata48.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata49.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata50.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata51.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata52.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata53.png",
+    "duration" : 100
+  }, {
+    "file" : "rattata/rattata54.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata55.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata56.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata57.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata58.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata59.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata60.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata61.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata62.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata63.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata64.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata65.png",
+    "duration" : 100
+  }, {
+    "file" : "rattata/rattata66.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata67.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata68.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata69.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata70.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata71.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata72.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata73.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata74.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata75.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata76.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata77.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata78.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata79.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata80.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata81.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata82.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata83.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata84.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata85.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata86.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata87.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata88.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata89.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata90.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata91.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata92.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata93.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata94.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata95.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata96.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata97.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata98.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata99.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata100.png",
+    "duration" : 50
+  }, {
+    "file" : "rattata/rattata101.png",
+    "duration" : 100
+  } ]
+}

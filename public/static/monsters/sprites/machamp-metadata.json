@@ -1,0 +1,185 @@
+{
+  "name" : "machamp",
+  "data" : {
+    "width" : 64.0,
+    "height" : 76.0
+  },
+  "frames" : [ {
+    "file" : "machamp/machamp1.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp2.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp3.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp4.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp5.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp6.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp7.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp8.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp9.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp10.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp11.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp12.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp13.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp14.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp15.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp16.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp17.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp18.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp19.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp20.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp21.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp22.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp23.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp24.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp25.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp26.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp27.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp28.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp29.png",
+    "duration" : 750
+  }, {
+    "file" : "machamp/machamp30.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp31.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp32.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp33.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp34.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp35.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp36.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp37.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp38.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp39.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp40.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp41.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp42.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp43.png",
+    "duration" : 350
+  }, {
+    "file" : "machamp/machamp44.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp45.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp46.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp47.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp48.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp49.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp50.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp51.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp52.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp53.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp54.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp55.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp56.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp57.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp58.png",
+    "duration" : 50
+  }, {
+    "file" : "machamp/machamp59.png",
+    "duration" : 100
+  } ]
+}

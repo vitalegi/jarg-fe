@@ -1,0 +1,293 @@
+{
+  "name" : "bellsprout",
+  "data" : {
+    "width" : 41.0,
+    "height" : 44.0
+  },
+  "frames" : [ {
+    "file" : "bellsprout/bellsprout1.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout2.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout3.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout4.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout5.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout6.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout7.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout8.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout9.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout10.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout11.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout12.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout13.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout14.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout15.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout16.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout17.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout18.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout19.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout20.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout21.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout22.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout23.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout24.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout25.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout26.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout27.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout28.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout29.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout30.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout31.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout32.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout33.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout34.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout35.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout36.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout37.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout38.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout39.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout40.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout41.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout42.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout43.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout44.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout45.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout46.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout47.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout48.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout49.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout50.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout51.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout52.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout53.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout54.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout55.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout56.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout57.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout58.png",
+    "duration" : 100
+  }, {
+    "file" : "bellsprout/bellsprout59.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout60.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout61.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout62.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout63.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout64.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout65.png",
+    "duration" : 150
+  }, {
+    "file" : "bellsprout/bellsprout66.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout67.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout68.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout69.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout70.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout71.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout72.png",
+    "duration" : 100
+  }, {
+    "file" : "bellsprout/bellsprout73.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout74.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout75.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout76.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout77.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout78.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout79.png",
+    "duration" : 100
+  }, {
+    "file" : "bellsprout/bellsprout80.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout81.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout82.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout83.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout84.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout85.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout86.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout87.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout88.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout89.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout90.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout91.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout92.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout93.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout94.png",
+    "duration" : 50
+  }, {
+    "file" : "bellsprout/bellsprout95.png",
+    "duration" : 50
+  } ]
+}

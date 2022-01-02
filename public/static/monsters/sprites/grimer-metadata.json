@@ -1,0 +1,356 @@
+{
+  "name" : "grimer",
+  "data" : {
+    "width" : 73.0,
+    "height" : 42.0
+  },
+  "frames" : [ {
+    "file" : "grimer/grimer1.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer2.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer3.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer4.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer5.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer6.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer7.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer8.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer9.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer10.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer11.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer12.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer13.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer14.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer15.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer16.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer17.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer18.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer19.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer20.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer21.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer22.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer23.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer24.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer25.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer26.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer27.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer28.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer29.png",
+    "duration" : 100
+  }, {
+    "file" : "grimer/grimer30.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer31.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer32.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer33.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer34.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer35.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer36.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer37.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer38.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer39.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer40.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer41.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer42.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer43.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer44.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer45.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer46.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer47.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer48.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer49.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer50.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer51.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer52.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer53.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer54.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer55.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer56.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer57.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer58.png",
+    "duration" : 100
+  }, {
+    "file" : "grimer/grimer59.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer60.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer61.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer62.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer63.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer64.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer65.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer66.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer67.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer68.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer69.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer70.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer71.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer72.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer73.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer74.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer75.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer76.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer77.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer78.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer79.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer80.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer81.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer82.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer83.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer84.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer85.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer86.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer87.png",
+    "duration" : 100
+  }, {
+    "file" : "grimer/grimer88.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer89.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer90.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer91.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer92.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer93.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer94.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer95.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer96.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer97.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer98.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer99.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer100.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer101.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer102.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer103.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer104.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer105.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer106.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer107.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer108.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer109.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer110.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer111.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer112.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer113.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer114.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer115.png",
+    "duration" : 50
+  }, {
+    "file" : "grimer/grimer116.png",
+    "duration" : 100
+  } ]
+}

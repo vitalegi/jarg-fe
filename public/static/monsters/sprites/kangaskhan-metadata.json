@@ -1,0 +1,767 @@
+{
+  "name" : "kangaskhan",
+  "data" : {
+    "width" : 79.0,
+    "height" : 61.0
+  },
+  "frames" : [ {
+    "file" : "kangaskhan/kangaskhan1.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan2.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan3.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan4.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan5.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan6.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan7.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan8.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan9.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan10.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan11.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan12.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan13.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan14.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan15.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan16.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan17.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan18.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan19.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan20.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan21.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan22.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan23.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan24.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan25.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan26.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan27.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan28.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan29.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan30.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan31.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan32.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan33.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan34.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan35.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan36.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan37.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan38.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan39.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan40.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan41.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan42.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan43.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan44.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan45.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan46.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan47.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan48.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan49.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan50.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan51.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan52.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan53.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan54.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan55.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan56.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan57.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan58.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan59.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan60.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan61.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan62.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan63.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan64.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan65.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan66.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan67.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan68.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan69.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan70.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan71.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan72.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan73.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan74.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan75.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan76.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan77.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan78.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan79.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan80.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan81.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan82.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan83.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan84.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan85.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan86.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan87.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan88.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan89.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan90.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan91.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan92.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan93.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan94.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan95.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan96.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan97.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan98.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan99.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan100.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan101.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan102.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan103.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan104.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan105.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan106.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan107.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan108.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan109.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan110.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan111.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan112.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan113.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan114.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan115.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan116.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan117.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan118.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan119.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan120.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan121.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan122.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan123.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan124.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan125.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan126.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan127.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan128.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan129.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan130.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan131.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan132.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan133.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan134.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan135.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan136.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan137.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan138.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan139.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan140.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan141.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan142.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan143.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan144.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan145.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan146.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan147.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan148.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan149.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan150.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan151.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan152.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan153.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan154.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan155.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan156.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan157.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan158.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan159.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan160.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan161.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan162.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan163.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan164.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan165.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan166.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan167.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan168.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan169.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan170.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan171.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan172.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan173.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan174.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan175.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan176.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan177.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan178.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan179.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan180.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan181.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan182.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan183.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan184.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan185.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan186.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan187.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan188.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan189.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan190.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan191.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan192.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan193.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan194.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan195.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan196.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan197.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan198.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan199.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan200.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan201.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan202.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan203.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan204.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan205.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan206.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan207.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan208.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan209.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan210.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan211.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan212.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan213.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan214.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan215.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan216.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan217.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan218.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan219.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan220.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan221.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan222.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan223.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan224.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan225.png",
+    "duration" : 150
+  }, {
+    "file" : "kangaskhan/kangaskhan226.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan227.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan228.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan229.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan230.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan231.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan232.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan233.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan234.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan235.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan236.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan237.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan238.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan239.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan240.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan241.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan242.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan243.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan244.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan245.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan246.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan247.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan248.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan249.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan250.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan251.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan252.png",
+    "duration" : 50
+  }, {
+    "file" : "kangaskhan/kangaskhan253.png",
+    "duration" : 100
+  } ]
+}

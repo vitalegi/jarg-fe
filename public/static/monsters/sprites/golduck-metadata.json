@@ -1,0 +1,236 @@
+{
+  "name" : "golduck",
+  "data" : {
+    "width" : 60.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "golduck/golduck1.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck2.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck3.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck4.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck5.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck6.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck7.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck8.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck9.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck10.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck11.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck12.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck13.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck14.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck15.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck16.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck17.png",
+    "duration" : 150
+  }, {
+    "file" : "golduck/golduck18.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck19.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck20.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck21.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck22.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck23.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck24.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck25.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck26.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck27.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck28.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck29.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck30.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck31.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck32.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck33.png",
+    "duration" : 150
+  }, {
+    "file" : "golduck/golduck34.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck35.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck36.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck37.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck38.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck39.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck40.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck41.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck42.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck43.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck44.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck45.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck46.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck47.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck48.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck49.png",
+    "duration" : 100
+  }, {
+    "file" : "golduck/golduck50.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck51.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck52.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck53.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck54.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck55.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck56.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck57.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck58.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck59.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck60.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck61.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck62.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck63.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck64.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck65.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck66.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck67.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck68.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck69.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck70.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck71.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck72.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck73.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck74.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck75.png",
+    "duration" : 50
+  }, {
+    "file" : "golduck/golduck76.png",
+    "duration" : 100
+  } ]
+}

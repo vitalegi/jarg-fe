@@ -1,0 +1,269 @@
+{
+  "name" : "wartortle",
+  "data" : {
+    "width" : 61.0,
+    "height" : 57.0
+  },
+  "frames" : [ {
+    "file" : "wartortle/wartortle1.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle2.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle3.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle4.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle5.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle6.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle7.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle8.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle9.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle10.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle11.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle12.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle13.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle14.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle15.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle16.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle17.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle18.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle19.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle20.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle21.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle22.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle23.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle24.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle25.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle26.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle27.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle28.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle29.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle30.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle31.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle32.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle33.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle34.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle35.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle36.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle37.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle38.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle39.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle40.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle41.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle42.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle43.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle44.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle45.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle46.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle47.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle48.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle49.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle50.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle51.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle52.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle53.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle54.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle55.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle56.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle57.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle58.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle59.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle60.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle61.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle62.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle63.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle64.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle65.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle66.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle67.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle68.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle69.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle70.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle71.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle72.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle73.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle74.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle75.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle76.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle77.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle78.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle79.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle80.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle81.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle82.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle83.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle84.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle85.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle86.png",
+    "duration" : 50
+  }, {
+    "file" : "wartortle/wartortle87.png",
+    "duration" : 100
+  } ]
+}

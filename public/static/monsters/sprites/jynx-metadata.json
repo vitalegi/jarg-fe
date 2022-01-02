@@ -1,0 +1,329 @@
+{
+  "name" : "jynx",
+  "data" : {
+    "width" : 63.0,
+    "height" : 60.0
+  },
+  "frames" : [ {
+    "file" : "jynx/jynx1.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx2.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx3.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx4.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx5.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx6.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx7.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx8.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx9.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx10.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx11.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx12.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx13.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx14.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx15.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx16.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx17.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx18.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx19.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx20.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx21.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx22.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx23.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx24.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx25.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx26.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx27.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx28.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx29.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx30.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx31.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx32.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx33.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx34.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx35.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx36.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx37.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx38.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx39.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx40.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx41.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx42.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx43.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx44.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx45.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx46.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx47.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx48.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx49.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx50.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx51.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx52.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx53.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx54.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx55.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx56.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx57.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx58.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx59.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx60.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx61.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx62.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx63.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx64.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx65.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx66.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx67.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx68.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx69.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx70.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx71.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx72.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx73.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx74.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx75.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx76.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx77.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx78.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx79.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx80.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx81.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx82.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx83.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx84.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx85.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx86.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx87.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx88.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx89.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx90.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx91.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx92.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx93.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx94.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx95.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx96.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx97.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx98.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx99.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx100.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx101.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx102.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx103.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx104.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx105.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx106.png",
+    "duration" : 50
+  }, {
+    "file" : "jynx/jynx107.png",
+    "duration" : 100
+  } ]
+}

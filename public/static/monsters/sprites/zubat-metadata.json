@@ -1,0 +1,170 @@
+{
+  "name" : "zubat",
+  "data" : {
+    "width" : 53.0,
+    "height" : 46.0
+  },
+  "frames" : [ {
+    "file" : "zubat/zubat1.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat2.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat3.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat4.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat5.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat6.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat7.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat8.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat9.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat10.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat11.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat12.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat13.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat14.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat15.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat16.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat17.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat18.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat19.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat20.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat21.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat22.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat23.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat24.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat25.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat26.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat27.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat28.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat29.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat30.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat31.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat32.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat33.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat34.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat35.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat36.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat37.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat38.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat39.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat40.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat41.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat42.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat43.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat44.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat45.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat46.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat47.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat48.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat49.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat50.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat51.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat52.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat53.png",
+    "duration" : 50
+  }, {
+    "file" : "zubat/zubat54.png",
+    "duration" : 50
+  } ]
+}

@@ -1,0 +1,275 @@
+{
+  "name" : "butterfree",
+  "data" : {
+    "width" : 62.0,
+    "height" : 57.0
+  },
+  "frames" : [ {
+    "file" : "butterfree/butterfree1.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree2.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree3.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree4.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree5.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree6.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree7.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree8.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree9.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree10.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree11.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree12.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree13.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree14.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree15.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree16.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree17.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree18.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree19.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree20.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree21.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree22.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree23.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree24.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree25.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree26.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree27.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree28.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree29.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree30.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree31.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree32.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree33.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree34.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree35.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree36.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree37.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree38.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree39.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree40.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree41.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree42.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree43.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree44.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree45.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree46.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree47.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree48.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree49.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree50.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree51.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree52.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree53.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree54.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree55.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree56.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree57.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree58.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree59.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree60.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree61.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree62.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree63.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree64.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree65.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree66.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree67.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree68.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree69.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree70.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree71.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree72.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree73.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree74.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree75.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree76.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree77.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree78.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree79.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree80.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree81.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree82.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree83.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree84.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree85.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree86.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree87.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree88.png",
+    "duration" : 50
+  }, {
+    "file" : "butterfree/butterfree89.png",
+    "duration" : 100
+  } ]
+}

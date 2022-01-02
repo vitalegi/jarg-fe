@@ -1,0 +1,1345 @@
+{
+	"meta": {
+		"image": "venusaur-spritesheet.png",
+		"size": {"w":1032,"h":994},
+		"scale": "1"
+	},
+	"frames": {
+		"venusaur/venusaur1.png":
+		{
+			"frame": {"x":0,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur10.png":
+		{
+			"frame": {"x":86,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur100.png":
+		{
+			"frame": {"x":0,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur101.png":
+		{
+			"frame": {"x":86,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur102.png":
+		{
+			"frame": {"x":172,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur103.png":
+		{
+			"frame": {"x":172,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur104.png":
+		{
+			"frame": {"x":0,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur105.png":
+		{
+			"frame": {"x":86,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur106.png":
+		{
+			"frame": {"x":172,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur107.png":
+		{
+			"frame": {"x":258,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur108.png":
+		{
+			"frame": {"x":258,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur109.png":
+		{
+			"frame": {"x":258,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur11.png":
+		{
+			"frame": {"x":0,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur110.png":
+		{
+			"frame": {"x":86,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur111.png":
+		{
+			"frame": {"x":172,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur112.png":
+		{
+			"frame": {"x":258,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur113.png":
+		{
+			"frame": {"x":344,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur114.png":
+		{
+			"frame": {"x":344,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur115.png":
+		{
+			"frame": {"x":344,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur116.png":
+		{
+			"frame": {"x":344,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur117.png":
+		{
+			"frame": {"x":0,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur118.png":
+		{
+			"frame": {"x":86,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur119.png":
+		{
+			"frame": {"x":172,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur12.png":
+		{
+			"frame": {"x":258,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur120.png":
+		{
+			"frame": {"x":344,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur121.png":
+		{
+			"frame": {"x":0,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur122.png":
+		{
+			"frame": {"x":86,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur123.png":
+		{
+			"frame": {"x":172,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur124.png":
+		{
+			"frame": {"x":258,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur125.png":
+		{
+			"frame": {"x":344,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur126.png":
+		{
+			"frame": {"x":430,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur127.png":
+		{
+			"frame": {"x":430,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur128.png":
+		{
+			"frame": {"x":430,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur129.png":
+		{
+			"frame": {"x":430,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur13.png":
+		{
+			"frame": {"x":430,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur130.png":
+		{
+			"frame": {"x":430,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur131.png":
+		{
+			"frame": {"x":0,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur132.png":
+		{
+			"frame": {"x":86,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur133.png":
+		{
+			"frame": {"x":172,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur134.png":
+		{
+			"frame": {"x":258,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur135.png":
+		{
+			"frame": {"x":344,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur136.png":
+		{
+			"frame": {"x":430,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur137.png":
+		{
+			"frame": {"x":516,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur138.png":
+		{
+			"frame": {"x":516,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur139.png":
+		{
+			"frame": {"x":516,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur14.png":
+		{
+			"frame": {"x":516,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur140.png":
+		{
+			"frame": {"x":516,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur141.png":
+		{
+			"frame": {"x":516,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur142.png":
+		{
+			"frame": {"x":516,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur143.png":
+		{
+			"frame": {"x":0,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur144.png":
+		{
+			"frame": {"x":86,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur145.png":
+		{
+			"frame": {"x":172,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur146.png":
+		{
+			"frame": {"x":258,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur147.png":
+		{
+			"frame": {"x":344,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur148.png":
+		{
+			"frame": {"x":430,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur149.png":
+		{
+			"frame": {"x":516,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur15.png":
+		{
+			"frame": {"x":602,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur150.png":
+		{
+			"frame": {"x":602,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur151.png":
+		{
+			"frame": {"x":602,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur152.png":
+		{
+			"frame": {"x":602,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur153.png":
+		{
+			"frame": {"x":602,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur154.png":
+		{
+			"frame": {"x":602,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur155.png":
+		{
+			"frame": {"x":602,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur156.png":
+		{
+			"frame": {"x":602,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur157.png":
+		{
+			"frame": {"x":0,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur158.png":
+		{
+			"frame": {"x":86,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur159.png":
+		{
+			"frame": {"x":172,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur16.png":
+		{
+			"frame": {"x":258,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur160.png":
+		{
+			"frame": {"x":344,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur161.png":
+		{
+			"frame": {"x":430,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur162.png":
+		{
+			"frame": {"x":516,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur163.png":
+		{
+			"frame": {"x":602,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur164.png":
+		{
+			"frame": {"x":688,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur165.png":
+		{
+			"frame": {"x":688,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur166.png":
+		{
+			"frame": {"x":688,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur167.png":
+		{
+			"frame": {"x":688,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur17.png":
+		{
+			"frame": {"x":688,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur18.png":
+		{
+			"frame": {"x":688,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur19.png":
+		{
+			"frame": {"x":688,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur2.png":
+		{
+			"frame": {"x":688,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur20.png":
+		{
+			"frame": {"x":688,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur21.png":
+		{
+			"frame": {"x":0,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur22.png":
+		{
+			"frame": {"x":86,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur23.png":
+		{
+			"frame": {"x":172,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur24.png":
+		{
+			"frame": {"x":258,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur25.png":
+		{
+			"frame": {"x":344,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur26.png":
+		{
+			"frame": {"x":430,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur27.png":
+		{
+			"frame": {"x":516,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur28.png":
+		{
+			"frame": {"x":602,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur29.png":
+		{
+			"frame": {"x":688,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur3.png":
+		{
+			"frame": {"x":774,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur30.png":
+		{
+			"frame": {"x":774,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur31.png":
+		{
+			"frame": {"x":774,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur32.png":
+		{
+			"frame": {"x":774,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur33.png":
+		{
+			"frame": {"x":774,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur34.png":
+		{
+			"frame": {"x":774,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur35.png":
+		{
+			"frame": {"x":774,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur36.png":
+		{
+			"frame": {"x":774,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur37.png":
+		{
+			"frame": {"x":774,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur38.png":
+		{
+			"frame": {"x":774,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur39.png":
+		{
+			"frame": {"x":0,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur4.png":
+		{
+			"frame": {"x":86,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur40.png":
+		{
+			"frame": {"x":172,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur41.png":
+		{
+			"frame": {"x":258,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur42.png":
+		{
+			"frame": {"x":344,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur43.png":
+		{
+			"frame": {"x":430,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur44.png":
+		{
+			"frame": {"x":516,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur45.png":
+		{
+			"frame": {"x":602,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur46.png":
+		{
+			"frame": {"x":688,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur47.png":
+		{
+			"frame": {"x":774,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur48.png":
+		{
+			"frame": {"x":0,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur49.png":
+		{
+			"frame": {"x":86,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur5.png":
+		{
+			"frame": {"x":172,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur50.png":
+		{
+			"frame": {"x":258,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur51.png":
+		{
+			"frame": {"x":344,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur52.png":
+		{
+			"frame": {"x":430,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur53.png":
+		{
+			"frame": {"x":516,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur54.png":
+		{
+			"frame": {"x":602,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur55.png":
+		{
+			"frame": {"x":688,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur56.png":
+		{
+			"frame": {"x":774,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur57.png":
+		{
+			"frame": {"x":860,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur58.png":
+		{
+			"frame": {"x":860,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur59.png":
+		{
+			"frame": {"x":860,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur6.png":
+		{
+			"frame": {"x":860,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur60.png":
+		{
+			"frame": {"x":860,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur61.png":
+		{
+			"frame": {"x":860,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur62.png":
+		{
+			"frame": {"x":860,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur63.png":
+		{
+			"frame": {"x":860,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur64.png":
+		{
+			"frame": {"x":860,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur65.png":
+		{
+			"frame": {"x":860,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur66.png":
+		{
+			"frame": {"x":860,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur67.png":
+		{
+			"frame": {"x":860,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur68.png":
+		{
+			"frame": {"x":0,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur69.png":
+		{
+			"frame": {"x":86,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur7.png":
+		{
+			"frame": {"x":172,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur70.png":
+		{
+			"frame": {"x":258,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur71.png":
+		{
+			"frame": {"x":344,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur72.png":
+		{
+			"frame": {"x":430,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur73.png":
+		{
+			"frame": {"x":516,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur74.png":
+		{
+			"frame": {"x":602,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur75.png":
+		{
+			"frame": {"x":688,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur76.png":
+		{
+			"frame": {"x":774,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur77.png":
+		{
+			"frame": {"x":860,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur78.png":
+		{
+			"frame": {"x":946,"y":0,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur79.png":
+		{
+			"frame": {"x":946,"y":71,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur8.png":
+		{
+			"frame": {"x":946,"y":142,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur80.png":
+		{
+			"frame": {"x":946,"y":213,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur81.png":
+		{
+			"frame": {"x":946,"y":284,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur82.png":
+		{
+			"frame": {"x":946,"y":355,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur83.png":
+		{
+			"frame": {"x":946,"y":426,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur84.png":
+		{
+			"frame": {"x":946,"y":497,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur85.png":
+		{
+			"frame": {"x":946,"y":568,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur86.png":
+		{
+			"frame": {"x":946,"y":639,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur87.png":
+		{
+			"frame": {"x":946,"y":710,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur88.png":
+		{
+			"frame": {"x":946,"y":781,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur89.png":
+		{
+			"frame": {"x":946,"y":852,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur9.png":
+		{
+			"frame": {"x":0,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur90.png":
+		{
+			"frame": {"x":86,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur91.png":
+		{
+			"frame": {"x":172,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur92.png":
+		{
+			"frame": {"x":258,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur93.png":
+		{
+			"frame": {"x":344,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur94.png":
+		{
+			"frame": {"x":430,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur95.png":
+		{
+			"frame": {"x":516,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur96.png":
+		{
+			"frame": {"x":602,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur97.png":
+		{
+			"frame": {"x":688,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur98.png":
+		{
+			"frame": {"x":774,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		},
+		"venusaur/venusaur99.png":
+		{
+			"frame": {"x":860,"y":923,"w":86,"h":71},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":86,"h":71},
+			"sourceSize": {"w":86,"h":71}
+		}
+	}
+}

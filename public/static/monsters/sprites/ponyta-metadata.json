@@ -1,0 +1,281 @@
+{
+  "name" : "ponyta",
+  "data" : {
+    "width" : 57.0,
+    "height" : 57.0
+  },
+  "frames" : [ {
+    "file" : "ponyta/ponyta1.png",
+    "duration" : 100
+  }, {
+    "file" : "ponyta/ponyta2.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta3.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta4.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta5.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta6.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta7.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta8.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta9.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta10.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta11.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta12.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta13.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta14.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta15.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta16.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta17.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta18.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta19.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta20.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta21.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta22.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta23.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta24.png",
+    "duration" : 100
+  }, {
+    "file" : "ponyta/ponyta25.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta26.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta27.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta28.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta29.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta30.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta31.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta32.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta33.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta34.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta35.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta36.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta37.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta38.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta39.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta40.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta41.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta42.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta43.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta44.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta45.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta46.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta47.png",
+    "duration" : 100
+  }, {
+    "file" : "ponyta/ponyta48.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta49.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta50.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta51.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta52.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta53.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta54.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta55.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta56.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta57.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta58.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta59.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta60.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta61.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta62.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta63.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta64.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta65.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta66.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta67.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta68.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta69.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta70.png",
+    "duration" : 100
+  }, {
+    "file" : "ponyta/ponyta71.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta72.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta73.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta74.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta75.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta76.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta77.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta78.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta79.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta80.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta81.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta82.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta83.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta84.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta85.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta86.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta87.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta88.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta89.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta90.png",
+    "duration" : 50
+  }, {
+    "file" : "ponyta/ponyta91.png",
+    "duration" : 100
+  } ]
+}

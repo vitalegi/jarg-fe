@@ -1,0 +1,251 @@
+{
+  "name" : "hitmonchan",
+  "data" : {
+    "width" : 34.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "hitmonchan/hitmonchan1.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan2.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan3.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan4.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan5.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan6.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan7.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan8.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan9.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan10.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan11.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan12.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan13.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan14.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan15.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan16.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan17.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonchan/hitmonchan18.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan19.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan20.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan21.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan22.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan23.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan24.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan25.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan26.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan27.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan28.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan29.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan30.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan31.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan32.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan33.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonchan/hitmonchan34.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan35.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan36.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan37.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan38.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan39.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan40.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan41.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan42.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan43.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan44.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan45.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan46.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan47.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan48.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan49.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonchan/hitmonchan50.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan51.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan52.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan53.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan54.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan55.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan56.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan57.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan58.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan59.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan60.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan61.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan62.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan63.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan64.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan65.png",
+    "duration" : 150
+  }, {
+    "file" : "hitmonchan/hitmonchan66.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan67.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan68.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan69.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan70.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan71.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan72.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan73.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan74.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan75.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan76.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan77.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan78.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan79.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan80.png",
+    "duration" : 50
+  }, {
+    "file" : "hitmonchan/hitmonchan81.png",
+    "duration" : 100
+  } ]
+}

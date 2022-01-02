@@ -1,0 +1,473 @@
+{
+  "name" : "omastar",
+  "data" : {
+    "width" : 63.0,
+    "height" : 60.0
+  },
+  "frames" : [ {
+    "file" : "omastar/omastar1.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar2.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar3.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar4.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar5.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar6.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar7.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar8.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar9.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar10.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar11.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar12.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar13.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar14.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar15.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar16.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar17.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar18.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar19.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar20.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar21.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar22.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar23.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar24.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar25.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar26.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar27.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar28.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar29.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar30.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar31.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar32.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar33.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar34.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar35.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar36.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar37.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar38.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar39.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar40.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar41.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar42.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar43.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar44.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar45.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar46.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar47.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar48.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar49.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar50.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar51.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar52.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar53.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar54.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar55.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar56.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar57.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar58.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar59.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar60.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar61.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar62.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar63.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar64.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar65.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar66.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar67.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar68.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar69.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar70.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar71.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar72.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar73.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar74.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar75.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar76.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar77.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar78.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar79.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar80.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar81.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar82.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar83.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar84.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar85.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar86.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar87.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar88.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar89.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar90.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar91.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar92.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar93.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar94.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar95.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar96.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar97.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar98.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar99.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar100.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar101.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar102.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar103.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar104.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar105.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar106.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar107.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar108.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar109.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar110.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar111.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar112.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar113.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar114.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar115.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar116.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar117.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar118.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar119.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar120.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar121.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar122.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar123.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar124.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar125.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar126.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar127.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar128.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar129.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar130.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar131.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar132.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar133.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar134.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar135.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar136.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar137.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar138.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar139.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar140.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar141.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar142.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar143.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar144.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar145.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar146.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar147.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar148.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar149.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar150.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar151.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar152.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar153.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar154.png",
+    "duration" : 50
+  }, {
+    "file" : "omastar/omastar155.png",
+    "duration" : 100
+  } ]
+}

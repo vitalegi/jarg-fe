@@ -1,0 +1,245 @@
+{
+  "name" : "poliwag",
+  "data" : {
+    "width" : 54.0,
+    "height" : 34.0
+  },
+  "frames" : [ {
+    "file" : "poliwag/poliwag1.png",
+    "duration" : 100
+  }, {
+    "file" : "poliwag/poliwag2.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag3.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag4.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag5.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag6.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag7.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag8.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag9.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag10.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag11.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag12.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag13.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag14.png",
+    "duration" : 100
+  }, {
+    "file" : "poliwag/poliwag15.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag16.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag17.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag18.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag19.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag20.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag21.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag22.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag23.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag24.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag25.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag26.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag27.png",
+    "duration" : 100
+  }, {
+    "file" : "poliwag/poliwag28.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag29.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag30.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag31.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag32.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag33.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag34.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag35.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag36.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag37.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag38.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag39.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag40.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag41.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag42.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag43.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag44.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag45.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag46.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag47.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag48.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag49.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag50.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag51.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag52.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag53.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag54.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag55.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag56.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag57.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag58.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag59.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag60.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag61.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag62.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag63.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag64.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag65.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag66.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag67.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag68.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag69.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag70.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag71.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag72.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag73.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag74.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag75.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag76.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag77.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag78.png",
+    "duration" : 50
+  }, {
+    "file" : "poliwag/poliwag79.png",
+    "duration" : 50
+  } ]
+}

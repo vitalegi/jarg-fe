@@ -1,0 +1,365 @@
+{
+  "name" : "mew",
+  "data" : {
+    "width" : 78.0,
+    "height" : 54.0
+  },
+  "frames" : [ {
+    "file" : "mew/mew1.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew2.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew3.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew4.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew5.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew6.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew7.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew8.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew9.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew10.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew11.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew12.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew13.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew14.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew15.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew16.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew17.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew18.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew19.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew20.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew21.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew22.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew23.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew24.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew25.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew26.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew27.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew28.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew29.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew30.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew31.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew32.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew33.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew34.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew35.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew36.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew37.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew38.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew39.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew40.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew41.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew42.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew43.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew44.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew45.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew46.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew47.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew48.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew49.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew50.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew51.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew52.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew53.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew54.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew55.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew56.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew57.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew58.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew59.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew60.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew61.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew62.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew63.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew64.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew65.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew66.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew67.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew68.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew69.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew70.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew71.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew72.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew73.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew74.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew75.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew76.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew77.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew78.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew79.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew80.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew81.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew82.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew83.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew84.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew85.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew86.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew87.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew88.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew89.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew90.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew91.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew92.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew93.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew94.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew95.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew96.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew97.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew98.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew99.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew100.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew101.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew102.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew103.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew104.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew105.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew106.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew107.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew108.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew109.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew110.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew111.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew112.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew113.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew114.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew115.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew116.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew117.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew118.png",
+    "duration" : 50
+  }, {
+    "file" : "mew/mew119.png",
+    "duration" : 100
+  } ]
+}

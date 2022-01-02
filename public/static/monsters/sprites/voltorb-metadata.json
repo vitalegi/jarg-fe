@@ -1,0 +1,221 @@
+{
+  "name" : "voltorb",
+  "data" : {
+    "width" : 46.0,
+    "height" : 31.0
+  },
+  "frames" : [ {
+    "file" : "voltorb/voltorb1.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb2.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb3.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb4.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb5.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb6.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb7.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb8.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb9.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb10.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb11.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb12.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb13.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb14.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb15.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb16.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb17.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb18.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb19.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb20.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb21.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb22.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb23.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb24.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb25.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb26.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb27.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb28.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb29.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb30.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb31.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb32.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb33.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb34.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb35.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb36.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb37.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb38.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb39.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb40.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb41.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb42.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb43.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb44.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb45.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb46.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb47.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb48.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb49.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb50.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb51.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb52.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb53.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb54.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb55.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb56.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb57.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb58.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb59.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb60.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb61.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb62.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb63.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb64.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb65.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb66.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb67.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb68.png",
+    "duration" : 50
+  }, {
+    "file" : "voltorb/voltorb69.png",
+    "duration" : 450
+  }, {
+    "file" : "voltorb/voltorb70.png",
+    "duration" : 150
+  }, {
+    "file" : "voltorb/voltorb71.png",
+    "duration" : 500
+  } ]
+}

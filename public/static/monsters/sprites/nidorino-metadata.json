@@ -1,0 +1,305 @@
+{
+  "name" : "nidorino",
+  "data" : {
+    "width" : 52.0,
+    "height" : 56.0
+  },
+  "frames" : [ {
+    "file" : "nidorino/nidorino1.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino2.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino3.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino4.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino5.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino6.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino7.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino8.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino9.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino10.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino11.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino12.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino13.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino14.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino15.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino16.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino17.png",
+    "duration" : 150
+  }, {
+    "file" : "nidorino/nidorino18.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino19.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino20.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino21.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino22.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino23.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino24.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino25.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino26.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino27.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino28.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino29.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino30.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino31.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino32.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino33.png",
+    "duration" : 150
+  }, {
+    "file" : "nidorino/nidorino34.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino35.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino36.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino37.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino38.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino39.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino40.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino41.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino42.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino43.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino44.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino45.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino46.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino47.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino48.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino49.png",
+    "duration" : 150
+  }, {
+    "file" : "nidorino/nidorino50.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino51.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino52.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino53.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino54.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino55.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino56.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino57.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino58.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino59.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino60.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino61.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino62.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino63.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino64.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino65.png",
+    "duration" : 150
+  }, {
+    "file" : "nidorino/nidorino66.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino67.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino68.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino69.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino70.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino71.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino72.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino73.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino74.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino75.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino76.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino77.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino78.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino79.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino80.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino81.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino82.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino83.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino84.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino85.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino86.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino87.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino88.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino89.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino90.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino91.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino92.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino93.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino94.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino95.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino96.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino97.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino98.png",
+    "duration" : 50
+  }, {
+    "file" : "nidorino/nidorino99.png",
+    "duration" : 100
+  } ]
+}

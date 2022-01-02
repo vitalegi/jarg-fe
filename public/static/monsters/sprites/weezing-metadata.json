@@ -1,0 +1,305 @@
+{
+  "name" : "weezing",
+  "data" : {
+    "width" : 86.0,
+    "height" : 67.0
+  },
+  "frames" : [ {
+    "file" : "weezing/weezing1.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing2.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing3.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing4.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing5.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing6.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing7.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing8.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing9.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing10.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing11.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing12.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing13.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing14.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing15.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing16.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing17.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing18.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing19.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing20.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing21.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing22.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing23.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing24.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing25.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing26.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing27.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing28.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing29.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing30.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing31.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing32.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing33.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing34.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing35.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing36.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing37.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing38.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing39.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing40.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing41.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing42.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing43.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing44.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing45.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing46.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing47.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing48.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing49.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing50.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing51.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing52.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing53.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing54.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing55.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing56.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing57.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing58.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing59.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing60.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing61.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing62.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing63.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing64.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing65.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing66.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing67.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing68.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing69.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing70.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing71.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing72.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing73.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing74.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing75.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing76.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing77.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing78.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing79.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing80.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing81.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing82.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing83.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing84.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing85.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing86.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing87.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing88.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing89.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing90.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing91.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing92.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing93.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing94.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing95.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing96.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing97.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing98.png",
+    "duration" : 50
+  }, {
+    "file" : "weezing/weezing99.png",
+    "duration" : 100
+  } ]
+}

@@ -1,0 +1,149 @@
+{
+  "name" : "kabutops",
+  "data" : {
+    "width" : 65.0,
+    "height" : 61.0
+  },
+  "frames" : [ {
+    "file" : "kabutops/kabutops1.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops2.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops3.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops4.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops5.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops6.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops7.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops8.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops9.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops10.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops11.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops12.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops13.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops14.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops15.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops16.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops17.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops18.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops19.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops20.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops21.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops22.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops23.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops24.png",
+    "duration" : 100
+  }, {
+    "file" : "kabutops/kabutops25.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops26.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops27.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops28.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops29.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops30.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops31.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops32.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops33.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops34.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops35.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops36.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops37.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops38.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops39.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops40.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops41.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops42.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops43.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops44.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops45.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops46.png",
+    "duration" : 50
+  }, {
+    "file" : "kabutops/kabutops47.png",
+    "duration" : 50
+  } ]
+}

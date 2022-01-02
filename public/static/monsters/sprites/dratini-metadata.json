@@ -1,0 +1,155 @@
+{
+  "name" : "dratini",
+  "data" : {
+    "width" : 44.0,
+    "height" : 51.0
+  },
+  "frames" : [ {
+    "file" : "dratini/dratini1.png",
+    "duration" : 150
+  }, {
+    "file" : "dratini/dratini2.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini3.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini4.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini5.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini6.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini7.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini8.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini9.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini10.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini11.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini12.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini13.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini14.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini15.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini16.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini17.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini18.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini19.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini20.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini21.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini22.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini23.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini24.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini25.png",
+    "duration" : 250
+  }, {
+    "file" : "dratini/dratini26.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini27.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini28.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini29.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini30.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini31.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini32.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini33.png",
+    "duration" : 150
+  }, {
+    "file" : "dratini/dratini34.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini35.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini36.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini37.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini38.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini39.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini40.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini41.png",
+    "duration" : 150
+  }, {
+    "file" : "dratini/dratini42.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini43.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini44.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini45.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini46.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini47.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini48.png",
+    "duration" : 50
+  }, {
+    "file" : "dratini/dratini49.png",
+    "duration" : 100
+  } ]
+}

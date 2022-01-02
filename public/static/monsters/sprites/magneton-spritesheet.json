@@ -1,0 +1,1153 @@
+{
+	"meta": {
+		"image": "magneton-spritesheet.png",
+		"size": {"w":816,"h":708},
+		"scale": "1"
+	},
+	"frames": {
+		"magneton/magneton1.png":
+		{
+			"frame": {"x":0,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton10.png":
+		{
+			"frame": {"x":68,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton100.png":
+		{
+			"frame": {"x":0,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton101.png":
+		{
+			"frame": {"x":68,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton102.png":
+		{
+			"frame": {"x":136,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton103.png":
+		{
+			"frame": {"x":136,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton104.png":
+		{
+			"frame": {"x":0,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton105.png":
+		{
+			"frame": {"x":68,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton106.png":
+		{
+			"frame": {"x":136,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton107.png":
+		{
+			"frame": {"x":204,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton108.png":
+		{
+			"frame": {"x":204,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton109.png":
+		{
+			"frame": {"x":204,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton11.png":
+		{
+			"frame": {"x":0,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton110.png":
+		{
+			"frame": {"x":68,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton111.png":
+		{
+			"frame": {"x":136,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton112.png":
+		{
+			"frame": {"x":204,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton113.png":
+		{
+			"frame": {"x":272,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton114.png":
+		{
+			"frame": {"x":272,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton115.png":
+		{
+			"frame": {"x":272,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton116.png":
+		{
+			"frame": {"x":272,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton117.png":
+		{
+			"frame": {"x":0,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton118.png":
+		{
+			"frame": {"x":68,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton119.png":
+		{
+			"frame": {"x":136,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton12.png":
+		{
+			"frame": {"x":204,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton120.png":
+		{
+			"frame": {"x":272,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton121.png":
+		{
+			"frame": {"x":340,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton122.png":
+		{
+			"frame": {"x":340,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton123.png":
+		{
+			"frame": {"x":340,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton124.png":
+		{
+			"frame": {"x":340,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton125.png":
+		{
+			"frame": {"x":340,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton126.png":
+		{
+			"frame": {"x":0,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton127.png":
+		{
+			"frame": {"x":68,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton128.png":
+		{
+			"frame": {"x":136,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton129.png":
+		{
+			"frame": {"x":204,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton13.png":
+		{
+			"frame": {"x":272,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton130.png":
+		{
+			"frame": {"x":340,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton131.png":
+		{
+			"frame": {"x":408,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton132.png":
+		{
+			"frame": {"x":408,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton133.png":
+		{
+			"frame": {"x":408,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton134.png":
+		{
+			"frame": {"x":408,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton135.png":
+		{
+			"frame": {"x":408,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton136.png":
+		{
+			"frame": {"x":408,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton137.png":
+		{
+			"frame": {"x":0,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton138.png":
+		{
+			"frame": {"x":68,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton139.png":
+		{
+			"frame": {"x":136,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton14.png":
+		{
+			"frame": {"x":204,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton140.png":
+		{
+			"frame": {"x":272,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton141.png":
+		{
+			"frame": {"x":340,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton142.png":
+		{
+			"frame": {"x":408,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton143.png":
+		{
+			"frame": {"x":0,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton15.png":
+		{
+			"frame": {"x":68,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton16.png":
+		{
+			"frame": {"x":136,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton17.png":
+		{
+			"frame": {"x":204,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton18.png":
+		{
+			"frame": {"x":272,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton19.png":
+		{
+			"frame": {"x":340,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton2.png":
+		{
+			"frame": {"x":408,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton20.png":
+		{
+			"frame": {"x":476,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton21.png":
+		{
+			"frame": {"x":476,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton22.png":
+		{
+			"frame": {"x":476,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton23.png":
+		{
+			"frame": {"x":476,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton24.png":
+		{
+			"frame": {"x":476,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton25.png":
+		{
+			"frame": {"x":476,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton26.png":
+		{
+			"frame": {"x":476,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton27.png":
+		{
+			"frame": {"x":476,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton28.png":
+		{
+			"frame": {"x":0,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton29.png":
+		{
+			"frame": {"x":68,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton3.png":
+		{
+			"frame": {"x":136,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton30.png":
+		{
+			"frame": {"x":204,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton31.png":
+		{
+			"frame": {"x":272,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton32.png":
+		{
+			"frame": {"x":340,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton33.png":
+		{
+			"frame": {"x":408,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton34.png":
+		{
+			"frame": {"x":476,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton35.png":
+		{
+			"frame": {"x":544,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton36.png":
+		{
+			"frame": {"x":544,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton37.png":
+		{
+			"frame": {"x":544,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton38.png":
+		{
+			"frame": {"x":544,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton39.png":
+		{
+			"frame": {"x":544,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton4.png":
+		{
+			"frame": {"x":544,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton40.png":
+		{
+			"frame": {"x":544,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton41.png":
+		{
+			"frame": {"x":544,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton42.png":
+		{
+			"frame": {"x":544,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton43.png":
+		{
+			"frame": {"x":0,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton44.png":
+		{
+			"frame": {"x":68,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton45.png":
+		{
+			"frame": {"x":136,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton46.png":
+		{
+			"frame": {"x":204,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton47.png":
+		{
+			"frame": {"x":272,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton48.png":
+		{
+			"frame": {"x":340,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton49.png":
+		{
+			"frame": {"x":408,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton5.png":
+		{
+			"frame": {"x":476,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton50.png":
+		{
+			"frame": {"x":544,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton51.png":
+		{
+			"frame": {"x":612,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton52.png":
+		{
+			"frame": {"x":612,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton53.png":
+		{
+			"frame": {"x":612,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton54.png":
+		{
+			"frame": {"x":612,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton55.png":
+		{
+			"frame": {"x":612,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton56.png":
+		{
+			"frame": {"x":612,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton57.png":
+		{
+			"frame": {"x":612,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton58.png":
+		{
+			"frame": {"x":612,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton59.png":
+		{
+			"frame": {"x":612,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton6.png":
+		{
+			"frame": {"x":612,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton60.png":
+		{
+			"frame": {"x":0,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton61.png":
+		{
+			"frame": {"x":68,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton62.png":
+		{
+			"frame": {"x":136,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton63.png":
+		{
+			"frame": {"x":204,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton64.png":
+		{
+			"frame": {"x":272,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton65.png":
+		{
+			"frame": {"x":340,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton66.png":
+		{
+			"frame": {"x":408,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton67.png":
+		{
+			"frame": {"x":476,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton68.png":
+		{
+			"frame": {"x":544,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton69.png":
+		{
+			"frame": {"x":612,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton7.png":
+		{
+			"frame": {"x":680,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton70.png":
+		{
+			"frame": {"x":680,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton71.png":
+		{
+			"frame": {"x":680,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton72.png":
+		{
+			"frame": {"x":680,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton73.png":
+		{
+			"frame": {"x":680,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton74.png":
+		{
+			"frame": {"x":680,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton75.png":
+		{
+			"frame": {"x":680,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton76.png":
+		{
+			"frame": {"x":680,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton77.png":
+		{
+			"frame": {"x":680,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton78.png":
+		{
+			"frame": {"x":680,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton79.png":
+		{
+			"frame": {"x":680,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton8.png":
+		{
+			"frame": {"x":0,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton80.png":
+		{
+			"frame": {"x":68,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton81.png":
+		{
+			"frame": {"x":136,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton82.png":
+		{
+			"frame": {"x":204,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton83.png":
+		{
+			"frame": {"x":272,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton84.png":
+		{
+			"frame": {"x":340,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton85.png":
+		{
+			"frame": {"x":408,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton86.png":
+		{
+			"frame": {"x":476,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton87.png":
+		{
+			"frame": {"x":544,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton88.png":
+		{
+			"frame": {"x":612,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton89.png":
+		{
+			"frame": {"x":680,"y":649,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton9.png":
+		{
+			"frame": {"x":748,"y":0,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton90.png":
+		{
+			"frame": {"x":748,"y":59,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton91.png":
+		{
+			"frame": {"x":748,"y":118,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton92.png":
+		{
+			"frame": {"x":748,"y":177,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton93.png":
+		{
+			"frame": {"x":748,"y":236,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton94.png":
+		{
+			"frame": {"x":748,"y":295,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton95.png":
+		{
+			"frame": {"x":748,"y":354,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton96.png":
+		{
+			"frame": {"x":748,"y":413,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton97.png":
+		{
+			"frame": {"x":748,"y":472,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton98.png":
+		{
+			"frame": {"x":748,"y":531,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		},
+		"magneton/magneton99.png":
+		{
+			"frame": {"x":748,"y":590,"w":68,"h":59},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":59},
+			"sourceSize": {"w":68,"h":59}
+		}
+	}
+}

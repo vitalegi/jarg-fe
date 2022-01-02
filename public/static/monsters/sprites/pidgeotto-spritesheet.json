@@ -1,0 +1,289 @@
+{
+	"meta": {
+		"image": "pidgeotto-spritesheet.png",
+		"size": {"w":656,"h":580},
+		"scale": "1"
+	},
+	"frames": {
+		"pidgeotto/pidgeotto1.png":
+		{
+			"frame": {"x":0,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto10.png":
+		{
+			"frame": {"x":82,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto11.png":
+		{
+			"frame": {"x":164,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto12.png":
+		{
+			"frame": {"x":0,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto13.png":
+		{
+			"frame": {"x":82,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto14.png":
+		{
+			"frame": {"x":164,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto15.png":
+		{
+			"frame": {"x":246,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto16.png":
+		{
+			"frame": {"x":246,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto17.png":
+		{
+			"frame": {"x":328,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto18.png":
+		{
+			"frame": {"x":328,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto19.png":
+		{
+			"frame": {"x":0,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto2.png":
+		{
+			"frame": {"x":82,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto20.png":
+		{
+			"frame": {"x":164,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto21.png":
+		{
+			"frame": {"x":246,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto22.png":
+		{
+			"frame": {"x":328,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto23.png":
+		{
+			"frame": {"x":410,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto24.png":
+		{
+			"frame": {"x":410,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto25.png":
+		{
+			"frame": {"x":410,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto26.png":
+		{
+			"frame": {"x":0,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto27.png":
+		{
+			"frame": {"x":82,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto28.png":
+		{
+			"frame": {"x":164,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto29.png":
+		{
+			"frame": {"x":246,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto3.png":
+		{
+			"frame": {"x":328,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto30.png":
+		{
+			"frame": {"x":410,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto31.png":
+		{
+			"frame": {"x":492,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto32.png":
+		{
+			"frame": {"x":492,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto33.png":
+		{
+			"frame": {"x":492,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto34.png":
+		{
+			"frame": {"x":492,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto35.png":
+		{
+			"frame": {"x":574,"y":0,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto4.png":
+		{
+			"frame": {"x":574,"y":116,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto5.png":
+		{
+			"frame": {"x":574,"y":232,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto6.png":
+		{
+			"frame": {"x":574,"y":348,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto7.png":
+		{
+			"frame": {"x":0,"y":464,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto8.png":
+		{
+			"frame": {"x":82,"y":464,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		},
+		"pidgeotto/pidgeotto9.png":
+		{
+			"frame": {"x":164,"y":464,"w":82,"h":116},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":82,"h":116},
+			"sourceSize": {"w":82,"h":116}
+		}
+	}
+}

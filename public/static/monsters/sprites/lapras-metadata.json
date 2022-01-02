@@ -1,0 +1,203 @@
+{
+  "name" : "lapras",
+  "data" : {
+    "width" : 68.0,
+    "height" : 71.0
+  },
+  "frames" : [ {
+    "file" : "lapras/lapras1.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras2.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras3.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras4.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras5.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras6.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras7.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras8.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras9.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras10.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras11.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras12.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras13.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras14.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras15.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras16.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras17.png",
+    "duration" : 200
+  }, {
+    "file" : "lapras/lapras18.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras19.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras20.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras21.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras22.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras23.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras24.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras25.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras26.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras27.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras28.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras29.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras30.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras31.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras32.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras33.png",
+    "duration" : 200
+  }, {
+    "file" : "lapras/lapras34.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras35.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras36.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras37.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras38.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras39.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras40.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras41.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras42.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras43.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras44.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras45.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras46.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras47.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras48.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras49.png",
+    "duration" : 200
+  }, {
+    "file" : "lapras/lapras50.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras51.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras52.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras53.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras54.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras55.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras56.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras57.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras58.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras59.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras60.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras61.png",
+    "duration" : 100
+  }, {
+    "file" : "lapras/lapras62.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras63.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras64.png",
+    "duration" : 50
+  }, {
+    "file" : "lapras/lapras65.png",
+    "duration" : 100
+  } ]
+}

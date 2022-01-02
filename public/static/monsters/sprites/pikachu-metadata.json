@@ -1,0 +1,344 @@
+{
+  "name" : "pikachu",
+  "data" : {
+    "width" : 50.0,
+    "height" : 46.0
+  },
+  "frames" : [ {
+    "file" : "pikachu/pikachu1.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu2.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu3.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu4.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu5.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu6.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu7.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu8.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu9.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu10.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu11.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu12.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu13.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu14.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu15.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu16.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu17.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu18.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu19.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu20.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu21.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu22.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu23.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu24.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu25.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu26.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu27.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu28.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu29.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu30.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu31.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu32.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu33.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu34.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu35.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu36.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu37.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu38.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu39.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu40.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu41.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu42.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu43.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu44.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu45.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu46.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu47.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu48.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu49.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu50.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu51.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu52.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu53.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu54.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu55.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu56.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu57.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu58.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu59.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu60.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu61.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu62.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu63.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu64.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu65.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu66.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu67.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu68.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu69.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu70.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu71.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu72.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu73.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu74.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu75.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu76.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu77.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu78.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu79.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu80.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu81.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu82.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu83.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu84.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu85.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu86.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu87.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu88.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu89.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu90.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu91.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu92.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu93.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu94.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu95.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu96.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu97.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu98.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu99.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu100.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu101.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu102.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu103.png",
+    "duration" : 150
+  }, {
+    "file" : "pikachu/pikachu104.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu105.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu106.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu107.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu108.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu109.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu110.png",
+    "duration" : 50
+  }, {
+    "file" : "pikachu/pikachu111.png",
+    "duration" : 100
+  }, {
+    "file" : "pikachu/pikachu112.png",
+    "duration" : 100
+  } ]
+}

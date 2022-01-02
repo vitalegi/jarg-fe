@@ -1,0 +1,341 @@
+{
+  "name" : "ivysaur",
+  "data" : {
+    "width" : 58.0,
+    "height" : 51.0
+  },
+  "frames" : [ {
+    "file" : "ivysaur/ivysaur1.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur2.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur3.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur4.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur5.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur6.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur7.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur8.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur9.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur10.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur11.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur12.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur13.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur14.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur15.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur16.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur17.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur18.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur19.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur20.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur21.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur22.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur23.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur24.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur25.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur26.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur27.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur28.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur29.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur30.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur31.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur32.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur33.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur34.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur35.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur36.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur37.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur38.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur39.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur40.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur41.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur42.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur43.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur44.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur45.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur46.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur47.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur48.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur49.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur50.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur51.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur52.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur53.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur54.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur55.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur56.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur57.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur58.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur59.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur60.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur61.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur62.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur63.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur64.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur65.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur66.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur67.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur68.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur69.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur70.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur71.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur72.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur73.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur74.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur75.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur76.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur77.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur78.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur79.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur80.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur81.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur82.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur83.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur84.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur85.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur86.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur87.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur88.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur89.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur90.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur91.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur92.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur93.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur94.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur95.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur96.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur97.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur98.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur99.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur100.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur101.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur102.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur103.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur104.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur105.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur106.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur107.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur108.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur109.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur110.png",
+    "duration" : 50
+  }, {
+    "file" : "ivysaur/ivysaur111.png",
+    "duration" : 100
+  } ]
+}

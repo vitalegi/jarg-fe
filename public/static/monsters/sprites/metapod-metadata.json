@@ -1,0 +1,341 @@
+{
+  "name" : "metapod",
+  "data" : {
+    "width" : 36.0,
+    "height" : 38.0
+  },
+  "frames" : [ {
+    "file" : "metapod/metapod1.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod2.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod3.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod4.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod5.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod6.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod7.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod8.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod9.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod10.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod11.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod12.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod13.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod14.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod15.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod16.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod17.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod18.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod19.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod20.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod21.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod22.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod23.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod24.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod25.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod26.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod27.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod28.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod29.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod30.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod31.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod32.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod33.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod34.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod35.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod36.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod37.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod38.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod39.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod40.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod41.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod42.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod43.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod44.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod45.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod46.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod47.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod48.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod49.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod50.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod51.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod52.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod53.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod54.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod55.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod56.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod57.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod58.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod59.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod60.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod61.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod62.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod63.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod64.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod65.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod66.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod67.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod68.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod69.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod70.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod71.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod72.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod73.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod74.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod75.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod76.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod77.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod78.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod79.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod80.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod81.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod82.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod83.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod84.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod85.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod86.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod87.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod88.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod89.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod90.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod91.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod92.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod93.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod94.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod95.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod96.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod97.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod98.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod99.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod100.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod101.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod102.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod103.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod104.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod105.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod106.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod107.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod108.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod109.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod110.png",
+    "duration" : 50
+  }, {
+    "file" : "metapod/metapod111.png",
+    "duration" : 100
+  } ]
+}

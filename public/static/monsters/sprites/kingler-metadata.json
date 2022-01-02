@@ -1,0 +1,299 @@
+{
+  "name" : "kingler",
+  "data" : {
+    "width" : 82.0,
+    "height" : 59.0
+  },
+  "frames" : [ {
+    "file" : "kingler/kingler1.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler2.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler3.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler4.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler5.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler6.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler7.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler8.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler9.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler10.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler11.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler12.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler13.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler14.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler15.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler16.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler17.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler18.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler19.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler20.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler21.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler22.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler23.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler24.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler25.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler26.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler27.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler28.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler29.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler30.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler31.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler32.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler33.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler34.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler35.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler36.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler37.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler38.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler39.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler40.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler41.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler42.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler43.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler44.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler45.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler46.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler47.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler48.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler49.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler50.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler51.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler52.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler53.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler54.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler55.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler56.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler57.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler58.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler59.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler60.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler61.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler62.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler63.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler64.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler65.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler66.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler67.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler68.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler69.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler70.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler71.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler72.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler73.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler74.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler75.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler76.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler77.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler78.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler79.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler80.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler81.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler82.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler83.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler84.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler85.png",
+    "duration" : 150
+  }, {
+    "file" : "kingler/kingler86.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler87.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler88.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler89.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler90.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler91.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler92.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler93.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler94.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler95.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler96.png",
+    "duration" : 50
+  }, {
+    "file" : "kingler/kingler97.png",
+    "duration" : 100
+  } ]
+}
