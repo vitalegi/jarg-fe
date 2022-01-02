@@ -1,11 +1,11 @@
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import Container from "typedi";
 import Point from "@/models/Point";
 import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
+import GameLoop from "../GameLoop";
 
 export default class MonsterMove {
-  protected gameService = Container.get<GameService>(GameService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   protected source;
   protected path;
@@ -22,7 +22,7 @@ export default class MonsterMove {
       const to = this.path[i + 1];
       console.log(`Walk from ${from} to ${to}`);
       const drawer = new MonsterMoveDrawer(this.source, from, to);
-      this.gameService.addGameLoopHandler(drawer);
+      this.gameLoop.addGameLoopHandler(drawer);
       await drawer.notifyWhenCompleted();
       this.source.coordinates = to.clone();
     }

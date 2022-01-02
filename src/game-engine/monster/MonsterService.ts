@@ -52,13 +52,15 @@ export default class MonsterService {
 
     const random = Container.get<RandomService>(RandomService);
 
-    monster.name = names[random.randomInt(names.length)];
+    const monstersIndex = this.monsterIndexRepository.getMonsters();
+    const monsterIndex = monstersIndex[random.randomInt(monstersIndex.length)];
+
+    monster.modelId = monsterIndex.monsterId;
+
+    monster.name =
+      names[random.randomInt(names.length)] + " " + monsterIndex.name;
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
-
-    const monstersIndex = this.monsterIndexRepository.getMonsters();
-    monster.modelId =
-      monstersIndex[random.randomInt(monstersIndex.length)].monsterId;
 
     monster.baseStats = new Stats(
       30,

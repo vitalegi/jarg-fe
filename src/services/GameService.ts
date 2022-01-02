@@ -28,6 +28,7 @@ import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import TimeUtil from "@/utils/TimeUtil";
 import { Animation, AnimationSrc } from "@/models/Animation";
 import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
+import GameLoop from "@/game-engine/GameLoop";
 
 @Service()
 export default class GameService {
@@ -57,7 +58,7 @@ export default class GameService {
   protected app: PIXI.Application | null = null;
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected leftMenu: LeftMenu | null = null;
-  protected gameLoopHandlers: Drawer[] = [];
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   public getMap(): MapContainer {
     return this.map;
@@ -106,7 +107,7 @@ export default class GameService {
         this.userActionService.addActionHandler(
           new CharacterStatsUserActionHandler()
         );
-        this.addGameLoopHandler(new MonsterAnimationDrawer());
+        this.gameLoop.addGameLoopHandler(new MonsterAnimationDrawer());
 
         const container = new PIXI.Container();
         container.name = "BATTLE_CONTAINER";
@@ -123,7 +124,7 @@ export default class GameService {
               this.map.options
             );
             this.getBattleContainer()?.addChild(sprite);
-            const handler = this.getMonsterAnimationDrawer();
+            const handler = this.gameLoop.getMonsterAnimationDrawer();
             handler.addMonster(
               monster.uuid,
               this.monsterIndexRepository.getMonster(monster.modelId),
@@ -133,12 +134,12 @@ export default class GameService {
           });
           this.turnManager.addCharacters(this.map.monsters);
           this.turnManager.initTurns();
-          this.addGameLoopHandler(
+          this.gameLoop.addGameLoopHandler(
             new TurnBoxDrawer(this.getApp().stage, this.map)
           );
           this.startCharacterTurn();
 
-          this.getApp().ticker.add(() => this.gameLoop());
+          this.getApp().ticker.add(() => this.gameLoop.gameLoop());
         });
       });
   }
@@ -203,7 +204,7 @@ export default class GameService {
 
       const container = this.getBattleContainer().getChildByName(monster.uuid);
 
-      this.getMonsterAnimationDrawer().removeMonster(monster.uuid);
+      this.gameLoop.getMonsterAnimationDrawer().removeMonster(monster.uuid);
 
       this.getBattleContainer().removeChild(container);
 
@@ -237,27 +238,6 @@ export default class GameService {
     }
   }
 
-  protected gameLoop(): void {
-    const timestamp = TimeUtil.timestamp();
-    this.gameLoopHandlers
-      .filter((h) => !h.completed())
-      .forEach((h) => {
-        try {
-          h.draw();
-        } catch (e) {
-          console.error(e);
-        }
-      });
-    const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
-    const msg = `MONITORING Drawers time_taken=${duration}ms`;
-    if (duration > 10) {
-      console.log(msg);
-    } else {
-      console.debug(msg);
-    }
-
-    this.gameLoopHandlers = this.gameLoopHandlers.filter((h) => !h.completed());
-  }
   protected initMapTile(tile: Tile): void {
     const spriteConfig = this.gameAssetService.getMapSprite(
       this.map,
@@ -318,7 +298,7 @@ export default class GameService {
     console.log(`Focus on ${monster.coordinates}`);
     if (monster.coordinates) {
       const focus = new ChangeFocusDrawer(monster.coordinates);
-      this.addGameLoopHandler(focus);
+      this.gameLoop.addGameLoopHandler(focus);
       await focus.notifyWhenCompleted();
     }
     if (playerId === monster.ownerId) {
@@ -392,10 +372,6 @@ export default class GameService {
     return null;
   }
 
-  public addGameLoopHandler(drawer: Drawer): void {
-    this.gameLoopHandlers.push(drawer);
-  }
-
   protected async updateAnimationMetadata(
     monster: MonsterIndex,
     animationSrc: AnimationSrc
@@ -408,11 +384,5 @@ export default class GameService {
     console.log(
       `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
     );
-  }
-
-  protected getMonsterAnimationDrawer(): MonsterAnimationDrawer {
-    return this.gameLoopHandlers.filter(
-      (h) => h.getName() === MonsterAnimationDrawer.NAME
-    )[0] as MonsterAnimationDrawer;
   }
 }

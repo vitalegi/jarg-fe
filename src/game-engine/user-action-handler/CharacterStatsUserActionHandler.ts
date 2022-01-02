@@ -1,11 +1,14 @@
 import GameService from "@/services/GameService";
 import Container from "typedi";
+import GameLoop from "../GameLoop";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import MonsterInfoDrawer from "../ui/MonsterInfoDrawer";
 import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
 export default class CharacterStatsUserActionHandler extends UserActionHandler {
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
+
   public getName(): string {
     return "CharacterStatsUserActionHandler";
   }
@@ -23,7 +26,7 @@ export default class CharacterStatsUserActionHandler extends UserActionHandler {
       const monster = gameService.getMonsterById(input.getMonsterId());
       const monsterIndex = monsterIndexRepository.getMonster(monster.modelId);
 
-      gameService.addGameLoopHandler(
+      this.gameLoop.addGameLoopHandler(
         new MonsterInfoDrawer(gameService.getApp().stage, monster, monsterIndex)
       );
     }

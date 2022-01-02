@@ -10,12 +10,15 @@ import TextOverCharacter from "../ui/TextOverCharacterDrawer";
 import AbilityEffect from "./AbilityEffect";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
+import GameLoop from "../GameLoop";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
+
   protected source: Monster;
   protected target: Monster;
   protected ability: Ability;
@@ -56,7 +59,7 @@ export default class AbilityExecutor {
         fromHP,
         toHP
       );
-      this.gameService.addGameLoopHandler(healthUpdater);
+      this.gameLoop.addGameLoopHandler(healthUpdater);
       await healthUpdater.notifyWhenCompleted();
     } else {
       console.log("Miss");
@@ -74,7 +77,7 @@ export default class AbilityExecutor {
   protected focusTarget(): Promise<void> {
     if (this.target.coordinates) {
       const focus = new ChangeFocusDrawer(this.target.coordinates);
-      this.gameService.addGameLoopHandler(focus);
+      this.gameLoop.addGameLoopHandler(focus);
       return focus.notifyWhenCompleted();
     }
     return Promise.resolve();
@@ -83,20 +86,20 @@ export default class AbilityExecutor {
   protected async showAbilityName(): Promise<void> {
     console.log(`show ability name ${this.ability.label}`);
     const ability = new AbilityNameDrawer(this.ability.label);
-    this.gameService.addGameLoopHandler(ability);
+    this.gameLoop.addGameLoopHandler(ability);
     return ability.notifyWhenCompleted();
   }
 
   protected showAbilityEffects(effects: AbilityEffect[]): Promise<void> {
     const msg = effects.map((e) => e.textualEffect(this.target)).join("\n");
     const drawer = new TextOverCharacter(this.target, msg);
-    this.gameService.addGameLoopHandler(drawer);
+    this.gameLoop.addGameLoopHandler(drawer);
     return drawer.notifyWhenCompleted();
   }
 
   protected showMiss(): Promise<void> {
     const drawer = TextOverCharacter.miss(this.target);
-    this.gameService.addGameLoopHandler(drawer);
+    this.gameLoop.addGameLoopHandler(drawer);
     return drawer.notifyWhenCompleted();
   }
 
