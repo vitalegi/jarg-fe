@@ -1,11 +1,17 @@
 import MapContainer from "@/models/Map";
-import { MonsterIndex } from "@/models/Character";
+import { Monster, MonsterIndex } from "@/models/Character";
 import * as PIXI from "pixi.js";
 import { Service } from "typedi";
+import { Animation } from "@/models/Animation";
 
 class Asset {
   name = "";
   url = "";
+
+  public constructor(name = "", url = "") {
+    this.name = name;
+    this.url = url;
+  }
 }
 
 @Service()
@@ -16,14 +22,10 @@ export default class RendererService {
       .map((sprite) => {
         return { name: sprite, url: sprite };
       });
-    const monstersSprites = monsters
-      .map((monster) => monster.sprite)
-      .map((sprite) => {
-        return { name: sprite, url: sprite };
-      });
 
-    const images = this.removeDuplicates([...mapSprites, ...monstersSprites]);
+    const images = this.removeDuplicates(mapSprites);
     await this.loadImages(images);
+    await this.loadSpriteSheets(monsters);
   }
 
   private loadImages(images: Asset[]): Promise<void> {
@@ -32,6 +34,16 @@ export default class RendererService {
         resolve();
       });
     });
+  }
+
+  private async loadSpriteSheets(monsters: MonsterIndex[]): Promise<void> {
+    console.log("Load SpriteSheet");
+
+    const assets = monsters.flatMap((m) =>
+      m.animationsSrc.map((a) => new Asset(`${m.name}_${a.key}`, a.sprites))
+    );
+    await this.loadImages(assets);
+    console.log("Load SpriteSheet done", assets);
   }
 
   private removeDuplicates(images: Asset[]): Asset[] {
@@ -70,6 +82,28 @@ export default class RendererService {
     sprite.animationSpeed = 0.05;
     sprite.play();
     return sprite;
+  }
+
+  public createMonsterSprite(
+    monsterIndex: MonsterIndex,
+    key = "normal"
+  ): PIXI.AnimatedSprite {
+    const metadata = monsterIndex.animations.filter((a) => a.key === key)[0];
+
+    const sheet =
+      PIXI.Loader.shared.resources[`${monsterIndex.name}_${key}`].spritesheet;
+
+    if (!sheet) {
+      throw Error(
+        `Spritesheet for monster=${monsterIndex.name}, key=${key} not found.`
+      );
+    }
+    const textures: PIXI.Texture[] = [];
+    metadata.frames.forEach((f) => textures.push(PIXI.Texture.from(f.file)));
+    const animatedSprite = new PIXI.AnimatedSprite(textures);
+    animatedSprite.animationSpeed = 0.45;
+    animatedSprite.play();
+    return animatedSprite;
   }
 
   protected applyOptions(

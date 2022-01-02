@@ -1,0 +1,161 @@
+{
+  "name" : "squirtle",
+  "data" : {
+    "width" : 39.0,
+    "height" : 43.0
+  },
+  "frames" : [ {
+    "file" : "squirtle/squirtle1.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle2.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle3.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle4.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle5.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle6.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle7.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle8.png",
+    "duration" : 100
+  }, {
+    "file" : "squirtle/squirtle9.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle10.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle11.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle12.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle13.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle14.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle15.png",
+    "duration" : 150
+  }, {
+    "file" : "squirtle/squirtle16.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle17.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle18.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle19.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle20.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle21.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle22.png",
+    "duration" : 100
+  }, {
+    "file" : "squirtle/squirtle23.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle24.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle25.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle26.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle27.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle28.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle29.png",
+    "duration" : 350
+  }, {
+    "file" : "squirtle/squirtle30.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle31.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle32.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle33.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle34.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle35.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle36.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle37.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle38.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle39.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle40.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle41.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle42.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle43.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle44.png",
+    "duration" : 100
+  }, {
+    "file" : "squirtle/squirtle45.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle46.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle47.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle48.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle49.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle50.png",
+    "duration" : 50
+  }, {
+    "file" : "squirtle/squirtle51.png",
+    "duration" : 800
+  } ]
+}

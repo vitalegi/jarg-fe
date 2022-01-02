@@ -7,7 +7,7 @@ import PlayerService from "@/game-engine/PlayerService";
 import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
-import { Monster } from "@/models/Character";
+import { Monster, MonsterIndex } from "@/models/Character";
 import UserActionService from "../game-engine/user-action-handler/UserActionService";
 import CoordinateService from "../game-engine/CoordinateService";
 import Point from "@/models/Point";
@@ -26,6 +26,7 @@ import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragS
 import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import TimeUtil from "@/utils/TimeUtil";
+import { Animation, AnimationSrc } from "@/models/Animation";
 
 @Service()
 export default class GameService {
@@ -81,6 +82,18 @@ export default class GameService {
     this.monsterIndexRepository.init(
       await this.gameAssetService.getMonstersData()
     );
+
+    console.log("Load animations' metadata");
+    const monsters = this.monsterIndexRepository.getMonsters();
+    const promises: Promise<void>[] = [];
+    for (const monster of monsters) {
+      for (const animationSrc of monster.animationsSrc) {
+        promises.push(this.updateAnimationMetadata(monster, animationSrc));
+      }
+    }
+    await Promise.all(promises);
+    console.log("Load animations' metadata done.");
+
     this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
 
     this.rendererService
@@ -369,5 +382,19 @@ export default class GameService {
 
   public addGameLoopHandler(drawer: Drawer): void {
     this.gameLoopHandlers.push(drawer);
+  }
+
+  protected async updateAnimationMetadata(
+    monster: MonsterIndex,
+    animationSrc: AnimationSrc
+  ): Promise<void> {
+    const animation = await this.gameAssetService.getAnimationMetadata(
+      animationSrc.key,
+      animationSrc.metadata
+    );
+    monster.animations.push(animation);
+    console.log(
+      `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
+    );
   }
 }

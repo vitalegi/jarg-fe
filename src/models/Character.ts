@@ -1,4 +1,5 @@
 import Ability from "@/game-engine/monster-action/Ability";
+import { Animation, AnimationSrc } from "./Animation";
 import Point from "./Point";
 import Stats from "./Stats";
 
@@ -61,13 +62,20 @@ export class Monster extends Character {
 export class MonsterIndex {
   monsterId = "";
   name = "";
-  sprite = "";
+  animationsSrc: AnimationSrc[] = [];
+  animations: Animation[] = [];
 
   public static fromJson(data: any): MonsterIndex {
     const out = new MonsterIndex();
     out.monsterId = data.monsterId;
     out.name = data.name;
-    out.sprite = data.sprite;
+
+    if (data.animationsSrc) {
+      out.animationsSrc = data.animationsSrc.map((a: any) =>
+        AnimationSrc.fromJson(a)
+      );
+    }
+
     return out;
   }
 }

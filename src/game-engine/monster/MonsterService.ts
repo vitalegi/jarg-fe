@@ -84,7 +84,7 @@ export default class MonsterService {
     const monsterFamily = this.monsterIndexRepository.getMonster(
       monster.modelId
     );
-    const sprite = this.rendererService.createSprite(monsterFamily.sprite);
+    const sprite = this.rendererService.createMonsterSprite(monsterFamily);
     sprite.name = "sprite";
 
     const container = new PIXI.Container();
@@ -98,6 +98,9 @@ export default class MonsterService {
       );
       container.x = point.x;
       container.y = point.y;
+
+      sprite.x = (options.tileWidth - sprite.width) / 2;
+      sprite.y = (options.tileHeight - sprite.height) / 2;
     }
     this.healthBarService.createBar(container, monster, options);
     this.userActionService.initMonster(monster.uuid, container);

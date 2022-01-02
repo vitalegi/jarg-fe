@@ -1,12 +1,24 @@
 [
-    {
-      "monsterId": "007",
-      "name": "Squirtle",
-      "sprite": "/static/monsters/sprites/squirtle.png"
-    },
-    {
-      "monsterId": "004",
-      "name": "Charmander",
-      "sprite": "/static/monsters/sprites/charmander.png"
-    }
+  {
+    "monsterId": "007",
+    "name": "Squirtle",
+    "animationsSrc": [
+      {
+        "key": "normal",
+        "metadata": "/static/monsters/sprites/squirtle-metadata.json",
+        "sprites": "/static/monsters/sprites/squirtle-spritesheet.json"
+      }
+    ]
+  },
+  {
+    "monsterId": "004",
+    "name": "Charmander",
+    "animationsSrc": [
+      {
+        "key": "normal",
+        "metadata": "/static/monsters/sprites/charmander-metadata.json",
+        "sprites": "/static/monsters/sprites/charmander-spritesheet.json"
+      }
+    ]
+  }
 ]

@@ -4,6 +4,7 @@ import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
 import Ability from "@/game-engine/monster-action/Ability";
+import { Animation } from "@/models/Animation";
 
 @Service()
 export default class GameAssetService {
@@ -19,6 +20,14 @@ export default class GameAssetService {
       .get()
       .call();
     return result.data.map(MonsterIndex.fromJson);
+  }
+
+  public async getAnimationMetadata(
+    key: string,
+    url: string
+  ): Promise<Animation> {
+    const result = await BackendWebService.url(url).get().call();
+    return Animation.fromJson(key, result.data);
   }
 
   public async getAbilitiesData(): Promise<Ability[]> {
