@@ -70,7 +70,7 @@ export default abstract class Drawer {
     return this._id;
   }
 
-  protected abstract getName(): string;
+  public abstract getName(): string;
 
   public startTime(): number {
     return this._startTime;

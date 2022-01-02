@@ -100,10 +100,7 @@ export default class RendererService {
     }
     const textures: PIXI.Texture[] = [];
     metadata.frames.forEach((f) => textures.push(PIXI.Texture.from(f.file)));
-    const animatedSprite = new PIXI.AnimatedSprite(textures);
-    animatedSprite.animationSpeed = 0.45;
-    animatedSprite.play();
-    return animatedSprite;
+    return new PIXI.AnimatedSprite(textures);
   }
 
   protected applyOptions(

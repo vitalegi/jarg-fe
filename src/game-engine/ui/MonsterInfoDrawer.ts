@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import { Monster, MonsterIndex } from "@/models/Character";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
@@ -16,6 +16,7 @@ export default class MonsterInfoDrawer extends Drawer {
   protected container: PIXI.Container | null = null;
   protected frame = new FrameImpl();
   protected monster;
+  protected monsterIndex;
   protected _height = 0;
 
   protected options = {
@@ -42,17 +43,22 @@ export default class MonsterInfoDrawer extends Drawer {
     },
   };
 
-  public constructor(parent: PIXI.Container, monster: Monster) {
+  public constructor(
+    parent: PIXI.Container,
+    monster: Monster,
+    monsterIndex: MonsterIndex
+  ) {
     super();
     this.parent = parent;
     this.monster = monster;
+    this.monsterIndex = monsterIndex;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "MonsterInfoDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     if (this.container === null) {
       console.log(`Show stats of ${this.monster.uuid}`);
       this.container = new PIXI.Container();
@@ -74,6 +80,7 @@ export default class MonsterInfoDrawer extends Drawer {
 
       const x1 = this.statsCol1();
       this.addText(this.monster.name, x1, lineY());
+      this.addText(`${this.monsterIndex.name}`, x1, lineY());
       this.addText(`Lv. ${this.monster.level}`, x1, lineY());
       this.addText(`Exp ${f(this.monster.experience)}`, x1, lineY());
 

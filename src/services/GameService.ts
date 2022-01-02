@@ -27,6 +27,7 @@ import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/C
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import TimeUtil from "@/utils/TimeUtil";
 import { Animation, AnimationSrc } from "@/models/Animation";
+import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 
 @Service()
 export default class GameService {
@@ -105,6 +106,7 @@ export default class GameService {
         this.userActionService.addActionHandler(
           new CharacterStatsUserActionHandler()
         );
+        this.addGameLoopHandler(new MonsterAnimationDrawer());
 
         const container = new PIXI.Container();
         container.name = "BATTLE_CONTAINER";
@@ -121,6 +123,13 @@ export default class GameService {
               this.map.options
             );
             this.getBattleContainer()?.addChild(sprite);
+            const handler = this.getMonsterAnimationDrawer();
+            handler.addMonster(
+              monster.uuid,
+              this.monsterIndexRepository.getMonster(monster.modelId),
+              this.monsterService.getMonsterSprite(sprite),
+              "normal"
+            );
           });
           this.turnManager.addCharacters(this.map.monsters);
           this.turnManager.initTurns();
@@ -193,6 +202,9 @@ export default class GameService {
       console.log(`Monster ${monster.uuid} died.`);
 
       const container = this.getBattleContainer().getChildByName(monster.uuid);
+
+      this.getMonsterAnimationDrawer().removeMonster(monster.uuid);
+
       this.getBattleContainer().removeChild(container);
 
       this.map.monsters = this.map.monsters.filter(
@@ -396,5 +408,11 @@ export default class GameService {
     console.log(
       `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
     );
+  }
+
+  protected getMonsterAnimationDrawer(): MonsterAnimationDrawer {
+    return this.gameLoopHandlers.filter(
+      (h) => h.getName() === MonsterAnimationDrawer.NAME
+    )[0] as MonsterAnimationDrawer;
   }
 }

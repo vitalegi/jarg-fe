@@ -21,11 +21,11 @@ export default class ChangeFocusDrawer extends Drawer {
     this.target = target;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "ChangeFocusDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     const container = this.getContainer();
 
     if (this.startingOffset === null) {

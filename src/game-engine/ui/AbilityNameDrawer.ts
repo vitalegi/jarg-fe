@@ -37,11 +37,11 @@ export default class AbilityNameDrawer extends Drawer {
     this.label = label;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "AbilityNameDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     if (this.isFirstDraw()) {
       console.log(`Show ability ${this.label}`);
       this.getGameService().getApp().stage.addChild(this.createText());

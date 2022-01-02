@@ -32,11 +32,11 @@ export default class TextOverCharacterDrawer extends Drawer {
     this.text = text;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "TextOverCharacterDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     if (this.isFirstDraw()) {
       console.log(`Show text`);
       const container = this.getMonsterContainer();

@@ -43,11 +43,11 @@ export default class TurnBoxDrawer extends Drawer {
     this.map = map;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "TurnBoxDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     const newTurns = this.getTurns();
     if (this.container === null) {
       this.container = new PIXI.Container();

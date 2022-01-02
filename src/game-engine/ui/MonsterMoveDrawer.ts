@@ -28,11 +28,11 @@ export default class MonsterMoveDrawer extends Drawer {
     this.to = to;
   }
 
-  protected getName(): string {
+  public getName(): string {
     return "MonsterMoveDrawer";
   }
 
-  public doDraw(): void {
+  protected doDraw(): void {
     const container = this.getMonsterContainer();
     if (!container) {
       this.complete();
