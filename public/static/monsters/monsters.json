@@ -1,176 +1,5136 @@
 [
   {
-    "monsterId": "007",
-    "name": "Squirtle",
-    "animationsSrc": [
-      {
-        "key": "normal",
-        "metadata": "/static/monsters/sprites/squirtle-metadata.json",
-        "sprites": "/static/monsters/sprites/squirtle-spritesheet.json"
+      "monsterId": "abra",
+      "name": "abra",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/abra-metadata.json",
+              "sprites": "/static/monsters/sprites/abra-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
       }
-    ]
   },
   {
-    "monsterId": "004",
-    "name": "Charmander",
-    "animationsSrc": [
-      {
-        "key": "normal",
-        "metadata": "/static/monsters/sprites/charmander-metadata.json",
-        "sprites": "/static/monsters/sprites/charmander-spritesheet.json"
+      "monsterId": "aerodactyl",
+      "name": "aerodactyl",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/aerodactyl-metadata.json",
+              "sprites": "/static/monsters/sprites/aerodactyl-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
       }
-    ]
   },
-  
-  {"monsterId": "abra", "name": "abra", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/abra-metadata.json",      "sprites": "/static/monsters/sprites/abra-spritesheet.json"     }]  },
-{"monsterId": "aerodactyl", "name": "aerodactyl", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/aerodactyl-metadata.json",      "sprites": "/static/monsters/sprites/aerodactyl-spritesheet.json"     }]  },
-{"monsterId": "alakazam", "name": "alakazam", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/alakazam-metadata.json",      "sprites": "/static/monsters/sprites/alakazam-spritesheet.json"     }]  },
-{"monsterId": "arbok", "name": "arbok", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/arbok-metadata.json",      "sprites": "/static/monsters/sprites/arbok-spritesheet.json"     }]  },
-{"monsterId": "arcanine", "name": "arcanine", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/arcanine-metadata.json",      "sprites": "/static/monsters/sprites/arcanine-spritesheet.json"     }]  },
-{"monsterId": "articuno", "name": "articuno", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/articuno-metadata.json",      "sprites": "/static/monsters/sprites/articuno-spritesheet.json"     }]  },
-{"monsterId": "beedrill", "name": "beedrill", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/beedrill-metadata.json",      "sprites": "/static/monsters/sprites/beedrill-spritesheet.json"     }]  },
-{"monsterId": "bellsprout", "name": "bellsprout", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/bellsprout-metadata.json",      "sprites": "/static/monsters/sprites/bellsprout-spritesheet.json"     }]  },
-{"monsterId": "blastoise", "name": "blastoise", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/blastoise-metadata.json",      "sprites": "/static/monsters/sprites/blastoise-spritesheet.json"     }]  },
-{"monsterId": "bulbasaur", "name": "bulbasaur", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/bulbasaur-metadata.json",      "sprites": "/static/monsters/sprites/bulbasaur-spritesheet.json"     }]  },
-{"monsterId": "butterfree", "name": "butterfree", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/butterfree-metadata.json",      "sprites": "/static/monsters/sprites/butterfree-spritesheet.json"     }]  },
-{"monsterId": "caterpie", "name": "caterpie", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/caterpie-metadata.json",      "sprites": "/static/monsters/sprites/caterpie-spritesheet.json"     }]  },
-{"monsterId": "chansey", "name": "chansey", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/chansey-metadata.json",      "sprites": "/static/monsters/sprites/chansey-spritesheet.json"     }]  },
-{"monsterId": "charizard", "name": "charizard", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/charizard-metadata.json",      "sprites": "/static/monsters/sprites/charizard-spritesheet.json"     }]  },
-{"monsterId": "charmander", "name": "charmander", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/charmander-metadata.json",      "sprites": "/static/monsters/sprites/charmander-spritesheet.json"     }]  },
-{"monsterId": "charmeleon", "name": "charmeleon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/charmeleon-metadata.json",      "sprites": "/static/monsters/sprites/charmeleon-spritesheet.json"     }]  },
-{"monsterId": "clefable", "name": "clefable", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/clefable-metadata.json",      "sprites": "/static/monsters/sprites/clefable-spritesheet.json"     }]  },
-{"monsterId": "clefairy", "name": "clefairy", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/clefairy-metadata.json",      "sprites": "/static/monsters/sprites/clefairy-spritesheet.json"     }]  },
-{"monsterId": "cloyster", "name": "cloyster", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/cloyster-metadata.json",      "sprites": "/static/monsters/sprites/cloyster-spritesheet.json"     }]  },
-{"monsterId": "cubone", "name": "cubone", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/cubone-metadata.json",      "sprites": "/static/monsters/sprites/cubone-spritesheet.json"     }]  },
-{"monsterId": "dewgong", "name": "dewgong", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dewgong-metadata.json",      "sprites": "/static/monsters/sprites/dewgong-spritesheet.json"     }]  },
-{"monsterId": "diglett", "name": "diglett", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/diglett-metadata.json",      "sprites": "/static/monsters/sprites/diglett-spritesheet.json"     }]  },
-{"monsterId": "ditto", "name": "ditto", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/ditto-metadata.json",      "sprites": "/static/monsters/sprites/ditto-spritesheet.json"     }]  },
-{"monsterId": "dodrio", "name": "dodrio", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dodrio-metadata.json",      "sprites": "/static/monsters/sprites/dodrio-spritesheet.json"     }]  },
-{"monsterId": "doduo", "name": "doduo", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/doduo-metadata.json",      "sprites": "/static/monsters/sprites/doduo-spritesheet.json"     }]  },
-{"monsterId": "dragonair", "name": "dragonair", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dragonair-metadata.json",      "sprites": "/static/monsters/sprites/dragonair-spritesheet.json"     }]  },
-{"monsterId": "dragonite", "name": "dragonite", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dragonite-metadata.json",      "sprites": "/static/monsters/sprites/dragonite-spritesheet.json"     }]  },
-{"monsterId": "dratini", "name": "dratini", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dratini-metadata.json",      "sprites": "/static/monsters/sprites/dratini-spritesheet.json"     }]  },
-{"monsterId": "drowzee", "name": "drowzee", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/drowzee-metadata.json",      "sprites": "/static/monsters/sprites/drowzee-spritesheet.json"     }]  },
-{"monsterId": "dugtrio", "name": "dugtrio", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/dugtrio-metadata.json",      "sprites": "/static/monsters/sprites/dugtrio-spritesheet.json"     }]  },
-{"monsterId": "eevee", "name": "eevee", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/eevee-metadata.json",      "sprites": "/static/monsters/sprites/eevee-spritesheet.json"     }]  },
-{"monsterId": "ekans", "name": "ekans", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/ekans-metadata.json",      "sprites": "/static/monsters/sprites/ekans-spritesheet.json"     }]  },
-{"monsterId": "electabuzz", "name": "electabuzz", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/electabuzz-metadata.json",      "sprites": "/static/monsters/sprites/electabuzz-spritesheet.json"     }]  },
-{"monsterId": "electrode", "name": "electrode", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/electrode-metadata.json",      "sprites": "/static/monsters/sprites/electrode-spritesheet.json"     }]  },
-{"monsterId": "exeggcute", "name": "exeggcute", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/exeggcute-metadata.json",      "sprites": "/static/monsters/sprites/exeggcute-spritesheet.json"     }]  },
-{"monsterId": "exeggutor", "name": "exeggutor", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/exeggutor-metadata.json",      "sprites": "/static/monsters/sprites/exeggutor-spritesheet.json"     }]  },
-{"monsterId": "farfetchd", "name": "farfetchd", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/farfetchd-metadata.json",      "sprites": "/static/monsters/sprites/farfetchd-spritesheet.json"     }]  },
-{"monsterId": "fearow", "name": "fearow", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/fearow-metadata.json",      "sprites": "/static/monsters/sprites/fearow-spritesheet.json"     }]  },
-{"monsterId": "flareon", "name": "flareon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/flareon-metadata.json",      "sprites": "/static/monsters/sprites/flareon-spritesheet.json"     }]  },
-{"monsterId": "gastly", "name": "gastly", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/gastly-metadata.json",      "sprites": "/static/monsters/sprites/gastly-spritesheet.json"     }]  },
-{"monsterId": "gengar", "name": "gengar", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/gengar-metadata.json",      "sprites": "/static/monsters/sprites/gengar-spritesheet.json"     }]  },
-{"monsterId": "geodude", "name": "geodude", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/geodude-metadata.json",      "sprites": "/static/monsters/sprites/geodude-spritesheet.json"     }]  },
-{"monsterId": "gloom", "name": "gloom", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/gloom-metadata.json",      "sprites": "/static/monsters/sprites/gloom-spritesheet.json"     }]  },
-{"monsterId": "golbat", "name": "golbat", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/golbat-metadata.json",      "sprites": "/static/monsters/sprites/golbat-spritesheet.json"     }]  },
-{"monsterId": "goldeen", "name": "goldeen", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/goldeen-metadata.json",      "sprites": "/static/monsters/sprites/goldeen-spritesheet.json"     }]  },
-{"monsterId": "golduck", "name": "golduck", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/golduck-metadata.json",      "sprites": "/static/monsters/sprites/golduck-spritesheet.json"     }]  },
-{"monsterId": "golem", "name": "golem", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/golem-metadata.json",      "sprites": "/static/monsters/sprites/golem-spritesheet.json"     }]  },
-{"monsterId": "graveler", "name": "graveler", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/graveler-metadata.json",      "sprites": "/static/monsters/sprites/graveler-spritesheet.json"     }]  },
-{"monsterId": "grimer", "name": "grimer", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/grimer-metadata.json",      "sprites": "/static/monsters/sprites/grimer-spritesheet.json"     }]  },
-{"monsterId": "growlithe", "name": "growlithe", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/growlithe-metadata.json",      "sprites": "/static/monsters/sprites/growlithe-spritesheet.json"     }]  },
-{"monsterId": "gyarados", "name": "gyarados", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/gyarados-metadata.json",      "sprites": "/static/monsters/sprites/gyarados-spritesheet.json"     }]  },
-{"monsterId": "haunter", "name": "haunter", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/haunter-metadata.json",      "sprites": "/static/monsters/sprites/haunter-spritesheet.json"     }]  },
-{"monsterId": "hitmonchan", "name": "hitmonchan", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/hitmonchan-metadata.json",      "sprites": "/static/monsters/sprites/hitmonchan-spritesheet.json"     }]  },
-{"monsterId": "hitmonlee", "name": "hitmonlee", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/hitmonlee-metadata.json",      "sprites": "/static/monsters/sprites/hitmonlee-spritesheet.json"     }]  },
-{"monsterId": "horsea", "name": "horsea", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/horsea-metadata.json",      "sprites": "/static/monsters/sprites/horsea-spritesheet.json"     }]  },
-{"monsterId": "hypno", "name": "hypno", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/hypno-metadata.json",      "sprites": "/static/monsters/sprites/hypno-spritesheet.json"     }]  },
-{"monsterId": "ivysaur", "name": "ivysaur", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/ivysaur-metadata.json",      "sprites": "/static/monsters/sprites/ivysaur-spritesheet.json"     }]  },
-{"monsterId": "jigglypuff", "name": "jigglypuff", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/jigglypuff-metadata.json",      "sprites": "/static/monsters/sprites/jigglypuff-spritesheet.json"     }]  },
-{"monsterId": "jolteon", "name": "jolteon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/jolteon-metadata.json",      "sprites": "/static/monsters/sprites/jolteon-spritesheet.json"     }]  },
-{"monsterId": "jynx", "name": "jynx", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/jynx-metadata.json",      "sprites": "/static/monsters/sprites/jynx-spritesheet.json"     }]  },
-{"monsterId": "kabuto", "name": "kabuto", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kabuto-metadata.json",      "sprites": "/static/monsters/sprites/kabuto-spritesheet.json"     }]  },
-{"monsterId": "kabutops", "name": "kabutops", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kabutops-metadata.json",      "sprites": "/static/monsters/sprites/kabutops-spritesheet.json"     }]  },
-{"monsterId": "kadabra", "name": "kadabra", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kadabra-metadata.json",      "sprites": "/static/monsters/sprites/kadabra-spritesheet.json"     }]  },
-{"monsterId": "kakuna", "name": "kakuna", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kakuna-metadata.json",      "sprites": "/static/monsters/sprites/kakuna-spritesheet.json"     }]  },
-{"monsterId": "kangaskhan", "name": "kangaskhan", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kangaskhan-metadata.json",      "sprites": "/static/monsters/sprites/kangaskhan-spritesheet.json"     }]  },
-{"monsterId": "kingler", "name": "kingler", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/kingler-metadata.json",      "sprites": "/static/monsters/sprites/kingler-spritesheet.json"     }]  },
-{"monsterId": "koffing", "name": "koffing", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/koffing-metadata.json",      "sprites": "/static/monsters/sprites/koffing-spritesheet.json"     }]  },
-{"monsterId": "krabby", "name": "krabby", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/krabby-metadata.json",      "sprites": "/static/monsters/sprites/krabby-spritesheet.json"     }]  },
-{"monsterId": "lapras", "name": "lapras", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/lapras-metadata.json",      "sprites": "/static/monsters/sprites/lapras-spritesheet.json"     }]  },
-{"monsterId": "lickitung", "name": "lickitung", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/lickitung-metadata.json",      "sprites": "/static/monsters/sprites/lickitung-spritesheet.json"     }]  },
-{"monsterId": "machamp", "name": "machamp", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/machamp-metadata.json",      "sprites": "/static/monsters/sprites/machamp-spritesheet.json"     }]  },
-{"monsterId": "machoke", "name": "machoke", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/machoke-metadata.json",      "sprites": "/static/monsters/sprites/machoke-spritesheet.json"     }]  },
-{"monsterId": "machop", "name": "machop", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/machop-metadata.json",      "sprites": "/static/monsters/sprites/machop-spritesheet.json"     }]  },
-{"monsterId": "magikarp", "name": "magikarp", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/magikarp-metadata.json",      "sprites": "/static/monsters/sprites/magikarp-spritesheet.json"     }]  },
-{"monsterId": "magmar", "name": "magmar", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/magmar-metadata.json",      "sprites": "/static/monsters/sprites/magmar-spritesheet.json"     }]  },
-{"monsterId": "magnemite", "name": "magnemite", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/magnemite-metadata.json",      "sprites": "/static/monsters/sprites/magnemite-spritesheet.json"     }]  },
-{"monsterId": "magneton", "name": "magneton", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/magneton-metadata.json",      "sprites": "/static/monsters/sprites/magneton-spritesheet.json"     }]  },
-{"monsterId": "mankey", "name": "mankey", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/mankey-metadata.json",      "sprites": "/static/monsters/sprites/mankey-spritesheet.json"     }]  },
-{"monsterId": "marowak", "name": "marowak", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/marowak-metadata.json",      "sprites": "/static/monsters/sprites/marowak-spritesheet.json"     }]  },
-{"monsterId": "meowth", "name": "meowth", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/meowth-metadata.json",      "sprites": "/static/monsters/sprites/meowth-spritesheet.json"     }]  },
-{"monsterId": "metapod", "name": "metapod", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/metapod-metadata.json",      "sprites": "/static/monsters/sprites/metapod-spritesheet.json"     }]  },
-{"monsterId": "mew", "name": "mew", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/mew-metadata.json",      "sprites": "/static/monsters/sprites/mew-spritesheet.json"     }]  },
-{"monsterId": "mewtwo", "name": "mewtwo", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/mewtwo-metadata.json",      "sprites": "/static/monsters/sprites/mewtwo-spritesheet.json"     }]  },
-{"monsterId": "moltres", "name": "moltres", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/moltres-metadata.json",      "sprites": "/static/monsters/sprites/moltres-spritesheet.json"     }]  },
-{"monsterId": "mr-mime", "name": "mr-mime", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/mr-mime-metadata.json",      "sprites": "/static/monsters/sprites/mr-mime-spritesheet.json"     }]  },
-{"monsterId": "muk", "name": "muk", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/muk-metadata.json",      "sprites": "/static/monsters/sprites/muk-spritesheet.json"     }]  },
-{"monsterId": "nidoking", "name": "nidoking", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidoking-metadata.json",      "sprites": "/static/monsters/sprites/nidoking-spritesheet.json"     }]  },
-{"monsterId": "nidoqueen", "name": "nidoqueen", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidoqueen-metadata.json",      "sprites": "/static/monsters/sprites/nidoqueen-spritesheet.json"     }]  },
-{"monsterId": "nidoran-f", "name": "nidoran-f", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidoran-f-metadata.json",      "sprites": "/static/monsters/sprites/nidoran-f-spritesheet.json"     }]  },
-{"monsterId": "nidoran-m", "name": "nidoran-m", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidoran-m-metadata.json",      "sprites": "/static/monsters/sprites/nidoran-m-spritesheet.json"     }]  },
-{"monsterId": "nidorina", "name": "nidorina", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidorina-metadata.json",      "sprites": "/static/monsters/sprites/nidorina-spritesheet.json"     }]  },
-{"monsterId": "nidorino", "name": "nidorino", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/nidorino-metadata.json",      "sprites": "/static/monsters/sprites/nidorino-spritesheet.json"     }]  },
-{"monsterId": "ninetales", "name": "ninetales", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/ninetales-metadata.json",      "sprites": "/static/monsters/sprites/ninetales-spritesheet.json"     }]  },
-{"monsterId": "oddish", "name": "oddish", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/oddish-metadata.json",      "sprites": "/static/monsters/sprites/oddish-spritesheet.json"     }]  },
-{"monsterId": "omanyte", "name": "omanyte", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/omanyte-metadata.json",      "sprites": "/static/monsters/sprites/omanyte-spritesheet.json"     }]  },
-{"monsterId": "omastar", "name": "omastar", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/omastar-metadata.json",      "sprites": "/static/monsters/sprites/omastar-spritesheet.json"     }]  },
-{"monsterId": "onix", "name": "onix", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/onix-metadata.json",      "sprites": "/static/monsters/sprites/onix-spritesheet.json"     }]  },
-{"monsterId": "paras", "name": "paras", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/paras-metadata.json",      "sprites": "/static/monsters/sprites/paras-spritesheet.json"     }]  },
-{"monsterId": "parasect", "name": "parasect", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/parasect-metadata.json",      "sprites": "/static/monsters/sprites/parasect-spritesheet.json"     }]  },
-{"monsterId": "persian", "name": "persian", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/persian-metadata.json",      "sprites": "/static/monsters/sprites/persian-spritesheet.json"     }]  },
-{"monsterId": "pidgeot", "name": "pidgeot", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/pidgeot-metadata.json",      "sprites": "/static/monsters/sprites/pidgeot-spritesheet.json"     }]  },
-{"monsterId": "pidgeotto", "name": "pidgeotto", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/pidgeotto-metadata.json",      "sprites": "/static/monsters/sprites/pidgeotto-spritesheet.json"     }]  },
-{"monsterId": "pidgey", "name": "pidgey", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/pidgey-metadata.json",      "sprites": "/static/monsters/sprites/pidgey-spritesheet.json"     }]  },
-{"monsterId": "pikachu", "name": "pikachu", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/pikachu-metadata.json",      "sprites": "/static/monsters/sprites/pikachu-spritesheet.json"     }]  },
-{"monsterId": "pinsir", "name": "pinsir", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/pinsir-metadata.json",      "sprites": "/static/monsters/sprites/pinsir-spritesheet.json"     }]  },
-{"monsterId": "poliwag", "name": "poliwag", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/poliwag-metadata.json",      "sprites": "/static/monsters/sprites/poliwag-spritesheet.json"     }]  },
-{"monsterId": "poliwhirl", "name": "poliwhirl", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/poliwhirl-metadata.json",      "sprites": "/static/monsters/sprites/poliwhirl-spritesheet.json"     }]  },
-{"monsterId": "poliwrath", "name": "poliwrath", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/poliwrath-metadata.json",      "sprites": "/static/monsters/sprites/poliwrath-spritesheet.json"     }]  },
-{"monsterId": "ponyta", "name": "ponyta", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/ponyta-metadata.json",      "sprites": "/static/monsters/sprites/ponyta-spritesheet.json"     }]  },
-{"monsterId": "porygon", "name": "porygon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/porygon-metadata.json",      "sprites": "/static/monsters/sprites/porygon-spritesheet.json"     }]  },
-{"monsterId": "primeape", "name": "primeape", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/primeape-metadata.json",      "sprites": "/static/monsters/sprites/primeape-spritesheet.json"     }]  },
-{"monsterId": "psyduck", "name": "psyduck", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/psyduck-metadata.json",      "sprites": "/static/monsters/sprites/psyduck-spritesheet.json"     }]  },
-{"monsterId": "raichu", "name": "raichu", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/raichu-metadata.json",      "sprites": "/static/monsters/sprites/raichu-spritesheet.json"     }]  },
-{"monsterId": "rapidash", "name": "rapidash", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/rapidash-metadata.json",      "sprites": "/static/monsters/sprites/rapidash-spritesheet.json"     }]  },
-{"monsterId": "raticate", "name": "raticate", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/raticate-metadata.json",      "sprites": "/static/monsters/sprites/raticate-spritesheet.json"     }]  },
-{"monsterId": "rattata", "name": "rattata", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/rattata-metadata.json",      "sprites": "/static/monsters/sprites/rattata-spritesheet.json"     }]  },
-{"monsterId": "rhydon", "name": "rhydon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/rhydon-metadata.json",      "sprites": "/static/monsters/sprites/rhydon-spritesheet.json"     }]  },
-{"monsterId": "rhyhorn", "name": "rhyhorn", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/rhyhorn-metadata.json",      "sprites": "/static/monsters/sprites/rhyhorn-spritesheet.json"     }]  },
-{"monsterId": "sandshrew", "name": "sandshrew", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/sandshrew-metadata.json",      "sprites": "/static/monsters/sprites/sandshrew-spritesheet.json"     }]  },
-{"monsterId": "sandslash", "name": "sandslash", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/sandslash-metadata.json",      "sprites": "/static/monsters/sprites/sandslash-spritesheet.json"     }]  },
-{"monsterId": "scyther", "name": "scyther", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/scyther-metadata.json",      "sprites": "/static/monsters/sprites/scyther-spritesheet.json"     }]  },
-{"monsterId": "seadra", "name": "seadra", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/seadra-metadata.json",      "sprites": "/static/monsters/sprites/seadra-spritesheet.json"     }]  },
-{"monsterId": "seaking", "name": "seaking", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/seaking-metadata.json",      "sprites": "/static/monsters/sprites/seaking-spritesheet.json"     }]  },
-{"monsterId": "seel", "name": "seel", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/seel-metadata.json",      "sprites": "/static/monsters/sprites/seel-spritesheet.json"     }]  },
-{"monsterId": "shellder", "name": "shellder", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/shellder-metadata.json",      "sprites": "/static/monsters/sprites/shellder-spritesheet.json"     }]  },
-{"monsterId": "slowbro", "name": "slowbro", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/slowbro-metadata.json",      "sprites": "/static/monsters/sprites/slowbro-spritesheet.json"     }]  },
-{"monsterId": "slowpoke", "name": "slowpoke", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/slowpoke-metadata.json",      "sprites": "/static/monsters/sprites/slowpoke-spritesheet.json"     }]  },
-{"monsterId": "snorlax", "name": "snorlax", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/snorlax-metadata.json",      "sprites": "/static/monsters/sprites/snorlax-spritesheet.json"     }]  },
-{"monsterId": "spearow", "name": "spearow", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/spearow-metadata.json",      "sprites": "/static/monsters/sprites/spearow-spritesheet.json"     }]  },
-{"monsterId": "squirtle", "name": "squirtle", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/squirtle-metadata.json",      "sprites": "/static/monsters/sprites/squirtle-spritesheet.json"     }]  },
-{"monsterId": "starmie", "name": "starmie", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/starmie-metadata.json",      "sprites": "/static/monsters/sprites/starmie-spritesheet.json"     }]  },
-{"monsterId": "staryu", "name": "staryu", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/staryu-metadata.json",      "sprites": "/static/monsters/sprites/staryu-spritesheet.json"     }]  },
-{"monsterId": "tangela", "name": "tangela", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/tangela-metadata.json",      "sprites": "/static/monsters/sprites/tangela-spritesheet.json"     }]  },
-{"monsterId": "tauros", "name": "tauros", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/tauros-metadata.json",      "sprites": "/static/monsters/sprites/tauros-spritesheet.json"     }]  },
-{"monsterId": "tentacool", "name": "tentacool", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/tentacool-metadata.json",      "sprites": "/static/monsters/sprites/tentacool-spritesheet.json"     }]  },
-{"monsterId": "tentacruel", "name": "tentacruel", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/tentacruel-metadata.json",      "sprites": "/static/monsters/sprites/tentacruel-spritesheet.json"     }]  },
-{"monsterId": "vaporeon", "name": "vaporeon", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/vaporeon-metadata.json",      "sprites": "/static/monsters/sprites/vaporeon-spritesheet.json"     }]  },
-{"monsterId": "venomoth", "name": "venomoth", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/venomoth-metadata.json",      "sprites": "/static/monsters/sprites/venomoth-spritesheet.json"     }]  },
-{"monsterId": "venonat", "name": "venonat", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/venonat-metadata.json",      "sprites": "/static/monsters/sprites/venonat-spritesheet.json"     }]  },
-{"monsterId": "venusaur", "name": "venusaur", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/venusaur-metadata.json",      "sprites": "/static/monsters/sprites/venusaur-spritesheet.json"     }]  },
-{"monsterId": "victreebel", "name": "victreebel", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/victreebel-metadata.json",      "sprites": "/static/monsters/sprites/victreebel-spritesheet.json"     }]  },
-{"monsterId": "vileplume", "name": "vileplume", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/vileplume-metadata.json",      "sprites": "/static/monsters/sprites/vileplume-spritesheet.json"     }]  },
-{"monsterId": "voltorb", "name": "voltorb", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/voltorb-metadata.json",      "sprites": "/static/monsters/sprites/voltorb-spritesheet.json"     }]  },
-{"monsterId": "vulpix", "name": "vulpix", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/vulpix-metadata.json",      "sprites": "/static/monsters/sprites/vulpix-spritesheet.json"     }]  },
-{"monsterId": "wartortle", "name": "wartortle", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/wartortle-metadata.json",      "sprites": "/static/monsters/sprites/wartortle-spritesheet.json"     }]  },
-{"monsterId": "weedle", "name": "weedle", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/weedle-metadata.json",      "sprites": "/static/monsters/sprites/weedle-spritesheet.json"     }]  },
-{"monsterId": "weepinbell", "name": "weepinbell", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/weepinbell-metadata.json",      "sprites": "/static/monsters/sprites/weepinbell-spritesheet.json"     }]  },
-{"monsterId": "weezing", "name": "weezing", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/weezing-metadata.json",      "sprites": "/static/monsters/sprites/weezing-spritesheet.json"     }]  },
-{"monsterId": "wigglytuff", "name": "wigglytuff", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/wigglytuff-metadata.json",      "sprites": "/static/monsters/sprites/wigglytuff-spritesheet.json"     }]  },
-{"monsterId": "zapdos", "name": "zapdos", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/zapdos-metadata.json",      "sprites": "/static/monsters/sprites/zapdos-spritesheet.json"     }]  },
-{"monsterId": "zubat", "name": "zubat", "animationsSrc": [{ "key": "normal",  "metadata": "/static/monsters/sprites/zubat-metadata.json",      "sprites": "/static/monsters/sprites/zubat-spritesheet.json"     }]  }
+  {
+      "monsterId": "alakazam",
+      "name": "alakazam",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/alakazam-metadata.json",
+              "sprites": "/static/monsters/sprites/alakazam-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "arbok",
+      "name": "arbok",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/arbok-metadata.json",
+              "sprites": "/static/monsters/sprites/arbok-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "arcanine",
+      "name": "arcanine",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/arcanine-metadata.json",
+              "sprites": "/static/monsters/sprites/arcanine-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "articuno",
+      "name": "articuno",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/articuno-metadata.json",
+              "sprites": "/static/monsters/sprites/articuno-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "beedrill",
+      "name": "beedrill",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/beedrill-metadata.json",
+              "sprites": "/static/monsters/sprites/beedrill-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "bellsprout",
+      "name": "bellsprout",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/bellsprout-metadata.json",
+              "sprites": "/static/monsters/sprites/bellsprout-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "blastoise",
+      "name": "blastoise",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/blastoise-metadata.json",
+              "sprites": "/static/monsters/sprites/blastoise-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "bulbasaur",
+      "name": "bulbasaur",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/bulbasaur-metadata.json",
+              "sprites": "/static/monsters/sprites/bulbasaur-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "butterfree",
+      "name": "butterfree",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/butterfree-metadata.json",
+              "sprites": "/static/monsters/sprites/butterfree-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "caterpie",
+      "name": "caterpie",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/caterpie-metadata.json",
+              "sprites": "/static/monsters/sprites/caterpie-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "chansey",
+      "name": "chansey",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/chansey-metadata.json",
+              "sprites": "/static/monsters/sprites/chansey-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "charizard",
+      "name": "charizard",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/charizard-metadata.json",
+              "sprites": "/static/monsters/sprites/charizard-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "charmander",
+      "name": "charmander",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/charmander-metadata.json",
+              "sprites": "/static/monsters/sprites/charmander-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "charmeleon",
+      "name": "charmeleon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/charmeleon-metadata.json",
+              "sprites": "/static/monsters/sprites/charmeleon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "clefable",
+      "name": "clefable",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/clefable-metadata.json",
+              "sprites": "/static/monsters/sprites/clefable-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "clefairy",
+      "name": "clefairy",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/clefairy-metadata.json",
+              "sprites": "/static/monsters/sprites/clefairy-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "cloyster",
+      "name": "cloyster",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/cloyster-metadata.json",
+              "sprites": "/static/monsters/sprites/cloyster-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "cubone",
+      "name": "cubone",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/cubone-metadata.json",
+              "sprites": "/static/monsters/sprites/cubone-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dewgong",
+      "name": "dewgong",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dewgong-metadata.json",
+              "sprites": "/static/monsters/sprites/dewgong-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "diglett",
+      "name": "diglett",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/diglett-metadata.json",
+              "sprites": "/static/monsters/sprites/diglett-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "ditto",
+      "name": "ditto",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/ditto-metadata.json",
+              "sprites": "/static/monsters/sprites/ditto-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dodrio",
+      "name": "dodrio",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dodrio-metadata.json",
+              "sprites": "/static/monsters/sprites/dodrio-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "doduo",
+      "name": "doduo",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/doduo-metadata.json",
+              "sprites": "/static/monsters/sprites/doduo-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dragonair",
+      "name": "dragonair",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dragonair-metadata.json",
+              "sprites": "/static/monsters/sprites/dragonair-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dragonite",
+      "name": "dragonite",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dragonite-metadata.json",
+              "sprites": "/static/monsters/sprites/dragonite-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dratini",
+      "name": "dratini",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dratini-metadata.json",
+              "sprites": "/static/monsters/sprites/dratini-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "drowzee",
+      "name": "drowzee",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/drowzee-metadata.json",
+              "sprites": "/static/monsters/sprites/drowzee-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "dugtrio",
+      "name": "dugtrio",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/dugtrio-metadata.json",
+              "sprites": "/static/monsters/sprites/dugtrio-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "eevee",
+      "name": "eevee",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/eevee-metadata.json",
+              "sprites": "/static/monsters/sprites/eevee-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "ekans",
+      "name": "ekans",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/ekans-metadata.json",
+              "sprites": "/static/monsters/sprites/ekans-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "electabuzz",
+      "name": "electabuzz",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/electabuzz-metadata.json",
+              "sprites": "/static/monsters/sprites/electabuzz-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "electrode",
+      "name": "electrode",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/electrode-metadata.json",
+              "sprites": "/static/monsters/sprites/electrode-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "exeggcute",
+      "name": "exeggcute",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/exeggcute-metadata.json",
+              "sprites": "/static/monsters/sprites/exeggcute-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "exeggutor",
+      "name": "exeggutor",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/exeggutor-metadata.json",
+              "sprites": "/static/monsters/sprites/exeggutor-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "farfetchd",
+      "name": "farfetchd",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/farfetchd-metadata.json",
+              "sprites": "/static/monsters/sprites/farfetchd-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "fearow",
+      "name": "fearow",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/fearow-metadata.json",
+              "sprites": "/static/monsters/sprites/fearow-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "flareon",
+      "name": "flareon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/flareon-metadata.json",
+              "sprites": "/static/monsters/sprites/flareon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "gastly",
+      "name": "gastly",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/gastly-metadata.json",
+              "sprites": "/static/monsters/sprites/gastly-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "gengar",
+      "name": "gengar",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/gengar-metadata.json",
+              "sprites": "/static/monsters/sprites/gengar-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "geodude",
+      "name": "geodude",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/geodude-metadata.json",
+              "sprites": "/static/monsters/sprites/geodude-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "gloom",
+      "name": "gloom",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/gloom-metadata.json",
+              "sprites": "/static/monsters/sprites/gloom-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "golbat",
+      "name": "golbat",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/golbat-metadata.json",
+              "sprites": "/static/monsters/sprites/golbat-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "goldeen",
+      "name": "goldeen",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/goldeen-metadata.json",
+              "sprites": "/static/monsters/sprites/goldeen-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "golduck",
+      "name": "golduck",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/golduck-metadata.json",
+              "sprites": "/static/monsters/sprites/golduck-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "golem",
+      "name": "golem",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/golem-metadata.json",
+              "sprites": "/static/monsters/sprites/golem-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "graveler",
+      "name": "graveler",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/graveler-metadata.json",
+              "sprites": "/static/monsters/sprites/graveler-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "grimer",
+      "name": "grimer",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/grimer-metadata.json",
+              "sprites": "/static/monsters/sprites/grimer-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "growlithe",
+      "name": "growlithe",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/growlithe-metadata.json",
+              "sprites": "/static/monsters/sprites/growlithe-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "gyarados",
+      "name": "gyarados",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/gyarados-metadata.json",
+              "sprites": "/static/monsters/sprites/gyarados-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "haunter",
+      "name": "haunter",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/haunter-metadata.json",
+              "sprites": "/static/monsters/sprites/haunter-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "hitmonchan",
+      "name": "hitmonchan",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/hitmonchan-metadata.json",
+              "sprites": "/static/monsters/sprites/hitmonchan-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "hitmonlee",
+      "name": "hitmonlee",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/hitmonlee-metadata.json",
+              "sprites": "/static/monsters/sprites/hitmonlee-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "horsea",
+      "name": "horsea",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/horsea-metadata.json",
+              "sprites": "/static/monsters/sprites/horsea-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "hypno",
+      "name": "hypno",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/hypno-metadata.json",
+              "sprites": "/static/monsters/sprites/hypno-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "ivysaur",
+      "name": "ivysaur",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/ivysaur-metadata.json",
+              "sprites": "/static/monsters/sprites/ivysaur-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "jigglypuff",
+      "name": "jigglypuff",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/jigglypuff-metadata.json",
+              "sprites": "/static/monsters/sprites/jigglypuff-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "jolteon",
+      "name": "jolteon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/jolteon-metadata.json",
+              "sprites": "/static/monsters/sprites/jolteon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "jynx",
+      "name": "jynx",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/jynx-metadata.json",
+              "sprites": "/static/monsters/sprites/jynx-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kabuto",
+      "name": "kabuto",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kabuto-metadata.json",
+              "sprites": "/static/monsters/sprites/kabuto-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kabutops",
+      "name": "kabutops",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kabutops-metadata.json",
+              "sprites": "/static/monsters/sprites/kabutops-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kadabra",
+      "name": "kadabra",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kadabra-metadata.json",
+              "sprites": "/static/monsters/sprites/kadabra-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kakuna",
+      "name": "kakuna",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kakuna-metadata.json",
+              "sprites": "/static/monsters/sprites/kakuna-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kangaskhan",
+      "name": "kangaskhan",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kangaskhan-metadata.json",
+              "sprites": "/static/monsters/sprites/kangaskhan-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "kingler",
+      "name": "kingler",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/kingler-metadata.json",
+              "sprites": "/static/monsters/sprites/kingler-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "koffing",
+      "name": "koffing",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/koffing-metadata.json",
+              "sprites": "/static/monsters/sprites/koffing-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "krabby",
+      "name": "krabby",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/krabby-metadata.json",
+              "sprites": "/static/monsters/sprites/krabby-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "lapras",
+      "name": "lapras",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/lapras-metadata.json",
+              "sprites": "/static/monsters/sprites/lapras-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "lickitung",
+      "name": "lickitung",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/lickitung-metadata.json",
+              "sprites": "/static/monsters/sprites/lickitung-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "machamp",
+      "name": "machamp",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/machamp-metadata.json",
+              "sprites": "/static/monsters/sprites/machamp-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "machoke",
+      "name": "machoke",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/machoke-metadata.json",
+              "sprites": "/static/monsters/sprites/machoke-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "machop",
+      "name": "machop",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/machop-metadata.json",
+              "sprites": "/static/monsters/sprites/machop-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "magikarp",
+      "name": "magikarp",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/magikarp-metadata.json",
+              "sprites": "/static/monsters/sprites/magikarp-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "magmar",
+      "name": "magmar",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/magmar-metadata.json",
+              "sprites": "/static/monsters/sprites/magmar-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "magnemite",
+      "name": "magnemite",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/magnemite-metadata.json",
+              "sprites": "/static/monsters/sprites/magnemite-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "magneton",
+      "name": "magneton",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/magneton-metadata.json",
+              "sprites": "/static/monsters/sprites/magneton-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "mankey",
+      "name": "mankey",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/mankey-metadata.json",
+              "sprites": "/static/monsters/sprites/mankey-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "marowak",
+      "name": "marowak",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/marowak-metadata.json",
+              "sprites": "/static/monsters/sprites/marowak-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "meowth",
+      "name": "meowth",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/meowth-metadata.json",
+              "sprites": "/static/monsters/sprites/meowth-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "metapod",
+      "name": "metapod",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/metapod-metadata.json",
+              "sprites": "/static/monsters/sprites/metapod-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "mew",
+      "name": "mew",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/mew-metadata.json",
+              "sprites": "/static/monsters/sprites/mew-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "mewtwo",
+      "name": "mewtwo",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/mewtwo-metadata.json",
+              "sprites": "/static/monsters/sprites/mewtwo-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "moltres",
+      "name": "moltres",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/moltres-metadata.json",
+              "sprites": "/static/monsters/sprites/moltres-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "mr-mime",
+      "name": "mr-mime",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/mr-mime-metadata.json",
+              "sprites": "/static/monsters/sprites/mr-mime-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "muk",
+      "name": "muk",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/muk-metadata.json",
+              "sprites": "/static/monsters/sprites/muk-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidoking",
+      "name": "nidoking",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidoking-metadata.json",
+              "sprites": "/static/monsters/sprites/nidoking-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidoqueen",
+      "name": "nidoqueen",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidoqueen-metadata.json",
+              "sprites": "/static/monsters/sprites/nidoqueen-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidoran-f",
+      "name": "nidoran-f",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidoran-f-metadata.json",
+              "sprites": "/static/monsters/sprites/nidoran-f-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidoran-m",
+      "name": "nidoran-m",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidoran-m-metadata.json",
+              "sprites": "/static/monsters/sprites/nidoran-m-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidorina",
+      "name": "nidorina",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidorina-metadata.json",
+              "sprites": "/static/monsters/sprites/nidorina-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "nidorino",
+      "name": "nidorino",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/nidorino-metadata.json",
+              "sprites": "/static/monsters/sprites/nidorino-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "ninetales",
+      "name": "ninetales",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/ninetales-metadata.json",
+              "sprites": "/static/monsters/sprites/ninetales-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "oddish",
+      "name": "oddish",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/oddish-metadata.json",
+              "sprites": "/static/monsters/sprites/oddish-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "omanyte",
+      "name": "omanyte",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/omanyte-metadata.json",
+              "sprites": "/static/monsters/sprites/omanyte-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "omastar",
+      "name": "omastar",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/omastar-metadata.json",
+              "sprites": "/static/monsters/sprites/omastar-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "onix",
+      "name": "onix",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/onix-metadata.json",
+              "sprites": "/static/monsters/sprites/onix-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "paras",
+      "name": "paras",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/paras-metadata.json",
+              "sprites": "/static/monsters/sprites/paras-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "parasect",
+      "name": "parasect",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/parasect-metadata.json",
+              "sprites": "/static/monsters/sprites/parasect-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "persian",
+      "name": "persian",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/persian-metadata.json",
+              "sprites": "/static/monsters/sprites/persian-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "pidgeot",
+      "name": "pidgeot",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/pidgeot-metadata.json",
+              "sprites": "/static/monsters/sprites/pidgeot-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "pidgeotto",
+      "name": "pidgeotto",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/pidgeotto-metadata.json",
+              "sprites": "/static/monsters/sprites/pidgeotto-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "pidgey",
+      "name": "pidgey",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/pidgey-metadata.json",
+              "sprites": "/static/monsters/sprites/pidgey-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "pikachu",
+      "name": "pikachu",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/pikachu-metadata.json",
+              "sprites": "/static/monsters/sprites/pikachu-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "pinsir",
+      "name": "pinsir",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/pinsir-metadata.json",
+              "sprites": "/static/monsters/sprites/pinsir-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "poliwag",
+      "name": "poliwag",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/poliwag-metadata.json",
+              "sprites": "/static/monsters/sprites/poliwag-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "poliwhirl",
+      "name": "poliwhirl",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/poliwhirl-metadata.json",
+              "sprites": "/static/monsters/sprites/poliwhirl-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "poliwrath",
+      "name": "poliwrath",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/poliwrath-metadata.json",
+              "sprites": "/static/monsters/sprites/poliwrath-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "ponyta",
+      "name": "ponyta",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/ponyta-metadata.json",
+              "sprites": "/static/monsters/sprites/ponyta-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "porygon",
+      "name": "porygon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/porygon-metadata.json",
+              "sprites": "/static/monsters/sprites/porygon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "primeape",
+      "name": "primeape",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/primeape-metadata.json",
+              "sprites": "/static/monsters/sprites/primeape-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "psyduck",
+      "name": "psyduck",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/psyduck-metadata.json",
+              "sprites": "/static/monsters/sprites/psyduck-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "raichu",
+      "name": "raichu",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/raichu-metadata.json",
+              "sprites": "/static/monsters/sprites/raichu-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "rapidash",
+      "name": "rapidash",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/rapidash-metadata.json",
+              "sprites": "/static/monsters/sprites/rapidash-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "raticate",
+      "name": "raticate",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/raticate-metadata.json",
+              "sprites": "/static/monsters/sprites/raticate-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "rattata",
+      "name": "rattata",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/rattata-metadata.json",
+              "sprites": "/static/monsters/sprites/rattata-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "rhydon",
+      "name": "rhydon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/rhydon-metadata.json",
+              "sprites": "/static/monsters/sprites/rhydon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "rhyhorn",
+      "name": "rhyhorn",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/rhyhorn-metadata.json",
+              "sprites": "/static/monsters/sprites/rhyhorn-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "sandshrew",
+      "name": "sandshrew",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/sandshrew-metadata.json",
+              "sprites": "/static/monsters/sprites/sandshrew-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "sandslash",
+      "name": "sandslash",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/sandslash-metadata.json",
+              "sprites": "/static/monsters/sprites/sandslash-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "scyther",
+      "name": "scyther",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/scyther-metadata.json",
+              "sprites": "/static/monsters/sprites/scyther-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "seadra",
+      "name": "seadra",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/seadra-metadata.json",
+              "sprites": "/static/monsters/sprites/seadra-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "seaking",
+      "name": "seaking",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/seaking-metadata.json",
+              "sprites": "/static/monsters/sprites/seaking-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "seel",
+      "name": "seel",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/seel-metadata.json",
+              "sprites": "/static/monsters/sprites/seel-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "shellder",
+      "name": "shellder",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/shellder-metadata.json",
+              "sprites": "/static/monsters/sprites/shellder-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "slowbro",
+      "name": "slowbro",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/slowbro-metadata.json",
+              "sprites": "/static/monsters/sprites/slowbro-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "slowpoke",
+      "name": "slowpoke",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/slowpoke-metadata.json",
+              "sprites": "/static/monsters/sprites/slowpoke-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "snorlax",
+      "name": "snorlax",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/snorlax-metadata.json",
+              "sprites": "/static/monsters/sprites/snorlax-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "spearow",
+      "name": "spearow",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/spearow-metadata.json",
+              "sprites": "/static/monsters/sprites/spearow-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "squirtle",
+      "name": "squirtle",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/squirtle-metadata.json",
+              "sprites": "/static/monsters/sprites/squirtle-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "starmie",
+      "name": "starmie",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/starmie-metadata.json",
+              "sprites": "/static/monsters/sprites/starmie-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "staryu",
+      "name": "staryu",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/staryu-metadata.json",
+              "sprites": "/static/monsters/sprites/staryu-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "tangela",
+      "name": "tangela",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/tangela-metadata.json",
+              "sprites": "/static/monsters/sprites/tangela-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "tauros",
+      "name": "tauros",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/tauros-metadata.json",
+              "sprites": "/static/monsters/sprites/tauros-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "tentacool",
+      "name": "tentacool",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/tentacool-metadata.json",
+              "sprites": "/static/monsters/sprites/tentacool-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "tentacruel",
+      "name": "tentacruel",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/tentacruel-metadata.json",
+              "sprites": "/static/monsters/sprites/tentacruel-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "vaporeon",
+      "name": "vaporeon",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/vaporeon-metadata.json",
+              "sprites": "/static/monsters/sprites/vaporeon-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "venomoth",
+      "name": "venomoth",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/venomoth-metadata.json",
+              "sprites": "/static/monsters/sprites/venomoth-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "venonat",
+      "name": "venonat",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/venonat-metadata.json",
+              "sprites": "/static/monsters/sprites/venonat-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "venusaur",
+      "name": "venusaur",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/venusaur-metadata.json",
+              "sprites": "/static/monsters/sprites/venusaur-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "victreebel",
+      "name": "victreebel",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/victreebel-metadata.json",
+              "sprites": "/static/monsters/sprites/victreebel-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "vileplume",
+      "name": "vileplume",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/vileplume-metadata.json",
+              "sprites": "/static/monsters/sprites/vileplume-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "voltorb",
+      "name": "voltorb",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/voltorb-metadata.json",
+              "sprites": "/static/monsters/sprites/voltorb-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "vulpix",
+      "name": "vulpix",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/vulpix-metadata.json",
+              "sprites": "/static/monsters/sprites/vulpix-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "wartortle",
+      "name": "wartortle",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/wartortle-metadata.json",
+              "sprites": "/static/monsters/sprites/wartortle-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "weedle",
+      "name": "weedle",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/weedle-metadata.json",
+              "sprites": "/static/monsters/sprites/weedle-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "weepinbell",
+      "name": "weepinbell",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/weepinbell-metadata.json",
+              "sprites": "/static/monsters/sprites/weepinbell-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "weezing",
+      "name": "weezing",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/weezing-metadata.json",
+              "sprites": "/static/monsters/sprites/weezing-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "wigglytuff",
+      "name": "wigglytuff",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/wigglytuff-metadata.json",
+              "sprites": "/static/monsters/sprites/wigglytuff-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "zapdos",
+      "name": "zapdos",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/zapdos-metadata.json",
+              "sprites": "/static/monsters/sprites/zapdos-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  },
+  {
+      "monsterId": "zubat",
+      "name": "zubat",
+      "animationsSrc": [
+          {
+              "key": "normal",
+              "metadata": "/static/monsters/sprites/zubat-metadata.json",
+              "sprites": "/static/monsters/sprites/zubat-spritesheet.json"
+          }
+      ],
+      "animations": [],
+      "baseStats": {
+          "hp": 0,
+          "maxHP": 0,
+          "atk": 0,
+          "def": 0,
+          "int": 0,
+          "res": 0,
+          "hit": 0,
+          "dex": 0,
+          "speed": 0
+      },
+      "growthRates": {
+          "hp": 100,
+          "maxHP": 100,
+          "atk": 100,
+          "def": 100,
+          "int": 100,
+          "res": 100,
+          "hit": 100,
+          "dex": 100,
+          "speed": 100
+      }
+  }
 ]
