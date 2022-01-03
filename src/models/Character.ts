@@ -67,6 +67,8 @@ export class MonsterIndex {
   name = "";
   animationsSrc: AnimationSrc[] = [];
   animations: Animation[] = [];
+  baseStats = new Stats();
+  growthRates = new Stats();
 
   public static fromJson(data: any): MonsterIndex {
     const out = new MonsterIndex();
@@ -78,6 +80,8 @@ export class MonsterIndex {
         AnimationSrc.fromJson(a)
       );
     }
+    out.baseStats = Stats.fromJson(data.baseStats);
+    out.growthRates = Stats.fromJson(data.growthRates);
     return out;
   }
 
@@ -87,6 +91,8 @@ export class MonsterIndex {
     out.name = this.name;
     out.animationsSrc = this.animationsSrc.map((a) => a.clone());
     out.animations = this.animations.map((a) => a.clone());
+    out.baseStats = this.baseStats.clone();
+    out.growthRates = this.growthRates.clone();
     return out;
   }
 }

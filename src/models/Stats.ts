@@ -33,7 +33,9 @@ export default class Stats {
 
   public static fromJson(data: any): Stats {
     const out = new Stats();
-
+    if (!data) {
+      return out;
+    }
     out.hp = data.hp;
     out.maxHP = data.maxHP;
     out.atk = data.atk;

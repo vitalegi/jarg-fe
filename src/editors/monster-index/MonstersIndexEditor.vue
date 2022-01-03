@@ -1,48 +1,16 @@
 <template>
   <v-container>
-    <div>Editor</div>
     <v-data-iterator :items="monsters" item-key="monsterId">
       <template v-slot:default="{ items, isExpanded, expand }">
         <v-row>
-          <v-col
-            v-for="item in items"
-            :key="item.name"
-            cols="12"
-            sm="6"
-            md="4"
-            lg="3"
-          >
-            <v-card>
-              <v-card-title>
-                <h4>{{ item.monsterId }} - {{ item.name }}</h4>
-              </v-card-title>
-              <v-switch
-                :input-value="isExpanded(item)"
-                :label="isExpanded(item) ? 'Expanded' : 'Closed'"
-                class="pl-4 mt-0"
-                @change="(v) => expand(item, v)"
-              ></v-switch>
-              <v-divider></v-divider>
-              <div v-if="isExpanded(item)" dense>
-                <v-card>
-                  <v-card-title>Animations</v-card-title>
-                  <v-list
-                    dense
-                    v-for="animation in item.animationsSrc"
-                    :key="animation.key"
-                  >
-                    <v-list-item>
-                      <v-list-item-content>{{
-                        animation.key
-                      }}</v-list-item-content>
-                      <v-list-item-content class="align-end">
-                        {{ animation.metadata }}
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-list>
-                </v-card>
-              </div>
-            </v-card>
+          <v-col v-for="item in items" :key="item.name" cols="12">
+            <monster-index-editor
+              :index="item"
+              :expanded="isExpanded(item)"
+              :expand="expand"
+              @change="updateIndex"
+              @changeId="(e) => updateIndexId(e.oldId, e.newId)"
+            ></monster-index-editor>
           </v-col>
         </v-row>
       </template>
@@ -51,17 +19,47 @@
 </template>
 
 <script lang="ts">
-import { AnimationSrc } from "@/models/Animation";
 import { MonsterIndex } from "@/models/Character";
 import Vue from "vue";
+import MonsterIndexEditor from "./MonsterIndexEditor.vue";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
-
+  components: { MonsterIndexEditor },
   data: () => ({}),
   computed: {
     monsters(): MonsterIndex[] {
       return this.$store.state.monsterIndexEditor as MonsterIndex[];
+    },
+  },
+  methods: {
+    getMonsters(): MonsterIndex[] {
+      return this.$store.state.monsterIndexEditor as MonsterIndex[];
+    },
+    updateIndex(monster: MonsterIndex): void {
+      const monsters = this.getMonsters().map((m) => m.clone());
+      const index = monsters.findIndex(
+        (m) => m.monsterId === monster.monsterId
+      );
+      if (index !== -1) {
+        monsters[index] = monster;
+      } else {
+        monsters.push(monster);
+      }
+      this.$store.commit("setMonsterIndexEditor", monsters);
+    },
+    updateIndexId(oldId: string, newId: string): void {
+      const monsters = this.getMonsters().map((m) => m.clone());
+      const oldIndex = monsters.findIndex((m) => m.monsterId === oldId);
+      if (oldIndex === -1) {
+        throw Error(`Cannot find old index ${oldId}.`);
+      }
+      const newIndex = monsters.findIndex((m) => m.monsterId === newId);
+      if (newIndex !== -1) {
+        throw Error(`New Id ${newId} already in use.`);
+      }
+      monsters[oldIndex].monsterId = newId;
+      this.$store.commit("setMonsterIndexEditor", monsters);
     },
   },
 });

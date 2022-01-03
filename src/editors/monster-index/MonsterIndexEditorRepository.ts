@@ -13,6 +13,6 @@ export default class MonsterIndexEditorRepository {
   }
 
   public save(monsters: MonsterIndex[]): void {
-    window.localStorage.setItem("monsterIndex", JSON.stringify(monsters));
+    window.localStorage.setItem("monstersIndex", JSON.stringify(monsters));
   }
 }
