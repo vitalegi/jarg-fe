@@ -1,5 +1,6 @@
 import Ability from "@/game-engine/monster-action/Ability";
 import { Animation, AnimationSrc } from "./Animation";
+import Move from "./Move";
 import Point from "./Point";
 import Stats from "./Stats";
 
@@ -14,6 +15,7 @@ export default class Character {
   type = CharacterType.MONSTER;
   modelId = "";
   coordinates: Point | null = null;
+  movements = new Move();
 
   public static fromJson(data: any, out: Character): Character {
     out.uuid = data.uuid;
@@ -21,6 +23,7 @@ export default class Character {
     out.type = data.type;
     out.modelId = data.modelId;
     out.coordinates = Point.fromJson(data.coordinates);
+    out.movements = Move.fromJson(data.movements);
     return out;
   }
 }

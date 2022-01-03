@@ -37,6 +37,7 @@ export default class ChangeFocusDrawer extends Drawer {
       this.gameService.getMap().options
     );
 
+    // TODO replace with WindowSizeProxy
     const screen = new Point(
       this.gameService.getApp().view.width,
       this.gameService.getApp().view.height

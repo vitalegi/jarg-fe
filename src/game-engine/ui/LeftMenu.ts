@@ -8,9 +8,13 @@ import { TextStyle } from "pixi.js";
 export class MenuEntry {
   label: string;
   action: () => void;
-  enabled: boolean;
+  enabled: () => boolean;
 
-  public constructor(label: string, action: () => void, enabled = true) {
+  public constructor(
+    label: string,
+    action: () => void,
+    enabled: () => boolean
+  ) {
     this.label = label;
     this.action = action;
     this.enabled = enabled;
@@ -18,6 +22,8 @@ export class MenuEntry {
 }
 
 export default class LeftMenu {
+  protected static NAME = "LeftMenu";
+
   protected container: PIXI.Container | null = null;
   protected gameService = Container.get<GameService>(GameService);
   protected entries: MenuEntry[] = [];
@@ -59,6 +65,8 @@ export default class LeftMenu {
 
   public draw(): void {
     this.container = new PIXI.Container();
+    this.container.name = LeftMenu.NAME;
+
     this.gameService.getApp().stage.addChild(this.container);
 
     this.container.addChild(
@@ -75,9 +83,8 @@ export default class LeftMenu {
   }
 
   public destroy(): void {
-    if (this.container) {
-      this.gameService.getApp().stage.removeChild(this.container);
-    }
+    const menu = this.gameService.getApp().stage.getChildByName(LeftMenu.NAME);
+    this.gameService.getApp().stage.removeChild(menu);
   }
 
   public show(): void {
@@ -89,6 +96,10 @@ export default class LeftMenu {
     if (this.container) {
       this.container.visible = false;
     }
+  }
+  public reDraw(): void {
+    this.destroy();
+    this.draw();
   }
 
   protected drawMenuEntry(entry: MenuEntry, index: number): void {
@@ -103,7 +114,7 @@ export default class LeftMenu {
     );
     rectangle.endFill();
 
-    if (entry.enabled) {
+    if (entry.enabled()) {
       new DetectEvent(rectangle, () => entry.action());
     }
     this.container?.addChild(rectangle);
@@ -112,7 +123,7 @@ export default class LeftMenu {
     message.position.x = this.frame.getWidth() + 4;
     message.position.y = this.menuEntryHeight() * index + 5;
 
-    if (entry.enabled) {
+    if (entry.enabled()) {
       new DetectEvent(message, () => entry.action());
     }
     this.container?.addChild(message);
@@ -127,7 +138,7 @@ export default class LeftMenu {
   }
 
   protected getMenuEntryFont(entry: MenuEntry): Partial<TextStyle> {
-    if (entry.enabled) {
+    if (entry.enabled()) {
       return this.options.enabled.font;
     }
     return this.options.disabled.font;

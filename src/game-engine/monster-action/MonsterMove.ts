@@ -3,9 +3,11 @@ import Container from "typedi";
 import Point from "@/models/Point";
 import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
 import GameLoop from "../GameLoop";
+import TurnManager from "../turns/TurnManager";
 
 export default class MonsterMove {
   protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected turnManager = Container.get<TurnManager>(TurnManager);
 
   protected source;
   protected path;
@@ -16,6 +18,11 @@ export default class MonsterMove {
   }
 
   public async execute(): Promise<void> {
+    const activeCharacter = this.turnManager.activeCharacter();
+    if (activeCharacter) {
+      activeCharacter.moves(this.path);
+    }
+
     console.log(`Path ${this.path}, starting from: ${this.source.coordinates}`);
     for (let i = 0; i < this.path.length - 1; i++) {
       const from = this.path[i];

@@ -10,9 +10,12 @@ import AbilityExecutor from "../AbilityExecutor";
 import Point from "@/models/Point";
 import MapTraversal from "@/game-engine/MapTraversal";
 import MonsterMove from "../MonsterMove";
+import MonsterService from "@/game-engine/monster/MonsterService";
 
 @Service()
 export default class MonsterActionMenuBuilder {
+  protected monsterService = Container.get<MonsterService>(MonsterService);
+
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
     leftMenu.addEntry(this.move(leftMenu, monster));
@@ -24,19 +27,28 @@ export default class MonsterActionMenuBuilder {
   }
 
   protected move(leftMenu: LeftMenu, monster: Monster): MenuEntry {
-    return new MenuEntry("Move", () => {
-      leftMenu.hide();
-      this.selectWalkTarget(leftMenu, monster).then((path: Point[]) => {
-        new MonsterMove(monster, path).execute().then(() => {
-          console.log(`Walk to ${path[path.length - 1]} is completed.`);
-          leftMenu.show();
+    return new MenuEntry(
+      "Move",
+      () => {
+        leftMenu.hide();
+        this.selectWalkTarget(monster).then((path: Point[]) => {
+          new MonsterMove(monster, path).execute().then(() => {
+            console.log(`Walk to ${path[path.length - 1]} is completed.`);
+            leftMenu.reDraw();
+            leftMenu.show();
+          });
         });
-      });
-    });
+      },
+      () => this.monsterService.canActiveMonsterMove()
+    );
   }
 
   protected endTurn(): MenuEntry {
-    return new MenuEntry("End Turn", () => this.nextTurn());
+    return new MenuEntry(
+      "End Turn",
+      () => this.nextTurn(),
+      () => true
+    );
   }
 
   protected abilityMenuEntry(
@@ -44,45 +56,44 @@ export default class MonsterActionMenuBuilder {
     monster: Monster,
     ability: Ability
   ): MenuEntry {
-    const enabled = ability.usages.current > 0;
-
     return new MenuEntry(
       ability.label,
       () => {
-        this.selectTargetMonster(leftMenu, monster.uuid).then(
-          (target: Monster) => {
-            console.log(
-              `Selected target of ability ${ability.label}: ${target.uuid} / ${target.coordinates}`
-            );
-            const executor = new AbilityExecutor(monster, target, ability);
-            executor.execute().then(() => {
-              console.log(
-                `User ability ${ability.label} is completed, go to next turn.`
-              );
-              this.nextTurn();
-            });
-          }
-        );
+        leftMenu.hide();
+        this.selectTargetMonster(monster.uuid).then((target: Monster) => {
+          console.log(
+            `Selected target of ability ${ability.label}: ${target.uuid} / ${target.coordinates}`
+          );
+          const executor = new AbilityExecutor(monster, target, ability);
+          executor.execute().then(() => {
+            console.log(`User ability ${ability.label} is completed.`);
+            leftMenu.reDraw();
+          });
+        });
       },
-      enabled
+      () => {
+        if (!this.monsterService.canActiveMonsterUseAbility()) {
+          console.log(`Ability slots already consumed for this turn`);
+          return false;
+        }
+        if (!(ability.usages.current > 0)) {
+          console.log(`No more ability usages for ${ability.label}`);
+          return false;
+        }
+        console.log(`Ability ${ability.label} is enabled`);
+        return true;
+      }
     );
   }
 
-  protected async selectTargetMonster(
-    leftMenu: LeftMenu,
-    skipUUID: string
-  ): Promise<Monster> {
-    leftMenu.hide();
+  protected async selectTargetMonster(skipUUID: string): Promise<Monster> {
     const target = await this.selectTarget(skipUUID, false, true);
     console.log(`Selected target ${target}`);
     const gameService = Container.get<GameService>(GameService);
     return gameService.getMonsterById(target.getMonsterId());
   }
 
-  protected async selectWalkTarget(
-    leftMenu: LeftMenu,
-    monster: Monster
-  ): Promise<Point[]> {
+  protected async selectWalkTarget(monster: Monster): Promise<Point[]> {
     let path: Point[] = [];
 
     do {

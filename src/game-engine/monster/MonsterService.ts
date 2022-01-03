@@ -13,6 +13,8 @@ import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
 import AbilityRepository from "../repositories/AbilityRepository";
+import Move from "@/models/Move";
+import TurnManager, { ActionType } from "../turns/TurnManager";
 
 const names = [
   "Cino",
@@ -44,6 +46,7 @@ export default class MonsterService {
 
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
+  protected turnManager = Container.get<TurnManager>(TurnManager);
 
   public createMonster(ownerId: null | string): Monster {
     const monster = new Monster();
@@ -81,6 +84,10 @@ export default class MonsterService {
     monster.abilities.push(
       abilities[random.randomInt(abilities.length)].clone()
     );
+    monster.movements = new Move();
+    monster.movements.steps = 3;
+    monster.movements.canWalk = true;
+
     monster.coordinates = new Point(0, 0);
     return monster;
   }
@@ -119,5 +126,34 @@ export default class MonsterService {
     return container.getChildByName(
       MonsterService.MONSTER_SPRITE_NAME
     ) as PIXI.AnimatedSprite;
+  }
+
+  public canActiveMonsterMove(): boolean {
+    const tick = this.turnManager.activeCharacter();
+    if (!tick) {
+      return false;
+    }
+    const moves = tick.actionsHistory
+      .filter((a) => a.type === ActionType.MOVE)
+      .map((a) => a.distance)
+      .reduce((prev, curr) => prev + curr, 0);
+
+    if (!moves) {
+      return tick.monster.movements.steps > 0;
+    }
+    return tick.monster.movements.steps > moves;
+  }
+
+  public canActiveMonsterUseAbility(): boolean {
+    const tick = this.turnManager.activeCharacter();
+    if (!tick) {
+      console.log(`No active monster`);
+      return false;
+    }
+    const count = tick.actionsHistory
+      .filter((a) => a.type === ActionType.ABILITY)
+      .map((a) => a.distance).length;
+
+    return count === 0;
   }
 }

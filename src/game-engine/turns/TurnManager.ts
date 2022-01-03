@@ -1,6 +1,8 @@
 import { Monster } from "@/models/Character";
+import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
+import Ability from "../monster-action/Ability";
 
 const DECIMAL_PRECISION = 0.00001;
 
@@ -105,9 +107,41 @@ const ICV = [
   { ge: 250, le: 255, icv_min: 3, icv_max: 9 },
 ];
 
+export enum ActionType {
+  MOVE = "MOVE",
+  ABILITY = "ABILITY",
+}
+
+export class Action {
+  type: ActionType;
+  source: Point | null = null;
+  dest: Point | null = null;
+  distance = 0;
+  ability: Ability | null = null;
+
+  public constructor(type: ActionType) {
+    this.type = type;
+  }
+
+  public static move(source: Point, dest: Point, distance: number): Action {
+    const t = new Action(ActionType.MOVE);
+    t.source = source;
+    t.dest = dest;
+    t.distance = distance;
+    return t;
+  }
+
+  public static ability(ability: Ability): Action {
+    const t = new Action(ActionType.ABILITY);
+    t.ability = ability;
+    return t;
+  }
+}
+
 class Tick {
   monster: Monster;
   ticks = 0;
+  actionsHistory: Action[] = [];
 
   public constructor(monster: Monster, ticks = 0) {
     this.monster = monster;
@@ -118,6 +152,16 @@ class Tick {
     return `(uuid=${this.monster.uuid.substring(0, 8)}, name=${
       this.monster.name
     }, ticks=${this.ticks})`;
+  }
+
+  public moves(path: Point[]): void {
+    this.actionsHistory.push(
+      Action.move(path[0], path[path.length - 1], path.length - 1)
+    );
+  }
+
+  public usesAbility(ability: Ability): void {
+    this.actionsHistory.push(Action.ability(ability));
   }
 }
 
@@ -157,8 +201,10 @@ export default class TurnManager {
   public hasCharacters(): boolean {
     return this.monsters.length > 0;
   }
-  public activeCharacter(): string | null {
-    if (this.active) return this.active.monster.uuid;
+  public activeCharacter(): Tick | null {
+    if (this.active) {
+      return this.active;
+    }
     return null;
   }
 
@@ -203,6 +249,9 @@ export default class TurnManager {
     if (this.ticks.length === 0) {
       return turns;
     }
+    // TODO re-implement
+    // ticks contains the time for the next turn for each monster
+    // after that turn, it has to be re-computed
     for (let i = 0; i < n; i++) {
       const tick = this.ticks[i % this.ticks.length];
       turns.push(tick.monster.uuid);

@@ -17,7 +17,6 @@ import MonsterAI from "@/game-engine/monster-action/ai/MonsterAI";
 import MonsterActionMenuBuilder from "@/game-engine/monster-action/ui/MonsterActionMenuBuilder";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
-import Drawer from "@/game-engine/ui/Drawer";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import RandomService from "./RandomService";
 import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
@@ -25,8 +24,7 @@ import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragScreenUserActionHandler";
 import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
-import TimeUtil from "@/utils/TimeUtil";
-import { Animation, AnimationSrc } from "@/models/Animation";
+import { AnimationSrc } from "@/models/Animation";
 import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import GameLoop from "@/game-engine/GameLoop";
 
@@ -90,7 +88,7 @@ export default class GameService {
     const promises: Promise<void>[] = [];
     for (const monster of monsters) {
       for (const animationSrc of monster.animationsSrc) {
-        promises.push(this.updateAnimationMetadata(monster, animationSrc));
+        promises.push(this.loadAnimationMetadata(monster, animationSrc));
       }
     }
     await Promise.all(promises);
@@ -219,8 +217,9 @@ export default class GameService {
   public nextTurn(): void {
     const activeCharacter = this.turnManager.activeCharacter();
     if (activeCharacter) {
-      const container =
-        this.getBattleContainer()?.getChildByName(activeCharacter);
+      const container = this.getBattleContainer()?.getChildByName(
+        activeCharacter.monster.uuid
+      );
       if (container) {
         const c = container as PIXI.Container;
         const element = c.getChildByName("activeCharacter");
@@ -289,11 +288,12 @@ export default class GameService {
       console.log("No active users, do nothing");
       return;
     }
-    const uuid = this.turnManager.activeCharacter();
-    if (!uuid) {
+    const active = this.turnManager.activeCharacter();
+    if (!active) {
       return;
     }
-    const monster = this.getMonsterById(uuid);
+    const monster = active.monster;
+
     const playerId = this.playerService.getPlayerId();
     console.log(`Focus on ${monster.coordinates}`);
     if (monster.coordinates) {
@@ -372,7 +372,7 @@ export default class GameService {
     return null;
   }
 
-  protected async updateAnimationMetadata(
+  protected async loadAnimationMetadata(
     monster: MonsterIndex,
     animationSrc: AnimationSrc
   ): Promise<void> {

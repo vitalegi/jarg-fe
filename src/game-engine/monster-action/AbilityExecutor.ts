@@ -11,6 +11,7 @@ import AbilityEffect from "./AbilityEffect";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
+import TurnManager from "../turns/TurnManager";
 
 export default class AbilityExecutor {
   protected gameService = Container.get<GameService>(GameService);
@@ -18,6 +19,7 @@ export default class AbilityExecutor {
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected turnManager = Container.get<TurnManager>(TurnManager);
 
   protected source: Monster;
   protected target: Monster;
@@ -31,6 +33,12 @@ export default class AbilityExecutor {
 
   public async execute(): Promise<void> {
     this.ability.usages.current--;
+
+    const activeCharacter = this.turnManager.activeCharacter();
+    if (activeCharacter) {
+      activeCharacter.usesAbility(this.ability);
+    }
+
     const processor = this.ability.getProcessor(this.source, this.target);
 
     const hits = processor.hit();
