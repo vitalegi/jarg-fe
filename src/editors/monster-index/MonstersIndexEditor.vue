@@ -6,7 +6,10 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="11">
+      <v-col cols="6">
+        <v-text-field v-model="search" label="Search" />
+      </v-col>
+      <v-col cols="5">
         <v-select
           v-model="sortBy"
           :items="sortByOptions"
@@ -66,10 +69,13 @@ export default Vue.extend({
     ],
     sortBy: "ID",
     sortOrderAsc: true,
+    search: "",
   }),
   computed: {
     monsters(): MonsterIndex[] {
-      return this.getMonsters().sort((a, b) => this.compare(a, b));
+      return this.getMonsters()
+        .filter((m) => this.filter(m))
+        .sort((a, b) => this.compare(a, b));
     },
   },
   methods: {
@@ -107,6 +113,15 @@ export default Vue.extend({
         .filter((m) => m.monsterId !== monsterId);
 
       this.$store.commit("setMonsterIndexEditor", monsters);
+    },
+    filter(m: MonsterIndex): boolean {
+      if (this.search.trim() === "") {
+        return true;
+      }
+      if (m.name.indexOf(this.search.trim()) !== -1) {
+        return true;
+      }
+      return false;
     },
     compare(a: MonsterIndex, b: MonsterIndex): number {
       if (this.sortOrderAsc) {

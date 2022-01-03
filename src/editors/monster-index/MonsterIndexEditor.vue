@@ -9,9 +9,7 @@
         {{ index.monsterId }} - {{ index.name }}
       </h4>
       <v-spacer></v-spacer>
-      <v-btn icon color="error" @click="deleteIndex()">
-        <v-icon>mdi-delete</v-icon>
-      </v-btn>
+      <ConfirmDeletion @delete="deleteIndex()" :text="deletionWarningText" />
     </v-card-title>
     <v-card-text v-if="expanded">
       <v-divider></v-divider>
@@ -70,11 +68,17 @@ import StatsEditor from "./StatsEditor.vue";
 import StatsOverview from "./StatsOverview.vue";
 import MonsterIndexBaseInfoEditor from "./MonsterIndexBaseInfoEditor.vue";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import Container from "typedi";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",
-  components: { StatsEditor, MonsterIndexBaseInfoEditor, StatsOverview },
+  components: {
+    StatsEditor,
+    MonsterIndexBaseInfoEditor,
+    StatsOverview,
+    ConfirmDeletion,
+  },
   props: {
     index: MonsterIndex,
     expanded: Boolean,
@@ -87,6 +91,11 @@ export default Vue.extend({
   data: () => ({
     levelUpService: Container.get<LevelUpService>(LevelUpService),
   }),
+  computed: {
+    deletionWarningText(): string {
+      return `Deletion of monster ${this.index.monsterId} - ${this.index.name} is an irreversible action. Are you sure you want to proceed?`;
+    },
+  },
   methods: {
     changeBaseStats(s: Stats): void {
       const index = this.index.clone();
