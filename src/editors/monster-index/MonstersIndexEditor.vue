@@ -1,6 +1,11 @@
 <template>
   <v-container>
     <v-row>
+      <v-col>
+        <ImportExportDialog :initialValue="exportJson()" @change="importJson" />
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="11">
         <v-select
           v-model="sortBy"
@@ -49,10 +54,11 @@
 import { MonsterIndex } from "@/models/Character";
 import Vue from "vue";
 import MonsterIndexEditor from "./MonsterIndexEditor.vue";
+import ImportExportDialog from "../../components/ImportExportDialog.vue";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
-  components: { MonsterIndexEditor },
+  components: { MonsterIndexEditor, ImportExportDialog },
   data: () => ({
     sortByOptions: [
       { text: "ID", key: "ID" },
@@ -116,6 +122,15 @@ export default Vue.extend({
         return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
       }
       return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
+    },
+    exportJson(): string {
+      return JSON.stringify(this.getMonsters(), undefined, 4);
+    },
+    importJson(json: string): void {
+      const list = JSON.parse(json);
+      const monsters = list.map((m: any) => MonsterIndex.fromJson(m));
+
+      this.$store.commit("setMonsterIndexEditor", monsters);
     },
   },
 });

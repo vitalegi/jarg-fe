@@ -54,7 +54,7 @@
       ></stats-editor>
       <h5>Stats Progression</h5>
       <StatsOverview
-        :stats="getStats(level)"
+        :stats="getStats()"
         headerCol1="Level"
         :col1="levelsOverview"
       />
