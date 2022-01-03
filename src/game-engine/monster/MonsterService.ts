@@ -66,18 +66,28 @@ export default class MonsterService {
     monster.type = CharacterType.MONSTER;
 
     monster.baseStats = new Stats(
-      30,
-      30,
-      6,
-      5,
-      3,
-      3,
-      10,
-      8,
+      39,
+      39 + random.randomInt(5),
+      52 + random.randomInt(5),
+      43 + random.randomInt(5),
+      60 + random.randomInt(5),
+      50 + random.randomInt(5),
+      65 + random.randomInt(5),
+      60 + random.randomInt(5),
       10 + random.randomInt(5)
     );
-    monster.stats = new Stats(15, 15, 12, 10, 6, 5, 20, 19, 20);
-    monster.growthRates = new Stats(120, 120, 100, 80, 70, 80, 100, 110, 100);
+    monster.stats = new Stats(0, 0, 0, 0, 0, 0, 0, 0, 0);
+    monster.growthRates = new Stats(
+      100,
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100 + random.randomInt(5),
+      100
+    );
 
     const abilities = this.abilityRepository.getAbilities();
 

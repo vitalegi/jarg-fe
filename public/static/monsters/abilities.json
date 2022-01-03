@@ -40,8 +40,8 @@
     "precision": 100,
     "types": ["WATER"],
     "rechargeFamily": 3,
-    "atkStat": "int",
-    "defStat": "res",
+    "atkStat": "atk",
+    "defStat": "def",
     "usages": {
       "current": 5,
       "max": 5
