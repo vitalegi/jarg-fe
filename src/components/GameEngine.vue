@@ -14,7 +14,7 @@ export default Vue.extend({
     gameService: Container.get<GameService>(GameService),
   }),
   methods: {},
-  async mounted() {
+  mounted() {
     this.gameService.init().then(() => {
       this.$el.appendChild(this.gameService.getApp().view);
     });

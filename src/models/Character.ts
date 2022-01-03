@@ -78,7 +78,15 @@ export class MonsterIndex {
         AnimationSrc.fromJson(a)
       );
     }
+    return out;
+  }
 
+  public clone(): MonsterIndex {
+    const out = new MonsterIndex();
+    out.monsterId = this.monsterId;
+    out.name = this.name;
+    out.animationsSrc = this.animationsSrc.map((a) => a.clone());
+    out.animations = this.animations.map((a) => a.clone());
     return out;
   }
 }
