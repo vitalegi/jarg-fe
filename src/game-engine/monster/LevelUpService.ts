@@ -35,28 +35,41 @@ export class LevelUpService {
     console.log(`Monster ${monster.uuid} performs level-up`);
     monster.currentLevelExperience = 0;
     monster.level += 1;
-    this.computeAttributes(monster);
+    this.computeMonsterAttributes(monster);
 
     console.log(
       `Level up done (${monster.level}), new stats: ${monster.stats.toString()}`
     );
   }
 
-  protected computeAttributes(monster: Monster): void {
+  protected computeMonsterAttributes(monster: Monster): void {
+    const stats = this.computeAttributes(
+      monster.level,
+      monster.baseStats,
+      monster.growthRates
+    );
+    stats.hp = monster.stats.hp;
+    monster.stats = stats;
+  }
+
+  public computeAttributes(
+    level: number,
+    baseStats: Stats,
+    growthRates: Stats
+  ): Stats {
+    const stats = new Stats();
     const getValue = (stat: (s: Stats) => number): number => {
-      return this.getAttributeValue(
-        monster.level,
-        stat(monster.baseStats),
-        stat(monster.growthRates)
-      );
+      return this.getAttributeValue(level, stat(baseStats), stat(growthRates));
     };
-    monster.stats.maxHP = getValue((s) => s.maxHP);
-    monster.stats.atk = getValue((s) => s.atk);
-    monster.stats.def = getValue((s) => s.def);
-    monster.stats.int = getValue((s) => s.int);
-    monster.stats.res = getValue((s) => s.res);
-    monster.stats.dex = getValue((s) => s.dex);
-    monster.stats.hit = getValue((s) => s.hit);
+    stats.maxHP = getValue((s) => s.maxHP);
+    stats.atk = getValue((s) => s.atk);
+    stats.def = getValue((s) => s.def);
+    stats.int = getValue((s) => s.int);
+    stats.res = getValue((s) => s.res);
+    stats.dex = getValue((s) => s.dex);
+    stats.hit = getValue((s) => s.hit);
+    stats.speed = getValue((s) => s.speed);
+    return stats;
   }
 
   protected getAttributeValue(

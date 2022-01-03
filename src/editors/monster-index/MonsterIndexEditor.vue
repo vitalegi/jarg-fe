@@ -8,6 +8,10 @@
         </v-btn>
         {{ index.monsterId }} - {{ index.name }}
       </h4>
+      <v-spacer></v-spacer>
+      <v-btn icon color="error" @click="deleteIndex()">
+        <v-icon>mdi-delete</v-icon>
+      </v-btn>
     </v-card-title>
     <v-card-text v-if="expanded">
       <v-divider></v-divider>
@@ -48,6 +52,12 @@
         :stats="index.growthRates"
         @change="changeGrowthRates"
       ></stats-editor>
+      <h5>Stats Progression</h5>
+      <StatsOverview
+        :stats="getStats(level)"
+        headerCol1="Level"
+        :col1="levelsOverview"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -57,17 +67,26 @@ import { MonsterIndex } from "@/models/Character";
 import Stats from "@/models/Stats";
 import Vue from "vue";
 import StatsEditor from "./StatsEditor.vue";
+import StatsOverview from "./StatsOverview.vue";
 import MonsterIndexBaseInfoEditor from "./MonsterIndexBaseInfoEditor.vue";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import Container from "typedi";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",
-  components: { StatsEditor, MonsterIndexBaseInfoEditor },
+  components: { StatsEditor, MonsterIndexBaseInfoEditor, StatsOverview },
   props: {
     index: MonsterIndex,
     expanded: Boolean,
     expand: Function,
+    levelsOverview: {
+      type: Array,
+      default: () => [1, 10, 20, 50, 75, 100],
+    },
   },
-  data: () => ({}),
+  data: () => ({
+    levelUpService: Container.get<LevelUpService>(LevelUpService),
+  }),
   methods: {
     changeBaseStats(s: Stats): void {
       const index = this.index.clone();
@@ -86,6 +105,20 @@ export default Vue.extend({
       const index = this.index.clone();
       index.name = name;
       this.$emit("change", index);
+    },
+    getStats(): Stats[] {
+      return this.levelsOverview
+        .map((level) => level as number)
+        .map((level) =>
+          this.levelUpService.computeAttributes(
+            level,
+            this.index.baseStats,
+            this.index.growthRates
+          )
+        );
+    },
+    deleteIndex(): void {
+      this.$emit("delete", this.index.monsterId);
     },
   },
 });

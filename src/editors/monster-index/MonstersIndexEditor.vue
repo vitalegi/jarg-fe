@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
+      <v-col cols="11">
         <v-select
           v-model="sortBy"
           :items="sortByOptions"
@@ -10,14 +10,16 @@
           label="Sort By"
         />
       </v-col>
-      <v-col>
-        <v-select
-          v-model="sortOrder"
-          :items="sortOrderOptions"
-          item-text="text"
-          item-value="key"
-          label="Sort By"
-        />
+      <v-col cols="1">
+        <v-btn
+          icon
+          color="primary"
+          x-large
+          @click="sortOrderAsc = !sortOrderAsc"
+        >
+          <v-icon v-if="sortOrderAsc">mdi-arrow-down-drop-circle</v-icon>
+          <v-icon v-else>mdi-arrow-up-drop-circle</v-icon>
+        </v-btn>
       </v-col>
     </v-row>
     <v-row>
@@ -32,6 +34,7 @@
                   :expand="expand"
                   @change="updateIndex"
                   @changeId="(e) => updateIndexId(e.oldId, e.newId)"
+                  @delete="deleteIndex"
                 ></monster-index-editor>
               </v-col>
             </v-row>
@@ -55,12 +58,8 @@ export default Vue.extend({
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
     ],
-    sortOrderOptions: [
-      { text: "Ascending", key: "ASC" },
-      { text: "Descending", key: "DESC" },
-    ],
     sortBy: "ID",
-    sortOrder: "ASC",
+    sortOrderAsc: true,
   }),
   computed: {
     monsters(): MonsterIndex[] {
@@ -96,20 +95,27 @@ export default Vue.extend({
       monsters[oldIndex].monsterId = newId;
       this.$store.commit("setMonsterIndexEditor", monsters);
     },
+    deleteIndex(monsterId: string): void {
+      const monsters = this.getMonsters()
+        .map((m) => m.clone())
+        .filter((m) => m.monsterId !== monsterId);
+
+      this.$store.commit("setMonsterIndexEditor", monsters);
+    },
     compare(a: MonsterIndex, b: MonsterIndex): number {
-      if (this.sortOrder === "ASC") {
+      if (this.sortOrderAsc) {
         return this.doCompare(a, b);
       }
       return this.doCompare(b, a);
     },
     doCompare(a: MonsterIndex, b: MonsterIndex): number {
       if (this.sortBy === "ID") {
-        return a.monsterId > b.monsterId ? 1 : -1;
+        return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
       }
       if (this.sortBy === "NAME") {
         return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
       }
-      return a.monsterId > b.monsterId ? 1 : -1;
+      return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
     },
   },
 });
