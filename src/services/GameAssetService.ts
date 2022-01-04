@@ -1,22 +1,27 @@
 import MapContainer from "@/models/Map";
-import { MonsterIndex } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
 import Ability from "@/game-engine/monster-action/Ability";
 import { Animation } from "@/models/Animation";
+import Bonus from "@/game-engine/types/Bonus";
 
 @Service()
 export default class GameAssetService {
   public async getMap(map: string): Promise<MapContainer> {
-    const result = await BackendWebService.url(`/static/maps/${map}.json`)
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}/maps/${map}.json`
+    )
       .get()
       .call();
     return MapContainer.fromJson(result.data);
   }
 
   public async getMonstersData(): Promise<MonsterIndex[]> {
-    const result = await BackendWebService.url(`/static/monsters/monsters.json`)
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}/monsters/monsters.json`
+    )
       .get()
       .call();
     return result.data.map(MonsterIndex.fromJson);
@@ -30,9 +35,18 @@ export default class GameAssetService {
     return Animation.fromJson(key, result.data);
   }
 
+  public async getTypeBonuses(): Promise<Bonus[]> {
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}/types/bonus.json`
+    )
+      .get()
+      .call();
+    return result.data.map(Bonus.fromJson) as Bonus[];
+  }
+
   public async getAbilitiesData(): Promise<Ability[]> {
     const result = await BackendWebService.url(
-      `/static/monsters/abilities.json`
+      `${process.env.VUE_APP_BACKEND}/monsters/abilities.json`
     )
       .get()
       .call();

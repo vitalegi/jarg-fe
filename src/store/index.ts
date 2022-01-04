@@ -1,5 +1,5 @@
 import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
-import { MonsterIndex } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import Container from "typedi";
 import Vue from "vue";
 import Vuex from "vuex";

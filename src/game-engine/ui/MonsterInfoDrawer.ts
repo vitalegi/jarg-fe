@@ -1,4 +1,5 @@
-import { Monster, MonsterIndex } from "@/models/Character";
+import { Monster } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";

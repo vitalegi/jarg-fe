@@ -1,4 +1,4 @@
-import { MonsterIndex } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import { Service } from "typedi";
 
 @Service()

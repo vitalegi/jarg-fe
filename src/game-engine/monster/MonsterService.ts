@@ -1,5 +1,4 @@
 import * as PIXI from "pixi.js";
-import Ability from "@/game-engine/monster-action/Ability";
 import { CharacterType, Monster } from "@/models/Character";
 import { MapOption } from "@/models/Map";
 import Stats from "@/models/Stats";
@@ -65,29 +64,9 @@ export default class MonsterService {
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
 
-    monster.baseStats = new Stats(
-      39,
-      39 + random.randomInt(5),
-      52 + random.randomInt(5),
-      43 + random.randomInt(5),
-      60 + random.randomInt(5),
-      50 + random.randomInt(5),
-      65 + random.randomInt(5),
-      60 + random.randomInt(5),
-      10 + random.randomInt(5)
-    );
+    monster.baseStats = monsterIndex.baseStats.clone();
     monster.stats = new Stats(0, 0, 0, 0, 0, 0, 0, 0, 0);
-    monster.growthRates = new Stats(
-      100,
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100 + random.randomInt(5),
-      100
-    );
+    monster.growthRates = monsterIndex.growthRates.clone();
 
     const abilities = this.abilityRepository.getAbilities();
 

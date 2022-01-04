@@ -1,5 +1,4 @@
 import Ability from "@/game-engine/monster-action/Ability";
-import { Animation, AnimationSrc } from "./Animation";
 import Move from "./Move";
 import Point from "./Point";
 import Stats from "./Stats";
@@ -58,41 +57,6 @@ export class Monster extends Character {
     if (monster.abilities) {
       out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
     }
-    return out;
-  }
-}
-
-export class MonsterIndex {
-  monsterId = "";
-  name = "";
-  animationsSrc: AnimationSrc[] = [];
-  animations: Animation[] = [];
-  baseStats = new Stats();
-  growthRates = new Stats();
-
-  public static fromJson(data: any): MonsterIndex {
-    const out = new MonsterIndex();
-    out.monsterId = data.monsterId;
-    out.name = data.name;
-
-    if (data.animationsSrc) {
-      out.animationsSrc = data.animationsSrc.map((a: any) =>
-        AnimationSrc.fromJson(a)
-      );
-    }
-    out.baseStats = Stats.fromJson(data.baseStats);
-    out.growthRates = Stats.fromJson(data.growthRates);
-    return out;
-  }
-
-  public clone(): MonsterIndex {
-    const out = new MonsterIndex();
-    out.monsterId = this.monsterId;
-    out.name = this.name;
-    out.animationsSrc = this.animationsSrc.map((a) => a.clone());
-    out.animations = this.animations.map((a) => a.clone());
-    out.baseStats = this.baseStats.clone();
-    out.growthRates = this.growthRates.clone();
     return out;
   }
 }

@@ -92,7 +92,6 @@ export abstract class WebService {
     const instance = axios.create();
 
     instance.interceptors.request.use((config: AxiosRequestConfig) => {
-      console.log(`WS_CALL url=${config.url}`);
       return config;
     });
     instance.interceptors.response.use(
@@ -152,11 +151,6 @@ export class BackendWebService extends WebService {
     const service = new BackendWebService();
     service.url(resource);
     return service;
-  }
-
-  public url(resource: string): WebService {
-    const fullUrl = `${process.env.VUE_APP_BACKEND}${resource}`;
-    return super.url(fullUrl);
   }
 
   protected async auth(): Promise<void> {

@@ -1,10 +1,15 @@
 import { Monster } from "@/models/Character";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
+import MonsterIndexService from "../monster/MonsterIndexService";
+import TypeService from "../types/TypeService";
 import Ability from "./Ability";
 import AbilityEffect, { StatAbilityEffect } from "./AbilityEffect";
 
 export default class SingleTargetAbility {
+  protected typeService = Container.get<TypeService>(TypeService);
+  protected monsterIndexService =
+    Container.get<MonsterIndexService>(MonsterIndexService);
   protected source: Monster;
   protected target: Monster;
   protected ability: Ability;
@@ -53,8 +58,8 @@ export default class SingleTargetAbility {
     }
     const atkRandom = randomService.randomDecimal(0.9, 1.1);
     // TODO add hit bonus
-    const atkModifier = 0;
-    const attacker = (power / 100) * (atk / 3) * atkRandom * (1 + atkModifier);
+    const atkModifier = this.attackBonus();
+    const attacker = (power / 100) * (atk / 3) * atkRandom * atkModifier;
 
     let def = this.target.stats.def;
     // TODO move to constants file
@@ -74,5 +79,27 @@ export default class SingleTargetAbility {
 
   protected randomService(): RandomService {
     return Container.get<RandomService>(RandomService);
+  }
+
+  protected attackBonus(): number {
+    const ability = this.ability.types;
+    const source = this.monsterIndexService.getMonster(this.source.modelId);
+    const target = this.monsterIndexService.getMonster(this.target.modelId);
+    let bonus = 1;
+
+    // synergy between attacker and ability
+    ability.forEach((type, index) => {
+      if (source.types.indexOf(type) !== -1) {
+        bonus *= 1.2 / (index + 1);
+      }
+    });
+    // bonus between ability and target
+    ability.forEach((abilityType, index) => {
+      target.types.forEach((targetType) => {
+        bonus *=
+          this.typeService.getBonus(abilityType, targetType) / (1 + index);
+      });
+    });
+    return bonus;
   }
 }

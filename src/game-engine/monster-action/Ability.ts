@@ -1,6 +1,6 @@
 import { Monster } from "@/models/Character";
 import RechargeFamily from "../turns/RechargeFamily";
-import Type from "../types/Type";
+import Type from "../types/Bonus";
 import SingleTargetAbility from "./SingleTargetAbility";
 
 export class Usages {
@@ -107,7 +107,6 @@ export default class Ability {
     if (this.precision < 0) {
       throw Error(`Precision must be >=0, actual ${this.precision}`);
     }
-    this.types.forEach(Type.validate);
     RechargeFamily.validate(this.rechargeFamily);
     // TODO move to constants file
     if (this.atkStat !== "atk" && this.atkStat !== "int") {

@@ -1,5 +1,6 @@
 import MapContainer from "@/models/Map";
-import { Monster, MonsterIndex } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
+import { Monster } from "@/models/Character";
 import * as PIXI from "pixi.js";
 import { Service } from "typedi";
 import { Animation } from "@/models/Animation";

@@ -7,7 +7,8 @@ import PlayerService from "@/game-engine/PlayerService";
 import Container from "typedi";
 import MapContainer, { Tile } from "@/models/Map";
 import { SpriteType } from "@/models/SpriteConfig";
-import { Monster, MonsterIndex } from "@/models/Character";
+import { Monster } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import UserActionService from "../game-engine/user-action-handler/UserActionService";
 import CoordinateService from "../game-engine/CoordinateService";
 import Point from "@/models/Point";
@@ -27,6 +28,7 @@ import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import { AnimationSrc } from "@/models/Animation";
 import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import GameLoop from "@/game-engine/GameLoop";
+import TypeRepository from "@/game-engine/repositories/TypeRepository";
 
 @Service()
 export default class GameService {
@@ -51,6 +53,7 @@ export default class GameService {
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected typeRepository = Container.get<TypeRepository>(TypeRepository);
 
   protected map = new MapContainer();
   protected app: PIXI.Application | null = null;
@@ -79,6 +82,9 @@ export default class GameService {
     this.app.resizeTo = window;
 
     this.map = await this.gameAssetService.getMap("map1");
+
+    this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
+    this.typeRepository.init(await this.gameAssetService.getTypeBonuses());
     this.monsterIndexRepository.init(
       await this.gameAssetService.getMonstersData()
     );
@@ -93,8 +99,6 @@ export default class GameService {
     }
     await Promise.all(promises);
     console.log("Load animations' metadata done.");
-
-    this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
 
     this.rendererService
       .loadAssets(this.map, this.monsterIndexRepository.getMonsters())

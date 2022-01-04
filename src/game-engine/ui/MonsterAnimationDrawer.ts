@@ -1,6 +1,6 @@
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import { MonsterIndex } from "@/models/Character";
+import MonsterIndex from "@/models/MonsterIndex";
 import TimeUtil from "@/utils/TimeUtil";
 import { Animation } from "@/models/Animation";
 
