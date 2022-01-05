@@ -1,5 +1,3 @@
-import MapContainer, { MapOption } from "@/models/Map";
-import Point from "@/models/Point";
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";
 

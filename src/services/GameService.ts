@@ -29,11 +29,11 @@ import { AnimationSrc } from "@/models/Animation";
 import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import GameLoop from "@/game-engine/GameLoop";
 import TypeRepository from "@/game-engine/repositories/TypeRepository";
+import GameApp from "@/game-engine/GameApp";
 
 @Service()
 export default class GameService {
-  protected lastUserAction = 0;
-
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected rendererService = Container.get(RendererService);
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
@@ -56,7 +56,6 @@ export default class GameService {
   protected typeRepository = Container.get<TypeRepository>(TypeRepository);
 
   protected map = new MapContainer();
-  protected app: PIXI.Application | null = null;
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected leftMenu: LeftMenu | null = null;
   protected gameLoop = Container.get<GameLoop>(GameLoop);
@@ -65,22 +64,10 @@ export default class GameService {
     return this.map;
   }
   public getApp(): PIXI.Application {
-    if (this.app) {
-      return this.app;
-    }
-    throw new Error("App not initialized");
+    return this.gameApp.getApp();
   }
 
   public async init(): Promise<void> {
-    this.app = new PIXI.Application({
-      autoDensity: true,
-    });
-    this.windowSizeProxy.setApp(this.app);
-
-    this.app.renderer.view.style.position = "absolute";
-    this.app.renderer.view.style.display = "block";
-    this.app.resizeTo = window;
-
     this.map = await this.gameAssetService.getMap("map1");
 
     this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
@@ -113,7 +100,7 @@ export default class GameService {
 
         const container = new PIXI.Container();
         container.name = "BATTLE_CONTAINER";
-        this.app?.stage.addChild(container);
+        this.gameApp.getApp().stage.addChild(container);
 
         this.map.tiles.forEach((tile) => this.initMapTile(tile));
 

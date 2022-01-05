@@ -4,20 +4,22 @@
 
 <script lang="ts">
 import Vue from "vue";
-import GameService from "@/services/GameService";
+import GameApp from "@/game-engine/GameApp";
 import Container from "typedi";
+import HomePhase from "@/game-engine/game-phase/HomePhase";
 
 export default Vue.extend({
   name: "GameEngine",
 
   data: () => ({
-    gameService: Container.get<GameService>(GameService),
+    gameApp: Container.get<GameApp>(GameApp),
+    homePhase: Container.get<HomePhase>(HomePhase),
   }),
   methods: {},
-  mounted() {
-    this.gameService.init().then(() => {
-      this.$el.appendChild(this.gameService.getApp().view);
-    });
+  async mounted() {
+    this.gameApp.init();
+    await this.homePhase.start(null);
+    this.$el.appendChild(this.gameApp.getApp().view);
   },
 });
 </script>
