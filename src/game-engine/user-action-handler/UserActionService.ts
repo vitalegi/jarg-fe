@@ -18,6 +18,11 @@ export default class UserActionService {
     );
   }
 
+  public removeAll(): void {
+    console.log(`Remove all ActionHandlers`);
+    this.actionHandlers = [];
+  }
+
   public removeActionHandler(actionHandler: UserActionHandler): void {
     const index = this.actionHandlers.findIndex(
       (h) => h.getUuid() === actionHandler.getUuid()

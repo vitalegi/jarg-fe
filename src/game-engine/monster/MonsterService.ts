@@ -30,8 +30,6 @@ const names = [
 
 @Service()
 export default class MonsterService {
-  private static MONSTER_SPRITE_NAME = "monsterSprite";
-
   protected rendererService = Container.get(RendererService);
   protected userActionService =
     Container.get<UserActionService>(UserActionService);
@@ -94,43 +92,6 @@ export default class MonsterService {
     monster.coordinates = new Point(0, 0);
     return monster;
   }
-
-  public createMonsterSprite(
-    monster: Monster,
-    options: MapOption
-  ): PIXI.Container {
-    const monsterFamily = this.monsterIndexRepository.getMonster(
-      monster.modelId
-    );
-    const sprite = this.rendererService.createMonsterSprite(monsterFamily);
-    sprite.name = MonsterService.MONSTER_SPRITE_NAME;
-
-    const container = new PIXI.Container();
-    container.name = monster.uuid;
-    container.addChild(sprite);
-
-    if (monster.coordinates) {
-      const point = this.coordinateService.getTileCoordinates(
-        monster.coordinates,
-        options
-      );
-      container.x = point.x;
-      container.y = point.y;
-
-      sprite.x = (options.tileWidth - sprite.width) / 2;
-      sprite.y = (options.tileHeight - sprite.height) / 2;
-    }
-    this.healthBarService.createBar(container, monster, options);
-    this.userActionService.initMonster(monster.uuid, container);
-    return container;
-  }
-
-  public getMonsterSprite(container: PIXI.Container): PIXI.AnimatedSprite {
-    return container.getChildByName(
-      MonsterService.MONSTER_SPRITE_NAME
-    ) as PIXI.AnimatedSprite;
-  }
-
   public canActiveMonsterMove(): boolean {
     return this.availableActiveMonsterMoves() > 0;
   }

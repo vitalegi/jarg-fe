@@ -1,3 +1,4 @@
+import MapRepository from "@/game-engine/map/MapRepository";
 import { Monster } from "@/models/Character";
 import GameService from "@/services/GameService";
 import RandomService from "@/services/RandomService";
@@ -8,6 +9,7 @@ import AbilityExecutor from "../AbilityExecutor";
 export default class MonsterAI {
   protected gameService = Container.get<GameService>(GameService);
   protected randomService = Container.get<RandomService>(RandomService);
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
 
   protected source: Monster;
 
@@ -29,7 +31,7 @@ export default class MonsterAI {
   }
 
   protected getTarget(): Monster | null {
-    const enemies = this.gameService
+    const enemies = this.mapRepository
       .getMap()
       .monsters.filter((m) => m.ownerId !== this.source.ownerId);
 

@@ -4,6 +4,7 @@ import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
 import DetectEvent from "./DetectEvent";
 import { TextStyle } from "pixi.js";
+import GameApp from "../GameApp";
 
 export class MenuEntry {
   label: string;
@@ -59,6 +60,22 @@ export default class LeftMenu {
     this.frame = frame;
   }
 
+  public static getLeftMenuElement(): PIXI.Container | null {
+    const gameApp = Container.get<GameApp>(GameApp);
+    const menu = gameApp.getApp().stage.getChildByName(LeftMenu.NAME);
+    if (menu) {
+      return menu as PIXI.Container;
+    }
+    return null;
+  }
+  public static destroy(): void {
+    const gameApp = Container.get<GameApp>(GameApp);
+    const menu = LeftMenu.getLeftMenuElement();
+    if (menu) {
+      gameApp.getApp().stage.removeChild(menu);
+    }
+  }
+
   public addEntry(entry: MenuEntry): void {
     this.entries.push(entry);
   }
@@ -82,11 +99,6 @@ export default class LeftMenu {
     });
   }
 
-  public destroy(): void {
-    const menu = this.gameService.getApp().stage.getChildByName(LeftMenu.NAME);
-    this.gameService.getApp().stage.removeChild(menu);
-  }
-
   public show(): void {
     if (this.container) {
       this.container.visible = true;
@@ -98,7 +110,7 @@ export default class LeftMenu {
     }
   }
   public reDraw(): void {
-    this.destroy();
+    LeftMenu.destroy();
     this.draw();
   }
 

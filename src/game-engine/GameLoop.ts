@@ -7,6 +7,11 @@ import MonsterAnimationDrawer from "./ui/MonsterAnimationDrawer";
 export default class GameLoop {
   protected gameLoopHandlers: Drawer[] = [];
 
+  public removeAll(): void {
+    console.log(`Remove all game loop handlers`);
+    this.gameLoopHandlers = [];
+  }
+
   public gameLoop(): void {
     const timestamp = TimeUtil.timestamp();
     const stats = this.gameLoopHandlers

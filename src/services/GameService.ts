@@ -32,11 +32,13 @@ import TypeRepository from "@/game-engine/repositories/TypeRepository";
 import GameApp from "@/game-engine/GameApp";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Tile from "@/game-engine/map/Tile";
+import MapRepository from "@/game-engine/map/MapRepository";
+import TurnService from "@/game-engine/turns/TurnService";
 
 @Service()
 export default class GameService {
   protected gameApp = Container.get<GameApp>(GameApp);
-
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
   private _gameAppDataLoader =
     Container.get<GameAppDataLoader>(GameAppDataLoader);
 
@@ -61,86 +63,20 @@ export default class GameService {
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected typeRepository = Container.get<TypeRepository>(TypeRepository);
 
-  protected map = new MapContainer();
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected leftMenu: LeftMenu | null = null;
   protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected turnService = Container.get<TurnService>(TurnService);
 
-  public getMap(): MapContainer {
-    return this.map;
-  }
   public getApp(): PIXI.Application {
     return this.gameApp.getApp();
-  }
-
-  public async init(): Promise<void> {
-    this.map = await this.gameAssetService.getMap("map1");
-
-    this._gameAppDataLoader.loadMonsters();
-
-    console.log("Load animations' metadata");
-    const monsters = this.monsterIndexRepository.getMonsters();
-
-    const promises: Promise<void>[] = [];
-    for (const monster of monsters) {
-      for (const animationSrc of monster.animationsSrc) {
-        promises.push(this.loadAnimationMetadata(monster, animationSrc));
-      }
-    }
-    await Promise.all(promises);
-    console.log("Load animations' metadata done.");
-
-    this.rendererService
-      .loadAssets(this.map, this.monsterIndexRepository.getMonsters())
-      .then(() => {
-        this.userActionService.addActionHandler(
-          new DragScreenUserActionHandler()
-        );
-        this.userActionService.addActionHandler(
-          new CharacterStatsUserActionHandler()
-        );
-        this.gameLoop.addGameLoopHandler(new MonsterAnimationDrawer());
-
-        const container = new PIXI.Container();
-        container.name = "BATTLE_CONTAINER";
-        this.gameApp.getApp().stage.addChild(container);
-
-        this.map.tiles.forEach((tile) => this.initMapTile(tile));
-
-        this.map.monsters.push(...this.playerService.getMonsters());
-
-        this.initDummyBattle().then(() => {
-          this.map.monsters.forEach((monster) => {
-            const sprite = this.monsterService.createMonsterSprite(
-              monster,
-              this.map.options
-            );
-            this.getBattleContainer()?.addChild(sprite);
-            const handler = this.gameLoop.getMonsterAnimationDrawer();
-            handler.addMonster(
-              monster.uuid,
-              this.monsterIndexRepository.getMonster(monster.modelId),
-              this.monsterService.getMonsterSprite(sprite),
-              "normal"
-            );
-          });
-          this.turnManager.addCharacters(this.map.monsters);
-          this.turnManager.initTurns();
-          this.gameLoop.addGameLoopHandler(
-            new TurnBoxDrawer(this.getApp().stage, this.map)
-          );
-          this.startCharacterTurn();
-
-          this.getApp().ticker.add(() => this.gameLoop.gameLoop());
-        });
-      });
   }
 
   protected async initDummyBattle(): Promise<void> {
     const newEnemy = (x: number, y: number) => {
       const enemy = this.monsterService.createMonster(null);
       enemy.coordinates = new Point(x, y);
-      this.map.monsters.push(enemy);
+      this.mapRepository.getMap().monsters.push(enemy);
     };
     newEnemy(3, 3);
     newEnemy(4, 3);
@@ -149,23 +85,25 @@ export default class GameService {
     const levelUpService = Container.get<LevelUpService>(LevelUpService);
     const randomService = Container.get<RandomService>(RandomService);
 
-    for (let i = 0; i < this.map.monsters.length; i++) {
+    for (let i = 0; i < this.mapRepository.getMap().monsters.length; i++) {
       await levelUpService.gainExperience(
-        this.map.monsters[i],
+        this.mapRepository.getMap().monsters[i],
         5000 + randomService.randomInt(5000)
       );
     }
-    await levelUpService.gainExperience(this.map.monsters[0], 50000);
-    this.map.monsters.forEach((m) => {
+    await levelUpService.gainExperience(
+      this.mapRepository.getMap().monsters[0],
+      50000
+    );
+    this.mapRepository.getMap().monsters.forEach((m) => {
       m.stats.hp = m.stats.maxHP;
     });
   }
 
-  public getMonstersInBattle(): Monster[] {
-    return this.getMap().monsters;
-  }
   public getMonsterById(uuid: string): Monster {
-    return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
+    return this.mapRepository
+      .getMap()
+      .monsters.filter((m) => m.uuid === uuid)[0];
   }
 
   public moveBattleStage(offsetX: number, offsetY: number): void {
@@ -181,13 +119,6 @@ export default class GameService {
     return monster.stats.hp <= 0;
   }
 
-  public isGameOver(playerId: string | null): boolean {
-    return (
-      this.getMonstersInBattle().filter((m) => m.ownerId === playerId)
-        .length === 0
-    );
-  }
-
   public die(uuid: string): Promise<void> {
     const monster = this.getMonsterById(uuid);
 
@@ -200,136 +131,12 @@ export default class GameService {
 
       this.getBattleContainer().removeChild(container);
 
-      this.map.monsters = this.map.monsters.filter(
-        (m) => m.uuid !== monster.uuid
-      );
+      this.mapRepository.getMap().monsters = this.mapRepository
+        .getMap()
+        .monsters.filter((m) => m.uuid !== monster.uuid);
       this.turnManager.removeCharacter(uuid);
       resolve();
     });
-  }
-
-  public nextTurn(): void {
-    const activeCharacter = this.turnManager.activeCharacter();
-    if (activeCharacter) {
-      const container = this.getBattleContainer()?.getChildByName(
-        activeCharacter.monster.uuid
-      );
-      if (container) {
-        const c = container as PIXI.Container;
-        const element = c.getChildByName("activeCharacter");
-        c.removeChild(element);
-      }
-    }
-
-    this.turnManager.next();
-
-    if (this.isGameOver(this.playerService.getPlayerId())) {
-      console.log(`Player is defeated, end.`);
-    } else {
-      // async action, completion is not monitored
-      this.startCharacterTurn();
-    }
-  }
-
-  protected initMapTile(tile: Tile): void {
-    const spriteConfig = this.gameAssetService.getMapSprite(
-      this.map,
-      tile.spriteModel
-    );
-    let sprite = null;
-    if (spriteConfig.type === SpriteType.ANIMATED) {
-      sprite = this.rendererService.createAnimatedSprite(spriteConfig.sprites);
-    } else {
-      throw new Error(`Unknown type ${spriteConfig.type}`);
-    }
-    sprite.name = `${tile.coordinates.x}_${tile.coordinates.y}`;
-    sprite.width = this.map.options.tileWidth;
-    sprite.height = this.map.options.tileHeight;
-
-    this.coordinateService.setTileCoordinates(
-      sprite,
-      tile.coordinates,
-      this.map
-    );
-
-    const coordinates = this.coordinateService.getTileCoordinates(
-      tile.coordinates,
-      this.map.options
-    );
-    const border = new PIXI.Graphics();
-    border.lineStyle({ width: 1, color: 0x000000 });
-    const x1 = coordinates.x;
-    const x2 = coordinates.x + this.map.options.tileWidth;
-    const y1 = coordinates.y;
-    const y2 = coordinates.y + this.map.options.tileHeight - 1;
-    border.moveTo(x1, y1);
-    border.lineTo(x1, y2);
-    border.lineTo(x2, y2);
-    border.lineTo(x2, y1);
-    border.moveTo(x1, y1);
-
-    this.userActionService.initMapTile(tile.coordinates, sprite);
-
-    this.getBattleContainer()?.addChild(sprite);
-    this.getBattleContainer()?.addChild(border);
-  }
-
-  protected async startCharacterTurn(): Promise<void> {
-    this.leftMenu?.destroy();
-    this.leftMenu = null;
-
-    if (!this.turnManager.hasCharacters()) {
-      console.log("No active users, do nothing");
-      return;
-    }
-    const active = this.turnManager.activeCharacter();
-    if (!active) {
-      return;
-    }
-    const monster = active.monster;
-
-    const playerId = this.playerService.getPlayerId();
-    console.log(`Focus on ${monster.coordinates}`);
-    if (monster.coordinates) {
-      const focus = new ChangeFocusDrawer(monster.coordinates);
-      this.gameLoop.addGameLoopHandler(focus);
-      await focus.notifyWhenCompleted();
-    }
-    if (playerId === monster.ownerId) {
-      await this.startPlayerTurn(monster);
-    } else {
-      await this.startNpcTurn(monster);
-    }
-  }
-
-  protected async startPlayerTurn(monster: Monster): Promise<void> {
-    console.log(`Monster ${monster.uuid} is owned by player, show menu`);
-    this.leftMenu = this.monsterActionMenuBuilder.build(monster);
-    this.leftMenu.draw();
-
-    const container = this.getBattleContainer()?.getChildByName(monster.uuid);
-    if (container) {
-      const c = container as PIXI.Container;
-
-      const background = new PIXI.Graphics();
-      background.lineStyle({ width: 2, color: 0xff0000, alpha: 0.9 });
-
-      const width = this.map.options.tileWidth;
-      const height = this.map.options.tileHeight;
-      background.drawEllipse(width / 2, height - 12, width / 4, 4);
-      background.endFill();
-      background.name = "activeCharacter";
-
-      c.addChildAt(background, 0);
-    }
-  }
-
-  protected async startNpcTurn(monster: Monster): Promise<void> {
-    console.log(`Monster ${monster.uuid} is managed by AI, perform action`);
-    const ai = new MonsterAI(monster);
-    await ai.execute();
-    console.log(`Monster action is completed, go to next.`);
-    this.nextTurn();
   }
 
   public getBattleContainer(): PIXI.Container {
@@ -364,19 +171,5 @@ export default class GameService {
       return child as PIXI.Container;
     }
     return null;
-  }
-
-  protected async loadAnimationMetadata(
-    monster: MonsterIndex,
-    animationSrc: AnimationSrc
-  ): Promise<void> {
-    const animation = await this.gameAssetService.getAnimationMetadata(
-      animationSrc.key,
-      animationSrc.metadata
-    );
-    monster.animations.push(animation);
-    console.log(
-      `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
-    );
   }
 }

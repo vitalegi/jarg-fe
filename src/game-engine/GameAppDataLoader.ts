@@ -1,3 +1,5 @@
+import { AnimationSrc } from "@/models/Animation";
+import MonsterIndex from "@/models/MonsterIndex";
 import GameAssetService from "@/services/GameAssetService";
 import Container, { Service } from "typedi";
 import AbilityRepository from "./repositories/AbilityRepository";
@@ -29,6 +31,17 @@ export default class GameAppDataLoader {
     );
   }
 
+  public async loadMonstersAnimationMetadata(): Promise<void> {
+    // pre-requisites
+    await this.loadMonsters();
+
+    await this.loadOnce("monstersMetadata", () =>
+      this._loadMonstersAnimationsMetadata(
+        this.monsterIndexRepository.getMonsters()
+      )
+    );
+  }
+
   public async loadAbilities(): Promise<void> {
     await this.loadOnce("abilities", () =>
       this.gameAssetService
@@ -42,6 +55,37 @@ export default class GameAppDataLoader {
       this.gameAssetService
         .getTypeBonuses()
         .then((types) => this.typeRepository.init(types))
+    );
+  }
+
+  protected async _loadMonstersAnimationsMetadata(
+    monsters: MonsterIndex[]
+  ): Promise<void> {
+    console.log("Load animations' metadata");
+
+    const promises: Promise<void>[] = [];
+    for (const monster of monsters) {
+      for (const animationSrc of monster.animationsSrc) {
+        promises.push(
+          this._loadMonsterAnimationMetadata(monster, animationSrc)
+        );
+      }
+    }
+    await Promise.all(promises);
+    console.log("Load animations' metadata done.");
+  }
+
+  protected async _loadMonsterAnimationMetadata(
+    monster: MonsterIndex,
+    animationSrc: AnimationSrc
+  ): Promise<void> {
+    const animation = await this.gameAssetService.getAnimationMetadata(
+      animationSrc.key,
+      animationSrc.metadata
+    );
+    monster.animations.push(animation);
+    console.log(
+      `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
     );
   }
 

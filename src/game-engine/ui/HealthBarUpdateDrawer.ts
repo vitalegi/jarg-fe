@@ -5,8 +5,10 @@ import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import HealthBarService from "../monster/HealthBarService";
+import MapRepository from "../map/MapRepository";
 
 export default class HealthBarUpdateDrawer extends Drawer {
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected gameService = Container.get<GameService>(GameService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
@@ -50,7 +52,7 @@ export default class HealthBarUpdateDrawer extends Drawer {
       container,
       this.monster,
       hp,
-      this.gameService.getMap().options
+      this.mapRepository.getMap().options
     );
 
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
@@ -58,7 +60,7 @@ export default class HealthBarUpdateDrawer extends Drawer {
         container,
         this.monster,
         this.to,
-        this.gameService.getMap().options
+        this.mapRepository.getMap().options
       );
       this.complete();
     }

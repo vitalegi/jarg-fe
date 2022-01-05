@@ -11,9 +11,9 @@ import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
 import BattlePhase from "./BattlePhase";
-import HomePhase from "./HomePhase";
 
 const starters = ["001", "004", "007"];
+const firstMap = "map1";
 
 @Service()
 export default class NewGamePhase extends AbstractPhase<never> {
@@ -62,7 +62,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
 
     this.playerRepository.setPlayerData(playerData);
 
-    const map = await this.gameAssetService.getMap("map1");
+    const map = await this.gameAssetService.getMap(firstMap);
     map.monsters.push(monster);
 
     this.goToBattlePhase(map);

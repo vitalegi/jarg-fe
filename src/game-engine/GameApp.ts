@@ -24,4 +24,10 @@ export default class GameApp {
     }
     throw Error("App not initialized");
   }
+
+  public getBattleContainer(): PIXI.Container {
+    return this.getApp().stage.getChildByName(
+      "BATTLE_CONTAINER"
+    ) as PIXI.Container;
+  }
 }

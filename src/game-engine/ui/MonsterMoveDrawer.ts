@@ -6,8 +6,10 @@ import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import CoordinateService from "../CoordinateService";
+import MapRepository from "../map/MapRepository";
 
 export default class MonsterMoveDrawer extends Drawer {
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected gameService = Container.get<GameService>(GameService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
@@ -41,11 +43,11 @@ export default class MonsterMoveDrawer extends Drawer {
 
     const from = this.coordinateService.getTileCoordinates(
       this.from,
-      this.gameService.getMap().options
+      this.mapRepository.getMap().options
     );
     const to = this.coordinateService.getTileCoordinates(
       this.to,
-      this.gameService.getMap().options
+      this.mapRepository.getMap().options
     );
 
     const elapsedTime = TimeUtil.timestamp() - super.startTime();

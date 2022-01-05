@@ -5,8 +5,10 @@ import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import CoordinateService from "../CoordinateService";
+import MapRepository from "../map/MapRepository";
 
 export default class ChangeFocusDrawer extends Drawer {
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected gameService = Container.get<GameService>(GameService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
@@ -34,7 +36,7 @@ export default class ChangeFocusDrawer extends Drawer {
 
     const tilePosition = this.coordinateService.getTileCoordinates(
       this.target,
-      this.gameService.getMap().options
+      this.mapRepository.getMap().options
     );
 
     // TODO replace with WindowSizeProxy
@@ -47,12 +49,12 @@ export default class ChangeFocusDrawer extends Drawer {
       this.targetOffset(
         screen.x,
         tilePosition.x,
-        this.gameService.getMap().options.tileWidth
+        this.mapRepository.getMap().options.tileWidth
       ),
       this.targetOffset(
         screen.y,
         tilePosition.y,
-        this.gameService.getMap().options.tileHeight
+        this.mapRepository.getMap().options.tileHeight
       )
     );
 

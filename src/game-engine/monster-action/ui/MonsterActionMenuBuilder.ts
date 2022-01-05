@@ -11,10 +11,13 @@ import Point from "@/models/Point";
 import MapTraversal from "@/game-engine/MapTraversal";
 import MonsterMove from "../MonsterMove";
 import MonsterService from "@/game-engine/monster/MonsterService";
+import MapRepository from "@/game-engine/map/MapRepository";
+import TurnService from "@/game-engine/turns/TurnService";
 
 @Service()
 export default class MonsterActionMenuBuilder {
   protected monsterService = Container.get<MonsterService>(MonsterService);
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
 
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
@@ -100,10 +103,8 @@ export default class MonsterActionMenuBuilder {
     do {
       const target = await this.selectTarget(null, true, false);
 
-      const gameService = Container.get<GameService>(GameService);
-
       try {
-        path = new MapTraversal(gameService.getMap(), monster).getPath(
+        path = new MapTraversal(this.mapRepository.getMap(), monster).getPath(
           target.getPosition()
         );
         const maxDistance = this.monsterService.availableActiveMonsterMoves();
@@ -145,7 +146,6 @@ export default class MonsterActionMenuBuilder {
   }
 
   protected nextTurn(): void {
-    const gameService = Container.get<GameService>(GameService);
-    gameService.nextTurn();
+    Container.get<TurnService>(TurnService).nextTurn();
   }
 }

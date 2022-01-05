@@ -182,6 +182,12 @@ export default class TurnManager {
     this.monsters.push(monster);
   }
 
+  public removeAll(): void {
+    this.monsters = [];
+    this.ticks = [];
+    this.active = null;
+  }
+
   public removeCharacter(uuid: string): void {
     this.ticks = this.ticks.filter((t) => t.monster.uuid !== uuid);
 
