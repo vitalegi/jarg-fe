@@ -1,13 +1,13 @@
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
+import GameApp from "../GameApp";
 
 export default class TextOverCharacterDrawer extends Drawer {
   protected static NAME = "TextOverCharacterDrawer";
-
+  protected gameApp = Container.get<GameApp>(GameApp);
   monster;
   text;
 
@@ -70,9 +70,8 @@ export default class TextOverCharacterDrawer extends Drawer {
   }
 
   protected getMonsterContainer(): PIXI.Container | null {
-    const gameService = Container.get<GameService>(GameService);
-    return gameService.findChildContainer(
-      gameService.getBattleContainer(),
+    return this.findChildContainer(
+      this.gameApp.getBattleContainer(),
       this.monster.uuid
     );
   }

@@ -1,10 +1,11 @@
-import Container from "typedi";
 import Point from "@/models/Point";
-import GameService from "@/services/GameService";
+import Container from "typedi";
+import GameApp from "../GameApp";
 import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
 export default class DragScreenUserActionHandler extends UserActionHandler {
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected _dragStart: Point | null = null;
   protected _lastPoint: Point | null = null;
 
@@ -39,10 +40,9 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
     const diffX = point.x - this._lastPoint.x;
     const diffY = point.y - this._lastPoint.y;
 
-    const gameService = Container.get<GameService>(GameService);
     console.debug(`drag progress ${this._dragStart} => ${point}`);
     this._lastPoint = point;
-    gameService.moveBattleStage(diffX, diffY);
+    this.moveBattleStage(diffX, diffY);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -53,5 +53,13 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
     console.log(`Drag end`);
     this._dragStart = null;
     this._lastPoint = null;
+  }
+
+  protected moveBattleStage(offsetX: number, offsetY: number): void {
+    const battleContainer = this.gameApp.getBattleContainer();
+    if (battleContainer) {
+      battleContainer.x += offsetX;
+      battleContainer.y += offsetY;
+    }
   }
 }

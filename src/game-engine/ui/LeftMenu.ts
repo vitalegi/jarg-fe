@@ -1,4 +1,3 @@
-import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
@@ -26,7 +25,7 @@ export default class LeftMenu {
   protected static NAME = "LeftMenu";
 
   protected container: PIXI.Container | null = null;
-  protected gameService = Container.get<GameService>(GameService);
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected entries: MenuEntry[] = [];
   protected frame: FrameImpl;
 
@@ -84,7 +83,7 @@ export default class LeftMenu {
     this.container = new PIXI.Container();
     this.container.name = LeftMenu.NAME;
 
-    this.gameService.getApp().stage.addChild(this.container);
+    this.gameApp.getApp().stage.addChild(this.container);
 
     this.container.addChild(
       this.frame.createFrame(

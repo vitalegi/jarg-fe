@@ -13,36 +13,41 @@ export class LevelUpService {
   }
 
   public async gainExperience(monster: Monster, exp: number): Promise<void> {
-    const levelExp = this.getNextLevelExp(monster.level);
-    const toNextLevel = levelExp - monster.currentLevelExperience;
+    const toNextLevel = this.toNextLevel(monster);
     console.log(
-      `Monster ${monster.uuid} gains ${exp} EXP. Level EXP: ${monster.currentLevelExperience}, required: ${levelExp}, to next level: ${toNextLevel}.`
+      `Monster ${monster.uuid} gains ${exp} EXP. Level EXP: ${monster.currentLevelExperience}, to next level: ${toNextLevel}.`
     );
-    if (monster.currentLevelExperience + exp < levelExp) {
+    if (exp < toNextLevel) {
       monster.experience += exp;
       monster.currentLevelExperience += exp;
       return;
     }
-    monster.experience += toNextLevel;
-    monster.currentLevelExperience = 0;
     await this.levelUp(monster);
     if (exp - toNextLevel > 0) {
       await this.gainExperience(monster, exp - toNextLevel);
     }
   }
 
-  protected async levelUp(monster: Monster): Promise<void> {
-    console.log(`Monster ${monster.uuid} performs level-up`);
+  public async levelUp(monster: Monster): Promise<void> {
+    const toNextLevel = this.toNextLevel(monster);
+    monster.experience += toNextLevel;
     monster.currentLevelExperience = 0;
     monster.level += 1;
     this.computeMonsterAttributes(monster);
 
     console.log(
-      `Level up done (${monster.level}), new stats: ${monster.stats.toString()}`
+      `${monster.uuid} performs level up. New level ${
+        monster.level
+      }, new stats: ${monster.stats.toString()}`
     );
   }
 
-  protected computeMonsterAttributes(monster: Monster): void {
+  protected toNextLevel(monster: Monster): number {
+    const levelExp = this.getNextLevelExp(monster.level);
+    return levelExp - monster.currentLevelExperience;
+  }
+
+  public computeMonsterAttributes(monster: Monster): void {
     const stats = this.computeAttributes(
       monster.level,
       monster.baseStats,

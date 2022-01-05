@@ -1,3 +1,4 @@
+import { Monster } from "@/models/Character";
 import { Service } from "typedi";
 import MapContainer from "./MapContainer";
 
@@ -13,5 +14,9 @@ export default class MapRepository {
       return this.map;
     }
     throw Error(`Map is null`);
+  }
+
+  public getMonsterById(uuid: string): Monster {
+    return this.getMap().monsters.filter((m) => m.uuid === uuid)[0];
   }
 }

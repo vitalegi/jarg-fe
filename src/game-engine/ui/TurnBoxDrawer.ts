@@ -1,7 +1,7 @@
 import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import TurnManager from "../turns/TurnManager";
+import TurnManager from "../battle/TurnManager";
 import MapContainer from "@/game-engine/map/MapContainer";
 import WindowSizeProxy from "../WindowSizeProxy";
 

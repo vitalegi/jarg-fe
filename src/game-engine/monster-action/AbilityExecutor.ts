@@ -1,6 +1,4 @@
-import * as PIXI from "pixi.js";
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import Container from "typedi";
 import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./Ability";
@@ -11,10 +9,11 @@ import AbilityEffect from "./AbilityEffect";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
-import TurnManager from "../turns/TurnManager";
+import TurnManager from "../battle/TurnManager";
+import BattleService from "../battle/BattleService";
 
 export default class AbilityExecutor {
-  protected gameService = Container.get<GameService>(GameService);
+  protected battleService = Container.get<BattleService>(BattleService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
@@ -75,9 +74,9 @@ export default class AbilityExecutor {
       await this.waitCompletion([abilityDrawer, effectsDrawer]);
     }
 
-    if (this.gameService.isDead(this.target.uuid)) {
+    if (this.battleService.isDead(this.target.uuid)) {
       const exp = this.levelUpService.getKillExperience(this.target);
-      await this.gameService.die(this.target.uuid);
+      await this.battleService.die(this.target.uuid);
       await this.levelUpService.gainExperience(this.source, exp);
     }
   }

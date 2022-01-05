@@ -1,13 +1,12 @@
-import GameService from "@/services/GameService";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
 import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
-import Point from "@/models/Point";
+import GameApp from "../GameApp";
 
 export default class AbilityNameDrawer extends Drawer {
   protected static NAME = "AbilityNameDrawer";
-
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected label = "";
   protected options = {
     duration: 1500,
@@ -44,16 +43,13 @@ export default class AbilityNameDrawer extends Drawer {
   protected doDraw(): void {
     if (this.isFirstDraw()) {
       console.log(`Show ability ${this.label}`);
-      this.getGameService().getApp().stage.addChild(this.createText());
+      this.gameApp.getApp().stage.addChild(this.createText());
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
       console.log(`Remove ability ${this.label}`);
 
-      const parent = this.getGameService().getApp().stage;
-      const child = this.getGameService().getChildContainer(
-        parent,
-        AbilityNameDrawer.NAME
-      );
+      const parent = this.gameApp.getApp().stage;
+      const child = this.getChildContainer(parent, AbilityNameDrawer.NAME);
       parent.removeChild(child);
       this.complete();
     }
@@ -63,7 +59,7 @@ export default class AbilityNameDrawer extends Drawer {
     const container = new PIXI.Container();
     container.name = AbilityNameDrawer.NAME;
 
-    const screenWidth = this.getGameService().getApp().view.width;
+    const screenWidth = this.gameApp.getApp().view.width;
     container.x = screenWidth / 2 - this.frameWidth() / 2;
     container.y = this.options.y;
 
@@ -82,15 +78,26 @@ export default class AbilityNameDrawer extends Drawer {
     return container;
   }
 
-  protected getGameService(): GameService {
-    return Container.get<GameService>(GameService);
-  }
-
   protected frameWidth(): number {
     return this.options.text.fontWidth * this.label.length;
   }
 
   protected getBattleContainer(): PIXI.Container {
-    return this.getGameService().getBattleContainer();
+    return this.gameApp.getBattleContainer();
+  }
+
+  protected getChildContainer(
+    parent: PIXI.Container,
+    name: string
+  ): PIXI.Container {
+    const child = this.findChildContainer(parent, name);
+    if (child) {
+      return child;
+    }
+    throw Error(
+      `Cannot find element ${name} in parent ${
+        parent.name
+      }. Children ${parent.children.map((c) => c.name).join(", ")}`
+    );
   }
 }

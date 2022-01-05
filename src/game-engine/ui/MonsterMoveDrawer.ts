@@ -1,5 +1,4 @@
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
@@ -7,10 +6,11 @@ import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import CoordinateService from "../CoordinateService";
 import MapRepository from "../map/MapRepository";
+import GameApp from "../GameApp";
 
 export default class MonsterMoveDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameService = Container.get<GameService>(GameService);
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
 
@@ -67,8 +67,8 @@ export default class MonsterMoveDrawer extends Drawer {
   }
 
   protected getMonsterContainer(): PIXI.Container | null {
-    return this.gameService.findChildContainer(
-      this.gameService.getBattleContainer(),
+    return this.findChildContainer(
+      this.gameApp.getBattleContainer(),
       this.monster.uuid
     );
   }

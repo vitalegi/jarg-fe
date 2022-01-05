@@ -3,7 +3,7 @@ import Container from "typedi";
 import Point from "@/models/Point";
 import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
 import GameLoop from "../GameLoop";
-import TurnManager from "../turns/TurnManager";
+import TurnManager from "../battle/TurnManager";
 
 export default class MonsterMove {
   protected gameLoop = Container.get<GameLoop>(GameLoop);

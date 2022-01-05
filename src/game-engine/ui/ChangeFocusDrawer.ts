@@ -1,4 +1,3 @@
-import GameService from "@/services/GameService";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
@@ -6,12 +5,14 @@ import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import CoordinateService from "../CoordinateService";
 import MapRepository from "../map/MapRepository";
+import GameApp from "../GameApp";
 
 export default class ChangeFocusDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameService = Container.get<GameService>(GameService);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
+  protected gameApp = Container.get<GameApp>(GameApp);
+
   target;
   startingOffset: Point | null = null;
   options = {
@@ -41,8 +42,8 @@ export default class ChangeFocusDrawer extends Drawer {
 
     // TODO replace with WindowSizeProxy
     const screen = new Point(
-      this.gameService.getApp().view.width,
-      this.gameService.getApp().view.height
+      this.gameApp.getApp().view.width,
+      this.gameApp.getApp().view.height
     );
 
     const targetOffset = new Point(
@@ -77,7 +78,7 @@ export default class ChangeFocusDrawer extends Drawer {
   }
 
   protected getContainer(): PIXI.Container {
-    return this.gameService.getBattleContainer();
+    return this.gameApp.getBattleContainer();
   }
 
   protected targetOffset(

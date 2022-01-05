@@ -1,15 +1,15 @@
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import HealthBarService from "../monster/HealthBarService";
 import MapRepository from "../map/MapRepository";
+import GameApp from "../GameApp";
 
 export default class HealthBarUpdateDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameService = Container.get<GameService>(GameService);
+  protected gameApp = Container.get<GameApp>(GameApp);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
 
@@ -67,8 +67,8 @@ export default class HealthBarUpdateDrawer extends Drawer {
   }
 
   protected getMonsterContainer(): PIXI.Container | null {
-    return this.gameService.findChildContainer(
-      this.gameService.getBattleContainer(),
+    return this.findChildContainer(
+      this.gameApp.getBattleContainer(),
       this.monster.uuid
     );
   }

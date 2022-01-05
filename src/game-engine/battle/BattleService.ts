@@ -12,7 +12,7 @@ import MapRepository from "../map/MapRepository";
 import MonsterAI from "../monster-action/ai/MonsterAI";
 
 @Service()
-export default class TurnService {
+export default class BattleService {
   protected gameApp = Container.get<GameApp>(GameApp);
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected playerService = Container.get<PlayerService>(PlayerService);
@@ -114,5 +114,32 @@ export default class TurnService {
 
   public getMonstersInBattle(): Monster[] {
     return this.mapRepository.getMap().monsters;
+  }
+
+  public isDead(uuid: string): boolean {
+    const monster = this.mapRepository.getMonsterById(uuid);
+    return monster.stats.hp <= 0;
+  }
+
+  public die(uuid: string): Promise<void> {
+    const monster = this.mapRepository.getMonsterById(uuid);
+
+    return new Promise<void>((resolve) => {
+      console.log(`Monster ${monster.uuid} died.`);
+
+      const container = this.gameApp
+        .getBattleContainer()
+        .getChildByName(monster.uuid);
+
+      this.gameLoop.getMonsterAnimationDrawer().removeMonster(monster.uuid);
+
+      this.gameApp.getBattleContainer().removeChild(container);
+
+      this.mapRepository.getMap().monsters = this.mapRepository
+        .getMap()
+        .monsters.filter((m) => m.uuid !== monster.uuid);
+      this.turnManager.removeCharacter(uuid);
+      resolve();
+    });
   }
 }

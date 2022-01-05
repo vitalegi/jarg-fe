@@ -13,7 +13,8 @@ import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
 import AbilityRepository from "../repositories/AbilityRepository";
 import Move from "@/models/Move";
-import TurnManager, { ActionType } from "../turns/TurnManager";
+import TurnManager, { ActionType } from "../battle/TurnManager";
+import { LevelUpService } from "./LevelUpService";
 
 const names = [
   "Cino",
@@ -40,9 +41,9 @@ export default class MonsterService {
   );
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);
-
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
+  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected turnManager = Container.get<TurnManager>(TurnManager);
 
   public createMonster(
@@ -52,7 +53,7 @@ export default class MonsterService {
   ): Monster {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
-    monster.level = 5;
+    monster.level = 1;
 
     const random = Container.get<RandomService>(RandomService);
 
@@ -75,10 +76,6 @@ export default class MonsterService {
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
 
-    monster.baseStats = monsterIndex.baseStats.clone();
-    monster.stats = new Stats(0, 0, 0, 0, 0, 0, 0, 0, 0);
-    monster.growthRates = monsterIndex.growthRates.clone();
-
     const abilities = this.abilityRepository.getAbilities();
 
     monster.abilities.push(
@@ -88,6 +85,13 @@ export default class MonsterService {
     monster.movements = new Move();
     monster.movements.steps = 3;
     monster.movements.canWalk = true;
+
+    monster.level = 0;
+    monster.baseStats = monsterIndex.baseStats.clone();
+    monster.growthRates = monsterIndex.growthRates.clone();
+
+    this.levelUpService.levelUp(monster);
+    monster.stats.hp = monster.stats.maxHP;
 
     monster.coordinates = new Point(0, 0);
     return monster;

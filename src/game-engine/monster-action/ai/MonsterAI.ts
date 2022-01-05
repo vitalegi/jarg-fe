@@ -1,13 +1,11 @@
 import MapRepository from "@/game-engine/map/MapRepository";
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
 import Ability from "../Ability";
 import AbilityExecutor from "../AbilityExecutor";
 
 export default class MonsterAI {
-  protected gameService = Container.get<GameService>(GameService);
   protected randomService = Container.get<RandomService>(RandomService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 

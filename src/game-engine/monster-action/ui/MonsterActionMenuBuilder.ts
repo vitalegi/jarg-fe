@@ -1,6 +1,5 @@
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import { Monster } from "@/models/Character";
-import GameService from "@/services/GameService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import Container, { Service } from "typedi";
 import Ability from "../Ability";
@@ -12,7 +11,7 @@ import MapTraversal from "@/game-engine/MapTraversal";
 import MonsterMove from "../MonsterMove";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import MapRepository from "@/game-engine/map/MapRepository";
-import TurnService from "@/game-engine/turns/TurnService";
+import BattleService from "@/game-engine/battle/BattleService";
 
 @Service()
 export default class MonsterActionMenuBuilder {
@@ -92,8 +91,7 @@ export default class MonsterActionMenuBuilder {
   protected async selectTargetMonster(skipUUID: string): Promise<Monster> {
     const target = await this.selectTarget(skipUUID, false, true);
     console.log(`Selected target ${target}`);
-    const gameService = Container.get<GameService>(GameService);
-    return gameService.getMonsterById(target.getMonsterId());
+    return this.mapRepository.getMonsterById(target.getMonsterId());
   }
 
   protected async selectWalkTarget(monster: Monster): Promise<Point[]> {
@@ -146,6 +144,6 @@ export default class MonsterActionMenuBuilder {
   }
 
   protected nextTurn(): void {
-    Container.get<TurnService>(TurnService).nextTurn();
+    Container.get<BattleService>(BattleService).nextTurn();
   }
 }

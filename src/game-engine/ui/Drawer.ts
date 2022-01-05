@@ -1,3 +1,4 @@
+import * as PIXI from "pixi.js";
 import TimeUtil from "@/utils/TimeUtil";
 import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
@@ -74,5 +75,15 @@ export default abstract class Drawer {
 
   protected isResized(): boolean {
     return this._isResized.isChanged();
+  }
+  protected findChildContainer(
+    parent: PIXI.Container,
+    name: string
+  ): PIXI.Container | null {
+    const child = parent.getChildByName(name);
+    if (child) {
+      return child as PIXI.Container;
+    }
+    return null;
   }
 }
