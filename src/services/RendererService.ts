@@ -21,7 +21,7 @@ export default class RendererService {
     const mapSprites = map.sprites
       .flatMap((sprite) => sprite.sprites)
       .map((sprite) => {
-        return { name: sprite, url: sprite };
+        return { name: sprite, url: `${process.env.VUE_APP_BACKEND}${sprite}` };
       });
 
     const images = this.removeDuplicates(mapSprites);
@@ -41,7 +41,13 @@ export default class RendererService {
     console.log("Load SpriteSheet");
 
     const assets = monsters.flatMap((m) =>
-      m.animationsSrc.map((a) => new Asset(`${m.name}_${a.key}`, a.sprites))
+      m.animationsSrc.map(
+        (a) =>
+          new Asset(
+            `${m.name}_${a.key}`,
+            `${process.env.VUE_APP_BACKEND}${a.sprites}`
+          )
+      )
     );
     await this.loadImages(assets);
     console.log("Load SpriteSheet done", assets);

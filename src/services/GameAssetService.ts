@@ -31,7 +31,11 @@ export default class GameAssetService {
     key: string,
     url: string
   ): Promise<Animation> {
-    const result = await BackendWebService.url(url).get().call();
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}${url}`
+    )
+      .get()
+      .call();
     return Animation.fromJson(key, result.data);
   }
 
