@@ -118,9 +118,13 @@ export default class MonsterService {
   }
 
   public canActiveMonsterMove(): boolean {
+    return this.availableActiveMonsterMoves() > 0;
+  }
+
+  public availableActiveMonsterMoves(): number {
     const tick = this.turnManager.activeCharacter();
     if (!tick) {
-      return false;
+      return 0;
     }
     const moves = tick.actionsHistory
       .filter((a) => a.type === ActionType.MOVE)
@@ -128,9 +132,9 @@ export default class MonsterService {
       .reduce((prev, curr) => prev + curr, 0);
 
     if (!moves) {
-      return tick.monster.movements.steps > 0;
+      return tick.monster.movements.steps;
     }
-    return tick.monster.movements.steps > moves;
+    return tick.monster.movements.steps - moves;
   }
 
   public canActiveMonsterUseAbility(): boolean {

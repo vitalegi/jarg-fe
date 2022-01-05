@@ -96,6 +96,7 @@ export default class MonsterActionMenuBuilder {
   protected async selectWalkTarget(monster: Monster): Promise<Point[]> {
     let path: Point[] = [];
 
+    let found = false;
     do {
       const target = await this.selectTarget(null, true, false);
 
@@ -105,13 +106,21 @@ export default class MonsterActionMenuBuilder {
         path = new MapTraversal(gameService.getMap(), monster).getPath(
           target.getPosition()
         );
+        const maxDistance = this.monsterService.availableActiveMonsterMoves();
+        if (path.length - 1 > maxDistance) {
+          throw Error(
+            `Monster can walk only ${maxDistance}, ${path.length - 1} selected.`
+          );
+        }
         console.log(`Selected target ${target}`);
+        found = true;
       } catch (e) {
         console.error(
-          `Failed to find a path between ${monster.coordinates} (${monster.uuid}) and ${target}`
+          `Failed to find a path between ${monster.coordinates} (${monster.uuid}) and ${target}`,
+          e
         );
       }
-    } while (path.length === 0);
+    } while (!found);
     return path;
   }
 
