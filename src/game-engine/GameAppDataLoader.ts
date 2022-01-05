@@ -1,6 +1,8 @@
 import GameAssetService from "@/services/GameAssetService";
 import Container, { Service } from "typedi";
+import AbilityRepository from "./repositories/AbilityRepository";
 import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
+import TypeRepository from "./repositories/TypeRepository";
 
 @Service()
 export default class GameAppDataLoader {
@@ -11,12 +13,35 @@ export default class GameAppDataLoader {
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
+  protected typeRepository = Container.get<TypeRepository>(TypeRepository);
 
   public async loadMonsters(): Promise<void> {
-    this.loadOnce("monsterIndex", () =>
+    // pre-requisites
+    await this.loadAbilities();
+    await this.loadTypes();
+
+    await this.loadOnce("monstersIndex", () =>
       this.gameAssetService
         .getMonstersData()
         .then((monsters) => this.monsterIndexRepository.init(monsters))
+    );
+  }
+
+  public async loadAbilities(): Promise<void> {
+    await this.loadOnce("abilities", () =>
+      this.gameAssetService
+        .getAbilitiesData()
+        .then((a) => this.abilityRepository.init(a))
+    );
+  }
+
+  public async loadTypes(): Promise<void> {
+    await this.loadOnce("abilities", () =>
+      this.gameAssetService
+        .getTypeBonuses()
+        .then((types) => this.typeRepository.init(types))
     );
   }
 

@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js";
 import { CharacterType, Monster } from "@/models/Character";
-import { MapOption } from "@/models/Map";
+import { MapOption } from "@/game-engine/map/MapContainer";
 import Stats from "@/models/Stats";
 import RandomService from "@/services/RandomService";
 import RendererService from "@/services/RendererService";
@@ -47,20 +47,33 @@ export default class MonsterService {
     Container.get<HealthBarService>(HealthBarService);
   protected turnManager = Container.get<TurnManager>(TurnManager);
 
-  public createMonster(ownerId: null | string): Monster {
+  public createMonster(
+    ownerId: string | null,
+    monsterIndexId: string | null = null,
+    name: string | null = null
+  ): Monster {
     const monster = new Monster();
     monster.uuid = UuidUtil.nextId();
     monster.level = 5;
 
     const random = Container.get<RandomService>(RandomService);
 
-    const monstersIndex = this.monsterIndexRepository.getMonsters();
-    const monsterIndex = monstersIndex[random.randomInt(monstersIndex.length)];
+    if (!monsterIndexId) {
+      const monstersIndex = this.monsterIndexRepository.getMonsters();
+      monsterIndexId =
+        monstersIndex[random.randomInt(monstersIndex.length)].monsterId;
+    }
 
+    const monsterIndex = this.monsterIndexRepository.getMonster(monsterIndexId);
     monster.modelId = monsterIndex.monsterId;
 
-    monster.name =
-      names[random.randomInt(names.length)] + " " + monsterIndex.name;
+    if (name) {
+      monster.name = name;
+    } else {
+      monster.name =
+        names[random.randomInt(names.length)] + " " + monsterIndex.name;
+    }
+
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
 
@@ -73,6 +86,7 @@ export default class MonsterService {
     monster.abilities.push(
       abilities[random.randomInt(abilities.length)].clone()
     );
+    // TODO move to MonsterIndex
     monster.movements = new Move();
     monster.movements.steps = 3;
     monster.movements.canWalk = true;

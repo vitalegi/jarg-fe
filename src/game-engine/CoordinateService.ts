@@ -1,4 +1,4 @@
-import MapContainer, { MapOption } from "@/models/Map";
+import MapContainer, { MapOption } from "@/game-engine/map/MapContainer";
 import Point from "@/models/Point";
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";

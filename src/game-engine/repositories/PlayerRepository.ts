@@ -1,28 +1,26 @@
 import { Monster } from "@/models/Character";
-import Point from "@/models/Point";
-import UuidUtil from "@/utils/UuidUtil";
-import Container, { Service } from "typedi";
-import MonsterService from "../monster/MonsterService";
-
-const playerId = UuidUtil.nextId();
-
-const monsters: Monster[] = [];
+import { Service } from "typedi";
+import PlayerData from "../PlayerData";
 
 @Service()
 export default class PlayerRepository {
+  protected playerData: PlayerData | null = null;
+
+  public setPlayerData(playerData: PlayerData): void {
+    this.playerData = playerData;
+  }
+
   public getPlayerId(): string {
-    return playerId;
+    return this.getPlayerData().playerId;
   }
   public getMonsters(): Monster[] {
-    if (monsters.length == 0) {
-      const monsterService = Container.get<MonsterService>(MonsterService);
-      monsters.push(monsterService.createMonster(playerId));
-      monsters.push(monsterService.createMonster(playerId));
-      monsters.push(monsterService.createMonster(playerId));
-      monsters[0].coordinates = new Point(1, 1);
-      monsters[1].coordinates = new Point(1, 2);
-      monsters[2].coordinates = new Point(3, 1);
+    return this.getPlayerData().monsters;
+  }
+
+  protected getPlayerData(): PlayerData {
+    if (this.playerData) {
+      return this.playerData;
     }
-    return monsters;
+    throw Error(`PlayerData not initialized`);
   }
 }

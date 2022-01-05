@@ -5,7 +5,7 @@ import GameAssetService from "@/services/GameAssetService";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import PlayerService from "@/game-engine/PlayerService";
 import Container from "typedi";
-import MapContainer, { Tile } from "@/models/Map";
+import MapContainer from "@/game-engine/map/MapContainer";
 import { SpriteType } from "@/models/SpriteConfig";
 import { Monster } from "@/models/Character";
 import MonsterIndex from "@/models/MonsterIndex";
@@ -30,10 +30,16 @@ import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import GameLoop from "@/game-engine/GameLoop";
 import TypeRepository from "@/game-engine/repositories/TypeRepository";
 import GameApp from "@/game-engine/GameApp";
+import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
+import Tile from "@/game-engine/map/Tile";
 
 @Service()
 export default class GameService {
   protected gameApp = Container.get<GameApp>(GameApp);
+
+  private _gameAppDataLoader =
+    Container.get<GameAppDataLoader>(GameAppDataLoader);
+
   protected rendererService = Container.get(RendererService);
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
@@ -70,14 +76,11 @@ export default class GameService {
   public async init(): Promise<void> {
     this.map = await this.gameAssetService.getMap("map1");
 
-    this.abilityRepository.init(await this.gameAssetService.getAbilitiesData());
-    this.typeRepository.init(await this.gameAssetService.getTypeBonuses());
-    this.monsterIndexRepository.init(
-      await this.gameAssetService.getMonstersData()
-    );
+    this._gameAppDataLoader.loadMonsters();
 
     console.log("Load animations' metadata");
     const monsters = this.monsterIndexRepository.getMonsters();
+
     const promises: Promise<void>[] = [];
     for (const monster of monsters) {
       for (const animationSrc of monster.animationsSrc) {

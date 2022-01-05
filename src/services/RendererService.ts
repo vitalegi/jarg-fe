@@ -1,4 +1,4 @@
-import MapContainer from "@/models/Map";
+import MapContainer from "@/game-engine/map/MapContainer";
 import MonsterIndex from "@/models/MonsterIndex";
 import { Monster } from "@/models/Character";
 import * as PIXI from "pixi.js";

@@ -1,7 +1,6 @@
-import SpriteConfig from "./SpriteConfig";
-import { Monster } from "./Character";
-import Point from "./Point";
-import UuidUtil from "@/utils/UuidUtil";
+import SpriteConfig from "../../models/SpriteConfig";
+import { Monster } from "../../models/Character";
+import Tile from "./Tile";
 
 export class MapOption {
   tileWidth = 0;
@@ -11,23 +10,6 @@ export class MapOption {
     const out = new MapOption();
     out.tileHeight = tile.tileHeight;
     out.tileWidth = tile.tileWidth;
-    return out;
-  }
-}
-
-export class Tile {
-  uuid = "";
-  spriteModel = "";
-  coordinates = new Point();
-
-  public static fromJson(tile: any): Tile {
-    const out = new Tile();
-    out.uuid = tile.uuid;
-    if (!out.uuid) {
-      out.uuid = UuidUtil.nextId();
-    }
-    out.spriteModel = tile.spriteModel;
-    out.coordinates = Point.fromJson(tile);
     return out;
   }
 }

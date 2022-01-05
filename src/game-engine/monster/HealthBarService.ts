@@ -1,7 +1,7 @@
 import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import { Monster } from "@/models/Character";
-import { MapOption } from "@/models/Map";
+import { MapOption } from "@/game-engine/map/MapContainer";
 import PlayerService from "../PlayerService";
 
 @Service()

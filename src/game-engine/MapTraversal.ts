@@ -1,7 +1,8 @@
 import { Monster } from "@/models/Character";
-import MapContainer, { Tile } from "@/models/Map";
+import MapContainer from "@/game-engine/map/MapContainer";
 import Point from "@/models/Point";
 import TimeUtil from "@/utils/TimeUtil";
+import Tile from "./map/Tile";
 
 const INFINITY = 10000000;
 class TraversalPoint {
