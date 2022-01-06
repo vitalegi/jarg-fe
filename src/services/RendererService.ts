@@ -1,9 +1,7 @@
-import MapContainer, { MapOption } from "@/game-engine/map/MapContainer";
-import MonsterIndex from "@/models/MonsterIndex";
-import { Monster } from "@/models/Character";
+import MapContainer from "@/game-engine/map/MapContainer";
+import Monster from "@/game-engine/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
-import { Animation } from "@/models/Animation";
 import Tile from "@/game-engine/map/Tile";
 import GameAssetService from "./GameAssetService";
 import MapRepository from "@/game-engine/map/MapRepository";
@@ -11,6 +9,9 @@ import { SpriteType } from "@/models/SpriteConfig";
 import CoordinateService from "@/game-engine/CoordinateService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import HealthBarService from "@/game-engine/monster/HealthBarService";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import { Animation } from "@/models/Animation";
+import GameConfig from "@/game-engine/GameConfig";
 
 class Asset {
   name = "";
@@ -42,7 +43,6 @@ export default class RendererService {
       .map((sprite) => {
         return { name: sprite, url: `${process.env.VUE_APP_BACKEND}${sprite}` };
       });
-
     const images = this.removeDuplicates(mapSprites);
     await this.loadImages(images);
   }
@@ -112,7 +112,6 @@ export default class RendererService {
   public createMonsterContainer(
     monster: Monster,
     monsterIndex: MonsterIndex,
-    options: MapOption,
     key: string
   ): PIXI.Container {
     const sprite = this.createMonsterSprite(monsterIndex, key);
@@ -124,16 +123,15 @@ export default class RendererService {
 
     if (monster.coordinates) {
       const point = this.coordinateService.getTileCoordinates(
-        monster.coordinates,
-        options
+        monster.coordinates
       );
       container.x = point.x;
       container.y = point.y;
 
-      sprite.x = (options.tileWidth - sprite.width) / 2;
-      sprite.y = (options.tileHeight - sprite.height) / 2;
+      sprite.x = (GameConfig.SHARED.tile.width - sprite.width) / 2;
+      sprite.y = (GameConfig.SHARED.tile.height - sprite.height) / 2;
     }
-    this.healthBarService.createBar(container, monster, options);
+    this.healthBarService.createBar(container, monster);
     this.userActionService.initMonster(monster.uuid, container);
     return container;
   }
@@ -175,26 +173,20 @@ export default class RendererService {
       throw new Error(`Unknown type ${spriteConfig.type}`);
     }
     sprite.name = `${tile.coordinates.x}_${tile.coordinates.y}`;
-    sprite.width = this.mapRepository.getMap().options.tileWidth;
-    sprite.height = this.mapRepository.getMap().options.tileHeight;
+    sprite.width = GameConfig.SHARED.tile.width;
+    sprite.height = GameConfig.SHARED.tile.height;
 
-    this.coordinateService.setTileCoordinates(
-      sprite,
-      tile.coordinates,
-      this.mapRepository.getMap()
-    );
+    this.coordinateService.setTileCoordinates(sprite, tile.coordinates);
 
     const coordinates = this.coordinateService.getTileCoordinates(
-      tile.coordinates,
-      this.mapRepository.getMap().options
+      tile.coordinates
     );
     const border = new PIXI.Graphics();
     border.lineStyle({ width: 1, color: 0x000000 });
     const x1 = coordinates.x;
-    const x2 = coordinates.x + this.mapRepository.getMap().options.tileWidth;
+    const x2 = coordinates.x + GameConfig.SHARED.tile.width;
     const y1 = coordinates.y;
-    const y2 =
-      coordinates.y + this.mapRepository.getMap().options.tileHeight - 1;
+    const y2 = coordinates.y + GameConfig.SHARED.tile.height - 1;
     border.moveTo(x1, y1);
     border.lineTo(x1, y2);
     border.lineTo(x2, y2);

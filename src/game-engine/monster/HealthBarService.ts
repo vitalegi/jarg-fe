@@ -1,8 +1,8 @@
 import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
-import { Monster } from "@/models/Character";
-import { MapOption } from "@/game-engine/map/MapContainer";
+import Monster from "@/game-engine/monster/Monster";
 import PlayerService from "../PlayerService";
+import GameConfig from "../GameConfig";
 
 @Service()
 export default class HealthBarService {
@@ -17,16 +17,12 @@ export default class HealthBarService {
     },
   };
 
-  public createBar(
-    container: PIXI.Container,
-    monster: Monster,
-    options: MapOption
-  ): void {
-    const barWidth = this.barWidth(options);
+  public createBar(container: PIXI.Container, monster: Monster): void {
+    const barWidth = this.barWidth();
     const barBorder = this.options.bar.border;
     const barHeight = this.options.bar.height;
-    const x = this.x(options);
-    const y = this.y(options);
+    const x = this.x();
+    const y = this.y();
 
     const background = new PIXI.Graphics();
     background.lineStyle({ width: barBorder, color: 0x000000 });
@@ -35,7 +31,7 @@ export default class HealthBarService {
     background.endFill();
     background.name = "healthBar_background";
 
-    const rectangle = this.createHealthBar(monster, null, options);
+    const rectangle = this.createHealthBar(monster, null);
 
     container.addChild(background);
     container.addChild(rectangle);
@@ -44,25 +40,23 @@ export default class HealthBarService {
   public updateBar(
     container: PIXI.Container,
     monster: Monster,
-    hp: number | null,
-    options: MapOption
+    hp: number | null
   ): void {
     const rectangle = container.getChildByName(
       "healthBar_bar"
     ) as PIXI.Graphics;
 
     container.removeChild(rectangle);
-    container.addChild(this.createHealthBar(monster, hp, options));
+    container.addChild(this.createHealthBar(monster, hp));
   }
 
   protected createHealthBar(
     monster: Monster,
-    hp: number | null,
-    options: MapOption
+    hp: number | null
   ): PIXI.Graphics {
     const barBorder = this.options.bar.border;
-    const x = this.x(options);
-    const y = this.y(options);
+    const x = this.x();
+    const y = this.y();
     const barHeight = this.options.bar.height;
 
     const rectangle = new PIXI.Graphics();
@@ -72,7 +66,7 @@ export default class HealthBarService {
     rectangle.drawRect(
       x + barBorder,
       y + barBorder,
-      this.healthWidth(monster, hp, options),
+      this.healthWidth(monster, hp),
       barHeight
     );
     rectangle.endFill();
@@ -81,18 +75,14 @@ export default class HealthBarService {
     return rectangle;
   }
 
-  protected barWidth(options: MapOption): number {
-    return 0.6 * options.tileWidth;
+  protected barWidth(): number {
+    return 0.6 * GameConfig.SHARED.tile.height;
   }
 
-  protected healthWidth(
-    monster: Monster,
-    hp: number | null,
-    options: MapOption
-  ): number {
+  protected healthWidth(monster: Monster, hp: number | null): number {
     const remainingHP = hp ? hp : monster.stats.hp;
     const health = remainingHP / monster.stats.maxHP;
-    const maxWidth = this.barWidth(options) - 2 * this.options.bar.border;
+    const maxWidth = this.barWidth() - 2 * this.options.bar.border;
     let width = Math.round(health * maxWidth);
     if (width <= 0) {
       width = 0;
@@ -108,16 +98,16 @@ export default class HealthBarService {
     return this.options.fillColor.enemy;
   }
 
-  protected healthX(options: MapOption): number {
-    return this.x(options) + this.options.bar.border;
+  protected healthX(): number {
+    return this.x() + this.options.bar.border;
   }
 
-  protected x(options: MapOption): number {
-    return (options.tileWidth - this.barWidth(options)) / 2;
+  protected x(): number {
+    return (GameConfig.SHARED.tile.width - this.barWidth()) / 2;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  protected y(options: MapOption): number {
-    return options.tileHeight - 12;
+  protected y(): number {
+    return GameConfig.SHARED.tile.height - 12;
   }
 }

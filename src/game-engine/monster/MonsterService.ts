@@ -1,7 +1,4 @@
-import * as PIXI from "pixi.js";
-import { CharacterType, Monster } from "@/models/Character";
-import { MapOption } from "@/game-engine/map/MapContainer";
-import Stats from "@/models/Stats";
+import { CharacterType } from "@/models/Character";
 import RandomService from "@/services/RandomService";
 import RendererService from "@/services/RendererService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
@@ -15,6 +12,7 @@ import AbilityRepository from "../repositories/AbilityRepository";
 import Move from "@/models/Move";
 import TurnManager, { ActionType } from "../battle/TurnManager";
 import { LevelUpService } from "./LevelUpService";
+import Monster from "@/game-engine/monster/Monster";
 
 const names = [
   "Cino",
@@ -60,7 +58,7 @@ export default class MonsterService {
     if (!monsterIndexId) {
       const monstersIndex = this.monsterIndexRepository.getMonsters();
       monsterIndexId =
-        monstersIndex[random.randomInt(monstersIndex.length)].monsterId;
+        monstersIndex[random.randomInt(0, monstersIndex.length - 1)].monsterId;
     }
 
     const monsterIndex = this.monsterIndexRepository.getMonster(monsterIndexId);
@@ -70,7 +68,7 @@ export default class MonsterService {
       monster.name = name;
     } else {
       monster.name =
-        names[random.randomInt(names.length)] + " " + monsterIndex.name;
+        names[random.randomInt(0, names.length - 1)] + " " + monsterIndex.name;
     }
 
     monster.ownerId = ownerId;
@@ -78,9 +76,7 @@ export default class MonsterService {
 
     const abilities = this.abilityRepository.getAbilities();
 
-    monster.abilities.push(
-      abilities[random.randomInt(abilities.length)].clone()
-    );
+    monster.abilities = abilities.map((a) => a.clone());
     // TODO move to MonsterIndex
     monster.movements = new Move();
     monster.movements.steps = 3;
@@ -90,8 +86,7 @@ export default class MonsterService {
     monster.baseStats = monsterIndex.baseStats.clone();
     monster.growthRates = monsterIndex.growthRates.clone();
 
-    this.levelUpService.levelUp(monster);
-    monster.stats.hp = monster.stats.maxHP;
+    this.levelUpService.levelUp(monster, true);
 
     monster.coordinates = new Point(0, 0);
     return monster;

@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import Container, { Service } from "typedi";
 import GameApp from "../GameApp";
 import GameLoop from "../GameLoop";
@@ -10,6 +10,7 @@ import LeftMenu from "../ui/LeftMenu";
 import TurnManager from "./TurnManager";
 import MapRepository from "../map/MapRepository";
 import MonsterAI from "../monster-action/ai/MonsterAI";
+import GameConfig from "../GameConfig";
 
 @Service()
 export default class BattleService {
@@ -64,8 +65,8 @@ export default class BattleService {
       const background = new PIXI.Graphics();
       background.lineStyle({ width: 2, color: 0xff0000, alpha: 0.9 });
 
-      const width = this.mapRepository.getMap().options.tileWidth;
-      const height = this.mapRepository.getMap().options.tileHeight;
+      const width = GameConfig.SHARED.tile.width;
+      const height = GameConfig.SHARED.tile.height;
       background.drawEllipse(width / 2, height - 12, width / 4, 4);
       background.endFill();
       background.name = "activeCharacter";

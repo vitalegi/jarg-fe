@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";

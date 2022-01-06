@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
@@ -276,9 +276,7 @@ export default class TurnManager {
   protected getICV(monster: Monster): number {
     const agi = this.getAgi(monster);
     const icv = ICV.filter((v) => v.ge <= agi).filter((v) => agi <= v.le)[0];
-    return (
-      icv.icv_min + this.randomService.randomInt(icv.icv_max - icv.icv_min)
-    );
+    return this.randomService.randomInt(icv.icv_min, icv.icv_max);
   }
 
   protected getTS(monster: Monster): number {

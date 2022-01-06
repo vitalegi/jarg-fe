@@ -1,21 +1,22 @@
 import MapContainer from "@/game-engine/map/MapContainer";
-import MonsterIndex from "@/models/MonsterIndex";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
 import Ability from "@/game-engine/monster-action/Ability";
 import { Animation } from "@/models/Animation";
 import Bonus from "@/game-engine/types/Bonus";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MapModel from "@/game-engine/map/MapModel";
 
 @Service()
 export default class GameAssetService {
-  public async getMap(map: string): Promise<MapContainer> {
+  public async getMap(map: string): Promise<MapModel> {
     const result = await BackendWebService.url(
       `${process.env.VUE_APP_BACKEND}/maps/${map}.json`
     )
       .get()
       .call();
-    return MapContainer.fromJson(result.data);
+    return MapModel.fromJson(result.data);
   }
 
   public async getMonstersData(): Promise<MonsterIndex[]> {

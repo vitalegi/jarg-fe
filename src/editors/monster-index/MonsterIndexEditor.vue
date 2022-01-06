@@ -61,7 +61,7 @@
 </template>
 
 <script lang="ts">
-import MonsterIndex from "@/models/MonsterIndex";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Stats from "@/models/Stats";
 import Vue from "vue";
 import StatsEditor from "./StatsEditor.vue";

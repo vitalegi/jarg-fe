@@ -16,4 +16,12 @@ export default class Tile {
     out.coordinates = Point.fromJson(tile);
     return out;
   }
+
+  public clone(): Tile {
+    const out = new Tile();
+    out.uuid = this.uuid;
+    out.spriteModel = this.spriteModel;
+    out.coordinates = this.coordinates.clone();
+    return out;
+  }
 }

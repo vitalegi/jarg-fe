@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
@@ -48,20 +48,10 @@ export default class HealthBarUpdateDrawer extends Drawer {
 
     const hp = percentage * (this.to - this.from) + this.from;
 
-    this.healthBarService.updateBar(
-      container,
-      this.monster,
-      hp,
-      this.mapRepository.getMap().options
-    );
+    this.healthBarService.updateBar(container, this.monster, hp);
 
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
-      this.healthBarService.updateBar(
-        container,
-        this.monster,
-        this.to,
-        this.mapRepository.getMap().options
-      );
+      this.healthBarService.updateBar(container, this.monster, this.to);
       this.complete();
     }
   }

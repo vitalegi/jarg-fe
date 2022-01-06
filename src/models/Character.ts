@@ -1,7 +1,5 @@
-import Ability from "@/game-engine/monster-action/Ability";
 import Move from "./Move";
 import Point from "./Point";
-import Stats from "./Stats";
 
 export class CharacterType {
   public static MONSTER = "MONSTER";
@@ -23,40 +21,6 @@ export default class Character {
     out.modelId = data.modelId;
     out.coordinates = Point.fromJson(data.coordinates);
     out.movements = Move.fromJson(data.movements);
-    return out;
-  }
-}
-
-export class Monster extends Character {
-  ownerId: string | null = "";
-  level = 0;
-  experience = 0;
-  currentLevelExperience = 0;
-  /**
-   * Stats at level 1
-   */
-  baseStats = new Stats();
-  /**
-   * Stats at current level, with no buf/debuf
-   */
-  stats = new Stats();
-  growthRates = new Stats();
-
-  abilities: Ability[] = [];
-
-  public static fromJson(monster: any): Monster {
-    const out = new Monster();
-    Character.fromJson(monster, out);
-    out.ownerId = monster.ownerId;
-    out.level = monster.level;
-    out.experience = monster.experience;
-    out.currentLevelExperience = monster.currentLevelExperience;
-    out.baseStats = Stats.fromJson(out.baseStats);
-    out.stats = Stats.fromJson(out.stats);
-    out.growthRates = Stats.fromJson(out.growthRates);
-    if (monster.abilities) {
-      out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
-    }
     return out;
   }
 }

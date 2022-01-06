@@ -1,6 +1,4 @@
 import MapContainer from "@/game-engine/map/MapContainer";
-import MonsterIndex from "@/models/MonsterIndex";
-import Point from "@/models/Point";
 import GameAssetService from "@/services/GameAssetService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
@@ -11,6 +9,9 @@ import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
 import BattlePhase from "./BattlePhase";
+import MonsterIndex from "../monster/MonsterIndex";
+import MapService from "../map/MapService";
+import { LevelUpService } from "../monster/LevelUpService";
 
 const starters = ["001", "004", "007"];
 const firstMap = "map1";
@@ -24,6 +25,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
+  protected mapService = Container.get<MapService>(MapService);
 
   public getName(): string {
     return "NewGamePhase";
@@ -58,11 +60,17 @@ export default class NewGamePhase extends AbstractPhase<never> {
       playerData.playerId,
       starter.monsterId
     );
+    await Container.get<LevelUpService>(LevelUpService).gainExperience(
+      monster,
+      100000
+    );
+    monster.stats.hp = monster.stats.maxHP;
     playerData.monsters.push(monster);
 
     this.playerRepository.setPlayerData(playerData);
 
-    const map = await this.gameAssetService.getMap(firstMap);
+    const model = await this.gameAssetService.getMap(firstMap);
+    const map = await this.mapService.generate(model);
     map.monsters.push(monster);
 
     this.goToBattlePhase(map);

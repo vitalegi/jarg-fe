@@ -78,7 +78,6 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
       const sprite = this.rendererService.createMonsterContainer(
         monster,
         monsterFamily,
-        map.options,
         "normal"
       );
 

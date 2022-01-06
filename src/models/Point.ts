@@ -22,6 +22,13 @@ export default class Point {
     return out;
   }
 
+  public equals(point: Point | null): boolean {
+    if (!point) {
+      return false;
+    }
+    return this.x === point.x && this.y === point.y;
+  }
+
   public toString(): string {
     return `Point(x=${this.x}, y=${this.y})`;
   }

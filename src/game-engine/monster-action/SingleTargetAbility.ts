@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
 import MonsterIndexService from "../monster/MonsterIndexService";

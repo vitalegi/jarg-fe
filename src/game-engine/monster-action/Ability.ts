@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import RechargeFamily from "../battle/RechargeFamily";
 import Type from "../types/Bonus";
 import SingleTargetAbility from "./SingleTargetAbility";

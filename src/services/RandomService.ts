@@ -3,12 +3,13 @@ import { Service } from "typedi";
 @Service()
 export default class RandomService {
   /**
-   * Returns a random int in the range [0, n)
-   * @param n
+   * Returns a random int in the range [from, to]
+   * @param from
+   * @param to
    * @returns
    */
-  public randomInt(n: number): number {
-    return Math.floor(n * Math.random());
+  public randomInt(from: number, to: number): number {
+    return from + Math.floor((to - from + 1) * Math.random());
   }
 
   /**

@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Drawer from "./Drawer";
@@ -41,14 +41,8 @@ export default class MonsterMoveDrawer extends Drawer {
       return;
     }
 
-    const from = this.coordinateService.getTileCoordinates(
-      this.from,
-      this.mapRepository.getMap().options
-    );
-    const to = this.coordinateService.getTileCoordinates(
-      this.to,
-      this.mapRepository.getMap().options
-    );
+    const from = this.coordinateService.getTileCoordinates(this.from);
+    const to = this.coordinateService.getTileCoordinates(this.to);
 
     const elapsedTime = TimeUtil.timestamp() - super.startTime();
     const stepDuration = this.options.duration / this.options.steps;

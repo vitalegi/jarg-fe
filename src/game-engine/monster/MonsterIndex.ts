@@ -1,5 +1,5 @@
-import { Animation, AnimationSrc } from "./Animation";
-import Stats from "./Stats";
+import { Animation, AnimationSrc } from "@/models/Animation";
+import Stats from "@/models/Stats";
 
 export default class MonsterIndex {
   monsterId = "";

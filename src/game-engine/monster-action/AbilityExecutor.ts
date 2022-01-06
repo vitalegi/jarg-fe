@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import Container from "typedi";
 import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./Ability";

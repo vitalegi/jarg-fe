@@ -6,9 +6,12 @@ import Point from "@/models/Point";
 import CoordinateService from "../CoordinateService";
 import MapRepository from "../map/MapRepository";
 import GameApp from "../GameApp";
+import WindowSizeProxy from "../WindowSizeProxy";
+import GameConfig from "../GameConfig";
 
 export default class ChangeFocusDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
   protected gameApp = Container.get<GameApp>(GameApp);
@@ -35,28 +38,16 @@ export default class ChangeFocusDrawer extends Drawer {
       this.startingOffset = new Point(container.x, container.y).clone();
     }
 
-    const tilePosition = this.coordinateService.getTileCoordinates(
-      this.target,
-      this.mapRepository.getMap().options
-    );
+    const tilePosition = this.coordinateService.getTileCoordinates(this.target);
 
-    // TODO replace with WindowSizeProxy
     const screen = new Point(
-      this.gameApp.getApp().view.width,
-      this.gameApp.getApp().view.height
+      this.windowSizeProxy.width(),
+      this.windowSizeProxy.height()
     );
 
     const targetOffset = new Point(
-      this.targetOffset(
-        screen.x,
-        tilePosition.x,
-        this.mapRepository.getMap().options.tileWidth
-      ),
-      this.targetOffset(
-        screen.y,
-        tilePosition.y,
-        this.mapRepository.getMap().options.tileHeight
-      )
+      this.targetOffset(screen.x, tilePosition.x, GameConfig.SHARED.tile.width),
+      this.targetOffset(screen.y, tilePosition.y, GameConfig.SHARED.tile.height)
     );
 
     const elapsedTime = TimeUtil.timestamp() - super.startTime();

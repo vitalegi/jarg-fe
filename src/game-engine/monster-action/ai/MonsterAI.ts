@@ -1,5 +1,5 @@
 import MapRepository from "@/game-engine/map/MapRepository";
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
 import Ability from "../Ability";
@@ -36,7 +36,7 @@ export default class MonsterAI {
     if (enemies.length === 0) {
       return null;
     }
-    return enemies[this.randomService.randomInt(enemies.length)];
+    return enemies[this.randomService.randomInt(0, enemies.length - 1)];
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -45,6 +45,6 @@ export default class MonsterAI {
     if (abilities.length === 0) {
       return null;
     }
-    return abilities[this.randomService.randomInt(abilities.length)];
+    return abilities[this.randomService.randomInt(0, abilities.length - 1)];
   }
 }

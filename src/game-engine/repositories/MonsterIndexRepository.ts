@@ -1,5 +1,5 @@
-import MonsterIndex from "@/models/MonsterIndex";
 import { Service } from "typedi";
+import MonsterIndex from "../monster/MonsterIndex";
 
 @Service()
 export default class MonsterIndexRepository {

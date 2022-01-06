@@ -1,5 +1,4 @@
-import { Monster } from "@/models/Character";
-import MonsterIndex from "@/models/MonsterIndex";
+import Monster from "@/game-engine/monster/Monster";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
@@ -8,6 +7,7 @@ import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";
 import Ability from "../monster-action/Ability";
 import TimeUtil from "@/utils/TimeUtil";
+import MonsterIndex from "../monster/MonsterIndex";
 
 export default class MonsterInfoDrawer extends Drawer {
   protected static NAME = "MonsterInfoDrawer";

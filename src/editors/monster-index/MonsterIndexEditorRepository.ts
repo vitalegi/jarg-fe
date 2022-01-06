@@ -1,4 +1,4 @@
-import MonsterIndex from "@/models/MonsterIndex";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import { Service } from "typedi";
 
 @Service()

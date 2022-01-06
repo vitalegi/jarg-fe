@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import MapContainer from "@/game-engine/map/MapContainer";
 import Point from "@/models/Point";
 import TimeUtil from "@/utils/TimeUtil";

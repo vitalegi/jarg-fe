@@ -1,4 +1,4 @@
-import { Monster } from "@/models/Character";
+import Monster from "@/game-engine/monster/Monster";
 import Stats from "@/models/Stats";
 import { Service } from "typedi";
 
@@ -28,12 +28,12 @@ export class LevelUpService {
     }
   }
 
-  public async levelUp(monster: Monster): Promise<void> {
+  public async levelUp(monster: Monster, restoreHP = false): Promise<void> {
     const toNextLevel = this.toNextLevel(monster);
     monster.experience += toNextLevel;
     monster.currentLevelExperience = 0;
     monster.level += 1;
-    this.computeMonsterAttributes(monster);
+    this.computeMonsterAttributes(monster, restoreHP);
 
     console.log(
       `${monster.uuid} performs level up. New level ${
@@ -47,13 +47,17 @@ export class LevelUpService {
     return levelExp - monster.currentLevelExperience;
   }
 
-  public computeMonsterAttributes(monster: Monster): void {
+  public computeMonsterAttributes(monster: Monster, restoreHP: boolean): void {
     const stats = this.computeAttributes(
       monster.level,
       monster.baseStats,
       monster.growthRates
     );
-    stats.hp = monster.stats.hp;
+    if (restoreHP) {
+      stats.hp = stats.maxHP;
+    } else {
+      stats.hp = monster.stats.hp;
+    }
     monster.stats = stats;
   }
 

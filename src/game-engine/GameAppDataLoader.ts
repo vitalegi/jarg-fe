@@ -1,7 +1,7 @@
 import { AnimationSrc } from "@/models/Animation";
-import MonsterIndex from "@/models/MonsterIndex";
 import GameAssetService from "@/services/GameAssetService";
 import Container, { Service } from "typedi";
+import MonsterIndex from "./monster/MonsterIndex";
 import AbilityRepository from "./repositories/AbilityRepository";
 import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
 import TypeRepository from "./repositories/TypeRepository";

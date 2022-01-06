@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts">
-import MonsterIndex from "@/models/MonsterIndex";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
 import MonsterIndexEditor from "./MonsterIndexEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
