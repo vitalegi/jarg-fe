@@ -4,7 +4,9 @@ import Container from "typedi";
 import MonsterIndexService from "../monster/MonsterIndexService";
 import TypeService from "../types/TypeService";
 import Ability from "./Ability";
-import AbilityEffect, { StatAbilityEffect } from "./AbilityEffect";
+import Effect from "./effects/Effect";
+import HpDamageEffect from "./effects/HpDamageEffect";
+import TargetType from "./effects/target/TargetType";
 
 export default class SingleTargetAbility {
   protected typeService = Container.get<TypeService>(TypeService);
@@ -20,9 +22,11 @@ export default class SingleTargetAbility {
     this.ability = ability;
   }
 
-  public execute(): AbilityEffect[] {
-    const damage = this.computeDamage();
-    return [new StatAbilityEffect("hp", "abs", -damage)];
+  public execute(): Effect[] {
+    const effect = new HpDamageEffect();
+    effect.target.type = TargetType.TARGET;
+    effect.damage = this.computeDamage();
+    return [effect];
   }
 
   public hit(): boolean {

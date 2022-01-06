@@ -57,6 +57,8 @@ export default class MapService {
     const isNotOccupied = (p: Point) =>
       map.monsters.filter((o) => p.equals(o.coordinates)).length === 0;
 
+    // TODO add check: can walk over this tile?
+
     const acceptablePositions = map.tiles
       .map((t) => t.coordinates)
       .filter(isInRange)

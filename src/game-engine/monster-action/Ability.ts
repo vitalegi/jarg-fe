@@ -1,6 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import RechargeFamily from "../battle/RechargeFamily";
-import Type from "../types/Bonus";
+import Effect from "./effects/Effect";
+import EffectFactory from "./effects/EffectFactory";
 import SingleTargetAbility from "./SingleTargetAbility";
 
 export class Usages {
@@ -61,6 +62,7 @@ export default class Ability {
   defStat = "";
   usages = new Usages();
   target = new Target();
+  effects: Effect[] = [];
 
   public constructor(label = "") {
     this.label = label;
@@ -82,6 +84,9 @@ export default class Ability {
       out.usages = Usages.fromJson(json.usages);
     }
     out.target = Target.fromJson(json.target);
+    if (json.effects) {
+      out.effects = json.effects.map((e: any) => EffectFactory.fromJson(e));
+    }
     return out;
   }
 
