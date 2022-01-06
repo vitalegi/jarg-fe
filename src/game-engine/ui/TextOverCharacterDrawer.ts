@@ -4,22 +4,17 @@ import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import GameApp from "../GameApp";
+import FontService from "./FontService";
 
 export default class TextOverCharacterDrawer extends Drawer {
   protected static NAME = "TextOverCharacterDrawer";
   protected gameApp = Container.get<GameApp>(GameApp);
+  protected fontService = Container.get<FontService>(FontService);
   monster;
   text;
 
   options = {
     duration: 1500,
-    font: {
-      fontFamily: "Courier",
-      fontSize: 16,
-      fill: "#ffffff",
-      stroke: "#000000",
-      strokeThickness: 3,
-    },
   };
 
   public constructor(monster: Monster, text: string) {
@@ -54,7 +49,10 @@ export default class TextOverCharacterDrawer extends Drawer {
   }
 
   protected createTextMessage(): PIXI.Text {
-    const message = new PIXI.Text(this.getText(), this.options.font);
+    const message = new PIXI.Text(
+      this.getText(),
+      this.fontService.textOverCharacter()
+    );
     message.name = TextOverCharacterDrawer.NAME;
     message.position.x = 0;
     message.position.y = 0;

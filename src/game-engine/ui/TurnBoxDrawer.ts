@@ -4,6 +4,7 @@ import * as PIXI from "pixi.js";
 import TurnManager from "../battle/TurnManager";
 import MapContainer from "@/game-engine/map/MapContainer";
 import WindowSizeProxy from "../WindowSizeProxy";
+import FontService from "./FontService";
 
 export default class TurnBoxDrawer extends Drawer {
   protected static NAME = "TurnBox";
@@ -12,8 +13,12 @@ export default class TurnBoxDrawer extends Drawer {
   protected container: PIXI.Container | null = null;
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected fontService = Container.get<FontService>(FontService);
+
+  // TODO remove map
   protected map: MapContainer;
 
+  //TODO move in a Repository class
   protected turns: string[] = [];
 
   options = {
@@ -22,13 +27,6 @@ export default class TurnBoxDrawer extends Drawer {
       width: 120,
       y: 4,
       rightMargin: 4,
-      font: {
-        fontFamily: "Courier",
-        fontSize: 14,
-        fill: "#ffffff",
-        stroke: "#000000",
-        strokeThickness: 3,
-      },
       menuEntry: {
         height: 20,
         fill: 0xffffff,
@@ -83,7 +81,7 @@ export default class TurnBoxDrawer extends Drawer {
       label = monster.name;
     }
 
-    const entry = new PIXI.Text(label, this.options.style.font);
+    const entry = new PIXI.Text(label, this.fontService.turnBox());
     entry.x = this.options.style.menuEntry.marginLeft;
     entry.y = this.options.style.menuEntry.height * index;
     return entry;

@@ -3,9 +3,11 @@ import * as PIXI from "pixi.js";
 import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
 import GameApp from "../GameApp";
+import FontService from "./FontService";
 
 export default class AbilityNameDrawer extends Drawer {
   protected static NAME = "AbilityNameDrawer";
+  protected fontService = Container.get<FontService>(FontService);
   protected gameApp = Container.get<GameApp>(GameApp);
   protected label = "";
   protected options = {
@@ -14,13 +16,6 @@ export default class AbilityNameDrawer extends Drawer {
     text: {
       x: 3,
       y: 0,
-      font: {
-        fontFamily: "Courier",
-        fontSize: 32,
-        fill: "#ffffff",
-        stroke: "#000000",
-        strokeThickness: 4,
-      },
       fontWidth: 20.2,
     },
     background: {
@@ -70,7 +65,7 @@ export default class AbilityNameDrawer extends Drawer {
     rectangle.endFill();
     container.addChild(rectangle);
 
-    const message = new PIXI.Text(this.label, this.options.text.font);
+    const message = new PIXI.Text(this.label, this.fontService.abilityName());
     message.position.x = this.options.text.x;
     message.position.y = this.options.text.y;
     container.addChild(message);

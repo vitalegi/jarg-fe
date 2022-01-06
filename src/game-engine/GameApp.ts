@@ -9,7 +9,9 @@ export default class GameApp {
 
   public init(): void {
     this.app = new PIXI.Application({
-      autoDensity: true,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      resolution: 1,
     });
     this.windowSizeProxy.setApp(this.app);
 

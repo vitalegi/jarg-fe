@@ -4,6 +4,7 @@ import FrameImpl from "./FrameImpl";
 import DetectEvent from "./DetectEvent";
 import { TextStyle } from "pixi.js";
 import GameApp from "../GameApp";
+import FontService from "./FontService";
 
 export class MenuEntry {
   label: string;
@@ -24,30 +25,14 @@ export class MenuEntry {
 export default class LeftMenu {
   protected static NAME = "LeftMenu";
 
+  protected fontService = Container.get<FontService>(FontService);
+
   protected container: PIXI.Container | null = null;
   protected gameApp = Container.get<GameApp>(GameApp);
   protected entries: MenuEntry[] = [];
   protected frame: FrameImpl;
 
   protected options = {
-    enabled: {
-      font: {
-        fontFamily: "Courier",
-        fontSize: 20,
-        fill: "#ffffff",
-        stroke: "#000000",
-        strokeThickness: 4,
-      },
-    },
-    disabled: {
-      font: {
-        fontFamily: "Courier",
-        fontSize: 20,
-        fill: "#ffffff",
-        stroke: "#999999",
-        strokeThickness: 4,
-      },
-    },
     menuEntry: {
       height: 28,
       fill: 0xffffff,
@@ -150,8 +135,8 @@ export default class LeftMenu {
 
   protected getMenuEntryFont(entry: MenuEntry): Partial<TextStyle> {
     if (entry.enabled()) {
-      return this.options.enabled.font;
+      return this.fontService.leftMenuEnabled();
     }
-    return this.options.disabled.font;
+    return this.fontService.leftMenuDisabled();
   }
 }

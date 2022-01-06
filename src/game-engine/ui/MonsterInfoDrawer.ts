@@ -8,11 +8,13 @@ import NumberUtil from "@/utils/NumberUtil";
 import Ability from "../monster-action/Ability";
 import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
+import FontService from "./FontService";
 
 export default class MonsterInfoDrawer extends Drawer {
   protected static NAME = "MonsterInfoDrawer";
 
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected fontService = Container.get<FontService>(FontService);
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
   protected frame = new FrameImpl();
@@ -21,13 +23,6 @@ export default class MonsterInfoDrawer extends Drawer {
   protected _height = 0;
 
   protected options = {
-    font: {
-      fontFamily: "Courier",
-      fontSize: 18,
-      fill: "#ffffff",
-      stroke: "#000000",
-      strokeThickness: 4,
-    },
     row: {
       height: 20,
     },
@@ -137,7 +132,7 @@ export default class MonsterInfoDrawer extends Drawer {
   }
 
   protected addText(text: string, x: number, y: number): void {
-    const entry = new PIXI.Text(text, this.options.font);
+    const entry = new PIXI.Text(text, this.fontService.monsterInfo());
     entry.x = x;
     entry.y = y;
     this.container?.addChild(entry);
