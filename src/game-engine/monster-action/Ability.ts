@@ -1,56 +1,10 @@
-import Monster from "@/game-engine/monster/Monster";
 import RechargeFamily from "../battle/RechargeFamily";
-import Effect from "./effects/Effect";
-import EffectFactory from "./effects/EffectFactory";
-import SingleTargetAbility from "./SingleTargetAbility";
+import AbstractProcessor from "./ability-processor/AbstractProcessor";
+import DefaultProcessor from "./ability-processor/DefaultProcessor";
+import ProcessorFactory from "./ability-processor/ProcessorFactory";
+import AbilityTarget from "./ability-target/AbilityTarget";
+import Usages from "./Usages";
 
-export class Usages {
-  current = 0;
-  max = 0;
-
-  public static fromJson(json: any): Usages {
-    const out = new Usages();
-    out.current = json.current;
-    out.max = json.max;
-    return out;
-  }
-  public clone(): Usages {
-    const out = new Usages();
-    out.current = this.current;
-    out.max = this.max;
-    return out;
-  }
-
-  public validate(): void {
-    if (this.current < 0) {
-      throw Error(`Current must be >=0, actual ${this.current}`);
-    }
-    if (this.max < 0) {
-      throw Error(`Max must be >=0, actual ${this.max}`);
-    }
-  }
-}
-
-export class Target {
-  range = 0;
-
-  public static fromJson(json: any): Target {
-    const out = new Target();
-    out.range = json.range;
-    return out;
-  }
-  public clone(): Target {
-    const out = new Target();
-    out.range = this.range;
-    return out;
-  }
-
-  public validate(): void {
-    if (this.range < 0) {
-      throw Error(`Range must be >=0, actual ${this.range}`);
-    }
-  }
-}
 export default class Ability {
   id = "";
   label = "";
@@ -61,8 +15,8 @@ export default class Ability {
   atkStat = "";
   defStat = "";
   usages = new Usages();
-  target = new Target();
-  effects: Effect[] = [];
+  abilityTarget = new AbilityTarget();
+  processor: AbstractProcessor = new DefaultProcessor();
 
   public constructor(label = "") {
     this.label = label;
@@ -83,10 +37,9 @@ export default class Ability {
     if (json.usages) {
       out.usages = Usages.fromJson(json.usages);
     }
-    out.target = Target.fromJson(json.target);
-    if (json.effects) {
-      out.effects = json.effects.map((e: any) => EffectFactory.fromJson(e));
-    }
+    out.abilityTarget = AbilityTarget.fromJson(json.abilityTarget);
+    out.processor = ProcessorFactory.fromJson(json.processor);
+
     return out;
   }
 
@@ -101,7 +54,8 @@ export default class Ability {
     out.atkStat = this.atkStat;
     out.defStat = this.defStat;
     out.usages = this.usages.clone();
-    out.target = this.target.clone();
+    out.abilityTarget = this.abilityTarget.clone();
+    out.processor = this.processor.clone();
     return out;
   }
 
@@ -120,9 +74,5 @@ export default class Ability {
     if (this.defStat !== "def" && this.defStat !== "res") {
       throw Error(`DefStat ${this.defStat} is not valid.`);
     }
-  }
-
-  public getProcessor(source: Monster, target: Monster): SingleTargetAbility {
-    return new SingleTargetAbility(source, target, this);
   }
 }

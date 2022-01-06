@@ -22,10 +22,6 @@ export default class TextOverCharacterDrawer extends Drawer {
     },
   };
 
-  public static miss(monster: Monster): TextOverCharacterDrawer {
-    return new TextOverCharacterDrawer(monster, "MISS");
-  }
-
   public constructor(monster: Monster, text: string) {
     super();
     this.monster = monster;
