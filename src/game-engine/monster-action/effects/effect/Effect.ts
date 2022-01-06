@@ -1,7 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import Ability from "../../Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
-import Statistics from "../../Statistics";
 import Condition from "../condition/Condition";
 import ConditionFactory from "../condition/ConditionFactory";
 import Target from "../target/Target";
@@ -49,30 +48,5 @@ export default abstract class Effect {
       );
     }
     return pass;
-  }
-
-  protected getValue(monster: Monster, stat: Statistics): number {
-    if (stat === "hp") {
-      return monster.stats.hp;
-    }
-    if (stat === "atk") {
-      return monster.stats.atk;
-    }
-    if (stat === "def") {
-      return monster.stats.def;
-    }
-    throw new Error(`Unknown stat ${stat}`);
-  }
-
-  protected setValue(monster: Monster, stat: Statistics, value: number): void {
-    if (stat === "hp") {
-      monster.stats.hp = value;
-    }
-    if (stat === "atk") {
-      monster.stats.atk = value;
-    }
-    if (stat === "def") {
-      monster.stats.def = value;
-    }
   }
 }

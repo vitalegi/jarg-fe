@@ -68,7 +68,7 @@ export default class TurnBoxDrawer extends Drawer {
     }
     this.container.removeChildren();
     this.container.height = this.height(newTurns);
-    console.log(`Turns have changed from ${this.turns} to ${newTurns}`);
+    console.debug(`Turns have changed from ${this.turns} to ${newTurns}`);
     // regenerate entries
     this.turns = newTurns;
     this.turns

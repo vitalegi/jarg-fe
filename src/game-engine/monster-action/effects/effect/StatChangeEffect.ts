@@ -1,15 +1,13 @@
 import Monster from "@/game-engine/monster/Monster";
 import Ability from "../../Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
-import MissComputed from "../../computed-effect/MissComputed";
 import Effect from "./Effect";
-import Statistics from "@/game-engine/monster-action/Statistics";
 import StatChangeComputed from "../../computed-effect/StatChangeComputed";
 
 export default class StatChangeEffect extends Effect {
   public static KEY = "STATS_PERCENTAGE";
   type = StatChangeEffect.KEY;
-  stat: Statistics = "atk";
+  stat = "";
   percentage = 0;
 
   public static fromJson(json: any): StatChangeEffect {

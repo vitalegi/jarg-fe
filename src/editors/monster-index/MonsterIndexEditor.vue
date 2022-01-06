@@ -62,14 +62,14 @@
 
 <script lang="ts">
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import Stats from "@/models/Stats";
+import Stats from "@/game-engine/monster/stats/Stats";
 import Vue from "vue";
 import StatsEditor from "./StatsEditor.vue";
 import StatsOverview from "./StatsOverview.vue";
 import MonsterIndexBaseInfoEditor from "./MonsterIndexBaseInfoEditor.vue";
-import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import Container from "typedi";
+import StatsService from "@/game-engine/monster/stats/StatsService";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",
@@ -89,7 +89,7 @@ export default Vue.extend({
     },
   },
   data: () => ({
-    levelUpService: Container.get<LevelUpService>(LevelUpService),
+    statsService: Container.get<StatsService>(StatsService),
   }),
   computed: {
     deletionWarningText(): string {
@@ -119,7 +119,7 @@ export default Vue.extend({
       return this.levelsOverview
         .map((level) => level as number)
         .map((level) =>
-          this.levelUpService.computeAttributes(
+          this.statsService.getAttributesByLevel(
             level,
             this.index.baseStats,
             this.index.growthRates

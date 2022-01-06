@@ -1,5 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
-import Statistics from "../Statistics";
+import StatAlteration from "@/game-engine/monster/stats/StatAlteration";
 import ComputedEffect from "./ComputedEffect";
 
 export default class StatChangeComputed extends ComputedEffect {
@@ -7,7 +7,7 @@ export default class StatChangeComputed extends ComputedEffect {
   stat;
   percentage;
 
-  public constructor(target: Monster, stat: Statistics, percentage: number) {
+  public constructor(target: Monster, stat: string, percentage: number) {
     super();
     this.target = target;
     this.stat = stat;
@@ -30,6 +30,9 @@ export default class StatChangeComputed extends ComputedEffect {
         this.stat
       } of ${this.target.name}`
     );
-    // TODO apply effect
+    // TODO add duration
+    this.target.statsAlterations.push(
+      new StatAlteration(this.stat, this.percentage)
+    );
   }
 }

@@ -1,5 +1,5 @@
 import { Animation, AnimationSrc } from "@/models/Animation";
-import Stats from "@/models/Stats";
+import Stats from "@/game-engine/monster/stats/Stats";
 
 export default class MonsterIndex {
   monsterId = "";

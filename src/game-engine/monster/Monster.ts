@@ -1,6 +1,7 @@
 import Ability from "@/game-engine/monster-action/Ability";
 import Character from "../../models/Character";
-import Stats from "../../models/Stats";
+import StatAlteration from "./stats/StatAlteration";
+import Stats from "./stats/Stats";
 
 export default class Monster extends Character {
   ownerId: string | null = "";
@@ -16,6 +17,7 @@ export default class Monster extends Character {
    */
   stats = new Stats();
   growthRates = new Stats();
+  statsAlterations: StatAlteration[] = [];
 
   abilities: Ability[] = [];
 
@@ -30,7 +32,12 @@ export default class Monster extends Character {
     out.stats = Stats.fromJson(out.stats);
     out.growthRates = Stats.fromJson(out.growthRates);
     if (monster.abilities) {
-      out.abilities = monster.abilities.map((a: any) => Ability.fromJson(a));
+      out.abilities = monster.abilities.map(Ability.fromJson);
+    }
+    if (monster.statsAlterations) {
+      out.statsAlterations = monster.statsAlterations.map(
+        StatAlteration.fromJson
+      );
     }
     return out;
   }

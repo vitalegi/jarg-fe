@@ -75,14 +75,14 @@ export default class MonsterActionMenuBuilder {
       },
       () => {
         if (!this.monsterService.canActiveMonsterUseAbility()) {
-          console.log(`Ability slots already consumed for this turn`);
+          console.debug(`Ability slots already consumed for this turn`);
           return false;
         }
         if (!(ability.usages.current > 0)) {
-          console.log(`No more ability usages for ${ability.label}`);
+          console.debug(`No more ability usages for ${ability.label}`);
           return false;
         }
-        console.log(`Ability ${ability.label} is enabled`);
+        console.debug(`Ability ${ability.label} is enabled`);
         return true;
       }
     );

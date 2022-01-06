@@ -245,9 +245,7 @@ export default class TurnManager {
 
     this.sort(this.ticks);
     this.active = this.ticks[0];
-    console.log(
-      `TurnManager - Next: ${this.active} Upcoming: ${this.ticks.join(", ")}`
-    );
+    console.log(`TurnManager - Next: ${this.active}`);
   }
 
   public getTurns(n: number): string[] {

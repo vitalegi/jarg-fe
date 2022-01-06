@@ -12,6 +12,7 @@ import GameLoop from "../GameLoop";
 import TurnManager from "../battle/TurnManager";
 import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
+import StatsService from "../monster/stats/StatsService";
 
 export default class AbilityExecutor {
   protected battleService = Container.get<BattleService>(BattleService);
@@ -20,6 +21,7 @@ export default class AbilityExecutor {
     Container.get<HealthBarService>(HealthBarService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected statsService = Container.get<StatsService>(StatsService);
 
   protected source: Monster;
   protected target: Monster;
@@ -73,6 +75,13 @@ export default class AbilityExecutor {
     }
 
     effects.forEach((e) => e.applyAfterRender());
+
+    this.statsService.updateMonsterAttributes(
+      monster,
+      false,
+      monster.statsAlterations
+    );
+
     const toHP = monster.stats.hp;
 
     const healthUpdater = new HealthBarUpdateDrawer(monster, fromHP, toHP);
@@ -100,7 +109,6 @@ export default class AbilityExecutor {
   }
 
   protected async showAbilityName(): Promise<void> {
-    console.log(`show ability name ${this.ability.label}`);
     const ability = new AbilityNameDrawer(this.ability.label);
     this.gameLoop.addGameLoopHandler(ability);
     return ability.notifyWhenCompleted();

@@ -70,7 +70,7 @@
 </template>
 
 <script lang="ts">
-import Stats from "@/models/Stats";
+import Stats from "@/game-engine/monster/stats/Stats";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
 import Vue from "vue";
 

@@ -1,4 +1,5 @@
 import RechargeFamily from "../battle/RechargeFamily";
+import StatsConstants from "../monster/stats/StatsContants";
 import AbstractProcessor from "./ability-processor/AbstractProcessor";
 import DefaultProcessor from "./ability-processor/DefaultProcessor";
 import ProcessorFactory from "./ability-processor/ProcessorFactory";
@@ -12,8 +13,8 @@ export default class Ability {
   types: string[] = [];
   rechargeFamily = 0;
   precision = 0;
-  atkStat = "";
-  defStat = "";
+  atkStat: string | null = "";
+  defStat: string | null = "";
   usages = new Usages();
   abilityTarget = new AbilityTarget();
   processor: AbstractProcessor = new DefaultProcessor();
@@ -67,11 +68,18 @@ export default class Ability {
       throw Error(`Precision must be >=0, actual ${this.precision}`);
     }
     RechargeFamily.validate(this.rechargeFamily);
-    // TODO move to constants file
-    if (this.atkStat !== "atk" && this.atkStat !== "int") {
+    if (
+      this.atkStat !== null &&
+      this.atkStat !== StatsConstants.ATK &&
+      this.atkStat !== StatsConstants.INT
+    ) {
       throw Error(`AtkStat ${this.atkStat} is not valid.`);
     }
-    if (this.defStat !== "def" && this.defStat !== "res") {
+    if (
+      this.defStat !== null &&
+      this.defStat !== StatsConstants.DEF &&
+      this.defStat !== StatsConstants.RES
+    ) {
       throw Error(`DefStat ${this.defStat} is not valid.`);
     }
   }
