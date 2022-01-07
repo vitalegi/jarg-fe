@@ -1,5 +1,8 @@
 import { AnimationSrc } from "@/models/Animation";
+import SpriteConfig from "@/models/SpriteConfig";
 import GameAssetService from "@/services/GameAssetService";
+import RendererService, { Asset } from "@/services/RendererService";
+import ArrayUtil from "@/utils/ArrayUtil";
 import Container, { Service } from "typedi";
 import MonsterIndex from "./monster/MonsterIndex";
 import AbilityRepository from "./repositories/AbilityRepository";
@@ -18,6 +21,7 @@ export default class GameAppDataLoader {
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);
   protected typeRepository = Container.get<TypeRepository>(TypeRepository);
+  protected rendererService = Container.get<RendererService>(RendererService);
 
   public async loadMonsters(): Promise<void> {
     // pre-requisites
@@ -31,15 +35,52 @@ export default class GameAppDataLoader {
     );
   }
 
-  public async loadMonstersAnimationMetadata(): Promise<void> {
+  public async loadMonstersAnimationMetadata(
+    monsterIds: string[]
+  ): Promise<void> {
     // pre-requisites
     await this.loadMonsters();
+    const monsters = this.monsterIndexRepository
+      .getMonsters()
+      .filter((m) => monsterIds.indexOf(m.monsterId) !== -1);
 
-    await this.loadOnce("monstersMetadata", () =>
-      this._loadMonstersAnimationsMetadata(
-        this.monsterIndexRepository.getMonsters()
+    await Promise.all(
+      monsters.map((m) =>
+        this.loadOnce(`monsterData_${m.monsterId}`, () =>
+          this._loadMonstersAnimationsMetadata([m])
+        )
       )
     );
+  }
+
+  public async loadMonstersSpriteSheets(
+    monsters: MonsterIndex[]
+  ): Promise<void> {
+    // pre-requisites
+    await this.loadMonstersAnimationMetadata(monsters.map((m) => m.monsterId));
+
+    await Promise.all(
+      monsters.map((m) =>
+        this.loadOnce(`monsterSpriteSheets_${m.monsterId}`, () =>
+          this.loadMonsterSpriteSheets(m)
+        )
+      )
+    );
+    await this.rendererService.loadAssets();
+  }
+
+  protected async loadMonsterSpriteSheets(
+    monster: MonsterIndex
+  ): Promise<void> {
+    const assets = monster.animationsSrc.map(
+      (a) =>
+        new Asset(
+          `${monster.name}_${a.key}`,
+          `${process.env.VUE_APP_BACKEND}${a.sprites}`
+        )
+    );
+    this.rendererService.addImages(assets);
+    console.log("Load SpriteSheet done", assets);
   }
 
   public async loadAbilities(): Promise<void> {
@@ -58,11 +99,28 @@ export default class GameAppDataLoader {
     );
   }
 
+  public async loadTiles(sprites: SpriteConfig[]): Promise<void> {
+    const mapSprites = sprites
+      .flatMap((sprite) => sprite.sprites)
+      .map((sprite) => {
+        return { name: sprite, url: `${process.env.VUE_APP_BACKEND}${sprite}` };
+      });
+    const images = ArrayUtil.removeDuplicates(
+      mapSprites,
+      (a, b) => a.name === b.name
+    );
+
+    images.forEach((image) =>
+      this.loadOnce(`sprites_${image.name}`, () =>
+        this.rendererService.addImages([image])
+      )
+    );
+    await this.rendererService.loadAssets();
+  }
+
   protected async _loadMonstersAnimationsMetadata(
     monsters: MonsterIndex[]
   ): Promise<void> {
-    console.log("Load animations' metadata");
-
     const promises: Promise<void>[] = [];
     for (const monster of monsters) {
       for (const animationSrc of monster.animationsSrc) {
@@ -72,7 +130,11 @@ export default class GameAppDataLoader {
       }
     }
     await Promise.all(promises);
-    console.log("Load animations' metadata done.");
+    console.log(
+      `Load monster animations' metadata for ${monsters
+        .map((m) => m.monsterId)
+        .join(", ")} done.`
+    );
   }
 
   protected async _loadMonsterAnimationMetadata(

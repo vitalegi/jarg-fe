@@ -12,7 +12,11 @@ export default class MonsterIndexService {
     return this.repo.getMonster(monsterId);
   }
 
-  public getMonsters(): MonsterIndex[] {
-    return this.repo.getMonsters();
+  public getMonsters(ids: null | string[] = null): MonsterIndex[] {
+    const monsters = this.repo.getMonsters();
+    if (ids) {
+      return monsters.filter((m) => ids.indexOf(m.monsterId) !== -1);
+    }
+    return monsters;
   }
 }

@@ -43,11 +43,13 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
     this.mapRepository.setMap(map);
     await this.getGameAppDataLoader().loadMonsters();
 
-    await this.getGameAppDataLoader().loadMonstersAnimationMetadata();
+    const requiredMonsterIds = map.monsters.map((m) => m.modelId);
+    const requiredSprites =
+      this.monsterIndexService.getMonsters(requiredMonsterIds);
 
-    const monsters = this.monsterIndexService.getMonsters();
-    await this.rendererService.loadSpriteSheets(monsters);
-    await this.rendererService.loadTiles(map);
+    await this.getGameAppDataLoader().loadMonstersSpriteSheets(requiredSprites);
+
+    await this.getGameAppDataLoader().loadTiles(map.sprites);
 
     this.userActionService.removeAll();
     this.userActionService.addActionHandler(new DragScreenUserActionHandler());

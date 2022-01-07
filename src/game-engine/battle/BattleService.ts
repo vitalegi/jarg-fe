@@ -24,8 +24,6 @@ export default class BattleService {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 
   public async startCharacterTurn(): Promise<void> {
-    LeftMenu.destroy();
-
     if (!this.turnManager.hasCharacters()) {
       console.log("No active users, do nothing");
       return;
@@ -53,7 +51,6 @@ export default class BattleService {
   protected async startPlayerTurn(monster: Monster): Promise<void> {
     console.log(`Monster ${monster.uuid} is owned by player, show menu`);
 
-    LeftMenu.destroy();
     this.monsterActionMenuBuilder.build(monster).draw();
 
     const container = this.gameApp

@@ -24,7 +24,7 @@ export default class MonsterActionMenuBuilder {
     monster.abilities
       .map((ability) => this.abilityMenuEntry(leftMenu, monster, ability))
       .forEach((m) => leftMenu.addEntry(m));
-    leftMenu.addEntry(this.endTurn());
+    leftMenu.addEntry(this.endTurn(leftMenu));
     return leftMenu;
   }
 
@@ -45,10 +45,13 @@ export default class MonsterActionMenuBuilder {
     );
   }
 
-  protected endTurn(): MenuEntry {
+  protected endTurn(leftMenu: LeftMenu): MenuEntry {
     return new MenuEntry(
       "End Turn",
-      () => this.nextTurn(),
+      () => {
+        leftMenu.destroy();
+        this.nextTurn();
+      },
       () => true
     );
   }

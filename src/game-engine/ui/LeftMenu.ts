@@ -5,6 +5,7 @@ import DetectEvent from "./DetectEvent";
 import { TextStyle } from "pixi.js";
 import GameApp from "../GameApp";
 import FontService from "./FontService";
+import UuidUtil from "@/utils/UuidUtil";
 
 export class MenuEntry {
   label: string;
@@ -23,7 +24,7 @@ export class MenuEntry {
 }
 
 export default class LeftMenu {
-  protected static NAME = "LeftMenu";
+  private static NAME = "LeftMenu";
 
   protected fontService = Container.get<FontService>(FontService);
 
@@ -44,19 +45,10 @@ export default class LeftMenu {
     this.frame = frame;
   }
 
-  public static getLeftMenuElement(): PIXI.Container | null {
+  public destroy(): void {
     const gameApp = Container.get<GameApp>(GameApp);
-    const menu = gameApp.getApp().stage.getChildByName(LeftMenu.NAME);
-    if (menu) {
-      return menu as PIXI.Container;
-    }
-    return null;
-  }
-  public static destroy(): void {
-    const gameApp = Container.get<GameApp>(GameApp);
-    const menu = LeftMenu.getLeftMenuElement();
-    if (menu) {
-      gameApp.getApp().stage.removeChild(menu);
+    if (this.container) {
+      gameApp.getApp().stage.removeChild(this.container);
     }
   }
 
@@ -66,9 +58,17 @@ export default class LeftMenu {
 
   public draw(): void {
     this.container = new PIXI.Container();
-    this.container.name = LeftMenu.NAME;
+    this.container.name = `${LeftMenu.NAME}_${UuidUtil.nextId()}`;
+    console.log(`Draw menu ${this.container.name}`);
 
     this.gameApp.getApp().stage.addChild(this.container);
+
+    const runningMenus = this.gameApp
+      .getApp()
+      .stage.children.filter((c) => c.name.startsWith(LeftMenu.NAME));
+    if (runningMenus.length > 1) {
+      console.log("MONITORING, LeftMenus: ", runningMenus);
+    }
 
     this.container.addChild(
       this.frame.createFrame(
@@ -94,7 +94,7 @@ export default class LeftMenu {
     }
   }
   public reDraw(): void {
-    LeftMenu.destroy();
+    this.destroy();
     this.draw();
   }
 

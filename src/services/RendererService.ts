@@ -10,10 +10,9 @@ import CoordinateService from "@/game-engine/CoordinateService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import HealthBarService from "@/game-engine/monster/HealthBarService";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import { Animation } from "@/models/Animation";
 import GameConfig from "@/game-engine/GameConfig";
 
-class Asset {
+export class Asset {
   name = "";
   url = "";
 
@@ -37,48 +36,24 @@ export default class RendererService {
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
 
-  async loadTiles(map: MapContainer): Promise<void> {
-    const mapSprites = map.sprites
-      .flatMap((sprite) => sprite.sprites)
-      .map((sprite) => {
-        return { name: sprite, url: `${process.env.VUE_APP_BACKEND}${sprite}` };
-      });
-    const images = this.removeDuplicates(mapSprites);
-    await this.loadImages(images);
+  public async addImages(images: Asset[]): Promise<void> {
+    const newResources = images.filter((image) => {
+      const newResource = !PIXI.Loader.shared.resources[image.name];
+      if (!newResource) {
+        console.log(`Resource ${image.name} already loaded, skip.`);
+      }
+      return newResource;
+    });
+    PIXI.Loader.shared.add(newResources);
   }
 
-  private loadImages(images: Asset[]): Promise<void> {
+  public loadAssets(): Promise<void> {
     return new Promise<void>((resolve) => {
-      PIXI.Loader.shared.add(images).load(() => {
+      PIXI.Loader.shared.load(() => {
+        console.log("Assets are loaded");
         resolve();
       });
     });
-  }
-
-  public async loadSpriteSheets(monsters: MonsterIndex[]): Promise<void> {
-    console.log("Load SpriteSheet");
-
-    const assets = monsters.flatMap((m) =>
-      m.animationsSrc.map(
-        (a) =>
-          new Asset(
-            `${m.name}_${a.key}`,
-            `${process.env.VUE_APP_BACKEND}${a.sprites}`
-          )
-      )
-    );
-    await this.loadImages(assets);
-    console.log("Load SpriteSheet done", assets);
-  }
-
-  private removeDuplicates(images: Asset[]): Asset[] {
-    const unique: Asset[] = [];
-    images.forEach((image) => {
-      if (!unique.find((u) => u.name === image.name)) {
-        unique.push(image);
-      }
-    });
-    return unique;
   }
 
   public createSprite(
