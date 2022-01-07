@@ -4,6 +4,7 @@ import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 
+// TODO delete and use standard WindowProxy
 class IsWindowSizeChanged {
   protected _lastWidth = 0;
   protected _lastHeight = 0;

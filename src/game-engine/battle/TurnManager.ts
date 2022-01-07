@@ -107,11 +107,13 @@ const ICV = [
   { ge: 250, le: 255, icv_min: 3, icv_max: 9 },
 ];
 
+// TODO move to dedicated file
 export enum ActionType {
   MOVE = "MOVE",
   ABILITY = "ABILITY",
 }
 
+// TODO move to dedicated file
 export class Action {
   type: ActionType;
   source: Point | null = null;
@@ -138,6 +140,7 @@ export class Action {
   }
 }
 
+// TODO move to dedicated file
 class Tick {
   monster: Monster;
   ticks = 0;
@@ -169,9 +172,11 @@ class Tick {
 export default class TurnManager {
   protected randomService = Container.get<RandomService>(RandomService);
 
+  // TODO retrieve by mapRepository
   protected monsters: Monster[] = [];
-
+  // TODO move to TurnRepository
   protected ticks: Tick[] = [];
+  // TODO move to TurnRepository
   protected active: Tick | null = null;
 
   public addCharacters(monsters: Monster[]): void {

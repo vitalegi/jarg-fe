@@ -1,11 +1,7 @@
-import Point from "@/models/Point";
 import Container from "typedi";
 import GameLoop from "../GameLoop";
 import MapRepository from "../map/MapRepository";
-import {
-  CanTraverseAbility,
-  CanTraverseWalking,
-} from "../map/traversal/CanTraverse";
+import { CanTraverseAbility } from "../map/traversal/CanTraverse";
 import GraphBuilder from "../map/traversal/GraphBuilder";
 import MapTraversal from "../map/traversal/MapTraversal";
 import Monster from "../monster/Monster";

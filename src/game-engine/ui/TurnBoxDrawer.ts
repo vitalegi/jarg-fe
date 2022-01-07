@@ -5,6 +5,7 @@ import TurnManager from "../battle/TurnManager";
 import MapContainer from "@/game-engine/map/MapContainer";
 import WindowSizeProxy from "../WindowSizeProxy";
 import FontService from "./FontService";
+import MapRepository from "../map/MapRepository";
 
 export default class TurnBoxDrawer extends Drawer {
   protected static NAME = "TurnBox";
@@ -14,9 +15,7 @@ export default class TurnBoxDrawer extends Drawer {
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected fontService = Container.get<FontService>(FontService);
-
-  // TODO remove map
-  protected map: MapContainer;
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
 
   //TODO move in a Repository class
   protected turns: string[] = [];
@@ -35,10 +34,9 @@ export default class TurnBoxDrawer extends Drawer {
     },
   };
 
-  public constructor(parent: PIXI.Container, map: MapContainer) {
+  public constructor(parent: PIXI.Container) {
     super();
     this.parent = parent;
-    this.map = map;
   }
 
   public getName(): string {
@@ -75,7 +73,7 @@ export default class TurnBoxDrawer extends Drawer {
   }
 
   protected createTurnEntry(id: string, index: number): PIXI.DisplayObject {
-    const monster = this.map.monsters.find((m) => m.uuid === id);
+    const monster = this.mapRepository.getMonsterById(id);
     let label = "unknown";
     if (monster !== undefined) {
       label = monster.name;

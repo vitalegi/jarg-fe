@@ -1,27 +1,3 @@
-/*{
-    "area": [],
-    "encounters": [
-      {
-        "monsterId": "015",
-        "levelMin": 1,
-        "levelMax": 5,
-        "probability": 0.4
-      },
-      {
-        "monsterId": "100",
-        "levelMin": 5,
-        "levelMax": 15,
-        "probability": 0.4
-      },
-      {
-        "monsterId": "150",
-        "levelMin": 5,
-        "levelMax": 15,
-        "probability": 0.2
-      }
-    ]
-  }*/
-
 import Point from "@/models/Point";
 import RandomEncounter from "./RandomEncounter";
 

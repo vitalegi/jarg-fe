@@ -96,9 +96,7 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
     this.turnManager.removeAll();
     this.turnManager.addCharacters(this.mapRepository.getMap().monsters);
     this.turnManager.initTurns();
-    this.gameLoop.addGameLoopHandler(
-      new TurnBoxDrawer(this.getApp().stage, this.mapRepository.getMap())
-    );
+    this.gameLoop.addGameLoopHandler(new TurnBoxDrawer(this.getApp().stage));
 
     this.battleService.startCharacterTurn();
 
