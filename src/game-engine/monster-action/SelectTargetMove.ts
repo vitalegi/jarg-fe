@@ -7,14 +7,17 @@ import MapTraversal from "../map/traversal/MapTraversal";
 import Monster from "../monster/Monster";
 import MonsterService from "../monster/MonsterService";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
+import TileFocusableDrawer from "../ui/TileFocusableDrawer";
 import SelectTargetUserActionHandler from "../user-action-handler/SelectTargetUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
+import GameLoop from "../GameLoop";
 
 export default class SelectTargetMove {
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected userActionService =
     Container.get<UserActionService>(UserActionService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   targetHandlerProvider: (monster: Monster) => SelectTargetUserActionHandler = (
     monster: Monster
@@ -22,6 +25,9 @@ export default class SelectTargetMove {
 
   public async selectTarget(monster: Monster): Promise<Point[] | null> {
     const actionHandler = this.targetHandlerProvider(monster);
+    const acceptableTiles = actionHandler.getAcceptableTiles();
+    const drawer = new TileFocusableDrawer(acceptableTiles);
+    this.gameLoop.addGameLoopHandler(drawer);
 
     this.userActionService.addActionHandler(actionHandler);
 
@@ -34,6 +40,7 @@ export default class SelectTargetMove {
 
     const result = await Promise.any([cancelPromise, targetPromise]);
     menu.destroy();
+    drawer.remove();
     if (!result) {
       console.log("Action is dismissed");
       return null;

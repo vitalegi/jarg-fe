@@ -31,23 +31,7 @@ export class CanTraverseWalking implements CanTraverse {
 }
 
 export class CanTraverseAbility implements CanTraverse {
-  ignoreSelf = false;
-  ignoreAllies = false;
-
   public canTraverse(map: MapContainer, monster: Monster, tile: Tile): boolean {
-    if (!tile) {
-      return false;
-    }
-    const validTargetsOnThisTile = map.monsters
-      .filter((m) => m.coordinates?.equals(tile.coordinates))
-      // self
-      .filter((m) => m.uuid !== monster.uuid || !this.ignoreSelf)
-      // allies
-      .filter((m) => m.ownerId !== monster.ownerId || !this.ignoreAllies);
-
-    if (validTargetsOnThisTile.length > 0) {
-      return true;
-    }
-    return false;
+    return true;
   }
 }

@@ -1,5 +1,6 @@
 import Point from "@/models/Point";
 import Container from "typedi";
+import GameLoop from "../GameLoop";
 import MapRepository from "../map/MapRepository";
 import {
   CanTraverseAbility,
@@ -10,6 +11,7 @@ import MapTraversal from "../map/traversal/MapTraversal";
 import Monster from "../monster/Monster";
 import MonsterService from "../monster/MonsterService";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
+import TileFocusableDrawer from "../ui/TileFocusableDrawer";
 import SelectTargetUserActionHandler from "../user-action-handler/SelectTargetUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
 import Ability from "./Ability";
@@ -19,6 +21,7 @@ export default class SelectTargetAbility {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected userActionService =
     Container.get<UserActionService>(UserActionService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   targetHandlerProvider: (
     monster: Monster,
@@ -31,6 +34,9 @@ export default class SelectTargetAbility {
     ability: Ability
   ): Promise<string | null> {
     const actionHandler = this.targetHandlerProvider(monster, ability);
+    const acceptableTiles = actionHandler.getAcceptableTiles();
+    const drawer = new TileFocusableDrawer(acceptableTiles);
+    this.gameLoop.addGameLoopHandler(drawer);
 
     this.userActionService.addActionHandler(actionHandler);
 
@@ -43,6 +49,7 @@ export default class SelectTargetAbility {
 
     const result = await Promise.any([cancelPromise, targetPromise]);
     menu.destroy();
+    drawer.remove();
     if (!result) {
       console.log("Action is dismissed");
       return null;

@@ -1,6 +1,7 @@
 import Point from "@/models/Point";
 import Container from "typedi";
 import MapRepository from "../map/MapRepository";
+import Tile from "../map/Tile";
 import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
@@ -34,15 +35,38 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
   }
 
   public processTap(input: UserInput): void {
-    if (!this.isAllowedPoint(input)) {
+    if (!this.acceptInput(input)) {
       return;
     }
-    if (input.isTerrain() && this.acceptTerrain(input.getPosition())) {
+    if (input.isTerrain()) {
       this.done(input);
+    }
+    if (input.isMonster()) {
+      this.done(input);
+    }
+  }
+
+  public getAcceptableTiles(): Tile[] {
+    return this.mapRepository.getMap().tiles.filter((tile) => {
+      const monstersOnTile = this.mapRepository.getMonstersOnTile(tile);
+      if (monstersOnTile.length > 0) {
+        return this.acceptInput(UserInput.monsterInput(monstersOnTile[0].uuid));
+      }
+      return this.acceptInput(UserInput.terrainInput(tile.coordinates.clone()));
+    });
+  }
+
+  protected acceptInput(input: UserInput): boolean {
+    if (!this.isAllowedPoint(input)) {
+      return false;
+    }
+    if (input.isTerrain() && this.acceptTerrain(input.getPosition())) {
+      return true;
     }
     if (input.isMonster() && this.acceptMonster(input.getMonsterId())) {
-      this.done(input);
+      return true;
     }
+    return false;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
