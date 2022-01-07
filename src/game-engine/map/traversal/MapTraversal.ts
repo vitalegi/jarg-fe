@@ -2,88 +2,24 @@ import Monster from "@/game-engine/monster/Monster";
 import MapContainer from "@/game-engine/map/MapContainer";
 import Point from "@/models/Point";
 import TimeUtil from "@/utils/TimeUtil";
-import Tile from "./map/Tile";
-
-const INFINITY = 10000000;
-class TraversalPoint {
-  point: Point;
-  previous: TraversalPoint | null;
-  cost: number;
-  visited = false;
-  neighbors: TraversalPoint[] = [];
-
-  public constructor(point: Point) {
-    this.point = point;
-    this.previous = null;
-    this.cost = INFINITY;
-  }
-
-  public static getId(point: Point): string {
-    return point.x + "_" + point.y;
-  }
-}
-
-class GraphBuilder {
-  public createGraph(
-    map: MapContainer,
-    monster: Monster
-  ): Map<string, TraversalPoint> {
-    const points = new Map<string, TraversalPoint>();
-    map.tiles
-      .filter((tile) => this.canTraverse(map, monster, tile))
-      .forEach((tile) => {
-        const traversalPoint = new TraversalPoint(tile.coordinates);
-        points.set(TraversalPoint.getId(traversalPoint.point), traversalPoint);
-      });
-    points.forEach((tile) => {
-      tile.neighbors = [
-        new Point(tile.point.x - 1, tile.point.y),
-        new Point(tile.point.x + 1, tile.point.y),
-        new Point(tile.point.x, tile.point.y - 1),
-        new Point(tile.point.x, tile.point.y + 1),
-      ]
-        .filter((point) => points.has(TraversalPoint.getId(point)))
-        .map((point) => points.get(TraversalPoint.getId(point)))
-        .map((tp) => tp as TraversalPoint);
-    });
-    return points;
-  }
-
-  protected canTraverse(
-    map: MapContainer,
-    monster: Monster,
-    tile: Tile
-  ): boolean {
-    if (!tile) {
-      return false;
-    }
-
-    const enemiesOnThisTile = map.monsters
-      .filter(
-        (m) =>
-          m.coordinates?.x === tile.coordinates.x &&
-          m.coordinates?.y === tile.coordinates.y
-      )
-      // ignore self
-      .filter((m) => m.uuid !== monster.uuid)
-      // ignore allies
-      .filter((m) => m.ownerId !== monster.ownerId);
-
-    if (enemiesOnThisTile.length > 0) {
-      return false;
-    }
-    return true;
-  }
-}
+import Tile from "../Tile";
+import TraversalPoint from "./TraversalPoint";
+import GraphBuilder from "./GraphBuilder";
 
 export default class MapTraversal {
   map;
   monster;
   debug = false;
+  builder;
 
-  public constructor(map: MapContainer, monster: Monster) {
+  public constructor(
+    map: MapContainer,
+    monster: Monster,
+    builder: GraphBuilder
+  ) {
     this.map = map;
     this.monster = monster;
+    this.builder = builder;
   }
 
   public getPath(target: Point): Point[] {
@@ -91,17 +27,43 @@ export default class MapTraversal {
     if (!start) {
       throw Error(`Missing starting point`);
     }
-    let now = TimeUtil.timestamp();
-    const graph = new GraphBuilder().createGraph(this.map, this.monster);
-    let duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    console.log(`MONITORING getGraph duration=${duration}ms`);
+    const graph = this.buildGraph();
 
-    now = TimeUtil.timestamp();
+    const now = TimeUtil.timestamp();
     const path = this.minimumPath(graph, start, target);
-    duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
+    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
     console.log(`MONITORING dijkstra duration=${duration}ms`);
     console.log(`Path from ${start} to ${target}: ${path.join(",")}`);
     return path;
+  }
+
+  public getPoints(maxDistance: number): Point[] {
+    const start = this.monster.coordinates;
+    if (!start) {
+      throw Error(`Missing starting point`);
+    }
+    const graph = this.buildGraph();
+
+    const now = TimeUtil.timestamp();
+    this.dijkstra(graph, start);
+    const points: Point[] = [];
+    graph.forEach((point: TraversalPoint) => {
+      if (point.cost <= maxDistance) {
+        points.push(point.point);
+      }
+    });
+
+    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
+    console.log(`MONITORING dijkstra duration=${duration}ms`);
+    return points;
+  }
+
+  protected buildGraph(): Map<string, TraversalPoint> {
+    const now = TimeUtil.timestamp();
+    const graph = this.builder.createGraph(this.map, this.monster);
+    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
+    console.log(`MONITORING getGraph duration=${duration}ms`);
+    return graph;
   }
 
   protected minimumPath(
@@ -128,7 +90,7 @@ export default class MapTraversal {
   protected dijkstra(graph: Map<string, TraversalPoint>, start: Point): void {
     graph.forEach((entry) => {
       entry.visited = false;
-      entry.cost = INFINITY;
+      entry.cost = TraversalPoint.INFINITY;
       entry.previous = null;
     });
     this.getGraphEntry(graph, start).cost = 0;

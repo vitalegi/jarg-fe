@@ -21,6 +21,15 @@ export class MenuEntry {
     this.action = action;
     this.enabled = enabled;
   }
+
+  public static alwaysEnabled(
+    label: string,
+    action: () => void = () => {
+      return;
+    }
+  ): MenuEntry {
+    return new MenuEntry(label, action, () => true);
+  }
 }
 
 export default class LeftMenu {
