@@ -4,8 +4,6 @@ import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
-import TextOverCharacter from "../ui/TextOverCharacterDrawer";
-import Effect from "./effects/effect/Effect";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
@@ -13,6 +11,7 @@ import TurnManager from "../battle/TurnManager";
 import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
 import StatsService from "../monster/stats/StatsService";
+import TextOverCharacterDrawer from "../ui/TextOverCharacterDrawer";
 
 export default class AbilityExecutor {
   protected battleService = Container.get<BattleService>(BattleService);
@@ -57,7 +56,15 @@ export default class AbilityExecutor {
     await abilityName;
 
     const exp = totalExp.reduce((prev, curr) => prev + curr, 0);
+
+    const levelUp = this.levelUpService.canLevelUp(this.source, exp);
     await this.levelUpService.gainExperience(this.source, exp);
+    if (levelUp) {
+      const drawer = new TextOverCharacterDrawer(this.source, "LEVEL UP!");
+      this.gameLoop.addGameLoopHandler(drawer);
+      await drawer.notifyWhenCompleted();
+    }
+
     console.log("AbilityExecutor - END");
   }
 

@@ -30,8 +30,28 @@ npm install
 
 ### Compiles and hot-reloads for development
 
+### One time activity
+
 ```
+npm install http-server -g
+```
+
+```
+# Starts the appliction
 npm run serve
+
+# Starts the static assets site
+http-server ../jarg-assets/static -p 8081 --cors
+```
+
+Note: if you are using Visual Studio Code you can automate the startup process.
+
+```
+cd jarg-fe
+mkdir .vscode
+copy docs/vscode/tasks.json .vscode/tasks.json
+
+# restart VSC
 ```
 
 ### Compiles and minifies for production

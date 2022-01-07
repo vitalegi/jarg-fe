@@ -19,15 +19,19 @@ export class LevelUpService {
     console.log(
       `Monster ${monster.uuid} gains ${exp} EXP. Level EXP: ${monster.currentLevelExperience}, to next level: ${toNextLevel}.`
     );
-    if (exp < toNextLevel) {
+    if (this.canLevelUp(monster, exp)) {
+      await this.levelUp(monster);
+      if (exp - toNextLevel > 0) {
+        await this.gainExperience(monster, exp - toNextLevel);
+      }
+    } else {
       monster.experience += exp;
       monster.currentLevelExperience += exp;
-      return;
     }
-    await this.levelUp(monster);
-    if (exp - toNextLevel > 0) {
-      await this.gainExperience(monster, exp - toNextLevel);
-    }
+  }
+
+  public canLevelUp(monster: Monster, exp: number): boolean {
+    return exp >= this.toNextLevel(monster);
   }
 
   public async levelUp(monster: Monster, restoreHP = false): Promise<void> {
