@@ -10,6 +10,8 @@ import TurnManager from "./TurnManager";
 import MapRepository from "../map/MapRepository";
 import MonsterAI from "../monster-action/ai/MonsterAI";
 import GameConfig from "../GameConfig";
+import GameOverPhase from "../game-phase/GameOverPhase";
+import SelectNextBattlePhase from "../game-phase/SelectNextBattlePhase";
 
 @Service()
 export default class BattleService {
@@ -21,6 +23,7 @@ export default class BattleService {
     MonsterActionMenuBuilder
   );
   protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected gameOverPhase = Container.get<GameOverPhase>(GameOverPhase);
 
   public async startCharacterTurn(): Promise<void> {
     if (!this.turnManager.hasCharacters()) {
@@ -94,17 +97,48 @@ export default class BattleService {
 
     this.turnManager.next();
 
-    if (this.isGameOver(this.playerService.getPlayerId())) {
-      console.log(`Player is defeated, end.`);
+    if (this.isBattleOver()) {
+      this.completeBattle();
     } else {
       // async action, completion is not monitored
       this.startCharacterTurn();
     }
   }
 
-  public isGameOver(playerId: string | null): boolean {
+  public isBattleOver(): boolean {
+    if (this.isGameOver(this.playerService.getPlayerId())) {
+      return true;
+    }
+    if (this.isGameWin(this.playerService.getPlayerId())) {
+      return true;
+    }
+    return false;
+  }
+
+  public completeBattle(): void {
+    if (this.isGameOver(this.playerService.getPlayerId())) {
+      console.log(`Player is defeated, end.`);
+      this.gameOverPhase.start();
+      return;
+    }
+    if (this.isGameWin(this.playerService.getPlayerId())) {
+      console.log("Player wins");
+      Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();
+      return;
+    }
+    console.error(`Battle is not completed`);
+  }
+
+  public isGameOver(playerId: string): boolean {
     return (
       this.getMonstersInBattle().filter((m) => m.ownerId === playerId)
+        .length === 0
+    );
+  }
+
+  public isGameWin(playerId: string): boolean {
+    return (
+      this.getMonstersInBattle().filter((m) => m.ownerId !== playerId)
         .length === 0
     );
   }

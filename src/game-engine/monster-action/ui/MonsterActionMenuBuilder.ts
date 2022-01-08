@@ -52,7 +52,7 @@ export default class MonsterActionMenuBuilder {
       "End Turn",
       () => {
         leftMenu.destroy();
-        this.nextTurn();
+        this.getBattleService().nextTurn();
       },
       () => true
     );
@@ -89,6 +89,9 @@ export default class MonsterActionMenuBuilder {
       await executor.execute();
       console.log(`User ability ${ability.label} is completed.`);
       leftMenu.reDraw();
+      if (this.getBattleService().isBattleOver()) {
+        this.getBattleService().completeBattle();
+      }
     }
     leftMenu.show();
   }
@@ -106,7 +109,7 @@ export default class MonsterActionMenuBuilder {
     return true;
   }
 
-  protected nextTurn(): void {
-    Container.get<BattleService>(BattleService).nextTurn();
+  protected getBattleService(): BattleService {
+    return Container.get<BattleService>(BattleService);
   }
 }
