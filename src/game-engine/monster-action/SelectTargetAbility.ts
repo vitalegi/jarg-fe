@@ -81,7 +81,9 @@ export default class SelectTargetAbility {
       new GraphBuilder(new CanTraverseAbility())
     );
     const maxDistance = ability.abilityTarget.range;
-    const acceptablePoints = mapTraversal.getPoints(maxDistance);
+    const acceptablePoints = mapTraversal
+      .getPoints(maxDistance)
+      .map((p) => p.point);
     return new SelectTargetUserActionHandler(
       null,
       false,

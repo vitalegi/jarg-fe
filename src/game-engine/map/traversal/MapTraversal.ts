@@ -37,7 +37,7 @@ export default class MapTraversal {
     return path;
   }
 
-  public getPoints(maxDistance: number): Point[] {
+  public getPoints(maxDistance: number): TraversalPoint[] {
     const start = this.monster.coordinates;
     if (!start) {
       throw Error(`Missing starting point`);
@@ -46,10 +46,10 @@ export default class MapTraversal {
 
     const now = TimeUtil.timestamp();
     this.dijkstra(graph, start);
-    const points: Point[] = [];
+    const points: TraversalPoint[] = [];
     graph.forEach((point: TraversalPoint) => {
       if (point.cost <= maxDistance) {
-        points.push(point.point);
+        points.push(point);
       }
     });
 

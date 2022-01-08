@@ -81,7 +81,9 @@ export default class SelectTargetMove {
       new GraphBuilder(new CanTraverseWalking())
     );
     const maxDistance = this.monsterService.availableActiveMonsterMoves();
-    const acceptablePoints = mapTraversal.getPoints(maxDistance);
+    const acceptablePoints = mapTraversal
+      .getPoints(maxDistance)
+      .map((p) => p.point);
 
     return new SelectTargetUserActionHandler(
       null,
