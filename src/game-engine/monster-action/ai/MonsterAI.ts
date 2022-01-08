@@ -18,6 +18,8 @@ class MonsterAction {
   from;
   ability;
   target;
+  score = 0;
+
   public constructor(from: Point, ability: Ability, target: Monster) {
     this.from = from;
     this.ability = ability;
@@ -71,7 +73,7 @@ export default class MonsterAI {
 
     console.log("MonsterAI 3. find best ability to use");
     if (availableActions.length > 0) {
-      const action = TimeUtil.monitor("MonsterAI.action", () =>
+      const action = await TimeUtil.monitorAsync("MonsterAI.action", () =>
         this.selectBestAction(availableActions)
       );
 
@@ -174,9 +176,51 @@ export default class MonsterAI {
     await new MonsterMove(this.source, path).execute();
   }
 
-  protected selectBestAction(actions: MonsterAction[]): MonsterAction {
-    // TODO
-    return actions[0];
+  protected async selectBestAction(
+    actions: MonsterAction[]
+  ): Promise<MonsterAction> {
+    const evaluations: Promise<MonsterAction>[] = [];
+    for (const action of actions) {
+      evaluations.push(this.evaluateScore(action));
+    }
+    const results = (await Promise.all(evaluations))
+      .sort((a, b) => (a.score < b.score ? -1 : 1))
+      .reverse();
+
+    console.log(
+      "MonsterAI ",
+      results.map((a) => {
+        return {
+          ability: a.ability.label,
+          score: a.score,
+          targetPosition: a.target.coordinates?.toString(),
+        };
+      })
+    );
+    return results[0];
+  }
+
+  protected async evaluateScore(action: MonsterAction): Promise<MonsterAction> {
+    const scores: Promise<number>[] = [];
+    for (let i = 0; i < 10; i++) {
+      scores.push(this.getScoreOnce(action));
+    }
+    const results = await Promise.all(scores);
+    const score = results.reduce((curr, prev) => curr + prev, 0);
+    console.log("MonsterAI", results, score);
+    action.score = score;
+    return action;
+  }
+
+  protected async getScoreOnce(action: MonsterAction): Promise<number> {
+    const effects = await action.ability.processor.execute(
+      this.source,
+      action.target,
+      action.ability
+    );
+    return effects
+      .map((e) => e.getDamage())
+      .reduce((prev, cur) => prev + cur, 0);
   }
 
   protected getNearestTarget(): Point | null {

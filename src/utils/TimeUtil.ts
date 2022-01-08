@@ -10,4 +10,15 @@ export default class TimeUtil {
     console.log(`MONITORING ${name} duration=${duration}ms`);
     return out;
   }
+
+  public static async monitorAsync<E>(
+    name: string,
+    fn: () => Promise<E>
+  ): Promise<E> {
+    const now = TimeUtil.timestamp();
+    const out = await fn();
+    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
+    console.log(`MONITORING ${name} duration=${duration}ms`);
+    return out;
+  }
 }

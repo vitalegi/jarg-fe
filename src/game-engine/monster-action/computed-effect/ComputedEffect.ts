@@ -15,6 +15,9 @@ export default abstract class ComputedEffect {
   public applyAfterRender(): void {
     return;
   }
+  public getDamage(): number {
+    return 0;
+  }
 
   protected async showTextOverMonster(
     monster: Monster,

@@ -14,7 +14,9 @@ export default class HpDamageComputed extends ComputedEffect {
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }
-
+  public getDamage(): number {
+    return this.damage;
+  }
   public async render(): Promise<void> {
     return super.showTextOverMonster(this.target, "TODO");
   }
