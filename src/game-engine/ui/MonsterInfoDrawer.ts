@@ -9,12 +9,15 @@ import Ability from "../monster-action/Ability";
 import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
+import { LevelUpService } from "../monster/LevelUpService";
 
 export default class MonsterInfoDrawer extends Drawer {
   protected static NAME = "MonsterInfoDrawer";
 
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected fontService = Container.get<FontService>(FontService);
+  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
+
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
   protected frame = new FrameImpl();
@@ -27,14 +30,14 @@ export default class MonsterInfoDrawer extends Drawer {
       height: 20,
     },
     stats: {
-      cols: [{ leftOffset: 5 }, { leftOffset: 65 }],
+      cols: [{ leftOffset: 5 }, { leftOffset: 80 }],
     },
     abilities: {
       cols: [
-        { leftOffset: 230 },
-        { leftOffset: 480 },
-        { leftOffset: 560 },
-        { leftOffset: 640 },
+        { leftOffset: 250 },
+        { leftOffset: 460 },
+        { leftOffset: 540 },
+        { leftOffset: 610 },
       ],
     },
   };
@@ -79,6 +82,11 @@ export default class MonsterInfoDrawer extends Drawer {
       this.addText(`${this.monsterIndex.name}`, x1, lineY());
       this.addText(`Lv. ${this.monster.level}`, x1, lineY());
       this.addText(`Exp ${f(this.monster.experience)}`, x1, lineY());
+      this.addText(
+        `To Next lv. ${f(this.levelUpService.toNextLevel(this.monster))}`,
+        x1,
+        lineY()
+      );
 
       const stats = this.monster.stats;
       this.addStat(`HP`, `${f(stats.hp)}/${f(stats.maxHP)}`, lineY());

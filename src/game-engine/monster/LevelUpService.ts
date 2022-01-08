@@ -48,7 +48,7 @@ export class LevelUpService {
     );
   }
 
-  protected toNextLevel(monster: Monster): number {
+  public toNextLevel(monster: Monster): number {
     const levelExp = this.getNextLevelExp(monster.level);
     return levelExp - monster.currentLevelExperience;
   }
