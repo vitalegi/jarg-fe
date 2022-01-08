@@ -6,6 +6,7 @@ import Condition from "./Condition";
 
 export default class RandomCondition extends Condition {
   public static KEY = "RANDOM";
+  type = RandomCondition.KEY;
 
   protected randomService = Container.get<RandomService>(RandomService);
 

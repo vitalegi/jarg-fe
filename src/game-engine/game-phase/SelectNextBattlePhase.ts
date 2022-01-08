@@ -29,10 +29,21 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     await this.getGameAppDataLoader().loadMonsters();
 
     const menu = new LeftMenu();
+    menu.addEntry(this.saveStatus());
     for (const map of MAPS) {
       menu.addEntry(this.selectMapEntry(map));
     }
     menu.draw();
+  }
+
+  protected saveStatus(): MenuEntry {
+    return new MenuEntry(
+      "Save",
+      () => {
+        this.playerRepository.save(this.playerRepository.getPlayerData());
+      },
+      () => true
+    );
   }
 
   protected selectMapEntry(map: string): MenuEntry {

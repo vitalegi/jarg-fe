@@ -28,9 +28,9 @@ export default class Monster extends Character {
     out.level = monster.level;
     out.experience = monster.experience;
     out.currentLevelExperience = monster.currentLevelExperience;
-    out.baseStats = Stats.fromJson(out.baseStats);
-    out.stats = Stats.fromJson(out.stats);
-    out.growthRates = Stats.fromJson(out.growthRates);
+    out.baseStats = Stats.fromJson(monster.baseStats);
+    out.stats = Stats.fromJson(monster.stats);
+    out.growthRates = Stats.fromJson(monster.growthRates);
     if (monster.abilities) {
       out.abilities = monster.abilities.map(Ability.fromJson);
     }

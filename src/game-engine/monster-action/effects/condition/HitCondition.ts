@@ -4,6 +4,7 @@ import Condition from "./Condition";
 
 export default class HitCondition extends Condition {
   public static KEY = "HIT";
+  type = HitCondition.KEY;
 
   public clone(): Condition {
     const out = new HitCondition();

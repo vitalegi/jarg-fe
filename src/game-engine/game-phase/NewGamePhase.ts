@@ -70,10 +70,6 @@ export default class NewGamePhase extends AbstractPhase<never> {
 
     this.playerRepository.setPlayerData(playerData);
 
-    const model = await this.gameAssetService.getMap(firstMap);
-    const map = await this.mapService.generate(model);
-    map.monsters.push(monster);
-
     this.goToSelectNextBattlePhase();
   }
 

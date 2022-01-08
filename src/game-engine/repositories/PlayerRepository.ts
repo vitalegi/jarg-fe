@@ -32,6 +32,7 @@ export default class PlayerRepository {
       games[index] = playerData;
     }
     window.localStorage.setItem("players", JSON.stringify(games));
+    console.log(`Saved status for ${playerData.playerId}`);
   }
 
   public setPlayerData(playerData: PlayerData): void {
