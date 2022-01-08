@@ -12,6 +12,7 @@ import BattlePhase from "./BattlePhase";
 import MonsterIndex from "../monster/MonsterIndex";
 import MapService from "../map/MapService";
 import { LevelUpService } from "../monster/LevelUpService";
+import SelectNextBattlePhase from "./SelectNextBattlePhase";
 
 const starters = ["001", "004", "007"];
 const firstMap = "map1";
@@ -26,6 +27,10 @@ export default class NewGamePhase extends AbstractPhase<never> {
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
   protected mapService = Container.get<MapService>(MapService);
+  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
+  protected selectNextBattlePhase = Container.get<SelectNextBattlePhase>(
+    SelectNextBattlePhase
+  );
 
   public getName(): string {
     return "NewGamePhase";
@@ -60,11 +65,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
       playerData.playerId,
       starter.monsterId
     );
-    await Container.get<LevelUpService>(LevelUpService).gainExperience(
-      monster,
-      100000
-    );
-    monster.stats.hp = monster.stats.maxHP;
+    await this.levelUpService.levelUps(monster, 25, true);
     playerData.monsters.push(monster);
 
     this.playerRepository.setPlayerData(playerData);
@@ -73,10 +74,10 @@ export default class NewGamePhase extends AbstractPhase<never> {
     const map = await this.mapService.generate(model);
     map.monsters.push(monster);
 
-    this.goToBattlePhase(map);
+    this.goToSelectNextBattlePhase();
   }
 
-  protected async goToBattlePhase(map: MapContainer): Promise<void> {
-    await Container.get<BattlePhase>(BattlePhase).start(map);
+  protected async goToSelectNextBattlePhase(): Promise<void> {
+    await this.selectNextBattlePhase.start();
   }
 }

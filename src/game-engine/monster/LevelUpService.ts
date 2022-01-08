@@ -34,6 +34,16 @@ export class LevelUpService {
     return exp >= this.toNextLevel(monster);
   }
 
+  public async levelUps(
+    monster: Monster,
+    toLevel: number,
+    restoreHP = false
+  ): Promise<void> {
+    while (monster.level < toLevel) {
+      await this.levelUp(monster, restoreHP);
+    }
+  }
+
   public async levelUp(monster: Monster, restoreHP = false): Promise<void> {
     const toNextLevel = this.toNextLevel(monster);
     monster.experience += toNextLevel;
