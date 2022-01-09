@@ -1,0 +1,4 @@
+[
+  { "name": "MonsterAI", "level": "INFO" },
+  { "name": ".*", "level": "INFO" }
+]

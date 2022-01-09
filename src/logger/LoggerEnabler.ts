@@ -1,9 +1,5 @@
 import LoggerLevel from "./LoggerLevel";
-
-const RULES = [
-  { name: "MonsterAI", level: "INFO" },
-  { name: ".*", level: "INFO" },
-];
+import RULES from "@/assets/logger.json";
 
 export default class LoggerEnabler {
   protected cache = new Map<string, number>();
