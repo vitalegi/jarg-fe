@@ -1,3 +1,4 @@
+import Point from "@/models/Point";
 import SpriteConfig from "@/models/SpriteConfig";
 import LocalizedEncounters from "./LocalizedEncounters";
 import Tile from "./Tile";
@@ -8,6 +9,7 @@ export default class MapModel {
   sprites: SpriteConfig[] = [];
   tiles: Tile[] = [];
   randomEncounters: LocalizedEncounters[] = [];
+  playerEntryPoints: Point[] = [];
 
   public static fromJson(json: any): MapModel {
     const out = new MapModel();
@@ -23,6 +25,9 @@ export default class MapModel {
       out.randomEncounters = json.randomEncounters.map(
         LocalizedEncounters.fromJson
       );
+    }
+    if (json.playerEntryPoints) {
+      out.playerEntryPoints = json.playerEntryPoints.map(Point.fromJson);
     }
     return out;
   }

@@ -107,6 +107,10 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   ): Promise<void> {
     const model = await this.gameAssetService.getMap(mapId);
     const map = await this.mapService.generate(model);
+
+    monsters.forEach(
+      (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
+    );
     map.monsters.push(...monsters);
     this.goToBattlePhase(map);
   }
