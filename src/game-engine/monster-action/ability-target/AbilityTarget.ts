@@ -11,6 +11,11 @@ export default class AbilityTarget {
     out.range = this.range;
     return out;
   }
+  public toJson(): any {
+    const out: any = {};
+    out.range = this.range;
+    return out;
+  }
 
   public validate(): void {
     if (this.range < 0) {

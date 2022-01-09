@@ -25,6 +25,14 @@ export default class StatChangeEffect extends Effect {
     out.percentage = this.percentage;
     return out;
   }
+  public toJson(): any {
+    const out: any = {};
+    super._toJson(out);
+    out.type = this.type;
+    out.stat = this.stat;
+    out.percentage = this.percentage;
+    return out;
+  }
 
   apply(
     source: Monster,

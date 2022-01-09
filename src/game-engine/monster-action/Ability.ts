@@ -17,7 +17,7 @@ export default class Ability {
   defStat: string | null = "";
   usages = new Usages();
   abilityTarget = new AbilityTarget();
-  processor: DefaultProcessor = new DefaultProcessor();
+  processor: AbstractProcessor = new DefaultProcessor();
 
   public constructor(label = "") {
     this.label = label;
@@ -27,12 +27,12 @@ export default class Ability {
     const out = new Ability();
     out.id = json.id;
     out.label = json.label;
-    out.power = json.power;
-    out.precision = json.precision;
+    out.power = parseInt(json.power, 10);
+    out.precision = parseInt(json.precision, 10);
     if (json.types) {
       out.types.push(...(json.types as string[]));
     }
-    out.rechargeFamily = json.rechargeFamily;
+    out.rechargeFamily = parseInt(json.rechargeFamily, 10);
     out.atkStat = json.atkStat;
     out.defStat = json.defStat;
     if (json.usages) {
@@ -57,6 +57,23 @@ export default class Ability {
     out.usages = this.usages.clone();
     out.abilityTarget = this.abilityTarget.clone();
     out.processor = this.processor.clone();
+    return out;
+  }
+
+  public toJson(): any {
+    const out: any = {};
+    out.id = this.id;
+    out.label = this.label;
+    out.power = this.power;
+    out.precision = this.precision;
+    out.types = new Array<string>();
+    this.types.forEach((type) => out.types.push(type));
+    out.rechargeFamily = this.rechargeFamily;
+    out.atkStat = this.atkStat;
+    out.defStat = this.defStat;
+    out.usages = this.usages.toJson();
+    out.abilityTarget = this.abilityTarget.toJson();
+    out.processor = this.processor.toJson();
     return out;
   }
 

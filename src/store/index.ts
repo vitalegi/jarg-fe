@@ -34,7 +34,7 @@ export default new Vuex.Store({
       state.monsterIndexEditor = index;
     },
     setAbilitiesEditor(state: any, abilityEditor: Ability[]): void {
-      const abilities = abilityEditor.map((m) => m.clone());
+      const abilities = abilityEditor.map((m) => m.toJson());
       const repo = Container.get<AbilityEditorRepository>(
         AbilityEditorRepository
       );

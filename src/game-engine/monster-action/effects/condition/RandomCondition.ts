@@ -6,7 +6,6 @@ import Condition from "./Condition";
 
 export default class RandomCondition extends Condition {
   public static KEY = "RANDOM";
-  type = RandomCondition.KEY;
 
   protected randomService = Container.get<RandomService>(RandomService);
 
@@ -15,10 +14,17 @@ export default class RandomCondition extends Condition {
   public constructor(threshold = 0) {
     super();
     this.threshold = threshold;
+    this.type = RandomCondition.KEY;
   }
 
   public clone(): Condition {
     const out = new RandomCondition(this.threshold);
+    return out;
+  }
+  public toJson(): any {
+    const out: any = {};
+    out.type = this.type;
+    out.threshold = this.threshold;
     return out;
   }
 

@@ -23,10 +23,16 @@ export default abstract class Effect {
   }
 
   public abstract clone(): Effect;
+  public abstract toJson(): any;
 
   protected _clone(obj: Effect): void {
     obj.target = this.target.clone();
     obj.conditions = this.conditions.map((c) => c.clone());
+  }
+
+  protected _toJson(obj: any): void {
+    obj.target = this.target.toJson();
+    obj.conditions = this.conditions.map((c) => c.toJson());
   }
 
   abstract apply(

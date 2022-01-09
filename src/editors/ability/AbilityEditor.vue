@@ -105,6 +105,12 @@
         </v-row>
       </v-container>
       <v-divider></v-divider>
+      <EffectEditor
+        v-for="(effect, index) in ability.processor.additionalEffects"
+        :key="index"
+        :effect="effect"
+        @change="(e) => changeEffect(index, e)"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -119,6 +125,9 @@ import TypesSelector from "@/editors/type/TypesSelector.vue";
 import StatSelector from "./StatSelector.vue";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import SwitchInput from "@/components/SwitchInput.vue";
+import EffectEditor from "@/editors/ability/effect/EffectEditor.vue";
+import DefaultProcessor from "@/game-engine/monster-action/ability-processor/DefaultProcessor";
+import Effect from "@/game-engine/monster-action/effects/effect/Effect";
 
 export default Vue.extend({
   name: "AbilityEditor",
@@ -129,6 +138,7 @@ export default Vue.extend({
     TypesSelector,
     StatSelector,
     SwitchInput,
+    EffectEditor,
   },
   props: {
     ability: Ability,
@@ -188,7 +198,14 @@ export default Vue.extend({
       this.update((a) => (a.abilityTarget.range = value));
     },
     changeDamage(value: boolean): void {
-      this.update((a) => (a.processor.damage = value));
+      this.update((a) => ((a.processor as DefaultProcessor).damage = value));
+    },
+    changeEffect(index: number, effect: Effect): void {
+      console.log("AAAAA", effect);
+      this.update((a) => {
+        const processor = a.processor as DefaultProcessor;
+        processor.additionalEffects[index] = effect;
+      });
     },
     update(update: (a: Ability) => void): void {
       const ability = this.ability.clone();

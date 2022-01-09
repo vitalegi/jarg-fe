@@ -16,6 +16,12 @@ export default class Target {
     return out;
   }
 
+  public toJson(): any {
+    const out: any = {};
+    out.type = this.type;
+    return out;
+  }
+
   public getTarget(source: Monster, target: Monster): Monster {
     if (this.type === TargetType.SELF) {
       return source;

@@ -38,6 +38,14 @@ export default class DefaultProcessor extends AbstractProcessor {
     return out;
   }
 
+  public toJson(): any {
+    const out: any = {};
+    out.name = this.name;
+    out.damage = this.damage;
+    out.additionalEffects = this.additionalEffects.map((e) => e.toJson());
+    return out;
+  }
+
   public async execute(
     source: Monster,
     target: Monster,

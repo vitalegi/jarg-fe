@@ -2,7 +2,9 @@ import Monster from "@/game-engine/monster/Monster";
 import Ability from "../../Ability";
 
 export default abstract class Condition {
+  type = "";
   public abstract clone(): Condition;
+  public abstract toJson(): any;
   public abstract getName(): string;
   public abstract accept(
     source: Monster,

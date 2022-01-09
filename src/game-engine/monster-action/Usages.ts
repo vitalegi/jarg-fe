@@ -4,12 +4,19 @@ export default class Usages {
 
   public static fromJson(json: any): Usages {
     const out = new Usages();
-    out.current = json.current;
-    out.max = json.max;
+    out.current = parseInt(json.current, 10);
+    out.max = parseInt(json.max, 10);
     return out;
   }
   public clone(): Usages {
     const out = new Usages();
+    out.current = this.current;
+    out.max = this.max;
+    return out;
+  }
+
+  public toJson(): any {
+    const out: any = {};
     out.current = this.current;
     out.max = this.max;
     return out;

@@ -23,6 +23,13 @@ export default class HpDamageEffect extends Effect {
     out.damage = this.damage;
     return out;
   }
+  public toJson(): any {
+    const out: any = {};
+    super._toJson(out);
+    out.type = this.type;
+    out.damage = this.damage;
+    return out;
+  }
 
   apply(
     source: Monster,

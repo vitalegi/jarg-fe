@@ -3,7 +3,7 @@
     :label="label"
     dense
     v-model="model"
-    @change="change()"
+    @change="change"
     :disabled="disabled"
   ></v-text-field>
 </template>
@@ -19,17 +19,17 @@ export default Vue.extend({
     disabled: { type: Boolean, default: false },
   },
   data: () => ({
-    model: "",
+    model: "0",
   }),
   computed: {},
   methods: {
-    change(): void {
-      const value = parseInt(this.model, 10);
-      this.$emit("change", value);
+    change(value: string): void {
+      const number = parseInt(value, 10);
+      this.$emit("change", number);
     },
   },
   mounted() {
-    this.model = this.value;
+    this.model = `${this.value}`;
   },
 });
 </script>
