@@ -1,22 +1,22 @@
 export default class Bonus {
-  attacker;
+  source;
   target;
   bonus;
 
-  public constructor(attacker = "", target = "", bonus = 0) {
-    this.attacker = attacker;
+  public constructor(source = "", target = "", bonus = 0) {
+    this.source = source;
     this.target = target;
     this.bonus = bonus;
   }
 
   public static fromJson(json: any): Bonus {
-    return new Bonus(json.attacker, json.target, json.bonus);
+    return new Bonus(json.source, json.target, json.bonus);
   }
 
   public clone(): Bonus {
-    return new Bonus(this.attacker, this.target, this.bonus);
+    return new Bonus(this.source, this.target, this.bonus);
   }
   public toString(): string {
-    return `Bonus(attacker=${this.attacker}, target=${this.target}, bonus=${this.bonus})`;
+    return `Bonus(source=${this.source}, target=${this.target}, bonus=${this.bonus})`;
   }
 }

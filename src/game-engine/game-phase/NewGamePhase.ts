@@ -71,6 +71,15 @@ export default class NewGamePhase extends AbstractPhase<never> {
     await this.levelUpService.levelUps(monster, 5, true);
     playerData.monsters.push(monster);
 
+    for (let i = 0; i < 10; i++) {
+      const monster2 = this.monsterService.createMonster(
+        playerData.playerId,
+        `0${10 + i * 2}`
+      );
+      await this.levelUpService.levelUps(monster2, 5, true);
+      playerData.monsters.push(monster2);
+    }
+
     this.playerRepository.setPlayerData(playerData);
 
     this.goToSelectNextBattlePhase();

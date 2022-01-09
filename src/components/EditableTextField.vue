@@ -4,7 +4,6 @@
     dense
     v-model="model"
     @change="change()"
-    :disabled="disabled"
   ></v-text-field>
 </template>
 
@@ -12,20 +11,15 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "EditableIntegerField",
-  props: {
-    label: { type: String },
-    value: { type: Number },
-    disabled: { type: Boolean, default: false },
-  },
+  name: "EditableTextField",
+  props: ["label", "value"],
   data: () => ({
     model: "",
   }),
   computed: {},
   methods: {
     change(): void {
-      const value = parseInt(this.model, 10);
-      this.$emit("change", value);
+      this.$emit("change", this.model);
     },
   },
   mounted() {

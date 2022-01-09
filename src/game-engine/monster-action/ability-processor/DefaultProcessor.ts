@@ -14,7 +14,7 @@ export default class DefaultProcessor extends AbstractProcessor {
 
   protected formulaService = Container.get<FormulaService>(FormulaService);
 
-  name = "";
+  name = DefaultProcessor.NAME;
   damage = false;
   additionalEffects: Effect[] = [];
 

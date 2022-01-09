@@ -17,7 +17,7 @@ export default class Ability {
   defStat: string | null = "";
   usages = new Usages();
   abilityTarget = new AbilityTarget();
-  processor: AbstractProcessor = new DefaultProcessor();
+  processor: DefaultProcessor = new DefaultProcessor();
 
   public constructor(label = "") {
     this.label = label;

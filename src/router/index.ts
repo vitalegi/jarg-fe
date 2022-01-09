@@ -29,6 +29,14 @@ const routes: Array<RouteConfig> = [
         /* webpackChunkName: "about" */ "../views/MonsterIndexEditorView.vue"
       ),
   },
+  {
+    path: "/abilities/editor",
+    name: "AbilitiesEditor",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/AbilitiesEditorView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
