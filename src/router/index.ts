@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import store from "@/store";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 Vue.use(VueRouter);
 
@@ -38,7 +39,8 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const isGameView = to.name === "Home";
   store.commit("setGameMode", isGameView);
-  console.log(
+  const logger = LoggerFactory.getLogger("Router");
+  logger.info(
     `Navigating from ${from.fullPath} to ${to.fullPath}. GameMode: ${isGameView}`
   );
   next();

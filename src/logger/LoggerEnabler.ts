@@ -2,8 +2,7 @@ import LoggerLevel from "./LoggerLevel";
 
 const RULES = [
   { name: "MonsterAI", level: "INFO" },
-  { name: "MonsterAI\\..*", level: "ERROR" },
-  { name: ".*", level: "TRACE" },
+  { name: ".*", level: "INFO" },
 ];
 
 export default class LoggerEnabler {

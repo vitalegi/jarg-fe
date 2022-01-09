@@ -11,8 +11,10 @@ import TileFocusableDrawer from "../ui/TileFocusableDrawer";
 import SelectTargetUserActionHandler from "../user-action-handler/SelectTargetUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
 import GameLoop from "../GameLoop";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class SelectTargetMove {
+  logger = LoggerFactory.getLogger("GameEngine.MonsterAction.SelectTargetMove");
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected userActionService =
@@ -42,7 +44,7 @@ export default class SelectTargetMove {
     menu.destroy();
     drawer.remove();
     if (!result) {
-      console.log("Action is dismissed");
+      this.logger.info("Action is dismissed");
       return null;
     }
     const mapTraversal = new MapTraversal(

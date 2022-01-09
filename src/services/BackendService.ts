@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import TimeUtil from "@/utils/TimeUtil";
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import Container, { Inject } from "typedi";
@@ -33,6 +34,8 @@ type ResponseType =
   | undefined;
 
 export abstract class WebService {
+  logger = LoggerFactory.getLogger("Services.BackendService");
+
   private _url = "";
   private _method: HttpMethod = undefined;
   private _headers: any = {};
@@ -97,14 +100,14 @@ export abstract class WebService {
     instance.interceptors.response.use(
       (response: AxiosResponse<any>) => {
         const duration = TimeUtil.timestamp() - startTime;
-        console.log(
+        this.logger.info(
           `WS_CALL_DONE url=${response.config.url} time_taken=${duration} status=${response.status} status_mesage=${response.statusText}`
         );
         return response;
       },
       (error: any) => {
         const duration = TimeUtil.timestamp() - startTime;
-        console.error(
+        this.logger.error(
           `WS_CALL_DONE url=${error.config.url} time_taken=${duration} status=${error.status} status_mesage=${error.statusText}`
         );
         throw { data: error.response.data };

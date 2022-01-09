@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import ArrayUtil from "@/utils/ArrayUtil";
 import MonsterAction from "../MonsterAction";
 import ScoreFunction from "./score-evaluator/ScoreFunction";
@@ -6,6 +7,10 @@ import ScoreFunction from "./score-evaluator/ScoreFunction";
 const MAX_ITERATIONS = 150;
 
 export default class ScoreEvaluator {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.AI.Score.ScoreEvaluator"
+  );
+
   source;
   actions;
   scoreFunction;
@@ -29,8 +34,8 @@ export default class ScoreEvaluator {
       Math.ceil(MAX_ITERATIONS / this.actions.length)
     );
 
-    console.log(
-      `MonsterAI.ScoreEvaluator reducing possibilities from ${initialSet} to ${this.actions.length}. Will perform ${simulationsPerEntry} simulations per entry`
+    this.logger.info(
+      `Reducing possibilities from ${initialSet} to ${this.actions.length}. Will perform ${simulationsPerEntry} simulations per entry`
     );
 
     const evaluations: Promise<MonsterAction>[] = [];
@@ -42,16 +47,18 @@ export default class ScoreEvaluator {
     await Promise.all(evaluations);
     this.actions = this.actions.sort(this.scoreDesc());
 
-    console.log(
-      "MonsterAI ",
-      this.actions.map((a) => {
-        return {
-          ability: a.ability.label,
-          score: a.score,
-          targetPosition: a.target.coordinates?.toString(),
-        };
-      })
-    );
+    if (this.logger.isDebugEnabled()) {
+      this.logger.debug(
+        "Possible actions:",
+        this.actions.map((a) => {
+          return {
+            ability: a.ability.label,
+            score: a.score,
+            targetPosition: a.target.coordinates?.toString(),
+          };
+        })
+      );
+    }
     return this.actions[0];
   }
 

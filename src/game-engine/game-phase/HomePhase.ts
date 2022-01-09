@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
@@ -6,6 +7,8 @@ import NewGamePhase from "./NewGamePhase";
 
 @Service()
 export default class HomePhase extends AbstractPhase<never> {
+  logger = LoggerFactory.getLogger("GameEngine.GamePhase.HomePhse");
+
   public getName(): string {
     return "HomePhase";
   }
@@ -22,7 +25,6 @@ export default class HomePhase extends AbstractPhase<never> {
     return new MenuEntry(
       "New Game",
       () => {
-        console.log("New Game");
         this.goToNewGamePhase();
       },
       () => true
@@ -32,7 +34,6 @@ export default class HomePhase extends AbstractPhase<never> {
     return new MenuEntry(
       "Load Game",
       () => {
-        console.log("Load Game");
         this.goToLoadGamePhase();
       },
       () => true

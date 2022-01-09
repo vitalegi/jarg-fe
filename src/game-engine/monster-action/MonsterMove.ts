@@ -4,8 +4,10 @@ import Point from "@/models/Point";
 import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
 import GameLoop from "../GameLoop";
 import TurnManager from "../battle/TurnManager";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class MonsterMove {
+  logger = LoggerFactory.getLogger("GameEngine.MonsterAction.MonsterMove");
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected turnManager = Container.get<TurnManager>(TurnManager);
 
@@ -23,11 +25,13 @@ export default class MonsterMove {
       activeCharacter.moves(this.path);
     }
 
-    console.log(`Path ${this.path}, starting from: ${this.source.coordinates}`);
+    this.logger.info(
+      `Path ${this.path}, starting from: ${this.source.coordinates}`
+    );
     for (let i = 0; i < this.path.length - 1; i++) {
       const from = this.path[i];
       const to = this.path[i + 1];
-      console.log(`Walk from ${from} to ${to}`);
+      this.logger.debug(`Walk from ${from} to ${to}`);
       const drawer = new MonsterMoveDrawer(this.source, from, to);
       this.gameLoop.addGameLoopHandler(drawer);
       await drawer.notifyWhenCompleted();

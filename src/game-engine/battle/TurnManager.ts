@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
@@ -170,6 +171,8 @@ class Tick {
 
 @Service()
 export default class TurnManager {
+  logger = LoggerFactory.getLogger("GameEngine.Battle.TurnManager");
+
   protected randomService = Container.get<RandomService>(RandomService);
 
   // TODO retrieve by mapRepository
@@ -207,7 +210,7 @@ export default class TurnManager {
       .map((m) => new Tick(m, this.getICV(m)))
       .forEach((t) => this.ticks.push(t));
     this.next();
-    console.log(`TurnManager - init: ${this.ticks.join(", ")}`);
+    this.logger.info(`init: ${this.ticks.join(", ")}`);
   }
   public hasCharacters(): boolean {
     return this.monsters.length > 0;
@@ -228,9 +231,7 @@ export default class TurnManager {
         this.active.monster,
         this.getTS(this.active.monster)
       );
-      console.log(
-        `TurnManager - Re-calculate ticks for exiting monster: ${tick}`
-      );
+      this.logger.info(`Re-calculate ticks for exiting monster: ${tick}`);
       this.ticks.push(tick);
       this.active = null;
     }
@@ -240,17 +241,14 @@ export default class TurnManager {
         .map((m) => m.ticks)
         .reduce((prev: number, curr: number) => Math.min(prev, curr), 100000);
 
-      console.log(
-        `TurnManager - No other ticks = 0, reduce all by ${min} ticks. ${this.ticks.join(
-          ", "
-        )}`
-      );
+      this.logger.info(`No other ticks = 0, reduce all by ${min} ticks.`);
+      this.logger.debug(`Ticks ${this.ticks.join(", ")}`);
       this.ticks.forEach((t) => (t.ticks -= min));
     }
 
     this.sort(this.ticks);
     this.active = this.ticks[0];
-    console.log(`TurnManager - Next: ${this.active}`);
+    this.logger.info(`Next: ${this.active}`);
   }
 
   public getTurns(n: number): string[] {

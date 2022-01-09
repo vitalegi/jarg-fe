@@ -1,9 +1,11 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 import StatsService from "./stats/StatsService";
 
 @Service()
 export class LevelUpService {
+  logger = LoggerFactory.getLogger("GameEngine.Monster.LevelUpService");
   protected statsService = Container.get<StatsService>(StatsService);
 
   public getKillExperience(monster: Monster): number {
@@ -16,7 +18,7 @@ export class LevelUpService {
 
   public async gainExperience(monster: Monster, exp: number): Promise<void> {
     const toNextLevel = this.toNextLevel(monster);
-    console.log(
+    this.logger.info(
       `Monster ${monster.uuid} gains ${exp} EXP. Level EXP: ${monster.currentLevelExperience}, to next level: ${toNextLevel}.`
     );
     if (this.canLevelUp(monster, exp)) {
@@ -51,7 +53,7 @@ export class LevelUpService {
     monster.level += 1;
     this.statsService.updateMonsterAttributes(monster, restoreHP);
 
-    console.log(
+    this.logger.info(
       `${monster.uuid} performs level up. New level ${
         monster.level
       }, new stats: ${monster.stats.toString()}`

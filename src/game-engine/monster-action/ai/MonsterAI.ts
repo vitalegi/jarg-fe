@@ -5,6 +5,7 @@ import MapTraversal from "@/game-engine/map/traversal/MapTraversal";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
 import Monster from "@/game-engine/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";
+import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import ArrayUtil from "@/utils/ArrayUtil";
@@ -18,6 +19,7 @@ import ScoreFunction from "./score/score-evaluator/ScoreFunction";
 import ScoreEvaluator from "./score/ScoreEvaluator";
 
 export default class MonsterAI {
+  logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AI.MonsterAI");
   protected randomService = Container.get<RandomService>(RandomService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected monsterService = Container.get<MonsterService>(MonsterService);
@@ -29,19 +31,13 @@ export default class MonsterAI {
   }
 
   public async execute(): Promise<void> {
-    console.log("MonsterAI 1. find all the reachable locations in this turn");
-
     const steps = this.monsterService.availableActiveMonsterMoves();
     const walkable = TimeUtil.monitor("MonsterAI.walkable", () =>
       this.getAllWalkablePoints(steps)
     ).map((p) => p.point);
-    console.log(
-      `MonsterAI, step1: ${walkable.length} possible walkable locations`
-    );
 
-    console.log(
-      "MonsterAI 2. for each location, for each ability find hittable targets"
-    );
+    this.logger.info(`Step 1: ${walkable.length} possible walkable locations`);
+
     const availableActions = TimeUtil.monitor(
       "MonsterAI.availableActions",
       () =>
@@ -49,11 +45,8 @@ export default class MonsterAI {
           this.getPossibleTargets(walkable, ability)
         )
     );
-    console.log(
-      `MonsterAI, step2: ${availableActions.length} possible actions`
-    );
+    this.logger.info(`Step 2: ${availableActions.length} possible actions`);
 
-    console.log("MonsterAI 3. find best ability to use");
     if (availableActions.length > 0) {
       const action = await TimeUtil.monitorAsync("MonsterAI.action", () =>
         new ScoreEvaluator(
@@ -62,7 +55,13 @@ export default class MonsterAI {
           new ScoreFunction()
         ).selectBestAction()
       );
-
+      this.logger.info(
+        `Step 3: will perform ${action.ability.id} / ${
+          action.ability.label
+        } from ${action.from.toString()} against ${
+          action.target.coordinates
+        } (${action.target.uuid} ${action.target.name})`
+      );
       await this.move(action.from);
       const executor = new AbilityExecutor(
         this.source,
@@ -71,19 +70,22 @@ export default class MonsterAI {
       );
       await executor.execute();
     } else {
-      console.log(
-        "MonsterAI 4. if no target, find all reachable enemies in 3 turns and walk towards them"
+      this.logger.info(
+        "Step 4. No target, find all reachable enemies in 3 turns and walk towards one of them"
       );
       const target = TimeUtil.monitor("MonsterAI.walkable", () =>
         this.getNearestTarget()
       );
       if (!target) {
-        console.log(`MonsterAI No reachable enemy`);
+        this.logger.info(
+          `No reachable enemy, terminate without doing anything.`
+        );
       } else {
-        console.log(`MonsterAI Walk towards `, target);
+        this.logger.info(`Walk towards ${target.toString()}`);
         const fullPath = this.getMoveMapTraversal().getPath(target);
+        // TODO FIXME targetPoint should be empty
         const targetPoint = fullPath[steps];
-        console.log(`MonsterAI Target `, targetPoint);
+        this.logger.info(`Mid point is ${targetPoint.toString()}`);
         await this.move(targetPoint);
       }
     }
@@ -168,7 +170,7 @@ export default class MonsterAI {
     const walkablePoints = this.getAllWalkablePoints(
       3 * this.source.movements.steps
     );
-    console.log(`MonsterAI Walkable points: ${walkablePoints.length}`);
+    this.logger.info(`Walkable points: ${walkablePoints.length}`);
 
     const reachableTargets = targets
       .flatMap((target) =>
@@ -181,8 +183,8 @@ export default class MonsterAI {
       )
       .filter((e) => this.isEmpty(e.point.point));
 
-    console.log(
-      `MonsterAI Reachable targets: ${reachableTargets.length}`,
+    this.logger.debug(
+      `Reachable targets: ${reachableTargets.length}`,
       reachableTargets
     );
 

@@ -1,8 +1,10 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import * as PIXI from "pixi.js";
 import { InteractionEvent } from "pixi.js";
 
 export default class DetectEvent {
+  logger = LoggerFactory.getLogger("GameEngine.UI.DetectEvent");
   protected element;
   protected startingPoint: Point | null = null;
   protected lastPoint: Point | null = null;
@@ -65,15 +67,15 @@ export default class DetectEvent {
 
   protected pointerup(e: InteractionEvent): void {
     if (!this.startingPoint) {
-      console.log(`Pointer up but starting point not selected`);
+      this.logger.debug(`Pointer up but starting point not selected`);
       return;
     }
     if (this.drag && this._onDragEnd) {
-      console.log(`dragEnd ${this.element.name}`);
+      this.logger.debug(`dragEnd ${this.element.name}`);
       this._onDragEnd(e);
     }
     if (!this.drag && this._onTap) {
-      console.log(`tap ${this.element.name}`);
+      this.logger.debug(`tap ${this.element.name}`);
       this._onTap(e);
     }
 
@@ -92,7 +94,7 @@ export default class DetectEvent {
     if (this.distance(curr, this.startingPoint) > 1 && !this.drag) {
       this.drag = true;
       if (this._onDragStart) {
-        console.log("EVENT dragStart");
+        this.logger.debug("EVENT dragStart");
         this._onDragStart(e);
       }
     }

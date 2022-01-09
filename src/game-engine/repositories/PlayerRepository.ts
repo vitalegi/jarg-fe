@@ -1,9 +1,12 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import { Service } from "typedi";
 import PlayerData from "../PlayerData";
 
 @Service()
 export default class PlayerRepository {
+  logger = LoggerFactory.getLogger("GameEngine.Repositories.PlayerRepository");
+
   protected playerData: PlayerData | null = null;
 
   public loadAll(): PlayerData[] {
@@ -32,7 +35,7 @@ export default class PlayerRepository {
       games[index] = playerData;
     }
     window.localStorage.setItem("players", JSON.stringify(games));
-    console.log(`Saved status for ${playerData.playerId}`);
+    this.logger.info(`Saved status for ${playerData.playerId}`);
   }
 
   public setPlayerData(playerData: PlayerData): void {

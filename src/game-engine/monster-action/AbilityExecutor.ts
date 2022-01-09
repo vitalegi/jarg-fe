@@ -12,8 +12,10 @@ import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
 import StatsService from "../monster/stats/StatsService";
 import TextOverCharacterDrawer from "../ui/TextOverCharacterDrawer";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class AbilityExecutor {
+  logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
   protected battleService = Container.get<BattleService>(BattleService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected healthBarService =
@@ -34,18 +36,19 @@ export default class AbilityExecutor {
 
   public async execute(): Promise<void> {
     this.ability.usages.current--;
-    console.log("AbilityExecutor - START");
+    this.logger.info(
+      `AbilityExecutor - START ability=${this.ability.id}/${this.ability.label}`
+    );
     const activeCharacter = this.turnManager.activeCharacter();
     if (activeCharacter) {
       activeCharacter.usesAbility(this.ability);
     }
-    console.log("ability", this.ability);
     const effects = await this.ability.processor.execute(
       this.source,
       this.target,
       this.ability
     );
-    console.log(`Ability effects `, effects);
+    this.logger.debug(`Ability effects `, effects);
 
     await this.focusTarget();
     const abilityName = this.showAbilityName();
@@ -65,7 +68,7 @@ export default class AbilityExecutor {
       await drawer.notifyWhenCompleted();
     }
 
-    console.log("AbilityExecutor - END");
+    this.logger.info("AbilityExecutor - END");
   }
 
   protected async applyEffects(

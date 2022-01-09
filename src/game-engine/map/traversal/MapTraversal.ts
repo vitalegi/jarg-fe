@@ -5,8 +5,10 @@ import TimeUtil from "@/utils/TimeUtil";
 import Tile from "../Tile";
 import TraversalPoint from "./TraversalPoint";
 import GraphBuilder from "./GraphBuilder";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class MapTraversal {
+  logger = LoggerFactory.getLogger("GameEngine.Map.Traversal");
   map;
   monster;
   debug = false;
@@ -32,8 +34,8 @@ export default class MapTraversal {
     const now = TimeUtil.timestamp();
     const path = this.minimumPath(graph, start, target);
     const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    console.log(`MONITORING dijkstra duration=${duration}ms`);
-    console.log(`Path from ${start} to ${target}: ${path.join(",")}`);
+    this.logger.info(`MONITORING dijkstra duration=${duration}ms`);
+    this.logger.debug(`Path from ${start} to ${target}: ${path.join(",")}`);
     return path;
   }
 
@@ -54,7 +56,7 @@ export default class MapTraversal {
     });
 
     const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    console.log(`MONITORING dijkstra duration=${duration}ms`);
+    this.logger.info(`MONITORING dijkstra duration=${duration}ms`);
     return points;
   }
 
@@ -62,7 +64,7 @@ export default class MapTraversal {
     const now = TimeUtil.timestamp();
     const graph = this.builder.createGraph(this.map, this.monster);
     const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    console.log(`MONITORING getGraph duration=${duration}ms`);
+    this.logger.info(`MONITORING getGraph duration=${duration}ms`);
     return graph;
   }
 
@@ -126,7 +128,7 @@ export default class MapTraversal {
 
     if (this.debug) {
       graph.forEach((entry) => {
-        console.log(
+        this.logger.debug(
           `GRAPH RESULT: from ${start} to ${entry.point} costs ${entry.cost}, prev: ${entry.previous?.point}`
         );
       });

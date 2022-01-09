@@ -9,9 +9,14 @@ import MapRepository from "@/game-engine/map/MapRepository";
 import BattleService from "@/game-engine/battle/BattleService";
 import SelectTargetMove from "../SelectTargetMove";
 import SelectTargetAbility from "../SelectTargetAbility";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 @Service()
 export default class MonsterActionMenuBuilder {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.UI.MonsterActionMenuBUilder"
+  );
+
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 
@@ -41,7 +46,7 @@ export default class MonsterActionMenuBuilder {
     const path = await new SelectTargetMove().selectTarget(monster);
     if (path) {
       await new MonsterMove(monster, path).execute();
-      console.log(`Walk to ${path[path.length - 1]} is completed.`);
+      this.logger.info(`Walk to ${path[path.length - 1]} is completed.`);
       leftMenu.reDraw();
     }
     leftMenu.show();
@@ -82,12 +87,12 @@ export default class MonsterActionMenuBuilder {
     );
     if (targetId) {
       const target = this.mapRepository.getMonsterById(targetId);
-      console.log(
+      this.logger.info(
         `Selected target of ability ${ability.label}: ${targetId} / ${target.name}`
       );
       const executor = new AbilityExecutor(monster, target, ability);
       await executor.execute();
-      console.log(`User ability ${ability.label} is completed.`);
+      this.logger.info(`User ability ${ability.label} is completed.`);
       leftMenu.reDraw();
       if (this.getBattleService().isBattleOver()) {
         this.getBattleService().completeBattle();
@@ -98,14 +103,14 @@ export default class MonsterActionMenuBuilder {
 
   protected isAbilityEnabled(monster: Monster, ability: Ability): boolean {
     if (!this.monsterService.canActiveMonsterUseAbility()) {
-      console.debug(`Ability slots already consumed for this turn`);
+      this.logger.debug(`Ability slots already consumed for this turn`);
       return false;
     }
     if (!(ability.usages.current > 0)) {
-      console.debug(`No more ability usages for ${ability.label}`);
+      this.logger.debug(`No more ability usages for ${ability.label}`);
       return false;
     }
-    console.debug(`Ability ${ability.label} is enabled`);
+    this.logger.debug(`Ability ${ability.label} is enabled`);
     return true;
   }
 

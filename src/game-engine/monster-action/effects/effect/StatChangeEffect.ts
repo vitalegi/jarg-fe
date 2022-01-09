@@ -35,8 +35,8 @@ export default class StatChangeEffect extends Effect {
     const effectTarget = this.target.getTarget(source, target);
     const pass = this.passConditions(source, effectTarget, ability, hit);
 
-    console.log(
-      `StatChangeEffect against ${target.uuid} (${this.percentage}% ${this.stat}) passed: ${pass}`
+    this.logger.info(
+      `Against ${target.uuid} (${this.percentage}% ${this.stat}) passed: ${pass}`
     );
 
     if (pass) {

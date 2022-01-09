@@ -6,8 +6,10 @@ import MapContainer from "@/game-engine/map/MapContainer";
 import WindowSizeProxy from "../WindowSizeProxy";
 import FontService from "./FontService";
 import MapRepository from "../map/MapRepository";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class TurnBoxDrawer extends Drawer {
+  logger = LoggerFactory.getLogger("GameEngine.UI.TurnBoxDrawer");
   protected static NAME = "TurnBox";
 
   protected parent: PIXI.Container;
@@ -64,7 +66,7 @@ export default class TurnBoxDrawer extends Drawer {
     }
     this.container.removeChildren();
     this.container.height = this.height(newTurns);
-    console.debug(`Turns have changed from ${this.turns} to ${newTurns}`);
+    this.logger.debug(`Turns have changed from ${this.turns} to ${newTurns}`);
     // regenerate entries
     this.turns = newTurns;
     this.turns

@@ -13,6 +13,7 @@ import Move from "@/models/Move";
 import TurnManager, { ActionType } from "../battle/TurnManager";
 import { LevelUpService } from "./LevelUpService";
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 const names = [
   "Cino",
@@ -29,6 +30,7 @@ const names = [
 
 @Service()
 export default class MonsterService {
+  logger = LoggerFactory.getLogger("GameEngine.Monster.MonsterService");
   protected rendererService = Container.get(RendererService);
   protected userActionService =
     Container.get<UserActionService>(UserActionService);
@@ -114,7 +116,7 @@ export default class MonsterService {
   public canActiveMonsterUseAbility(): boolean {
     const tick = this.turnManager.activeCharacter();
     if (!tick) {
-      console.log(`No active monster`);
+      this.logger.info(`No active monster`);
       return false;
     }
     const count = tick.actionsHistory

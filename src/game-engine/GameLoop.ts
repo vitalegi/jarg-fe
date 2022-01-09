@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import TimeUtil from "@/utils/TimeUtil";
 import { Service } from "typedi";
 import Drawer from "./ui/Drawer";
@@ -5,10 +6,12 @@ import MonsterAnimationDrawer from "./ui/MonsterAnimationDrawer";
 
 @Service()
 export default class GameLoop {
+  logger = LoggerFactory.getLogger("GameEngine.GameEngine");
+
   protected gameLoopHandlers: Drawer[] = [];
 
   public removeAll(): void {
-    console.log(`Remove all game loop handlers`);
+    this.logger.info(`Remove all game loop handlers`);
     this.gameLoopHandlers = [];
   }
 
@@ -20,7 +23,7 @@ export default class GameLoop {
 
     const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
     if (duration > 10) {
-      console.log(
+      this.logger.info(
         `MONITORING Drawers time_taken=${duration}ms. Split:\n${stats.join(
           "\n"
         )}`
@@ -35,7 +38,10 @@ export default class GameLoop {
     try {
       handler.draw();
     } catch (e) {
-      console.error(e);
+      this.logger.error(
+        `Error while rendering ${handler.getName()} (${handler.getId()})`,
+        e
+      );
     }
     const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
     return `Drawer id=${handler.getId()}, name=${handler.getName()}, time_taken=${duration}ms`;

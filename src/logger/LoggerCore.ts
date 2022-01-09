@@ -18,6 +18,10 @@ export default class LoggerCore {
     }
   }
 
+  public isEnabled(logLevel: number, name: string): boolean {
+    return this.enabler.isEnabled(logLevel, name);
+  }
+
   protected format(
     logLevel: number,
     name: string,
@@ -30,9 +34,15 @@ export default class LoggerCore {
   }
 
   protected formatDate(date: Date): string {
-    return `${date.getFullYear()}-${
-      date.getMonth() + 1
-    }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const year = this.pad(date.getFullYear(), 4);
+    const month = this.pad(date.getMonth() + 1, 2);
+    const day = this.pad(date.getDate(), 2);
+    const hour = this.pad(date.getHours(), 2);
+    const minute = this.pad(date.getMinutes(), 2);
+    const second = this.pad(date.getSeconds(), 2);
+    const millisecond = this.pad(date.getMilliseconds(), 3);
+    const timezone = this.timezone(date);
+    return `${year}-${month}-${day} ${hour}:${minute}:${second}.${millisecond}T${timezone}`;
   }
 
   protected formatLogLevel(logLevel: number): string {
@@ -47,5 +57,22 @@ export default class LoggerCore {
         return "TRACE";
     }
     return "?????";
+  }
+
+  protected pad(value: number, length: number): string {
+    let tmp = `${value}`;
+    while (tmp.length < length) {
+      tmp = "0" + tmp;
+    }
+    return tmp;
+  }
+
+  protected timezone(date: Date): string {
+    let offset = date.getTimezoneOffset();
+    const sign = offset >= 0 ? "+" : "-";
+    offset = Math.abs(offset);
+    const hours = Math.floor(offset / 60);
+    const minutes = offset % 60;
+    return `${sign}${this.pad(hours, 2)}:${this.pad(minutes, 2)}`;
   }
 }

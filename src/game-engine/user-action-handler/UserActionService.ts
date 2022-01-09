@@ -4,14 +4,18 @@ import Point from "@/models/Point";
 import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
 import UserInput from "@/game-engine/user-action-handler/UserInput";
 import DetectEvent from "../ui/DetectEvent";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 @Service()
 export default class UserActionService {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.UserActionHandler.UserActionService"
+  );
   protected actionHandlers: UserActionHandler[] = [];
 
   public addActionHandler(actionHandler: UserActionHandler): void {
     this.actionHandlers.push(actionHandler);
-    console.log(
+    this.logger.info(
       `Add ActionHandler ${actionHandler.getName()}_${actionHandler.getUuid()}, available: ${this.actionHandlers
         .map((h) => `${h.getName()}_${h.getUuid()}`)
         .join(", ")}`
@@ -19,7 +23,7 @@ export default class UserActionService {
   }
 
   public removeAll(): void {
-    console.log(`Remove all ActionHandlers`);
+    this.logger.info(`Remove all ActionHandlers`);
     this.actionHandlers = [];
   }
 
@@ -33,7 +37,7 @@ export default class UserActionService {
       );
     }
     const handler = this.actionHandlers[index];
-    console.log(
+    this.logger.info(
       `Remove ActionHandler ${handler.getName()}_${handler.getUuid()}, available: ${this.actionHandlers
         .map((h) => `${h.getName()}_${h.getUuid()}`)
         .join(", ")}`
@@ -126,12 +130,12 @@ export default class UserActionService {
       accept(h, input, newPosition)
     );
     if (handlers.length === 0) {
-      console.log(`No handler provided for ${action}(${input})`);
+      this.logger.info(`No handler provided for ${action}(${input})`);
       return;
     }
     const handler = handlers[handlers.length - 1];
     if (handlers.length > 1) {
-      console.log(
+      this.logger.info(
         `Multiple handlers for ${action}(${input}), choosen ${handler.getName()}_${handler.getUuid()}, available: ${handlers
           .map((h) => `${h.getName()}_${h.getUuid()}`)
           .join(", ")}`

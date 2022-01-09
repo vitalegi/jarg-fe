@@ -5,8 +5,10 @@ import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import GameApp from "../GameApp";
 import FontService from "./FontService";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class TextOverCharacterDrawer extends Drawer {
+  logger = LoggerFactory.getLogger("GameEngine.UI.TextOverCharacterDrawer");
   protected static NAME = "TextOverCharacterDrawer";
   protected gameApp = Container.get<GameApp>(GameApp);
   protected fontService = Container.get<FontService>(FontService);
@@ -29,14 +31,14 @@ export default class TextOverCharacterDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.isFirstDraw()) {
-      console.log(`Show text ${this.getText()}`);
+      this.logger.info(`Show text ${this.getText()}`);
       const container = this.getMonsterContainer();
       if (container) {
         container.addChild(this.createTextMessage());
       }
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
-      console.log(`Remove text message ${this.getText()}`);
+      this.logger.info(`Remove text message ${this.getText()}`);
       const container = this.getMonsterContainer();
       if (container) {
         const textChild = container.getChildByName(

@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import Ability from "../../Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Condition from "../condition/Condition";
@@ -8,6 +9,9 @@ import Target from "../target/Target";
 export type EffectComputeType = "percentage" | "abs";
 
 export default abstract class Effect {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.Effects.Effect.Effect"
+  );
   target = new Target();
   conditions: Condition[] = [];
 
@@ -43,7 +47,7 @@ export default abstract class Effect {
     );
     const pass = notPassed.length === 0;
     if (!pass) {
-      console.log(
+      this.logger.info(
         `Condition not met: ${notPassed.map((c) => c.toString()).join(", ")}`
       );
     }

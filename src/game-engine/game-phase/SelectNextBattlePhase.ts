@@ -8,11 +8,15 @@ import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
 import BattlePhase from "./BattlePhase";
 import MapService from "../map/MapService";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 const MAPS = ["map1", "map2", "map3", "map4"];
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.GamePhase.SelectNextBattlePhase"
+  );
   protected monsterIndexService =
     Container.get<MonsterIndexService>(MonsterIndexService);
   protected playerRepository =
@@ -75,7 +79,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   }
 
   protected async selectMap(mapId: string): Promise<void> {
-    console.log(`Chosen: ${mapId}`);
+    this.logger.info(`Chosen: ${mapId}`);
 
     const model = await this.gameAssetService.getMap(mapId);
     const map = await this.mapService.generate(model);

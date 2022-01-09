@@ -1,7 +1,11 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
 
 export default class MissComputed extends ComputedEffect {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.ComputedEffect.MissComputed"
+  );
   target;
   public constructor(target: Monster) {
     super();
@@ -13,7 +17,7 @@ export default class MissComputed extends ComputedEffect {
   }
 
   public async render(): Promise<void> {
-    console.log(`BATTLE MissComputed: miss attack to ${this.target.name}`);
+    this.logger.info(`MissComputed: miss attack to ${this.target.name}`);
     return super.showTextOverMonster(this.target, "MISS");
   }
 }

@@ -1,7 +1,12 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
 
 export default class HpDamageComputed extends ComputedEffect {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.ComputedEffect.HpDamageComputed"
+  );
+
   target;
   damage;
 
@@ -21,7 +26,7 @@ export default class HpDamageComputed extends ComputedEffect {
     return super.showTextOverMonster(this.target, "TODO");
   }
   public applyAfterRender(): void {
-    console.log(
+    this.logger.info(
       `BATTLE HpDamageComputed: ${this.damage} HP damage to ${this.target.name}`
     );
     this.target.stats.hp -= this.damage;

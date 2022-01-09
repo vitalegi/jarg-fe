@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import GameLoop from "../GameLoop";
 import MapRepository from "../map/MapRepository";
@@ -13,6 +14,9 @@ import UserActionService from "../user-action-handler/UserActionService";
 import Ability from "./Ability";
 
 export default class SelectTargetAbility {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.SelectTargetAbility"
+  );
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected userActionService =
@@ -47,7 +51,7 @@ export default class SelectTargetAbility {
     menu.destroy();
     drawer.remove();
     if (!result) {
-      console.log("Action is dismissed");
+      this.logger.info("Action is dismissed");
       return null;
     }
     return result.getMonsterId();

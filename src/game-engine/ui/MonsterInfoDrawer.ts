@@ -10,8 +10,10 @@ import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
 import { LevelUpService } from "../monster/LevelUpService";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class MonsterInfoDrawer extends Drawer {
+  logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
   protected static NAME = "MonsterInfoDrawer";
 
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
@@ -59,7 +61,7 @@ export default class MonsterInfoDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.container === null) {
-      console.log(`Show stats of ${this.monster.uuid}`);
+      this.logger.info(`Show stats of ${this.monster.uuid}`);
       this.container = new PIXI.Container();
       this.container.name = MonsterInfoDrawer.NAME;
 
@@ -104,7 +106,7 @@ export default class MonsterInfoDrawer extends Drawer {
         this.addAbility(ability, lineY())
       );
 
-      console.log(
+      this.logger.debug(
         `x=${this.x()}, y=${this.y()}, width=${this.width()}, height=${this.height()}`
       );
 
@@ -209,9 +211,9 @@ export default class MonsterInfoDrawer extends Drawer {
   protected monitor<E>(name: string, fn: () => E): E {
     const startTime = TimeUtil.timestamp();
     const result = fn();
-
+    // TODO use TimeUtil centralized method
     const duration = Math.round(100 * (TimeUtil.timestamp() - startTime)) / 100;
-    console.log(`MONITORING ${name}, time_taken=${duration}ms`);
+    this.logger.info(`MONITORING ${name}, time_taken=${duration}ms`);
     return result;
   }
 }

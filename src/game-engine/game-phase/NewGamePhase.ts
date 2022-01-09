@@ -13,12 +13,15 @@ import MonsterIndex from "../monster/MonsterIndex";
 import MapService from "../map/MapService";
 import { LevelUpService } from "../monster/LevelUpService";
 import SelectNextBattlePhase from "./SelectNextBattlePhase";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 const starters = ["001", "004", "007"];
 const firstMap = "map1";
 
 @Service()
 export default class NewGamePhase extends AbstractPhase<never> {
+  logger = LoggerFactory.getLogger("GameEngine.GamePhase.NewGamePhase");
+
   protected monsterIndexService =
     Container.get<MonsterIndexService>(MonsterIndexService);
   protected playerRepository =
@@ -56,7 +59,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
   }
 
   protected async choose(starter: MonsterIndex): Promise<void> {
-    console.log(`Chosen: ${starter.monsterId} - ${starter.name}`);
+    this.logger.info(`Chosen: ${starter.monsterId} - ${starter.name}`);
 
     const playerData = new PlayerData();
     playerData.playerId = UuidUtil.nextId();

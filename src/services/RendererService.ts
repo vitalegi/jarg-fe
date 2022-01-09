@@ -11,6 +11,7 @@ import UserActionService from "@/game-engine/user-action-handler/UserActionServi
 import HealthBarService from "@/game-engine/monster/HealthBarService";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import GameConfig from "@/game-engine/GameConfig";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export class Asset {
   name = "";
@@ -24,6 +25,7 @@ export class Asset {
 
 @Service()
 export default class RendererService {
+  logger = LoggerFactory.getLogger("Services.RendererService");
   private static MONSTER_SPRITE_NAME = "monsterSprite";
 
   protected gameAssetService =
@@ -40,7 +42,7 @@ export default class RendererService {
     const newResources = images.filter((image) => {
       const newResource = !PIXI.Loader.shared.resources[image.name];
       if (!newResource) {
-        console.log(`Resource ${image.name} already loaded, skip.`);
+        this.logger.debug(`Resource ${image.name} already loaded, skip.`);
       }
       return newResource;
     });
@@ -50,7 +52,7 @@ export default class RendererService {
   public loadAssets(): Promise<void> {
     return new Promise<void>((resolve) => {
       PIXI.Loader.shared.load(() => {
-        console.log("Assets are loaded");
+        this.logger.info("Assets are loaded");
         resolve();
       });
     });
@@ -67,7 +69,7 @@ export default class RendererService {
       this.applyOptions(sprite, options);
       return sprite;
     } catch (e) {
-      console.error(`Error with sprite ${name}`, e);
+      this.logger.error(`Error with sprite ${name}`, e);
       throw e;
     }
   }

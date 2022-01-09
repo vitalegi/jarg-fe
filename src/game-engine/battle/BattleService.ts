@@ -12,9 +12,12 @@ import MonsterAI from "../monster-action/ai/MonsterAI";
 import GameConfig from "../GameConfig";
 import GameOverPhase from "../game-phase/GameOverPhase";
 import SelectNextBattlePhase from "../game-phase/SelectNextBattlePhase";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 @Service()
 export default class BattleService {
+  logger = LoggerFactory.getLogger("GameEngine.Battle.BattleService");
+
   protected gameApp = Container.get<GameApp>(GameApp);
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected playerService = Container.get<PlayerService>(PlayerService);
@@ -27,7 +30,7 @@ export default class BattleService {
 
   public async startCharacterTurn(): Promise<void> {
     if (!this.turnManager.hasCharacters()) {
-      console.log("No active users, do nothing");
+      this.logger.info("No active users, do nothing");
       return;
     }
     const active = this.turnManager.activeCharacter();
@@ -37,7 +40,7 @@ export default class BattleService {
     const monster = active.monster;
 
     const playerId = this.playerService.getPlayerId();
-    console.log(`Focus on ${monster.coordinates}`);
+    this.logger.info(`Focus on ${monster.coordinates}`);
     if (monster.coordinates) {
       const focus = new ChangeFocusDrawer(monster.coordinates);
       this.gameLoop.addGameLoopHandler(focus);
@@ -51,7 +54,7 @@ export default class BattleService {
   }
 
   protected async startPlayerTurn(monster: Monster): Promise<void> {
-    console.log(`Monster ${monster.uuid} is owned by player, show menu`);
+    this.logger.info(`Monster ${monster.uuid} is owned by player, show menu`);
 
     this.monsterActionMenuBuilder.build(monster).draw();
 
@@ -75,10 +78,12 @@ export default class BattleService {
   }
 
   protected async startNpcTurn(monster: Monster): Promise<void> {
-    console.log(`Monster ${monster.uuid} is managed by AI, perform action`);
+    this.logger.info(
+      `Monster ${monster.uuid} is managed by AI, perform action`
+    );
     const ai = new MonsterAI(monster);
     await ai.execute();
-    console.log(`Monster action is completed, go to next.`);
+    this.logger.info(`Monster action is completed, go to next.`);
     this.nextTurn();
   }
 
@@ -117,16 +122,18 @@ export default class BattleService {
 
   public completeBattle(): void {
     if (this.isGameOver(this.playerService.getPlayerId())) {
-      console.log(`Player is defeated, end.`);
+      this.logger.info(`Player is defeated, end.`);
       this.gameOverPhase.start();
       return;
     }
     if (this.isGameWin(this.playerService.getPlayerId())) {
-      console.log("Player wins");
+      this.logger.info("Player wins");
       Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();
       return;
     }
-    console.error(`Battle is not completed`);
+    this.logger.error(
+      `Battle is not completed, you should not reach this point.`
+    );
   }
 
   public isGameOver(playerId: string): boolean {
@@ -156,7 +163,7 @@ export default class BattleService {
     const monster = this.mapRepository.getMonsterById(uuid);
 
     return new Promise<void>((resolve) => {
-      console.log(`Monster ${monster.uuid} died.`);
+      this.logger.info(`Monster ${monster.uuid} died.`);
 
       const container = this.gameApp
         .getBattleContainer()

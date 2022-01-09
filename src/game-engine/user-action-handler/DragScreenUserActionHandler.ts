@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import Container from "typedi";
 import GameApp from "../GameApp";
@@ -5,6 +6,9 @@ import UserActionHandler from "./UserActionHandler";
 import UserInput from "./UserInput";
 
 export default class DragScreenUserActionHandler extends UserActionHandler {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.UserActionHandler.DragScreenUserActionHandler"
+  );
   protected gameApp = Container.get<GameApp>(GameApp);
   protected _dragStart: Point | null = null;
   protected _lastPoint: Point | null = null;
@@ -23,7 +27,7 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
       return;
     }
     const point = newPosition.clone();
-    console.log(`Drag start from ${point} / ${input}`);
+    this.logger.info(`Drag start from ${point} / ${input}`);
     this._dragStart = point;
     this._lastPoint = point.clone();
   }
@@ -40,7 +44,7 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
     const diffX = point.x - this._lastPoint.x;
     const diffY = point.y - this._lastPoint.y;
 
-    console.debug(`drag progress ${this._dragStart} => ${point}`);
+    this.logger.debug(`drag progress ${this._dragStart} => ${point}`);
     this._lastPoint = point;
     this.moveBattleStage(diffX, diffY);
   }
@@ -50,7 +54,7 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
     if (!input.isTerrain()) {
       return;
     }
-    console.log(`Drag end`);
+    this.logger.debug(`Drag end`);
     this._dragStart = null;
     this._lastPoint = null;
   }

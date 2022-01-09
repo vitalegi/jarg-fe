@@ -6,6 +6,7 @@ import { TextStyle } from "pixi.js";
 import GameApp from "../GameApp";
 import FontService from "./FontService";
 import UuidUtil from "@/utils/UuidUtil";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export class MenuEntry {
   label: string;
@@ -33,6 +34,7 @@ export class MenuEntry {
 }
 
 export default class LeftMenu {
+  logger = LoggerFactory.getLogger("GameEngine.UI.LeftMenu");
   private static NAME = "LeftMenu";
 
   protected fontService = Container.get<FontService>(FontService);
@@ -68,7 +70,7 @@ export default class LeftMenu {
   public draw(): void {
     this.container = new PIXI.Container();
     this.container.name = `${LeftMenu.NAME}_${UuidUtil.nextId()}`;
-    console.log(`Draw menu ${this.container.name}`);
+    this.logger.info(`Draw menu ${this.container.name}`);
 
     this.gameApp.getApp().stage.addChild(this.container);
 
@@ -76,7 +78,7 @@ export default class LeftMenu {
       .getApp()
       .stage.children.filter((c) => c.name.startsWith(LeftMenu.NAME));
     if (runningMenus.length > 1) {
-      console.log("MONITORING, LeftMenus: ", runningMenus);
+      this.logger.info("MONITORING, LeftMenus: ", runningMenus);
     }
 
     this.container.addChild(

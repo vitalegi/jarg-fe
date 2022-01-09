@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import { AnimationSrc } from "@/models/Animation";
 import SpriteConfig from "@/models/SpriteConfig";
 import GameAssetService from "@/services/GameAssetService";
@@ -11,6 +12,7 @@ import TypeRepository from "./repositories/TypeRepository";
 
 @Service()
 export default class GameAppDataLoader {
+  logger = LoggerFactory.getLogger("GameEngine.GameAppDataLoader");
   protected _loaded = new Array<string>();
 
   protected gameAssetService =
@@ -80,7 +82,7 @@ export default class GameAppDataLoader {
         )
     );
     this.rendererService.addImages(assets);
-    console.log("Load SpriteSheet done", assets);
+    this.logger.info("Load SpriteSheet done", assets);
   }
 
   public async loadAbilities(): Promise<void> {
@@ -130,7 +132,7 @@ export default class GameAppDataLoader {
       }
     }
     await Promise.all(promises);
-    console.log(
+    this.logger.info(
       `Load monster animations' metadata for ${monsters
         .map((m) => m.monsterId)
         .join(", ")} done.`
@@ -146,7 +148,7 @@ export default class GameAppDataLoader {
       animationSrc.metadata
     );
     monster.animations.push(animation);
-    console.log(
+    this.logger.info(
       `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
     );
   }

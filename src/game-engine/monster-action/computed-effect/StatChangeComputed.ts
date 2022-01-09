@@ -1,8 +1,13 @@
 import Monster from "@/game-engine/monster/Monster";
 import StatAlteration from "@/game-engine/monster/stats/StatAlteration";
+import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
 
 export default class StatChangeComputed extends ComputedEffect {
+  logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.ComputedEffect.StatChangeComputed"
+  );
+
   target;
   stat;
   percentage;
@@ -25,10 +30,8 @@ export default class StatChangeComputed extends ComputedEffect {
     );
   }
   public applyAfterRender(): void {
-    console.log(
-      `BATTLE StatChangeComputed: vary by ${this.percentage * 100}% ${
-        this.stat
-      } of ${this.target.name}`
+    this.logger.info(
+      `Vary by ${this.percentage * 100}% ${this.stat} of ${this.target.name}`
     );
     // TODO add duration
     this.target.statsAlterations.push(

@@ -4,8 +4,11 @@ import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
 import GameApp from "../GameApp";
 import FontService from "./FontService";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default class AbilityNameDrawer extends Drawer {
+  logger = LoggerFactory.getLogger("GameEngine.UI.AbilityNameDrawer");
+
   protected static NAME = "AbilityNameDrawer";
   protected fontService = Container.get<FontService>(FontService);
   protected gameApp = Container.get<GameApp>(GameApp);
@@ -37,11 +40,11 @@ export default class AbilityNameDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.isFirstDraw()) {
-      console.log(`Show ability ${this.label}`);
+      this.logger.info(`Show ability ${this.label}`);
       this.gameApp.getApp().stage.addChild(this.createText());
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
-      console.log(`Remove ability ${this.label}`);
+      this.logger.info(`Remove ability ${this.label}`);
 
       const parent = this.gameApp.getApp().stage;
       const child = this.getChildContainer(parent, AbilityNameDrawer.NAME);

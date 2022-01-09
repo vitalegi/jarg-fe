@@ -2,18 +2,21 @@ import Container from "typedi";
 import GameApp from "../GameApp";
 import * as PIXI from "pixi.js";
 import GameAppDataLoader from "../GameAppDataLoader";
+import LoggerFactory from "@/logger/LoggerFactory";
 
 export default abstract class AbstractPhase<E> {
+  logger = LoggerFactory.getLogger("GameEngine.GamePhase.AbstractPhase");
+
   private _gameApp = Container.get<GameApp>(GameApp);
   private _gameAppDataLoader =
     Container.get<GameAppDataLoader>(GameAppDataLoader);
 
   public async start(options: E | null = null): Promise<void> {
-    console.log(`${this.getName()} start`);
+    this.logger.info(`${this.getName()} start`);
     this.reset();
 
     await this.doStart(options);
-    console.log(`${this.getName()} started`);
+    this.logger.info(`${this.getName()} started`);
   }
 
   protected abstract doStart(options: E | null): Promise<void>;

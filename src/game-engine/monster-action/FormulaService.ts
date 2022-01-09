@@ -1,3 +1,4 @@
+import LoggerFactory from "@/logger/LoggerFactory";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
 import Monster from "../monster/Monster";
@@ -8,6 +9,7 @@ import Ability from "./Ability";
 
 @Service()
 export default class FormulaService {
+  logger = LoggerFactory.getLogger("GameEngine.MonsterAction.FormulaService");
   protected randomService = Container.get<RandomService>(RandomService);
   protected monsterIndexService =
     Container.get<MonsterIndexService>(MonsterIndexService);
@@ -27,7 +29,7 @@ export default class FormulaService {
 
     const match = attacker >= dex;
 
-    console.log(
+    this.logger.debug(
       `accuracy: ${accuracy}, HIT: ${hit}, random: ${hitRandom} => ${attacker}, DEX: ${dex}, random: ${dexRandom} => ${defender}. HIT: ${match}`
     );
     return match;
@@ -48,7 +50,7 @@ export default class FormulaService {
     const defender = (def / 3) * defRandom * (1 + defModifier);
 
     const damage = Math.max(Math.round(attacker - defender), 0);
-    console.log(
+    this.logger.debug(
       `power: ${power}, ATK: ${atk}, random: ${atkRandom}, atkModifier: ${atkModifier} => ${attacker}, DEF: ${def}, random: ${defRandom}, defModifier: ${defModifier} => ${defender}. Damage: ${damage}`
     );
     return damage;
