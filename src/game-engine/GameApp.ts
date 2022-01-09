@@ -8,6 +8,7 @@ export default class GameApp {
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
 
   public init(): void {
+    PIXI.utils.skipHello();
     this.app = new PIXI.Application({
       width: window.innerWidth,
       height: window.innerHeight,
