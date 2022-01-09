@@ -9,6 +9,8 @@ import AbstractPhase from "./AbstractPhase";
 import BattlePhase from "./BattlePhase";
 import MapService from "../map/MapService";
 import LoggerFactory from "@/logger/LoggerFactory";
+import SelectMonstersMenu from "../ui/SelectMonstersMenu";
+import Monster from "../monster/Monster";
 
 const MAPS = ["map1", "map2", "map3", "map4"];
 
@@ -35,7 +37,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     const menu = new LeftMenu();
     menu.addEntry(this.saveStatus());
     for (const map of MAPS) {
-      menu.addEntry(this.selectMapEntry(map));
+      menu.addEntry(this.selectMapEntry(menu, map));
     }
     menu.draw();
   }
@@ -50,10 +52,10 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
   }
 
-  protected selectMapEntry(map: string): MenuEntry {
+  protected selectMapEntry(menu: LeftMenu, map: string): MenuEntry {
     return new MenuEntry(
       map,
-      () => this.selectMap(map),
+      () => this.selectMap(menu, map),
       () => this.isMapEnabled(map)
     );
   }
@@ -78,14 +80,34 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     return this.playerRepository.getPlayerData().defeatedMaps;
   }
 
-  protected async selectMap(mapId: string): Promise<void> {
+  protected async selectMap(menu: LeftMenu, mapId: string): Promise<void> {
     this.logger.info(`Chosen: ${mapId}`);
 
+    menu.hide();
+    const monstersMenuBuilder = new SelectMonstersMenu(
+      this.playerRepository.getPlayerData().monsters,
+      6,
+      1
+    );
+    const menu2 = monstersMenuBuilder.createMenu(
+      (selected: Monster[]) => {
+        this.createGame(mapId, selected);
+      },
+      () => {
+        menu.show();
+        menu2.destroy();
+      }
+    );
+    menu2.draw();
+  }
+
+  protected async createGame(
+    mapId: string,
+    monsters: Monster[]
+  ): Promise<void> {
     const model = await this.gameAssetService.getMap(mapId);
     const map = await this.mapService.generate(model);
-
-    map.monsters.push(...this.playerRepository.getPlayerData().monsters);
-
+    map.monsters.push(...monsters);
     this.goToBattlePhase(map);
   }
 
