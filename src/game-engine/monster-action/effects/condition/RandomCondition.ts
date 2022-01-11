@@ -19,10 +19,12 @@ export default class RandomCondition extends Condition {
 
   public clone(): Condition {
     const out = new RandomCondition(this.threshold);
+    out.id = this.id;
     return out;
   }
   public toJson(): any {
     const out: any = {};
+    out.id = this.id;
     out.type = this.type;
     out.threshold = this.threshold;
     return out;

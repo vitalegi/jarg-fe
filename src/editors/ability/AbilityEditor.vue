@@ -107,7 +107,7 @@
       <v-divider></v-divider>
       <EffectEditor
         v-for="(effect, index) in ability.processor.additionalEffects"
-        :key="index"
+        :key="effect.id"
         :effect="effect"
         @change="(e) => changeEffect(index, e)"
       />
@@ -201,7 +201,6 @@ export default Vue.extend({
       this.update((a) => ((a.processor as DefaultProcessor).damage = value));
     },
     changeEffect(index: number, effect: Effect): void {
-      console.log("AAAAA", effect);
       this.update((a) => {
         const processor = a.processor as DefaultProcessor;
         processor.additionalEffects[index] = effect;

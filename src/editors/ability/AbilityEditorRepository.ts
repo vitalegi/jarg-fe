@@ -13,6 +13,9 @@ export default class AbilityEditorRepository {
   }
 
   public save(abilities: Ability[]): void {
-    window.localStorage.setItem("abilities", JSON.stringify(abilities));
+    window.localStorage.setItem(
+      "abilities",
+      JSON.stringify(abilities.map((a) => a.toJson()))
+    );
   }
 }

@@ -6,12 +6,13 @@
           :allValues="targetType"
           label="Target type"
           :values="[effect.target.type]"
+          @change="changeTarget"
         />
       </v-col>
       <v-col cols="12">
         <ConditionEditor
           v-for="(condition, index) in effect.conditions"
-          :key="index"
+          :key="condition.id"
           :condition="condition"
           @update="(e) => changeCondition(index, e)"
           @delete="(e) => deleteCondition(index)"
@@ -35,6 +36,7 @@ import Effect from "@/game-engine/monster-action/effects/effect/Effect";
 import TargetType from "@/game-engine/monster-action/effects/target/TargetType";
 import ConditionEditor from "./ConditionEditor.vue";
 import Condition from "@/game-engine/monster-action/effects/condition/Condition";
+import Target from "@/game-engine/monster-action/effects/target/Target";
 
 export default Vue.extend({
   name: "EffectEditor",
@@ -70,6 +72,11 @@ export default Vue.extend({
     },
     changeName(name: string): void {
       return; //this.update((a) => (a.label = name));
+    },
+    changeTarget(target: string): void {
+      const t = new Target();
+      t.type = target;
+      this.update((e) => (e.target = t));
     },
     changeCondition(index: number, condition: Condition): void {
       const effect = this.getEffect().clone();

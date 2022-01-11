@@ -1,7 +1,6 @@
 import LoggerFactory from "@/logger/LoggerFactory";
 import TimeUtil from "@/utils/TimeUtil";
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import Container, { Inject } from "typedi";
 
 type HttpMethod =
   | "get"

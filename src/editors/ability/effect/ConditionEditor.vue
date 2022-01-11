@@ -5,11 +5,10 @@
         <ComboBoxInput
           :allValues="conditions"
           label="Condition"
-          :values="[type]"
+          :values="[condition.type]"
           @change="changeType"
         />
       </v-col>
-      <v-col cols="8" v-if="isHitCondition()"> Hit </v-col>
       <v-col cols="8" v-if="isRandomCondition()">
         <EditableIntegerField
           label="Threshold"
@@ -70,11 +69,14 @@ export default Vue.extend({
       return this.condition as Condition;
     },
     changeType(type: { text: string; value: string }): void {
+      if (type.value === this.getCondition().type) {
+        return;
+      }
       if (type.value === HitCondition.KEY) {
         this.$emit("update", new HitCondition());
       }
       if (type.value === RandomCondition.KEY) {
-        this.$emit("update", new RandomCondition(0));
+        this.$emit("update", new RandomCondition(100));
       }
     },
     changeThreshold(value: number): void {
