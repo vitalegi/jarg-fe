@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col>
-        <ImportExportDialog :initialValue="exportJson()" @change="importJson" />
+        <ImportExportDialog :initialValue="exportJson" @change="importJson" />
       </v-col>
     </v-row>
     <v-row>
@@ -77,6 +77,9 @@ export default Vue.extend({
         .filter((m) => this.filter(m))
         .sort((a, b) => this.compare(a, b));
     },
+    exportJson(): string {
+      return JSON.stringify(this.getMonsters(), undefined, 4);
+    },
   },
   methods: {
     getMonsters(): MonsterIndex[] {
@@ -137,9 +140,6 @@ export default Vue.extend({
         return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
       }
       return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
-    },
-    exportJson(): string {
-      return JSON.stringify(this.getMonsters(), undefined, 4);
     },
     importJson(json: string): void {
       const list = JSON.parse(json);

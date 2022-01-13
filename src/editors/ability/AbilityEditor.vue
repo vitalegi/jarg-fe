@@ -76,7 +76,7 @@
           <v-col cols="3">
             <stat-selector
               label="Defender stat"
-              :value="ability.atkStat"
+              :value="ability.defStat"
               :values="defenderStats"
               @change="changeDefenderStat"
             />
@@ -105,12 +105,26 @@
         </v-row>
       </v-container>
       <v-divider></v-divider>
-      <EffectEditor
-        v-for="(effect, index) in ability.processor.additionalEffects"
-        :key="effect.id"
-        :effect="effect"
-        @change="(e) => changeEffect(index, e)"
-      />
+      <v-container>
+        <v-row>
+          <v-col cols="2"> Additional effects </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="2">
+            <v-btn color="primary" @click="addEffect"> Add Effect </v-btn>
+          </v-col>
+          <v-col
+            cols="12"
+            v-for="(effect, index) in ability.processor.additionalEffects"
+            :key="effect.id"
+          >
+            <EffectEditor
+              :effect="effect"
+              @change="(e) => changeEffect(index, e)"
+              @delete="(e) => deleteEffect(index)"
+            />
+          </v-col>
+        </v-row>
+      </v-container>
     </v-card-text>
   </v-card>
 </template>
@@ -128,6 +142,8 @@ import SwitchInput from "@/components/SwitchInput.vue";
 import EffectEditor from "@/editors/ability/effect/EffectEditor.vue";
 import DefaultProcessor from "@/game-engine/monster-action/ability-processor/DefaultProcessor";
 import Effect from "@/game-engine/monster-action/effects/effect/Effect";
+import StatChangeEffect from "@/game-engine/monster-action/effects/effect/StatChangeEffect";
+import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
 
 export default Vue.extend({
   name: "AbilityEditor",
@@ -200,10 +216,27 @@ export default Vue.extend({
     changeDamage(value: boolean): void {
       this.update((a) => ((a.processor as DefaultProcessor).damage = value));
     },
+    deleteAbility(): void {
+      this.$emit("delete");
+    },
     changeEffect(index: number, effect: Effect): void {
       this.update((a) => {
         const processor = a.processor as DefaultProcessor;
         processor.additionalEffects[index] = effect;
+      });
+    },
+    addEffect(): void {
+      this.update((a) => {
+        const processor = a.processor as DefaultProcessor;
+        const effect = new StatChangeEffect(StatsConstants.ATK, 0);
+        effect.conditions.push(new HitCondition());
+        processor.additionalEffects.push(effect);
+      });
+    },
+    deleteEffect(index: number): void {
+      this.update((a) => {
+        const processor = a.processor as DefaultProcessor;
+        processor.additionalEffects.splice(index, 1);
       });
     },
     update(update: (a: Ability) => void): void {

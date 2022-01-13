@@ -14,8 +14,13 @@ export default abstract class Effect {
     "GameEngine.MonsterAction.Effects.Effect.Effect"
   );
   id = UuidUtil.nextId();
+  type;
   target = new Target();
   conditions: Condition[] = [];
+
+  public constructor(type: string) {
+    this.type = type;
+  }
 
   public static fromJson(effect: Effect, json: any): void {
     if (json.id) {

@@ -7,8 +7,11 @@ import Effect from "./Effect";
 
 export default class HpDamageEffect extends Effect {
   public static KEY = "HP_DAMAGE";
-  type = HpDamageEffect.KEY;
   damage = 0;
+
+  public constructor() {
+    super(HpDamageEffect.KEY);
+  }
 
   public static fromJson(json: any): HpDamageEffect {
     const effect = new HpDamageEffect();

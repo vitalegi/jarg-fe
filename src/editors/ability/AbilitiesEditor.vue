@@ -2,7 +2,10 @@
   <v-container>
     <v-row>
       <v-col>
-        <ImportExportDialog :initialValue="exportJson()" @change="importJson" />
+        <ImportExportDialog :initialValue="exportJson" @change="importJson" />
+        <v-btn color="primary" class="mx-2" @click="addAbility">
+          Add ability
+        </v-btn>
       </v-col>
     </v-row>
     <v-row>
@@ -42,7 +45,7 @@
                   :expand="expand"
                   @change="updateAbility"
                   @changeId="(e) => updateId(e.oldId, e.newId)"
-                  @delete="deleteAbility"
+                  @delete="(e) => deleteAbility(item.id)"
                 ></AbilityEditor>
               </v-col>
             </v-row>
@@ -58,6 +61,7 @@ import Vue from "vue";
 import AbilityEditor from "./AbilityEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
 import Ability from "@/game-engine/monster-action/Ability";
+import UuidUtil from "@/utils/UuidUtil";
 
 export default Vue.extend({
   name: "AbilitiesEditor",
@@ -77,10 +81,25 @@ export default Vue.extend({
         .filter((m) => this.filter(m))
         .sort((a, b) => this.compare(a, b));
     },
+    exportJson(): string {
+      console.log("compute export abilities");
+      return JSON.stringify(
+        this.getAbilities().map((a) => a.toJson()),
+        undefined,
+        4
+      );
+    },
   },
   methods: {
     getAbilities(): Ability[] {
       return this.$store.state.abilitiesEditor as Ability[];
+    },
+    addAbility(): void {
+      const abilities = this.getAbilities().map((e) => e.clone());
+      const ability = new Ability();
+      ability.id = UuidUtil.nextId();
+      abilities.push(ability);
+      this.updateStorage(abilities);
     },
     updateAbility(ability: Ability): void {
       const abilities = this.getAbilities().map((e) => e.clone());
@@ -116,7 +135,8 @@ export default Vue.extend({
       if (this.search.trim() === "") {
         return true;
       }
-      if (ability.label.indexOf(this.search.trim()) !== -1) {
+      const search = this.search.toLowerCase().trim();
+      if (ability.label.toLowerCase().indexOf(search) !== -1) {
         return true;
       }
       return false;
@@ -135,9 +155,6 @@ export default Vue.extend({
         return a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1;
       }
       return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
-    },
-    exportJson(): string {
-      return JSON.stringify(this.getAbilities(), undefined, 4);
     },
     importJson(json: string): void {
       const list = JSON.parse(json);

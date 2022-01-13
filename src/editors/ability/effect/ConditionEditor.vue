@@ -1,6 +1,12 @@
 <template>
   <v-container>
     <v-row>
+      <v-col cols="1">
+        <ConfirmDeletion
+          @delete="deleteCondition"
+          :text="deletionWarningText"
+        />
+      </v-col>
       <v-col cols="4">
         <ComboBoxInput
           :allValues="conditions"
@@ -9,7 +15,7 @@
           @change="changeType"
         />
       </v-col>
-      <v-col cols="8" v-if="isRandomCondition()">
+      <v-col cols="2" v-if="isRandomCondition()">
         <EditableIntegerField
           label="Threshold"
           :value="100 * condition.threshold"
@@ -27,19 +33,14 @@ import Condition from "@/game-engine/monster-action/effects/condition/Condition"
 import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
 import RandomCondition from "@/game-engine/monster-action/effects/condition/RandomCondition";
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
+import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 
 export default Vue.extend({
   name: "ConditionEditor",
   components: {
     EditableIntegerField,
     ComboBoxInput,
-    /*
-    SwitchInput,
     ConfirmDeletion,
-    EditableTextField,
-    TypesSelector,
-    StatSelector,
-    SwitchInput,*/
   },
   props: {
     condition: Object,
@@ -76,13 +77,13 @@ export default Vue.extend({
         this.$emit("update", new HitCondition());
       }
       if (type.value === RandomCondition.KEY) {
-        this.$emit("update", new RandomCondition(100));
+        this.$emit("update", new RandomCondition(1));
       }
     },
     changeThreshold(value: number): void {
       this.$emit("update", new RandomCondition(value / 100));
     },
-    delete(): void {
+    deleteCondition(): void {
       this.$emit("delete");
     },
   },

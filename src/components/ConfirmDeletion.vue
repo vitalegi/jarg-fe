@@ -1,8 +1,18 @@
 <template>
   <v-dialog v-model="dialog" width="800">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn icon color="error" v-bind="attrs" v-on="on">
+      <v-btn
+        v-if="icon"
+        icon
+        color="error"
+        v-bind="attrs"
+        v-on="on"
+        class="mx-2"
+      >
         <v-icon>mdi-delete</v-icon>
+      </v-btn>
+      <v-btn v-else color="error" v-bind="attrs" v-on="on" class="mx-2">
+        {{ label }}
       </v-btn>
     </template>
 
@@ -30,6 +40,14 @@ export default Vue.extend({
   name: "ConfirmDeletion",
   props: {
     text: String,
+    icon: {
+      type: Boolean,
+      default: true,
+    },
+    label: {
+      type: String,
+      default: "",
+    },
   },
   data: () => ({
     dialog: false,

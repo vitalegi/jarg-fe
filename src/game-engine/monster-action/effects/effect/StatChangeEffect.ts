@@ -6,19 +6,22 @@ import StatChangeComputed from "../../computed-effect/StatChangeComputed";
 
 export default class StatChangeEffect extends Effect {
   public static KEY = "STATS_PERCENTAGE";
-  type = StatChangeEffect.KEY;
   stat = "";
   percentage = 0;
 
+  public constructor(stat: string, percentage: number) {
+    super(StatChangeEffect.KEY);
+    this.stat = stat;
+    this.percentage = percentage;
+  }
+
   public static fromJson(json: any): StatChangeEffect {
-    const effect = new StatChangeEffect();
+    const effect = new StatChangeEffect(json.stat, json.percentage);
     Effect.fromJson(effect, json);
-    effect.stat = json.stat;
-    effect.percentage = json.percentage;
     return effect;
   }
   public clone(): Effect {
-    const out = new StatChangeEffect();
+    const out = new StatChangeEffect(this.stat, this.percentage);
     super._clone(out);
     out.type = this.type;
     out.stat = this.stat;
