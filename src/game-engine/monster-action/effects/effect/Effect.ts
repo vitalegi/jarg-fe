@@ -34,6 +34,7 @@ export default abstract class Effect {
 
   public abstract clone(): Effect;
   public abstract toJson(): any;
+  public abstract summary(): string;
 
   protected _clone(obj: Effect): void {
     obj.id = this.id;
@@ -45,6 +46,10 @@ export default abstract class Effect {
     obj.id = this.id;
     obj.target = this.target.toJson();
     obj.conditions = this.conditions.map((c) => c.toJson());
+  }
+
+  protected _summary(): string {
+    return `if ${this.conditions.map((c) => c.summary()).join(" and ")}, then`;
   }
 
   abstract apply(

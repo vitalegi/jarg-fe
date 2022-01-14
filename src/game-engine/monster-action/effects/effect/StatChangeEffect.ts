@@ -55,4 +55,9 @@ export default class StatChangeEffect extends Effect {
     }
     return [];
   }
+  public summary(): string {
+    return `${super._summary()} change stat ${this.stat} by ${
+      this.percentage * 100
+    }% to ${this.target.type}`;
+  }
 }

@@ -46,4 +46,7 @@ export default class RandomCondition extends Condition {
   ): boolean {
     return this.randomService.randomDecimal(0, 1) <= this.threshold;
   }
+  public summary(): string {
+    return `with a ${this.threshold * 100}% probability`;
+  }
 }

@@ -14,4 +14,5 @@ export default abstract class Condition {
     ability: Ability,
     hit: boolean
   ): boolean;
+  public abstract summary(): string;
 }

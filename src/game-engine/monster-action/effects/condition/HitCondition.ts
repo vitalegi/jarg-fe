@@ -38,4 +38,7 @@ export default class HitCondition extends Condition {
   ): boolean {
     return hit;
   }
+  public summary(): string {
+    return "attack hits";
+  }
 }

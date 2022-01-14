@@ -11,6 +11,12 @@
       <v-spacer></v-spacer>
       <ConfirmDeletion @delete="deleteAbility()" :text="deletionWarningText" />
     </v-card-title>
+    <v-card-subtitle v-if="!expanded">
+      {{ summary }}
+      <div v-for="summaryAE in summaryAdditionalEffects" :key="summaryAE">
+        {{ summaryAE }}
+      </div>
+    </v-card-subtitle>
     <v-card-text v-if="expanded">
       <v-container>
         <v-row>
@@ -178,6 +184,19 @@ export default Vue.extend({
         { key: StatsConstants.RES, label: "Res" },
       ];
     },
+    summary(): string {
+      const processor = this.ability.processor as DefaultProcessor;
+      if (processor.damage) {
+        return `Attack with power ${this.ability.power}, ${
+          this.ability.precision
+        }%, types ${this.ability.types.join(", ")}`;
+      }
+      return "";
+    },
+    summaryAdditionalEffects(): string[] {
+      const processor = this.ability.processor as DefaultProcessor;
+      return processor.additionalEffects.map((e) => e.summary());
+    },
   },
   methods: {
     changeId(id: string): void {
@@ -250,3 +269,9 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped lang="scss">
+.v-card__subtitle {
+  text-align: left;
+}
+</style>
