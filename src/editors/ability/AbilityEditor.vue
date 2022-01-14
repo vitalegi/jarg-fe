@@ -140,7 +140,7 @@ import Vue from "vue";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import EditableTextField from "@/components/EditableTextField.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import TypesSelector from "@/editors/type/TypesSelector.vue";
 import StatSelector from "./StatSelector.vue";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";

@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import Ability from "../monster-action/Ability";
+import Ability from "../monster-action/ability/Ability";
 
 @Service()
 export default class AbilityRepository {

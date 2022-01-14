@@ -1,7 +1,7 @@
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import Monster from "@/game-engine/monster/Monster";
 import Container, { Service } from "typedi";
-import Ability from "../Ability";
+import Ability from "../ability/Ability";
 import AbilityExecutor from "../AbilityExecutor";
 import MonsterMove from "../MonsterMove";
 import MonsterService from "@/game-engine/monster/MonsterService";

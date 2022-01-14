@@ -1,4 +1,4 @@
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import Character from "../../models/Character";
 import StatAlteration from "./stats/StatAlteration";
 import Stats from "./stats/Stats";

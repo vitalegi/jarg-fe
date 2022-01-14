@@ -11,7 +11,7 @@ import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import TileFocusableDrawer from "../ui/TileFocusableDrawer";
 import SelectTargetUserActionHandler from "../user-action-handler/SelectTargetUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
-import Ability from "./Ability";
+import Ability from "./ability/Ability";
 
 export default class SelectTargetAbility {
   logger = LoggerFactory.getLogger(

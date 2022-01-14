@@ -2,7 +2,7 @@ import MapContainer from "@/game-engine/map/MapContainer";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 import { BackendWebService } from "./BackendService";
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import { Animation } from "@/models/Animation";
 import Bonus from "@/game-engine/types/Bonus";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";

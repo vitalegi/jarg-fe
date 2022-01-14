@@ -1,5 +1,6 @@
 import { Animation, AnimationSrc } from "@/models/Animation";
 import Stats from "@/game-engine/monster/stats/Stats";
+import AbilityLearnable from "../monster-action/ability/AbilityLearnable";
 
 export default class MonsterIndex {
   monsterId = "";
@@ -9,6 +10,7 @@ export default class MonsterIndex {
   baseStats = new Stats();
   growthRates = new Stats();
   types: string[] = [];
+  learnableAbilities: AbilityLearnable[] = [];
 
   public static fromJson(data: any): MonsterIndex {
     const out = new MonsterIndex();
@@ -25,6 +27,11 @@ export default class MonsterIndex {
     if (data.types) {
       out.types = data.types.map((t: any) => t);
     }
+    if (data.learnableAbilities) {
+      out.learnableAbilities = data.learnableAbilities.map(
+        AbilityLearnable.fromJson
+      );
+    }
     return out;
   }
 
@@ -39,6 +46,7 @@ export default class MonsterIndex {
     if (this.types) {
       out.types = this.types.map((t: any) => t);
     }
+    out.learnableAbilities = this.learnableAbilities.map((a) => a.clone());
     return out;
   }
 }

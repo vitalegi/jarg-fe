@@ -1,11 +1,11 @@
-import RechargeFamily from "../battle/RechargeFamily";
-import StatsConstants from "../monster/stats/StatsContants";
-import AbstractProcessor from "./ability-processor/AbstractProcessor";
-import DefaultProcessor from "./ability-processor/DefaultProcessor";
-import AbilityTarget from "./ability-target/AbilityTarget";
-import Effect from "./effects/effect/Effect";
-import EffectFactory from "./effects/effect/EffectFactory";
-import Usages from "./Usages";
+import RechargeFamily from "../../battle/RechargeFamily";
+import StatsConstants from "../../monster/stats/StatsContants";
+import AbstractProcessor from "../ability-processor/AbstractProcessor";
+import DefaultProcessor from "../ability-processor/DefaultProcessor";
+import AbilityTarget from "../ability-target/AbilityTarget";
+import Effect from "../effects/effect/Effect";
+import EffectFactory from "../effects/effect/EffectFactory";
+import Usages from "../Usages";
 
 export default class Ability {
   id = "";

@@ -1,6 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import Point from "@/models/Point";
-import Ability from "../Ability";
+import Ability from "../ability/Ability";
 
 export default class MonsterAction {
   from;

@@ -60,7 +60,7 @@
 import Vue from "vue";
 import AbilityEditor from "./AbilityEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import UuidUtil from "@/utils/UuidUtil";
 
 export default Vue.extend({

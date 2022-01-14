@@ -5,7 +5,7 @@ import FrameImpl from "./FrameImpl";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";
-import Ability from "../monster-action/Ability";
+import Ability from "../monster-action/ability/Ability";
 import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";

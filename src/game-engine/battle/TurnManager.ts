@@ -3,7 +3,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
-import Ability from "../monster-action/Ability";
+import Ability from "../monster-action/ability/Ability";
 
 const DECIMAL_PRECISION = 0.00001;
 

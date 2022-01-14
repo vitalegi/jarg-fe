@@ -1,6 +1,6 @@
 import AbilityEditorRepository from "@/editors/ability/AbilityEditorRepository";
 import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Container from "typedi";
 import Vue from "vue";

@@ -1,5 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
-import Ability from "../../Ability";
+import Ability from "../../ability/Ability";
 import Condition from "./Condition";
 
 export default class HitCondition extends Condition {

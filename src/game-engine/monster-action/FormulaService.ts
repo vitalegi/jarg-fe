@@ -5,7 +5,7 @@ import Monster from "../monster/Monster";
 import MonsterIndexService from "../monster/MonsterIndexService";
 import StatsService from "../monster/stats/StatsService";
 import TypeService from "../types/TypeService";
-import Ability from "./Ability";
+import Ability from "./ability/Ability";
 
 @Service()
 export default class FormulaService {

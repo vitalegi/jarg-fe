@@ -1,6 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import Container from "typedi";
-import Ability from "../Ability";
+import Ability from "../ability/Ability";
 import ComputedEffect from "../computed-effect/ComputedEffect";
 import HpDamageComputed from "../computed-effect/HpDamageComputed";
 import MissComputed from "../computed-effect/MissComputed";

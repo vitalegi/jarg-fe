@@ -11,7 +11,7 @@ import RandomService from "@/services/RandomService";
 import ArrayUtil from "@/utils/ArrayUtil";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
-import Ability from "../Ability";
+import Ability from "../ability/Ability";
 import AbilityExecutor from "../AbilityExecutor";
 import MonsterMove from "../MonsterMove";
 import MonsterAction from "./MonsterAction";

@@ -1,4 +1,4 @@
-import Ability from "@/game-engine/monster-action/Ability";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import { Service } from "typedi";
 
 @Service()

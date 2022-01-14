@@ -1,7 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
-import Ability from "../../Ability";
+import Ability from "../../ability/Ability";
 import Condition from "./Condition";
 
 export default class RandomCondition extends Condition {
