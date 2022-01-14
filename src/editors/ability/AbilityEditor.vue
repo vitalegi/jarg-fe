@@ -37,7 +37,7 @@
           <v-col cols="3">
             <SwitchInput
               label="Has direct damage?"
-              :value="ability.processor.damage"
+              :value="ability.damage"
               @change="changeDamage"
             />
           </v-col>
@@ -46,7 +46,7 @@
               label="Power"
               :value="ability.power"
               @change="changePower"
-              :disabled="!ability.processor.damage"
+              :disabled="!ability.damage"
             />
           </v-col>
           <v-col cols="3">
@@ -54,7 +54,7 @@
               label="Precision"
               :value="ability.precision"
               @change="changePrecision"
-              :disabled="!ability.processor.damage"
+              :disabled="!ability.damage"
             />
           </v-col>
           <v-col cols="3">
@@ -120,7 +120,7 @@
           </v-col>
           <v-col
             cols="12"
-            v-for="(effect, index) in ability.processor.additionalEffects"
+            v-for="(effect, index) in ability.additionalEffects"
             :key="effect.id"
           >
             <EffectEditor
@@ -146,7 +146,6 @@ import StatSelector from "./StatSelector.vue";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import SwitchInput from "@/components/SwitchInput.vue";
 import EffectEditor from "@/editors/ability/effect/EffectEditor.vue";
-import DefaultProcessor from "@/game-engine/monster-action/ability-processor/DefaultProcessor";
 import Effect from "@/game-engine/monster-action/effects/effect/Effect";
 import StatChangeEffect from "@/game-engine/monster-action/effects/effect/StatChangeEffect";
 import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
@@ -185,8 +184,7 @@ export default Vue.extend({
       ];
     },
     summary(): string {
-      const processor = this.ability.processor as DefaultProcessor;
-      if (processor.damage) {
+      if (this.ability.damage) {
         return `Attack with power ${this.ability.power}, ${
           this.ability.precision
         }%, types ${this.ability.types.join(", ")}`;
@@ -194,8 +192,7 @@ export default Vue.extend({
       return "";
     },
     summaryAdditionalEffects(): string[] {
-      const processor = this.ability.processor as DefaultProcessor;
-      return processor.additionalEffects.map((e) => e.summary());
+      return this.ability.additionalEffects.map((e) => e.summary());
     },
   },
   methods: {
@@ -233,29 +230,26 @@ export default Vue.extend({
       this.update((a) => (a.abilityTarget.range = value));
     },
     changeDamage(value: boolean): void {
-      this.update((a) => ((a.processor as DefaultProcessor).damage = value));
+      this.update((a) => (a.damage = value));
     },
     deleteAbility(): void {
       this.$emit("delete");
     },
     changeEffect(index: number, effect: Effect): void {
       this.update((a) => {
-        const processor = a.processor as DefaultProcessor;
-        processor.additionalEffects[index] = effect;
+        a.additionalEffects[index] = effect;
       });
     },
     addEffect(): void {
       this.update((a) => {
-        const processor = a.processor as DefaultProcessor;
         const effect = new StatChangeEffect(StatsConstants.ATK, 0);
         effect.conditions.push(new HitCondition());
-        processor.additionalEffects.push(effect);
+        a.additionalEffects.push(effect);
       });
     },
     deleteEffect(index: number): void {
       this.update((a) => {
-        const processor = a.processor as DefaultProcessor;
-        processor.additionalEffects.splice(index, 1);
+        a.additionalEffects.splice(index, 1);
       });
     },
     update(update: (a: Ability) => void): void {

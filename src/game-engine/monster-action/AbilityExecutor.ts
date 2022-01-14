@@ -43,11 +43,9 @@ export default class AbilityExecutor {
     if (activeCharacter) {
       activeCharacter.usesAbility(this.ability);
     }
-    const effects = await this.ability.processor.execute(
-      this.source,
-      this.target,
-      this.ability
-    );
+    const effects = await this.ability
+      .getProcessor()
+      .execute(this.source, this.target, this.ability);
     this.logger.debug(`Ability effects `, effects);
 
     await this.focusTarget();

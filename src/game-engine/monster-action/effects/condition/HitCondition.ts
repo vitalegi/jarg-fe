@@ -39,6 +39,6 @@ export default class HitCondition extends Condition {
     return hit;
   }
   public summary(): string {
-    return "attack hits";
+    return "if attack hits";
   }
 }

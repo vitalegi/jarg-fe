@@ -6,11 +6,9 @@ export default class ScoreFunction {
     source: Monster,
     action: MonsterAction
   ): Promise<number> {
-    const effects = await action.ability.processor.execute(
-      source,
-      action.target,
-      action.ability
-    );
+    const effects = await action.ability
+      .getProcessor()
+      .execute(source, action.target, action.ability);
     return effects
       .map((e) => e.getDamage())
       .reduce((prev, cur) => prev + cur, 0);

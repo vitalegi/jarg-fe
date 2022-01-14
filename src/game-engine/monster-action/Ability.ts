@@ -2,8 +2,9 @@ import RechargeFamily from "../battle/RechargeFamily";
 import StatsConstants from "../monster/stats/StatsContants";
 import AbstractProcessor from "./ability-processor/AbstractProcessor";
 import DefaultProcessor from "./ability-processor/DefaultProcessor";
-import ProcessorFactory from "./ability-processor/ProcessorFactory";
 import AbilityTarget from "./ability-target/AbilityTarget";
+import Effect from "./effects/effect/Effect";
+import EffectFactory from "./effects/effect/EffectFactory";
 import Usages from "./Usages";
 
 export default class Ability {
@@ -17,7 +18,8 @@ export default class Ability {
   defStat: string | null = "";
   usages = new Usages();
   abilityTarget = new AbilityTarget();
-  processor: AbstractProcessor = new DefaultProcessor();
+  damage = false;
+  additionalEffects: Effect[] = [];
 
   public constructor(label = "") {
     this.label = label;
@@ -39,8 +41,12 @@ export default class Ability {
       out.usages = Usages.fromJson(json.usages);
     }
     out.abilityTarget = AbilityTarget.fromJson(json.abilityTarget);
-    out.processor = ProcessorFactory.fromJson(json.processor);
-
+    out.damage = json.damage;
+    if (json.additionalEffects) {
+      out.additionalEffects = json.additionalEffects.map(
+        EffectFactory.fromJson
+      );
+    }
     return out;
   }
 
@@ -56,7 +62,8 @@ export default class Ability {
     out.defStat = this.defStat;
     out.usages = this.usages.clone();
     out.abilityTarget = this.abilityTarget.clone();
-    out.processor = this.processor.clone();
+    out.damage = this.damage;
+    out.additionalEffects = this.additionalEffects.map((e) => e.clone());
     return out;
   }
 
@@ -73,7 +80,8 @@ export default class Ability {
     out.defStat = this.defStat;
     out.usages = this.usages.toJson();
     out.abilityTarget = this.abilityTarget.toJson();
-    out.processor = this.processor.toJson();
+    out.damage = this.damage;
+    out.additionalEffects = this.additionalEffects.map((e) => e.toJson());
     return out;
   }
 
@@ -99,5 +107,9 @@ export default class Ability {
     ) {
       throw Error(`DefStat ${this.defStat} is not valid.`);
     }
+  }
+
+  public getProcessor(): AbstractProcessor {
+    return new DefaultProcessor();
   }
 }

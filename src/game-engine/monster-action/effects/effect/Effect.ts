@@ -49,7 +49,7 @@ export default abstract class Effect {
   }
 
   protected _summary(): string {
-    return `if ${this.conditions.map((c) => c.summary()).join(" and ")}, then`;
+    return `${this.conditions.map((c) => c.summary()).join(" and ")}, then`;
   }
 
   abstract apply(

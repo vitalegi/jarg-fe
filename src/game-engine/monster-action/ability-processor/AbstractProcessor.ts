@@ -11,10 +11,6 @@ export default abstract class AbstractProcessor {
   protected monsterIndexService =
     Container.get<MonsterIndexService>(MonsterIndexService);
 
-  public abstract clone(): AbstractProcessor;
-
-  public abstract toJson(): any;
-
   public abstract execute(
     source: Monster,
     target: Monster,
