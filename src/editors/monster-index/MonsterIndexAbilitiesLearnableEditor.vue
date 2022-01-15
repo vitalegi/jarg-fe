@@ -9,7 +9,7 @@
       </v-col>
     </v-row>
     <v-row
-      v-for="(ability, index) in getAbilities()"
+      v-for="(ability, index) in alreadyAssignedAbilities"
       :key="`${ability.abilityId}_${index}`"
     >
       <v-col cols="1">
@@ -44,11 +44,12 @@
 <script lang="ts">
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
-import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import Vue from "vue";
+import AbilityEditorRepository from "../ability/AbilityEditorRepository";
 
 export default Vue.extend({
   name: "MonsterIndexAbilitiesLearnableEditor",
@@ -62,19 +63,25 @@ export default Vue.extend({
     EditableIntegerField,
   },
   data: () => ({
-    abilityRepository: Container.get<AbilityRepository>(AbilityRepository),
+    abilityEditorRepository: Container.get<AbilityEditorRepository>(
+      AbilityEditorRepository
+    ),
     logger: LoggerFactory.getLogger(
       "Editors.MonsterIndex.MonsterIndexAbilitiesLearnableEditor"
     ),
+    allAbilities: new Array<Ability>(),
   }),
   computed: {
+    alreadyAssignedAbilities(): AbilityLearnable[] {
+      return this.getAbilities().sort((a, b) => a.level - b.level);
+    },
     selectableAbilities(): {
       text: string;
       value: string;
       disabled: boolean;
     }[] {
-      return this.abilityRepository
-        .getAbilities()
+      return this.allAbilities
+        .map((a) => a.clone())
         .sort((a, b) => (a.label > b.label ? 1 : -1))
         .map((a) => {
           const disabled =
@@ -90,8 +97,19 @@ export default Vue.extend({
       return this.abilities as AbilityLearnable[];
     },
     getAbilityLabel(abilityId: string): string {
-      const ability = this.abilityRepository.getAbility(abilityId);
+      const ability = this.getAbility(abilityId);
       return ability.label;
+    },
+    getAbility(abilityId: string): Ability {
+      const ability = this.allAbilities.find((a) => a.id === abilityId);
+      if (ability) {
+        return ability;
+      }
+      throw Error(
+        `Ability ${abilityId} not found. Availables: ${this.allAbilities
+          .map((a) => a.id)
+          .join(", ")}`
+      );
     },
     changeAbility(
       index: number,
@@ -126,6 +144,10 @@ export default Vue.extend({
       this.logger.info(`add ability ${JSON.stringify(ability)}`);
       this.$emit("changeAbilities", abilities);
     },
+  },
+  beforeMount() {
+    this.allAbilities.splice(0);
+    this.allAbilities.push(...this.abilityEditorRepository.load());
   },
 });
 </script>

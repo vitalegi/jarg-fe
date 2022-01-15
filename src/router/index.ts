@@ -30,6 +30,14 @@ const routes: Array<RouteConfig> = [
       ),
   },
   {
+    path: "/monsters/comparator",
+    name: "MonsterIndexStatComparator",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/MonsterIndexStatComparatorView.vue"
+      ),
+  },
+  {
     path: "/abilities/editor",
     name: "AbilitiesEditor",
     component: () =>

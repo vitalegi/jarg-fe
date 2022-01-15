@@ -69,6 +69,14 @@ export default Vue.extend({
     sortByOptions: [
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
+      { text: "Base HP", key: "BASE_HP" },
+      { text: "Base ATK", key: "BASE_ATK" },
+      { text: "Base DEF", key: "BASE_DEX" },
+      { text: "Base INT", key: "BASE_INT" },
+      { text: "Base RES", key: "BASE_RES" },
+      { text: "Base HIT", key: "BASE_HIT" },
+      { text: "Base DEX", key: "BASE_DEX" },
+      { text: "Base SPEED", key: "BASE_SPEED" },
     ],
     sortBy: "ID",
     sortOrderAsc: true,
@@ -143,11 +151,27 @@ export default Vue.extend({
       return this.doCompare(b, a);
     },
     doCompare(a: MonsterIndex, b: MonsterIndex): number {
-      if (this.sortBy === "ID") {
-        return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
-      }
-      if (this.sortBy === "NAME") {
-        return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+      switch (this.sortBy) {
+        case "ID":
+          return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
+        case "NAME":
+          return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
+        case "BASE_HP":
+          return a.baseStats.maxHP - b.baseStats.maxHP;
+        case "BASE_ATK":
+          return a.baseStats.atk - b.baseStats.atk;
+        case "BASE_DEF":
+          return a.baseStats.def - b.baseStats.def;
+        case "BASE_INT":
+          return a.baseStats.int - b.baseStats.int;
+        case "BASE_RES":
+          return a.baseStats.res - b.baseStats.res;
+        case "BASE_HIT":
+          return a.baseStats.hit - b.baseStats.hit;
+        case "BASE_DEX":
+          return a.baseStats.dex - b.baseStats.dex;
+        case "BASE_SPEED":
+          return a.baseStats.speed - b.baseStats.speed;
       }
       return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
     },

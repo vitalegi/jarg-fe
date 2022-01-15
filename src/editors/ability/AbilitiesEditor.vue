@@ -61,7 +61,8 @@ import Vue from "vue";
 import AbilityEditor from "./AbilityEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
-import UuidUtil from "@/utils/UuidUtil";
+import NumberUtil from "@/utils/NumberUtil";
+import StringUtil from "@/utils/StringUtil";
 
 export default Vue.extend({
   name: "AbilitiesEditor",
@@ -96,7 +97,13 @@ export default Vue.extend({
     addAbility(): void {
       const abilities = this.getAbilities().map((e) => e.clone());
       const ability = new Ability();
-      ability.id = UuidUtil.nextId();
+
+      const maxId = NumberUtil.max(
+        this.getAbilities()
+          .filter((a) => NumberUtil.isNumber(a.id))
+          .map((a) => NumberUtil.parse(a.id))
+      );
+      ability.id = StringUtil.leftPad(`${maxId + 1}`, 3, "0");
       abilities.push(ability);
       this.updateStorage(abilities);
     },

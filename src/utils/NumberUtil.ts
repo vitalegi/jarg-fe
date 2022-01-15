@@ -4,4 +4,17 @@ export default class NumberUtil {
       maximumFractionDigits: 0,
     });
   }
+  public static isNumber(s: string): boolean {
+    return !isNaN(NumberUtil.parse(s));
+  }
+  public static parse(s: string): number {
+    return parseInt(s, 10);
+  }
+
+  public static min(numbers: number[], defaultValue = 0): number {
+    return numbers.reduce((prev, curr) => Math.min(prev, curr), defaultValue);
+  }
+  public static max(numbers: number[], defaultValue = 0): number {
+    return numbers.reduce((prev, curr) => Math.max(prev, curr), defaultValue);
+  }
 }
