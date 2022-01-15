@@ -82,7 +82,6 @@ export default Vue.extend({
         .sort((a, b) => this.compare(a, b));
     },
     exportJson(): string {
-      console.log("compute export abilities");
       return JSON.stringify(
         this.getAbilities().map((a) => a.toJson()),
         undefined,

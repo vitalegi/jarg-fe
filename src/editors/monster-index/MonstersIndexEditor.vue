@@ -32,18 +32,18 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-data-iterator :items="monsters" item-key="monsterId">
+        <v-data-iterator :items="filteredMonsters" item-key="monsterId">
           <template v-slot:default="{ items, isExpanded, expand }">
             <v-row>
               <v-col v-for="item in items" :key="item.name" cols="12">
-                <monster-index-editor
+                <MonsterIndexEditor
                   :index="item"
                   :expanded="isExpanded(item)"
                   :expand="expand"
                   @change="updateIndex"
                   @changeId="(e) => updateIndexId(e.oldId, e.newId)"
                   @delete="deleteIndex"
-                ></monster-index-editor>
+                />
               </v-col>
             </v-row>
           </template>
@@ -73,23 +73,30 @@ export default Vue.extend({
     sortBy: "ID",
     sortOrderAsc: true,
     search: "",
+    monsters: new Array<MonsterIndex>(),
   }),
   computed: {
-    monsters(): MonsterIndex[] {
-      return this.getMonsters()
+    filteredMonsters(): MonsterIndex[] {
+      return this.monsters
         .filter((m) => this.filter(m))
         .sort((a, b) => this.compare(a, b));
     },
     exportJson(): string {
-      return JSON.stringify(this.getMonsters(), undefined, 4);
+      return JSON.stringify(this.monsters, undefined, 4);
+    },
+    storedMonsters(): MonsterIndex[] {
+      return this.$store.state.monsterIndexEditor as MonsterIndex[];
+    },
+  },
+  watch: {
+    storedMonsters(monsters) {
+      this.monsters.splice(0);
+      this.monsters.push(...monsters);
     },
   },
   methods: {
-    getMonsters(): MonsterIndex[] {
-      return this.$store.state.monsterIndexEditor as MonsterIndex[];
-    },
     updateIndex(monster: MonsterIndex): void {
-      const monsters = this.getMonsters().map((m) => m.clone());
+      const monsters = this.monsters.map((m) => m.clone());
       const index = monsters.findIndex(
         (m) => m.monsterId === monster.monsterId
       );
@@ -101,7 +108,7 @@ export default Vue.extend({
       this.$store.commit("setMonsterIndexEditor", monsters);
     },
     updateIndexId(oldId: string, newId: string): void {
-      const monsters = this.getMonsters().map((m) => m.clone());
+      const monsters = this.monsters.map((m) => m.clone());
       const oldIndex = monsters.findIndex((m) => m.monsterId === oldId);
       if (oldIndex === -1) {
         throw Error(`Cannot find old index ${oldId}.`);
@@ -114,7 +121,7 @@ export default Vue.extend({
       this.$store.commit("setMonsterIndexEditor", monsters);
     },
     deleteIndex(monsterId: string): void {
-      const monsters = this.getMonsters()
+      const monsters = this.monsters
         .map((m) => m.clone())
         .filter((m) => m.monsterId !== monsterId);
 
@@ -153,6 +160,7 @@ export default Vue.extend({
   },
   mounted(): void {
     this.gameAppDataLoader.loadAbilities();
+    this.monsters = this.$store.state.monsterIndexEditor as MonsterIndex[];
   },
 });
 </script>

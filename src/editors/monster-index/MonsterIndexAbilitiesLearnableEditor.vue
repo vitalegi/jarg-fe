@@ -9,7 +9,7 @@
       </v-col>
     </v-row>
     <v-row
-      v-for="(ability, index) in learnableByLevel"
+      v-for="(ability, index) in getAbilities()"
       :key="`${ability.abilityId}_${index}`"
     >
       <v-col cols="1">
@@ -66,7 +66,6 @@ export default Vue.extend({
     logger: LoggerFactory.getLogger(
       "Editors.MonsterIndex.MonsterIndexAbilitiesLearnableEditor"
     ),
-    learnableByLevel: new Array<AbilityLearnable>(),
   }),
   computed: {
     selectableAbilities(): {
@@ -79,7 +78,7 @@ export default Vue.extend({
         .sort((a, b) => (a.label > b.label ? 1 : -1))
         .map((a) => {
           const disabled =
-            this.learnableByLevel.findIndex(
+            this.getAbilities().findIndex(
               (ability) => ability.abilityId === a.id
             ) !== -1;
           return { value: a.id, text: a.label, disabled: disabled };
@@ -87,6 +86,9 @@ export default Vue.extend({
     },
   },
   methods: {
+    getAbilities(): AbilityLearnable[] {
+      return this.abilities as AbilityLearnable[];
+    },
     getAbilityLabel(abilityId: string): string {
       const ability = this.abilityRepository.getAbility(abilityId);
       return ability.label;
@@ -95,36 +97,35 @@ export default Vue.extend({
       index: number,
       newAbility: { text: string; value: string }
     ): void {
-      const abilities = this.learnableByLevel.map((a) => a.clone());
+      const abilities = this.getAbilities().map((a) => a.clone());
       abilities[index].abilityId = newAbility.value;
       this.logger.info(`change ability ${index} ${JSON.stringify(newAbility)}`);
       this.$emit("changeAbilities", abilities);
     },
     changeLevel(index: number, level: number): void {
-      const abilities = this.learnableByLevel.map((a) => a.clone());
+      const abilities = this.getAbilities().map((a) => a.clone());
       abilities[index].level = level;
       this.logger.info(`change ability ${index} ${level}`);
       this.$emit("changeAbilities", abilities);
     },
     deleteAbility(index: number): void {
-      const abilities = this.learnableByLevel.map((a) => a.clone());
+      const abilities = this.getAbilities().map((a) => a.clone());
       abilities.splice(index, 1);
       this.logger.info(`delete ability ${index}`);
       this.$emit("changeAbilities", abilities);
     },
     addAbility(): void {
-      const dummy = this.selectableAbilities.filter((a) => !a.disabled)[0]
-        .value;
-      const ability = AbilityLearnable.byLevel(dummy, 0);
-      this.learnableByLevel.push(ability);
+      const available = this.selectableAbilities.filter((a) => !a.disabled);
+      if (available.length === 0) {
+        return;
+      }
+      const dummy = available[0].value;
+      const ability = AbilityLearnable.byLevel(dummy, 1);
+      const abilities = this.getAbilities().map((a) => a.clone());
+      abilities.push(ability);
+      this.logger.info(`add ability ${JSON.stringify(ability)}`);
+      this.$emit("changeAbilities", abilities);
     },
-  },
-  mounted(): void {
-    (this.abilities as AbilityLearnable[])
-      .filter((a) => a.type === AbilityLearnable.BY_LEVEL)
-      .map((a) => a.clone())
-      .sort((a, b) => a.level - b.level)
-      .forEach((a) => this.learnableByLevel.push(a));
   },
 });
 </script>
