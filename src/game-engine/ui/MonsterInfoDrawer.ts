@@ -11,6 +11,8 @@ import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
 import { LevelUpService } from "../monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityLearned from "../monster-action/ability/AbilityLearned";
+import AbilityRepository from "../repositories/AbilityRepository";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -19,7 +21,8 @@ export default class MonsterInfoDrawer extends Drawer {
   protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
   protected fontService = Container.get<FontService>(FontService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
   protected frame = new FrameImpl();
@@ -102,8 +105,8 @@ export default class MonsterInfoDrawer extends Drawer {
 
       line = 0;
       this.addAbilityLabels(lineY());
-      this.monster.abilities.forEach((ability: Ability) =>
-        this.addAbility(ability, lineY())
+      this.monster.abilities.forEach((learned: AbilityLearned) =>
+        this.addAbility(learned, lineY())
       );
 
       this.logger.debug(
@@ -159,12 +162,13 @@ export default class MonsterInfoDrawer extends Drawer {
     this.addText("Prec.", this.abilityCol3(), y);
     this.addText("PP", this.abilityCol4(), y);
   }
-  protected addAbility(ability: Ability, y: number): void {
+  protected addAbility(learned: AbilityLearned, y: number): void {
+    const ability = this.abilityRepository.getAbility(learned.abilityId);
     this.addText(ability.label, this.abilityCol1(), y);
     this.addText(`${ability.power}`, this.abilityCol2(), y);
     this.addText(`${ability.precision}`, this.abilityCol3(), y);
     this.addText(
-      `${ability.usages.current}/${ability.usages.max}`,
+      `${learned.currentUsages}/${learned.maxUsages}`,
       this.abilityCol4(),
       y
     );

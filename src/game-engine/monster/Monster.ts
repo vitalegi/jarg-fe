@@ -1,5 +1,5 @@
-import Ability from "@/game-engine/monster-action/ability/Ability";
 import Character from "../../models/Character";
+import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import StatAlteration from "./stats/StatAlteration";
 import Stats from "./stats/Stats";
 
@@ -19,7 +19,7 @@ export default class Monster extends Character {
   growthRates = new Stats();
   statsAlterations: StatAlteration[] = [];
 
-  abilities: Ability[] = [];
+  abilities: AbilityLearned[] = [];
 
   public static fromJson(monster: any): Monster {
     const out = new Monster();
@@ -32,7 +32,7 @@ export default class Monster extends Character {
     out.stats = Stats.fromJson(monster.stats);
     out.growthRates = Stats.fromJson(monster.growthRates);
     if (monster.abilities) {
-      out.abilities = monster.abilities.map(Ability.fromJson);
+      out.abilities = monster.abilities.map(AbilityLearned.fromJson);
     }
     if (monster.statsAlterations) {
       out.statsAlterations = monster.statsAlterations.map(

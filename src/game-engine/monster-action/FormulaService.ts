@@ -24,7 +24,7 @@ export default class FormulaService {
     const attacker = (accuracy / 100) * hit * hitRandom;
 
     const dex = target.stats.dex;
-    const dexRandom = this.randomService.randomDecimal(0.6, 1);
+    const dexRandom = this.randomService.randomDecimal(0.4, 0.6);
     const defender = dex * dexRandom;
 
     const match = attacker >= dex;

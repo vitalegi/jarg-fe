@@ -10,6 +10,8 @@ import BattleService from "@/game-engine/battle/BattleService";
 import SelectTargetMove from "../SelectTargetMove";
 import SelectTargetAbility from "../SelectTargetAbility";
 import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityLearned from "../ability/AbilityLearned";
+import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 
 @Service()
 export default class MonsterActionMenuBuilder {
@@ -19,6 +21,8 @@ export default class MonsterActionMenuBuilder {
 
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
 
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
@@ -66,12 +70,13 @@ export default class MonsterActionMenuBuilder {
   protected abilityMenuEntry(
     leftMenu: LeftMenu,
     monster: Monster,
-    ability: Ability
+    learned: AbilityLearned
   ): MenuEntry {
+    const ability = this.abilityRepository.getAbility(learned.abilityId);
     return new MenuEntry(
       ability.label,
       () => this.onAbilityClick(leftMenu, monster, ability),
-      () => this.isAbilityEnabled(monster, ability)
+      () => this.isAbilityEnabled(learned)
     );
   }
 
@@ -101,16 +106,16 @@ export default class MonsterActionMenuBuilder {
     leftMenu.show();
   }
 
-  protected isAbilityEnabled(monster: Monster, ability: Ability): boolean {
+  protected isAbilityEnabled(ability: AbilityLearned): boolean {
     if (!this.monsterService.canActiveMonsterUseAbility()) {
       this.logger.debug(`Ability slots already consumed for this turn`);
       return false;
     }
-    if (!(ability.usages.current > 0)) {
-      this.logger.debug(`No more ability usages for ${ability.label}`);
+    if (!(ability.currentUsages > 0)) {
+      this.logger.debug(`No more ability usages for ${ability.abilityId}`);
       return false;
     }
-    this.logger.debug(`Ability ${ability.label} is enabled`);
+    this.logger.debug(`Ability ${ability.abilityId} is enabled`);
     return true;
   }
 

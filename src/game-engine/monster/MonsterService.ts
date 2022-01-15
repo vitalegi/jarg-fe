@@ -14,6 +14,7 @@ import TurnManager, { ActionType } from "../battle/TurnManager";
 import { LevelUpService } from "./LevelUpService";
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityService from "../monster-action/ability/AbilityService";
 
 const names = [
   "Cino",
@@ -39,8 +40,7 @@ export default class MonsterService {
   protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
     MonsterIndexRepository
   );
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
+  protected abilityService = Container.get<AbilityService>(AbilityService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
@@ -76,9 +76,6 @@ export default class MonsterService {
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
 
-    const abilities = this.abilityRepository.getAbilities();
-
-    monster.abilities = abilities.map((a) => a.clone());
     // TODO move to MonsterIndex
     monster.movements = new Move();
     monster.movements.steps = 3;
@@ -89,6 +86,14 @@ export default class MonsterService {
     monster.growthRates = monsterIndex.growthRates.clone();
 
     this.levelUpService.levelUp(monster, true);
+
+    // learn abilities
+    this.abilityService
+      .getNewLearnableAbilities(monster)
+      .forEach((a) => this.abilityService.learnAbility(monster, a.abilityId));
+    this.logger.info(
+      `Abilities known: ${monster.abilities.map((a) => a.abilityId).join(", ")}`
+    );
 
     monster.coordinates = new Point(0, 0);
     return monster;

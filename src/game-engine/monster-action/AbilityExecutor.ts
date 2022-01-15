@@ -35,7 +35,10 @@ export default class AbilityExecutor {
   }
 
   public async execute(): Promise<void> {
-    this.ability.usages.current--;
+    const ability = this.source.abilities.filter(
+      (a) => a.abilityId === this.ability.id
+    )[0];
+    ability.currentUsages--;
     this.logger.info(
       `AbilityExecutor - START ability=${this.ability.id}/${this.ability.label}`
     );

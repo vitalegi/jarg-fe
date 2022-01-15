@@ -5,6 +5,7 @@ import MapTraversal from "@/game-engine/map/traversal/MapTraversal";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
 import Monster from "@/game-engine/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";
+import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
@@ -12,6 +13,8 @@ import ArrayUtil from "@/utils/ArrayUtil";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Ability from "../ability/Ability";
+import AbilityLearnable from "../ability/AbilityLearnable";
+import AbilityLearned from "../ability/AbilityLearned";
 import AbilityExecutor from "../AbilityExecutor";
 import MonsterMove from "../MonsterMove";
 import MonsterAction from "./MonsterAction";
@@ -23,6 +26,8 @@ export default class MonsterAI {
   protected randomService = Container.get<RandomService>(RandomService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected monsterService = Container.get<MonsterService>(MonsterService);
+  protected abilityRepository =
+    Container.get<AbilityRepository>(AbilityRepository);
 
   protected source: Monster;
 
@@ -82,19 +87,24 @@ export default class MonsterAI {
         );
       } else {
         this.logger.info(`Walk towards ${target.toString()}`);
-        const fullPath = this.getMoveMapTraversal().getPath(target);
-        // TODO FIXME targetPoint should be empty
-        const targetPoint = fullPath[steps];
-        this.logger.info(`Mid point is ${targetPoint.toString()}`);
-        await this.move(targetPoint);
+        try {
+          const fullPath = this.getMoveMapTraversal().getPath(target);
+          // TODO FIXME targetPoint should be empty
+          const targetPoint = fullPath[steps];
+          this.logger.info(`Mid point is ${targetPoint.toString()}`);
+          await this.move(targetPoint);
+        } catch (e) {
+          this.logger.error(`Failed to come closer to ${target}`);
+        }
       }
     }
   }
 
   protected getPossibleTargets(
     startingPoints: Point[],
-    ability: Ability
+    learnable: AbilityLearned
   ): MonsterAction[] {
+    const ability = this.abilityRepository.getAbility(learnable.abilityId);
     return ArrayUtil.removeDuplicates(
       startingPoints.flatMap((point) =>
         this.getTargetsInRange(point, ability).flatMap(
@@ -152,8 +162,8 @@ export default class MonsterAI {
     return this.getDistance(source, target.coordinates) <= distance;
   }
 
-  protected getUsableAbilities(): Ability[] {
-    return this.source.abilities.filter((a) => a.usages.current > 0);
+  protected getUsableAbilities(): AbilityLearned[] {
+    return this.source.abilities.filter((a) => a.currentUsages > 0);
   }
 
   protected async move(target: Point): Promise<void> {
