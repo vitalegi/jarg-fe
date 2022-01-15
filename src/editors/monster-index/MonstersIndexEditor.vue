@@ -58,11 +58,14 @@ import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
 import MonsterIndexEditor from "./MonsterIndexEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
+import Container from "typedi";
+import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
   components: { MonsterIndexEditor, ImportExportDialog },
   data: () => ({
+    gameAppDataLoader: Container.get<GameAppDataLoader>(GameAppDataLoader),
     sortByOptions: [
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
@@ -147,6 +150,9 @@ export default Vue.extend({
 
       this.$store.commit("setMonsterIndexEditor", monsters);
     },
+  },
+  mounted(): void {
+    this.gameAppDataLoader.loadAbilities();
   },
 });
 </script>

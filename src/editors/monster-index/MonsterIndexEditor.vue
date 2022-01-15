@@ -56,6 +56,11 @@
         headerCol1="Level"
         :col1="levelsOverview"
       />
+      <h5>Learnable Abilities</h5>
+      <MonsterIndexAbilitiesLearnableEditor
+        :abilities="index.learnableAbilities"
+        @changeAbilities="changeAbilities"
+      />
     </v-card-text>
   </v-card>
 </template>
@@ -70,6 +75,8 @@ import MonsterIndexBaseInfoEditor from "./MonsterIndexBaseInfoEditor.vue";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import Container from "typedi";
 import StatsService from "@/game-engine/monster/stats/StatsService";
+import MonsterIndexAbilitiesLearnableEditor from "./MonsterIndexAbilitiesLearnableEditor.vue";
+import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",
@@ -78,6 +85,7 @@ export default Vue.extend({
     MonsterIndexBaseInfoEditor,
     StatsOverview,
     ConfirmDeletion,
+    MonsterIndexAbilitiesLearnableEditor,
   },
   props: {
     index: MonsterIndex,
@@ -113,6 +121,11 @@ export default Vue.extend({
     changeName(name: string): void {
       const index = this.index.clone();
       index.name = name;
+      this.$emit("change", index);
+    },
+    changeAbilities(abilities: AbilityLearnable[]): void {
+      const index = this.index.clone();
+      index.learnableAbilities = abilities;
       this.$emit("change", index);
     },
     getStats(): Stats[] {

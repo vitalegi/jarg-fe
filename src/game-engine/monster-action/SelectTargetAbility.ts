@@ -50,6 +50,7 @@ export default class SelectTargetAbility {
     const result = await Promise.any([cancelPromise, targetPromise]);
     menu.destroy();
     drawer.remove();
+    this.userActionService.removeActionHandler(actionHandler);
     if (!result) {
       this.logger.info("Action is dismissed");
       return null;
