@@ -23,6 +23,7 @@ import AbilityService from "../monster-action/ability/AbilityService";
 import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import MonsterEvolutionService from "../monster/monster-evolution/MonsterEvolutionService";
 import RendererService from "@/services/RendererService";
+import HealthBarService from "../monster/HealthBarService";
 
 @Service()
 export default class BattleService {
@@ -48,6 +49,8 @@ export default class BattleService {
     MonsterEvolutionService
   );
   protected rendererService = Container.get<RendererService>(RendererService);
+  protected healthBarService =
+    Container.get<HealthBarService>(HealthBarService);
 
   public async startCharacterTurn(): Promise<void> {
     if (!this.turnManager.hasCharacters()) {
@@ -226,6 +229,16 @@ export default class BattleService {
     const drawer = new TextOverCharacterDrawer(monster, "LEVEL UP!");
     this.gameLoop.addGameLoopHandler(drawer);
     await drawer.notifyWhenCompleted();
+
+    // refresh health bar
+    const monsterContainer = this.gameApp
+      .getBattleContainer()
+      .getChildByName(monster.uuid) as PIXI.Container;
+    this.healthBarService.updateBar(
+      monsterContainer,
+      monster,
+      monster.stats.hp
+    );
 
     const newAbilities = this.abilityService.getNewLearnableAbilities(monster);
     if (newAbilities.length > 0) {
