@@ -14,6 +14,7 @@ import MapService from "../map/MapService";
 import { LevelUpService } from "../monster/LevelUpService";
 import SelectNextBattlePhase from "./SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityService from "../monster-action/ability/AbilityService";
 
 const starters = ["001", "004", "007"];
 const firstMap = "map1";
@@ -34,6 +35,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
   protected selectNextBattlePhase = Container.get<SelectNextBattlePhase>(
     SelectNextBattlePhase
   );
+  protected abilityService = Container.get<AbilityService>(AbilityService);
 
   public getName(): string {
     return "NewGamePhase";
@@ -69,6 +71,10 @@ export default class NewGamePhase extends AbstractPhase<never> {
       starter.monsterId
     );
     await this.levelUpService.levelUps(monster, 5, true);
+    this.abilityService
+      .getNewLearnableAbilities(monster)
+      .forEach((a) => this.abilityService.learnAbility(monster, a.abilityId));
+
     playerData.monsters.push(monster);
 
     for (let i = 0; i < 10; i++) {
@@ -77,6 +83,11 @@ export default class NewGamePhase extends AbstractPhase<never> {
         `0${10 + i * 2}`
       );
       await this.levelUpService.levelUps(monster2, 5, true);
+      this.abilityService
+        .getNewLearnableAbilities(monster2)
+        .forEach((a) =>
+          this.abilityService.learnAbility(monster2, a.abilityId)
+        );
       playerData.monsters.push(monster2);
     }
 

@@ -1,6 +1,7 @@
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
+import AbilityService from "../monster-action/ability/AbilityService";
 import { LevelUpService } from "../monster/LevelUpService";
 import Monster from "../monster/Monster";
 import MonsterService from "../monster/MonsterService";
@@ -14,6 +15,7 @@ export default class MapService {
   protected randomService = Container.get<RandomService>(RandomService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected monsterService = Container.get<MonsterService>(MonsterService);
+  protected abilityService = Container.get<AbilityService>(AbilityService);
 
   public async generate(model: MapModel): Promise<MapContainer> {
     const map = new MapContainer();
@@ -25,6 +27,12 @@ export default class MapService {
     for (let i = 0; i < model.randomEncounters.length; i++) {
       await this.addLocalizedMonsters(map, model.randomEncounters[i]);
     }
+    map.monsters.forEach((m) =>
+      this.abilityService
+        .getNewLearnableAbilities(m)
+        .forEach((a) => this.abilityService.learnAbility(m, a.abilityId))
+    );
+
     return map;
   }
 
