@@ -2,12 +2,12 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
-import LoadGamePhase from "./LoadGamePhase";
-import NewGamePhase from "./NewGamePhase";
+import PhaseService from "./PhaseService";
 
 @Service()
 export default class HomePhase extends AbstractPhase<never> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.HomePhse");
+  protected phaseService = Container.get<PhaseService>(PhaseService);
 
   public getName(): string {
     return "HomePhase";
@@ -25,7 +25,7 @@ export default class HomePhase extends AbstractPhase<never> {
     return new MenuEntry(
       "New Game",
       () => {
-        this.goToNewGamePhase();
+        this.phaseService.goToNewGame();
       },
       () => true
     );
@@ -34,17 +34,9 @@ export default class HomePhase extends AbstractPhase<never> {
     return new MenuEntry(
       "Load Game",
       () => {
-        this.goToLoadGamePhase();
+        this.phaseService.goToLoadGame();
       },
       () => true
     );
-  }
-
-  protected async goToNewGamePhase(): Promise<void> {
-    await Container.get<NewGamePhase>(NewGamePhase).start();
-  }
-
-  protected async goToLoadGamePhase(): Promise<void> {
-    await Container.get<LoadGamePhase>(LoadGamePhase).start();
   }
 }

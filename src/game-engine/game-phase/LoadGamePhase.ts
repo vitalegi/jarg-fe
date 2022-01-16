@@ -4,7 +4,7 @@ import PlayerData from "../PlayerData";
 import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
-import HomePhase from "./HomePhase";
+import PhaseService from "./PhaseService";
 import SelectNextBattlePhase from "./SelectNextBattlePhase";
 
 @Service()
@@ -16,6 +16,7 @@ export default class LoadGamePhase extends AbstractPhase<never> {
   protected selectNextBattlePhase = Container.get<SelectNextBattlePhase>(
     SelectNextBattlePhase
   );
+  protected phaseService = Container.get<PhaseService>(PhaseService);
 
   public getName(): string {
     return "LoadGamePhase";
@@ -35,7 +36,7 @@ export default class LoadGamePhase extends AbstractPhase<never> {
   protected cancelEntry(): MenuEntry {
     return new MenuEntry(
       "Cancel",
-      () => this.goToHomePhase(),
+      () => this.phaseService.goToHome(),
       () => true
     );
   }
@@ -49,13 +50,6 @@ export default class LoadGamePhase extends AbstractPhase<never> {
 
   protected async choose(playerData: PlayerData): Promise<void> {
     this.playerRepository.setPlayerData(playerData);
-    this.goToSelectNextBattlePhase();
-  }
-
-  protected async goToSelectNextBattlePhase(): Promise<void> {
-    await this.selectNextBattlePhase.start();
-  }
-  protected async goToHomePhase(): Promise<void> {
-    await Container.get<HomePhase>(HomePhase).start();
+    this.phaseService.goToSelectNextBattle();
   }
 }

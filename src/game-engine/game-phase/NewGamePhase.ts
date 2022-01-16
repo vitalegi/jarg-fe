@@ -1,4 +1,3 @@
-import MapContainer from "@/game-engine/map/MapContainer";
 import GameAssetService from "@/services/GameAssetService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
@@ -8,13 +7,13 @@ import MonsterService from "../monster/MonsterService";
 import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
-import BattlePhase from "./BattlePhase";
 import MonsterIndex from "../monster/MonsterIndex";
 import MapService from "../map/MapService";
 import { LevelUpService } from "../monster/LevelUpService";
 import SelectNextBattlePhase from "./SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityService from "../monster-action/ability/AbilityService";
+import PhaseService from "./PhaseService";
 
 const starters = ["001", "004", "007"];
 const firstMap = "map1";
@@ -36,6 +35,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
     SelectNextBattlePhase
   );
   protected abilityService = Container.get<AbilityService>(AbilityService);
+  protected phaseService = Container.get<PhaseService>(PhaseService);
 
   public getName(): string {
     return "NewGamePhase";
@@ -93,10 +93,6 @@ export default class NewGamePhase extends AbstractPhase<never> {
 
     this.playerRepository.setPlayerData(playerData);
 
-    this.goToSelectNextBattlePhase();
-  }
-
-  protected async goToSelectNextBattlePhase(): Promise<void> {
-    await this.selectNextBattlePhase.start();
+    this.phaseService.goToSelectNextBattle();
   }
 }

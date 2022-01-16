@@ -1,4 +1,3 @@
-import MapContainer from "@/game-engine/map/MapContainer";
 import GameAssetService from "@/services/GameAssetService";
 import Container, { Service } from "typedi";
 import MonsterIndexService from "../monster/MonsterIndexService";
@@ -6,11 +5,11 @@ import MonsterService from "../monster/MonsterService";
 import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
-import BattlePhase from "./BattlePhase";
 import MapService from "../map/MapService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import SelectMonstersMenu from "../ui/SelectMonstersMenu";
 import Monster from "../monster/Monster";
+import PhaseService from "./PhaseService";
 
 const MAPS = ["map1", "map2", "map3", "map4"];
 
@@ -27,6 +26,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
   protected mapService = Container.get<MapService>(MapService);
+  protected phaseService = Container.get<PhaseService>(PhaseService);
 
   public getName(): string {
     return "SelectNextBattlePhase";
@@ -112,10 +112,6 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
     );
     map.monsters.push(...monsters);
-    this.goToBattlePhase(map);
-  }
-
-  protected async goToBattlePhase(map: MapContainer): Promise<void> {
-    await Container.get<BattlePhase>(BattlePhase).start(map);
+    this.phaseService.goToBattle(map);
   }
 }
