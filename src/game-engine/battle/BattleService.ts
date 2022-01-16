@@ -10,7 +10,6 @@ import TurnManager from "./TurnManager";
 import MapRepository from "../map/MapRepository";
 import MonsterAI from "../monster-action/ai/MonsterAI";
 import GameConfig from "../GameConfig";
-import GameOverPhase from "../game-phase/GameOverPhase";
 import SelectNextBattlePhase from "../game-phase/SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
 import StatusService from "../monster/status/StatusService";
@@ -24,6 +23,7 @@ import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import MonsterEvolutionService from "../monster/monster-evolution/MonsterEvolutionService";
 import RendererService from "@/services/RendererService";
 import HealthBarService from "../monster/HealthBarService";
+import PhaseService from "../game-phase/PhaseService";
 
 @Service()
 export default class BattleService {
@@ -37,7 +37,7 @@ export default class BattleService {
     MonsterActionMenuBuilder
   );
   protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameOverPhase = Container.get<GameOverPhase>(GameOverPhase);
+  protected phaseService = Container.get<PhaseService>(PhaseService);
   protected statusService = Container.get<StatusService>(StatusService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected monsterIndexService =
@@ -155,7 +155,7 @@ export default class BattleService {
   public completeBattle(): void {
     if (this.isGameOver(this.playerService.getPlayerId())) {
       this.logger.info(`Player is defeated, end.`);
-      this.gameOverPhase.start();
+      this.phaseService.goToGameOver();
       return;
     }
     if (this.isGameWin(this.playerService.getPlayerId())) {

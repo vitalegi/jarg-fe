@@ -6,7 +6,7 @@ import GameLoop from "../GameLoop";
 import PhaseService from "./PhaseService";
 
 @Service()
-export default class SelectNextBattlePhase extends AbstractPhase<never> {
+export default class GameOverPhase extends AbstractPhase<never> {
   protected playerRepository =
     Container.get<PlayerRepository>(PlayerRepository);
   protected gameLoop = Container.get<GameLoop>(GameLoop);

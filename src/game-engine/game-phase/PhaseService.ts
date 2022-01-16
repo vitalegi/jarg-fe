@@ -2,10 +2,11 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 import MapContainer from "../map/MapContainer";
 import BattlePhase from "./BattlePhase";
-import SelectNextBattlePhase from "./GameOverPhase";
+import GameOverPhase from "./GameOverPhase";
 import HomePhase from "./HomePhase";
 import LoadGamePhase from "./LoadGamePhase";
 import NewGamePhase from "./NewGamePhase";
+import SelectNextBattlePhase from "./SelectNextBattlePhase";
 
 @Service()
 export default class PhaseService {
@@ -27,5 +28,8 @@ export default class PhaseService {
   }
   public async goToLoadGame(): Promise<void> {
     await Container.get<LoadGamePhase>(LoadGamePhase).start();
+  }
+  public async goToGameOver(): Promise<void> {
+    await Container.get<GameOverPhase>(GameOverPhase).start();
   }
 }

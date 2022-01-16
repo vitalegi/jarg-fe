@@ -10,6 +10,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import SelectMonstersMenu from "../ui/SelectMonstersMenu";
 import Monster from "../monster/Monster";
 import PhaseService from "./PhaseService";
+import StatsService from "../monster/stats/StatsService";
 
 const MAPS = ["map1", "map2", "map3", "map4"];
 
@@ -27,6 +28,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     Container.get<GameAssetService>(GameAssetService);
   protected mapService = Container.get<MapService>(MapService);
   protected phaseService = Container.get<PhaseService>(PhaseService);
+  protected statsService = Container.get<StatsService>(StatsService);
 
   public getName(): string {
     return "SelectNextBattlePhase";
@@ -36,6 +38,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
 
     const menu = new LeftMenu();
     menu.addEntry(this.saveStatus());
+    menu.addEntry(this.healParty());
     for (const map of MAPS) {
       menu.addEntry(this.selectMapEntry(menu, map));
     }
@@ -50,6 +53,28 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
       },
       () => true
     );
+  }
+
+  protected healParty(): MenuEntry {
+    return new MenuEntry(
+      "Heal Party",
+      () => {
+        this.playerRepository
+          .getPlayerData()
+          .monsters.forEach((m) => this.healMonster(m));
+      },
+      () => true
+    );
+  }
+
+  protected healMonster(monster: Monster): void {
+    this.logger.info(`${monster.uuid}: remove status/stats alterations`);
+    monster.statsAlterations = [];
+    monster.statusAlterations = [];
+    this.logger.info(`${monster.uuid}: restore stats`);
+    this.statsService.updateMonsterAttributes(monster, true);
+    this.logger.info(`${monster.uuid}: restore abilities usages`);
+    monster.abilities.forEach((a) => (a.currentUsages = a.maxUsages));
   }
 
   protected selectMapEntry(menu: LeftMenu, map: string): MenuEntry {
