@@ -13,11 +13,13 @@
     </v-card-title>
     <v-card-text v-if="expanded">
       <v-divider></v-divider>
-      <monster-index-base-info-editor
+      <MonsterIndexBaseInfoEditor
         :id="index.monsterId"
         :name="index.name"
+        :types="index.types"
         @changeId="changeId"
         @changeName="changeName"
+        @changeTypes="changeTypes"
       />
       <h5>Animations</h5>
       <v-simple-table dense>
@@ -40,16 +42,10 @@
       </v-simple-table>
       <v-divider></v-divider>
       <h5>Base Stats</h5>
-      <stats-editor
-        :stats="index.baseStats"
-        @change="changeBaseStats"
-      ></stats-editor>
+      <StatsEditor :stats="index.baseStats" @change="changeBaseStats" />
       <v-divider></v-divider>
       <h5>Growth Rates</h5>
-      <stats-editor
-        :stats="index.growthRates"
-        @change="changeGrowthRates"
-      ></stats-editor>
+      <StatsEditor :stats="index.growthRates" @change="changeGrowthRates" />
       <h5>Stats Progression</h5>
       <StatsOverview
         :stats="getStats()"
@@ -129,6 +125,11 @@ export default Vue.extend({
     changeName(name: string): void {
       const index = this.index.clone();
       index.name = name;
+      this.$emit("change", index);
+    },
+    changeTypes(types: string[]): void {
+      const index = this.index.clone();
+      index.types = types;
       this.$emit("change", index);
     },
     changeAbilities(abilities: AbilityLearnable[]): void {

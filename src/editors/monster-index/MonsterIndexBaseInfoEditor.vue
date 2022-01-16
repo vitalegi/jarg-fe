@@ -1,36 +1,28 @@
 <template>
-  <v-simple-table dense>
-    <template v-slot:default>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <v-text-field dense v-model="modelId" @change="changeId" />
-          </td>
-          <td>
-            <v-text-field dense v-model="modelName" @change="changeName" />
-          </td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
+  <v-container>
+    <v-row>
+      <v-col cols="4">
+        <EditableTextField label="ID" :value="id" @change="changeId" />
+      </v-col>
+      <v-col cols="4">
+        <EditableTextField label="Name" :value="name" @change="changeName" />
+      </v-col>
+      <v-col cols="4">
+        <TypesSelector label="Types" :values="types" @change="changeTypes" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-
+import TypesSelector from "../type/TypesSelector.vue";
+import EditableTextField from "@/components/EditableTextField.vue";
 export default Vue.extend({
   name: "MonsterIndexBaseInfoEditor",
-  props: ["id", "name"],
-  data: () => ({
-    modelId: "",
-    modelName: "",
-  }),
+  props: ["id", "name", "types"],
+  data: () => ({}),
+  components: { TypesSelector, EditableTextField },
   computed: {},
   methods: {
     changeId(id: string): void {
@@ -39,10 +31,9 @@ export default Vue.extend({
     changeName(name: string): void {
       this.$emit("changeName", name);
     },
-  },
-  mounted() {
-    this.modelId = this.id;
-    this.modelName = this.name;
+    changeTypes(types: string[]): void {
+      this.$emit("changeTypes", types);
+    },
   },
 });
 </script>
