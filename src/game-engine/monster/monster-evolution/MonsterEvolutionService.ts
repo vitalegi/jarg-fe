@@ -50,7 +50,7 @@ export default class MonsterEvolutionService {
     monster: Monster,
     evolution: MonsterEvolution
   ): boolean {
-    if (evolution.type === MonsterEvolution.LEVEL_TYPE) {
+    if (evolution.isByLevel()) {
       return monster.level >= evolution.level;
     }
     return false;

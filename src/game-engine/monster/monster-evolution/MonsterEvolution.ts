@@ -27,4 +27,16 @@ export default class MonsterEvolution {
     out.level = this.level;
     return out;
   }
+
+  public equals(other: MonsterEvolution): boolean {
+    return (
+      this.type === other.type &&
+      this.evolutionId === other.evolutionId &&
+      this.level === other.level
+    );
+  }
+
+  public isByLevel(): boolean {
+    return this.type === MonsterEvolution.LEVEL_TYPE;
+  }
 }
