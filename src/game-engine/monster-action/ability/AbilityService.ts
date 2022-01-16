@@ -3,6 +3,7 @@ import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
+import Ability from "./Ability";
 import AbilityLearnable from "./AbilityLearnable";
 import AbilityLearned from "./AbilityLearned";
 
@@ -19,20 +20,31 @@ export default class AbilityService {
     MonsterIndexRepository
   );
 
+  public getAbility(abilityId: string): Ability {
+    return this.abilityRepository.getAbility(abilityId);
+  }
+
+  // TODO if the monster evolves, with this method it will learn also all the abilities of the evolution, not just the new abilities
   public getNewLearnableAbilities(monster: Monster): AbilityLearnable[] {
     const monsterIndex = this.monsterIndexRepository.getMonster(
       monster.modelId
     );
-    this.logger.info(``);
     const allLearnable = monsterIndex.learnableAbilities;
     const learnable = allLearnable.filter((a) =>
       this.canLearn(monster.level, a)
     );
+    this.logger.debug(
+      `Monster ${monsterIndex.name} (${monsterIndex.monsterId}) at level ${monster.level} can learn ${learnable} abilities.`
+    );
     const notLearned = learnable.filter(
       (a) => !this.isAbilityLearned(monster, a.abilityId)
     );
-    this.logger.info(
-      `Monster ${monsterIndex.name} (${monsterIndex.monsterId}) at level ${monster.level} can learn ${learnable.length} skills (${allLearnable.length} total). Of these, it doesn't know ${notLearned.length} skills`
+    this.logger.debug(
+      `${notLearned.length} new abilities for ${monsterIndex.name} (${
+        monsterIndex.monsterId
+      }) at level ${monster.level}: ${notLearned
+        .map((a) => a.abilityId)
+        .join(", ")}`
     );
     return notLearned;
   }

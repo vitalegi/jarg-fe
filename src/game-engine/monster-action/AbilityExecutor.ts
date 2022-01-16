@@ -13,6 +13,8 @@ import ComputedEffect from "./computed-effect/ComputedEffect";
 import StatsService from "../monster/stats/StatsService";
 import TextOverCharacterDrawer from "../ui/TextOverCharacterDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityService from "./ability/AbilityService";
+import PlayerService from "../PlayerService";
 
 export default class AbilityExecutor {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
@@ -23,6 +25,8 @@ export default class AbilityExecutor {
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected turnManager = Container.get<TurnManager>(TurnManager);
   protected statsService = Container.get<StatsService>(StatsService);
+  protected abilityService = Container.get<AbilityService>(AbilityService);
+  protected playerService = Container.get<PlayerService>(PlayerService);
 
   protected source: Monster;
   protected target: Monster;
@@ -61,14 +65,7 @@ export default class AbilityExecutor {
 
     const exp = totalExp.reduce((prev, curr) => prev + curr, 0);
 
-    const levelUp = this.levelUpService.canLevelUp(this.source, exp);
-    await this.levelUpService.gainExperience(this.source, exp);
-    if (levelUp) {
-      const drawer = new TextOverCharacterDrawer(this.source, "LEVEL UP!");
-      this.gameLoop.addGameLoopHandler(drawer);
-      await drawer.notifyWhenCompleted();
-    }
-
+    await this.gainExp(this.source, 100000000 * exp);
     this.logger.info("AbilityExecutor - END");
   }
 
@@ -134,5 +131,34 @@ export default class AbilityExecutor {
     monster: Monster
   ): ComputedEffect[] {
     return effects.filter((effect) => effect.hasEffectOn(monster));
+  }
+  protected async gainExp(monster: Monster, exp: number): Promise<void> {
+    const levelUp = this.levelUpService.canLevelUp(monster, exp);
+    await this.levelUpService.gainExperience(monster, exp);
+    if (!levelUp) {
+      return;
+    }
+    this.logger.debug(`Show level up for ${monster.uuid}`);
+    const drawer = new TextOverCharacterDrawer(monster, "LEVEL UP!");
+    this.gameLoop.addGameLoopHandler(drawer);
+    await drawer.notifyWhenCompleted();
+
+    const newAbilities = this.abilityService.getNewLearnableAbilities(monster);
+    if (newAbilities.length > 0) {
+      if (monster.ownerId === this.playerService.getPlayerId()) {
+        this.logger.debug(
+          `A monster owned by the player (${monster.uuid}) learned new abilities, show message`
+        );
+        for (const newAbility of newAbilities) {
+          const ability = this.abilityService.getAbility(newAbility.abilityId);
+          const newAbilityMessage = new AbilityNameDrawer(ability.label);
+          this.gameLoop.addGameLoopHandler(newAbilityMessage);
+          await newAbilityMessage.notifyWhenCompleted();
+        }
+      }
+      for (const newAbility of newAbilities) {
+        this.abilityService.learnAbility(monster, newAbility.abilityId);
+      }
+    }
   }
 }

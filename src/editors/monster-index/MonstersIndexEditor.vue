@@ -90,7 +90,7 @@ export default Vue.extend({
         .sort((a, b) => this.compare(a, b));
     },
     exportJson(): string {
-      return JSON.stringify(this.monsters, undefined, 4);
+      return JSON.stringify(this.$store.state.monsterIndexEditor, undefined, 4);
     },
     storedMonsters(): MonsterIndex[] {
       return this.$store.state.monsterIndexEditor as MonsterIndex[];

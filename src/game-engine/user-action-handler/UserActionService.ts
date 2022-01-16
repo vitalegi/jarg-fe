@@ -27,10 +27,12 @@ export default class UserActionService {
     this.actionHandlers = [];
   }
 
+  public hasActionHandler(actionHandler: UserActionHandler): boolean {
+    return this.findActionHandler(actionHandler) !== -1;
+  }
+
   public removeActionHandler(actionHandler: UserActionHandler): void {
-    const index = this.actionHandlers.findIndex(
-      (h) => h.getUuid() === actionHandler.getUuid()
-    );
+    const index = this.findActionHandler(actionHandler);
     if (index === -1) {
       throw Error(
         `ActionHandler ${actionHandler.getName()}_${actionHandler.getUuid()} not present.`
@@ -144,5 +146,10 @@ export default class UserActionService {
     if (handler) {
       process(handler, input, newPosition);
     }
+  }
+  protected findActionHandler(actionHandler: UserActionHandler): number {
+    return this.actionHandlers.findIndex(
+      (h) => h.getUuid() === actionHandler.getUuid()
+    );
   }
 }
