@@ -65,6 +65,19 @@ export default class Stats {
     return out;
   }
 
+  public totalPoints(): number {
+    return (
+      this.maxHP +
+      this.atk +
+      this.def +
+      this.int +
+      this.res +
+      this.hit +
+      this.dex +
+      this.speed
+    );
+  }
+
   public toString(): string {
     return `HP=${this.hp}, maxHP=${this.maxHP}, ATK=${this.atk}, DEF=${this.def}, INT=${this.int}, RES=${this.res}, HIT=${this.hit}, DEX=${this.dex}, speed=${this.speed}`;
   }

@@ -8,13 +8,17 @@
               <tr>
                 <th class="text-left">Stat</th>
                 <th class="text-left">Strongest</th>
-                <th class="text-left">Value (Lv. 50)</th>
-                <th class="text-left">Value (Lv. 50)</th>
-                <th class="text-left">2^ Weakest</th>
-                <th class="text-left">Value (Lv. 50)</th>
+                <th class="text-left">Class</th>
+                <th class="text-left">Lv. 50</th>
                 <th class="text-left">2^ Strongest</th>
-                <th class="text-left">Value (Lv. 50)</th>
+                <th class="text-left">Class</th>
+                <th class="text-left">Lv. 50</th>
+                <th class="text-left">2^ Weakest</th>
+                <th class="text-left">Class</th>
+                <th class="text-left">Lv. 50</th>
                 <th class="text-left">Weakest</th>
+                <th class="text-left">Class</th>
+                <th class="text-left">Lv. 50</th>
               </tr>
             </thead>
             <tbody>
@@ -24,20 +28,48 @@
                   {{ getHighest(stat, 50)[0].name }}
                   ({{ getHighest(stat, 50)[0].monsterId }})
                 </td>
+                <td>
+                  {{
+                    findMonster(
+                      getHighest(stat, 50)[0].monsterId
+                    ).baseStats.totalPoints()
+                  }}
+                </td>
                 <td>{{ getHighest(stat, 50)[0].value }}</td>
                 <td>
                   {{ getHighest(stat, 50)[1].name }}
                   ({{ getHighest(stat, 50)[1].monsterId }})
+                </td>
+                <td>
+                  {{
+                    findMonster(
+                      getHighest(stat, 50)[1].monsterId
+                    ).baseStats.totalPoints()
+                  }}
                 </td>
                 <td>{{ getHighest(stat, 50)[1].value }}</td>
                 <td>
                   {{ getLowest(stat, 50)[1].name }}
                   ({{ getLowest(stat, 50)[1].monsterId }})
                 </td>
+                <td>
+                  {{
+                    findMonster(
+                      getLowest(stat, 50)[1].monsterId
+                    ).baseStats.totalPoints()
+                  }}
+                </td>
                 <td>{{ getLowest(stat, 50)[1].value }}</td>
                 <td>
                   {{ getLowest(stat, 50)[0].name }}
                   ({{ getLowest(stat, 50)[0].monsterId }})
+                </td>
+                <td>
+                  {{
+                    findMonster(
+                      getLowest(stat, 50)[0].monsterId
+                    ).baseStats.totalPoints()
+                  }}
                 </td>
                 <td>{{ getLowest(stat, 50)[0].value }}</td>
               </tr>
@@ -82,6 +114,7 @@
       <v-col cols="3">
         <v-text-field v-model="levelsModel" label="Levels" />
       </v-col>
+      <v-col cols="9"></v-col>
       <v-col cols="3">
         <v-text-field v-model="power" label="Power" />
       </v-col>

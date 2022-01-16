@@ -24,15 +24,15 @@ export default class FormulaService {
 
   public doHit(source: Stats, target: Stats, accuracy: number): boolean {
     const hit = source.hit;
-    const hitRandom = this.randomService.randomDecimal(0.8, 1.2);
+    const hitRandom = this.randomService.randomDecimal(0.7, 1.3);
 
     const attacker = (accuracy / 100) * hit * hitRandom;
 
     const dex = target.dex;
-    const dexRandom = this.randomService.randomDecimal(0.4, 0.6);
+    const dexRandom = this.randomService.randomDecimal(0.3, 0.8);
     const defender = dex * dexRandom;
 
-    const match = attacker >= dex;
+    const match = attacker / defender >= 0.6;
 
     this.logger.debug(
       `accuracy: ${accuracy}, HIT: ${hit}, random: ${hitRandom} => ${attacker}, DEX: ${dex}, random: ${dexRandom} => ${defender}. HIT: ${match}`
@@ -72,7 +72,8 @@ export default class FormulaService {
       targetModel,
       abilityTypes
     );
-    const attacker = (abilityPower / 100) * (atk / 3) * atkRandom * atkModifier;
+    const abilityPowerBonus = 0.5 + abilityPower / 100;
+    const attacker = abilityPowerBonus * (atk / 3) * atkRandom * atkModifier;
 
     const defRandom = this.randomService.randomDecimal(0.45, 0.6);
     const defModifier = 0;
