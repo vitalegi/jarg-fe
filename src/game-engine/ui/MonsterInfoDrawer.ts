@@ -5,7 +5,6 @@ import FrameImpl from "./FrameImpl";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";
-import Ability from "../monster-action/ability/Ability";
 import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
@@ -13,6 +12,7 @@ import { LevelUpService } from "../monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import AbilityRepository from "../repositories/AbilityRepository";
+import ArrayUtil from "@/utils/ArrayUtil";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -92,7 +92,11 @@ export default class MonsterInfoDrawer extends Drawer {
         x1,
         lineY()
       );
-
+      const statuses = ArrayUtil.removeDuplicates(
+        this.monster.statusAlterations.map((s) => s.status),
+        (a, b) => a === b
+      );
+      this.addText(`Status ${statuses.join(", ")}`, x1, lineY());
       const stats = this.monster.stats;
       this.addStat(`HP`, `${f(stats.hp)}/${f(stats.maxHP)}`, lineY());
       this.addStat(`ATK`, `${f(stats.atk)}`, lineY());

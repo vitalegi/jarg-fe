@@ -57,9 +57,12 @@ export default class AbilityExecutor {
     await this.focusTarget();
     const abilityName = this.showAbilityName();
 
-    const promise1 = this.applyEffects(effects, this.source);
-    const promise2 = this.applyEffects(effects, this.target);
-    const totalExp = await Promise.all([promise1, promise2]);
+    const promises: Promise<number>[] = [];
+    promises.push(this.applyEffects(effects, this.source));
+    if (this.source.uuid !== this.target.uuid) {
+      promises.push(this.applyEffects(effects, this.target));
+    }
+    const totalExp = await Promise.all(promises);
     await abilityName;
 
     const exp = totalExp.reduce((prev, curr) => prev + curr, 0);
