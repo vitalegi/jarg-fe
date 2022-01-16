@@ -1,11 +1,19 @@
-import { Service } from "typedi";
+import LoggerFactory from "@/logger/LoggerFactory";
+import Container, { Service } from "typedi";
 import Monster from "../Monster";
+import StatusAlteration from "../status/StatusAlteration";
+import StatusService from "../status/StatusService";
 import StatAlteration from "./StatAlteration";
 import Stats from "./Stats";
 import StatsConstants from "./StatsContants";
 
 @Service()
 export default class StatsService {
+  protected logger = LoggerFactory.getLogger(
+    "GameEngine.Monster.Stats.StatsService"
+  );
+  protected statusService = Container.get<StatusService>(StatusService);
+
   public isStat(stat: string): boolean {
     return StatsConstants.COLLECTION.indexOf(stat) !== -1;
   }
@@ -109,11 +117,7 @@ export default class StatsService {
     throw Error(`Unknown stat ${stat}`);
   }
 
-  public updateMonsterAttributes(
-    monster: Monster,
-    restoreHP: boolean,
-    alterations: StatAlteration[] = []
-  ): void {
+  public updateMonsterAttributes(monster: Monster, restoreHP: boolean): void {
     const oldHP = monster.stats.hp;
     const stats = this.getAttributesByLevel(
       monster.level,
@@ -125,7 +129,16 @@ export default class StatsService {
     } else {
       stats.hp = oldHP;
     }
-    monster.stats = this.getStatsWithAlterations(stats, alterations);
+    const speedBonus = this.statusService.getSpeedBonus(monster);
+    this.logger.info(
+      `Speed bonus of ${monster.uuid} ${monster.name}: ${speedBonus}`
+    );
+
+    monster.stats = this.getStatsWithAlterations(
+      stats,
+      monster.statsAlterations,
+      speedBonus
+    );
   }
 
   public getAttributesByLevel(
@@ -160,13 +173,19 @@ export default class StatsService {
 
   protected getStatsWithAlterations(
     stats: Stats,
-    alterations: StatAlteration[]
+    statsAlterations: StatAlteration[],
+    speedBonus: number
   ): Stats {
     const alteredStats = stats.clone();
     StatsConstants.COLLECTION.forEach((stat) => {
-      const newValue = this.getStatWithAlterations(stats, stat, alterations);
+      const newValue = this.getStatWithAlterations(
+        stats,
+        stat,
+        statsAlterations
+      );
       this.setStat(alteredStats, stat, newValue);
     });
+    alteredStats.speed = Math.ceil(speedBonus * alteredStats.speed);
     return alteredStats;
   }
 

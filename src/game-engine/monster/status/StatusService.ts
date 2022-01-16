@@ -5,18 +5,6 @@ import StatusContants from "./StatusContants";
 
 @Service()
 export default class StatusService {
-  /*   
-  POISON = "POISON";
-  PARALISYS = "PARALISYS";
-  BURN = "BURN";
-  FREEZE = "FREEZE";
-  BADLY_POISONED = "BADLY_POISONED";
-  SLEEP = "SLEEP";
-  CONFUSION = "CONFUSION";
-  HASTE = "HASTE";
-  SLOW = "SLOW";
-  */
-
   public isPoisoned(monster: Monster): boolean {
     return this.hasStatus(monster, StatusContants.POISON);
   }
@@ -43,6 +31,19 @@ export default class StatusService {
   }
   public isSlowed(monster: Monster): boolean {
     return this.hasStatus(monster, StatusContants.SLOW);
+  }
+
+  public getSpeedBonus(monster: Monster): number {
+    if (this.isHasted(monster) && this.isSlowed(monster)) {
+      return 1;
+    }
+    if (this.isHasted(monster)) {
+      return 2;
+    }
+    if (this.isSlowed(monster)) {
+      return 0.5;
+    }
+    return 1;
   }
 
   public getDamage(monster: Monster): number {

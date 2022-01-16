@@ -83,11 +83,7 @@ export default class AbilityExecutor {
 
     effects.forEach((e) => e.applyAfterRender());
 
-    this.statsService.updateMonsterAttributes(
-      monster,
-      false,
-      monster.statsAlterations
-    );
+    this.statsService.updateMonsterAttributes(monster, false);
 
     const toHP = monster.stats.hp;
     await this.battleService.changeHealth(monster, fromHP, toHP);

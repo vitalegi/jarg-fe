@@ -1,6 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
-import StatAlteration from "@/game-engine/monster/stats/StatAlteration";
 import StatusAlteration from "@/game-engine/monster/status/StatusAlteration";
+import StatusContants from "@/game-engine/monster/status/StatusContants";
 import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
 
@@ -27,7 +27,19 @@ export default class StatusChangeComputed extends ComputedEffect {
   }
   public applyAfterRender(): void {
     this.logger.info(`Apply ${this.status} to ${this.target.name}`);
+    if (this.status === StatusContants.HASTE) {
+      this.removeStatus(this.target, StatusContants.SLOW);
+    }
+    if (this.status === StatusContants.SLOW) {
+      this.removeStatus(this.target, StatusContants.HASTE);
+    }
     // TODO add duration
     this.target.statusAlterations.push(new StatusAlteration(this.status));
+  }
+
+  protected removeStatus(monster: Monster, remove: string): void {
+    monster.statusAlterations = monster.statusAlterations.filter(
+      (a) => a.status !== remove
+    );
   }
 }
