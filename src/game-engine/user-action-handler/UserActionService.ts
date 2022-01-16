@@ -55,7 +55,10 @@ export default class UserActionService {
     const userInput = UserInput.terrainInput(position);
     this.initListeners(sprite, userInput);
   }
-
+  public initContainer(container: PIXI.Container): void {
+    const userInput = UserInput.containerInput(container);
+    this.initListeners(container, userInput);
+  }
   protected initListeners(
     sprite: PIXI.DisplayObject,
     userInput: UserInput

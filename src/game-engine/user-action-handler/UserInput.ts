@@ -1,9 +1,11 @@
 import Point from "@/models/Point";
+import * as PIXI from "pixi.js";
 
 export default class UserInput {
-  type: "monster" | "terrain" | null = null;
+  type: "monster" | "terrain" | "container" | null = null;
   uuid: string | null = null;
   position: Point | null = null;
+  container: PIXI.Container | null = null;
 
   public static monsterInput(uuid: string): UserInput {
     const input = new UserInput();
@@ -17,12 +19,21 @@ export default class UserInput {
     input.position = position;
     return input;
   }
+  public static containerInput(container: PIXI.Container): UserInput {
+    const input = new UserInput();
+    input.type = "container";
+    input.container = container;
+    return input;
+  }
 
   public isMonster(): boolean {
     return this.type === "monster" && !!this.uuid;
   }
   public isTerrain(): boolean {
     return this.type === "terrain" && !!this.position;
+  }
+  public isContainer(): boolean {
+    return this.type === "container" && !!this.container;
   }
   public getMonsterId(): string {
     if (this.uuid) {
@@ -38,6 +49,14 @@ export default class UserInput {
     }
     throw Error(
       "Malformed UserInput, no position provided" + JSON.stringify(this)
+    );
+  }
+  public getContainer(): PIXI.Container {
+    if (this.container) {
+      return this.container;
+    }
+    throw Error(
+      "Malformed UserInput, no container provided" + JSON.stringify(this)
     );
   }
 

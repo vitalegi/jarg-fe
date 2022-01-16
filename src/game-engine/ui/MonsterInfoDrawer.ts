@@ -13,6 +13,8 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import AbilityRepository from "../repositories/AbilityRepository";
 import ArrayUtil from "@/utils/ArrayUtil";
+import TapAnythingUserActionHandler from "../user-action-handler/TapAnythingUserActionHandler";
+import UserActionService from "../user-action-handler/UserActionService";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -23,6 +25,9 @@ export default class MonsterInfoDrawer extends Drawer {
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);
+  protected userActionService =
+    Container.get<UserActionService>(UserActionService);
+
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
   protected frame = new FrameImpl();
@@ -126,15 +131,16 @@ export default class MonsterInfoDrawer extends Drawer {
         this.frame.createFrame(0, 0, this.width(), this.height()),
         0
       );
+      this.userActionService.initContainer(this.container);
 
-      this.container.interactive = true;
-      this.container.on("pointertap", () => {
-        if (this.container) {
-          this.parent.removeChild(this.container);
-        }
-        this.complete();
-      });
-
+      const actionHandler = new TapAnythingUserActionHandler();
+      this.userActionService.addActionHandler(actionHandler),
+        actionHandler.execute().then(() => {
+          if (this.container) {
+            this.parent.removeChild(this.container);
+          }
+          this.complete();
+        });
       this.parent.addChild(this.container);
     }
 
