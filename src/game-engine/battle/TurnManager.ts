@@ -203,6 +203,9 @@ export default class TurnManager {
     if (index !== -1) {
       this.monsters.splice(index, 1);
     }
+    if (this.active?.monster.uuid === uuid) {
+      this.active = null;
+    }
   }
 
   public initTurns(): void {

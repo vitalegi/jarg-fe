@@ -2,6 +2,7 @@ import Character from "../../models/Character";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import StatAlteration from "./stats/StatAlteration";
 import Stats from "./stats/Stats";
+import StatusAlteration from "./status/StatusAlteration";
 
 export default class Monster extends Character {
   ownerId: string | null = "";
@@ -18,6 +19,7 @@ export default class Monster extends Character {
   stats = new Stats();
   growthRates = new Stats();
   statsAlterations: StatAlteration[] = [];
+  statusAlterations: StatusAlteration[] = [];
 
   abilities: AbilityLearned[] = [];
 
@@ -37,6 +39,11 @@ export default class Monster extends Character {
     if (monster.statsAlterations) {
       out.statsAlterations = monster.statsAlterations.map(
         StatAlteration.fromJson
+      );
+    }
+    if (monster.statusAlterations) {
+      out.statusAlterations = monster.statusAlterations.map(
+        StatusAlteration.fromJson
       );
     }
     return out;

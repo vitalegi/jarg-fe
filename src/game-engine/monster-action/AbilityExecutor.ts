@@ -11,15 +11,9 @@ import TurnManager from "../battle/TurnManager";
 import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
 import StatsService from "../monster/stats/StatsService";
-import TextOverCharacterDrawer from "../ui/TextOverCharacterDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityService from "./ability/AbilityService";
 import PlayerService from "../PlayerService";
-import MonsterEvolutionService from "../monster/monster-evolution/MonsterEvolutionService";
-import GameAppDataLoader from "../GameAppDataLoader";
-import MonsterIndexService from "../monster/MonsterIndexService";
-import RendererService from "@/services/RendererService";
-import GameApp from "../GameApp";
 
 export default class AbilityExecutor {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
@@ -32,15 +26,6 @@ export default class AbilityExecutor {
   protected statsService = Container.get<StatsService>(StatsService);
   protected abilityService = Container.get<AbilityService>(AbilityService);
   protected playerService = Container.get<PlayerService>(PlayerService);
-  protected monsterEvolutionService = Container.get<MonsterEvolutionService>(
-    MonsterEvolutionService
-  );
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected gameAppDataLoader =
-    Container.get<GameAppDataLoader>(GameAppDataLoader);
-  protected rendererService = Container.get<RendererService>(RendererService);
-  protected gameApp = Container.get<GameApp>(GameApp);
 
   protected source: Monster;
   protected target: Monster;
@@ -79,7 +64,7 @@ export default class AbilityExecutor {
 
     const exp = totalExp.reduce((prev, curr) => prev + curr, 0);
 
-    await this.gainExp(this.source, exp);
+    await this.battleService.gainExp(this.source, exp);
     this.logger.info("AbilityExecutor - END");
   }
 
@@ -105,12 +90,9 @@ export default class AbilityExecutor {
     );
 
     const toHP = monster.stats.hp;
+    await this.battleService.changeHealth(monster, fromHP, toHP);
 
-    const healthUpdater = new HealthBarUpdateDrawer(monster, fromHP, toHP);
-    this.gameLoop.addGameLoopHandler(healthUpdater);
-    await healthUpdater.notifyWhenCompleted();
-
-    if (this.battleService.isDead(monster.uuid)) {
+    if (this.battleService.isDead(monster)) {
       const exp = this.levelUpService.getKillExperience(monster);
       await this.battleService.die(monster.uuid);
       // if you killed an ally, you don't earn any exp.
@@ -145,80 +127,5 @@ export default class AbilityExecutor {
     monster: Monster
   ): ComputedEffect[] {
     return effects.filter((effect) => effect.hasEffectOn(monster));
-  }
-  protected async gainExp(monster: Monster, exp: number): Promise<void> {
-    const levelUp = this.levelUpService.canLevelUp(monster, exp);
-    await this.levelUpService.gainExperience(monster, exp);
-    if (!levelUp) {
-      return;
-    }
-    this.logger.debug(`Show level up for ${monster.uuid}`);
-    const drawer = new TextOverCharacterDrawer(monster, "LEVEL UP!");
-    this.gameLoop.addGameLoopHandler(drawer);
-    await drawer.notifyWhenCompleted();
-
-    const newAbilities = this.abilityService.getNewLearnableAbilities(monster);
-    if (newAbilities.length > 0) {
-      if (monster.ownerId === this.playerService.getPlayerId()) {
-        this.logger.debug(
-          `A monster owned by the player (${monster.uuid}) learned new abilities, show message`
-        );
-        for (const newAbility of newAbilities) {
-          const ability = this.abilityService.getAbility(newAbility.abilityId);
-          const newAbilityMessage = new AbilityNameDrawer(ability.label);
-          this.gameLoop.addGameLoopHandler(newAbilityMessage);
-          await newAbilityMessage.notifyWhenCompleted();
-        }
-      }
-      for (const newAbility of newAbilities) {
-        this.abilityService.learnAbility(monster, newAbility.abilityId);
-      }
-    }
-    await this.evolve(monster);
-  }
-
-  protected async evolve(monster: Monster): Promise<void> {
-    if (monster.ownerId !== this.playerService.getPlayerId()) {
-      return;
-    }
-    if (!this.monsterEvolutionService.canEvolve(monster)) {
-      return;
-    }
-    const evolutions =
-      this.monsterEvolutionService.getAvailableEvolutions(monster);
-    this.logger.info(`Monster ${monster.uuid} can evolve.`);
-    // TODO allow the user to select which evolution
-    const target = evolutions[0];
-    const newIndex = this.monsterIndexService.getMonster(target.evolutionId);
-
-    const evolutionName = new AbilityNameDrawer(
-      `${monster.name} evolves in ${newIndex.name}`
-    );
-    this.gameLoop.addGameLoopHandler(evolutionName);
-    await evolutionName.notifyWhenCompleted();
-
-    await this.gameAppDataLoader.loadMonstersSpriteSheets([newIndex]);
-    this.monsterEvolutionService.evolve(monster, evolutions[0]);
-
-    // replace sprites
-    const battleContainer = this.gameApp.getBattleContainer();
-    const oldContainer = battleContainer.getChildByName(monster.uuid);
-    const newContainer = this.rendererService.createMonsterContainer(
-      monster,
-      newIndex,
-      "normal"
-    );
-
-    // track new sprite
-    const handler = this.gameLoop.getMonsterAnimationDrawer();
-    handler.removeMonster(monster.uuid);
-    handler.addMonster(
-      monster.uuid,
-      this.monsterIndexService.getMonster(monster.modelId),
-      this.rendererService.getMonsterSprite(newContainer),
-      "normal"
-    );
-    battleContainer.removeChild(oldContainer);
-    battleContainer.addChild(newContainer);
   }
 }
