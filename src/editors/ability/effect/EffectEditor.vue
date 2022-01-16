@@ -51,7 +51,15 @@
             @change="(e) => changeStatPercentage(e / 100)"
           />
         </v-col>
-        <v-col v-if="isHpDamageEffect"> hp damage </v-col>
+        <v-col v-if="isStatusChangeEffect" cols="2">
+          <ComboBoxInput
+            :allValues="statuses"
+            label="Status"
+            :multiple="false"
+            :values="[effect.status]"
+            @change="changeStatus"
+          />
+        </v-col>
       </v-row>
     </v-container>
   </v-card>
@@ -60,12 +68,7 @@
 <script lang="ts">
 import Vue from "vue";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
-import EditableTextField from "@/components/EditableTextField.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import Ability from "@/game-engine/monster-action/ability/Ability";
-import TypesSelector from "@/editors/type/TypesSelector.vue";
-import StatSelector from "./StatSelector.vue";
-import SwitchInput from "@/components/SwitchInput.vue";
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
 import Effect from "@/game-engine/monster-action/effects/effect/Effect";
 import TargetType from "@/game-engine/monster-action/effects/target/TargetType";
@@ -76,16 +79,13 @@ import HitCondition from "@/game-engine/monster-action/effects/condition/HitCond
 import StatChangeEffect from "@/game-engine/monster-action/effects/effect/StatChangeEffect";
 import HpDamageEffect from "@/game-engine/monster-action/effects/effect/HpDamageEffect";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
+import StatusChangeEffect from "@/game-engine/monster-action/effects/effect/StatusChangeEffect";
+import StatusContants from "@/game-engine/monster/status/StatusContants";
 
 export default Vue.extend({
   name: "EffectEditor",
   components: {
     ConfirmDeletion,
-    /*
-    EditableTextField,
-    TypesSelector,
-    StatSelector,
-    SwitchInput,*/
     EditableIntegerField,
     ComboBoxInput,
     ConditionsEditor,
@@ -104,11 +104,15 @@ export default Vue.extend({
     effects(): { text: string; value: string }[] {
       return [
         { value: StatChangeEffect.KEY, text: "Change stat" },
+        { value: StatusChangeEffect.KEY, text: "Alter status" },
         { value: HpDamageEffect.KEY, text: "Change HP of fixed amount" },
       ];
     },
     isStatChangeEffect(): boolean {
       return this.getEffect().type === StatChangeEffect.KEY;
+    },
+    isStatusChangeEffect(): boolean {
+      return this.getEffect().type === StatusChangeEffect.KEY;
     },
     isHpDamageEffect(): boolean {
       return this.getEffect().type === HpDamageEffect.KEY;
@@ -119,13 +123,13 @@ export default Vue.extend({
     stats(): string[] {
       return StatsConstants.COLLECTION;
     },
+    statuses(): string[] {
+      return StatusContants.COLLECTION;
+    },
   },
   methods: {
     getEffect(): Effect {
       return this.effect as Effect;
-    },
-    changeName(name: string): void {
-      return; //this.update((a) => (a.label = name));
     },
     changeTarget(target: string): void {
       const t = new Target();
@@ -166,6 +170,9 @@ export default Vue.extend({
       if (type.value === HpDamageEffect.KEY) {
         newEffect = new HpDamageEffect();
       }
+      if (type.value === StatusChangeEffect.KEY) {
+        newEffect = new StatusChangeEffect(StatusContants.POISON);
+      }
       if (newEffect) {
         newEffect.target = this.getEffect().target.clone();
         newEffect.conditions = this.getEffect().conditions.map((c) =>
@@ -182,6 +189,11 @@ export default Vue.extend({
     changeStatPercentage(percentage: number): void {
       const e = this.getEffect().clone();
       (e as StatChangeEffect).percentage = percentage;
+      this.$emit("change", e);
+    },
+    changeStatus(status: string): void {
+      const e = this.getEffect().clone();
+      (e as StatusChangeEffect).status = status;
       this.$emit("change", e);
     },
   },
