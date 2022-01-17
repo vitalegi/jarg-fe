@@ -10,6 +10,8 @@ import Usages from "../Usages";
 export default class Ability {
   id = "";
   label = "";
+  description = "";
+  notes = "";
   power = 0;
   types: string[] = [];
   rechargeFamily = 0;
@@ -29,6 +31,8 @@ export default class Ability {
     const out = new Ability();
     out.id = json.id;
     out.label = json.label;
+    out.description = json.description;
+    out.notes = json.notes;
     out.power = parseInt(json.power, 10);
     out.precision = parseInt(json.precision, 10);
     if (json.types) {
@@ -54,6 +58,8 @@ export default class Ability {
     const out = new Ability();
     out.id = this.id;
     out.label = this.label;
+    out.description = this.description;
+    out.notes = this.notes;
     out.power = this.power;
     out.precision = this.precision;
     this.types.forEach((type) => out.types.push(type));
@@ -71,6 +77,8 @@ export default class Ability {
     const out: any = {};
     out.id = this.id;
     out.label = this.label;
+    out.description = this.description;
+    out.notes = this.notes;
     out.power = this.power;
     out.precision = this.precision;
     out.types = new Array<string>();

@@ -34,6 +34,20 @@
               @change="changeName"
             />
           </v-col>
+          <v-col cols="9">
+            <EditableTextField
+              label="Description"
+              :value="ability.description"
+              @change="changeDescription"
+            />
+          </v-col>
+          <v-col cols="9">
+            <EditableTextField
+              label="Notes"
+              :value="ability.notes"
+              @change="changeNotes"
+            />
+          </v-col>
           <v-col cols="3">
             <SwitchInput
               label="Has direct damage?"
@@ -201,6 +215,12 @@ export default Vue.extend({
     },
     changeName(name: string): void {
       this.update((a) => (a.label = name));
+    },
+    changeDescription(description: string): void {
+      this.update((a) => (a.description = description));
+    },
+    changeNotes(notes: string): void {
+      this.update((a) => (a.notes = notes));
     },
     changePower(power: number): void {
       this.update((a) => (a.power = power));
