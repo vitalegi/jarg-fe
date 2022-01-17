@@ -27,6 +27,7 @@ export default class PlayerRepository {
   }
 
   public save(playerData: PlayerData): void {
+    playerData.lastSaveDate = new Date();
     const games = this.loadAll();
     const index = games.findIndex((v) => v.playerId === playerData.playerId);
     if (index === -1) {
@@ -34,7 +35,10 @@ export default class PlayerRepository {
     } else {
       games[index] = playerData;
     }
-    window.localStorage.setItem("players", JSON.stringify(games));
+    window.localStorage.setItem(
+      "players",
+      JSON.stringify(games.map((g) => g.toJson()))
+    );
     this.logger.info(`Saved status for ${playerData.playerId}`);
   }
 
