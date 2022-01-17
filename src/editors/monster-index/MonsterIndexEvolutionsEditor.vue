@@ -23,6 +23,10 @@
         </v-btn>
       </v-col>
       <v-col cols="3">
+        <SelectMonsterIndex
+          label="Evolution"
+          @change="(monster) => changeEvolutionId(evolution, monster.monsterId)"
+        />
         <EditableTextField
           label="Evolution"
           :value="evolution.evolutionId"
@@ -53,6 +57,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import Vue from "vue";
 import MonsterIndexEditorRepository from "./MonsterIndexEditorRepository";
+import SelectMonsterIndex from "./SelectMonsterIndex.vue";
 
 export default Vue.extend({
   name: "MonsterIndexEvolutionsEditor",
@@ -64,6 +69,7 @@ export default Vue.extend({
   components: {
     EditableIntegerField,
     EditableTextField,
+    SelectMonsterIndex,
   },
   data: () => ({
     monsters: Container.get<MonsterIndexEditorRepository>(
