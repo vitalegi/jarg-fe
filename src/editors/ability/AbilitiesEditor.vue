@@ -63,6 +63,7 @@ import ImportExportDialog from "../../components/ImportExportDialog.vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
 import NumberUtil from "@/utils/NumberUtil";
 import StringUtil from "@/utils/StringUtil";
+import RechargeFamily from "@/game-engine/battle/RechargeFamily";
 
 export default Vue.extend({
   name: "AbilitiesEditor",
@@ -104,6 +105,7 @@ export default Vue.extend({
           .map((a) => NumberUtil.parse(a.id))
       );
       ability.id = StringUtil.leftPad(`${maxId + 1}`, 3, "0");
+      ability.rechargeFamily = RechargeFamily.DEFAULT_VALUE;
       abilities.push(ability);
       this.updateStorage(abilities);
     },

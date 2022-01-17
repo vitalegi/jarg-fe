@@ -40,7 +40,13 @@ export default class Ability {
     }
     out.rechargeFamily = parseInt(json.rechargeFamily, 10);
     out.atkStat = json.atkStat;
+    if (out.atkStat === "") {
+      out.atkStat = null;
+    }
     out.defStat = json.defStat;
+    if (out.defStat === "") {
+      out.defStat = null;
+    }
     if (json.usages) {
       out.usages = Usages.fromJson(json.usages);
     }
