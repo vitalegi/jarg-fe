@@ -2,7 +2,6 @@ import Monster from "@/game-engine/monster/Monster";
 import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Effect from "./Effect";
-import StatChangeComputed from "../../computed-effect/StatChangeComputed";
 import StatusChangeComputed from "../../computed-effect/StatusChangeComputed";
 
 export default class StatusChangeEffect extends Effect {

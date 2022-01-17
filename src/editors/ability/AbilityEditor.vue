@@ -135,7 +135,7 @@
           <v-col
             cols="12"
             v-for="(effect, index) in ability.additionalEffects"
-            :key="effect.id"
+            :key="effect.hash()"
           >
             <EffectEditor
               :effect="effect"

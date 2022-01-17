@@ -7,8 +7,8 @@
     <v-row>
       <v-col cols="12">
         <ConditionEditor
-          v-for="(condition, index) in conditions"
-          :key="condition.id"
+          v-for="(condition, index) in getConditions()"
+          :key="index"
           :condition="condition"
           @update="(e) => changeCondition(index, e)"
           @delete="(e) => deleteCondition(index)"

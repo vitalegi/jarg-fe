@@ -1,9 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
-import UuidUtil from "@/utils/UuidUtil";
 import Ability from "../../ability/Ability";
 
 export default abstract class Condition {
-  id = UuidUtil.nextId();
   type = "";
   public abstract clone(): Condition;
   public abstract toJson(): any;

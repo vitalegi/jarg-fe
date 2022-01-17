@@ -1,6 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
-import UuidUtil from "@/utils/UuidUtil";
 import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Condition from "../condition/Condition";
@@ -13,7 +12,6 @@ export default abstract class Effect {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.Effects.Effect.Effect"
   );
-  id = UuidUtil.nextId();
   type;
   target = new Target();
   conditions: Condition[] = [];
@@ -23,9 +21,6 @@ export default abstract class Effect {
   }
 
   public static fromJson(effect: Effect, json: any): void {
-    if (json.id) {
-      effect.id = json.id;
-    }
     effect.target = Target.fromJson(json.target);
     if (json.conditions) {
       effect.conditions = json.conditions.map(ConditionFactory.fromJson);
@@ -36,14 +31,16 @@ export default abstract class Effect {
   public abstract toJson(): any;
   public abstract summary(): string;
 
+  public hash(): string {
+    return JSON.stringify(this.toJson());
+  }
+
   protected _clone(obj: Effect): void {
-    obj.id = this.id;
     obj.target = this.target.clone();
     obj.conditions = this.conditions.map((c) => c.clone());
   }
 
   protected _toJson(obj: any): void {
-    obj.id = this.id;
     obj.target = this.target.toJson();
     obj.conditions = this.conditions.map((c) => c.toJson());
   }

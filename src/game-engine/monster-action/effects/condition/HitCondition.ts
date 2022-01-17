@@ -12,12 +12,10 @@ export default class HitCondition extends Condition {
 
   public clone(): Condition {
     const out = new HitCondition();
-    out.id = this.id;
     return out;
   }
   public toJson(): any {
     const out: any = {};
-    out.id = this.id;
     out.type = this.type;
     return out;
   }

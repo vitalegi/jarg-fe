@@ -1,3 +1,4 @@
+import NumberUtil from "@/utils/NumberUtil";
 import RechargeFamily from "../../battle/RechargeFamily";
 import StatsConstants from "../../monster/stats/StatsContants";
 import AbstractProcessor from "../ability-processor/AbstractProcessor";
@@ -38,7 +39,7 @@ export default class Ability {
     if (json.types) {
       out.types.push(...(json.types as string[]));
     }
-    out.rechargeFamily = parseInt(json.rechargeFamily, 10);
+    out.rechargeFamily = NumberUtil.parse(json.rechargeFamily);
     out.atkStat = json.atkStat;
     if (out.atkStat === "") {
       out.atkStat = null;

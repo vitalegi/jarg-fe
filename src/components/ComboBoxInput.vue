@@ -26,7 +26,7 @@ export default Vue.extend({
       this.$emit("change", values);
     },
   },
-  async mounted() {
+  mounted() {
     if (this.select.length > 0) {
       this.select.splice(0, this.select.length);
     }
