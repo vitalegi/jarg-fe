@@ -15,6 +15,7 @@ import AbilityRepository from "../repositories/AbilityRepository";
 import ArrayUtil from "@/utils/ArrayUtil";
 import TapAnythingUserActionHandler from "../user-action-handler/TapAnythingUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
+import ComputedEffectUtil from "../monster-action/computed-effect/ComputedEffectUtil";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -98,7 +99,9 @@ export default class MonsterInfoDrawer extends Drawer {
         lineY()
       );
       const statuses = ArrayUtil.removeDuplicates(
-        this.monster.statusAlterations.map((s) => s.status),
+        ComputedEffectUtil.getStatusAlterations(this.monster.activeEffects).map(
+          (a) => a.status
+        ),
         (a, b) => a === b
       );
       this.addText(`Status ${statuses.join(", ")}`, x1, lineY());

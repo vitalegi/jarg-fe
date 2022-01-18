@@ -4,21 +4,32 @@ import TextOverCharacterDrawer from "@/game-engine/ui/TextOverCharacterDrawer";
 import Container from "typedi";
 
 export default abstract class ComputedEffect {
+  type;
+
+  public constructor(type: string) {
+    this.type = type;
+  }
+
   abstract hasEffectOn(monster: Monster): boolean;
 
-  public applyBeforeRender(): void {
+  public async onHitBefore(): Promise<void> {
     return;
   }
-  public async render(): Promise<void> {
+  public async onHitRender(): Promise<void> {
     return;
   }
-  public applyAfterRender(): void {
+  public async onHitAfter(): Promise<void> {
     return;
   }
-  public getDamage(): number {
-    return 0;
+  public async turnStartBefore(): Promise<void> {
+    return;
   }
-
+  public async turnStartRender(): Promise<void> {
+    return;
+  }
+  public async turnStartAfter(): Promise<void> {
+    return;
+  }
   protected async showTextOverMonster(
     monster: Monster,
     text: string

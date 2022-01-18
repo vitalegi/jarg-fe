@@ -6,12 +6,13 @@ export default class HpDamageComputed extends ComputedEffect {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.ComputedEffect.HpDamageComputed"
   );
+  public static TYPE = "HP_DAMAGE";
 
   target;
   damage;
 
   public constructor(target: Monster, damage: number) {
-    super();
+    super(HpDamageComputed.TYPE);
     this.target = target;
     this.damage = damage;
   }
@@ -22,10 +23,10 @@ export default class HpDamageComputed extends ComputedEffect {
   public getDamage(): number {
     return this.damage;
   }
-  public async render(): Promise<void> {
+  public async onHitRender(): Promise<void> {
     return super.showTextOverMonster(this.target, "TODO");
   }
-  public applyAfterRender(): void {
+  public async onHitAfter(): Promise<void> {
     this.logger.info(
       `BATTLE HpDamageComputed: ${this.damage} HP damage to ${this.target.name}`
     );

@@ -1,8 +1,7 @@
 import Character from "../../models/Character";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
-import StatAlteration from "./stats/StatAlteration";
+import ComputedEffect from "../monster-action/computed-effect/ComputedEffect";
 import Stats from "./stats/Stats";
-import StatusAlteration from "./status/StatusAlteration";
 
 export default class Monster extends Character {
   ownerId: string | null = "";
@@ -18,12 +17,10 @@ export default class Monster extends Character {
    */
   stats = new Stats();
   growthRates = new Stats();
-  statsAlterations: StatAlteration[] = [];
-  statusAlterations: StatusAlteration[] = [];
-
+  activeEffects: ComputedEffect[] = [];
   abilities: AbilityLearned[] = [];
 
-  public static fromJson(monster: any): Monster {
+  public static fromJson1(monster: any): Monster {
     const out = new Monster();
     Character.fromJson(monster, out);
     out.ownerId = monster.ownerId;
@@ -36,16 +33,16 @@ export default class Monster extends Character {
     if (monster.abilities) {
       out.abilities = monster.abilities.map(AbilityLearned.fromJson);
     }
-    if (monster.statsAlterations) {
-      out.statsAlterations = monster.statsAlterations.map(
-        StatAlteration.fromJson
-      );
-    }
-    if (monster.statusAlterations) {
-      out.statusAlterations = monster.statusAlterations.map(
-        StatusAlteration.fromJson
-      );
+    if (monster.activeEffects) {
+      // TODO implement fromJson or remove Monster.fromJson method
+      out.activeEffects = monster.activeEffects
+        .map
+        //ComputedEffect.fromJson
+        ();
     }
     return out;
+  }
+  public isDead(): boolean {
+    return this.stats.hp <= 0;
   }
 }

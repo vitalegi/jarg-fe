@@ -70,7 +70,7 @@ export default class BattleService {
       await focus.notifyWhenCompleted();
     }
     await this.applyStatusEffects(monster);
-    if (this.isDead(monster)) {
+    if (monster.isDead()) {
       this.logger.info(
         `Monster died due to bad status effects, go to next turn`
       );
@@ -184,10 +184,6 @@ export default class BattleService {
 
   public getMonstersInBattle(): Monster[] {
     return this.mapRepository.getMap().monsters;
-  }
-
-  public isDead(monster: Monster): boolean {
-    return monster.stats.hp <= 0;
   }
 
   public async die(uuid: string): Promise<void> {
@@ -312,7 +308,7 @@ export default class BattleService {
     await this.changeHealth(monster, fromHP, toHP);
     monster.stats.hp = toHP;
 
-    if (this.isDead(monster)) {
+    if (monster.isDead()) {
       const totalExp = this.levelUpService.getKillExperience(monster);
       await this.die(monster.uuid);
       const monsters = this.mapRepository

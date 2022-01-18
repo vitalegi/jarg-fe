@@ -1,3 +1,4 @@
+import AbsorbLifeEffect from "./AbsorbLifeEffect";
 import Effect from "./Effect";
 import HpDamageEffect from "./HpDamageEffect";
 import StatChangeEffect from "./StatChangeEffect";
@@ -13,6 +14,9 @@ export default class EffectFactory {
     }
     if (json.type === StatusChangeEffect.KEY) {
       return StatusChangeEffect.fromJson(json);
+    }
+    if (json.type === AbsorbLifeEffect.KEY) {
+      return AbsorbLifeEffect.fromJson(json);
     }
     throw Error(`Unknown effect ${JSON.stringify(json)}`);
   }

@@ -1,5 +1,4 @@
 import Monster from "@/game-engine/monster/Monster";
-import StatusAlteration from "@/game-engine/monster/status/StatusAlteration";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
 import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
@@ -8,12 +7,13 @@ export default class StatusChangeComputed extends ComputedEffect {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.ComputedEffect.StatusChangeComputed"
   );
+  public static TYPE = "STATUS_CHANGE";
 
   target;
   status;
 
   public constructor(target: Monster, status: string) {
-    super();
+    super(StatusChangeComputed.TYPE);
     this.target = target;
     this.status = status;
   }
@@ -21,11 +21,10 @@ export default class StatusChangeComputed extends ComputedEffect {
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }
-
-  public async render(): Promise<void> {
+  public async onHitRender(): Promise<void> {
     return super.showTextOverMonster(this.target, "TODO " + this.status);
   }
-  public applyAfterRender(): void {
+  public async onHitAfter(): Promise<void> {
     this.logger.info(`Apply ${this.status} to ${this.target.name}`);
     if (this.status === StatusContants.HASTE) {
       this.removeStatus(this.target, StatusContants.SLOW);
@@ -34,12 +33,16 @@ export default class StatusChangeComputed extends ComputedEffect {
       this.removeStatus(this.target, StatusContants.HASTE);
     }
     // TODO add duration
-    this.target.statusAlterations.push(new StatusAlteration(this.status));
+    this.target.activeEffects.push(this);
   }
 
   protected removeStatus(monster: Monster, remove: string): void {
-    monster.statusAlterations = monster.statusAlterations.filter(
-      (a) => a.status !== remove
-    );
+    monster.activeEffects = monster.activeEffects.filter((a) => {
+      if (a.type !== StatusChangeComputed.TYPE) {
+        return true;
+      }
+      const statChange = a as StatusChangeComputed;
+      return statChange.status !== remove;
+    });
   }
 }

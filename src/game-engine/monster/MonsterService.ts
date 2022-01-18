@@ -91,6 +91,7 @@ export default class MonsterService {
     this.abilityService
       .getNewLearnableAbilities(monster)
       .forEach((a) => this.abilityService.learnAbility(monster, a.abilityId));
+    this.abilityService.learnAbility(monster, "001");
     this.logger.info(
       `Abilities known: ${monster.abilities.map((a) => a.abilityId).join(", ")}`
     );

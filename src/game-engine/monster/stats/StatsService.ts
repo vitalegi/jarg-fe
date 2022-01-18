@@ -1,9 +1,9 @@
+import ComputedEffect from "@/game-engine/monster-action/computed-effect/ComputedEffect";
+import ComputedEffectUtil from "@/game-engine/monster-action/computed-effect/ComputedEffectUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 import Monster from "../Monster";
-import StatusAlteration from "../status/StatusAlteration";
 import StatusService from "../status/StatusService";
-import StatAlteration from "./StatAlteration";
 import Stats from "./Stats";
 import StatsConstants from "./StatsContants";
 
@@ -136,7 +136,7 @@ export default class StatsService {
 
     monster.stats = this.getStatsWithAlterations(
       stats,
-      monster.statsAlterations,
+      monster.activeEffects,
       speedBonus
     );
   }
@@ -173,16 +173,12 @@ export default class StatsService {
 
   protected getStatsWithAlterations(
     stats: Stats,
-    statsAlterations: StatAlteration[],
+    activeEffects: ComputedEffect[],
     speedBonus: number
   ): Stats {
     const alteredStats = stats.clone();
     StatsConstants.COLLECTION.forEach((stat) => {
-      const newValue = this.getStatWithAlterations(
-        stats,
-        stat,
-        statsAlterations
-      );
+      const newValue = this.getStatWithAlterations(stats, stat, activeEffects);
       this.setStat(alteredStats, stat, newValue);
     });
     alteredStats.speed = Math.ceil(speedBonus * alteredStats.speed);
@@ -192,9 +188,9 @@ export default class StatsService {
   protected getStatWithAlterations(
     stats: Stats,
     stat: string,
-    alterations: StatAlteration[]
+    activeEffects: ComputedEffect[]
   ): number {
-    const sumPercentages = alterations
+    const sumPercentages = ComputedEffectUtil.getStatChanges(activeEffects)
       .filter((a) => a.stat === stat)
       .map((a) => a.percentage)
       .reduce((prev, curr) => prev + curr, 0);

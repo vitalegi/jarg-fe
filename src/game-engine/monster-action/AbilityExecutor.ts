@@ -4,7 +4,6 @@ import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./ability/Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
-import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
 import TurnManager from "../battle/TurnManager";
@@ -78,20 +77,22 @@ export default class AbilityExecutor {
     effects = this.getEffectsOnMonster(effects, monster);
 
     const fromHP = monster.stats.hp;
-    effects.forEach((e) => e.applyBeforeRender());
-
     for (let i = 0; i < effects.length; i++) {
-      await effects[i].render();
+      await effects[i].onHitBefore();
     }
-
-    effects.forEach((e) => e.applyAfterRender());
+    for (let i = 0; i < effects.length; i++) {
+      await effects[i].onHitRender();
+    }
+    for (let i = 0; i < effects.length; i++) {
+      await effects[i].onHitAfter();
+    }
 
     this.statsService.updateMonsterAttributes(monster, false);
 
     const toHP = monster.stats.hp;
     await this.battleService.changeHealth(monster, fromHP, toHP);
 
-    if (this.battleService.isDead(monster)) {
+    if (monster.isDead()) {
       const exp = this.levelUpService.getKillExperience(monster);
       await this.battleService.die(monster.uuid);
       // if you killed an ally, you don't earn any exp.

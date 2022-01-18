@@ -1,6 +1,6 @@
+import ComputedEffectUtil from "@/game-engine/monster-action/computed-effect/ComputedEffectUtil";
 import { Service } from "typedi";
 import Monster from "../Monster";
-import StatusAlteration from "./StatusAlteration";
 import StatusContants from "./StatusContants";
 
 @Service()
@@ -96,7 +96,9 @@ export default class StatusService {
     return this.findByStatus(monster, status).length > 0;
   }
 
-  protected findByStatus(monster: Monster, status: string): StatusAlteration[] {
-    return monster.statusAlterations.filter((a) => a.status === status);
+  protected findByStatus(monster: Monster, status: string): string[] {
+    return ComputedEffectUtil.getStatusAlterations(monster.activeEffects)
+      .map((e) => e.status)
+      .filter((s) => s === status);
   }
 }

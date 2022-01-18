@@ -6,9 +6,11 @@ export default class MissComputed extends ComputedEffect {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.ComputedEffect.MissComputed"
   );
+  public static TYPE = "MISS";
+
   target;
   public constructor(target: Monster) {
-    super();
+    super(MissComputed.TYPE);
     this.target = target;
   }
 
@@ -16,7 +18,7 @@ export default class MissComputed extends ComputedEffect {
     return monster.uuid === this.target.uuid;
   }
 
-  public async render(): Promise<void> {
+  public async onHitAfter(): Promise<void> {
     this.logger.info(`MissComputed: miss attack to ${this.target.name}`);
     return super.showTextOverMonster(this.target, "MISS");
   }

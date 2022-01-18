@@ -3,20 +3,18 @@ import StatAlteration from "@/game-engine/monster/stats/StatAlteration";
 import LoggerFactory from "@/logger/LoggerFactory";
 import ComputedEffect from "./ComputedEffect";
 
-export default class StatChangeComputed extends ComputedEffect {
+export default class AbsorbLifeComputed extends ComputedEffect {
   logger = LoggerFactory.getLogger(
-    "GameEngine.MonsterAction.ComputedEffect.StatChangeComputed"
+    "GameEngine.MonsterAction.ComputedEffect.AbsorbLifeComputed"
   );
-  public static TYPE = "STAT_CHANGE";
+  public static TYPE = "ABSORB_LIFE";
 
   target;
-  stat;
   percentage;
 
-  public constructor(target: Monster, stat: string, percentage: number) {
-    super(StatChangeComputed.TYPE);
+  public constructor(target: Monster, percentage: number) {
+    super(AbsorbLifeComputed.TYPE);
     this.target = target;
-    this.stat = stat;
     this.percentage = percentage;
   }
 
@@ -25,18 +23,15 @@ export default class StatChangeComputed extends ComputedEffect {
   }
 
   public async onHitRender(): Promise<void> {
-    return super.showTextOverMonster(
-      this.target,
-      "TODO " + this.percentage + " " + this.stat
-    );
+    return super.showTextOverMonster(this.target, `-${this.percentage}%`);
   }
   public async onHitAfter(): Promise<void> {
     this.logger.info(
-      `Apply stat change to ${this.target.name}: ${this.percentage * 100}% ${
-        this.stat
-      }`
+      `Reduce life of ${this.target.name} by ${this.percentage * 100}%`
     );
     // TODO add duration
-    this.target.activeEffects.push(this);
+    this.target.statsAlterations.push(
+      new StatAlteration(this.stat, this.percentage)
+    );
   }
 }
