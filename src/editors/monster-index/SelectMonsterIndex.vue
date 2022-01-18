@@ -2,16 +2,21 @@
   <v-dialog v-model="dialog" max-width="500">
     <template v-slot:activator="{ on, attrs }">
       <v-text-field
-        v-model="selected"
+        v-model="model"
         :label="label"
         append-outer-icon="mdi-map-marker"
         readonly
         v-bind="attrs"
         v-on="on"
       >
-        <template v-slot:append-outer>
+        <template v-slot:prepend>
           <v-btn color="primary" icon v-bind="attrs" v-on="on">
             <v-icon>mdi-account-search</v-icon>
+          </v-btn>
+        </template>
+        <template v-slot:append-outer>
+          <v-btn color="primary" icon @click="reset">
+            <v-icon>mdi-close</v-icon>
           </v-btn>
         </template>
       </v-text-field>
@@ -52,8 +57,11 @@ export default Vue.extend({
       type: String,
       default: "Monster",
     },
+    initialValue: {
+      type: MonsterIndex,
+    },
   },
-  data: () => ({ dialog: false, selected: "" }),
+  data: () => ({ dialog: false, model: "" }),
   computed: {
     monsters(): MonsterIndex[] {
       return this.$store.state.monsterIndexEditor as MonsterIndex[];
@@ -62,9 +70,25 @@ export default Vue.extend({
   methods: {
     select(monster: MonsterIndex): void {
       this.dialog = false;
-      this.selected = `${monster.monsterId} - ${monster.name}`;
+      this.model = this.getLabel(monster);
       this.$emit("change", monster);
     },
+    reset(): void {
+      this.dialog = false;
+      this.model = "";
+      this.$emit("change", null);
+    },
+    getLabel(monster: MonsterIndex | null): string {
+      if (monster) {
+        return `${monster.monsterId} - ${monster.name}`;
+      }
+      return "";
+    },
+  },
+  mounted(): void {
+    if (this.initialValue) {
+      this.model = this.getLabel(this.initialValue);
+    }
   },
 });
 </script>

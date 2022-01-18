@@ -25,12 +25,9 @@
       <v-col cols="3">
         <SelectMonsterIndex
           label="Evolution"
-          @change="(monster) => changeEvolutionId(evolution, monster.monsterId)"
-        />
-        <EditableTextField
-          label="Evolution"
-          :value="evolution.evolutionId"
-          @change="(evolutionId) => changeEvolutionId(evolution, evolutionId)"
+          :initialValue="findMonster(evolution.evolutionId)"
+          @change="(monster) => changeEvolutionId(evolution, monster)"
+          @reset="() => changeEvolutionId(evolution, null)"
         />
       </v-col>
       <v-col cols="3">
@@ -49,7 +46,6 @@
 
 <script lang="ts">
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import EditableTextField from "@/components/EditableTextField.vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
 import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
@@ -68,7 +64,6 @@ export default Vue.extend({
   },
   components: {
     EditableIntegerField,
-    EditableTextField,
     SelectMonsterIndex,
   },
   data: () => ({
@@ -107,9 +102,13 @@ export default Vue.extend({
       evolutions.push(MonsterEvolution.byLevel(this.monsters[0].monsterId, 1));
       this.$emit("changeEvolutions", evolutions);
     },
-    changeEvolutionId(evolution: MonsterEvolution, evolutionId: string): void {
+    changeEvolutionId(
+      evolution: MonsterEvolution,
+      evolutionMonster: MonsterIndex | null
+    ): void {
       const evolutions = this.getEvolutions().map((e) => e.clone());
       const index = this.findIndex(evolution);
+      const evolutionId = evolutionMonster ? evolutionMonster.monsterId : "";
       evolutions[index].evolutionId = evolutionId;
       this.logger.info(`change evolution ${index} id: ${evolutionId}`);
       this.$emit("changeEvolutions", evolutions);
