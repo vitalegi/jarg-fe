@@ -80,35 +80,31 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <v-text-field
-          v-model="source"
+        <SelectMonsterIndex
+          :initialValue="findMonster(source)"
           label="Source"
-          :hint="getMonsterName(source)"
-          persistent-hint
+          @change="changeSource"
         />
       </v-col>
       <v-col cols="3">
-        <v-text-field
-          v-model="target1"
+        <SelectMonsterIndex
+          :initialValue="findMonster(target1)"
           label="Target 1"
-          :hint="getMonsterName(target1)"
-          persistent-hint
+          @change="changeTarget1"
         />
       </v-col>
       <v-col cols="3">
-        <v-text-field
-          v-model="target2"
+        <SelectMonsterIndex
+          :initialValue="findMonster(target2)"
           label="Target 2"
-          :hint="getMonsterName(target2)"
-          persistent-hint
+          @change="changeTarget2"
         />
       </v-col>
       <v-col cols="3">
-        <v-text-field
-          v-model="target3"
+        <SelectMonsterIndex
+          :initialValue="findMonster(target3)"
           label="Target 3"
-          :hint="getMonsterName(target3)"
-          persistent-hint
+          @change="changeTarget3"
         />
       </v-col>
       <v-col cols="3">
@@ -175,10 +171,13 @@ import Stats from "@/game-engine/monster/stats/Stats";
 import FormulaService from "@/game-engine/monster-action/FormulaService";
 import NumberUtil from "@/utils/NumberUtil";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
+import SelectMonsterIndex from "./SelectMonsterIndex.vue";
 
 export default Vue.extend({
   name: "MonsterIndexStatComparator",
-  components: {},
+  components: {
+    SelectMonsterIndex,
+  },
   props: {},
   data: () => ({
     statsService: Container.get<StatsService>(StatsService),
@@ -322,12 +321,17 @@ export default Vue.extend({
     },
   },
   methods: {
-    getMonsterName(id: string): string {
-      const monster = this.findMonster(id);
-      if (monster) {
-        return monster.name;
-      }
-      return "";
+    changeSource(m: MonsterIndex | null): void {
+      this.source = m ? m.monsterId : "";
+    },
+    changeTarget1(m: MonsterIndex | null): void {
+      this.target1 = m ? m.monsterId : "";
+    },
+    changeTarget2(m: MonsterIndex | null): void {
+      this.target2 = m ? m.monsterId : "";
+    },
+    changeTarget3(m: MonsterIndex | null): void {
+      this.target3 = m ? m.monsterId : "";
     },
     findMonster(id: string): MonsterIndex | null {
       const monster = this.monsters.find((m) => m.monsterId === id);

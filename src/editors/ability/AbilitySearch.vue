@@ -27,7 +27,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-data-iterator :items="filteredMonsters" item-key="monsterId">
+        <v-data-iterator :items="filteredAbilities" item-key="id">
           <template v-slot:default="{ items, isExpanded, expand }">
             <slot
               v-bind:items="items"
@@ -45,23 +45,16 @@
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
 import Container from "typedi";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 
 export default Vue.extend({
-  name: "MonstersIndexSearch",
+  name: "AbilitySearch",
   components: {},
-  props: { monsters: Array, size: { type: String, default: "LARGE" } },
+  props: { abilities: Array, size: { type: String, default: "LARGE" } },
   data: () => ({
     sortByOptions: [
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
-      { text: "Base HP", key: "BASE_HP" },
-      { text: "Base ATK", key: "BASE_ATK" },
-      { text: "Base DEF", key: "BASE_DEX" },
-      { text: "Base INT", key: "BASE_INT" },
-      { text: "Base RES", key: "BASE_RES" },
-      { text: "Base HIT", key: "BASE_HIT" },
-      { text: "Base DEX", key: "BASE_DEX" },
-      { text: "Base SPEED", key: "BASE_SPEED" },
     ],
     sortBy: "ID",
     sortOrderAsc: true,
@@ -93,57 +86,41 @@ export default Vue.extend({
       }
       return 4;
     },
-    filteredMonsters(): MonsterIndex[] {
-      return this.getMonsters()
+    filteredAbilities(): Ability[] {
+      return this.getAbilities()
         .filter((m) => this.filter(m))
         .sort((a, b) => this.compare(a, b));
     },
   },
   methods: {
-    getMonsters(): MonsterIndex[] {
-      return this.monsters as MonsterIndex[];
+    getAbilities(): Ability[] {
+      return this.abilities as Ability[];
     },
-    filter(m: MonsterIndex): boolean {
+    filter(m: Ability): boolean {
       if (this.search.trim() === "") {
         return true;
       }
-      const name = m.name.toLowerCase();
+      const label = m.label.toLowerCase();
       const search = this.search.toLowerCase().trim();
-      if (name.indexOf(search) !== -1) {
+      if (label.indexOf(search) !== -1) {
         return true;
       }
       return false;
     },
-    compare(a: MonsterIndex, b: MonsterIndex): number {
+    compare(a: Ability, b: Ability): number {
       if (this.sortOrderAsc) {
         return this.doCompare(a, b);
       }
       return this.doCompare(b, a);
     },
-    doCompare(a: MonsterIndex, b: MonsterIndex): number {
+    doCompare(a: Ability, b: Ability): number {
       switch (this.sortBy) {
         case "ID":
-          return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
+          return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
         case "NAME":
-          return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
-        case "BASE_HP":
-          return a.baseStats.maxHP - b.baseStats.maxHP;
-        case "BASE_ATK":
-          return a.baseStats.atk - b.baseStats.atk;
-        case "BASE_DEF":
-          return a.baseStats.def - b.baseStats.def;
-        case "BASE_INT":
-          return a.baseStats.int - b.baseStats.int;
-        case "BASE_RES":
-          return a.baseStats.res - b.baseStats.res;
-        case "BASE_HIT":
-          return a.baseStats.hit - b.baseStats.hit;
-        case "BASE_DEX":
-          return a.baseStats.dex - b.baseStats.dex;
-        case "BASE_SPEED":
-          return a.baseStats.speed - b.baseStats.speed;
+          return a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1;
       }
-      return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
+      return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
     },
   },
 });

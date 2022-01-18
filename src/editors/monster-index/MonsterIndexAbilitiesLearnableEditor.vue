@@ -23,12 +23,11 @@
         </v-btn>
       </v-col>
       <v-col cols="6">
-        <ComboBoxInput
-          :allValues="selectableAbilities"
-          label="Ability"
-          :values="[getAbilityLabel(ability.abilityId)]"
-          @change="(e) => changeAbility(index, e)"
+        <SelectAbility
+          :initialValue="findAbility(ability.abilityId)"
+          @change="(a) => changeAbility(index, a)"
         />
+        {{ ability }}
       </v-col>
       <v-col cols="5">
         <EditableIntegerField
@@ -42,7 +41,6 @@
 </template>
 
 <script lang="ts">
-import ComboBoxInput from "@/components/ComboBoxInput.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
 import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
@@ -50,6 +48,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import Vue from "vue";
 import AbilityEditorRepository from "../ability/AbilityEditorRepository";
+import SelectAbility from "../ability/SelectAbility.vue";
 
 export default Vue.extend({
   name: "MonsterIndexAbilitiesLearnableEditor",
@@ -59,8 +58,8 @@ export default Vue.extend({
     },
   },
   components: {
-    ComboBoxInput,
     EditableIntegerField,
+    SelectAbility,
   },
   data: () => ({
     abilityEditorRepository: Container.get<AbilityEditorRepository>(
@@ -96,28 +95,18 @@ export default Vue.extend({
     getAbilities(): AbilityLearnable[] {
       return this.abilities as AbilityLearnable[];
     },
-    getAbilityLabel(abilityId: string): string {
-      const ability = this.getAbility(abilityId);
-      return ability.label;
-    },
-    getAbility(abilityId: string): Ability {
+    findAbility(abilityId: string): Ability | null {
       const ability = this.allAbilities.find((a) => a.id === abilityId);
       if (ability) {
         return ability;
       }
-      throw Error(
-        `Ability ${abilityId} not found. Availables: ${this.allAbilities
-          .map((a) => a.id)
-          .join(", ")}`
-      );
+      return null;
     },
-    changeAbility(
-      index: number,
-      newAbility: { text: string; value: string }
-    ): void {
+    changeAbility(index: number, newAbility: Ability | null): void {
       const abilities = this.getAbilities().map((a) => a.clone());
-      abilities[index].abilityId = newAbility.value;
-      this.logger.info(`change ability ${index} ${JSON.stringify(newAbility)}`);
+      const abilityId = newAbility ? newAbility.id : "";
+      abilities[index].abilityId = abilityId;
+      this.logger.info(`change ability ${index} to ${abilityId}`);
       this.$emit("changeAbilities", abilities);
     },
     changeLevel(index: number, level: number): void {
