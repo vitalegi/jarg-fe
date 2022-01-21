@@ -61,6 +61,31 @@
           />
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="1" style="text-align: left"> Duration </v-col>
+        <v-col cols="4">
+          <ComboBoxInput
+            :allValues="durations"
+            label="Duration"
+            :values="[effect.duration.type]"
+            @change="changeDuration"
+          />
+        </v-col>
+        <v-col v-if="isFixedDuration" cols="2">
+          <EditableIntegerField
+            label="Turns"
+            :value="effect.duration.end"
+            @change="(e) => changeFixedDuration(e)"
+          />
+        </v-col>
+        <v-col v-if="isRandomDuration" cols="2">
+          <EditableIntegerField
+            label="Success completion %"
+            :value="100 * effect.duration.threshold"
+            @change="(e) => changeRandomDuration(e / 100)"
+          />
+        </v-col>
+      </v-row>
     </v-container>
   </v-card>
 </template>
@@ -81,6 +106,9 @@ import HpDamageEffect from "@/game-engine/monster-action/effects/effect/HpDamage
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import StatusChangeEffect from "@/game-engine/monster-action/effects/effect/StatusChangeEffect";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
+import { Immediate } from "@/game-engine/monster-action/effects/duration/Immediate";
+import { FixedDuration } from "@/game-engine/monster-action/effects/duration/FixedDuration";
+import { RandomDuration } from "@/game-engine/monster-action/effects/duration/RandomDuration";
 
 export default Vue.extend({
   name: "EffectEditor",
@@ -108,6 +136,13 @@ export default Vue.extend({
         { value: HpDamageEffect.KEY, text: "Change HP of fixed amount" },
       ];
     },
+    durations(): { text: string; value: string }[] {
+      return [
+        { value: Immediate.TYPE, text: "Immediate" },
+        { value: FixedDuration.TYPE, text: "Fixed" },
+        { value: RandomDuration.TYPE, text: "Random duration" },
+      ];
+    },
     isStatChangeEffect(): boolean {
       return this.getEffect().type === StatChangeEffect.KEY;
     },
@@ -116,6 +151,15 @@ export default Vue.extend({
     },
     isHpDamageEffect(): boolean {
       return this.getEffect().type === HpDamageEffect.KEY;
+    },
+    isImmediate(): boolean {
+      return this.getEffect().duration.type === Immediate.TYPE;
+    },
+    isFixedDuration(): boolean {
+      return this.getEffect().duration.type === FixedDuration.TYPE;
+    },
+    isRandomDuration(): boolean {
+      return this.getEffect().duration.type === RandomDuration.TYPE;
     },
     targetType(): string[] {
       return [TargetType.SELF, TargetType.TARGET];
@@ -194,6 +238,36 @@ export default Vue.extend({
     changeStatus(status: string): void {
       const e = this.getEffect().clone();
       (e as StatusChangeEffect).status = status;
+      this.$emit("change", e);
+    },
+    changeDuration(type: { text: string; value: string }): void {
+      if (type.value === this.getEffect().duration.type) {
+        return;
+      }
+      let newDuration = null;
+      if (type.value === Immediate.TYPE) {
+        newDuration = new Immediate();
+      }
+      if (type.value === FixedDuration.TYPE) {
+        newDuration = new FixedDuration(0);
+      }
+      if (type.value === RandomDuration.TYPE) {
+        newDuration = new RandomDuration(0);
+      }
+      if (newDuration) {
+        const e = this.getEffect().clone();
+        e.duration = newDuration;
+        this.$emit("change", e);
+      }
+    },
+    changeFixedDuration(end: number): void {
+      const e = this.getEffect().clone();
+      (e.duration as FixedDuration).end = end;
+      this.$emit("change", e);
+    },
+    changeRandomDuration(threshold: number): void {
+      const e = this.getEffect().clone();
+      (e.duration as RandomDuration).threshold = threshold;
       this.$emit("change", e);
     },
   },

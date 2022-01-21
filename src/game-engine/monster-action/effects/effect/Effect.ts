@@ -4,6 +4,9 @@ import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Condition from "../condition/Condition";
 import ConditionFactory from "../condition/ConditionFactory";
+import Duration from "../duration/Duration";
+import DurationFactory from "../duration/DurationFactory";
+import { Immediate } from "../duration/Immediate";
 import Target from "../target/Target";
 
 export type EffectComputeType = "percentage" | "abs";
@@ -15,6 +18,7 @@ export default abstract class Effect {
   type;
   target = new Target();
   conditions: Condition[] = [];
+  duration: Duration = new Immediate();
 
   public constructor(type: string) {
     this.type = type;
@@ -25,6 +29,7 @@ export default abstract class Effect {
     if (json.conditions) {
       effect.conditions = json.conditions.map(ConditionFactory.fromJson);
     }
+    effect.duration = DurationFactory.fromJson(json.duration);
   }
 
   public abstract clone(): Effect;
@@ -38,11 +43,13 @@ export default abstract class Effect {
   protected _clone(obj: Effect): void {
     obj.target = this.target.clone();
     obj.conditions = this.conditions.map((c) => c.clone());
+    obj.duration = this.duration.clone();
   }
 
   protected _toJson(obj: any): void {
     obj.target = this.target.toJson();
     obj.conditions = this.conditions.map((c) => c.toJson());
+    obj.duration = this.duration.toJson();
   }
 
   protected _summary(): string {

@@ -20,4 +20,8 @@ export default class RandomService {
   public randomDecimal(from: number, to: number): number {
     return from + Math.random() * (to - from);
   }
+
+  public randomBool(lessThen: number): boolean {
+    return Math.random() < lessThen;
+  }
 }
