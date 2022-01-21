@@ -13,7 +13,6 @@ import GameConfig from "../GameConfig";
 import SelectNextBattlePhase from "../game-phase/SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
 import StatusService from "../monster/status/StatusService";
-import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import { LevelUpService } from "../monster/LevelUpService";
 import TextOverCharacterDrawer from "../ui/TextOverCharacterDrawer";
 import MonsterIndexService from "../monster/MonsterIndexService";
@@ -24,6 +23,7 @@ import MonsterEvolutionService from "../monster/monster-evolution/MonsterEvoluti
 import RendererService from "@/services/RendererService";
 import HealthBarService from "../monster/HealthBarService";
 import PhaseService from "../game-phase/PhaseService";
+import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 
 @Service()
 export default class BattleService {
@@ -68,6 +68,15 @@ export default class BattleService {
       const focus = new ChangeFocusDrawer(monster.coordinates);
       this.gameLoop.addGameLoopHandler(focus);
       await focus.notifyWhenCompleted();
+    }
+    for (const e of monster.activeEffects) {
+      await e.turnStartBefore();
+    }
+    for (const e of monster.activeEffects) {
+      await e.turnStartRender();
+    }
+    for (const e of monster.activeEffects) {
+      await e.turnStartAfter();
     }
     await this.applyStatusEffects(monster);
     if (monster.isDead()) {
@@ -205,16 +214,6 @@ export default class BattleService {
     this.turnManager.removeCharacter(uuid);
   }
 
-  public async changeHealth(
-    monster: Monster,
-    fromHP: number,
-    toHP: number
-  ): Promise<void> {
-    const healthUpdater = new HealthBarUpdateDrawer(monster, fromHP, toHP);
-    this.gameLoop.addGameLoopHandler(healthUpdater);
-    await healthUpdater.notifyWhenCompleted();
-  }
-
   public async gainExp(monster: Monster, exp: number): Promise<void> {
     const levelUp = this.levelUpService.canLevelUp(monster, exp);
     await this.levelUpService.gainExperience(monster, exp);
@@ -305,7 +304,7 @@ export default class BattleService {
     const damage = this.statusService.getDamage(monster);
     const fromHP = monster.stats.hp;
     const toHP = monster.stats.hp - damage;
-    await this.changeHealth(monster, fromHP, toHP);
+    await HealthBarUpdateDrawer.changeHealth(monster, fromHP, toHP);
     monster.stats.hp = toHP;
 
     if (monster.isDead()) {

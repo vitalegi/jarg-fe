@@ -22,7 +22,7 @@ export default class StatusChangeComputed extends ComputedEffect {
     return monster.uuid === this.target.uuid;
   }
   public async onHitRender(): Promise<void> {
-    return super.showTextOverMonster(this.target, "TODO " + this.status);
+    return super.showTextOverMonster(this.target, this.status);
   }
   public async onHitAfter(): Promise<void> {
     this.logger.info(`Apply ${this.status} to ${this.target.name}`);

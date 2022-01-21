@@ -24,12 +24,18 @@ export default class HpDamageComputed extends ComputedEffect {
     return this.damage;
   }
   public async onHitRender(): Promise<void> {
-    return super.showTextOverMonster(this.target, "TODO");
+    await super.showTextOverMonster(
+      this.target,
+      `${this.formatNumber(this.damage)} HP`
+    );
+    await this.safeUpdateHealth(this.target, -this.damage);
   }
   public async onHitAfter(): Promise<void> {
     this.logger.info(
-      `BATTLE HpDamageComputed: ${this.damage} HP damage to ${this.target.name}`
+      `Change HP of ${this.target.name}: ${-this.damage} HP, starting from ${
+        this.target.stats.hp
+      }`
     );
-    this.target.stats.hp -= this.damage;
+    this.target.stats.hp = super.getHealthChange(this.target, -this.damage);
   }
 }

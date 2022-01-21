@@ -6,6 +6,7 @@ import * as PIXI from "pixi.js";
 import HealthBarService from "../monster/HealthBarService";
 import MapRepository from "../map/MapRepository";
 import GameApp from "../GameApp";
+import GameLoop from "../GameLoop";
 
 export default class HealthBarUpdateDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
@@ -27,6 +28,16 @@ export default class HealthBarUpdateDrawer extends Drawer {
     this.monster = monster;
     this.from = from;
     this.to = to;
+  }
+
+  public static async changeHealth(
+    monster: Monster,
+    fromHP: number,
+    toHP: number
+  ): Promise<void> {
+    const healthUpdater = new HealthBarUpdateDrawer(monster, fromHP, toHP);
+    Container.get<GameLoop>(GameLoop).addGameLoopHandler(healthUpdater);
+    return healthUpdater.notifyWhenCompleted();
   }
 
   public getName(): string {

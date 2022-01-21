@@ -27,7 +27,9 @@ export default class StatChangeComputed extends ComputedEffect {
   public async onHitRender(): Promise<void> {
     return super.showTextOverMonster(
       this.target,
-      "TODO " + this.percentage + " " + this.stat
+      `${this.percentage > 0 ? "+" : "-"}${Math.abs(this.percentage) * 100}% ${
+        this.stat
+      }`
     );
   }
   public async onHitAfter(): Promise<void> {

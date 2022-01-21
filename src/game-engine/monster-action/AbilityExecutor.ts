@@ -55,28 +55,20 @@ export default class AbilityExecutor {
 
     await this.focusTarget();
     const abilityName = this.showAbilityName();
+    // TODO review this part: "effects" contains the processors that composes an action
+    // the executor should execute each processor one after the other, regardless of the target
+    // each processor should take care of reducing health bar and updating monsters' stats, if needed
+    // ability executor receives the exp and applies it to the source
 
-    const promises: Promise<number>[] = [];
-    promises.push(this.applyEffects(effects, this.source));
-    if (this.source.uuid !== this.target.uuid) {
-      promises.push(this.applyEffects(effects, this.target));
-    }
-    const totalExp = await Promise.all(promises);
+    const exp = await this.processEffects(effects);
     await abilityName;
-
-    const exp = totalExp.reduce((prev, curr) => prev + curr, 0);
-
     await this.battleService.gainExp(this.source, exp);
     this.logger.info("AbilityExecutor - END");
   }
 
-  protected async applyEffects(
-    effects: ComputedEffect[],
-    monster: Monster
-  ): Promise<number> {
-    effects = this.getEffectsOnMonster(effects, monster);
-
-    const fromHP = monster.stats.hp;
+  protected async processEffects(effects: ComputedEffect[]): Promise<number> {
+    const sourceHP = this.source.stats.hp;
+    const targetHP = this.target.stats.hp;
     for (let i = 0; i < effects.length; i++) {
       await effects[i].onHitBefore();
     }
@@ -86,17 +78,15 @@ export default class AbilityExecutor {
     for (let i = 0; i < effects.length; i++) {
       await effects[i].onHitAfter();
     }
+    // TODO move this in ComputedEffect
+    this.statsService.updateMonsterAttributes(this.source, false);
+    this.statsService.updateMonsterAttributes(this.target, false);
 
-    this.statsService.updateMonsterAttributes(monster, false);
-
-    const toHP = monster.stats.hp;
-    await this.battleService.changeHealth(monster, fromHP, toHP);
-
-    if (monster.isDead()) {
-      const exp = this.levelUpService.getKillExperience(monster);
-      await this.battleService.die(monster.uuid);
+    if (this.target.isDead()) {
+      const exp = this.levelUpService.getKillExperience(this.target);
+      await this.battleService.die(this.target.uuid);
       // if you killed an ally, you don't earn any exp.
-      if (this.source.ownerId !== monster.ownerId) {
+      if (this.source.ownerId !== this.target.ownerId) {
         return exp;
       }
     }

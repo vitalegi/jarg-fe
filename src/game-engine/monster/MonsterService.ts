@@ -8,7 +8,6 @@ import CoordinateService from "../CoordinateService";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
-import AbilityRepository from "../repositories/AbilityRepository";
 import Move from "@/models/Move";
 import TurnManager, { ActionType } from "../battle/TurnManager";
 import { LevelUpService } from "./LevelUpService";
