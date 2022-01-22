@@ -3,6 +3,8 @@ import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Effect from "./Effect";
 import StatChangeComputed from "../../computed-effect/StatChangeComputed";
+import { FixedDuration } from "../duration/FixedDuration";
+import { RandomDuration } from "../duration/RandomDuration";
 
 export default class StatChangeEffect extends Effect {
   public static KEY = "STATS_PERCENTAGE";
@@ -51,7 +53,14 @@ export default class StatChangeEffect extends Effect {
     );
 
     if (pass) {
-      return [new StatChangeComputed(effectTarget, this.stat, this.percentage)];
+      return [
+        new StatChangeComputed(
+          this.duration.create(),
+          effectTarget,
+          this.stat,
+          this.percentage
+        ),
+      ];
     }
     return [];
   }
@@ -59,5 +68,8 @@ export default class StatChangeEffect extends Effect {
     return `${super._summary()} change stat ${this.stat} by ${
       this.percentage * 100
     }% to ${this.target.type}`;
+  }
+  public supportedDurations(): string[] {
+    return [FixedDuration.TYPE, RandomDuration.TYPE];
   }
 }

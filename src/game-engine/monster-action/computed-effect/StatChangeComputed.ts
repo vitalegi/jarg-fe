@@ -1,6 +1,8 @@
 import Monster from "@/game-engine/monster/Monster";
-import StatAlteration from "@/game-engine/monster/stats/StatAlteration";
+import StatsService from "@/game-engine/monster/stats/StatsService";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Container from "typedi";
+import Duration from "../effects/duration/Duration";
 import ComputedEffect from "./ComputedEffect";
 
 export default class StatChangeComputed extends ComputedEffect {
@@ -13,8 +15,13 @@ export default class StatChangeComputed extends ComputedEffect {
   stat;
   percentage;
 
-  public constructor(target: Monster, stat: string, percentage: number) {
-    super(StatChangeComputed.TYPE);
+  public constructor(
+    duration: Duration,
+    target: Monster,
+    stat: string,
+    percentage: number
+  ) {
+    super(StatChangeComputed.TYPE, duration);
     this.target = target;
     this.stat = stat;
     this.percentage = percentage;
@@ -40,5 +47,8 @@ export default class StatChangeComputed extends ComputedEffect {
     );
     // TODO add duration
     this.target.activeEffects.push(this);
+
+    const statsService = Container.get<StatsService>(StatsService);
+    statsService.updateMonsterAttributes(this.target, false);
   }
 }

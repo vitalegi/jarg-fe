@@ -24,6 +24,7 @@ import RendererService from "@/services/RendererService";
 import HealthBarService from "../monster/HealthBarService";
 import PhaseService from "../game-phase/PhaseService";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
+import StatsService from "../monster/stats/StatsService";
 
 @Service()
 export default class BattleService {
@@ -51,6 +52,7 @@ export default class BattleService {
   protected rendererService = Container.get<RendererService>(RendererService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
+  protected statsService = Container.get<StatsService>(StatsService);
 
   public async startCharacterTurn(): Promise<void> {
     if (!this.turnManager.hasCharacters()) {
@@ -69,6 +71,24 @@ export default class BattleService {
       this.gameLoop.addGameLoopHandler(focus);
       await focus.notifyWhenCompleted();
     }
+    // refresh active effects
+    monster.activeEffects = monster.activeEffects.filter((e) => {
+      e.duration.nextTurn();
+      const completed = e.duration.isCompleted();
+      if (completed) {
+        this.logger.debug(
+          `Monster ${monster.name} (${monster.uuid}) active effect ${e.type} is completed, remove it`
+        );
+      } else {
+        this.logger.debug(
+          `Monster ${monster.name} (${monster.uuid}) active effect ${e.type} is still active`
+        );
+      }
+      return !completed;
+    });
+    // applied effects consider the current status of the monster, without expired effects
+    this.statsService.updateMonsterAttributes(monster, false);
+
     for (const e of monster.activeEffects) {
       await e.turnStartBefore();
     }
@@ -78,7 +98,10 @@ export default class BattleService {
     for (const e of monster.activeEffects) {
       await e.turnStartAfter();
     }
+    // refresh monster stat
+    this.statsService.updateMonsterAttributes(monster, false);
     await this.applyStatusEffects(monster);
+
     if (monster.isDead()) {
       this.logger.info(
         `Monster died due to bad status effects, go to next turn`

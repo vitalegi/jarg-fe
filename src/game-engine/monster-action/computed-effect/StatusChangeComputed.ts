@@ -1,6 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Duration from "../effects/duration/Duration";
 import ComputedEffect from "./ComputedEffect";
 
 export default class StatusChangeComputed extends ComputedEffect {
@@ -12,8 +13,8 @@ export default class StatusChangeComputed extends ComputedEffect {
   target;
   status;
 
-  public constructor(target: Monster, status: string) {
-    super(StatusChangeComputed.TYPE);
+  public constructor(duration: Duration, target: Monster, status: string) {
+    super(StatusChangeComputed.TYPE, duration);
     this.target = target;
     this.status = status;
   }

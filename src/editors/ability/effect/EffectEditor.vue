@@ -137,11 +137,12 @@ export default Vue.extend({
       ];
     },
     durations(): { text: string; value: string }[] {
+      const supported = this.getEffect().supportedDurations();
       return [
         { value: Immediate.TYPE, text: "Immediate" },
         { value: FixedDuration.TYPE, text: "Fixed" },
         { value: RandomDuration.TYPE, text: "Random duration" },
-      ];
+      ].filter((e) => supported.indexOf(e.value) !== -1);
     },
     isStatChangeEffect(): boolean {
       return this.getEffect().type === StatChangeEffect.KEY;
@@ -222,6 +223,11 @@ export default Vue.extend({
         newEffect.conditions = this.getEffect().conditions.map((c) =>
           c.clone()
         );
+        newEffect.duration = this.getEffect().duration.clone();
+        const supportedDurations = newEffect.supportedDurations();
+        if (supportedDurations.indexOf(newEffect.duration.type) === -1) {
+          newEffect.duration = this.createDuration(supportedDurations[0]);
+        }
         this.$emit("change", newEffect);
       }
     },
@@ -244,21 +250,24 @@ export default Vue.extend({
       if (type.value === this.getEffect().duration.type) {
         return;
       }
-      let newDuration = null;
-      if (type.value === Immediate.TYPE) {
-        newDuration = new Immediate();
-      }
-      if (type.value === FixedDuration.TYPE) {
-        newDuration = new FixedDuration(0);
-      }
-      if (type.value === RandomDuration.TYPE) {
-        newDuration = new RandomDuration(0);
-      }
+      const newDuration = this.createDuration(type.value);
       if (newDuration) {
         const e = this.getEffect().clone();
         e.duration = newDuration;
         this.$emit("change", e);
       }
+    },
+    createDuration(type: string) {
+      if (type === Immediate.TYPE) {
+        return new Immediate();
+      }
+      if (type === FixedDuration.TYPE) {
+        return new FixedDuration(0);
+      }
+      if (type === RandomDuration.TYPE) {
+        return new RandomDuration(0);
+      }
+      throw Error(`Unknown duration ${type}`);
     },
     changeFixedDuration(end: number): void {
       const e = this.getEffect().clone();

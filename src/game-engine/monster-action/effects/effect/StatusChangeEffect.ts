@@ -3,6 +3,8 @@ import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Effect from "./Effect";
 import StatusChangeComputed from "../../computed-effect/StatusChangeComputed";
+import { FixedDuration } from "../duration/FixedDuration";
+import { RandomDuration } from "../duration/RandomDuration";
 
 export default class StatusChangeEffect extends Effect {
   public static KEY = "STATUS_CHANGE";
@@ -45,11 +47,20 @@ export default class StatusChangeEffect extends Effect {
     this.logger.info(`Against ${target.uuid}, ${this.status} passed: ${pass}`);
 
     if (pass) {
-      return [new StatusChangeComputed(effectTarget, this.status)];
+      return [
+        new StatusChangeComputed(
+          this.duration.create(),
+          effectTarget,
+          this.status
+        ),
+      ];
     }
     return [];
   }
   public summary(): string {
     return `${super._summary()} is ${this.status}`;
+  }
+  public supportedDurations(): string[] {
+    return [FixedDuration.TYPE, RandomDuration.TYPE];
   }
 }

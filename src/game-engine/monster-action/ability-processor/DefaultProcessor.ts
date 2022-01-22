@@ -4,6 +4,8 @@ import Ability from "../ability/Ability";
 import ComputedEffect from "../computed-effect/ComputedEffect";
 import HpDamageComputed from "../computed-effect/HpDamageComputed";
 import MissComputed from "../computed-effect/MissComputed";
+import DurationFactory from "../effects/duration/DurationFactory";
+import { Immediate } from "../effects/duration/Immediate";
 import Effect from "../effects/effect/Effect";
 import FormulaService from "../FormulaService";
 import AbstractProcessor from "./AbstractProcessor";
@@ -26,9 +28,13 @@ export default class DefaultProcessor extends AbstractProcessor {
     if (ability.damage) {
       const damage = this.formulaService.damage(source, target, ability);
       if (hit) {
-        computedEffects.push(new HpDamageComputed(target, damage));
+        computedEffects.push(
+          new HpDamageComputed(new Immediate().create(), target, damage)
+        );
       } else {
-        computedEffects.push(new MissComputed(target));
+        computedEffects.push(
+          new MissComputed(new Immediate().create(), target)
+        );
       }
     }
     const additionalEffects = await this.computeAdditionalEffects(

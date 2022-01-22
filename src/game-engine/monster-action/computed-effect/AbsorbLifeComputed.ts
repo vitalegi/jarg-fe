@@ -1,5 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Duration from "../effects/duration/Duration";
 import ComputedEffect from "./ComputedEffect";
 import ComputedEffectUtil from "./ComputedEffectUtil";
 
@@ -13,8 +14,13 @@ export default class AbsorbLifeComputed extends ComputedEffect {
   target;
   percentage;
 
-  public constructor(source: Monster, target: Monster, percentage: number) {
-    super(AbsorbLifeComputed.TYPE);
+  public constructor(
+    duration: Duration,
+    source: Monster,
+    target: Monster,
+    percentage: number
+  ) {
+    super(AbsorbLifeComputed.TYPE, duration);
     this.source = source;
     this.target = target;
     this.percentage = percentage;

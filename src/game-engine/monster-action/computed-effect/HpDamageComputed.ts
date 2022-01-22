@@ -1,5 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Duration from "../effects/duration/Duration";
 import ComputedEffect from "./ComputedEffect";
 
 export default class HpDamageComputed extends ComputedEffect {
@@ -11,8 +12,8 @@ export default class HpDamageComputed extends ComputedEffect {
   target;
   damage;
 
-  public constructor(target: Monster, damage: number) {
-    super(HpDamageComputed.TYPE);
+  public constructor(duration: Duration, target: Monster, damage: number) {
+    super(HpDamageComputed.TYPE, duration);
     this.target = target;
     this.damage = damage;
   }

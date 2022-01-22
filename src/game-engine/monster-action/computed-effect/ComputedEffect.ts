@@ -3,12 +3,15 @@ import Monster from "@/game-engine/monster/Monster";
 import HealthBarUpdateDrawer from "@/game-engine/ui/HealthBarUpdateDrawer";
 import TextOverCharacterDrawer from "@/game-engine/ui/TextOverCharacterDrawer";
 import Container from "typedi";
+import Duration from "../effects/duration/Duration";
 
 export default abstract class ComputedEffect {
   type;
+  duration;
 
-  public constructor(type: string) {
+  public constructor(type: string, duration: Duration) {
     this.type = type;
+    this.duration = duration;
   }
 
   abstract hasEffectOn(monster: Monster): boolean;

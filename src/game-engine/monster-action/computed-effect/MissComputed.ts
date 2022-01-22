@@ -1,5 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Duration from "../effects/duration/Duration";
 import ComputedEffect from "./ComputedEffect";
 
 export default class MissComputed extends ComputedEffect {
@@ -9,8 +10,8 @@ export default class MissComputed extends ComputedEffect {
   public static TYPE = "MISS";
 
   target;
-  public constructor(target: Monster) {
-    super(MissComputed.TYPE);
+  public constructor(duration: Duration, target: Monster) {
+    super(MissComputed.TYPE, duration);
     this.target = target;
   }
 

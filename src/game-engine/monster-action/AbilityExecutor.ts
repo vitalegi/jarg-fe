@@ -9,7 +9,6 @@ import GameLoop from "../GameLoop";
 import TurnManager from "../battle/TurnManager";
 import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
-import StatsService from "../monster/stats/StatsService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityService from "./ability/AbilityService";
 import PlayerService from "../PlayerService";
@@ -22,7 +21,6 @@ export default class AbilityExecutor {
     Container.get<HealthBarService>(HealthBarService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected turnManager = Container.get<TurnManager>(TurnManager);
-  protected statsService = Container.get<StatsService>(StatsService);
   protected abilityService = Container.get<AbilityService>(AbilityService);
   protected playerService = Container.get<PlayerService>(PlayerService);
 
@@ -55,11 +53,6 @@ export default class AbilityExecutor {
 
     await this.focusTarget();
     const abilityName = this.showAbilityName();
-    // TODO review this part: "effects" contains the processors that composes an action
-    // the executor should execute each processor one after the other, regardless of the target
-    // each processor should take care of reducing health bar and updating monsters' stats, if needed
-    // ability executor receives the exp and applies it to the source
-
     const exp = await this.processEffects(effects);
     await abilityName;
     await this.battleService.gainExp(this.source, exp);
@@ -67,8 +60,6 @@ export default class AbilityExecutor {
   }
 
   protected async processEffects(effects: ComputedEffect[]): Promise<number> {
-    const sourceHP = this.source.stats.hp;
-    const targetHP = this.target.stats.hp;
     for (let i = 0; i < effects.length; i++) {
       await effects[i].onHitBefore();
     }
@@ -78,10 +69,6 @@ export default class AbilityExecutor {
     for (let i = 0; i < effects.length; i++) {
       await effects[i].onHitAfter();
     }
-    // TODO move this in ComputedEffect
-    this.statsService.updateMonsterAttributes(this.source, false);
-    this.statsService.updateMonsterAttributes(this.target, false);
-
     if (this.target.isDead()) {
       const exp = this.levelUpService.getKillExperience(this.target);
       await this.battleService.die(this.target.uuid);

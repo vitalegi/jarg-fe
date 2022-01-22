@@ -6,7 +6,9 @@ import Condition from "../condition/Condition";
 import ConditionFactory from "../condition/ConditionFactory";
 import Duration from "../duration/Duration";
 import DurationFactory from "../duration/DurationFactory";
+import { FixedDuration } from "../duration/FixedDuration";
 import { Immediate } from "../duration/Immediate";
+import { RandomDuration } from "../duration/RandomDuration";
 import Target from "../target/Target";
 
 export type EffectComputeType = "percentage" | "abs";
@@ -35,6 +37,10 @@ export default abstract class Effect {
   public abstract clone(): Effect;
   public abstract toJson(): any;
   public abstract summary(): string;
+
+  public supportedDurations(): string[] {
+    return [Immediate.TYPE, FixedDuration.TYPE, RandomDuration.TYPE];
+  }
 
   public hash(): string {
     return JSON.stringify(this.toJson());

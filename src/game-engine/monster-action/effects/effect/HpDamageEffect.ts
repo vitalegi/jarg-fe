@@ -3,6 +3,7 @@ import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import HpDamageComputed from "../../computed-effect/HpDamageComputed";
 import MissComputed from "../../computed-effect/MissComputed";
+import { Immediate } from "../duration/Immediate";
 import Effect from "./Effect";
 
 export default class HpDamageEffect extends Effect {
@@ -50,8 +51,13 @@ export default class HpDamageEffect extends Effect {
 
     this.logger.info(`Against ${target.uuid} passed: ${pass}`);
     if (pass) {
-      return [new HpDamageComputed(effectTarget, this.damage)];
+      return [
+        new HpDamageComputed(this.duration.create(), effectTarget, this.damage),
+      ];
     }
-    return [new MissComputed(effectTarget)];
+    return [new MissComputed(this.duration.create(), effectTarget)];
+  }
+  public supportedDurations(): string[] {
+    return [Immediate.TYPE];
   }
 }

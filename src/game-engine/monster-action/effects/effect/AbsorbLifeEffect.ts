@@ -3,6 +3,8 @@ import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Effect from "./Effect";
 import AbsorbLifeComputed from "../../computed-effect/AbsorbLifeComputed";
+import { FixedDuration } from "../duration/FixedDuration";
+import { RandomDuration } from "../duration/RandomDuration";
 
 export default class AbsorbLifeEffect extends Effect {
   public static KEY = "ABSORB_LIFE";
@@ -46,10 +48,21 @@ export default class AbsorbLifeEffect extends Effect {
       `Against ${target.uuid}, AbsorbLife effect passed: ${pass}`
     );
     if (pass) {
-      return [new AbsorbLifeComputed(source, effectTarget, this.percentage)];
+      return [
+        new AbsorbLifeComputed(
+          this.duration.create(),
+          source,
+          effectTarget,
+          this.percentage
+        ),
+      ];
     }
     return [];
   }
+  public supportedDurations(): string[] {
+    return [FixedDuration.TYPE, RandomDuration.TYPE];
+  }
+
   public summary(): string {
     const percentage = Math.round(100 * this.percentage);
     return `${super._summary()} absorb ${percentage}% life`;
