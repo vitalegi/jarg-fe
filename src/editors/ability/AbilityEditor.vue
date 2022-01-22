@@ -22,9 +22,6 @@
     </v-card-title>
     <v-card-subtitle v-if="!expanded">
       {{ summary }}
-      <div v-for="summaryAE in summaryAdditionalEffects" :key="summaryAE">
-        {{ summaryAE }}
-      </div>
     </v-card-subtitle>
     <v-card-text v-if="expanded">
       <v-container>
@@ -86,6 +83,7 @@
               :value="ability.atkStat"
               :values="attackerStats"
               @change="changeAttackerStat"
+              :disabled="!ability.damage"
             />
           </v-col>
           <v-col cols="3">
@@ -94,9 +92,10 @@
               :value="ability.defStat"
               :values="defenderStats"
               @change="changeDefenderStat"
+              :disabled="!ability.damage"
             />
           </v-col>
-          <v-col cols="6">
+          <v-col cols="3">
             <TypesSelector
               label="Types"
               :values="ability.types"
@@ -110,14 +109,14 @@
               @change="changeRechargeFamily"
             />
           </v-col>
-          <v-col cols="6">
+          <v-col cols="3">
             <EditableIntegerField
               label="Usages (initial value)"
               :value="ability.usages.current"
               @change="changeUsagesInitial"
             />
           </v-col>
-          <v-col cols="6">
+          <v-col cols="3">
             <EditableIntegerField
               label="Usages (MAX)"
               :value="ability.usages.max"
@@ -218,15 +217,7 @@ export default Vue.extend({
       ];
     },
     summary(): string {
-      if (this.ability.damage) {
-        return `Attack with power ${this.ability.power}, ${
-          this.ability.precision
-        }%, types ${this.ability.types.join(", ")}`;
-      }
-      return "";
-    },
-    summaryAdditionalEffects(): string[] {
-      return this.ability.additionalEffects.map((e) => e.summary());
+      return this.ability.summary();
     },
   },
   methods: {

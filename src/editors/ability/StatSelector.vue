@@ -6,6 +6,7 @@
       :label="item.label"
       :value="item.key"
       @change="change"
+      :disabled="disabled"
     ></v-radio>
   </v-radio-group>
 </template>
@@ -15,7 +16,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "StatSelector",
-  props: ["label", "value", "values"],
+  props: ["label", "value", "values", "disabled"],
   data: () => ({
     model: "",
   }),

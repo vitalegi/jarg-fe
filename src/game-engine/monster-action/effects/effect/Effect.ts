@@ -66,8 +66,8 @@ export default abstract class Effect {
     obj.duration = this.duration.toJson();
   }
 
-  protected _summary(): string {
-    return `${this.conditions.map((c) => c.summary()).join(" and ")}, then`;
+  protected conditionsSummary(): string {
+    return `${this.conditions.map((c) => c.summary()).join(" and ")}`;
   }
 
   abstract apply(

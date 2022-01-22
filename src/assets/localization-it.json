@@ -1,0 +1,48 @@
+{
+  "statuses": {
+    "POISON": "Avvelenamento",
+    "PARALISYS": "Paralisi",
+    "BURN": "Scottatura",
+    "FREEZE": "Congelamento",
+    "BADLY_POISONED": "Iper-avvelenamento",
+    "SLEEP": "Sonno",
+    "CONFUSION": "Confusione",
+    "HASTE": "Velocità",
+    "SLOW": "Lentezza"
+  },
+  "types": {
+    "NORMAL": "Normale",
+    "FIGHTING": "Lotta",
+    "FLYING": "Volante",
+    "POISON": "Veleno",
+    "GROUND": "Terra",
+    "ROCK": "Roccia",
+    "BUG": "Insetto",
+    "GHOST": "Spettro",
+    "STEEL": "Acciaio",
+    "FIRE": "Fuoco",
+    "WATER": "Acqua",
+    "GRASS": "Erba",
+    "ELECTRIC": "Elettrico",
+    "PSYCHIC": "Psichico",
+    "ICE": "Ghiaccio",
+    "DRAGON": "Drago",
+    "DARK": "Oscurità"
+  },
+  "gameLabels": {
+    "ability": "Abilità",
+    "cancel": "Annulla",
+    "end-turn": "Fine turno",
+    "heal-all": "Cura tutti",
+    "load-game": "Carica",
+    "move": "Muovi",
+    "new-game": "Nuovo Gioco",
+    "next": "Avanti",
+    "power": "Potenza",
+    "power-short": "Pot.",
+    "precision": "Precisione",
+    "precision-short": "Prec.",
+    "save": "Salva",
+    "usages-short": "PP"
+  }
+}

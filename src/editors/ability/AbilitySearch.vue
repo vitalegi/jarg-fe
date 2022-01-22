@@ -53,6 +53,7 @@ export default Vue.extend({
     sortByOptions: [
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
+      { text: "Recharge", key: "RECHARGE" },
       { text: "Errors", key: "ERRORS" },
     ],
     sortBy: "ID",
@@ -98,9 +99,14 @@ export default Vue.extend({
       if (this.search.trim() === "") {
         return true;
       }
-      const label = m.label.toLowerCase();
+      const text =
+        m.id.toLowerCase() +
+        " " +
+        m.label.toLowerCase() +
+        " " +
+        m.summary().toLowerCase();
       const search = this.search.toLowerCase().trim();
-      if (label.indexOf(search) !== -1) {
+      if (text.indexOf(search) !== -1) {
         return true;
       }
       return false;
@@ -117,6 +123,8 @@ export default Vue.extend({
           return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
         case "NAME":
           return a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1;
+        case "RECHARGE":
+          return a.rechargeFamily - b.rechargeFamily;
         case "ERRORS":
           if (a.isValid() && !b.isValid()) {
             return 1;

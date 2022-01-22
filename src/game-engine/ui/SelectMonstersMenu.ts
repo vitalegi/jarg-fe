@@ -1,3 +1,4 @@
+import { gameLabel } from "@/services/LocalizationService";
 import Monster from "../monster/Monster";
 import LeftMenu, { MenuEntry } from "./LeftMenu";
 
@@ -26,7 +27,7 @@ export default class SelectMonstersMenu {
   }
 
   protected cancel(menu: LeftMenu, onCancel: () => void): MenuEntry {
-    return MenuEntry.alwaysEnabled("Cancel", () => {
+    return MenuEntry.alwaysEnabled(gameLabel("cancel"), () => {
       menu.destroy();
       onCancel();
     });
@@ -37,7 +38,7 @@ export default class SelectMonstersMenu {
     onComplete: (selected: Monster[]) => void
   ): MenuEntry {
     return new MenuEntry(
-      "Next",
+      gameLabel("next"),
       () => {
         menu.destroy();
         onComplete(this.selected);

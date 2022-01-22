@@ -12,6 +12,7 @@ import SelectTargetAbility from "../SelectTargetAbility";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearned from "../ability/AbilityLearned";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
+import { gameLabel } from "@/services/LocalizationService";
 
 @Service()
 export default class MonsterActionMenuBuilder {
@@ -36,7 +37,7 @@ export default class MonsterActionMenuBuilder {
 
   protected move(leftMenu: LeftMenu, monster: Monster): MenuEntry {
     return new MenuEntry(
-      "Move",
+      gameLabel("move"),
       () => this.onMoveClick(leftMenu, monster),
       () => this.monsterService.canActiveMonsterMove()
     );
@@ -58,7 +59,7 @@ export default class MonsterActionMenuBuilder {
 
   protected endTurn(leftMenu: LeftMenu): MenuEntry {
     return new MenuEntry(
-      "End Turn",
+      gameLabel("end-turn"),
       () => {
         leftMenu.destroy();
         this.getBattleService().nextTurn();

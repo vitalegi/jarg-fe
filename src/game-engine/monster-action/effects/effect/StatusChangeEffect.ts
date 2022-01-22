@@ -6,6 +6,7 @@ import StatusChangeComputed from "../../computed-effect/StatusChangeComputed";
 import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
+import { LocalizationUtil } from "@/services/LocalizationService";
 
 export default class StatusChangeEffect extends Effect {
   public static KEY = "STATUS_CHANGE";
@@ -64,7 +65,9 @@ export default class StatusChangeEffect extends Effect {
     return [];
   }
   public summary(): string {
-    return `${super._summary()} is ${this.status}`;
+    return `${super.conditionsSummary()} then apply ${LocalizationUtil.getStatus(
+      this.status
+    )}`;
   }
   public supportedDurations(): string[] {
     return [FixedDuration.TYPE, RandomDuration.TYPE];

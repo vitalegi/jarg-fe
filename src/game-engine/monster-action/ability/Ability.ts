@@ -1,4 +1,5 @@
 import TypeConstants from "@/game-engine/types/TypeConstants";
+import { LocalizationUtil } from "@/services/LocalizationService";
 import NumberUtil from "@/utils/NumberUtil";
 import RechargeFamily from "../../battle/RechargeFamily";
 import StatsConstants from "../../monster/stats/StatsContants";
@@ -119,24 +120,13 @@ export default class Ability {
     if (this.description.trim() === "") {
       throw Error(`Description must not be null`);
     }
-    if (this.power < 0) {
-      throw Error(`Power must be >=0, actual ${this.power}`);
-    }
-    if (this.precision < 0) {
-      throw Error(`Precision must be >=0, actual ${this.precision}`);
-    }
-    if (this.types.length === 0) {
-      throw Error(`Must have at least one type`);
-    }
-    this.types.forEach((type) => {
-      if (TypeConstants.getTypes().indexOf(type) === -1) {
-        throw Error(`Type ${type} is not recognized`);
-      }
-    });
-    this.usages.validate();
-    this.abilityTarget.validate();
-    RechargeFamily.validate(this.rechargeFamily);
     if (this.damage) {
+      if (this.power <= 0) {
+        throw Error(`Power must be >0, actual ${this.power}`);
+      }
+      if (this.precision <= 0) {
+        throw Error(`Precision must be >0, actual ${this.precision}`);
+      }
       if (
         this.atkStat !== StatsConstants.ATK &&
         this.atkStat !== StatsConstants.INT
@@ -150,10 +140,38 @@ export default class Ability {
         throw Error(`DefStat ${this.defStat} is not valid.`);
       }
     }
+    if (this.types.length === 0) {
+      throw Error(`Must have at least one type`);
+    }
+    this.types.forEach((type) => {
+      if (TypeConstants.getTypes().indexOf(type) === -1) {
+        throw Error(`Type ${type} is not recognized`);
+      }
+    });
+    RechargeFamily.validate(this.rechargeFamily);
+    this.usages.validate();
+    this.abilityTarget.validate();
     this.additionalEffects.forEach((e) => e.validate());
   }
 
   public getProcessor(): AbstractProcessor {
     return new DefaultProcessor();
+  }
+  public summary(): string {
+    let summary = `${this.types
+      .map(LocalizationUtil.getType)
+      .join(", ")} - Recharge family ${this.rechargeFamily}. `;
+
+    if (this.damage) {
+      summary += `Attack with power ${this.power}, ${this.precision}%. `;
+    }
+    if (this.additionalEffects.length > 0) {
+      if (this.damage) {
+        summary += "and ";
+      }
+      summary += this.additionalEffects.map((e) => e.summary()).join(", ");
+      summary += ".";
+    }
+    return summary;
   }
 }

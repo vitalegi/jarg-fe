@@ -1,4 +1,5 @@
 import LoggerFactory from "@/logger/LoggerFactory";
+import { gameLabel } from "@/services/LocalizationService";
 import Container from "typedi";
 import GameLoop from "../GameLoop";
 import MapRepository from "../map/MapRepository";
@@ -70,7 +71,7 @@ export default class SelectTargetAbility {
     return new Promise<null>((resolve) => {
       menu.addEntry(
         new MenuEntry(
-          "Cancel",
+          gameLabel("cancel"),
           () => resolve(null),
           () => true
         )

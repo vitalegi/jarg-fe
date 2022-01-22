@@ -11,6 +11,7 @@ import SelectMonstersMenu from "../ui/SelectMonstersMenu";
 import Monster from "../monster/Monster";
 import PhaseService from "./PhaseService";
 import StatsService from "../monster/stats/StatsService";
+import { gameLabel } from "@/services/LocalizationService";
 
 const MAPS = ["map1", "map2", "map3", "map4"];
 
@@ -47,7 +48,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
 
   protected saveStatus(): MenuEntry {
     return new MenuEntry(
-      "Save",
+      gameLabel("save"),
       () => {
         this.playerRepository.save(this.playerRepository.getPlayerData());
       },
@@ -57,7 +58,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
 
   protected healParty(): MenuEntry {
     return new MenuEntry(
-      "Heal Party",
+      gameLabel("heal-all"),
       () => {
         this.playerRepository
           .getPlayerData()

@@ -1,0 +1,48 @@
+{
+  "statuses": {
+    "POISON": "Poison",
+    "PARALISYS": "Paralisys",
+    "BURN": "Burn",
+    "FREEZE": "Freeze",
+    "BADLY_POISONED": "Badly poisoned",
+    "SLEEP": "Sleep",
+    "CONFUSION": "Confusion",
+    "HASTE": "Haste",
+    "SLOW": "Slow"
+  },
+  "types": {
+    "NORMAL": "Normal",
+    "FIGHTING": "Fighting",
+    "FLYING": "Flying",
+    "POISON": "Poison",
+    "GROUND": "Ground",
+    "ROCK": "Rock",
+    "BUG": "Bug",
+    "GHOST": "Ghost",
+    "STEEL": "Steel",
+    "FIRE": "Fire",
+    "WATER": "Water",
+    "GRASS": "Grass",
+    "ELECTRIC": "Electric",
+    "PSYCHIC": "Psychic",
+    "ICE": "Ice",
+    "DRAGON": "Dragon",
+    "DARK": "Dark"
+  },
+  "gameLabels": {
+    "ability": "Ability",
+    "cancel": "Cancel",
+    "end-turn": "End turn",
+    "heal-all": "Heal all",
+    "load-game": "Load",
+    "move": "Move",
+    "new-game": "New Game",
+    "next": "Next",
+    "power": "Power",
+    "power-short": "Power",
+    "precision": "Precision",
+    "precision-short": "Prec.",
+    "save": "Save",
+    "usages-short": "PP"
+  }
+}

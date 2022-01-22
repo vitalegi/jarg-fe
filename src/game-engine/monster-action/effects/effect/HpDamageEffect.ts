@@ -38,7 +38,7 @@ export default class HpDamageEffect extends Effect {
     return out;
   }
   public summary(): string {
-    return `apply ${super._summary()} flat damage of ${this.damage}HP to ${
+    return `${super.conditionsSummary()} apply ${this.damage}HP damage to ${
       this.target.type
     }`;
   }

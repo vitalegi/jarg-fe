@@ -16,6 +16,7 @@ import ArrayUtil from "@/utils/ArrayUtil";
 import TapAnythingUserActionHandler from "../user-action-handler/TapAnythingUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
 import ComputedEffectUtil from "../monster-action/computed-effect/ComputedEffectUtil";
+import { gameLabel } from "@/services/LocalizationService";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -170,10 +171,10 @@ export default class MonsterInfoDrawer extends Drawer {
   }
 
   protected addAbilityLabels(y: number): void {
-    this.addText("Ability", this.abilityCol1(), y);
-    this.addText("Power", this.abilityCol2(), y);
-    this.addText("Prec.", this.abilityCol3(), y);
-    this.addText("PP", this.abilityCol4(), y);
+    this.addText(gameLabel("ability"), this.abilityCol1(), y);
+    this.addText(gameLabel("power-short"), this.abilityCol2(), y);
+    this.addText(gameLabel("precision-short"), this.abilityCol3(), y);
+    this.addText(gameLabel("usages-short"), this.abilityCol4(), y);
   }
   protected addAbility(learned: AbilityLearned, y: number): void {
     const ability = this.abilityRepository.getAbility(learned.abilityId);

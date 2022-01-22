@@ -12,6 +12,7 @@ import SelectTargetUserActionHandler from "../user-action-handler/SelectTargetUs
 import UserActionService from "../user-action-handler/UserActionService";
 import GameLoop from "../GameLoop";
 import LoggerFactory from "@/logger/LoggerFactory";
+import { gameLabel } from "@/services/LocalizationService";
 
 export default class SelectTargetMove {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.SelectTargetMove");
@@ -66,7 +67,7 @@ export default class SelectTargetMove {
     return new Promise<null>((resolve) => {
       menu.addEntry(
         new MenuEntry(
-          "Cancel",
+          gameLabel("cancel"),
           () => resolve(null),
           () => true
         )

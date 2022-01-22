@@ -1,4 +1,5 @@
 import LoggerFactory from "@/logger/LoggerFactory";
+import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
@@ -23,7 +24,7 @@ export default class HomePhase extends AbstractPhase<never> {
 
   protected newGameEntry(): MenuEntry {
     return new MenuEntry(
-      "New Game",
+      gameLabel("new-game"),
       () => {
         this.phaseService.goToNewGame();
       },
@@ -32,7 +33,7 @@ export default class HomePhase extends AbstractPhase<never> {
   }
   protected loadGameEntry(): MenuEntry {
     return new MenuEntry(
-      "Load Game",
+      gameLabel("load-game"),
       () => {
         this.phaseService.goToLoadGame();
       },

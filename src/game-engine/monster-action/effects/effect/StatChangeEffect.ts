@@ -74,9 +74,9 @@ export default class StatChangeEffect extends Effect {
     return [];
   }
   public summary(): string {
-    return `${super._summary()} change stat ${this.stat} by ${
-      this.percentage * 100
-    }% to ${this.target.type}`;
+    return `${super.conditionsSummary()} then change ${this.target.type}'s ${
+      this.stat
+    } by ${this.percentage * 100}%`;
   }
   public supportedDurations(): string[] {
     return [FixedDuration.TYPE, RandomDuration.TYPE];

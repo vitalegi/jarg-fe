@@ -71,6 +71,6 @@ export default class AbsorbLifeEffect extends Effect {
 
   public summary(): string {
     const percentage = Math.round(100 * this.percentage);
-    return `${super._summary()} absorb ${percentage}% life`;
+    return `${super.conditionsSummary()} then absorb ${percentage}% life`;
   }
 }

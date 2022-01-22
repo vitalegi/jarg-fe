@@ -1,4 +1,5 @@
 import GameAssetService from "@/services/GameAssetService";
+import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
 import PlayerData from "../PlayerData";
 import PlayerRepository from "../repositories/PlayerRepository";
@@ -35,7 +36,7 @@ export default class LoadGamePhase extends AbstractPhase<never> {
 
   protected cancelEntry(): MenuEntry {
     return new MenuEntry(
-      "Cancel",
+      gameLabel("cancel"),
       () => this.phaseService.goToHome(),
       () => true
     );

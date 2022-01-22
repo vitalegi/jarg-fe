@@ -2,10 +2,9 @@
   <v-container>
     <v-row>
       <v-col cols="1">
-        <ConfirmDeletion
-          @delete="deleteCondition"
-          :text="deletionWarningText"
-        />
+        <v-btn icon color="error" class="mx-2" @click="deleteCondition">
+          <v-icon>mdi-delete</v-icon>
+        </v-btn>
       </v-col>
       <v-col cols="4">
         <ComboBoxInput
@@ -33,14 +32,12 @@ import Condition from "@/game-engine/monster-action/effects/condition/Condition"
 import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
 import RandomCondition from "@/game-engine/monster-action/effects/condition/RandomCondition";
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
-import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 
 export default Vue.extend({
   name: "ConditionEditor",
   components: {
     EditableIntegerField,
     ComboBoxInput,
-    ConfirmDeletion,
   },
   props: {
     condition: Object,
@@ -49,9 +46,6 @@ export default Vue.extend({
     type: "",
   }),
   computed: {
-    deletionWarningText(): string {
-      return `Deletion of condition is an irreversible action. Are you sure you want to proceed?`;
-    },
     conditions(): { text: string; value: string }[] {
       return [
         { value: HitCondition.KEY, text: "Hit" },
