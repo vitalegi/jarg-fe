@@ -39,4 +39,8 @@ export default class HitCondition extends Condition {
   public summary(): string {
     return "if attack hits";
   }
+
+  protected doValidate(): void {
+    return;
+  }
 }

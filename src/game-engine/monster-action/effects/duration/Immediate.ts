@@ -24,4 +24,7 @@ export class Immediate extends Duration {
   public isCompleted(): boolean {
     return true;
   }
+  public validate(): void {
+    return;
+  }
 }

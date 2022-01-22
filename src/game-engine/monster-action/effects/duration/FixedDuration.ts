@@ -2,8 +2,8 @@ import Duration from "./Duration";
 
 export class FixedDuration extends Duration {
   public static TYPE = "FIXED";
-  end = 0;
-  counter = 0;
+  end;
+  counter;
 
   public constructor(end: number, counter = 0) {
     super(FixedDuration.TYPE);
@@ -30,5 +30,10 @@ export class FixedDuration extends Duration {
   }
   public isCompleted(): boolean {
     return this.counter >= this.end;
+  }
+  public validate(): void {
+    if (this.end <= 0) {
+      throw Error(`Duration must be >= 1`);
+    }
   }
 }

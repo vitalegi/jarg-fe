@@ -23,11 +23,11 @@ export default class Usages {
   }
 
   public validate(): void {
-    if (this.current < 0) {
-      throw Error(`Current must be >=0, actual ${this.current}`);
+    if (this.current <= 0) {
+      throw Error(`Base usages must be >0, actual ${this.current}`);
     }
-    if (this.max < 0) {
-      throw Error(`Max must be >=0, actual ${this.max}`);
+    if (this.max < this.current) {
+      throw Error(`Max usages must be >= base, actual ${this.max}`);
     }
   }
 }

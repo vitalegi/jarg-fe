@@ -5,6 +5,7 @@ import Effect from "./Effect";
 import StatusChangeComputed from "../../computed-effect/StatusChangeComputed";
 import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
+import StatusContants from "@/game-engine/monster/status/StatusContants";
 
 export default class StatusChangeEffect extends Effect {
   public static KEY = "STATUS_CHANGE";
@@ -13,6 +14,11 @@ export default class StatusChangeEffect extends Effect {
   public constructor(status: string) {
     super(StatusChangeEffect.KEY);
     this.status = status;
+  }
+  protected doValidate(): void {
+    if (StatusContants.COLLECTION.indexOf(this.status) === -1) {
+      throw Error(`Invalid status in StatusChange`);
+    }
   }
 
   public static fromJson(json: any): StatusChangeEffect {

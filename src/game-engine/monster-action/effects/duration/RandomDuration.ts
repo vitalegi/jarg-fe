@@ -39,4 +39,11 @@ export class RandomDuration extends Duration {
   public isCompleted(): boolean {
     return this.exit;
   }
+  public validate(): void {
+    if (this.threshold < 0 || this.threshold > 1) {
+      throw Error(
+        `Threshold of random duration out of range: ${this.threshold * 100}`
+      );
+    }
+  }
 }

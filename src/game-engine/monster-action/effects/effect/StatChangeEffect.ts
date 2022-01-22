@@ -5,6 +5,7 @@ import Effect from "./Effect";
 import StatChangeComputed from "../../computed-effect/StatChangeComputed";
 import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
+import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 
 export default class StatChangeEffect extends Effect {
   public static KEY = "STATS_PERCENTAGE";
@@ -15,6 +16,14 @@ export default class StatChangeEffect extends Effect {
     super(StatChangeEffect.KEY);
     this.stat = stat;
     this.percentage = percentage;
+  }
+  protected doValidate(): void {
+    if (StatsConstants.COLLECTION.indexOf(this.stat) === -1) {
+      throw Error(`Invalid stat ${this.stat}`);
+    }
+    if (this.percentage === 0) {
+      throw Error(`Stat change must have percentage != 0`);
+    }
   }
 
   public static fromJson(json: any): StatChangeEffect {

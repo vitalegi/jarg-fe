@@ -46,6 +46,14 @@ export default abstract class Effect {
     return JSON.stringify(this.toJson());
   }
 
+  public validate(): void {
+    this.target.validate();
+    this.conditions.forEach((c) => c.validate());
+    this.duration.validate();
+    this.doValidate();
+  }
+  protected abstract doValidate(): void;
+
   protected _clone(obj: Effect): void {
     obj.target = this.target.clone();
     obj.conditions = this.conditions.map((c) => c.clone());

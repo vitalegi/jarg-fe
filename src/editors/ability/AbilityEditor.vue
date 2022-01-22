@@ -9,6 +9,15 @@
         {{ ability.id }} - {{ ability.label }}
       </h4>
       <v-spacer></v-spacer>
+      <v-alert
+        v-if="hasErrors"
+        border="right"
+        colored-border
+        type="error"
+        elevation="2"
+      >
+        {{ errors }}
+      </v-alert>
       <ConfirmDeletion @delete="deleteAbility()" :text="deletionWarningText" />
     </v-card-title>
     <v-card-subtitle v-if="!expanded">
@@ -72,20 +81,6 @@
             />
           </v-col>
           <v-col cols="3">
-            <EditableIntegerField
-              label="Recharge family (1=fastest, 8=slowest)"
-              :value="ability.rechargeFamily"
-              @change="changeRechargeFamily"
-            />
-          </v-col>
-          <v-col cols="6">
-            <TypesSelector
-              label="Types"
-              :values="ability.types"
-              @change="changeTypes"
-            />
-          </v-col>
-          <v-col cols="3">
             <stat-selector
               label="Attacker stat"
               :value="ability.atkStat"
@@ -99,6 +94,20 @@
               :value="ability.defStat"
               :values="defenderStats"
               @change="changeDefenderStat"
+            />
+          </v-col>
+          <v-col cols="6">
+            <TypesSelector
+              label="Types"
+              :values="ability.types"
+              @change="changeTypes"
+            />
+          </v-col>
+          <v-col cols="3">
+            <EditableIntegerField
+              label="Recharge family (1=fastest, 8=slowest)"
+              :value="ability.rechargeFamily"
+              @change="changeRechargeFamily"
             />
           </v-col>
           <v-col cols="6">
@@ -182,6 +191,17 @@ export default Vue.extend({
   },
   data: () => ({}),
   computed: {
+    hasErrors(): boolean {
+      return !this.ability.isValid();
+    },
+    errors(): string {
+      try {
+        this.ability.validate();
+        return "";
+      } catch (e) {
+        return (e as any).message;
+      }
+    },
     deletionWarningText(): string {
       return `Deletion of ability ${this.ability.id} - ${this.ability.label} is an irreversible action. Are you sure you want to proceed?`;
     },

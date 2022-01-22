@@ -69,7 +69,6 @@ export default Vue.extend({
   }),
   computed: {
     isLarge(): boolean {
-      console.log(this.size);
       return this.size.toUpperCase() === "LARGE";
     },
     isSmall(): boolean {

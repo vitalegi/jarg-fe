@@ -27,7 +27,6 @@
           :initialValue="findAbility(ability.abilityId)"
           @change="(a) => changeAbility(index, a)"
         />
-        {{ ability }}
       </v-col>
       <v-col cols="5">
         <EditableIntegerField

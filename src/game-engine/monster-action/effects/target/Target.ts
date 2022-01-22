@@ -31,4 +31,14 @@ export default class Target {
     }
     throw Error(`Unknown type ${this.type}`);
   }
+
+  public validate(): void {
+    if (this.type === TargetType.SELF) {
+      return;
+    }
+    if (this.type === TargetType.TARGET) {
+      return;
+    }
+    throw Error(`Invalid target ${this.type}`);
+  }
 }

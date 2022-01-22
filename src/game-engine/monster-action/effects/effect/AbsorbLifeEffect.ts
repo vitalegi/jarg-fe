@@ -15,6 +15,12 @@ export default class AbsorbLifeEffect extends Effect {
     this.percentage = percentage;
   }
 
+  protected doValidate(): void {
+    if (this.percentage <= 0) {
+      throw Error(`Absorb Life must have percentage > 0`);
+    }
+  }
+
   public static fromJson(json: any): AbsorbLifeEffect {
     const effect = new AbsorbLifeEffect(json.percentage);
     Effect.fromJson(effect, json);

@@ -47,4 +47,11 @@ export default class RandomCondition extends Condition {
   public summary(): string {
     return `with a ${this.threshold * 100}% probability`;
   }
+  protected doValidate(): void {
+    if (this.threshold < 0 || this.threshold > 1) {
+      throw Error(
+        `Threshold of random condition out of range: ${this.threshold * 100}`
+      );
+    }
+  }
 }

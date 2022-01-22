@@ -13,6 +13,9 @@ export default class HpDamageEffect extends Effect {
   public constructor() {
     super(HpDamageEffect.KEY);
   }
+  protected doValidate(): void {
+    return;
+  }
 
   public static fromJson(json: any): HpDamageEffect {
     const effect = new HpDamageEffect();

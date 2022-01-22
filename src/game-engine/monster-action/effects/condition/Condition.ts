@@ -13,4 +13,10 @@ export default abstract class Condition {
     hit: boolean
   ): boolean;
   public abstract summary(): string;
+
+  public validate(): void {
+    this.doValidate();
+  }
+
+  protected abstract doValidate(): void;
 }

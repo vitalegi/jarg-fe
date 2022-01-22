@@ -9,4 +9,5 @@ export default abstract class Duration {
   public abstract create(): Duration;
   public abstract nextTurn(): void;
   public abstract isCompleted(): boolean;
+  public abstract validate(): void;
 }

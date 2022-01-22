@@ -262,10 +262,10 @@ export default Vue.extend({
         return new Immediate();
       }
       if (type === FixedDuration.TYPE) {
-        return new FixedDuration(0);
+        return new FixedDuration(1);
       }
       if (type === RandomDuration.TYPE) {
-        return new RandomDuration(0);
+        return new RandomDuration(0.5);
       }
       throw Error(`Unknown duration ${type}`);
     },

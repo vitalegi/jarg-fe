@@ -42,9 +42,7 @@
 </template>
 
 <script lang="ts">
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
-import Container from "typedi";
 import Ability from "@/game-engine/monster-action/ability/Ability";
 
 export default Vue.extend({
@@ -55,6 +53,7 @@ export default Vue.extend({
     sortByOptions: [
       { text: "ID", key: "ID" },
       { text: "Name", key: "NAME" },
+      { text: "Errors", key: "ERRORS" },
     ],
     sortBy: "ID",
     sortOrderAsc: true,
@@ -62,7 +61,6 @@ export default Vue.extend({
   }),
   computed: {
     isLarge(): boolean {
-      console.log(this.size);
       return this.size.toUpperCase() === "LARGE";
     },
     isSmall(): boolean {
@@ -119,6 +117,14 @@ export default Vue.extend({
           return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
         case "NAME":
           return a.label.toLowerCase() > b.label.toLowerCase() ? 1 : -1;
+        case "ERRORS":
+          if (a.isValid() && !b.isValid()) {
+            return 1;
+          }
+          if (!a.isValid() && b.isValid()) {
+            return -1;
+          }
+          break;
       }
       return a.id.toLowerCase() > b.id.toLowerCase() ? 1 : -1;
     },

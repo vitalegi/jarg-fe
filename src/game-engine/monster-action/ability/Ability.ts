@@ -1,3 +1,4 @@
+import TypeConstants from "@/game-engine/types/TypeConstants";
 import NumberUtil from "@/utils/NumberUtil";
 import RechargeFamily from "../../battle/RechargeFamily";
 import StatsConstants from "../../monster/stats/StatsContants";
@@ -100,28 +101,56 @@ export default class Ability {
     return out;
   }
 
+  public isValid(): boolean {
+    try {
+      this.validate();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
   public validate(): void {
+    if (this.id.trim() === "") {
+      throw Error(`ID must not be null`);
+    }
+    if (this.label.trim() === "") {
+      throw Error(`Label must not be null`);
+    }
+    if (this.description.trim() === "") {
+      throw Error(`Description must not be null`);
+    }
     if (this.power < 0) {
       throw Error(`Power must be >=0, actual ${this.power}`);
     }
     if (this.precision < 0) {
       throw Error(`Precision must be >=0, actual ${this.precision}`);
     }
+    if (this.types.length === 0) {
+      throw Error(`Must have at least one type`);
+    }
+    this.types.forEach((type) => {
+      if (TypeConstants.getTypes().indexOf(type) === -1) {
+        throw Error(`Type ${type} is not recognized`);
+      }
+    });
+    this.usages.validate();
+    this.abilityTarget.validate();
     RechargeFamily.validate(this.rechargeFamily);
-    if (
-      this.atkStat !== null &&
-      this.atkStat !== StatsConstants.ATK &&
-      this.atkStat !== StatsConstants.INT
-    ) {
-      throw Error(`AtkStat ${this.atkStat} is not valid.`);
+    if (this.damage) {
+      if (
+        this.atkStat !== StatsConstants.ATK &&
+        this.atkStat !== StatsConstants.INT
+      ) {
+        throw Error(`AtkStat ${this.atkStat} is not valid.`);
+      }
+      if (
+        this.defStat !== StatsConstants.DEF &&
+        this.defStat !== StatsConstants.RES
+      ) {
+        throw Error(`DefStat ${this.defStat} is not valid.`);
+      }
     }
-    if (
-      this.defStat !== null &&
-      this.defStat !== StatsConstants.DEF &&
-      this.defStat !== StatsConstants.RES
-    ) {
-      throw Error(`DefStat ${this.defStat} is not valid.`);
-    }
+    this.additionalEffects.forEach((e) => e.validate());
   }
 
   public getProcessor(): AbstractProcessor {
