@@ -12,7 +12,18 @@
         <v-container>
           <v-row>
             <v-col cols="12">
-              <v-textarea outlined v-model="csv" :rules="[validateInput]" />
+              <v-select
+                label="Column separator"
+                :items="separators()"
+                v-model="columnSeparator"
+              />
+            </v-col>
+            <v-col cols="12">
+              <v-textarea
+                outlined
+                v-model="csv"
+                :error-messages="validateInput()"
+              />
             </v-col>
           </v-row>
         </v-container>
@@ -57,23 +68,27 @@ export default Vue.extend({
     ),
     dialog: false,
     allAbilities: new Array<Ability>(),
+    columnSeparator: ";",
     csv: DEFAULT_VALUE,
   }),
   computed: {
     hasErrors(): boolean {
-      if (this.validateInput(this.csv) === true) {
-        return false;
-      }
-      return true;
+      return this.validateInput().length > 0;
     },
   },
   methods: {
-    validateInput(value: string): boolean | string {
+    separators(): { text: string; value: string }[] {
+      return [
+        { value: "\t", text: "TAB" },
+        { value: ";", text: "Semicolon (;)" },
+      ];
+    },
+    validateInput(): string[] {
       try {
         this.processCsv(this.csv);
-        return true;
+        return [];
       } catch (e) {
-        return (e as any).message as string;
+        return [(e as any).message as string];
       }
     },
     confirmAndClose(): void {
@@ -104,7 +119,7 @@ export default Vue.extend({
       return null;
     },
     lineToAbilityLearnable(line: string): AbilityLearnable {
-      const content = line.split(";");
+      const content = line.split(this.columnSeparator);
       if (content.length < 2) {
         throw Error(`Line is missing mandatory fields, actual: ${content}`);
       }

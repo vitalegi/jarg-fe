@@ -56,12 +56,13 @@ export default Vue.extend({
       { text: "Name", key: "NAME" },
       { text: "Base HP", key: "BASE_HP" },
       { text: "Base ATK", key: "BASE_ATK" },
-      { text: "Base DEF", key: "BASE_DEX" },
+      { text: "Base DEF", key: "BASE_DEF" },
       { text: "Base INT", key: "BASE_INT" },
       { text: "Base RES", key: "BASE_RES" },
       { text: "Base HIT", key: "BASE_HIT" },
       { text: "Base DEX", key: "BASE_DEX" },
       { text: "Base SPEED", key: "BASE_SPEED" },
+      { text: "# Abilities", key: "ABILITIES_COUNT" },
     ],
     sortBy: "ID",
     sortOrderAsc: true,
@@ -141,6 +142,8 @@ export default Vue.extend({
           return a.baseStats.dex - b.baseStats.dex;
         case "BASE_SPEED":
           return a.baseStats.speed - b.baseStats.speed;
+        case "ABILITIES_COUNT":
+          return a.learnableAbilities.length - b.learnableAbilities.length;
       }
       return a.monsterId.toLowerCase() > b.monsterId.toLowerCase() ? 1 : -1;
     },
