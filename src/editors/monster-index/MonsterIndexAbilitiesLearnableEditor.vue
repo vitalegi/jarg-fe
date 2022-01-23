@@ -6,6 +6,7 @@
         <v-btn icon color="primary" class="mx-2" @click="(e) => addAbility()">
           <v-icon>mdi-plus-box</v-icon>
         </v-btn>
+        <MonsterIndexAbilitiesImport @select="addAbilities" />
       </v-col>
     </v-row>
     <v-row
@@ -48,6 +49,7 @@ import Container from "typedi";
 import Vue from "vue";
 import AbilityEditorRepository from "../ability/AbilityEditorRepository";
 import SelectAbility from "../ability/SelectAbility.vue";
+import MonsterIndexAbilitiesImport from "./MonsterIndexAbilitiesImport.vue";
 
 export default Vue.extend({
   name: "MonsterIndexAbilitiesLearnableEditor",
@@ -59,6 +61,7 @@ export default Vue.extend({
   components: {
     EditableIntegerField,
     SelectAbility,
+    MonsterIndexAbilitiesImport,
   },
   data: () => ({
     abilityEditorRepository: Container.get<AbilityEditorRepository>(
@@ -130,6 +133,12 @@ export default Vue.extend({
       const abilities = this.getAbilities().map((a) => a.clone());
       abilities.push(ability);
       this.logger.info(`add ability ${JSON.stringify(ability)}`);
+      this.$emit("changeAbilities", abilities);
+    },
+    addAbilities(newAabilities: AbilityLearnable[]): void {
+      const abilities = this.getAbilities().map((a) => a.clone());
+      abilities.push(...newAabilities);
+      this.logger.info(`add abilities ${JSON.stringify(newAabilities)}`);
       this.$emit("changeAbilities", abilities);
     },
   },
