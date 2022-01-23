@@ -31,4 +31,7 @@ export default class MapRepository {
       coordinates.equals(m.coordinates)
     );
   }
+  public getAllies(monster: Monster): Monster[] {
+    return this.getMap().monsters.filter((m) => m.ownerId === monster.ownerId);
+  }
 }

@@ -8,7 +8,7 @@ import UserInput from "./UserInput";
 export default class SelectTargetUserActionHandler extends UserActionHandler {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 
-  protected skipUUID: string | null = "";
+  protected skipUUIDs: string[] | null = [];
   protected allowTerrains = false;
   protected allowMonsters = false;
   protected allowedPoints: Point[] | null;
@@ -18,13 +18,13 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
   }
 
   public constructor(
-    skipUUID: string | null,
+    skipUUIDs: string[] | null,
     allowTerrains: boolean,
     allowMonsters: boolean,
     allowedPoints: Point[] | null = null
   ) {
     super();
-    this.skipUUID = skipUUID;
+    this.skipUUIDs = skipUUIDs;
     this.allowTerrains = allowTerrains;
     this.allowMonsters = allowMonsters;
     this.allowedPoints = allowedPoints;
@@ -77,7 +77,8 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
     if (!this.allowMonsters) {
       return false;
     }
-    if (this.skipUUID === uuid) {
+    if (this.skipUUIDs && this.skipUUIDs.indexOf(uuid) !== -1) {
+      console.log("catch check", this.skipUUIDs, uuid);
       return false;
     }
     return true;

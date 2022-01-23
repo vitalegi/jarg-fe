@@ -32,6 +32,9 @@
   "gameLabels": {
     "ability": "Abilità",
     "cancel": "Annulla",
+    "catch": "Cattura",
+    "catch-success": "Catturato con successo!",
+    "catch-failure": "Il mostro si è liberato!",
     "end-turn": "Fine turno",
     "heal-all": "Cura tutti",
     "load-game": "Carica",

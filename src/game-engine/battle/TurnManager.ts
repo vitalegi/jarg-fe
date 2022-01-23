@@ -112,6 +112,7 @@ const ICV = [
 export enum ActionType {
   MOVE = "MOVE",
   ABILITY = "ABILITY",
+  CATCH = "CATCH",
 }
 
 // TODO move to dedicated file
@@ -139,6 +140,10 @@ export class Action {
     t.ability = ability;
     return t;
   }
+  public static catchMonster(): Action {
+    const t = new Action(ActionType.CATCH);
+    return t;
+  }
 }
 
 // TODO move to dedicated file
@@ -163,9 +168,11 @@ class Tick {
       Action.move(path[0], path[path.length - 1], path.length - 1)
     );
   }
-
   public usesAbility(ability: Ability): void {
     this.actionsHistory.push(Action.ability(ability));
+  }
+  public catchMonster(): void {
+    this.actionsHistory.push(Action.catchMonster());
   }
 }
 

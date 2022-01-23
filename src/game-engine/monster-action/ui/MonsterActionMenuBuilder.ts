@@ -13,6 +13,8 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearned from "../ability/AbilityLearned";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import { gameLabel } from "@/services/LocalizationService";
+import SelectTargetCatch from "../SelectTargetCatch";
+import MonsterCatch from "../MonsterCatch";
 
 @Service()
 export default class MonsterActionMenuBuilder {
@@ -28,6 +30,7 @@ export default class MonsterActionMenuBuilder {
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
     leftMenu.addEntry(this.move(leftMenu, monster));
+    leftMenu.addEntry(this.catchMonster(leftMenu, monster));
     monster.abilities
       .map((ability) => this.abilityMenuEntry(leftMenu, monster, ability))
       .forEach((m) => leftMenu.addEntry(m));
@@ -52,6 +55,27 @@ export default class MonsterActionMenuBuilder {
     if (path) {
       await new MonsterMove(monster, path).execute();
       this.logger.info(`Walk to ${path[path.length - 1]} is completed.`);
+      leftMenu.reDraw();
+    }
+    leftMenu.show();
+  }
+
+  protected catchMonster(leftMenu: LeftMenu, monster: Monster): MenuEntry {
+    return new MenuEntry(
+      gameLabel("catch"),
+      () => this.onCatchClick(leftMenu, monster),
+      () => this.monsterService.canActiveMonsterCatch()
+    );
+  }
+
+  protected async onCatchClick(
+    leftMenu: LeftMenu,
+    monster: Monster
+  ): Promise<void> {
+    leftMenu.hide();
+    const target = await new SelectTargetCatch().selectTarget(monster, 3);
+    if (target) {
+      await new MonsterCatch(monster, target).execute();
       leftMenu.reDraw();
     }
     leftMenu.show();

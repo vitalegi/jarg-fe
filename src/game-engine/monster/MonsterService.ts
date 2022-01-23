@@ -118,6 +118,17 @@ export default class MonsterService {
     return tick.monster.movements.steps - moves;
   }
 
+  public canActiveMonsterCatch(): boolean {
+    const tick = this.turnManager.activeCharacter();
+    if (!tick) {
+      return false;
+    }
+    const attempts = tick.actionsHistory.filter(
+      (a) => a.type === ActionType.ABILITY || a.type === ActionType.CATCH
+    ).length;
+    return attempts === 0;
+  }
+
   public canActiveMonsterUseAbility(): boolean {
     const tick = this.turnManager.activeCharacter();
     if (!tick) {
@@ -125,7 +136,9 @@ export default class MonsterService {
       return false;
     }
     const count = tick.actionsHistory
-      .filter((a) => a.type === ActionType.ABILITY)
+      .filter(
+        (a) => a.type === ActionType.ABILITY || a.type === ActionType.CATCH
+      )
       .map((a) => a.distance).length;
 
     return count === 0;

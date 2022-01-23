@@ -13,4 +13,8 @@ export default class PlayerService {
   public getMonsters(): Monster[] {
     return this.playerRepository.getMonsters();
   }
+  public addMonster(monster: Monster): void {
+    monster.ownerId = this.getPlayerId();
+    this.playerRepository.getMonsters().push(monster);
+  }
 }

@@ -219,9 +219,12 @@ export default class BattleService {
   }
 
   public async die(uuid: string): Promise<void> {
-    const monster = this.mapRepository.getMonsterById(uuid);
+    this.logger.info(`Monster ${uuid} died.`);
+    this.removeMonster(uuid);
+  }
 
-    this.logger.info(`Monster ${monster.uuid} died.`);
+  public async removeMonster(uuid: string): Promise<void> {
+    const monster = this.mapRepository.getMonsterById(uuid);
 
     const container = this.gameApp
       .getBattleContainer()

@@ -32,7 +32,10 @@
   "gameLabels": {
     "ability": "Ability",
     "cancel": "Cancel",
-    "end-turn": "End turn",
+    "catch": "Catch",
+    "catch-success": "Catch done!",
+    "catch-failure": "Monster escaped!",
+"end-turn": "End turn",
     "heal-all": "Heal all",
     "load-game": "Load",
     "move": "Move",

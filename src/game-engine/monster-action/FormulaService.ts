@@ -8,6 +8,7 @@ import Stats from "../monster/stats/Stats";
 import StatsService from "../monster/stats/StatsService";
 import TypeService from "../types/TypeService";
 import Ability from "./ability/Ability";
+import StatusChangeComputed from "./computed-effect/StatusChangeComputed";
 
 @Service()
 export default class FormulaService {
@@ -133,5 +134,54 @@ export default class FormulaService {
       });
     });
     return bonus;
+  }
+
+  public catch(target: Monster): boolean {
+    const baseRate = this.catchBaseSuccessRate(target);
+    const alteredStatuses = target.activeEffects.filter(
+      (e) => e.type === StatusChangeComputed.TYPE
+    );
+    let rate = baseRate;
+    if (alteredStatuses.length > 0) {
+      rate *= 1.3;
+    }
+    this.logger.info(
+      `Catch ${target.uuid} with baseRate ${baseRate} and ${alteredStatuses.length} altered statuses. Rate: ${rate}`
+    );
+    return this.randomService.randomBool(rate);
+  }
+
+  protected catchBaseSuccessRate(target: Monster): number {
+    const ratio = (100.0 * target.stats.hp) / target.stats.maxHP;
+    console.log(
+      "ratio: ",
+      ratio,
+      target.stats.hp,
+      target.stats.maxHP,
+      target.stats.hp / target.stats.maxHP,
+      (100 * target.stats.hp) / target.stats.maxHP
+    );
+    const PAIRS = [
+      { minRatio: 99, probability: 0 },
+      { minRatio: 90, probability: 0.01 },
+      { minRatio: 80, probability: 0.02 },
+      { minRatio: 70, probability: 0.03 },
+      { minRatio: 60, probability: 0.04 },
+      { minRatio: 50, probability: 0.05 },
+      { minRatio: 40, probability: 0.06 },
+      { minRatio: 30, probability: 0.08 },
+      { minRatio: 20, probability: 0.1 },
+      { minRatio: 15, probability: 0.15 },
+      { minRatio: 10, probability: 0.2 },
+      { minRatio: 5, probability: 0.25 },
+      { minRatio: 1, probability: 0.4 },
+      { minRatio: 0, probability: 0.5 },
+    ];
+    for (const par of PAIRS) {
+      if (par.minRatio <= ratio) {
+        return par.probability;
+      }
+    }
+    return PAIRS[PAIRS.length - 1].probability;
   }
 }
