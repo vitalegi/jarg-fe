@@ -12,4 +12,17 @@ export default class RandomEncounter {
     out.probability = json.probability;
     return out;
   }
+
+  public clone(): RandomEncounter {
+    const out = new RandomEncounter();
+    out.monsterId = this.monsterId;
+    out.levelMin = this.levelMin;
+    out.levelMax = this.levelMax;
+    out.probability = this.probability;
+    return out;
+  }
+
+  public toString(): string {
+    return `monsterId=${this.monsterId}, levelMin=${this.levelMin}, levelMax=${this.levelMax}, probability=${this.probability}`;
+  }
 }

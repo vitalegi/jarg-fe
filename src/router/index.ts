@@ -28,11 +28,11 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
-    path: "/monsters/editor",
+    path: "/editor/monsters",
     name: "MonsterIndexEditor",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/MonsterIndexEditorView.vue"
+        /* webpackChunkName: "editor-monsters" */ "../views/MonsterIndexEditorView.vue"
       ),
   },
   {
@@ -40,15 +40,23 @@ const routes: Array<RouteConfig> = [
     name: "MonsterIndexStatComparator",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/MonsterIndexStatComparatorView.vue"
+        /* webpackChunkName: "comparator" */ "../views/MonsterIndexStatComparatorView.vue"
       ),
   },
   {
-    path: "/abilities/editor",
+    path: "/editor/abilities",
     name: "AbilitiesEditor",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/AbilitiesEditorView.vue"
+        /* webpackChunkName: "editor-abilities" */ "../views/AbilitiesEditorView.vue"
+      ),
+  },
+  {
+    path: "/editor/maps",
+    name: "MapGeneratorView",
+    component: () =>
+      import(
+        /* webpackChunkName: "editor-map" */ "../views/MapGeneratorView.vue"
       ),
   },
 ];

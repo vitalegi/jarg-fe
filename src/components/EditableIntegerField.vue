@@ -5,6 +5,7 @@
     v-model="model"
     @change="change"
     :disabled="disabled"
+    :persistent-hint="persistentHint"
   ></v-text-field>
 </template>
 
@@ -17,6 +18,7 @@ export default Vue.extend({
     label: { type: String },
     value: { type: Number },
     disabled: { type: Boolean, default: false },
+    persistentHint: { type: Boolean, default: true },
   },
   data: () => ({
     model: "0",

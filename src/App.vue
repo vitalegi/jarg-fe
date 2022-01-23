@@ -7,8 +7,9 @@
 
       <div id="nav">
         <router-link to="/game">Game</router-link> |
-        <router-link to="/monsters/editor">Monsters</router-link> |
-        <router-link to="/abilities/editor">Abilities</router-link> |
+        <router-link to="/editor/monsters">Monsters</router-link> |
+        <router-link to="/editor/abilities">Abilities</router-link> |
+        <router-link to="/editor/maps">Maps</router-link> |
         <router-link to="/monsters/comparator">Compare</router-link> |
         <router-link to="/about">About</router-link>
       </div>

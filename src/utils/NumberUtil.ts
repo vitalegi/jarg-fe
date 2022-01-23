@@ -17,4 +17,7 @@ export default class NumberUtil {
   public static max(numbers: number[], defaultValue = 0): number {
     return numbers.reduce((prev, curr) => Math.max(prev, curr), defaultValue);
   }
+  public static sum(numbers: number[]): number {
+    return numbers.reduce((prev, curr) => prev + curr, 0);
+  }
 }

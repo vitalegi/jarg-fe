@@ -46,7 +46,7 @@ import Vue from "vue";
 import AbilitySearch from "./AbilitySearch.vue";
 
 export default Vue.extend({
-  name: "SelectMonsterIndex",
+  name: "SelectAbility",
   components: { AbilitySearch },
   props: {
     label: {

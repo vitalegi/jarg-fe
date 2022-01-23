@@ -19,4 +19,18 @@ export default class ArrayUtil {
     });
     return unique;
   }
+  public static getDuplicates<E>(
+    array: E[],
+    equals: (a: E, b: E) => boolean
+  ): E[] {
+    const duplicates: E[] = [];
+    for (let i = 0; i < array.length; i++) {
+      for (let j = i + 1; j < array.length; j++) {
+        if (equals(array[i], array[j])) {
+          duplicates.push(array[i]);
+        }
+      }
+    }
+    return ArrayUtil.removeDuplicates(duplicates, equals);
+  }
 }

@@ -6,6 +6,7 @@
         :label="label"
         append-outer-icon="mdi-map-marker"
         readonly
+        :dense="dense"
         v-bind="attrs"
         v-on="on"
       >
@@ -60,6 +61,13 @@ export default Vue.extend({
     initialValue: {
       type: MonsterIndex,
     },
+    initialValueId: {
+      type: String,
+    },
+    dense: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({ dialog: false, model: "" }),
   computed: {
@@ -86,9 +94,19 @@ export default Vue.extend({
     },
   },
   mounted(): void {
+    let monster: MonsterIndex | null = null;
     if (this.initialValue) {
-      this.model = this.getLabel(this.initialValue);
+      monster = this.initialValue;
     }
+    if (this.initialValueId) {
+      const monsters = this.monsters.filter(
+        (m) => m.monsterId === this.initialValueId
+      );
+      if (monsters.length > 0) {
+        monster = monsters[0];
+      }
+    }
+    this.model = this.getLabel(monster);
   },
 });
 </script>
