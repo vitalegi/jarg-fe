@@ -13,7 +13,6 @@ import ArrayUtil from "@/utils/ArrayUtil";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import Ability from "../ability/Ability";
-import AbilityLearnable from "../ability/AbilityLearnable";
 import AbilityLearned from "../ability/AbilityLearned";
 import AbilityExecutor from "../AbilityExecutor";
 import MonsterMove from "../MonsterMove";
@@ -86,16 +85,7 @@ export default class MonsterAI {
           `No reachable enemy, terminate without doing anything.`
         );
       } else {
-        this.logger.info(`Walk towards ${target.toString()}`);
-        try {
-          const fullPath = this.getMoveMapTraversal().getPath(target);
-          // TODO FIXME targetPoint should be empty
-          const targetPoint = fullPath[steps];
-          this.logger.info(`Mid point is ${targetPoint.toString()}`);
-          await this.move(targetPoint);
-        } catch (e) {
-          this.logger.error(`Failed to come closer to ${target}`);
-        }
+        await this.walkTowards(target, steps);
       }
     }
   }
@@ -105,18 +95,22 @@ export default class MonsterAI {
     learnable: AbilityLearned
   ): MonsterAction[] {
     const ability = this.abilityRepository.getAbility(learnable.abilityId);
-    return ArrayUtil.removeDuplicates(
-      startingPoints.flatMap((point) =>
-        this.getTargetsInRange(point, ability).flatMap(
-          (target) => new MonsterAction(point, ability, target)
-        )
-      ),
-      (a, b) => a.equals(b)
+    const actions = startingPoints.flatMap((standingPoint) =>
+      this.getTargetsInRange(standingPoint, ability).flatMap(
+        (target) => new MonsterAction(standingPoint, ability, target)
+      )
     );
+    ArrayUtil.randomize(actions);
+    return ArrayUtil.removeDuplicates(actions, (a, b) => a.equals(b));
   }
 
   protected getAllWalkablePoints(maxDistance: number): TraversalPoint[] {
-    return this.getMoveMapTraversal().getPoints(maxDistance);
+    return (
+      this.getMoveMapTraversal()
+        .getPoints(maxDistance)
+        // cost = 0 ==> you stay where you are
+        .filter((tp) => tp.cost === 0 || this.isEmptyPoint(tp.point))
+    );
   }
 
   protected getMoveMapTraversal(): MapTraversal {
@@ -135,9 +129,15 @@ export default class MonsterAI {
   }
 
   protected getTargetsInRange(source: Point, ability: Ability): Monster[] {
-    return this.getEnemies().filter((m) =>
+    const inRange = this.getEnemies().filter((m) =>
       this.isInRange(source, m, ability.abilityTarget.range)
     );
+    this.logger.debug(
+      `Targets in range (${
+        ability.abilityTarget.range
+      }) from ${source.toString()}: ${inRange.length}`
+    );
+    return inRange;
   }
 
   protected getEnemies(): Monster[] {
@@ -191,7 +191,7 @@ export default class MonsterAI {
           };
         })
       )
-      .filter((e) => this.isEmpty(e.point.point));
+      .filter((e) => this.isEmptyPoint(e.point.point));
 
     this.logger.debug(
       `Reachable targets: ${reachableTargets.length}`,
@@ -219,11 +219,30 @@ export default class MonsterAI {
     );
   }
 
-  protected isEmpty(point: Point): boolean {
-    return (
-      this.mapRepository
-        .getMap()
-        .monsters.filter((m) => m.coordinates?.equals(point)).length === 0
-    );
+  protected async walkTowards(target: Point, maxSteps: number): Promise<void> {
+    try {
+      this.logger.debug(
+        `Walk towards ${target.toString()}, ${maxSteps} steps available`
+      );
+      const fullPath = this.getMoveMapTraversal().getPath(target);
+      let remainingSteps = maxSteps;
+      let targetPoint = fullPath[remainingSteps];
+      while (!this.isEmptyPoint(targetPoint) && remainingSteps > 0) {
+        this.logger.debug(
+          `Walk towards ${target.toString()}, ${targetPoint.toString()} is not valid, try another`
+        );
+        targetPoint = fullPath[--remainingSteps];
+      }
+      this.logger.debug(
+        `Walk towards ${target.toString()}, mid point is ${targetPoint.toString()}`
+      );
+      await this.move(targetPoint);
+    } catch (e) {
+      this.logger.error(`Failed to come closer to ${target}`);
+    }
+  }
+
+  protected isEmptyPoint(point: Point): boolean {
+    return this.mapRepository.getMonstersOnCoordinates(point).length === 0;
   }
 }

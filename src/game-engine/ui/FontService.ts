@@ -4,14 +4,17 @@ import { Service } from "typedi";
 @Service()
 export default class FontService {
   public leftMenuEnabled(): Partial<TextStyle> {
-    const font = this.baseFont();
-    font.fontSize = 20;
-    return font;
+    return {
+      fontFamily: "Courier",
+      fill: "#4a1850",
+      lineJoin: LINE_JOIN.ROUND,
+      fontWeight: "700",
+    };
   }
 
   public leftMenuDisabled(): Partial<TextStyle> {
     const font = this.leftMenuEnabled();
-    font.stroke = "#999999";
+    font.fill = "#999999";
     return font;
   }
 

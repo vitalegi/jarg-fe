@@ -6,9 +6,10 @@
       <v-spacer></v-spacer>
 
       <div id="nav">
-        <router-link to="/monsters/editor">Monster editor</router-link> |
-        <router-link to="/monsters/comparator">Compare</router-link>
-        | <router-link to="/abilities/editor">Abilities editor</router-link> |
+        <router-link to="/game">Game</router-link> |
+        <router-link to="/monsters/editor">Monsters</router-link> |
+        <router-link to="/abilities/editor">Abilities</router-link> |
+        <router-link to="/monsters/comparator">Compare</router-link> |
         <router-link to="/about">About</router-link>
       </div>
     </v-app-bar>

@@ -13,6 +13,12 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
+    path: "/game",
+    name: "Game",
+    component: () =>
+      import(/* webpackChunkName: "gameview" */ "../views/GameView.vue"),
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
@@ -53,7 +59,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const isGameView = to.name === "Home";
+  const isGameView = to.name === "Game";
   store.commit("setGameMode", isGameView);
   const logger = LoggerFactory.getLogger("Router");
   logger.info(

@@ -1,4 +1,4 @@
 [
-  { "name": "MonsterAI", "level": "INFO" },
+  { "name": "GameEngine\\.MonsterAction\\.AI\\.MonsterAI", "level": "DEBUG" },
   { "name": ".*", "level": "INFO" }
 ]
