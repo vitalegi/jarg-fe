@@ -52,7 +52,7 @@ export default class RendererService {
   public loadAssets(): Promise<void> {
     return new Promise<void>((resolve) => {
       PIXI.Loader.shared.load(() => {
-        this.logger.info("Assets are loaded");
+        this.logger.debug("Assets are loaded");
         resolve();
       });
     });

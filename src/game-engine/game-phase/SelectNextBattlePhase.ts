@@ -70,11 +70,11 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   }
 
   protected healMonster(monster: Monster): void {
-    this.logger.info(`${monster.uuid}: remove status/stats alterations`);
+    this.logger.debug(`${monster.uuid}: remove status/stats alterations`);
     monster.activeEffects = [];
-    this.logger.info(`${monster.uuid}: restore stats`);
+    this.logger.debug(`${monster.uuid}: restore stats`);
     this.statsService.updateMonsterAttributes(monster, true);
-    this.logger.info(`${monster.uuid}: restore abilities usages`);
+    this.logger.debug(`${monster.uuid}: restore abilities usages`);
     monster.abilities.forEach((a) => (a.currentUsages = a.maxUsages));
   }
 

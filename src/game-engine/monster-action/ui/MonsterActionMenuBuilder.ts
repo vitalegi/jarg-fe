@@ -54,7 +54,7 @@ export default class MonsterActionMenuBuilder {
     const path = await new SelectTargetMove().selectTarget(monster);
     if (path) {
       await new MonsterMove(monster, path).execute();
-      this.logger.info(`Walk to ${path[path.length - 1]} is completed.`);
+      this.logger.debug(`Walk to ${path[path.length - 1]} is completed.`);
       leftMenu.reDraw();
     }
     leftMenu.show();

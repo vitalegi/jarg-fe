@@ -82,7 +82,7 @@ export default class GameAppDataLoader {
         )
     );
     this.rendererService.addImages(assets);
-    this.logger.info("Load SpriteSheet done", assets);
+    this.logger.debug("Load SpriteSheet done", assets);
   }
 
   public async loadAbilities(): Promise<void> {
@@ -132,7 +132,7 @@ export default class GameAppDataLoader {
       }
     }
     await Promise.all(promises);
-    this.logger.info(
+    this.logger.debug(
       `Load monster animations' metadata for ${monsters
         .map((m) => m.monsterId)
         .join(", ")} done.`
@@ -148,7 +148,7 @@ export default class GameAppDataLoader {
       animationSrc.metadata
     );
     monster.animations.push(animation);
-    this.logger.info(
+    this.logger.debug(
       `Loaded animation metadata for ${monster.name}, ${animationSrc.key}`
     );
   }

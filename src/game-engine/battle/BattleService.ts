@@ -65,7 +65,7 @@ export default class BattleService {
     }
     const monster = active.monster;
     const playerId = this.playerService.getPlayerId();
-    this.logger.info(`Focus on ${monster.coordinates}`);
+    this.logger.debug(`Focus on ${monster.coordinates}`);
     if (monster.coordinates) {
       const focus = new ChangeFocusDrawer(monster.coordinates);
       this.gameLoop.addGameLoopHandler(focus);
@@ -147,7 +147,7 @@ export default class BattleService {
     );
     const ai = new MonsterAI(monster);
     await ai.execute();
-    this.logger.info(`Monster action is completed, go to next.`);
+    this.logger.debug(`Monster action is completed, go to next.`);
     this.nextTurn();
   }
 
@@ -374,7 +374,7 @@ export default class BattleService {
       );
       const exp = Math.ceil(totalExp / monsters.length);
       for (const m of monsters) {
-        await this.gainExp(m, exp);
+        await this.gainExpMonster(m, exp);
       }
     }
   }

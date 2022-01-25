@@ -42,7 +42,7 @@ export default class MonsterAI {
       10
     ).map((p) => p.point);
 
-    this.logger.info(`Step 1: ${walkable.length} possible walkable locations`);
+    this.logger.debug(`Step 1: ${walkable.length} possible walkable locations`);
 
     const availableActions = TimeUtil.monitor(
       "MonsterAI.availableActions",
@@ -52,7 +52,7 @@ export default class MonsterAI {
         ),
       50
     );
-    this.logger.info(`Step 2: ${availableActions.length} possible actions`);
+    this.logger.debug(`Step 2: ${availableActions.length} possible actions`);
 
     if (availableActions.length > 0) {
       const action = await TimeUtil.monitorAsync(
@@ -65,7 +65,7 @@ export default class MonsterAI {
           ).selectBestAction(),
         300
       );
-      this.logger.info(
+      this.logger.debug(
         `Step 3: will perform ${action.ability.id} / ${
           action.ability.label
         } from ${action.from.toString()} against ${
@@ -80,7 +80,7 @@ export default class MonsterAI {
       );
       await executor.execute();
     } else {
-      this.logger.info(
+      this.logger.debug(
         "Step 4. No target, find all reachable enemies in 3 turns and walk towards one of them"
       );
       const target = TimeUtil.monitor(
@@ -89,7 +89,7 @@ export default class MonsterAI {
         5
       );
       if (!target) {
-        this.logger.info(
+        this.logger.debug(
           `No reachable enemy, terminate without doing anything.`
         );
       } else {
@@ -188,7 +188,7 @@ export default class MonsterAI {
     const walkablePoints = this.getAllWalkablePoints(
       3 * this.source.movements.steps
     );
-    this.logger.info(`Walkable points: ${walkablePoints.length}`);
+    this.logger.debug(`Walkable points: ${walkablePoints.length}`);
 
     const reachableTargets = targets
       .flatMap((target) =>

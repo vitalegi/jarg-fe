@@ -145,7 +145,7 @@ export default class FormulaService {
     if (alteredStatuses.length > 0) {
       rate *= 1.3;
     }
-    this.logger.info(
+    this.logger.debug(
       `Catch ${target.uuid} with baseRate ${baseRate} and ${alteredStatuses.length} altered statuses. Rate: ${rate}`
     );
     return this.randomService.randomBool(rate);

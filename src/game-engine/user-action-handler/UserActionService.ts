@@ -15,7 +15,7 @@ export default class UserActionService {
 
   public addActionHandler(actionHandler: UserActionHandler): void {
     this.actionHandlers.push(actionHandler);
-    this.logger.info(
+    this.logger.debug(
       `Add ActionHandler ${actionHandler.getName()}_${actionHandler.getUuid()}, available: ${this.actionHandlers
         .map((h) => `${h.getName()}_${h.getUuid()}`)
         .join(", ")}`
@@ -23,7 +23,7 @@ export default class UserActionService {
   }
 
   public removeAll(): void {
-    this.logger.info(`Remove all ActionHandlers`);
+    this.logger.debug(`Remove all ActionHandlers`);
     this.actionHandlers = [];
   }
 
@@ -39,7 +39,7 @@ export default class UserActionService {
       );
     }
     const handler = this.actionHandlers[index];
-    this.logger.info(
+    this.logger.debug(
       `Remove ActionHandler ${handler.getName()}_${handler.getUuid()}, available: ${this.actionHandlers
         .map((h) => `${h.getName()}_${h.getUuid()}`)
         .join(", ")}`

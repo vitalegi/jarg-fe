@@ -24,7 +24,7 @@ export default class MissComputed extends ComputedEffect {
   }
 
   public async onHitAfter(): Promise<void> {
-    this.logger.info(`MissComputed: miss attack to ${this.target.name}`);
+    this.logger.debug(`MissComputed: miss attack to ${this.target.name}`);
     return super.showTextOverMonster(this.target, "MISS");
   }
 }

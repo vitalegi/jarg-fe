@@ -29,7 +29,7 @@ export default class MonsterCatch {
   }
 
   public async execute(): Promise<void> {
-    this.logger.info(`${this.source.uuid} tries to catch ${this.targetId}`);
+    this.logger.debug(`${this.source.uuid} tries to catch ${this.targetId}`);
     const target = this.mapRepository.getMonsterById(this.targetId);
 
     const isCatched = this.formulaService.catch(target);

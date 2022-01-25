@@ -27,7 +27,7 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
       return;
     }
     const point = newPosition.clone();
-    this.logger.info(`Drag start from ${point} / ${input}`);
+    this.logger.debug(`Drag start from ${point} / ${input}`);
     this._dragStart = point;
     this._lastPoint = point.clone();
   }

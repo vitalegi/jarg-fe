@@ -31,14 +31,14 @@ export default class TextOverCharacterDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.isFirstDraw()) {
-      this.logger.info(`Show text ${this.getText()}`);
+      this.logger.debug(`Show text ${this.getText()}`);
       const container = this.getMonsterContainer();
       if (container) {
         container.addChild(this.createTextMessage());
       }
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
-      this.logger.info(`Remove text message ${this.getText()}`);
+      this.logger.debug(`Remove text message ${this.getText()}`);
       const container = this.getMonsterContainer();
       if (container) {
         const textChild = container.getChildByName(

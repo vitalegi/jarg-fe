@@ -25,7 +25,7 @@ export default class MonsterMove {
       activeCharacter.moves(this.path);
     }
 
-    this.logger.info(
+    this.logger.debug(
       `Path ${this.path}, starting from: ${this.source.coordinates}`
     );
     for (let i = 0; i < this.path.length - 1; i++) {

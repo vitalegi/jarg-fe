@@ -71,7 +71,7 @@ export default class MonsterInfoDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.container === null) {
-      this.logger.info(`Show stats of ${this.monster.uuid}`);
+      this.logger.debug(`Show stats of ${this.monster.uuid}`);
       this.container = new PIXI.Container();
       this.container.name = MonsterInfoDrawer.NAME;
 

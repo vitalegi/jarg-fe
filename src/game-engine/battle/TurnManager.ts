@@ -251,8 +251,11 @@ export default class TurnManager {
         .map((m) => m.ticks)
         .reduce((prev: number, curr: number) => Math.min(prev, curr), 100000);
 
-      this.logger.info(`No other ticks = 0, reduce all by ${min} ticks.`);
-      this.logger.debug(`Ticks ${this.ticks.join(", ")}`);
+      this.logger.debug(
+        `No other ticks = 0, reduce all by ${min} ticks. Status: ${this.ticks.join(
+          ", "
+        )}`
+      );
       this.ticks.forEach((t) => (t.ticks -= min));
     }
 
