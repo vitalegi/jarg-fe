@@ -9,11 +9,12 @@ import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
 import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
 import Move from "@/models/Move";
-import TurnManager, { ActionType } from "../battle/TurnManager";
+import HistoryRepository from "../battle/turns/HistoryRepository";
 import { LevelUpService } from "./LevelUpService";
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityService from "../monster-action/ability/AbilityService";
+import ActionType from "../battle/turns/ActionType";
 
 const names = [
   "Cino",
@@ -43,7 +44,8 @@ export default class MonsterService {
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected historyRepository =
+    Container.get<HistoryRepository>(HistoryRepository);
 
   public createMonster(
     ownerId: string | null,
@@ -103,44 +105,30 @@ export default class MonsterService {
   }
 
   public availableActiveMonsterMoves(): number {
-    const tick = this.turnManager.activeCharacter();
-    if (!tick) {
-      return 0;
-    }
-    const moves = tick.actionsHistory
-      .filter((a) => a.type === ActionType.MOVE)
+    const current = this.historyRepository.getCurrent();
+    const stepsDone = current
+      .getByTypes([ActionType.MOVE])
       .map((a) => a.distance)
       .reduce((prev, curr) => prev + curr, 0);
 
-    if (!moves) {
-      return tick.monster.movements.steps;
-    }
-    return tick.monster.movements.steps - moves;
+    return current.monster.movements.steps - stepsDone;
   }
 
   public canActiveMonsterCatch(): boolean {
-    const tick = this.turnManager.activeCharacter();
-    if (!tick) {
-      return false;
-    }
-    const attempts = tick.actionsHistory.filter(
-      (a) => a.type === ActionType.ABILITY || a.type === ActionType.CATCH
-    ).length;
-    return attempts === 0;
+    const current = this.historyRepository.getCurrent();
+    const actionsDone = current.getByTypes([
+      ActionType.ABILITY,
+      ActionType.CATCH,
+    ]).length;
+    return actionsDone === 0;
   }
 
   public canActiveMonsterUseAbility(): boolean {
-    const tick = this.turnManager.activeCharacter();
-    if (!tick) {
-      this.logger.info(`No active monster`);
-      return false;
-    }
-    const count = tick.actionsHistory
-      .filter(
-        (a) => a.type === ActionType.ABILITY || a.type === ActionType.CATCH
-      )
-      .map((a) => a.distance).length;
-
-    return count === 0;
+    const current = this.historyRepository.getCurrent();
+    const actionsDone = current.getByTypes([
+      ActionType.ABILITY,
+      ActionType.CATCH,
+    ]).length;
+    return actionsDone === 0;
   }
 }

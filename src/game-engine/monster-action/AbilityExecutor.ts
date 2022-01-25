@@ -6,7 +6,7 @@ import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import HealthBarService from "../monster/HealthBarService";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
-import TurnManager from "../battle/TurnManager";
+import HistoryRepository from "../battle/turns/HistoryRepository";
 import BattleService from "../battle/BattleService";
 import ComputedEffect from "./computed-effect/ComputedEffect";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -20,7 +20,8 @@ export default class AbilityExecutor {
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected historyRepository =
+    Container.get<HistoryRepository>(HistoryRepository);
   protected abilityService = Container.get<AbilityService>(AbilityService);
   protected playerService = Container.get<PlayerService>(PlayerService);
 
@@ -42,10 +43,7 @@ export default class AbilityExecutor {
     this.logger.info(
       `AbilityExecutor - START ability=${this.ability.id}/${this.ability.label}`
     );
-    const activeCharacter = this.turnManager.activeCharacter();
-    if (activeCharacter) {
-      activeCharacter.usesAbility(this.ability);
-    }
+    this.historyRepository.usesAbility(this.ability);
     const effects = await this.ability
       .getProcessor()
       .execute(this.source, this.target, this.ability);

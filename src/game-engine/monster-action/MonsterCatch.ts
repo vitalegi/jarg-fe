@@ -1,9 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import Container from "typedi";
-import Point from "@/models/Point";
-import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
 import GameLoop from "../GameLoop";
-import TurnManager from "../battle/TurnManager";
+import HistoryRepository from "../battle/turns/HistoryRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
 import FormulaService from "./FormulaService";
 import MapRepository from "../map/MapRepository";
@@ -19,7 +17,8 @@ export default class MonsterCatch {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected battleService = Container.get<BattleService>(BattleService);
   protected playerService = Container.get<PlayerService>(PlayerService);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected historyRepository =
+    Container.get<HistoryRepository>(HistoryRepository);
   protected source;
   protected targetId;
 
@@ -33,11 +32,7 @@ export default class MonsterCatch {
     const target = this.mapRepository.getMonsterById(this.targetId);
 
     const isCatched = this.formulaService.catch(target);
-    const activeCharacter = this.turnManager.activeCharacter();
-    if (activeCharacter) {
-      activeCharacter.catchMonster();
-    }
-
+    this.historyRepository.catchMonster();
     if (isCatched) {
       await this.doCatchSuccess(target);
     } else {

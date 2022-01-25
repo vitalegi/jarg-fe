@@ -12,10 +12,11 @@ import GameLoop from "@/game-engine/GameLoop";
 import MonsterAnimationDrawer from "../ui/MonsterAnimationDrawer";
 import MapRepository from "../map/MapRepository";
 import PlayerService from "../PlayerService";
-import TurnManager from "../battle/TurnManager";
+import TurnManager from "../battle/turns/TurnManager";
 import TurnBoxDrawer from "../ui/TurnBoxDrawer";
 import BattleService from "../battle/BattleService";
 import GameApp from "../GameApp";
+import HistoryRepository from "../battle/turns/HistoryRepository";
 
 @Service()
 export default class BattlePhase extends AbstractPhase<MapContainer> {
@@ -31,6 +32,8 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
     Container.get<UserActionService>(UserActionService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected historyRepository =
+    Container.get<HistoryRepository>(HistoryRepository);
   protected battleService = Container.get<BattleService>(BattleService);
 
   public getName(): string {
@@ -94,6 +97,7 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
     });
 
     this.turnManager.removeAll();
+    this.historyRepository.removeAll();
     this.turnManager.addCharacters(this.mapRepository.getMap().monsters);
     this.turnManager.initTurns();
     this.gameLoop.addGameLoopHandler(new TurnBoxDrawer(this.getApp().stage));

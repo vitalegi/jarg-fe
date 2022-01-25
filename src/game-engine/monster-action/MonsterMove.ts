@@ -3,13 +3,13 @@ import Container from "typedi";
 import Point from "@/models/Point";
 import MonsterMoveDrawer from "../ui/MonsterMoveDrawer";
 import GameLoop from "../GameLoop";
-import TurnManager from "../battle/TurnManager";
 import LoggerFactory from "@/logger/LoggerFactory";
-
+import HistoryRepository from "../battle/turns/HistoryRepository";
 export default class MonsterMove {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.MonsterMove");
   protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
+  protected historyRepository =
+    Container.get<HistoryRepository>(HistoryRepository);
 
   protected source;
   protected path;
@@ -20,11 +20,7 @@ export default class MonsterMove {
   }
 
   public async execute(): Promise<void> {
-    const activeCharacter = this.turnManager.activeCharacter();
-    if (activeCharacter) {
-      activeCharacter.moves(this.path);
-    }
-
+    this.historyRepository.moves(this.path);
     this.logger.debug(
       `Path ${this.path}, starting from: ${this.source.coordinates}`
     );

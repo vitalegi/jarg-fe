@@ -1,12 +1,14 @@
 import Container from "typedi";
 import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import TurnManager from "../battle/TurnManager";
+import TurnManager from "../battle/turns/TurnManager";
 import MapContainer from "@/game-engine/map/MapContainer";
 import WindowSizeProxy from "../WindowSizeProxy";
 import FontService from "./FontService";
 import MapRepository from "../map/MapRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Tick from "../battle/turns/Tick";
+import Monster from "../monster/Monster";
 
 export default class TurnBoxDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.TurnBoxDrawer");
@@ -20,7 +22,7 @@ export default class TurnBoxDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 
   //TODO move in a Repository class
-  protected turns: string[] = [];
+  protected turns: Tick[] = [];
 
   options = {
     entries: 10,
@@ -64,18 +66,29 @@ export default class TurnBoxDrawer extends Drawer {
     if (!this.turnsChanged(this.turns, newTurns)) {
       return;
     }
+    const toString = (arr: Tick[]) =>
+      arr.map((t) => t.toShortString()).join(", ");
+
+    this.logger.debug(
+      `Turns have changed from ${toString(this.turns)} to ${toString(newTurns)}`
+    );
+    this.turnManager.reportTicksStatus(newTurns);
+
+    // regenerate entries
     this.container.removeChildren();
     this.container.height = this.height(newTurns);
-    this.logger.debug(`Turns have changed from ${this.turns} to ${newTurns}`);
-    // regenerate entries
     this.turns = newTurns;
     this.turns
-      .map((id: string, index: number) => this.createTurnEntry(id, index))
+      .map((tick: Tick, index: number) =>
+        this.createTurnEntry(tick.monster, index)
+      )
       .forEach((turn) => this.container?.addChild(turn));
   }
 
-  protected createTurnEntry(id: string, index: number): PIXI.DisplayObject {
-    const monster = this.mapRepository.getMonsterById(id);
+  protected createTurnEntry(
+    monster: Monster,
+    index: number
+  ): PIXI.DisplayObject {
     let label = "unknown";
     if (monster !== undefined) {
       label = monster.name;
@@ -94,23 +107,23 @@ export default class TurnBoxDrawer extends Drawer {
     );
   }
 
-  protected getTurns(): string[] {
+  protected getTurns(): Tick[] {
     return this.turnManager.getTurns(10);
   }
 
-  protected turnsChanged(oldTurns: string[], newTurns: string[]): boolean {
+  protected turnsChanged(oldTurns: Tick[], newTurns: Tick[]): boolean {
     if (oldTurns.length !== newTurns.length) {
       return true;
     }
     for (let i = 0; i < oldTurns.length; i++) {
-      if (oldTurns[i] !== newTurns[i]) {
+      if (oldTurns[i].monster.uuid !== newTurns[i].monster.uuid) {
         return true;
       }
     }
     return false;
   }
 
-  protected height(turns: string[]): number {
+  protected height(turns: Tick[]): number {
     return this.options.style.menuEntry.height * turns.length;
   }
 }

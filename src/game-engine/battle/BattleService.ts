@@ -6,7 +6,7 @@ import GameLoop from "../GameLoop";
 import MonsterActionMenuBuilder from "../monster-action/ui/MonsterActionMenuBuilder";
 import PlayerService from "../PlayerService";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
-import TurnManager from "./TurnManager";
+import TurnManager from "./turns/TurnManager";
 import MapRepository from "../map/MapRepository";
 import MonsterAI from "../monster-action/ai/MonsterAI";
 import GameConfig from "../GameConfig";
