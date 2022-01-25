@@ -31,10 +31,11 @@ export default class MapTraversal {
     }
     const graph = this.buildGraph();
 
-    const now = TimeUtil.timestamp();
-    const path = this.minimumPath(graph, start, target);
-    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    this.logger.info(`MONITORING dijkstra duration=${duration}ms`);
+    const path = TimeUtil.monitor(
+      "minimumPath",
+      () => this.minimumPath(graph, start, target),
+      10
+    );
     this.logger.debug(`Path from ${start} to ${target}: ${path.join(",")}`);
     return path;
   }
@@ -44,28 +45,29 @@ export default class MapTraversal {
     if (!start) {
       throw Error(`Missing starting point`);
     }
-    const graph = this.buildGraph();
-
-    const now = TimeUtil.timestamp();
-    this.dijkstra(graph, start);
-    const points: TraversalPoint[] = [];
-    graph.forEach((point: TraversalPoint) => {
-      if (point.cost <= maxDistance) {
-        points.push(point);
-      }
-    });
-
-    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    this.logger.info(`MONITORING dijkstra duration=${duration}ms`);
-    return points;
+    return TimeUtil.monitor(
+      "getPoints",
+      () => {
+        const graph = this.buildGraph();
+        this.dijkstra(graph, start);
+        const points: TraversalPoint[] = [];
+        graph.forEach((point: TraversalPoint) => {
+          if (point.cost <= maxDistance) {
+            points.push(point);
+          }
+        });
+        return points;
+      },
+      10
+    );
   }
 
   protected buildGraph(): Map<string, TraversalPoint> {
-    const now = TimeUtil.timestamp();
-    const graph = this.builder.createGraph(this.map, this.monster);
-    const duration = Math.round(100 * (TimeUtil.timestamp() - now)) / 100;
-    this.logger.info(`MONITORING getGraph duration=${duration}ms`);
-    return graph;
+    return TimeUtil.monitor(
+      "buildGraph",
+      () => this.builder.createGraph(this.map, this.monster),
+      10
+    );
   }
 
   protected minimumPath(

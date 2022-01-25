@@ -70,7 +70,7 @@ export default class LeftMenu {
   public draw(): void {
     this.container = new PIXI.Container();
     this.container.name = `${LeftMenu.NAME}_${UuidUtil.nextId()}`;
-    this.logger.info(`Draw menu ${this.container.name}`);
+    this.logger.debug(`Draw menu ${this.container.name}`);
 
     this.gameApp.getApp().stage.addChild(this.container);
 
@@ -78,7 +78,7 @@ export default class LeftMenu {
       .getApp()
       .stage.children.filter((c) => c.name.startsWith(LeftMenu.NAME));
     if (runningMenus.length > 1) {
-      this.logger.info("MONITORING, LeftMenus: ", runningMenus);
+      this.logger.debug(`MONITORING, LeftMenus: ${runningMenus.length}`);
     }
 
     this.container.addChild(

@@ -220,7 +220,7 @@ export default class TurnManager {
       .map((m) => new Tick(m, this.getICV(m)))
       .forEach((t) => this.ticks.push(t));
     this.next();
-    this.logger.info(`init: ${this.ticks.join(", ")}`);
+    this.logger.debug(`init: ${this.ticks.join(", ")}`);
   }
   public hasCharacters(): boolean {
     return this.monsters.length > 0;
@@ -241,7 +241,7 @@ export default class TurnManager {
         this.active.monster,
         this.getTS(this.active.monster)
       );
-      this.logger.info(`Re-calculate ticks for exiting monster: ${tick}`);
+      this.logger.debug(`Re-calculate ticks for exiting monster: ${tick}`);
       this.ticks.push(tick);
       this.active = null;
     }

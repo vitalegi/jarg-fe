@@ -40,11 +40,11 @@ export default class AbilityNameDrawer extends Drawer {
 
   protected doDraw(): void {
     if (this.isFirstDraw()) {
-      this.logger.info(`Show ability ${this.label}`);
+      this.logger.debug(`Show ability ${this.label}`);
       this.gameApp.getApp().stage.addChild(this.createText());
     }
     if (TimeUtil.timestamp() - this.startTime() >= this.options.duration) {
-      this.logger.info(`Remove ability ${this.label}`);
+      this.logger.debug(`Remove ability ${this.label}`);
 
       const parent = this.gameApp.getApp().stage;
       const child = this.getChildContainer(parent, AbilityNameDrawer.NAME);

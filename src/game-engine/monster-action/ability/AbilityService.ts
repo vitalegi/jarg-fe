@@ -58,7 +58,7 @@ export default class AbilityService {
 
   public learnAbility(monster: Monster, abilityId: string): void {
     if (this.isAbilityLearned(monster, abilityId)) {
-      this.logger.info(`Ability ${abilityId} already learned, skip.`);
+      this.logger.debug(`Ability ${abilityId} already learned, skip.`);
       return;
     }
     const learned = new AbilityLearned();

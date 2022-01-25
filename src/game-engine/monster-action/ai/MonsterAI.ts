@@ -36,8 +36,10 @@ export default class MonsterAI {
 
   public async execute(): Promise<void> {
     const steps = this.monsterService.availableActiveMonsterMoves();
-    const walkable = TimeUtil.monitor("MonsterAI.walkable", () =>
-      this.getAllWalkablePoints(steps)
+    const walkable = TimeUtil.monitor(
+      "MonsterAI.walkable",
+      () => this.getAllWalkablePoints(steps),
+      10
     ).map((p) => p.point);
 
     this.logger.info(`Step 1: ${walkable.length} possible walkable locations`);
@@ -47,17 +49,21 @@ export default class MonsterAI {
       () =>
         this.getUsableAbilities().flatMap((ability) =>
           this.getPossibleTargets(walkable, ability)
-        )
+        ),
+      50
     );
     this.logger.info(`Step 2: ${availableActions.length} possible actions`);
 
     if (availableActions.length > 0) {
-      const action = await TimeUtil.monitorAsync("MonsterAI.action", () =>
-        new ScoreEvaluator(
-          this.source,
-          availableActions,
-          new ScoreFunction()
-        ).selectBestAction()
+      const action = await TimeUtil.monitorAsync(
+        "MonsterAI.action",
+        () =>
+          new ScoreEvaluator(
+            this.source,
+            availableActions,
+            new ScoreFunction()
+          ).selectBestAction(),
+        300
       );
       this.logger.info(
         `Step 3: will perform ${action.ability.id} / ${
@@ -77,8 +83,10 @@ export default class MonsterAI {
       this.logger.info(
         "Step 4. No target, find all reachable enemies in 3 turns and walk towards one of them"
       );
-      const target = TimeUtil.monitor("MonsterAI.walkable", () =>
-        this.getNearestTarget()
+      const target = TimeUtil.monitor(
+        "MonsterAI.walkable",
+        () => this.getNearestTarget(),
+        5
       );
       if (!target) {
         this.logger.info(

@@ -130,10 +130,6 @@ export default class StatsService {
       stats.hp = oldHP;
     }
     const speedBonus = this.statusService.getSpeedBonus(monster);
-    this.logger.info(
-      `Speed bonus of ${monster.uuid} ${monster.name}: ${speedBonus}`
-    );
-
     monster.stats = this.getStatsWithAlterations(
       stats,
       monster.activeEffects,
@@ -167,8 +163,15 @@ export default class StatsService {
     baseValue: number,
     growthRate: number
   ): number {
-    const rate = growthRate / 100;
-    return Math.round(baseValue * rate * level);
+    return Math.round(baseValue + 0.42 * baseValue * (level - 1));
+  }
+
+  protected getHpAttributeValue(
+    level: number,
+    baseValue: number,
+    growthRate: number
+  ): number {
+    return Math.round((0.5 + level / 100) * baseValue);
   }
 
   protected getStatsWithAlterations(

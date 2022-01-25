@@ -242,6 +242,28 @@ export default class BattleService {
   }
 
   public async gainExp(monster: Monster, exp: number): Promise<void> {
+    const allies = this.mapRepository.getAllies(monster);
+    if (allies.length === 1) {
+      await this.gainExpMonster(monster, exp);
+    } else {
+      const uniqueExp = Math.ceil(exp / 2);
+      const spreadedToOthers = exp - uniqueExp;
+      const spreadedExpPerMonster = Math.ceil(spreadedToOthers / allies.length);
+
+      const gainExp: Promise<void>[] = [];
+      gainExp.push(
+        this.gainExpMonster(monster, uniqueExp + spreadedExpPerMonster)
+      );
+      for (const ally of allies) {
+        if (ally.uuid !== monster.uuid) {
+          gainExp.push(this.gainExpMonster(ally, spreadedExpPerMonster));
+        }
+      }
+      await Promise.all(gainExp);
+    }
+  }
+
+  public async gainExpMonster(monster: Monster, exp: number): Promise<void> {
     const levelUp = this.levelUpService.canLevelUp(monster, exp);
     await this.levelUpService.gainExperience(monster, exp);
     if (!levelUp) {

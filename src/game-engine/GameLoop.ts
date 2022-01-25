@@ -16,35 +16,28 @@ export default class GameLoop {
   }
 
   public gameLoop(): void {
-    const timestamp = TimeUtil.timestamp();
-    const stats = this.gameLoopHandlers
-      .filter((h) => !h.completed())
-      .map((h) => this.drawHandler(h));
-
-    const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
-    if (duration > 10) {
-      this.logger.info(
-        `MONITORING Drawers time_taken=${duration}ms. Split:\n${stats.join(
-          "\n"
-        )}`
-      );
-    }
-
+    const notCompleted = this.gameLoopHandlers.filter((h) => !h.completed());
+    TimeUtil.monitor(
+      `Drawers ${notCompleted.length}`,
+      () => notCompleted.map((h) => this.drawHandler(h)),
+      20
+    );
     this.gameLoopHandlers = this.gameLoopHandlers.filter((h) => !h.completed());
   }
 
-  protected drawHandler(handler: Drawer): string {
-    const timestamp = TimeUtil.timestamp();
+  protected drawHandler(handler: Drawer): void {
     try {
-      handler.draw();
+      TimeUtil.monitor(
+        `${handler.getId()}_${handler.getName()}`,
+        () => handler.draw(),
+        10
+      );
     } catch (e) {
       this.logger.error(
         `Error while rendering ${handler.getName()} (${handler.getId()})`,
         e
       );
     }
-    const duration = Math.round(100 * (TimeUtil.timestamp() - timestamp)) / 100;
-    return `Drawer id=${handler.getId()}, name=${handler.getName()}, time_taken=${duration}ms`;
   }
 
   public addGameLoopHandler(drawer: Drawer): void {

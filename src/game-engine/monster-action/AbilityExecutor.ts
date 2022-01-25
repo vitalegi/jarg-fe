@@ -55,6 +55,7 @@ export default class AbilityExecutor {
     const abilityName = this.showAbilityName();
     const exp = await this.processEffects(effects);
     await abilityName;
+
     await this.battleService.gainExp(this.source, exp);
     this.logger.info("AbilityExecutor - END");
   }

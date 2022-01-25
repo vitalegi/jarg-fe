@@ -225,13 +225,4 @@ export default class MonsterInfoDrawer extends Drawer {
   protected lineY(line: number): number {
     return this.frame.getWidth() + 4 + line * this.options.row.height;
   }
-
-  protected monitor<E>(name: string, fn: () => E): E {
-    const startTime = TimeUtil.timestamp();
-    const result = fn();
-    // TODO use TimeUtil centralized method
-    const duration = Math.round(100 * (TimeUtil.timestamp() - startTime)) / 100;
-    this.logger.info(`MONITORING ${name}, time_taken=${duration}ms`);
-    return result;
-  }
 }

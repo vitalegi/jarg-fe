@@ -78,7 +78,6 @@ export default class SelectTargetUserActionHandler extends UserActionHandler {
       return false;
     }
     if (this.skipUUIDs && this.skipUUIDs.indexOf(uuid) !== -1) {
-      console.log("catch check", this.skipUUIDs, uuid);
       return false;
     }
     return true;

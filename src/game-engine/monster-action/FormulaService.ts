@@ -153,14 +153,6 @@ export default class FormulaService {
 
   protected catchBaseSuccessRate(target: Monster): number {
     const ratio = (100.0 * target.stats.hp) / target.stats.maxHP;
-    console.log(
-      "ratio: ",
-      ratio,
-      target.stats.hp,
-      target.stats.maxHP,
-      target.stats.hp / target.stats.maxHP,
-      (100 * target.stats.hp) / target.stats.maxHP
-    );
     const PAIRS = [
       { minRatio: 99, probability: 0 },
       { minRatio: 90, probability: 0.01 },
@@ -168,14 +160,14 @@ export default class FormulaService {
       { minRatio: 70, probability: 0.03 },
       { minRatio: 60, probability: 0.04 },
       { minRatio: 50, probability: 0.05 },
-      { minRatio: 40, probability: 0.06 },
-      { minRatio: 30, probability: 0.08 },
-      { minRatio: 20, probability: 0.1 },
-      { minRatio: 15, probability: 0.15 },
-      { minRatio: 10, probability: 0.2 },
-      { minRatio: 5, probability: 0.25 },
-      { minRatio: 1, probability: 0.4 },
-      { minRatio: 0, probability: 0.5 },
+      { minRatio: 40, probability: 0.1 },
+      { minRatio: 30, probability: 0.15 },
+      { minRatio: 20, probability: 0.2 },
+      { minRatio: 15, probability: 0.25 },
+      { minRatio: 10, probability: 0.3 },
+      { minRatio: 5, probability: 0.35 },
+      { minRatio: 1, probability: 0.5 },
+      { minRatio: 0, probability: 0.7 },
     ];
     for (const par of PAIRS) {
       if (par.minRatio <= ratio) {
