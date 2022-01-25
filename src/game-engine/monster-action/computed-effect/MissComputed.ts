@@ -15,6 +15,10 @@ export default class MissComputed extends ComputedEffect {
     this.target = target;
   }
 
+  protected doClone(): ComputedEffect {
+    return new MissComputed(this.duration, this.target);
+  }
+
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }

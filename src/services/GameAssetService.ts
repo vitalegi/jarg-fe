@@ -10,9 +10,9 @@ import MapModel from "@/game-engine/map/MapModel";
 
 @Service()
 export default class GameAssetService {
-  public async getMap(map: string): Promise<MapModel> {
+  public async getMap(mapId: string): Promise<MapModel> {
     const result = await BackendWebService.url(
-      `${process.env.VUE_APP_BACKEND}/maps/${map}.json`
+      `${process.env.VUE_APP_BACKEND}/maps/${mapId}.json`
     )
       .get()
       .call();

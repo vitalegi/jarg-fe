@@ -17,7 +17,9 @@ export default class HpDamageComputed extends ComputedEffect {
     this.target = target;
     this.damage = damage;
   }
-
+  protected doClone(): ComputedEffect {
+    return new HpDamageComputed(this.duration, this.target, this.damage);
+  }
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }

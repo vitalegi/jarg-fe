@@ -14,7 +14,7 @@ export default class Character {
   coordinates: Point | null = null;
   movements = new Move();
 
-  public static fromJson(data: any, out: Character): Character {
+  public static fromJsonCharacter(data: any, out: Character): Character {
     out.uuid = data.uuid;
     out.name = data.name;
     out.type = data.type;

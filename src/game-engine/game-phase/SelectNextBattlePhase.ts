@@ -12,8 +12,7 @@ import Monster from "../monster/Monster";
 import PhaseService from "./PhaseService";
 import StatsService from "../monster/stats/StatsService";
 import { gameLabel } from "@/services/LocalizationService";
-
-const MAPS = ["map1", "map2", "map3", "map4"];
+import MapModelRepository from "../map/MapModelRepository";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -30,6 +29,8 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected mapService = Container.get<MapService>(MapService);
   protected phaseService = Container.get<PhaseService>(PhaseService);
   protected statsService = Container.get<StatsService>(StatsService);
+  protected mapModelRepository =
+    Container.get<MapModelRepository>(MapModelRepository);
 
   public getName(): string {
     return "SelectNextBattlePhase";
@@ -40,9 +41,9 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     const menu = new LeftMenu();
     menu.addEntry(this.saveStatus());
     menu.addEntry(this.healParty());
-    for (const map of MAPS) {
-      menu.addEntry(this.selectMapEntry(menu, map));
-    }
+    this.mapModelRepository
+      .getMaps()
+      .forEach((mapId) => menu.addEntry(this.selectMapEntry(menu, mapId)));
     menu.draw();
   }
 
@@ -85,20 +86,9 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
   }
 
-  protected isMapEnabled(map: string): boolean {
-    if (map === "map1") {
-      return true;
-    }
-    const defeated = this.defeatedMaps();
-    if (defeated.length === 0) {
-      return false;
-    }
-    if (defeated.indexOf(map) !== -1) {
-      return true;
-    }
-    const lastDefeated = defeated[defeated.length - 1];
-    const nextToDefeat = MAPS.indexOf(lastDefeated) + 1;
-    return map === MAPS[nextToDefeat];
+  protected isMapEnabled(mapId: string): boolean {
+    const defeatedMaps = this.playerRepository.getPlayerData().defeatedMaps;
+    return this.mapModelRepository.isEnabled(mapId, defeatedMaps);
   }
 
   protected defeatedMaps(): string[] {

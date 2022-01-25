@@ -7,7 +7,7 @@ export default class Tile {
   public static fromJson(tile: any): Tile {
     const out = new Tile();
     out.spriteModel = tile.spriteModel;
-    out.coordinates = Point.fromJson(tile);
+    out.coordinates = Point.fromJson(tile.coordinates);
     return out;
   }
 

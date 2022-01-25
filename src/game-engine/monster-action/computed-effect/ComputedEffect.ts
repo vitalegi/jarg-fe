@@ -14,6 +14,15 @@ export default abstract class ComputedEffect {
     this.duration = duration;
   }
 
+  public clone(): ComputedEffect {
+    const out = this.doClone();
+    out.type = this.type;
+    out.duration = this.duration;
+    return out;
+  }
+
+  protected abstract doClone(): ComputedEffect;
+
   abstract hasEffectOn(monster: Monster): boolean;
 
   public async onHitBefore(): Promise<void> {

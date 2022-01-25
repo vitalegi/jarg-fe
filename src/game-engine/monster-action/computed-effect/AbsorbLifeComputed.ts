@@ -26,6 +26,15 @@ export default class AbsorbLifeComputed extends ComputedEffect {
     this.percentage = percentage;
   }
 
+  protected doClone(): ComputedEffect {
+    return new AbsorbLifeComputed(
+      this.duration,
+      this.source,
+      this.target,
+      this.percentage
+    );
+  }
+
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }

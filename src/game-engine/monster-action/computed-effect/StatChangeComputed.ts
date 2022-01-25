@@ -26,6 +26,14 @@ export default class StatChangeComputed extends ComputedEffect {
     this.stat = stat;
     this.percentage = percentage;
   }
+  protected doClone(): ComputedEffect {
+    return new StatChangeComputed(
+      this.duration,
+      this.target,
+      this.stat,
+      this.percentage
+    );
+  }
 
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;

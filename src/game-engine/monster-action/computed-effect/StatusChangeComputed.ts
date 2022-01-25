@@ -18,7 +18,9 @@ export default class StatusChangeComputed extends ComputedEffect {
     this.target = target;
     this.status = status;
   }
-
+  protected doClone(): ComputedEffect {
+    return new StatusChangeComputed(this.duration, this.target, this.status);
+  }
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;
   }

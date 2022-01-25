@@ -192,6 +192,7 @@ export default class BattleService {
     }
     if (this.isGameWin(this.playerService.getPlayerId())) {
       this.logger.info("Player wins");
+      this.playerService.completeMap(this.mapRepository.getMap().id);
       Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();
       return;
     }
