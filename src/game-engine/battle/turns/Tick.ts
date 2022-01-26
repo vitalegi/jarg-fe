@@ -9,6 +9,10 @@ export default class Tick {
     this.ticks = ticks;
   }
 
+  public clone(): Tick {
+    return new Tick(this.monster, this.ticks);
+  }
+
   public toString(): string {
     return `(uuid=${this.monster.uuid.substring(0, 8)}, name=${
       this.monster.name

@@ -1,8 +1,10 @@
 import Ability from "@/game-engine/monster-action/ability/Ability";
 import Point from "@/models/Point";
+import UuidUtil from "@/utils/UuidUtil";
 import ActionType from "./ActionType";
 
 export class PerformedAction {
+  id = UuidUtil.nextId();
   type: ActionType;
   source: Point | null = null;
   dest: Point | null = null;

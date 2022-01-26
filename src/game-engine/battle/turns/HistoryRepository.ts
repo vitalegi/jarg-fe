@@ -39,4 +39,8 @@ export default class HistoryRepository {
     }
     return this.history[this.history.length - 1];
   }
+
+  public isEmpty(): boolean {
+    return this.history.length === 0;
+  }
 }

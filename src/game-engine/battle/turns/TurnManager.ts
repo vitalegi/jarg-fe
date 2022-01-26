@@ -25,8 +25,6 @@ export default class TurnManager {
   protected monsters: Monster[] = [];
   // TODO move to TurnRepository
   protected ticks: Tick[] = [];
-  // TODO move to TurnRepository
-  protected active: Tick | null = null;
 
   public addCharacters(monsters: Monster[]): void {
     monsters.forEach((m) => this.addCharacter(m));
@@ -39,7 +37,6 @@ export default class TurnManager {
   public removeAll(): void {
     this.monsters = [];
     this.ticks = [];
-    this.active = null;
   }
 
   public removeCharacter(uuid: string): void {
@@ -49,8 +46,8 @@ export default class TurnManager {
     if (index !== -1) {
       this.monsters.splice(index, 1);
     }
-    if (this.active?.monster.uuid === uuid) {
-      this.active = null;
+    if (this.activeCharacter()?.monster.uuid === uuid) {
+      this.ticks = this.updateTurns(this.ticks);
     }
   }
 
@@ -58,89 +55,103 @@ export default class TurnManager {
     this.monsters
       .map((m) => new Tick(m, this.getICV(m)))
       .forEach((t) => this.ticks.push(t));
-    this.next();
-    this.logger.debug(`init: ${this.ticks.join(", ")}`);
+    this.ticks = this.updateTurns(this.ticks);
+    const next = this.ticks[0];
+    this.historyRepository.startTurn(next.monster);
+
+    this.logger.debug(
+      `init: ${this.ticks.join(", ")}. Active: ${this.activeCharacter()}`
+    );
   }
   public hasCharacters(): boolean {
     return this.monsters.length > 0;
   }
   public activeCharacter(): Tick | null {
-    if (this.active) {
-      return this.active;
+    if (this.ticks.length > 0) {
+      return this.ticks[0];
     }
     return null;
   }
 
   public next(): void {
-    if (this.active) {
-      this.ticks = this.ticks.filter(
-        (t) => t.monster.uuid !== this.active?.monster.uuid
-      );
+    const active = this.activeCharacter();
+    if (active) {
       const actions = this.historyRepository.getCurrent().actionsHistory;
-      const monster = this.active.monster;
-      const ts = this.getTS(monster, this.getRechargeFamily(actions));
-      const tick = new Tick(monster, ts);
-      this.logger.debug(`Re-calculate ticks for exiting monster: ${tick}`);
-      this.ticks.push(tick);
-      this.active = null;
+      const recharge = this.getRechargeFamily(actions);
+      this.ticks = this.createNextTick(this.ticks, active, recharge);
+      this.logger.debug(
+        `Compute ticks for exiting monster: ${active.monster.uuid} ${active.monster.name}`
+      );
     }
+    this.ticks = this.updateTurns(this.ticks);
+    const next = this.ticks[0];
+    this.historyRepository.startTurn(next.monster);
+    this.logger.info(`Next: ${next}`);
+  }
 
-    if (this.ticks.filter((t) => t.ticks < DECIMAL_PRECISION).length === 0) {
-      const min = this.ticks
+  protected createNextTick(
+    ticks: Tick[],
+    tick: Tick,
+    rechargeFamily: number
+  ): Tick[] {
+    ticks = ticks.map((t) => t.clone());
+    const target = ticks.findIndex((t) => t.monster.uuid === tick.monster.uuid);
+    const ts = this.getTS(tick.monster, rechargeFamily);
+    ticks[target] = new Tick(tick.monster, ts);
+    return ticks;
+  }
+
+  protected updateTurns(ticks: Tick[]): Tick[] {
+    if (ticks.filter((t) => t.ticks < DECIMAL_PRECISION).length === 0) {
+      const min = ticks
         .map((m) => m.ticks)
         .reduce((prev: number, curr: number) => Math.min(prev, curr), 100000);
 
       this.logger.debug(
-        `No other ticks = 0, reduce all by ${min} ticks. Status: ${this.ticks.join(
+        `No other ticks = 0, reduce all by ${min} ticks. Status: ${ticks.join(
           ", "
         )}`
       );
-      this.ticks.forEach((t) => (t.ticks -= min));
+      ticks.forEach((t) => (t.ticks -= min));
     }
 
-    this.sort(this.ticks);
-    this.active = this.ticks[0];
-    this.historyRepository.startTurn(this.active.monster);
-    this.logger.info(`Next: ${this.active}`);
-  }
-
-  public getTurns(n: number): Tick[] {
-    return TimeUtil.monitor(`getTurns ${n}`, () => this.doGetTurns(n), 1);
-  }
-
-  protected doGetTurns(n: number): Tick[] {
-    const ticks = this.ticks.flatMap((tick) => {
-      // for each monster, generate N entries
-      const estimations = [];
-      // the first entry is already computed
-      estimations.push(tick);
-      let cumulativeTS = tick.ticks;
-      for (let i = 1; i < n; i++) {
-        // the remaining entries are assumed to be executed with a normal action
-        const nextTurn = this.getTS(tick.monster, 3);
-        cumulativeTS += nextTurn;
-        estimations.push(new Tick(tick.monster, cumulativeTS));
-      }
-      return estimations;
-    });
     this.sort(ticks);
-    if (ticks.length > n) {
-      ticks.splice(n);
-    }
     return ticks;
   }
 
-  public reportTicksStatus(optional?: Tick[]): void {
-    const toString = (arr: Tick[]) =>
-      arr.map((t) => t.toShortString()).join(", ");
+  public getTurns(n: number): Tick[] {
+    return TimeUtil.monitor(`getTurns ${n}`, () => this.doGetTurns(n), 0.1);
+  }
 
-    this.logger.debug(
-      `Upcoming turns: ${toString(
-        optional ? optional : []
-      )}. Pre-calculated: ${toString(this.ticks)}. Active: ${
-        this.active?.monster.name
-      }`
-    );
+  protected doGetTurns(n: number): Tick[] {
+    this.logger.debug(`doGetTurns (${n})`);
+    if (this.ticks.length === 0) {
+      return [];
+    }
+    const out: Tick[] = [];
+    let ticks = this.ticks;
+    let active = this.activeCharacter();
+    this.logger.debug(`Add active: ${active}`);
+    if (active) {
+      out.push(active);
+      const actions = this.historyRepository.getCurrent().actionsHistory;
+      const recharge = this.getRechargeFamily(actions);
+      ticks = this.createNextTick(ticks, active, recharge);
+    }
+    for (let i = 1; i < n; i++) {
+      ticks = this.updateTurns(ticks);
+      active = ticks[0];
+      if (this.logger.isDebugEnabled()) {
+        this.logger.debug(
+          `Estimate active at turn ${i}: ${active}, status ${ticks.map(
+            (t) => t.monster.name + " " + t.ticks
+          )}`
+        );
+      }
+      out.push(active);
+      ticks = this.createNextTick(ticks, active, 3);
+    }
+    return out;
   }
 
   protected getAgi(monster: Monster): number {
