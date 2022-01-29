@@ -26,12 +26,12 @@ export default new Vuex.Store({
       state: any,
       monsterIndexEditor: MonsterIndex[]
     ): void {
-      const index = monsterIndexEditor.map((m) => m.clone());
+      const monsters = monsterIndexEditor.map((m) => m.clone());
       const repo = Container.get<MonsterIndexEditorRepository>(
         MonsterIndexEditorRepository
       );
-      repo.save(index);
-      state.monsterIndexEditor = index;
+      repo.save(monsters);
+      state.monsterIndexEditor = monsters;
     },
     setAbilitiesEditor(state: any, abilities: Ability[]): void {
       const repo = Container.get<AbilityEditorRepository>(

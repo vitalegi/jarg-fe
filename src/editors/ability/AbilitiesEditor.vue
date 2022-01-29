@@ -1,11 +1,16 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <ImportExportDialog :initialValue="exportJson" @change="importJson" />
-        <v-btn color="primary" class="mx-2" @click="addAbility">
-          Add ability
+      <v-col style="text-align: right">
+        <ImportDialog
+          title="Import abilities"
+          :initialValue="exportJson"
+          @change="importJson"
+        />
+        <v-btn icon color="primary" class="mx-2" @click="addAbility">
+          <v-icon>mdi-plus</v-icon>
         </v-btn>
+        <CopyToClipboardBtn :value="exportJson" />
       </v-col>
     </v-row>
     <v-row>
@@ -35,15 +40,21 @@
 import Vue from "vue";
 import AbilityEditor from "./AbilityEditor.vue";
 import AbilitySearch from "./AbilitySearch.vue";
-import ImportExportDialog from "../../components/ImportExportDialog.vue";
+import ImportDialog from "../../components/ImportDialog.vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
 import NumberUtil from "@/utils/NumberUtil";
 import StringUtil from "@/utils/StringUtil";
 import RechargeFamily from "@/game-engine/battle/RechargeFamily";
+import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
 
 export default Vue.extend({
   name: "AbilitiesEditor",
-  components: { AbilityEditor, ImportExportDialog, AbilitySearch },
+  components: {
+    AbilityEditor,
+    ImportDialog,
+    AbilitySearch,
+    CopyToClipboardBtn,
+  },
   data: () => ({
     sortBy: "ID",
     sortOrderAsc: true,

@@ -1,9 +1,14 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <ImportExportDialog :initialValue="exportJson" @change="importJson" />
+      <v-col style="text-align: right">
+        <ImportDialog
+          title="Import monsters"
+          :initialValue="exportJson"
+          @change="importJson"
+        />
         <MonstersIndexAbilitiesImport @select="massiveAddAbilities" />
+        <CopyToClipboardBtn :value="exportJson" />
       </v-col>
     </v-row>
     <v-row>
@@ -33,19 +38,21 @@
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
 import MonsterIndexEditor from "./MonsterIndexEditor.vue";
-import ImportExportDialog from "../../components/ImportExportDialog.vue";
+import ImportDialog from "../../components/ImportDialog.vue";
 import MonsterIndexSearch from "./MonsterIndexSearch.vue";
 import MonstersIndexAbilitiesImport from "./MonstersIndexAbilitiesImport.vue";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
+import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
   components: {
     MonsterIndexEditor,
-    ImportExportDialog,
+    ImportDialog,
     MonsterIndexSearch,
     MonstersIndexAbilitiesImport,
+    CopyToClipboardBtn,
   },
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.MonsterIndex.MonstersIndexEditor"),

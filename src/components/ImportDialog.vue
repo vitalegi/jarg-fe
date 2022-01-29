@@ -1,11 +1,13 @@
 <template>
   <v-dialog v-model="dialog" width="800">
     <template v-slot:activator="{ on, attrs }">
-      <v-btn elevation="2" outlined v-bind="attrs" v-on="on">JSON</v-btn>
+      <v-btn class="mx-2" icon v-bind="attrs" v-on="on">
+        <v-icon>mdi-folder-open-outline</v-icon>
+      </v-btn>
     </template>
 
     <v-card>
-      <v-card-title> Import/Export </v-card-title>
+      <v-card-title> {{ title }} </v-card-title>
       <v-card-text>
         <v-textarea outlined v-model="value" label="JSON value"></v-textarea>
       </v-card-text>
@@ -25,9 +27,10 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "ImportExportDialog",
+  name: "ImportDialog",
   props: {
     initialValue: String,
+    title: String,
   },
   data: () => ({
     value: "",

@@ -1,8 +1,8 @@
 <template>
-  <v-btn v-if="!done" icon @click="exportText()">
+  <v-btn class="mx-2" v-if="!done" icon @click="exportText()">
     <v-icon>mdi-content-copy</v-icon>
   </v-btn>
-  <v-btn v-else icon color="green">
+  <v-btn class="mx-2" v-else icon color="green">
     <v-icon>mdi-check</v-icon>
   </v-btn>
 </template>
