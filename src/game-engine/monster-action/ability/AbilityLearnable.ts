@@ -30,7 +30,7 @@ export default class AbilityLearnable {
   }
   public toString(): string {
     if (this.type === AbilityLearnable.BY_LEVEL) {
-      return `AbilityLearnable by level abilityId=${this.abilityId}, level=${this.level}`;
+      return `AbilityLearnable type=${this.type}, abilityId=${this.abilityId}, level=${this.level}`;
     }
     return `AbilityLearnable type=${this.type}, abilityId=${this.abilityId}`;
   }

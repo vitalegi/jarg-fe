@@ -246,7 +246,15 @@ export default Vue.extend({
       this.update((a) => (a.rechargeFamily = value));
     },
     changeAttackerStat(value: string): void {
-      this.update((a) => (a.atkStat = value));
+      this.update((a) => {
+        a.atkStat = value;
+        if (a.atkStat === StatsConstants.ATK) {
+          a.defStat = StatsConstants.DEF;
+        }
+        if (a.atkStat === StatsConstants.INT) {
+          a.defStat = StatsConstants.RES;
+        }
+      });
     },
     changeDefenderStat(value: string): void {
       this.update((a) => (a.defStat = value));
