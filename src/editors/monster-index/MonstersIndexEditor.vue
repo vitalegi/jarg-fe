@@ -3,6 +3,7 @@
     <v-row>
       <v-col>
         <ImportExportDialog :initialValue="exportJson" @change="importJson" />
+        <MonstersIndexAbilitiesImport @select="massiveAddAbilities" />
       </v-col>
     </v-row>
     <v-row>
@@ -34,11 +35,20 @@ import Vue from "vue";
 import MonsterIndexEditor from "./MonsterIndexEditor.vue";
 import ImportExportDialog from "../../components/ImportExportDialog.vue";
 import MonsterIndexSearch from "./MonsterIndexSearch.vue";
+import MonstersIndexAbilitiesImport from "./MonstersIndexAbilitiesImport.vue";
+import LoggerFactory from "@/logger/LoggerFactory";
+import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
-  components: { MonsterIndexEditor, ImportExportDialog, MonsterIndexSearch },
+  components: {
+    MonsterIndexEditor,
+    ImportExportDialog,
+    MonsterIndexSearch,
+    MonstersIndexAbilitiesImport,
+  },
   data: () => ({
+    logger: LoggerFactory.getLogger("Editors.MonsterIndex.MonstersIndexEditor"),
     monsters: new Array<MonsterIndex>(),
   }),
   computed: {
@@ -56,6 +66,55 @@ export default Vue.extend({
     },
   },
   methods: {
+    massiveAddAbilities(
+      abilities: {
+        monsterId: string;
+        type: string;
+        abilityId: string;
+        level: number;
+      }[]
+    ): void {
+      const monsters = this.monsters.map((m) => m.clone());
+      let failures: string[] = [];
+      for (const ability of abilities) {
+        try {
+          this.doAddAbility(monsters, ability);
+        } catch (e) {
+          failures.push(
+            `Error while processing ability: monsterId=${ability.monsterId}, abilityId=${ability.abilityId}, type=${ability.type}, level=${ability.level}. Error: ${e}`
+          );
+        }
+      }
+      console.error(failures);
+      this.$store.commit("setMonsterIndexEditor", monsters);
+    },
+    doAddAbility(
+      monsters: MonsterIndex[],
+      ability: {
+        monsterId: string;
+        type: string;
+        abilityId: string;
+        level: number;
+      }
+    ): void {
+      const learnable = new AbilityLearnable();
+      learnable.type = ability.type;
+      learnable.abilityId = ability.abilityId;
+      learnable.level = ability.level;
+
+      const monster = monsters.filter(
+        (m) => m.monsterId === ability.monsterId
+      )[0];
+      const index = monster.learnableAbilities.findIndex(
+        (a) => a.abilityId === ability.abilityId
+      );
+
+      if (index === -1) {
+        monster.learnableAbilities.push(learnable);
+      } else {
+        monster.learnableAbilities[index] = learnable;
+      }
+    },
     updateIndex(monster: MonsterIndex): void {
       const monsters = this.monsters.map((m) => m.clone());
       const index = monsters.findIndex(
