@@ -2,6 +2,7 @@ import { Animation, AnimationSrc } from "@/models/Animation";
 import Stats from "@/game-engine/monster/stats/Stats";
 import AbilityLearnable from "../monster-action/ability/AbilityLearnable";
 import MonsterEvolution from "./monster-evolution/MonsterEvolution";
+import TypeConstants from "../types/TypeConstants";
 
 export default class MonsterIndex {
   monsterId = "";
@@ -54,5 +55,56 @@ export default class MonsterIndex {
     out.learnableAbilities = this.learnableAbilities.map((a) => a.clone());
     out.evolutions = this.evolutions.map((a) => a.clone());
     return out;
+  }
+  public isValid(monsterIds: string[], abilityIds: string[]): boolean {
+    try {
+      this.validate(monsterIds, abilityIds);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+  public validate(monsterIds: string[], abilityIds: string[]): void {
+    if (this.monsterId.trim() === "") {
+      throw Error(`ID must not be null`);
+    }
+    if (this.name.trim() === "") {
+      throw Error(`Label must not be null`);
+    }
+    if (this.baseStats.totalPoints() <= 0) {
+      throw Error(`Total base stats points must be >= 0`);
+    }
+    if (this.growthRates.totalPoints() <= 0) {
+      throw Error(`Total growth rates points must be >= 0`);
+    }
+    if (this.types.length === 0) {
+      throw Error(`Must have at least one type`);
+    }
+    this.types.forEach((type) => {
+      if (TypeConstants.getTypes().indexOf(type) === -1) {
+        throw Error(`Type ${type} is not recognized`);
+      }
+    });
+    this.learnableAbilities.forEach((learnable) => {
+      if (abilityIds.indexOf(learnable.abilityId) === -1) {
+        throw Error(
+          `Ability ${learnable.toString()} not present in abilities list`
+        );
+      }
+      if (
+        this.learnableAbilities.filter(
+          (a) => a.abilityId === learnable.abilityId
+        ).length > 1
+      ) {
+        throw Error(`Ability ${learnable.toString()} is duplicated`);
+      }
+    });
+    this.evolutions.forEach((evolution) => {
+      if (monsterIds.indexOf(evolution.evolutionId) === -1) {
+        throw Error(
+          `Evolution ${evolution.toString()} not present in monsters list`
+        );
+      }
+    });
   }
 }

@@ -9,6 +9,16 @@
         {{ index.monsterId }} - {{ index.name }}
       </h4>
       <v-spacer></v-spacer>
+      <v-alert
+        v-if="hasErrors"
+        border="right"
+        colored-border
+        type="error"
+        elevation="2"
+      >
+        {{ errors }}
+      </v-alert>
+
       <ConfirmDeletion @delete="deleteIndex()" :text="deletionWarningText" />
     </v-card-title>
     <v-card-text v-if="expanded">
@@ -80,6 +90,7 @@ import MonsterIndexAbilitiesLearnableEditor from "./MonsterIndexAbilitiesLearnab
 import MonsterIndexEvolutionsEditor from "./MonsterIndexEvolutionsEditor.vue";
 import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
 import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",
@@ -99,11 +110,34 @@ export default Vue.extend({
       type: Array,
       default: () => [1, 10, 20, 50, 75, 100],
     },
+    monsters: Array,
+    abilities: Array,
   },
   data: () => ({
     statsService: Container.get<StatsService>(StatsService),
   }),
   computed: {
+    hasErrors(): boolean {
+      return !this.index.isValid(
+        this.monsters
+          .map((m: any) => m as MonsterIndex)
+          .map((m) => m.monsterId),
+        this.abilities.map((m: any) => m as Ability).map((a) => a.id)
+      );
+    },
+    errors(): string {
+      try {
+        this.index.validate(
+          this.monsters
+            .map((m: any) => m as MonsterIndex)
+            .map((m) => m.monsterId),
+          this.abilities.map((m: any) => m as Ability).map((a) => a.id)
+        );
+        return "";
+      } catch (e) {
+        return (e as any).message;
+      }
+    },
     deletionWarningText(): string {
       return `Deletion of monster ${this.index.monsterId} - ${this.index.name} is an irreversible action. Are you sure you want to proceed?`;
     },

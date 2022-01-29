@@ -23,6 +23,8 @@
               :index="item"
               :expanded="slotProps.isExpanded(item)"
               :expand="slotProps.expand"
+              :monsters="monsters"
+              :abilities="storedAbilities"
               @change="updateIndex"
               @changeId="(e) => updateIndexId(e.oldId, e.newId)"
               @delete="deleteIndex"
@@ -44,6 +46,7 @@ import MonstersIndexAbilitiesImport from "./MonstersIndexAbilitiesImport.vue";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
 import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",
@@ -64,6 +67,9 @@ export default Vue.extend({
     },
     storedMonsters(): MonsterIndex[] {
       return this.$store.state.monsterIndexEditor as MonsterIndex[];
+    },
+    storedAbilities(): Ability[] {
+      return this.$store.state.abilitiesEditor;
     },
   },
   watch: {
