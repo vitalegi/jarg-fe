@@ -43,7 +43,9 @@
       <v-col cols="3">
         <v-card>
           <v-card-title>Background</v-card-title>
+          <v-checkbox dense v-model="selectArea" label="Select Area" />
           <v-radio-group v-model="mode" row>
+            <v-radio label="empty" value="BACKGROUND" />
             <v-radio
               v-for="sprite of sprites"
               :key="sprite.name"
@@ -110,6 +112,8 @@ import SpriteConfig from "@/models/SpriteConfig";
 import Tile from "@/game-engine/map/Tile";
 import NumberUtil from "@/utils/NumberUtil";
 
+const DEFAULT_POINT = new Point(-1000, -1000);
+
 export default Vue.extend({
   name: "RectangleRandomMapGenerator",
   components: {
@@ -147,6 +151,8 @@ export default Vue.extend({
       }),
     ],
     mode: "",
+    selectArea: false,
+    selectAreaPoint1: DEFAULT_POINT,
     tiles: new Array<Array<string>>(),
     playerSpawning1: new Point(0, 0),
     playerSpawning2: new Point(2, 2),
@@ -219,6 +225,13 @@ export default Vue.extend({
       }
       return false;
     },
+    isMonsterSpawning(index: number, row: number, col: number): boolean {
+      return (
+        this.localizedEncounters[index].area
+          .filter((p) => p.y === row)
+          .filter((p) => p.x === col).length > 0
+      );
+    },
     hasFocus(row: number, col: number): boolean {
       if (
         this.mode === "PLAYER_SPAWNING_1" ||
@@ -229,11 +242,7 @@ export default Vue.extend({
       if (this.mode.startsWith("MONSTERS_SPAWNING_")) {
         const split = this.mode.split("_");
         const index = NumberUtil.parse(split[2]);
-        return (
-          this.localizedEncounters[index].area.filter(
-            (p) => p.x === row && p.y === col
-          ).length > 0
-        );
+        return this.isMonsterSpawning(index, row, col);
       }
 
       return false;
@@ -285,8 +294,10 @@ export default Vue.extend({
       } else if (this.mode === "PLAYER_SPAWNING_2") {
         this.changePlayerSpawningArea(false, row, col);
       } else if (this.mode.startsWith("BACKGROUND_")) {
-        const sprite = this.mode.substring("BACKGROUND_".length);
-        this.setModel(row, col, sprite);
+        const sprite = this.mode.split("_")[1];
+        this.selectBackground(sprite, row, col);
+      } else if (this.mode === "BACKGROUND") {
+        this.selectBackground("", row, col);
       } else if (this.mode.startsWith("MONSTERS_SPAWNING_")) {
         const split = this.mode.split("_");
         const index = NumberUtil.parse(split[2]);
@@ -311,6 +322,33 @@ export default Vue.extend({
       this.playerSpawning1 = rect.point1;
       this.playerSpawning2 = rect.point2;
     },
+    selectBackground(sprite: string, row: number, col: number): void {
+      if (this.selectArea) {
+        if (this.selectAreaPoint1 === DEFAULT_POINT) {
+          this.logger.info(
+            `background single point start: row=${row}, col=${col}`
+          );
+          this.selectAreaPoint1 = new Point(col, row);
+        } else {
+          const p1 = this.selectAreaPoint1;
+          const p2 = new Point(col, row);
+          this.logger.info(`background area end: p1=${p1}, p2=${p2}`);
+          this.selectAreaPoint1 = DEFAULT_POINT;
+          const x1 = Math.min(p1.x, p2.x);
+          const y1 = Math.min(p1.y, p2.y);
+          const x2 = Math.max(p1.x, p2.x);
+          const y2 = Math.max(p1.y, p2.y);
+          for (let row = y1; row <= y2; row++) {
+            for (let col = x1; col <= x2; col++) {
+              this.setModel(row, col, sprite);
+            }
+          }
+        }
+      } else {
+        this.logger.info(`background area start: row=${row}, col=${col}`);
+        this.setModel(row, col, sprite);
+      }
+    },
     changeMonsterSpawningArea(
       index: number,
       topLeft: boolean,
@@ -332,7 +370,7 @@ export default Vue.extend({
         new Point(x1, y1),
         new Point(x2, y2),
         topLeft,
-        new Point(row, col)
+        new Point(col, row)
       );
       encounters.area = this.generateArea(
         rect.point1.x,
@@ -375,7 +413,7 @@ export default Vue.extend({
       );
       if (topLeft) {
         p1 = newPoint.clone();
-        if (p2.x < p1.y) {
+        if (p2.x < p1.x) {
           p2.x = p1.x;
         }
         if (p2.y < p1.y) {
