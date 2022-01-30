@@ -11,7 +11,10 @@ export default class NumberUtil {
     return parseInt(s, 10);
   }
 
-  public static min(numbers: number[], defaultValue = 0): number {
+  public static min(
+    numbers: number[],
+    defaultValue = Number.MAX_SAFE_INTEGER
+  ): number {
     return numbers.reduce((prev, curr) => Math.min(prev, curr), defaultValue);
   }
   public static max(numbers: number[], defaultValue = 0): number {

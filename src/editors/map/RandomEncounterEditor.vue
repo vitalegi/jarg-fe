@@ -1,7 +1,7 @@
 <template>
   <v-container dense>
     <v-row>
-      <v-col cols="8">
+      <v-col cols="12">
         <SelectMonsterIndex
           label="Monster"
           :initialValueId="encounter.monsterId"
@@ -10,21 +10,21 @@
           dense
         />
       </v-col>
-      <v-col cols="1">
+      <v-col cols="4">
         <EditableIntegerField
           label="Min Level"
           :value="encounter.levelMin"
           @change="changeLevelMin"
         />
       </v-col>
-      <v-col cols="1">
+      <v-col cols="4">
         <EditableIntegerField
           label="Max Level"
           :value="encounter.levelMax"
           @change="changeLevelMax"
         />
       </v-col>
-      <v-col cols="2">
+      <v-col cols="4">
         <EditableIntegerField
           label="Probability"
           :value="encounter.probability * 100"
@@ -56,7 +56,7 @@ export default Vue.extend({
       if (monster) {
         this.update((encounter) => (encounter.monsterId = monster.monsterId));
       } else {
-        this.update((encounter) => (encounter.monsterId = ""));
+        this.$emit("delete");
       }
     },
     changeLevelMax(value: number): void {

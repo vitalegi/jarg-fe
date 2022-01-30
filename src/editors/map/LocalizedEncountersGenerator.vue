@@ -1,62 +1,38 @@
 <template>
   <v-card>
+    <v-card-title>Monsters - {{ totalProbability }}%</v-card-title>
+    <v-card-subtitle v-if="hasErrors">
+      <v-alert dense border="right" colored-border type="error" elevation="2">
+        {{ errors }}
+      </v-alert>
+    </v-card-subtitle>
+    <v-radio-group v-model="localMode" @change="changeMode" row>
+      <v-radio
+        :label="`${spawning1.x} ${spawning1.y}`"
+        :value="modeSpawning1"
+      />
+      <v-radio
+        :label="`${spawning2.x} ${spawning2.y}`"
+        :value="modeSpawning2"
+      />
+    </v-radio-group>
     <v-container dense>
       <v-row>
-        <v-col cols="2">
-          <EditableIntegerField
-            label="Top left corner, x"
-            :value="spawning1.x"
-            @change="
-              (x) =>
-                changeSpawningArea(x, spawning1.y, spawning2.x, spawning2.y)
-            "
-          />
-        </v-col>
-        <v-col cols="2">
-          <EditableIntegerField
-            label="Top left corner, y"
-            :value="spawning1.y"
-            @change="
-              (y) =>
-                changeSpawningArea(spawning1.x, y, spawning2.x, spawning2.y)
-            "
-          />
-        </v-col>
-        <v-col cols="2">
-          <EditableIntegerField
-            label="Bottom right corner, x"
-            :value="spawning2.x"
-            @change="
-              (x) =>
-                changeSpawningArea(spawning1.x, spawning1.y, x, spawning2.y)
-            "
-          />
-        </v-col>
-        <v-col cols="2">
-          <EditableIntegerField
-            label="Bottom right corner, y"
-            :value="spawning2.y"
-            @change="
-              (y) =>
-                changeSpawningArea(spawning1.x, spawning1.y, spawning2.x, y)
-            "
-          />
-        </v-col>
-        <v-col cols="1">
+        <v-col cols="4">
           <EditableIntegerField
             label="Min #"
             :value="localizedEncounters.minMonsters"
             @change="changeMinMonsters"
           />
         </v-col>
-        <v-col cols="1">
+        <v-col cols="4">
           <EditableIntegerField
             label="Max #"
             :value="localizedEncounters.maxMonsters"
             @change="changeMaxMonsters"
           />
         </v-col>
-        <v-col cols="2">
+        <v-col cols="4">
           <v-btn @click="addMonster"> Add </v-btn>
         </v-col>
       </v-row>
@@ -69,10 +45,9 @@
           <RandomEncounterEditor
             :encounter="encounter"
             @change="(e) => changeMonster(index, e)"
+            @delete="deleteMonster"
           />
         </v-col>
-        <v-col cols="10"> </v-col>
-        <v-col cols="2"> {{ totalProbability }}%</v-col>
       </v-row>
     </v-container>
   </v-card>
@@ -87,26 +62,47 @@ import Point from "@/models/Point";
 import NumberUtil from "@/utils/NumberUtil";
 import Vue from "vue";
 import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import MapModel from "@/game-engine/map/MapModel";
 
 export default Vue.extend({
   name: "LocalizedEncountersGenerator",
   components: { EditableIntegerField, RandomEncounterEditor },
-  props: { localizedEncounters: { type: LocalizedEncounters } },
+  props: {
+    model: MapModel,
+    mode: String,
+    modeSpawning1: String,
+    modeSpawning2: String,
+    localizedEncounters: { type: LocalizedEncounters },
+  },
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.Map.LocalizedEncountersGenerator"),
+    localMode: "",
   }),
   computed: {
+    hasErrors(): boolean {
+      return this.errors.length > 0;
+    },
+    errors(): string {
+      try {
+        this.model.validateRandomEncounter(this.localizedEncounters);
+      } catch (e) {
+        return (e as any).message;
+      }
+      return "";
+    },
     spawning1(): Point {
-      if (this.localizedEncounters.area.length === 0) {
+      const area = this.localizedEncounters.area;
+      if (area.length === 0) {
         return new Point(0, 0);
       }
-      const x = NumberUtil.min(this.localizedEncounters.area.map((p) => p.x));
-      const y = NumberUtil.min(this.localizedEncounters.area.map((p) => p.y));
+      const x = NumberUtil.min(area.map((p) => p.x));
+      const y = NumberUtil.min(area.map((p) => p.y));
+
       return new Point(x, y);
     },
     spawning2(): Point {
       if (this.localizedEncounters.area.length === 0) {
-        return new Point(1, 1);
+        return new Point(0, 0);
       }
       const x = NumberUtil.max(this.localizedEncounters.area.map((p) => p.x));
       const y = NumberUtil.max(this.localizedEncounters.area.map((p) => p.y));
@@ -126,17 +122,8 @@ export default Vue.extend({
       monster.levelMax = 1;
       this.update((encounters) => encounters.encounters.push(monster));
     },
-    changeSpawningArea(x1: number, y1: number, x2: number, y2: number): void {
-      const points: Point[] = [];
-      for (let x = x1; x <= x2; x++) {
-        for (let y = y1; y <= y2; y++) {
-          points.push(new Point(x, y));
-        }
-      }
-      this.logger.info(
-        `Change spawning area (${x1}, ${y1}), (${x2}, ${y2}) => ${points.length}`
-      );
-      this.update((encounters) => (encounters.area = points));
+    changeMode(value: string): void {
+      this.$emit("changeMode", value);
     },
     changeMinMonsters(value: number): void {
       this.update((e) => (e.minMonsters = value));
@@ -152,11 +139,19 @@ export default Vue.extend({
         e.encounters.push(encounter, ...part2);
       });
     },
+    deleteMonster(index: number): void {
+      this.update((e) => {
+        e.encounters.splice(index, 1);
+      });
+    },
     update(fn: (localizedEncounters: LocalizedEncounters) => void): void {
       const out = this.localizedEncounters.clone();
       fn(out);
       this.$emit("change", out);
     },
+  },
+  mounted(): void {
+    this.localMode = this.mode;
   },
 });
 </script>

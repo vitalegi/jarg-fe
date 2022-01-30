@@ -43,7 +43,7 @@ export default class MapModel {
       throw Error(`Name not set`);
     }
     this.validateTiles();
-    this.randomEncounters.forEach((r) => this.randomEncounter(r));
+    this.randomEncounters.forEach((r) => this.validateRandomEncounter(r));
   }
 
   protected validateTiles(): void {
@@ -66,7 +66,7 @@ export default class MapModel {
       }
     }
   }
-  public randomEncounter(randomEncounter: LocalizedEncounters): void {
+  public validateRandomEncounter(randomEncounter: LocalizedEncounters): void {
     randomEncounter.area.forEach((point) => {
       if (!this.hasBaseTile(point)) {
         throw Error(`Point ${point.toString()} is out of the map`);
