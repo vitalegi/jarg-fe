@@ -60,6 +60,13 @@
             @change="changeStatus"
           />
         </v-col>
+        <v-col v-if="isHpDamageEffect" cols="2">
+          <EditableIntegerField
+            label="Damage (HP)"
+            :value="effect.damage"
+            @change="changeDamage"
+          />
+        </v-col>
       </v-row>
       <v-row>
         <v-col cols="1" style="text-align: left"> Duration </v-col>
@@ -244,6 +251,11 @@ export default Vue.extend({
     changeStatus(status: string): void {
       const e = this.getEffect().clone();
       (e as StatusChangeEffect).status = status;
+      this.$emit("change", e);
+    },
+    changeDamage(damage: number): void {
+      const e = this.getEffect().clone();
+      (e as HpDamageEffect).damage = damage;
       this.$emit("change", e);
     },
     changeDuration(type: { text: string; value: string }): void {

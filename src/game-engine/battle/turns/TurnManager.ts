@@ -8,6 +8,8 @@ import Tick from "./Tick";
 import HistoryRepository from "./HistoryRepository";
 import { PerformedAction } from "./PerformedAction";
 import TimeUtil from "@/utils/TimeUtil";
+import ActionType from "./ActionType";
+import Ability from "@/game-engine/monster-action/ability/Ability";
 
 const DECIMAL_PRECISION = 0.00001;
 
@@ -169,8 +171,16 @@ export default class TurnManager {
   }
 
   protected getRechargeFamily(performedActions: PerformedAction[]): number {
-    // TODO
-    return 3;
+    const abilities = performedActions
+      .filter((p) => p.type === ActionType.ABILITY)
+      .map((p) => p.ability)
+      .filter((a) => a !== null)
+      .map((a) => a as Ability);
+
+    if (abilities.length === 0) {
+      return 3;
+    }
+    return abilities[abilities.length - 1].rechargeFamily;
   }
 
   protected getTS(monster: Monster, rechargeFamily: number): number {

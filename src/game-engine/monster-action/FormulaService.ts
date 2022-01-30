@@ -126,11 +126,17 @@ export default class FormulaService {
         bonus *= 1.2 / (index + 1);
       }
     });
+    this.logger.debug(
+      `Source synergy ${bonus}: ability types ${abilityTypes} and source types ${source.types}`
+    );
     // bonus between ability and target
     abilityTypes.forEach((abilityType, index) => {
       target.types.forEach((targetType) => {
-        bonus *=
-          this.typeService.getBonus(abilityType, targetType) / (1 + index);
+        const bonus2 = this.typeService.getBonus(abilityType, targetType);
+        bonus *= bonus2 / (1 + index);
+        this.logger.debug(
+          `Target bonus of ${abilityType} vs ${targetType}: ${bonus2}, total: ${bonus}`
+        );
       });
     });
     return bonus;

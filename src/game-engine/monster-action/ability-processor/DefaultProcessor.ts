@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import Ability from "../ability/Ability";
 import ComputedEffect from "../computed-effect/ComputedEffect";
@@ -14,6 +15,9 @@ export default class DefaultProcessor extends AbstractProcessor {
   public static NAME = "DEFAULT_SINGLE_TARGET";
 
   protected formulaService = Container.get<FormulaService>(FormulaService);
+  protected logger = LoggerFactory.getLogger(
+    "GameEngine.MonsterAction.AbilityProcessor.DefaultProcessor"
+  );
 
   name = DefaultProcessor.NAME;
 

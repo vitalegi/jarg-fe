@@ -14,7 +14,7 @@ export default class TypeRepository {
       .filter((b) => b.source === source)
       .filter((b) => b.target === target);
     if (bonus.length === 1) {
-      return bonus[0].bonus;
+      return bonus[0].ratio;
     }
     if (bonus.length === 0) {
       throw new Error(`Missing bonus for ${source} / ${target}`);

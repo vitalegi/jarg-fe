@@ -5,4 +5,10 @@ export default class StringUtil {
     }
     return str;
   }
+  public static isNullOrEmpty(str: string): boolean {
+    if (str === null || str === undefined) {
+      return true;
+    }
+    return str.trim() === "";
+  }
 }

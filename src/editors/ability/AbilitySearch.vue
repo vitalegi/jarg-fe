@@ -27,6 +27,11 @@
     </v-row>
     <v-row>
       <v-col>
+        <v-checkbox v-model="onlyWithNotes" label="Only with notes" />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <v-data-iterator :items="filteredAbilities" item-key="id">
           <template v-slot:default="{ items, isExpanded, expand }">
             <slot
@@ -44,6 +49,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Ability from "@/game-engine/monster-action/ability/Ability";
+import StringUtil from "@/utils/StringUtil";
 
 export default Vue.extend({
   name: "AbilitySearch",
@@ -59,6 +65,7 @@ export default Vue.extend({
     sortBy: "ID",
     sortOrderAsc: true,
     search: "",
+    onlyWithNotes: false,
   }),
   computed: {
     isLarge(): boolean {
@@ -96,6 +103,9 @@ export default Vue.extend({
       return this.abilities as Ability[];
     },
     filter(m: Ability): boolean {
+      if (this.onlyWithNotes && StringUtil.isNullOrEmpty(m.notes)) {
+        return false;
+      }
       if (this.search.trim() === "") {
         return true;
       }

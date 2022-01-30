@@ -1,22 +1,22 @@
 export default class Bonus {
   source;
   target;
-  bonus;
+  ratio;
 
   public constructor(source = "", target = "", bonus = 0) {
     this.source = source;
     this.target = target;
-    this.bonus = bonus;
+    this.ratio = bonus;
   }
 
   public static fromJson(json: any): Bonus {
-    return new Bonus(json.source, json.target, json.bonus);
+    return new Bonus(json.source, json.target, json.ratio);
   }
 
   public clone(): Bonus {
-    return new Bonus(this.source, this.target, this.bonus);
+    return new Bonus(this.source, this.target, this.ratio);
   }
   public toString(): string {
-    return `Bonus(source=${this.source}, target=${this.target}, bonus=${this.bonus})`;
+    return `Bonus(source=${this.source}, target=${this.target}, ratio=${this.ratio})`;
   }
 }

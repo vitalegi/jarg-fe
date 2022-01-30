@@ -63,7 +63,17 @@ export default Vue.extend({
   }),
   computed: {
     exportJson(): string {
-      return JSON.stringify(this.$store.state.monsterIndexEditor, undefined, 4);
+      const monsters = (
+        this.$store.state.monsterIndexEditor as Array<MonsterIndex>
+      ).map((m) => m.clone());
+      monsters.sort((a, b) => (a.monsterId > b.monsterId ? 1 : -1));
+      monsters.forEach((m) => {
+        m.evolutions.sort((a, b) => (a.evolutionId > b.evolutionId ? 1 : -1));
+        m.learnableAbilities.sort((a, b) =>
+          a.toString() > b.toString() ? 1 : -1
+        );
+      });
+      return JSON.stringify(monsters, undefined, 4);
     },
     storedMonsters(): MonsterIndex[] {
       return this.$store.state.monsterIndexEditor as MonsterIndex[];
