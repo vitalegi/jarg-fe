@@ -94,7 +94,7 @@ export default class GameAppDataLoader {
   }
 
   public async loadTypes(): Promise<void> {
-    await this.loadOnce("abilities", () =>
+    await this.loadOnce("types", () =>
       this.gameAssetService
         .getTypeBonuses()
         .then((types) => this.typeRepository.init(types))
