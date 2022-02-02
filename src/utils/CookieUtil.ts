@@ -10,6 +10,10 @@ export default class CookieUtil {
     return pair[0].value;
   }
 
+  public static setValue(key: string, value: string, maxAge: number): void {
+    document.cookie = `${key}=${value}; path=/; max-age=${maxAge}; samesite; secure`;
+  }
+
   protected static getPair(text: string): { key: string; value: string } {
     const separator = text.indexOf("=");
     return {

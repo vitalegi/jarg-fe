@@ -17,6 +17,7 @@
 import LoggerFactory from "@/logger/LoggerFactory";
 import Vue from "vue";
 import EncryptionUtil from "@/utils/EncryptionUtil";
+import CookieUtil from "@/utils/CookieUtil";
 
 export default Vue.extend({
   name: "Home",
@@ -30,7 +31,7 @@ export default Vue.extend({
       // 10years
       const maxAge = 60 * 60 * 24 * 265 * 10;
       const secret = await EncryptionUtil.sha512(value);
-      document.cookie = `secret=${secret}; path=/; max-age=${maxAge}; samesite`;
+      CookieUtil.setValue("secret", secret, maxAge);
     },
   },
 });
