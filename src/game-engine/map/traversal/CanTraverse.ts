@@ -1,4 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
+import TileRepository from "@/game-engine/repositories/TileRepository";
+import Container from "typedi";
 import MapContainer from "../MapContainer";
 import Tile from "../Tile";
 
@@ -7,11 +9,15 @@ export default interface CanTraverse {
 }
 
 export class CanTraverseWalking implements CanTraverse {
+  tileRepository = Container.get<TileRepository>(TileRepository);
   public canTraverse(map: MapContainer, monster: Monster, tile: Tile): boolean {
     if (!tile) {
       return false;
     }
-
+    const tileConfig = this.tileRepository.getTile(tile.spriteModel);
+    if (!tileConfig.walkable) {
+      return false;
+    }
     const enemiesOnThisTile = map.monsters
       .filter(
         (m) =>
