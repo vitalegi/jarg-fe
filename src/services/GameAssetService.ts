@@ -30,7 +30,7 @@ export default class GameAssetService {
 
   public async getSpriteConfigs(): Promise<SpriteConfig[]> {
     const result = await BackendWebService.url(
-      `${process.env.VUE_APP_BACKEND}/maps/sprites/backgrounds/sprites.json`
+      `${process.env.VUE_APP_BACKEND}/tiles/sprites.json`
     )
       .get()
       .call();
