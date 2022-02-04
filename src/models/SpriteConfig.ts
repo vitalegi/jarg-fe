@@ -19,4 +19,13 @@ export default class SpriteConfig {
     out.swimmable = sprite.swimmable;
     return out;
   }
+  public clone(): SpriteConfig {
+    const out = new SpriteConfig();
+    out.name = this.name;
+    out.type = this.type;
+    out.sprites = this.sprites;
+    out.walkable = this.walkable;
+    out.swimmable = this.swimmable;
+    return out;
+  }
 }

@@ -8,6 +8,7 @@ import Container, { Service } from "typedi";
 import MonsterIndex from "./monster/MonsterIndex";
 import AbilityRepository from "./repositories/AbilityRepository";
 import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
+import TileRepository from "./repositories/TileRepository";
 import TypeRepository from "./repositories/TypeRepository";
 
 @Service()
@@ -23,6 +24,7 @@ export default class GameAppDataLoader {
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);
   protected typeRepository = Container.get<TypeRepository>(TypeRepository);
+  protected tileRepository = Container.get<TileRepository>(TileRepository);
   protected rendererService = Container.get<RendererService>(RendererService);
 
   public async loadMonsters(): Promise<void> {
@@ -118,6 +120,14 @@ export default class GameAppDataLoader {
       )
     );
     await this.rendererService.loadAssets();
+  }
+
+  public async loadSpriteConfigs(): Promise<void> {
+    await this.loadOnce("spriteConfigs", () =>
+      this.gameAssetService
+        .getSpriteConfigs()
+        .then((sprites) => this.tileRepository.init(sprites))
+    );
   }
 
   protected async _loadMonstersAnimationsMetadata(

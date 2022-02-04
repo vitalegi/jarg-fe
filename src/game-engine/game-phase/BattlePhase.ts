@@ -17,6 +17,7 @@ import TurnBoxDrawer from "../ui/TurnBoxDrawer";
 import BattleService from "../battle/BattleService";
 import GameApp from "../GameApp";
 import HistoryRepository from "../battle/turns/HistoryRepository";
+import TileRepository from "../repositories/TileRepository";
 
 @Service()
 export default class BattlePhase extends AbstractPhase<MapContainer> {
@@ -35,6 +36,7 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
   protected historyRepository =
     Container.get<HistoryRepository>(HistoryRepository);
   protected battleService = Container.get<BattleService>(BattleService);
+  protected tileRepository = Container.get<TileRepository>(TileRepository);
 
   public getName(): string {
     return "BattlePhase";
@@ -51,8 +53,9 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
       this.monsterIndexService.getMonsters(requiredMonsterIds);
 
     await this.getGameAppDataLoader().loadMonstersSpriteSheets(requiredSprites);
-
-    await this.getGameAppDataLoader().loadTiles(map.sprites);
+    await this.getGameAppDataLoader().loadSpriteConfigs();
+    const requiredTiles = this.tileRepository.getTiles(map);
+    await this.getGameAppDataLoader().loadTiles(requiredTiles);
 
     this.userActionService.removeAll();
     this.userActionService.addActionHandler(new DragScreenUserActionHandler());

@@ -25,6 +25,7 @@ import HealthBarService from "../monster/HealthBarService";
 import PhaseService from "../game-phase/PhaseService";
 import HealthBarUpdateDrawer from "../ui/HealthBarUpdateDrawer";
 import StatsService from "../monster/stats/StatsService";
+import Overlay from "../ui/Overlay";
 
 @Service()
 export default class BattleService {
@@ -121,6 +122,7 @@ export default class BattleService {
     this.logger.info(`Monster ${monster.uuid} is owned by player, show menu`);
 
     this.monsterActionMenuBuilder.build(monster).draw();
+    this.gameLoop.addGameLoopHandler(new Overlay(this.gameApp.getApp().stage));
 
     const container = this.gameApp
       .getBattleContainer()

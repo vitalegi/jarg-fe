@@ -9,7 +9,6 @@ import Tile from "./Tile";
 export default class MapModel {
   id = "";
   name = "";
-  sprites: SpriteConfig[] = [];
   tiles: Tile[] = [];
   randomEncounters: LocalizedEncounters[] = [];
   playerEntryPoints: Point[] = [];
@@ -18,9 +17,6 @@ export default class MapModel {
     const out = new MapModel();
     out.id = json.id;
     out.name = json.name;
-    if (json.sprites) {
-      out.sprites = json.sprites.map(SpriteConfig.fromJson);
-    }
     if (json.tiles) {
       out.tiles = json.tiles.map(Tile.fromJson);
     }
@@ -56,7 +52,8 @@ export default class MapModel {
         `Duplicated tile: ${duplicates.map((d) => d.toString()).join(", ")}`
       );
     }
-    for (const tile of this.tiles) {
+    // TODO move to dedicated class
+    /*for (const tile of this.tiles) {
       if (!this.sprites.find((s) => s.name === tile.spriteModel)) {
         throw Error(
           `Missing model for sprite ${tile.coordinates.toString()}: ${
@@ -65,6 +62,7 @@ export default class MapModel {
         );
       }
     }
+    */
   }
   public validateRandomEncounter(randomEncounter: LocalizedEncounters): void {
     randomEncounter.area.forEach((point) => {

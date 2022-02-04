@@ -21,7 +21,6 @@ export default class MapService {
     const map = new MapContainer();
     map.id = model.id;
     map.name = model.name;
-    map.sprites = model.sprites;
     map.tiles = model.tiles.map((tile) => tile.clone());
 
     for (let i = 0; i < model.randomEncounters.length; i++) {

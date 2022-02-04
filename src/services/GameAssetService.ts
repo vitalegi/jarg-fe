@@ -28,6 +28,15 @@ export default class GameAssetService {
     return result.data.map(MonsterIndex.fromJson);
   }
 
+  public async getSpriteConfigs(): Promise<SpriteConfig[]> {
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}/maps/sprites/backgrounds/sprites.json`
+    )
+      .get()
+      .call();
+    return result.data.map(SpriteConfig.fromJson);
+  }
+
   public async getAnimationMetadata(
     key: string,
     url: string
@@ -58,13 +67,5 @@ export default class GameAssetService {
     const abilities = result.data.map(Ability.fromJson) as Ability[];
     abilities.forEach((a) => a.validate());
     return abilities;
-  }
-
-  public getMapSprite(map: MapContainer, name: string): SpriteConfig {
-    const sprite = map.sprites.filter((s) => s.name === name);
-    if (sprite) {
-      return sprite[0];
-    }
-    throw Error(`Sprite ${name} not found in map ${map.id}`);
   }
 }

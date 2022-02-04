@@ -1,4 +1,3 @@
-import MapContainer from "@/game-engine/map/MapContainer";
 import Monster from "@/game-engine/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
@@ -12,6 +11,7 @@ import HealthBarService from "@/game-engine/monster/HealthBarService";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import GameConfig from "@/game-engine/GameConfig";
 import LoggerFactory from "@/logger/LoggerFactory";
+import TileRepository from "@/game-engine/repositories/TileRepository";
 
 export class Asset {
   name = "";
@@ -37,6 +37,7 @@ export default class RendererService {
     Container.get<UserActionService>(UserActionService);
   protected healthBarService =
     Container.get<HealthBarService>(HealthBarService);
+  protected tileRepository = Container.get<TileRepository>(TileRepository);
 
   public async addImages(images: Asset[]): Promise<void> {
     const newResources = images.filter((image) => {
@@ -138,10 +139,7 @@ export default class RendererService {
   }
 
   public addMapTile(container: PIXI.Container, tile: Tile): void {
-    const spriteConfig = this.gameAssetService.getMapSprite(
-      this.mapRepository.getMap(),
-      tile.spriteModel
-    );
+    const spriteConfig = this.tileRepository.getTile(tile.spriteModel);
 
     let sprite = null;
     if (spriteConfig.type === SpriteType.ANIMATED) {

@@ -111,6 +111,9 @@ import MapModel from "@/game-engine/map/MapModel";
 import SpriteConfig from "@/models/SpriteConfig";
 import Tile from "@/game-engine/map/Tile";
 import NumberUtil from "@/utils/NumberUtil";
+import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
+import Container from "typedi";
+import TileRepository from "@/game-engine/repositories/TileRepository";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
 
@@ -124,32 +127,11 @@ export default Vue.extend({
   },
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.Map.RectangleRandomMapGenerator"),
+    sprites: new Array<SpriteConfig>(),
     id: "",
     name: "",
     width: 20,
     height: 10,
-    sprites: [
-      SpriteConfig.fromJson({
-        name: "grass",
-        type: "ANIMATED",
-        sprites: [
-          "/maps/sprites/backgrounds/grass1.png",
-          "/maps/sprites/backgrounds/grass2.png",
-        ],
-        walkable: true,
-        swimmable: false,
-      }),
-      SpriteConfig.fromJson({
-        name: "grass2",
-        type: "ANIMATED",
-        sprites: [
-          "/maps/sprites/backgrounds/grass3.png",
-          "/maps/sprites/backgrounds/grass4.png",
-        ],
-        walkable: false,
-        swimmable: false,
-      }),
-    ],
     mode: "",
     selectArea: false,
     selectAreaPoint1: DEFAULT_POINT,
@@ -177,16 +159,17 @@ export default Vue.extend({
       const model = new MapModel();
       model.id = this.id;
       model.name = this.name;
-      // TODO manage sprite creation
-      model.sprites.push(...this.sprites);
-      for (let x = 0; x < this.width; x++) {
-        for (let y = 0; y < this.height; y++) {
-          const tile = new Tile();
-          tile.spriteModel = Math.random() < 0.5 ? "grass" : "grass2";
-          tile.coordinates = new Point(x, y);
-          model.tiles.push(tile);
-        }
-      }
+
+      this.tiles.forEach((columns: string[], row: number) =>
+        columns.forEach((modelName: string, col: number) => {
+          if (modelName !== "") {
+            const tile = new Tile();
+            tile.spriteModel = modelName;
+            tile.coordinates = new Point(row, col);
+            model.tiles.push(tile);
+          }
+        })
+      );
 
       model.randomEncounters = this.localizedEncounters;
       for (let x = this.playerSpawning1.x; x <= this.playerSpawning2.x; x++) {
@@ -435,12 +418,12 @@ export default Vue.extend({
       return { point1: p1, point2: p2 };
     },
   },
-  mounted(): void {
-    for (let row = 0; row < this.height; row++) {
-      for (let col = 0; col < this.width; col++) {
-        this.setModel(row, col, this.sprites[0].name);
-      }
-    }
+  async mounted(): Promise<void> {
+    const gameAppDataLoader =
+      Container.get<GameAppDataLoader>(GameAppDataLoader);
+    const tileRepository = Container.get<TileRepository>(TileRepository);
+    await gameAppDataLoader.loadSpriteConfigs();
+    this.sprites.push(...tileRepository.getAllTiles());
   },
 });
 </script>
