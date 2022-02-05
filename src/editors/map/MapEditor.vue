@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="pa-0">
     <v-row>
       <v-col cols="8">
         <v-alert
@@ -52,7 +52,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="3">
+      <v-col cols="3" class="pa-0">
         <v-container fluid>
           <v-row dense>
             <v-col cols="12">
@@ -85,7 +85,7 @@
           </v-row>
         </v-container>
       </v-col>
-      <v-col cols="9">
+      <v-col cols="9" class="pa-0">
         <table id="map">
           <tr v-for="row of rows" :key="row">
             <td
@@ -178,7 +178,7 @@ export default Vue.extend({
           if (modelName !== "") {
             const tile = new Tile();
             tile.spriteModel = modelName;
-            tile.coordinates = new Point(row, col);
+            tile.coordinates = new Point(col, row);
             model.tiles.push(tile);
           }
         })

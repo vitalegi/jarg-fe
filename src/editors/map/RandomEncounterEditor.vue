@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="pa-0">
     <v-row dense>
       <v-col cols="12">
         <SelectMonsterIndex

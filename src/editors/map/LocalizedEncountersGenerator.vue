@@ -20,7 +20,7 @@
           :value="modeSpawning2"
         />
       </v-radio-group>
-      <v-container>
+      <v-container class="pa-0">
         <v-row dense>
           <v-col cols="4">
             <EditableIntegerField
@@ -45,6 +45,7 @@
             cols="12"
             v-for="(encounter, index) of localizedEncounters.encounters"
             :key="index"
+            class="pa-0"
           >
             <RandomEncounterEditor
               :encounter="encounter"
