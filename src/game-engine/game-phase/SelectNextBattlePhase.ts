@@ -13,6 +13,7 @@ import PhaseService from "./PhaseService";
 import StatsService from "../monster/stats/StatsService";
 import { gameLabel } from "@/services/LocalizationService";
 import MapModelRepository from "../map/MapModelRepository";
+import MapIndex from "../map/MapIndex";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -43,7 +44,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     menu.addEntry(this.healParty());
     this.mapModelRepository
       .getMaps()
-      .forEach((mapId) => menu.addEntry(this.selectMapEntry(menu, mapId)));
+      .forEach((map) => menu.addEntry(this.selectMapEntry(menu, map)));
     menu.draw();
   }
 
@@ -78,25 +79,25 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     monster.abilities.forEach((a) => (a.currentUsages = a.maxUsages));
   }
 
-  protected selectMapEntry(menu: LeftMenu, map: string): MenuEntry {
+  protected selectMapEntry(menu: LeftMenu, map: MapIndex): MenuEntry {
     return new MenuEntry(
-      map,
+      map.name,
       () => this.selectMap(menu, map),
       () => this.isMapEnabled(map)
     );
   }
 
-  protected isMapEnabled(mapId: string): boolean {
+  protected isMapEnabled(map: MapIndex): boolean {
     const defeatedMaps = this.playerRepository.getPlayerData().defeatedMaps;
-    return this.mapModelRepository.isEnabled(mapId, defeatedMaps);
+    return this.mapModelRepository.isEnabled(map, defeatedMaps);
   }
 
   protected defeatedMaps(): string[] {
     return this.playerRepository.getPlayerData().defeatedMaps;
   }
 
-  protected async selectMap(menu: LeftMenu, mapId: string): Promise<void> {
-    this.logger.info(`Chosen: ${mapId}`);
+  protected async selectMap(menu: LeftMenu, map: MapIndex): Promise<void> {
+    this.logger.info(`Chosen: ${map}`);
 
     menu.hide();
     const monstersMenuBuilder = new SelectMonstersMenu(
@@ -106,7 +107,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
     const menu2 = monstersMenuBuilder.createMenu(
       (selected: Monster[]) => {
-        this.createGame(mapId, selected);
+        this.createGame(map, selected);
       },
       () => {
         menu.show();
@@ -117,11 +118,11 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   }
 
   protected async createGame(
-    mapId: string,
+    mapIndex: MapIndex,
     monsters: Monster[]
   ): Promise<void> {
-    const model = await this.gameAssetService.getMap(mapId);
-    const map = await this.mapService.generate(model);
+    const model = await this.gameAssetService.getMap(mapIndex);
+    const map = await this.mapService.generate(model, mapIndex);
 
     monsters.forEach(
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())

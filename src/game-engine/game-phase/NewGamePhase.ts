@@ -16,7 +16,6 @@ import AbilityService from "../monster-action/ability/AbilityService";
 import PhaseService from "./PhaseService";
 
 const starters = ["001", "004", "007"];
-const firstMap = "map1";
 
 @Service()
 export default class NewGamePhase extends AbstractPhase<never> {

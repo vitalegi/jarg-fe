@@ -7,6 +7,7 @@ import Monster from "../monster/Monster";
 import MonsterService from "../monster/MonsterService";
 import LocalizedEncounters from "./LocalizedEncounters";
 import MapContainer from "./MapContainer";
+import MapIndex from "./MapIndex";
 import MapModel from "./MapModel";
 import RandomEncounter from "./RandomEncounter";
 
@@ -17,10 +18,13 @@ export default class MapService {
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected abilityService = Container.get<AbilityService>(AbilityService);
 
-  public async generate(model: MapModel): Promise<MapContainer> {
+  public async generate(
+    model: MapModel,
+    metadata: MapIndex
+  ): Promise<MapContainer> {
     const map = new MapContainer();
-    map.id = model.id;
-    map.name = model.name;
+    map.id = metadata.id;
+    map.name = metadata.name;
     map.tiles = model.tiles.map((tile) => tile.clone());
 
     for (let i = 0; i < model.randomEncounters.length; i++) {

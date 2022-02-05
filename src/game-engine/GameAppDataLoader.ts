@@ -5,6 +5,7 @@ import GameAssetService from "@/services/GameAssetService";
 import RendererService, { Asset } from "@/services/RendererService";
 import ArrayUtil from "@/utils/ArrayUtil";
 import Container, { Service } from "typedi";
+import MapModelRepository from "./map/MapModelRepository";
 import MonsterIndex from "./monster/MonsterIndex";
 import AbilityRepository from "./repositories/AbilityRepository";
 import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
@@ -26,6 +27,8 @@ export default class GameAppDataLoader {
   protected typeRepository = Container.get<TypeRepository>(TypeRepository);
   protected tileRepository = Container.get<TileRepository>(TileRepository);
   protected rendererService = Container.get<RendererService>(RendererService);
+  protected mapModelRepository =
+    Container.get<MapModelRepository>(MapModelRepository);
 
   public async loadMonsters(): Promise<void> {
     // pre-requisites
@@ -129,7 +132,13 @@ export default class GameAppDataLoader {
         .then((sprites) => this.tileRepository.init(sprites))
     );
   }
-
+  public async loadMaps(): Promise<void> {
+    await this.loadOnce("maps", () =>
+      this.gameAssetService
+        .getMaps()
+        .then((maps) => this.mapModelRepository.init(maps))
+    );
+  }
   protected async _loadMonstersAnimationsMetadata(
     monsters: MonsterIndex[]
   ): Promise<void> {

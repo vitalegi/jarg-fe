@@ -7,12 +7,21 @@ import { Animation } from "@/models/Animation";
 import Bonus from "@/game-engine/types/Bonus";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import MapModel from "@/game-engine/map/MapModel";
+import MapIndex from "@/game-engine/map/MapIndex";
 
 @Service()
 export default class GameAssetService {
-  public async getMap(mapId: string): Promise<MapModel> {
+  public async getMaps(): Promise<MapIndex[]> {
     const result = await BackendWebService.url(
-      `${process.env.VUE_APP_BACKEND}/maps/${mapId}.json`
+      `${process.env.VUE_APP_BACKEND}/maps/maps.json`
+    )
+      .get()
+      .call();
+    return result.data.map((m: any) => MapIndex.fromJson(m));
+  }
+  public async getMap(map: MapIndex): Promise<MapModel> {
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}${map.url}`
     )
       .get()
       .call();

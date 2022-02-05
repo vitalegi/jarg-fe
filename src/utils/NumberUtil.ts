@@ -15,10 +15,16 @@ export default class NumberUtil {
     numbers: number[],
     defaultValue = Number.MAX_SAFE_INTEGER
   ): number {
-    return numbers.reduce((prev, curr) => Math.min(prev, curr), defaultValue);
+    if (numbers.length === 0) {
+      return defaultValue;
+    }
+    return numbers.reduce((prev, curr) => Math.min(prev, curr));
   }
   public static max(numbers: number[], defaultValue = 0): number {
-    return numbers.reduce((prev, curr) => Math.max(prev, curr), defaultValue);
+    if (numbers.length === 0) {
+      return defaultValue;
+    }
+    return numbers.reduce((prev, curr) => Math.max(prev, curr));
   }
   public static sum(numbers: number[]): number {
     return numbers.reduce((prev, curr) => prev + curr, 0);

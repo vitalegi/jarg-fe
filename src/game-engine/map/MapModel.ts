@@ -6,16 +6,12 @@ import RandomEncounter from "./RandomEncounter";
 import Tile from "./Tile";
 
 export default class MapModel {
-  id = "";
-  name = "";
   tiles: Tile[] = [];
   randomEncounters: LocalizedEncounters[] = [];
   playerEntryPoints: Point[] = [];
 
   public static fromJson(json: any): MapModel {
     const out = new MapModel();
-    out.id = json.id;
-    out.name = json.name;
     if (json.tiles) {
       out.tiles = json.tiles.map(Tile.fromJson);
     }
@@ -31,12 +27,6 @@ export default class MapModel {
   }
 
   public validate(): void {
-    if (this.id.trim() === "") {
-      throw Error(`ID not set`);
-    }
-    if (this.name.trim() === "") {
-      throw Error(`Name not set`);
-    }
     this.validateTiles();
     this.randomEncounters.forEach((r) => this.validateRandomEncounter(r));
   }

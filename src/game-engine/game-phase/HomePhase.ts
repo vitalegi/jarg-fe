@@ -15,6 +15,7 @@ export default class HomePhase extends AbstractPhase<never> {
   }
   protected async doStart(options: never | null): Promise<void> {
     await this.getGameAppDataLoader().loadMonsters();
+    await this.getGameAppDataLoader().loadMaps();
 
     const menu = new LeftMenu();
     menu.addEntry(this.newGameEntry());

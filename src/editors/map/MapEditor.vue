@@ -171,8 +171,6 @@ export default Vue.extend({
     },
     model(): MapModel {
       const model = new MapModel();
-      model.id = this.id;
-      model.name = this.name;
 
       this.tiles.forEach((columns: string[], row: number) =>
         columns.forEach((modelName: string, col: number) => {
@@ -464,11 +462,9 @@ export default Vue.extend({
     },
     importJson(json: string): void {
       const map = MapModel.fromJson(JSON.parse(json));
-      this.id = map.id;
-      this.name = map.name;
       this.width = NumberUtil.max(
         map.tiles.map((t) => t.coordinates.x),
-        18
+        20
       );
       this.height = NumberUtil.max(
         map.tiles.map((t) => t.coordinates.y),

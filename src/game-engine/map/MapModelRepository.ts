@@ -1,21 +1,32 @@
 import { Service } from "typedi";
+import MapIndex from "./MapIndex";
 
 @Service()
 export default class MapModelRepository {
-  public getMaps(): string[] {
-    return ["map1", "map2"];
+  private maps: MapIndex[] = [];
+
+  public init(maps: MapIndex[]): void {
+    this.maps = maps;
   }
 
-  public isEnabled(mapId: string, defeatedMaps: string[]): boolean {
-    const maps = this.getMaps();
-    if (mapId === maps[0]) {
-      return true;
+  public getMaps(): MapIndex[] {
+    return this.maps.map((m) => m.clone());
+  }
+
+  public getMap(id: string): MapIndex {
+    const found = this.maps.filter((m) => m.id === id);
+    if (found.length > 0) {
+      return found[0];
     }
-    if (defeatedMaps.indexOf(mapId) !== -1) {
-      return true;
+    throw Error(`Map ${id} not found. ${this.maps.length} maps available`);
+  }
+
+  public isEnabled(map: MapIndex, defeatedMaps: string[]): boolean {
+    for (const prerequisite of map.prerequisites) {
+      if (defeatedMaps.indexOf(prerequisite) === -1) {
+        return false;
+      }
     }
-    const lastDefeated = defeatedMaps[defeatedMaps.length - 1];
-    const nextToDefeat = maps.indexOf(lastDefeated) + 1;
-    return mapId === maps[nextToDefeat];
+    return true;
   }
 }
