@@ -1,12 +1,24 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" v-if="hasErrors">
-        <v-alert dense border="right" colored-border type="error" elevation="2">
+      <v-col cols="8">
+        <v-alert
+          dense
+          v-if="hasErrors"
+          border="right"
+          colored-border
+          type="error"
+          elevation="2"
+        >
           {{ errors }}
         </v-alert>
       </v-col>
-      <v-col cols="12" style="text-align: right" v-else>
+      <v-col cols="4" style="text-align: right">
+        <ImportDialog
+          title="Import map"
+          :initialValue="exportJson"
+          @change="importJson"
+        />
         <CopyToClipboardBtn :value="exportJson" />
       </v-col>
     </v-row>
@@ -111,6 +123,7 @@ import TileRepository from "@/game-engine/repositories/TileRepository";
 import BackgroundEditor from "./BackgroundEditor.vue";
 import PlayerSpawnEditor from "./PlayerSpawnEditor.vue";
 import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import ImportDialog from "../../components/ImportDialog.vue";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
 
@@ -123,6 +136,7 @@ export default Vue.extend({
     CopyToClipboardBtn,
     BackgroundEditor,
     PlayerSpawnEditor,
+    ImportDialog,
   },
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.Map.MapEditor"),
@@ -442,6 +456,52 @@ export default Vue.extend({
     },
     changePlayerSpawning(mode: string): void {
       this.mode = mode;
+    },
+    importJson(json: string): void {
+      const map = MapModel.fromJson(JSON.parse(json));
+      this.id = map.id;
+      this.name = map.name;
+      this.width = NumberUtil.max(
+        map.tiles.map((t) => t.coordinates.x),
+        18
+      );
+      this.height = NumberUtil.max(
+        map.tiles.map((t) => t.coordinates.y),
+        15
+      );
+      this.tiles.splice(0);
+      for (let row = 0; row < this.height; row++) {
+        for (let col = 0; col < this.width; col++) {
+          const points = map.tiles.filter((v) =>
+            v.coordinates.equals(new Point(col, row))
+          );
+          if (points.length > 0) {
+            this.setModel(row, col, points[0].spriteModel);
+          }
+        }
+      }
+
+      this.playerSpawning1 = new Point(
+        NumberUtil.min(
+          map.playerEntryPoints.map((p) => p.x),
+          0
+        ),
+        NumberUtil.min(
+          map.playerEntryPoints.map((p) => p.y),
+          0
+        )
+      );
+      this.playerSpawning2 = new Point(
+        NumberUtil.max(
+          map.playerEntryPoints.map((p) => p.x),
+          0
+        ),
+        NumberUtil.max(
+          map.playerEntryPoints.map((p) => p.y),
+          0
+        )
+      );
+      this.localizedEncounters = map.randomEncounters.map((e) => e.clone());
     },
   },
   async mounted(): Promise<void> {

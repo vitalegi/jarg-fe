@@ -1,5 +1,4 @@
 import Point from "@/models/Point";
-import SpriteConfig from "@/models/SpriteConfig";
 import ArrayUtil from "@/utils/ArrayUtil";
 import NumberUtil from "@/utils/NumberUtil";
 import LocalizedEncounters from "./LocalizedEncounters";
