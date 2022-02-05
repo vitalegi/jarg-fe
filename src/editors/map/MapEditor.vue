@@ -186,7 +186,7 @@ export default Vue.extend({
       model.randomEncounters = this.localizedEncounters;
       for (let x = this.playerSpawning1.x; x <= this.playerSpawning2.x; x++) {
         for (let y = this.playerSpawning1.y; y <= this.playerSpawning2.y; y++) {
-          model.playerEntryPoints.push(new Point(x, y));
+          model.playerEntryPoints.push(new Point(y, x));
         }
       }
       return model;
@@ -462,14 +462,18 @@ export default Vue.extend({
     },
     importJson(json: string): void {
       const map = MapModel.fromJson(JSON.parse(json));
-      this.width = NumberUtil.max(
-        map.tiles.map((t) => t.coordinates.x),
-        20
-      );
-      this.height = NumberUtil.max(
-        map.tiles.map((t) => t.coordinates.y),
-        15
-      );
+      this.width =
+        1 +
+        NumberUtil.max(
+          map.tiles.map((t) => t.coordinates.x),
+          20
+        );
+      this.height =
+        1 +
+        NumberUtil.max(
+          map.tiles.map((t) => t.coordinates.y),
+          15
+        );
       this.tiles.splice(0);
       for (let row = 0; row < this.height; row++) {
         for (let col = 0; col < this.width; col++) {
