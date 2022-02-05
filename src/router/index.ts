@@ -57,9 +57,7 @@ const routes: Array<RouteConfig> = [
     path: "/editor/maps",
     name: "MapGeneratorView",
     component: () =>
-      import(
-        /* webpackChunkName: "editor-map" */ "../views/MapGeneratorView.vue"
-      ),
+      import(/* webpackChunkName: "editor-map" */ "../views/MapEditorView.vue"),
   },
 ];
 
