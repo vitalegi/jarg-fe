@@ -41,25 +41,37 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <BackgroundMenu :sprites="sprites" @change="changeBackground" />
-        <PlayerSpawnEditor
-          :playerSpawning1="playerSpawning1"
-          :playerSpawning2="playerSpawning2"
-          label1="PLAYER_SPAWNING_1"
-          label2="PLAYER_SPAWNING_2"
-          @change="changePlayerSpawning"
-        />
-        <LocalizedEncountersGenerator
-          v-for="(encounters, index) in localizedEncounters"
-          :key="index"
-          :localizedEncounters="encounters"
-          :model="model"
-          :mode="mode"
-          @changeMode="(m) => (mode = m)"
-          :modeSpawning1="`MONSTERS_SPAWNING_${index}_1`"
-          :modeSpawning2="`MONSTERS_SPAWNING_${index}_2`"
-          @change="(e) => changeLocalizedEncounters(index, e)"
-        />
+        <v-container fluid>
+          <v-row dense>
+            <v-col cols="12">
+              <BackgroundEditor :sprites="sprites" @change="changeBackground" />
+            </v-col>
+            <v-col cols="12">
+              <PlayerSpawnEditor
+                :playerSpawning1="playerSpawning1"
+                :playerSpawning2="playerSpawning2"
+                label1="PLAYER_SPAWNING_1"
+                label2="PLAYER_SPAWNING_2"
+                @change="changePlayerSpawning"
+              />
+            </v-col>
+            <v-col
+              cols="12"
+              v-for="(encounters, index) in localizedEncounters"
+              :key="index"
+            >
+              <LocalizedEncountersGenerator
+                :localizedEncounters="encounters"
+                :model="model"
+                :mode="mode"
+                @changeMode="(m) => (mode = m)"
+                :modeSpawning1="`MONSTERS_SPAWNING_${index}_1`"
+                :modeSpawning2="`MONSTERS_SPAWNING_${index}_2`"
+                @change="(e) => changeLocalizedEncounters(index, e)"
+              />
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
       <v-col cols="9">
         <table id="map">
@@ -96,7 +108,7 @@ import NumberUtil from "@/utils/NumberUtil";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Container from "typedi";
 import TileRepository from "@/game-engine/repositories/TileRepository";
-import BackgroundMenu from "./BackgroundMenu.vue";
+import BackgroundEditor from "./BackgroundEditor.vue";
 import PlayerSpawnEditor from "./PlayerSpawnEditor.vue";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
@@ -108,7 +120,7 @@ export default Vue.extend({
     EditableIntegerField,
     LocalizedEncountersGenerator,
     CopyToClipboardBtn,
-    BackgroundMenu,
+    BackgroundEditor,
     PlayerSpawnEditor,
   },
   data: () => ({
@@ -184,6 +196,17 @@ export default Vue.extend({
     exportJson(): string {
       return JSON.stringify(this.model);
     },
+    isPlayerSpawningMode(): boolean {
+      return (
+        this.mode === "PLAYER_SPAWNING_1" || this.mode === "PLAYER_SPAWNING_2"
+      );
+    },
+    isBackgroundMode(): boolean {
+      return this.mode.startsWith("BACKGROUND_") || this.mode === "BACKGROUND";
+    },
+    isMonsterSpawningMode(): boolean {
+      return this.mode.startsWith("MONSTERS_SPAWNING_");
+    },
   },
   methods: {
     isPlayerSpawning(row: number, col: number): boolean {
@@ -202,13 +225,10 @@ export default Vue.extend({
       );
     },
     hasFocus(row: number, col: number): boolean {
-      if (
-        this.mode === "PLAYER_SPAWNING_1" ||
-        this.mode === "PLAYER_SPAWNING_2"
-      ) {
+      if (this.isPlayerSpawningMode) {
         return this.isPlayerSpawning(row, col);
       }
-      if (this.mode.startsWith("MONSTERS_SPAWNING_")) {
+      if (this.isMonsterSpawningMode) {
         const split = this.mode.split("_");
         const index = NumberUtil.parse(split[2]);
         return this.isMonsterSpawning(index, row, col);
@@ -261,16 +281,20 @@ export default Vue.extend({
     },
     click(row: number, col: number): void {
       this.logger.info(`Mode: ${this.mode} (${row},${col})`);
-      if (this.mode === "PLAYER_SPAWNING_1") {
-        this.changePlayerSpawningArea(true, row, col);
-      } else if (this.mode === "PLAYER_SPAWNING_2") {
-        this.changePlayerSpawningArea(false, row, col);
-      } else if (this.mode.startsWith("BACKGROUND_")) {
-        const sprite = this.mode.split("_")[1];
-        this.selectBackground(sprite, row, col);
-      } else if (this.mode === "BACKGROUND") {
-        this.selectBackground("", row, col);
-      } else if (this.mode.startsWith("MONSTERS_SPAWNING_")) {
+      if (this.isPlayerSpawningMode) {
+        if (this.mode === "PLAYER_SPAWNING_1") {
+          this.changePlayerSpawningArea(true, row, col);
+        } else if (this.mode === "PLAYER_SPAWNING_2") {
+          this.changePlayerSpawningArea(false, row, col);
+        }
+      } else if (this.isBackgroundMode) {
+        if (this.mode === "BACKGROUND") {
+          this.selectBackground("", row, col);
+        } else {
+          const sprite = this.mode.split("_")[1];
+          this.selectBackground(sprite, row, col);
+        }
+      } else if (this.isMonsterSpawningMode) {
         const split = this.mode.split("_");
         const index = NumberUtil.parse(split[2]);
         const topLeft = split[3] === "1";

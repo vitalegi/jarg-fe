@@ -1,55 +1,60 @@
 <template>
   <v-card>
-    <v-card-title>Monsters - {{ totalProbability }}%</v-card-title>
-    <v-card-subtitle v-if="hasErrors">
+    <v-card-title>
+      <OpenCloseBtn :open="show" @change="show = !show" /> Monsters -
+      {{ totalProbability }}%
+      <v-spacer></v-spacer>
+      <v-icon v-if="hasErrors" color="error"> mdi-alert </v-icon>
+    </v-card-title>
+    <v-card-text v-if="show">
       <v-alert dense border="right" colored-border type="error" elevation="2">
         {{ errors }}
       </v-alert>
-    </v-card-subtitle>
-    <v-radio-group v-model="localMode" @change="changeMode" row>
-      <v-radio
-        :label="`${spawning1.x} ${spawning1.y}`"
-        :value="modeSpawning1"
-      />
-      <v-radio
-        :label="`${spawning2.x} ${spawning2.y}`"
-        :value="modeSpawning2"
-      />
-    </v-radio-group>
-    <v-container dense>
-      <v-row>
-        <v-col cols="4">
-          <EditableIntegerField
-            label="Min #"
-            :value="localizedEncounters.minMonsters"
-            @change="changeMinMonsters"
-          />
-        </v-col>
-        <v-col cols="4">
-          <EditableIntegerField
-            label="Max #"
-            :value="localizedEncounters.maxMonsters"
-            @change="changeMaxMonsters"
-          />
-        </v-col>
-        <v-col cols="4">
-          <v-btn @click="addMonster"> Add </v-btn>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col
-          cols="12"
-          v-for="(encounter, index) of localizedEncounters.encounters"
-          :key="index"
-        >
-          <RandomEncounterEditor
-            :encounter="encounter"
-            @change="(e) => changeMonster(index, e)"
-            @delete="deleteMonster"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+      <v-radio-group v-model="localMode" @change="changeMode" row>
+        <v-radio
+          :label="`${spawning1.x} ${spawning1.y}`"
+          :value="modeSpawning1"
+        />
+        <v-radio
+          :label="`${spawning2.x} ${spawning2.y}`"
+          :value="modeSpawning2"
+        />
+      </v-radio-group>
+      <v-container dense>
+        <v-row>
+          <v-col cols="4">
+            <EditableIntegerField
+              label="Min #"
+              :value="localizedEncounters.minMonsters"
+              @change="changeMinMonsters"
+            />
+          </v-col>
+          <v-col cols="4">
+            <EditableIntegerField
+              label="Max #"
+              :value="localizedEncounters.maxMonsters"
+              @change="changeMaxMonsters"
+            />
+          </v-col>
+          <v-col cols="4">
+            <v-btn @click="addMonster"> Add </v-btn>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col
+            cols="12"
+            v-for="(encounter, index) of localizedEncounters.encounters"
+            :key="index"
+          >
+            <RandomEncounterEditor
+              :encounter="encounter"
+              @change="(e) => changeMonster(index, e)"
+              @delete="deleteMonster"
+            />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card-text>
   </v-card>
 </template>
 
@@ -63,10 +68,11 @@ import NumberUtil from "@/utils/NumberUtil";
 import Vue from "vue";
 import RandomEncounter from "@/game-engine/map/RandomEncounter";
 import MapModel from "@/game-engine/map/MapModel";
+import OpenCloseBtn from "./OpenCloseBtn.vue";
 
 export default Vue.extend({
   name: "LocalizedEncountersGenerator",
-  components: { EditableIntegerField, RandomEncounterEditor },
+  components: { EditableIntegerField, RandomEncounterEditor, OpenCloseBtn },
   props: {
     model: MapModel,
     mode: String,
@@ -77,6 +83,7 @@ export default Vue.extend({
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.Map.LocalizedEncountersGenerator"),
     localMode: "",
+    show: false,
   }),
   computed: {
     hasErrors(): boolean {
