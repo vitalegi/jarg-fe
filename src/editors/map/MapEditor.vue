@@ -41,32 +41,14 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <v-card>
-          <v-card-title>Background</v-card-title>
-          <v-checkbox dense v-model="selectArea" label="Select Area" />
-          <v-radio-group v-model="mode" row>
-            <v-radio label="empty" value="BACKGROUND" />
-            <v-radio
-              v-for="sprite of sprites"
-              :key="sprite.name"
-              :label="sprite.name"
-              :value="`BACKGROUND_${sprite.name}`"
-            />
-          </v-radio-group>
-        </v-card>
-        <v-card>
-          <v-card-title>Player Spawning Area</v-card-title>
-          <v-radio-group v-model="mode" row>
-            <v-radio
-              :label="`${playerSpawning1.x} ${playerSpawning1.y}`"
-              value="PLAYER_SPAWNING_1"
-            />
-            <v-radio
-              :label="`${playerSpawning2.x} ${playerSpawning2.y}`"
-              value="PLAYER_SPAWNING_2"
-            />
-          </v-radio-group>
-        </v-card>
+        <BackgroundMenu :sprites="sprites" @change="changeBackground" />
+        <PlayerSpawnEditor
+          :playerSpawning1="playerSpawning1"
+          :playerSpawning2="playerSpawning2"
+          label1="PLAYER_SPAWNING_1"
+          label2="PLAYER_SPAWNING_2"
+          @change="changePlayerSpawning"
+        />
         <LocalizedEncountersGenerator
           v-for="(encounters, index) in localizedEncounters"
           :key="index"
@@ -114,19 +96,23 @@ import NumberUtil from "@/utils/NumberUtil";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Container from "typedi";
 import TileRepository from "@/game-engine/repositories/TileRepository";
+import BackgroundMenu from "./BackgroundMenu.vue";
+import PlayerSpawnEditor from "./PlayerSpawnEditor.vue";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
 
 export default Vue.extend({
-  name: "RectangleRandomMapGenerator",
+  name: "MapEditor",
   components: {
     EditableTextField,
     EditableIntegerField,
     LocalizedEncountersGenerator,
     CopyToClipboardBtn,
+    BackgroundMenu,
+    PlayerSpawnEditor,
   },
   data: () => ({
-    logger: LoggerFactory.getLogger("Editors.Map.RectangleRandomMapGenerator"),
+    logger: LoggerFactory.getLogger("Editors.Map.MapEditor"),
     sprites: new Array<SpriteConfig>(),
     id: "",
     name: "",
@@ -246,9 +232,12 @@ export default Vue.extend({
       const model = this.getModel(row, col);
       const sprites = this.sprites.filter((s) => s.name === model);
       if (sprites.length === 1) {
-        return `${process.env.VUE_APP_BACKEND}${sprites[0].sprites[0]}`;
+        return this.getImage(sprites[0]);
       }
       return "";
+    },
+    getImage(config: SpriteConfig): string {
+      return `${process.env.VUE_APP_BACKEND}${config.sprites[0]}`;
     },
     setModel(row: number, col: number, model: string): void {
       this.expandModel(row, col);
@@ -416,6 +405,13 @@ export default Vue.extend({
         );
       }
       return { point1: p1, point2: p2 };
+    },
+    changeBackground(value: { selectArea: boolean; sprite: string }): void {
+      this.selectArea = value.selectArea;
+      this.mode = value.sprite;
+    },
+    changePlayerSpawning(mode: string): void {
+      this.mode = mode;
     },
   },
   async mounted(): Promise<void> {

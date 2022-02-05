@@ -1,16 +1,16 @@
 <template>
-  <RectangleRandomMapGenerator />
+  <MapEditor />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import RectangleRandomMapGenerator from "@/editors/map/RectangleRandomMapGenerator.vue";
+import MapEditor from "@/editors/map/MapEditor.vue";
 
 export default Vue.extend({
   name: "MapGeneratorView",
 
   components: {
-    RectangleRandomMapGenerator,
+    MapEditor,
   },
 });
 </script>
