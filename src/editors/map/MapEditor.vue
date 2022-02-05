@@ -76,10 +76,11 @@
                 :localizedEncounters="encounters"
                 :model="model"
                 :mode="mode"
-                @changeMode="(m) => (mode = m)"
                 :modeSpawning1="`MONSTERS_SPAWNING_${index}_1`"
                 :modeSpawning2="`MONSTERS_SPAWNING_${index}_2`"
+                @changeMode="(m) => (mode = m)"
                 @change="(e) => changeLocalizedEncounters(index, e)"
+                @delete="(e) => deleteLocalizedEncounters(index)"
               />
             </v-col>
           </v-row>
@@ -401,6 +402,10 @@ export default Vue.extend({
       this.localizedEncounters.splice(index, 1);
       const part2 = this.localizedEncounters.splice(index);
       this.localizedEncounters.push(e, ...part2);
+    },
+    deleteLocalizedEncounters(index: number): void {
+      this.logger.info(`Delete localized encounter ${index}`);
+      this.localizedEncounters.splice(index, 1);
     },
     generateArea(
       row1: number,

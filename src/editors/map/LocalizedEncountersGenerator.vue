@@ -1,13 +1,19 @@
 <template>
   <v-card>
     <v-card-title>
-      <OpenCloseBtn :open="show" @change="show = !show" /> Monsters -
-      {{ totalProbability }}%
+      <OpenCloseBtn :open="show" @change="show = !show" /> Monsters
       <v-spacer></v-spacer>
       <v-icon v-if="hasErrors" color="error"> mdi-alert </v-icon>
     </v-card-title>
     <v-card-text v-if="show">
-      <v-alert dense border="right" colored-border type="error" elevation="2">
+      <v-alert
+        v-if="hasErrors"
+        dense
+        border="right"
+        colored-border
+        type="error"
+        elevation="2"
+      >
         {{ errors }}
       </v-alert>
       <v-radio-group v-model="localMode" @change="changeMode" row>
@@ -19,6 +25,10 @@
           :label="`${spawning2.x} ${spawning2.y}`"
           :value="modeSpawning2"
         />
+        <v-spacer></v-spacer>
+        <v-btn icon color="error" @click="deleteEntry">
+          <v-icon>mdi-delete</v-icon>
+        </v-btn>
       </v-radio-group>
       <v-container class="pa-0">
         <v-row dense>
@@ -36,8 +46,10 @@
               @change="changeMaxMonsters"
             />
           </v-col>
-          <v-col cols="4">
-            <v-btn @click="addMonster"> Add </v-btn>
+          <v-col cols="4" style="text-align: right">
+            <v-btn icon @click="addMonster">
+              <v-icon> mdi-plus-circle-outline</v-icon>
+            </v-btn>
           </v-col>
         </v-row>
         <v-row dense>
@@ -116,12 +128,6 @@ export default Vue.extend({
       const y = NumberUtil.max(this.localizedEncounters.area.map((p) => p.y));
       return new Point(x, y);
     },
-    totalProbability(): number {
-      const sum = NumberUtil.sum(
-        this.localizedEncounters.encounters.map((e) => e.probability)
-      );
-      return Math.round(100 * sum);
-    },
   },
   methods: {
     addMonster(): void {
@@ -156,6 +162,9 @@ export default Vue.extend({
       const out = this.localizedEncounters.clone();
       fn(out);
       this.$emit("change", out);
+    },
+    deleteEntry(): void {
+      this.$emit("delete");
     },
   },
   mounted(): void {
