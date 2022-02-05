@@ -1,6 +1,6 @@
 <template>
-  <v-container dense>
-    <v-row>
+  <v-container>
+    <v-row dense>
       <v-col cols="12">
         <SelectMonsterIndex
           label="Monster"
@@ -12,21 +12,21 @@
       </v-col>
       <v-col cols="4">
         <EditableIntegerField
-          label="Min Level"
+          label="Min L."
           :value="encounter.levelMin"
           @change="changeLevelMin"
         />
       </v-col>
       <v-col cols="4">
         <EditableIntegerField
-          label="Max Level"
+          label="Max L."
           :value="encounter.levelMax"
           @change="changeLevelMax"
         />
       </v-col>
       <v-col cols="4">
         <EditableIntegerField
-          label="Probability"
+          label="%"
           :value="encounter.probability * 100"
           @change="(p) => changeProbability(p / 100)"
         />

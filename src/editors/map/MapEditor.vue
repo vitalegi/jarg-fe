@@ -110,6 +110,7 @@ import Container from "typedi";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import BackgroundEditor from "./BackgroundEditor.vue";
 import PlayerSpawnEditor from "./PlayerSpawnEditor.vue";
+import RandomEncounter from "@/game-engine/map/RandomEncounter";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
 
@@ -305,6 +306,11 @@ export default Vue.extend({
       const localizedEncounter = new LocalizedEncounters();
       localizedEncounter.minMonsters = 1;
       localizedEncounter.maxMonsters = 1;
+      const randomEncounter = new RandomEncounter();
+      randomEncounter.levelMin = 1;
+      randomEncounter.levelMax = 1;
+      randomEncounter.probability = 1;
+      localizedEncounter.encounters.push(randomEncounter);
       this.localizedEncounters.push(localizedEncounter);
     },
     changePlayerSpawningArea(topLeft: boolean, row: number, col: number): void {

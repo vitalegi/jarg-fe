@@ -20,8 +20,8 @@
           :value="modeSpawning2"
         />
       </v-radio-group>
-      <v-container dense>
-        <v-row>
+      <v-container>
+        <v-row dense>
           <v-col cols="4">
             <EditableIntegerField
               label="Min #"
@@ -40,7 +40,7 @@
             <v-btn @click="addMonster"> Add </v-btn>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row dense>
           <v-col
             cols="12"
             v-for="(encounter, index) of localizedEncounters.encounters"

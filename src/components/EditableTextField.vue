@@ -3,7 +3,8 @@
     :label="label"
     dense
     v-model="model"
-    @change="change()"
+    @change="change"
+    @keyup="keyup"
   ></v-text-field>
 </template>
 
@@ -12,7 +13,10 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "EditableTextField",
-  props: ["label", "value"],
+  props: {
+    label: String,
+    value: String,
+  },
   data: () => ({
     model: "",
   }),
@@ -20,6 +24,9 @@ export default Vue.extend({
   methods: {
     change(): void {
       this.$emit("change", this.model);
+    },
+    keyup(): void {
+      this.$emit("partialChange", this.model);
     },
   },
   mounted() {

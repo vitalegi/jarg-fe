@@ -108,7 +108,6 @@ export default Vue.extend({
           );
         }
       }
-      console.error(failures);
       this.$store.commit("setMonsterIndexEditor", monsters);
     },
     doAddAbility(
