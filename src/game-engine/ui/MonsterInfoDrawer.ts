@@ -5,7 +5,6 @@ import FrameImpl from "./FrameImpl";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
 import NumberUtil from "@/utils/NumberUtil";
-import TimeUtil from "@/utils/TimeUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
 import { LevelUpService } from "../monster/LevelUpService";
@@ -42,14 +41,14 @@ export default class MonsterInfoDrawer extends Drawer {
       height: 20,
     },
     stats: {
-      cols: [{ leftOffset: 5 }, { leftOffset: 80 }],
+      cols: [{ leftOffset: 5 }, { leftOffset: 85 }],
     },
     abilities: {
       cols: [
-        { leftOffset: 250 },
-        { leftOffset: 460 },
-        { leftOffset: 540 },
-        { leftOffset: 610 },
+        { leftOffset: 255 },
+        { leftOffset: 465 },
+        { leftOffset: 545 },
+        { leftOffset: 620 },
       ],
     },
   };

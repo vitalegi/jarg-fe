@@ -25,9 +25,7 @@ export default class FontService {
   }
 
   public monsterInfo(): Partial<TextStyle> {
-    const font = this.baseFont();
-    font.fontSize = 20;
-    return font;
+    return this.leftMenuEnabled();
   }
 
   public textOverCharacter(): Partial<TextStyle> {

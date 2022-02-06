@@ -28,7 +28,17 @@ export default class MapModel {
 
   public validate(): void {
     this.validateTiles();
+    this.validatePlayerSpawning();
     this.randomEncounters.forEach((r) => this.validateRandomEncounter(r));
+  }
+
+  protected validatePlayerSpawning(): void {
+    this.playerEntryPoints.forEach((p) => {
+      const tile = this.tiles.filter((t) => t.coordinates.equals(p));
+      if (tile.length === 0) {
+        throw Error(`Player spawning point ${p.toString()} is out of the map.`);
+      }
+    });
   }
 
   protected validateTiles(): void {
