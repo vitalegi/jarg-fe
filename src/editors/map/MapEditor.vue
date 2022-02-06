@@ -183,7 +183,7 @@ export default Vue.extend({
         })
       );
 
-      model.randomEncounters = this.localizedEncounters;
+      model.randomEncounters = this.localizedEncounters.map((e) => e.clone());
       for (let x = this.playerSpawning1.x; x <= this.playerSpawning2.x; x++) {
         for (let y = this.playerSpawning1.y; y <= this.playerSpawning2.y; y++) {
           model.playerEntryPoints.push(new Point(y, x));
@@ -488,21 +488,21 @@ export default Vue.extend({
 
       this.playerSpawning1 = new Point(
         NumberUtil.min(
-          map.playerEntryPoints.map((p) => p.x),
+          map.playerEntryPoints.map((p) => p.y),
           0
         ),
         NumberUtil.min(
-          map.playerEntryPoints.map((p) => p.y),
+          map.playerEntryPoints.map((p) => p.x),
           0
         )
       );
       this.playerSpawning2 = new Point(
         NumberUtil.max(
-          map.playerEntryPoints.map((p) => p.x),
+          map.playerEntryPoints.map((p) => p.y),
           0
         ),
         NumberUtil.max(
-          map.playerEntryPoints.map((p) => p.y),
+          map.playerEntryPoints.map((p) => p.x),
           0
         )
       );
