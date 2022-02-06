@@ -11,6 +11,8 @@ export default class DetectEvent {
   protected drag = false;
 
   protected _onTap: ((e: InteractionEvent) => void) | null = null;
+  protected _onTapDown: ((e: InteractionEvent) => void) | null = null;
+  protected _onTapUp: ((e: InteractionEvent) => void) | null = null;
   protected _onDragStart: ((e: InteractionEvent) => void) | null = null;
   protected _onDrag: ((e: InteractionEvent) => void) | null = null;
   protected _onDragEnd: ((e: InteractionEvent) => void) | null = null;
@@ -43,6 +45,12 @@ export default class DetectEvent {
   public onDragEnd(action: (e: InteractionEvent) => void): void {
     this._onDragEnd = action;
   }
+  public onTapUp(action: (e: InteractionEvent) => void): void {
+    this._onTapUp = action;
+  }
+  public onTapDown(action: (e: InteractionEvent) => void): void {
+    this._onTapDown = action;
+  }
 
   protected init(): void {
     this.element.interactive = true;
@@ -63,6 +71,9 @@ export default class DetectEvent {
     this.startingPoint = new Point(e.data.global.x, e.data.global.y);
     this.lastPoint = new Point(e.data.global.x, e.data.global.y);
     this.drag = false;
+    if (this._onTapDown) {
+      this._onTapDown(e);
+    }
   }
 
   protected pointerup(e: InteractionEvent): void {
@@ -82,6 +93,9 @@ export default class DetectEvent {
     this.startingPoint = null;
     this.lastPoint = null;
     this.drag = false;
+    if (this._onTapUp) {
+      this._onTapUp(e);
+    }
   }
 
   protected pointermove(e: InteractionEvent): void {

@@ -24,6 +24,14 @@ export default class WindowSizeProxy {
     return this._height;
   }
 
+  public isLandscapeMode(): boolean {
+    return this.width() / this.height() > 1;
+  }
+
+  public isSmallScreen(): boolean {
+    return this.width() < 800;
+  }
+
   protected update(): void {
     if (this.app) {
       this._width = this.app.view.width;

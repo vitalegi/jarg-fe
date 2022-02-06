@@ -67,6 +67,9 @@ export default class UserInput {
     if (this.isTerrain()) {
       return `UserInput(type=terrain, ${this.getPosition()})`;
     }
+    if (this.isContainer()) {
+      return `UserInput(type=container, ${this.getContainer().name})`;
+    }
     return "UNKNOWN";
   }
 }

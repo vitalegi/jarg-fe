@@ -94,11 +94,9 @@ export default class MonsterInfoDrawer extends Drawer {
       this.container.x = this.x();
       this.container.y = this.y();
 
-      this.container.addChildAt(
-        this.frame.createFrame(0, 0, this.width(), this.height()),
-        0
-      );
-      this.userActionService.initContainer(this.container);
+      const frame = this.frame.createFrame(0, 0, this.width(), this.height());
+      this.userActionService.initContainer(frame);
+      this.container.addChildAt(frame, 0);
 
       const actionHandler = new TapAnythingUserActionHandler();
       this.userActionService.addActionHandler(actionHandler),
@@ -115,8 +113,6 @@ export default class MonsterInfoDrawer extends Drawer {
       if (this.container) {
         this.container.x = this.x();
         this.container.y = this.y();
-        this.container.width = this.width();
-        this.container.height = this.height();
       }
     }
   }
