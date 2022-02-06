@@ -5,6 +5,7 @@ import AbilityService from "../monster-action/ability/AbilityService";
 import { LevelUpService } from "../monster/LevelUpService";
 import Monster from "../monster/Monster";
 import MonsterService from "../monster/MonsterService";
+import TileRepository from "../repositories/TileRepository";
 import LocalizedEncounters from "./LocalizedEncounters";
 import MapContainer from "./MapContainer";
 import MapIndex from "./MapIndex";
@@ -17,6 +18,7 @@ export default class MapService {
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected monsterService = Container.get<MonsterService>(MonsterService);
   protected abilityService = Container.get<AbilityService>(AbilityService);
+  protected tileRepository = Container.get<TileRepository>(TileRepository);
 
   public async generate(
     model: MapModel,
@@ -68,12 +70,11 @@ export default class MapService {
     const isNotOccupied = (p: Point) =>
       map.monsters.filter((o) => p.equals(o.coordinates)).length === 0;
 
-    // TODO add check: can walk over this tile?
-
     const acceptablePositions = map.tiles
       .map((t) => t.coordinates)
       .filter(isInRange)
-      .filter(isNotOccupied);
+      .filter(isNotOccupied)
+      .filter((t) => this.canStand(map, t));
 
     if (acceptablePositions.length === 0) {
       return null;
@@ -118,5 +119,12 @@ export default class MapService {
       }
     }
     return randomEncounters[randomEncounters.length];
+  }
+
+  protected canStand(map: MapContainer, p: Point): boolean {
+    const model = map.tiles.filter((t) => t.coordinates.equals(p))[0]
+      .spriteModel;
+    const tile = this.tileRepository.getTile(model);
+    return tile.walkable;
   }
 }

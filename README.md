@@ -41,7 +41,11 @@ npm install http-server -g
 npm run serve
 
 # Starts the static assets site
-http-server ../jarg-assets/static -p 8081 --cors
+http-server ../jarg-assets/static -p 8081 --cors -c-1 -g
+
+# --cors: enable cors
+# -c-1: max-age cache = -1s
+# -g: enable gzip
 ```
 
 Note: if you are using Visual Studio Code you can automate the startup process.

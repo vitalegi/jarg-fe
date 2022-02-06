@@ -40,7 +40,7 @@ export default class HealthBarService {
   public updateBar(
     container: PIXI.Container,
     monster: Monster,
-    hp: number | null
+    hp: number
   ): void {
     const rectangle = container.getChildByName(
       "healthBar_bar"

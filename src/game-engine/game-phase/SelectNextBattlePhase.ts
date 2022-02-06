@@ -121,6 +121,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     mapIndex: MapIndex,
     monsters: Monster[]
   ): Promise<void> {
+    await this.getGameAppDataLoader().loadSpriteConfigs();
     const model = await this.gameAssetService.getMap(mapIndex);
     const map = await this.mapService.generate(model, mapIndex);
 

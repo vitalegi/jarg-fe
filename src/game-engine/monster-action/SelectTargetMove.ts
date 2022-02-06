@@ -44,6 +44,9 @@ export default class SelectTargetMove {
     const result = await Promise.any([cancelPromise, targetPromise]);
     menu.destroy();
     drawer.remove();
+    if (this.userActionService.hasActionHandler(actionHandler)) {
+      this.userActionService.removeActionHandler(actionHandler);
+    }
     if (!result) {
       this.logger.info("Action is dismissed");
       return null;

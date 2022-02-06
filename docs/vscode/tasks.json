@@ -17,7 +17,7 @@
         {
             "label": "Run Static Assets",
             "type": "shell",
-            "command": "http-server ../jarg-assets/static -p 8081 --cors",
+            "command": "http-server ../jarg-assets/static -p 8081 --cors -c-1 -g",
             "presentation": {
                 "reveal": "always",
                 "panel": "new",

@@ -9,7 +9,13 @@ export class LevelUpService {
   protected statsService = Container.get<StatsService>(StatsService);
 
   public getKillExperience(monster: Monster): number {
-    return Math.round(this.getNextLevelExp(monster.level) / 5) + 1;
+    if (monster.level < 10) {
+      return Math.round(this.getNextLevelExp(monster.level) / 2) + 1;
+    }
+    if (monster.level < 20) {
+      return Math.round(this.getNextLevelExp(monster.level) / 3) + 1;
+    }
+    return Math.round(this.getNextLevelExp(monster.level) / 4) + 1;
   }
 
   public getNextLevelExp(level: number): number {

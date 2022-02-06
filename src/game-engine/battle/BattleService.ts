@@ -264,6 +264,9 @@ export default class BattleService {
   }
 
   public async gainExpMonster(monster: Monster, exp: number): Promise<void> {
+    if (exp <= 0.0001) {
+      return;
+    }
     const levelUp = this.levelUpService.canLevelUp(monster, exp);
     await this.levelUpService.gainExperience(monster, exp);
     if (!levelUp) {
