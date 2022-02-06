@@ -184,9 +184,17 @@ export default Vue.extend({
       );
 
       model.randomEncounters = this.localizedEncounters.map((e) => e.clone());
-      for (let x = this.playerSpawning1.x; x <= this.playerSpawning2.x; x++) {
-        for (let y = this.playerSpawning1.y; y <= this.playerSpawning2.y; y++) {
-          model.playerEntryPoints.push(new Point(y, x));
+      for (
+        let col = this.playerSpawning1.x;
+        col <= this.playerSpawning2.x;
+        col++
+      ) {
+        for (
+          let row = this.playerSpawning1.y;
+          row <= this.playerSpawning2.y;
+          row++
+        ) {
+          model.playerEntryPoints.push(new Point(col, row));
         }
       }
       return model;
@@ -224,8 +232,8 @@ export default Vue.extend({
   },
   methods: {
     isPlayerSpawning(row: number, col: number): boolean {
-      if (this.playerSpawning1.x <= row && row <= this.playerSpawning2.x) {
-        if (this.playerSpawning1.y <= col && col <= this.playerSpawning2.y) {
+      if (this.playerSpawning1.x <= col && col <= this.playerSpawning2.x) {
+        if (this.playerSpawning1.y <= row && row <= this.playerSpawning2.y) {
           return true;
         }
       }
@@ -294,7 +302,7 @@ export default Vue.extend({
       }
     },
     click(row: number, col: number): void {
-      this.logger.info(`Mode: ${this.mode} (${row},${col})`);
+      this.logger.info(`Mode: ${this.mode} (${col},${row})`);
       if (this.isPlayerSpawningMode) {
         if (this.mode === "PLAYER_SPAWNING_1") {
           this.changePlayerSpawningArea(true, row, col);
@@ -327,12 +335,12 @@ export default Vue.extend({
       this.localizedEncounters.push(localizedEncounter);
     },
     changePlayerSpawningArea(topLeft: boolean, row: number, col: number): void {
-      this.logger.info(`Change player spawning area: (${row},${col})`);
+      this.logger.info(`Change player spawning area: (${col},${row})`);
       const rect = this.updatePair(
         new Point(this.playerSpawning1.x, this.playerSpawning1.y),
         new Point(this.playerSpawning2.x, this.playerSpawning2.y),
         topLeft,
-        new Point(row, col)
+        new Point(col, row)
       );
       this.playerSpawning1 = rect.point1;
       this.playerSpawning2 = rect.point2;
@@ -488,21 +496,21 @@ export default Vue.extend({
 
       this.playerSpawning1 = new Point(
         NumberUtil.min(
-          map.playerEntryPoints.map((p) => p.y),
+          map.playerEntryPoints.map((p) => p.x),
           0
         ),
         NumberUtil.min(
-          map.playerEntryPoints.map((p) => p.x),
+          map.playerEntryPoints.map((p) => p.y),
           0
         )
       );
       this.playerSpawning2 = new Point(
         NumberUtil.max(
-          map.playerEntryPoints.map((p) => p.y),
+          map.playerEntryPoints.map((p) => p.x),
           0
         ),
         NumberUtil.max(
-          map.playerEntryPoints.map((p) => p.x),
+          map.playerEntryPoints.map((p) => p.y),
           0
         )
       );
