@@ -3,7 +3,6 @@ import Container from "typedi";
 import AbilityNameDrawer from "../ui/AbilityNameDrawer";
 import Ability from "./ability/Ability";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
-import HealthBarService from "../monster/HealthBarService";
 import ChangeFocusDrawer from "../ui/ChangeFocusDrawer";
 import GameLoop from "../GameLoop";
 import HistoryRepository from "../battle/turns/HistoryRepository";
@@ -17,8 +16,6 @@ export default class AbilityExecutor {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
   protected battleService = Container.get<BattleService>(BattleService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected healthBarService =
-    Container.get<HealthBarService>(HealthBarService);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   protected historyRepository =
     Container.get<HistoryRepository>(HistoryRepository);

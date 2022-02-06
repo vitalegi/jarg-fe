@@ -6,7 +6,6 @@ import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
 import CoordinateService from "../CoordinateService";
 import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
-import HealthBarService from "./HealthBarService";
 import Point from "@/models/Point";
 import Move from "@/models/Move";
 import HistoryRepository from "../battle/turns/HistoryRepository";
@@ -41,8 +40,6 @@ export default class MonsterService {
     MonsterIndexRepository
   );
   protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected healthBarService =
-    Container.get<HealthBarService>(HealthBarService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected historyRepository =
     Container.get<HistoryRepository>(HistoryRepository);

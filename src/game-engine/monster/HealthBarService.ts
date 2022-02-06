@@ -31,7 +31,7 @@ export default class HealthBarService {
     background.endFill();
     background.name = "healthBar_background";
 
-    const rectangle = this.createHealthBar(monster, null);
+    const rectangle = this.createHealthBar(monster, monster.stats.hp);
 
     container.addChild(background);
     container.addChild(rectangle);
@@ -50,10 +50,7 @@ export default class HealthBarService {
     container.addChild(this.createHealthBar(monster, hp));
   }
 
-  protected createHealthBar(
-    monster: Monster,
-    hp: number | null
-  ): PIXI.Graphics {
+  protected createHealthBar(monster: Monster, hp: number): PIXI.Graphics {
     const barBorder = this.options.bar.border;
     const x = this.x();
     const y = this.y();
@@ -79,9 +76,8 @@ export default class HealthBarService {
     return 0.6 * GameConfig.SHARED.tile.height;
   }
 
-  protected healthWidth(monster: Monster, hp: number | null): number {
-    const remainingHP = hp ? hp : monster.stats.hp;
-    const health = remainingHP / monster.stats.maxHP;
+  protected healthWidth(monster: Monster, hp: number): number {
+    const health = hp / monster.stats.maxHP;
     const maxWidth = this.barWidth() - 2 * this.options.bar.border;
     let width = Math.round(health * maxWidth);
     if (width <= 0) {

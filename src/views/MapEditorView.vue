@@ -1,6 +1,5 @@
 <template>
   <div>
-    <MapsEditor />
     <MapEditor />
   </div>
 </template>
@@ -14,7 +13,6 @@ export default Vue.extend({
   name: "MapGeneratorView",
 
   components: {
-    MapsEditor,
     MapEditor,
   },
 });
