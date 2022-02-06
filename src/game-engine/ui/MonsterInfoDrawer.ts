@@ -4,18 +4,17 @@ import * as PIXI from "pixi.js";
 import FrameImpl from "./FrameImpl";
 import Container from "typedi";
 import WindowSizeProxy from "../WindowSizeProxy";
-import NumberUtil from "@/utils/NumberUtil";
 import MonsterIndex from "../monster/MonsterIndex";
 import FontService from "./FontService";
 import { LevelUpService } from "../monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import AbilityRepository from "../repositories/AbilityRepository";
-import ArrayUtil from "@/utils/ArrayUtil";
 import TapAnythingUserActionHandler from "../user-action-handler/TapAnythingUserActionHandler";
 import UserActionService from "../user-action-handler/UserActionService";
-import ComputedEffectUtil from "../monster-action/computed-effect/ComputedEffectUtil";
 import { gameLabel } from "@/services/LocalizationService";
+import GeneralStats from "./monster-info/GeneralStats";
+import Abilities from "./monster-info/Abilities";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
@@ -74,51 +73,18 @@ export default class MonsterInfoDrawer extends Drawer {
       this.container = new PIXI.Container();
       this.container.name = MonsterInfoDrawer.NAME;
 
-      let line = 0;
-      const lineY = () => {
-        const v = this.lineY(line);
-        this._height = Math.max(
-          this._height,
-          this.lineY(line) + this.options.row.height
-        );
-        line++;
-        return v;
-      };
-      const f = (n: number): string => {
-        return NumberUtil.formatInt(n);
-      };
+      const general = this.createGeneral();
+      general.y = this.frame.getWidth() + 4;
+      this.container.addChild(general);
 
-      const x1 = this.statsCol1();
-      this.addText(this.monster.name, x1, lineY());
-      this.addText(`${this.monsterIndex.name}`, x1, lineY());
-      this.addText(`Lv. ${this.monster.level}`, x1, lineY());
-      this.addText(`Exp ${f(this.monster.experience)}`, x1, lineY());
-      this.addText(
-        `To Next lv. ${f(this.levelUpService.toNextLevel(this.monster))}`,
-        x1,
-        lineY()
-      );
-      const statuses = ArrayUtil.removeDuplicates(
-        ComputedEffectUtil.getStatusAlterations(this.monster.activeEffects).map(
-          (a) => a.status
-        ),
-        (a, b) => a === b
-      );
-      this.addText(`Status ${statuses.join(", ")}`, x1, lineY());
-      const stats = this.monster.stats;
-      this.addStat(`HP`, `${f(stats.hp)}/${f(stats.maxHP)}`, lineY());
-      this.addStat(`ATK`, `${f(stats.atk)}`, lineY());
-      this.addStat(`DEF`, `${f(stats.def)}`, lineY());
-      this.addStat(`INT`, `${f(stats.int)}`, lineY());
-      this.addStat(`RES`, `${f(stats.res)}`, lineY());
-      this.addStat(`HIT`, `${f(stats.hit)}`, lineY());
-      this.addStat(`DEX`, `${f(stats.dex)}`, lineY());
-      this.addStat(`Speed`, `${f(stats.speed)}`, lineY());
-
-      line = 0;
-      this.addAbilityLabels(lineY());
-      this.monster.abilities.forEach((learned: AbilityLearned) =>
-        this.addAbility(learned, lineY())
+      const abilities = this.createAbilities();
+      abilities.x = 255;
+      abilities.y = this.frame.getWidth() + 4;
+      this.container.addChild(abilities);
+      this._height = Math.max(
+        this._height,
+        general.y + general.height,
+        abilities.y + abilities.height
       );
 
       this.logger.debug(
@@ -127,8 +93,6 @@ export default class MonsterInfoDrawer extends Drawer {
 
       this.container.x = this.x();
       this.container.y = this.y();
-      this.container.width = this.width();
-      this.container.height = this.height();
 
       this.container.addChildAt(
         this.frame.createFrame(0, 0, this.width(), this.height()),
@@ -157,36 +121,6 @@ export default class MonsterInfoDrawer extends Drawer {
     }
   }
 
-  protected addText(text: string, x: number, y: number): void {
-    const entry = new PIXI.Text(text, this.fontService.monsterInfo());
-    entry.x = x;
-    entry.y = y;
-    this.container?.addChild(entry);
-  }
-
-  protected addStat(stat: string, value: string, y: number): void {
-    this.addText(stat, this.statsCol1(), y);
-    this.addText(value, this.statsCol2(), y);
-  }
-
-  protected addAbilityLabels(y: number): void {
-    this.addText(gameLabel("ability"), this.abilityCol1(), y);
-    this.addText(gameLabel("power-short"), this.abilityCol2(), y);
-    this.addText(gameLabel("precision-short"), this.abilityCol3(), y);
-    this.addText(gameLabel("usages-short"), this.abilityCol4(), y);
-  }
-  protected addAbility(learned: AbilityLearned, y: number): void {
-    const ability = this.abilityRepository.getAbility(learned.abilityId);
-    this.addText(ability.label, this.abilityCol1(), y);
-    this.addText(`${ability.power}`, this.abilityCol2(), y);
-    this.addText(`${ability.precision}`, this.abilityCol3(), y);
-    this.addText(
-      `${learned.currentUsages}/${learned.maxUsages}`,
-      this.abilityCol4(),
-      y
-    );
-  }
-
   protected x(): number {
     return (this.windowSizeProxy.width() - this.width()) / 2;
   }
@@ -203,25 +137,11 @@ export default class MonsterInfoDrawer extends Drawer {
     return this._height;
   }
 
-  protected statsCol1(): number {
-    return this.frame.getWidth() + this.options.stats.cols[0].leftOffset;
+  protected createGeneral(): PIXI.Container {
+    return new GeneralStats(this.monster, this.monsterIndex).create();
   }
-  protected statsCol2(): number {
-    return this.frame.getWidth() + this.options.stats.cols[1].leftOffset;
-  }
-  protected abilityCol1(): number {
-    return this.frame.getWidth() + this.options.abilities.cols[0].leftOffset;
-  }
-  protected abilityCol2(): number {
-    return this.frame.getWidth() + this.options.abilities.cols[1].leftOffset;
-  }
-  protected abilityCol3(): number {
-    return this.frame.getWidth() + this.options.abilities.cols[2].leftOffset;
-  }
-  protected abilityCol4(): number {
-    return this.frame.getWidth() + this.options.abilities.cols[3].leftOffset;
-  }
-  protected lineY(line: number): number {
-    return this.frame.getWidth() + 4 + line * this.options.row.height;
+
+  protected createAbilities(): PIXI.Container {
+    return new Abilities(this.monster, this.monsterIndex).create();
   }
 }
