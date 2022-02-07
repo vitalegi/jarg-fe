@@ -2,9 +2,11 @@
   "defaultStyle": {
     "font": {
       "fontSize": 20,
-      "stroke": "0x2c2c2c"
+      "fill": "0x2c2c2c"
     },
-    "background": "0xf6f6f6",
+    "background": {
+      "color": "0xf6f6f6"
+    },
     "border": {
       "radius": 8,
       "width": 1,
@@ -13,17 +15,21 @@
     },
     "margin": 5
   },
+  "disabledStyle": {
+    "font": {
+      "fill": "0xa3a3a3"
+    },
+    "background": {
+      "color": "0xdcdcdc"
+    }
+  },
   "onClickStyle": {
     "font": {
-      "fontSize": 20,
-      "stroke": "0x4b4b4b"
+      "fill": "0x4b4b4b"
     },
-    "background": "0xd3d3d3",
+    "background": { "color": "0xd3d3d3" },
     "border": {
-      "radius": 8,
-      "width": 1,
-      "color": "0xa0a0a0",
-      "join": "round"
+      "color": "0xa0a0a0"
     },
     "margin": 5
   }

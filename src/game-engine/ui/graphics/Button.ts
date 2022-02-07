@@ -6,18 +6,28 @@ import { LINE_JOIN } from "pixi.js";
 
 declare interface Border extends Partial<PIXI.ILineStyleOptions> {
   radius?: number;
+  tile?: boolean;
+}
+
+declare interface Background {
+  color?: string;
+}
+
+declare interface Margin {
+  margin?: number;
 }
 
 declare interface Style {
   font?: Partial<PIXI.ITextStyle>;
-  background?: string;
+  background?: Background;
   border?: Border;
-  margin?: number;
+  margin?: Margin;
 }
 
 declare interface Options {
   name: string;
   label: string;
+  disabled: boolean;
   style: Style;
   onClickStyle: Style;
   onTap?: () => void;
@@ -63,9 +73,9 @@ export default class Button {
       text.x = style.border.width;
       text.y = style.border.width;
     }
-    if (style?.margin) {
-      text.x += style.margin;
-      text.y += style.margin;
+    if (style?.margin?.margin) {
+      text.x += style.margin.margin;
+      text.y += style.margin.margin;
     }
     this.container.addChild(text);
   }
@@ -90,19 +100,28 @@ export default class Button {
     if (style.border.radius) {
       radius = style.border.radius;
     }
-    if (style.background) {
-      border.beginFill(NumberUtil.parseHex(style.background));
+    if (style.background?.color) {
+      border.beginFill(NumberUtil.parseHex(style.background.color));
     }
-    border
-      .moveTo(x1, y1 + radius)
-      .lineTo(x1, y2 - radius)
-      .arc(x1 + radius, y2 - radius, radius, Math.PI, Math.PI / 2, true)
-      .lineTo(x2 - radius, y2)
-      .arc(x2 - radius, y2 - radius, radius, Math.PI / 2, 0, true)
-      .lineTo(x2, y1 + radius)
-      .arc(x2 - radius, y1 + radius, radius, 0, -Math.PI / 2, true)
-      .lineTo(x1 + radius, y1)
-      .arc(x1 + radius, y1 + radius, radius, -Math.PI / 2, Math.PI, true);
+    if (radius === 0 || style.border.tile) {
+      border
+        .moveTo(x1, y1)
+        .lineTo(x1, y2)
+        .lineTo(x2, y2)
+        .lineTo(x2, y1)
+        .lineTo(x1, y1);
+    } else {
+      border
+        .moveTo(x1, y1 + radius)
+        .lineTo(x1, y2 - radius)
+        .arc(x1 + radius, y2 - radius, radius, Math.PI, Math.PI / 2, true)
+        .lineTo(x2 - radius, y2)
+        .arc(x2 - radius, y2 - radius, radius, Math.PI / 2, 0, true)
+        .lineTo(x2, y1 + radius)
+        .arc(x2 - radius, y1 + radius, radius, 0, -Math.PI / 2, true)
+        .lineTo(x1 + radius, y1)
+        .arc(x1 + radius, y1 + radius, radius, -Math.PI / 2, Math.PI, true);
+    }
     if (style.background) {
       border.endFill();
     }
@@ -135,8 +154,8 @@ export default class Button {
     if (style.border?.width) {
       value += style.border.width;
     }
-    if (style.margin) {
-      value += style.margin;
+    if (style.margin?.margin) {
+      value += style.margin.margin;
     }
     return value;
   }
@@ -150,8 +169,8 @@ export default class Button {
     if (style.border?.width) {
       value += style.border.width;
     }
-    if (style.margin) {
-      value += style.margin;
+    if (style.margin?.margin) {
+      value += style.margin.margin;
     }
     return value;
   }
@@ -160,29 +179,51 @@ export default class Button {
     if (!this.options.style) {
       this.options.style = {};
     }
-    this.fillStyle(this.options.style, CONFIG.defaultStyle);
+    this.options.style = this.createStyle([
+      this.options.style,
+      this.options.disabled ? CONFIG.disabledStyle : undefined,
+      CONFIG.defaultStyle,
+    ]);
     if (!this.options.onClickStyle) {
       this.options.onClickStyle = {};
     }
-    this.fillStyle(this.options.onClickStyle, CONFIG.onClickStyle);
+    this.options.onClickStyle = this.createStyle([
+      this.options.onClickStyle,
+      this.options.disabled ? CONFIG.disabledStyle : undefined,
+      CONFIG.onClickStyle,
+      CONFIG.defaultStyle,
+    ]);
   }
 
-  protected fillStyle(style: Style, model: any): void {
-    if (!style.font) {
-      style.font = model.font;
+  protected createStyle(models: any[]): Style {
+    models = JSON.parse(JSON.stringify(models.filter((m) => m !== undefined)));
+    const style: Style = {
+      font: {},
+      background: {},
+      border: {},
+      margin: {},
+    };
+    models.forEach((m) => this.copyEmptyProps(m.font, style.font));
+    models.forEach((m) => this.copyEmptyProps(m.background, style.background));
+    models.forEach((m) => this.copyEmptyProps(m.border, style.border));
+    if (style.border === "round") {
+      style.border.join = LINE_JOIN.ROUND;
     }
-    if (!style.background) {
-      style.background = model.background;
+    models.forEach((m) => this.copyEmptyProps(m.margin, style.margin));
+    return style;
+  }
+
+  protected copyEmptyProps<E>(
+    source: Partial<E> | undefined,
+    target: Partial<E> | undefined
+  ): void {
+    if (source === undefined || target === undefined) {
+      return;
     }
-    if (!style.border) {
-      style.border = {};
-      this.copyObj(model.border, style.border);
-      if (style.border && model.border === "round") {
-        style.border.join = LINE_JOIN.ROUND;
+    for (const key in source) {
+      if (!target[key] && source[key]) {
+        target[key] = source[key];
       }
-    }
-    if (!style.margin) {
-      style.margin = model.margin;
     }
   }
 
