@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js";
 import { LINE_JOIN } from "pixi.js";
-import DetectEvent from "./DetectEvent";
+import DetectEvent from "../DetectEvent";
 
 declare interface Style {
   font?: Partial<PIXI.ITextStyle>;
@@ -14,6 +14,7 @@ declare interface Options {
   label: string;
   style: Style;
   onClickStyle: Style;
+  onTap?: () => void;
 }
 
 export default class Button {
@@ -105,14 +106,16 @@ export default class Button {
   protected initListeners(): void {
     const evt = new DetectEvent(this.container);
     evt.onTap((e) => {
-      console.log("click");
+      // button is tapped, trigger event
+      if (this.options.onTap) {
+        this.options.onTap();
+      }
     });
+
     evt.onTapDown((e) => {
-      console.log("style on click");
       this.initGraphics(this.options.onClickStyle);
     });
     evt.onTapUp((e) => {
-      console.log("normal style");
       this.initGraphics(this.options.style);
     });
   }

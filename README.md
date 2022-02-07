@@ -76,6 +76,12 @@ npm run test:unit
 npm run lint
 ```
 
+### Report build status
+
+```
+npm run report
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
