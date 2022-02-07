@@ -3,11 +3,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-[[headers]]
-  for = "/static/*.png"
-  [headers.values]
-	cache-control = '''
-	max-age=31536000,
-  immutable,
-  public
-  '''
