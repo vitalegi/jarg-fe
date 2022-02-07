@@ -14,6 +14,7 @@ import SelectNextBattlePhase from "./SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
 import AbilityService from "../monster-action/ability/AbilityService";
 import PhaseService from "./PhaseService";
+import GameLoop from "../GameLoop";
 
 const starters = ["001", "004", "007"];
 
@@ -35,6 +36,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
   );
   protected abilityService = Container.get<AbilityService>(AbilityService);
   protected phaseService = Container.get<PhaseService>(PhaseService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   public getName(): string {
     return "NewGamePhase";
@@ -47,6 +49,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
       menu.addEntry(this.starterEntry(starter));
     }
     menu.draw();
+    this.getApp().ticker.add(() => this.gameLoop.gameLoop());
   }
 
   protected starterEntry(monsterId: string): MenuEntry {

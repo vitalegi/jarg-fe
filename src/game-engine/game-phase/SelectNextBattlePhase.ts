@@ -14,6 +14,7 @@ import StatsService from "../monster/stats/StatsService";
 import { gameLabel } from "@/services/LocalizationService";
 import MapModelRepository from "../map/MapModelRepository";
 import MapIndex from "../map/MapIndex";
+import GameLoop from "../GameLoop";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -32,6 +33,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected statsService = Container.get<StatsService>(StatsService);
   protected mapModelRepository =
     Container.get<MapModelRepository>(MapModelRepository);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   public getName(): string {
     return "SelectNextBattlePhase";
@@ -46,6 +48,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
       .getMaps()
       .forEach((map) => menu.addEntry(this.selectMapEntry(menu, map)));
     menu.draw();
+    this.getApp().ticker.add(() => this.gameLoop.gameLoop());
   }
 
   protected saveStatus(): MenuEntry {

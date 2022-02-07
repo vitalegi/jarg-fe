@@ -1,6 +1,7 @@
 import GameAssetService from "@/services/GameAssetService";
 import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
+import GameLoop from "../GameLoop";
 import PlayerData from "../PlayerData";
 import PlayerRepository from "../repositories/PlayerRepository";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
@@ -18,6 +19,7 @@ export default class LoadGamePhase extends AbstractPhase<never> {
     SelectNextBattlePhase
   );
   protected phaseService = Container.get<PhaseService>(PhaseService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   public getName(): string {
     return "LoadGamePhase";
@@ -32,6 +34,7 @@ export default class LoadGamePhase extends AbstractPhase<never> {
       menu.addEntry(this.loadEntry(playerData));
     }
     menu.draw();
+    this.getApp().ticker.add(() => this.gameLoop.gameLoop());
   }
 
   protected cancelEntry(): MenuEntry {

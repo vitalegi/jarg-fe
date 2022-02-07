@@ -1,6 +1,7 @@
 import LoggerFactory from "@/logger/LoggerFactory";
 import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
+import GameLoop from "../GameLoop";
 import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
 import AbstractPhase from "./AbstractPhase";
 import PhaseService from "./PhaseService";
@@ -9,6 +10,7 @@ import PhaseService from "./PhaseService";
 export default class HomePhase extends AbstractPhase<never> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.HomePhse");
   protected phaseService = Container.get<PhaseService>(PhaseService);
+  protected gameLoop = Container.get<GameLoop>(GameLoop);
 
   public getName(): string {
     return "HomePhase";
@@ -26,6 +28,7 @@ export default class HomePhase extends AbstractPhase<never> {
     menu.addEntry(this.newGameEntry());
     menu.addEntry(this.loadGameEntry());
     menu.draw();
+    this.getApp().ticker.add(() => this.gameLoop.gameLoop());
   }
 
   protected newGameEntry(): MenuEntry {

@@ -16,6 +16,7 @@ export default class GameOverPhase extends AbstractPhase<never> {
     return "GameOverPhase";
   }
   protected async doStart(options: never | null): Promise<void> {
+    this.getApp().ticker.add(() => this.gameLoop.gameLoop());
     const message = new AbilityNameDrawer("Game Over");
     this.gameLoop.addGameLoopHandler(message);
     await message.notifyWhenCompleted();
