@@ -1,11 +1,17 @@
 import * as PIXI from "pixi.js";
-import { LINE_JOIN } from "pixi.js";
+import CONFIG from "@/assets/styles/button.json";
 import DetectEvent from "../DetectEvent";
+import NumberUtil from "@/utils/NumberUtil";
+import { LINE_JOIN } from "pixi.js";
+
+declare interface Border extends Partial<PIXI.ILineStyleOptions> {
+  radius?: number;
+}
 
 declare interface Style {
   font?: Partial<PIXI.ITextStyle>;
-  background?: number;
-  border?: Partial<{ radius: number } & PIXI.ILineStyleOptions>;
+  background?: string;
+  border?: Border;
   margin?: number;
 }
 
@@ -85,7 +91,7 @@ export default class Button {
       radius = style.border.radius;
     }
     if (style.background) {
-      border.beginFill(style.background);
+      border.beginFill(NumberUtil.parseHex(style.background));
     }
     border
       .moveTo(x1, y1 + radius)
@@ -154,91 +160,37 @@ export default class Button {
     if (!this.options.style) {
       this.options.style = {};
     }
-    this.fillStyle(
-      this.options.style,
-      this.defaultFont(),
-      this.defaultBackground(),
-      this.defaultBorder(),
-      this.defaultMargin()
-    );
+    this.fillStyle(this.options.style, CONFIG.defaultStyle);
     if (!this.options.onClickStyle) {
       this.options.onClickStyle = {};
     }
-    this.fillStyle(
-      this.options.onClickStyle,
-      this.defaultOnClickFont(),
-      this.defaultOnClickBackground(),
-      this.defaultOnClickBorder(),
-      this.defaultOnClickMargin()
-    );
+    this.fillStyle(this.options.onClickStyle, CONFIG.onClickStyle);
   }
 
-  protected fillStyle(
-    style: Style,
-    font: Partial<PIXI.ITextStyle>,
-    background: number,
-    border: Partial<{ radius: number } & PIXI.ILineStyleOptions>,
-    margin: number
-  ): void {
+  protected fillStyle(style: Style, model: any): void {
     if (!style.font) {
-      style.font = font;
+      style.font = model.font;
     }
     if (!style.background) {
-      style.background = background;
+      style.background = model.background;
     }
     if (!style.border) {
-      style.border = border;
+      style.border = {};
+      this.copyObj(model.border, style.border);
+      if (style.border && model.border === "round") {
+        style.border.join = LINE_JOIN.ROUND;
+      }
     }
     if (!style.margin) {
-      style.margin = margin;
+      style.margin = model.margin;
     }
   }
 
-  protected defaultFont(): Partial<PIXI.ITextStyle> {
-    return {
-      fontSize: 20,
-      stroke: 0x2c2c2c,
-    };
-  }
-
-  protected defaultBorder(): Partial<
-    { radius: number } & PIXI.ILineStyleOptions
-  > {
-    return {
-      radius: 8,
-      width: 2,
-      color: 0xa0a0a0,
-      join: LINE_JOIN.ROUND,
-    };
-  }
-  protected defaultBackground(): number {
-    return 0xf6f6f6;
-  }
-  protected defaultMargin(): number {
-    return 5;
-  }
-
-  protected defaultOnClickFont(): Partial<PIXI.ITextStyle> {
-    return {
-      fontSize: 20,
-      stroke: 0x4b4b4b,
-    };
-  }
-
-  protected defaultOnClickBorder(): Partial<
-    { radius: number } & PIXI.ILineStyleOptions
-  > {
-    return {
-      radius: 8,
-      width: 2,
-      color: 0xa0a0a0,
-      join: LINE_JOIN.ROUND,
-    };
-  }
-  protected defaultOnClickBackground(): number {
-    return 0xd3d3d3;
-  }
-  protected defaultOnClickMargin(): number {
-    return 5;
+  protected copyObj<E>(source: Partial<E>, target: Partial<E>): void {
+    for (const key in source) {
+      if (source[key]) {
+        target[key] = source[key];
+      }
+    }
   }
 }

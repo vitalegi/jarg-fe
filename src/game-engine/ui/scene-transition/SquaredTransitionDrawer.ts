@@ -63,7 +63,7 @@ export default class SquaredTransitionDrawer extends Drawer {
   protected createRectangle(): PIXI.Graphics {
     const rectangle = new PIXI.Graphics();
 
-    rectangle.beginFill(CONFIG.color);
+    rectangle.beginFill(NumberUtil.parseHex(CONFIG.color));
     rectangle.drawRect(0, 0, this.rectWidth(), this.rectHeight());
     rectangle.endFill();
     return rectangle;

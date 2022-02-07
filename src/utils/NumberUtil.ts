@@ -11,6 +11,13 @@ export default class NumberUtil {
     return parseInt(s, 10);
   }
 
+  public static parseHex(s: string): number {
+    if (!s.startsWith("0x")) {
+      throw Error(`Cannot parse ${s} to hex. expected format 0x123456`);
+    }
+    return parseInt(s.substring(2), 16);
+  }
+
   public static min(
     numbers: number[],
     defaultValue = Number.MAX_SAFE_INTEGER
