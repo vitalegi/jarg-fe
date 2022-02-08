@@ -9,7 +9,7 @@ export class LevelUpService {
   protected statsService = Container.get<StatsService>(StatsService);
 
   public getKillExperience(monster: Monster): number {
-    return Math.round(6 + monster.level / 10);
+    return Math.round(6 + monster.level / 5);
   }
 
   public getNextLevelExp(level: number): number {
