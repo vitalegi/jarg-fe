@@ -163,7 +163,9 @@ export default class StatsService {
     baseValue: number,
     growthRate: number
   ): number {
-    return Math.round(baseValue + 0.42 * baseValue * (level - 1));
+    return Math.round(
+      baseValue + ((growthRate * baseValue) / 100) * (level - 1)
+    );
   }
 
   protected getHpAttributeValue(

@@ -44,6 +44,11 @@ export default class TowerMapService {
       model.tiles,
       model.playerEntryPoints
     );
+    this.logger.debug(
+      `Selected monsters: ${model.randomEncounters
+        .flatMap((e) => e.encounters.map((ee) => ee.monsterId))
+        .join(", ")}`
+    );
     return model;
   }
 
@@ -152,8 +157,9 @@ export default class TowerMapService {
         `Wrong configuration, no monsters available. Level: ${level}, conf: common=${cfg.candidates.common}, rare=${cfg.candidates.rare}, unique=${cfg.candidates.unique}`
       );
     }
-    this.logger.debug(`Pick one in ${monsters.join(", ")}`);
-    return this.randomService.randomElement(monsters);
+    const pick = this.randomService.randomElement(monsters);
+    this.logger.debug(`Pick one in ${monsters.join(", ")}: ${pick}`);
+    return pick;
   }
 
   protected getMonsterLevelMin(level: number): number {
@@ -164,6 +170,7 @@ export default class TowerMapService {
   }
 
   protected getConfig(level: number): MapConfig {
+    // TODO move CONFIG to assets
     const cfg = CONFIG.filter(
       (c) =>
         c.preconditions.level_ge <= level && level <= c.preconditions.level_le

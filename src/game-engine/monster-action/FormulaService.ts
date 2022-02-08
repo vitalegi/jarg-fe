@@ -165,15 +165,15 @@ export default class FormulaService {
       { minRatio: 80, probability: 0.02 },
       { minRatio: 70, probability: 0.03 },
       { minRatio: 60, probability: 0.04 },
-      { minRatio: 50, probability: 0.05 },
-      { minRatio: 40, probability: 0.1 },
+      { minRatio: 50, probability: 0.1 },
+      { minRatio: 40, probability: 0.2 },
       { minRatio: 30, probability: 0.15 },
-      { minRatio: 20, probability: 0.2 },
-      { minRatio: 15, probability: 0.25 },
-      { minRatio: 10, probability: 0.3 },
-      { minRatio: 5, probability: 0.35 },
-      { minRatio: 1, probability: 0.5 },
-      { minRatio: 0, probability: 0.7 },
+      { minRatio: 20, probability: 0.25 },
+      { minRatio: 15, probability: 0.5 },
+      { minRatio: 10, probability: 0.6 },
+      { minRatio: 5, probability: 0.7 },
+      { minRatio: 1, probability: 0.8 },
+      { minRatio: 0, probability: 0.9 },
     ];
     for (const par of PAIRS) {
       if (par.minRatio <= ratio) {

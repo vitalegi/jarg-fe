@@ -10,6 +10,7 @@ export default class MonsterIndex {
   animationsSrc: AnimationSrc[] = [];
   animations: Animation[] = [];
   baseStats = new Stats();
+  backupBaseStats = new Stats();
   growthRates = new Stats();
   types: string[] = [];
   learnableAbilities: AbilityLearnable[] = [];
@@ -27,6 +28,8 @@ export default class MonsterIndex {
     }
     out.baseStats = Stats.fromJson(data.baseStats);
     out.growthRates = Stats.fromJson(data.growthRates);
+    out.backupBaseStats = Stats.fromJson(data.backupBaseStats);
+
     if (data.types) {
       out.types = data.types.map((t: any) => t);
     }
@@ -48,6 +51,7 @@ export default class MonsterIndex {
     out.animationsSrc = this.animationsSrc.map((a) => a.clone());
     out.animations = this.animations.map((a) => a.clone());
     out.baseStats = this.baseStats.clone();
+    out.backupBaseStats = this.backupBaseStats.clone();
     out.growthRates = this.growthRates.clone();
     if (this.types) {
       out.types = this.types.map((t: any) => t);
