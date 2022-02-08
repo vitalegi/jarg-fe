@@ -9,6 +9,7 @@ import HomePhase from "./HomePhase";
 import LoadGamePhase from "./LoadGamePhase";
 import NewGamePhase from "./NewGamePhase";
 import SelectNextBattlePhase from "./SelectNextBattlePhase";
+import TowerModeEntryPhase from "./TowerModeEntryPhase";
 
 @Service()
 export default class PhaseService {
@@ -35,6 +36,9 @@ export default class PhaseService {
   }
   public async goToGameOver(): Promise<void> {
     await Container.get<GameOverPhase>(GameOverPhase).start();
+  }
+  public async goToTowerMode(): Promise<void> {
+    await Container.get<TowerModeEntryPhase>(TowerModeEntryPhase).start();
   }
 
   protected async transition(): Promise<void> {

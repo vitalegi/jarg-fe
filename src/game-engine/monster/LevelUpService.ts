@@ -9,17 +9,13 @@ export class LevelUpService {
   protected statsService = Container.get<StatsService>(StatsService);
 
   public getKillExperience(monster: Monster): number {
-    if (monster.level < 10) {
-      return Math.round(this.getNextLevelExp(monster.level) / 2) + 1;
-    }
-    if (monster.level < 20) {
-      return Math.round(this.getNextLevelExp(monster.level) / 3) + 1;
-    }
-    return Math.round(this.getNextLevelExp(monster.level) / 4) + 1;
+    return Math.round(6 + monster.level / 10);
   }
 
   public getNextLevelExp(level: number): number {
-    return Math.round(100 * Math.pow(1.1, level));
+    return Math.round(
+      0.04 * Math.pow(level, 3) + 0.8 * Math.pow(level, 2) + 2 * level
+    );
   }
 
   public async gainExperience(monster: Monster, exp: number): Promise<void> {

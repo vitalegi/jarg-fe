@@ -11,16 +11,13 @@ import SelectMonstersMenu from "../ui/SelectMonstersMenu";
 import Monster from "../monster/Monster";
 import PhaseService from "./PhaseService";
 import StatsService from "../monster/stats/StatsService";
-import { gameLabel } from "@/services/LocalizationService";
 import MapModelRepository from "../map/MapModelRepository";
-import MapIndex from "../map/MapIndex";
 import GameLoop from "../GameLoop";
+import TowerMapService from "../map/TowerMapService";
 
 @Service()
-export default class SelectNextBattlePhase extends AbstractPhase<never> {
-  logger = LoggerFactory.getLogger(
-    "GameEngine.GamePhase.SelectNextBattlePhase"
-  );
+export default class TowerModeEntryPhase extends AbstractPhase<never> {
+  logger = LoggerFactory.getLogger("GameEngine.GamePhase.TowerModeEntryPhase");
   protected monsterIndexService =
     Container.get<MonsterIndexService>(MonsterIndexService);
   protected playerRepository =
@@ -34,85 +31,32 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected mapModelRepository =
     Container.get<MapModelRepository>(MapModelRepository);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
+  private towerMapService = Container.get<TowerMapService>(TowerMapService);
 
   public getName(): string {
-    return "SelectNextBattlePhase";
+    return "TowerModeEntryPhase";
   }
   protected async doStart(options: never | null): Promise<void> {
     await this.getGameAppDataLoader().loadMonsters();
 
     const menu = new LeftMenu();
-    menu.addEntry(this.saveStatus());
-    menu.addEntry(this.healParty());
-    menu.addEntry(this.towerMode());
-    this.mapModelRepository
-      .getMaps()
-      .forEach((map) => menu.addEntry(this.selectMapEntry(menu, map)));
+    for (let level = 1; level < 20; level++) {
+      menu.addEntry(this.level(menu, level));
+    }
     menu.draw();
     this.getApp().ticker.add(() => this.gameLoop.gameLoop());
   }
 
-  protected saveStatus(): MenuEntry {
+  protected level(menu: LeftMenu, level: number): MenuEntry {
     return new MenuEntry(
-      gameLabel("save"),
-      () => {
-        this.playerRepository.save(this.playerRepository.getPlayerData());
-      },
-      () => true
+      `${level}`,
+      () => this.selectLevel(menu, level),
+      () => true // TODO enable level when previous one is defeated
     );
   }
 
-  protected healParty(): MenuEntry {
-    return new MenuEntry(
-      gameLabel("heal-all"),
-      () => {
-        this.playerRepository
-          .getPlayerData()
-          .monsters.forEach((m) => this.healMonster(m));
-      },
-      () => true
-    );
-  }
-
-  protected towerMode(): MenuEntry {
-    return new MenuEntry(
-      gameLabel("tower-mode"),
-      () => {
-        this.phaseService.goToTowerMode();
-      },
-      () => true
-    );
-  }
-
-  protected healMonster(monster: Monster): void {
-    this.logger.debug(`${monster.uuid}: remove status/stats alterations`);
-    monster.activeEffects = [];
-    this.logger.debug(`${monster.uuid}: restore stats`);
-    this.statsService.updateMonsterAttributes(monster, true);
-    this.logger.debug(`${monster.uuid}: restore abilities usages`);
-    monster.abilities.forEach((a) => (a.currentUsages = a.maxUsages));
-  }
-
-  protected selectMapEntry(menu: LeftMenu, map: MapIndex): MenuEntry {
-    return new MenuEntry(
-      map.name,
-      () => this.selectMap(menu, map),
-      () => this.isMapEnabled(map)
-    );
-  }
-
-  protected isMapEnabled(map: MapIndex): boolean {
-    const defeatedMaps = this.playerRepository.getPlayerData().defeatedMaps;
-    return this.mapModelRepository.isEnabled(map, defeatedMaps);
-  }
-
-  protected defeatedMaps(): string[] {
-    return this.playerRepository.getPlayerData().defeatedMaps;
-  }
-
-  protected async selectMap(menu: LeftMenu, map: MapIndex): Promise<void> {
-    this.logger.info(`Chosen: ${map}`);
-
+  protected async selectLevel(menu: LeftMenu, level: number): Promise<void> {
+    this.logger.info(`Chosen: ${level}`);
     menu.hide();
     const monstersMenuBuilder = new SelectMonstersMenu(
       this.playerRepository.getPlayerData().monsters,
@@ -121,7 +65,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
     const menu2 = monstersMenuBuilder.createMenu(
       (selected: Monster[]) => {
-        this.createGame(map, selected);
+        this.createGame(level, selected);
       },
       () => {
         menu.show();
@@ -132,15 +76,15 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   }
 
   protected async createGame(
-    mapIndex: MapIndex,
+    level: number,
     monsters: Monster[]
   ): Promise<void> {
     await this.getGameAppDataLoader().loadSpriteConfigs();
-    const model = await this.gameAssetService.getMap(mapIndex);
+    const model = await this.towerMapService.create(level);
     const map = await this.mapService.generate(
       model,
-      mapIndex.id,
-      mapIndex.name
+      `TOWER_${level}`,
+      `Tower - ${level}`
     );
 
     monsters.forEach(

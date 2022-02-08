@@ -22,11 +22,12 @@ export default class MapService {
 
   public async generate(
     model: MapModel,
-    metadata: MapIndex
+    id: string,
+    name: string
   ): Promise<MapContainer> {
     const map = new MapContainer();
-    map.id = metadata.id;
-    map.name = metadata.name;
+    map.id = id;
+    map.name = name;
     map.tiles = model.tiles.map((tile) => tile.clone());
 
     for (let i = 0; i < model.randomEncounters.length; i++) {

@@ -35,7 +35,7 @@
     "catch": "Catch",
     "catch-success": "Catch done!",
     "catch-failure": "Monster escaped!",
-"end-turn": "End turn",
+    "end-turn": "End turn",
     "heal-all": "Heal all",
     "load-game": "Load",
     "move": "Move",
@@ -46,6 +46,7 @@
     "precision": "Precision",
     "precision-short": "Prec.",
     "save": "Save",
+    "tower-mode": "Tower Mode",
     "usages-short": "PP"
   }
 }

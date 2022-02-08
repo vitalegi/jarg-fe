@@ -24,4 +24,11 @@ export default class RandomService {
   public randomBool(lessThen: number): boolean {
     return Math.random() < lessThen;
   }
+
+  public randomElement<E>(arr: E[]): E {
+    if (arr.length === 0) {
+      throw Error(`Array is empty, can't retrieve random element`);
+    }
+    return arr[this.randomInt(0, arr.length - 1)];
+  }
 }
