@@ -70,11 +70,12 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
   protected async selectLevel(menu: LeftMenu, level: number): Promise<void> {
     this.logger.info(`Chosen: ${level}`);
     menu.hide();
-    const monstersMenuBuilder = new SelectMonstersMenu(
-      this.playerRepository.getPlayerData().monsters,
-      6,
-      1
+
+    const playerMonsters = await this.monsterService.createExistingMonsters(
+      this.playerService.getPlayerMonsters()
     );
+
+    const monstersMenuBuilder = new SelectMonstersMenu(playerMonsters, 6, 1);
     const menu2 = monstersMenuBuilder.createMenu(
       (selected: Monster[]) => {
         this.createGame(level, selected);
@@ -106,14 +107,15 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
     this.phaseService.goToBattle(
       map,
       `${level}`,
-      () => this.onWin(level),
+      () => this.onWin(level, monsters),
       () => this.onLoss()
     );
   }
 
-  protected async onWin(level: number): Promise<void> {
+  protected async onWin(level: number, monsters: Monster[]): Promise<void> {
     this.logger.info("Player wins");
     this.playerService.completeTowerMap(level);
+    monsters.forEach((monster) => this.playerService.updateMonster(monster));
     this.phaseService.goToSelectNextBattle();
   }
   protected async onLoss(): Promise<void> {

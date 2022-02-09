@@ -68,7 +68,7 @@ export default class NewGamePhase extends AbstractPhase<never> {
     const playerData = new PlayerData();
     playerData.playerId = UuidUtil.nextId();
 
-    const monster = this.monsterService.createMonster(
+    const monster = await this.monsterService.createMonster(
       playerData.playerId,
       starter.monsterId
     );
@@ -77,9 +77,8 @@ export default class NewGamePhase extends AbstractPhase<never> {
       .getNewLearnableAbilities(monster)
       .forEach((a) => this.abilityService.learnAbility(monster, a.abilityId));
 
-    playerData.monsters.push(monster);
     this.playerRepository.setPlayerData(playerData);
-
+    this.playerRepository.addMonster(monster);
     this.phaseService.goToSelectNextBattle();
   }
 }

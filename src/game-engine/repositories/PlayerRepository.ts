@@ -1,6 +1,7 @@
-import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { Service } from "typedi";
+import Monster from "../monster/Monster";
+import MonsterData from "../monster/MonsterData";
 import PlayerData from "../PlayerData";
 
 @Service()
@@ -49,13 +50,28 @@ export default class PlayerRepository {
   public getPlayerId(): string {
     return this.getPlayerData().playerId;
   }
-  public getMonsters(): Monster[] {
-    return this.getPlayerData().monsters;
-  }
   public getPlayerData(): PlayerData {
     if (this.playerData) {
       return this.playerData;
     }
     throw Error(`PlayerData not initialized`);
+  }
+  public addMonster(monster: Monster): void {
+    const m = MonsterData.fromMonster(monster);
+    this.getPlayerData().monsters.push(m);
+  }
+  public updateMonster(monster: Monster): void {
+    const monsters = this.getPlayerData().monsters;
+    const index = monsters.findIndex((e) => e.uuid === monster.uuid);
+    if (index === -1) {
+      throw Error(
+        `Monster ${monster.uuid} (${
+          monster.name
+        }) not found in player data. Available: ${monsters
+          .map((m) => m.uuid)
+          .join(", ")}`
+      );
+    }
+    monsters[index] = MonsterData.fromMonster(monster);
   }
 }

@@ -1,10 +1,11 @@
 import Monster from "@/game-engine/monster/Monster";
+import MonsterData from "./monster/MonsterData";
 import SaveDataVersion from "./save-data/SaveDataVersion";
 
 export default class PlayerData {
   version = SaveDataVersion.LATEST;
   playerId = "";
-  monsters: Monster[] = [];
+  monsters: MonsterData[] = [];
   defeatedMaps: string[] = [];
   lastDefeatedTowerMap = 0;
   lastSaveDate = new Date();
@@ -16,7 +17,7 @@ export default class PlayerData {
     out.lastDefeatedTowerMap = json.lastDefeatedTowerMap;
     out.lastSaveDate = new Date(json.lastSaveDate);
     if (json.monsters) {
-      out.monsters = json.monsters.map(Monster.fromJson);
+      out.monsters = json.monsters.map(MonsterData.fromJson);
     }
     if (json.defeatedMaps) {
       out.defeatedMaps = json.defeatedMaps.map((m: string) => m);

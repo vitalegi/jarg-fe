@@ -86,7 +86,7 @@ export default class MapService {
   protected async createMonster(
     randomEncounter: RandomEncounter
   ): Promise<Monster> {
-    const monster = this.monsterService.createMonster(
+    const monster = await this.monsterService.createMonster(
       null,
       randomEncounter.monsterId
     );

@@ -100,8 +100,6 @@ export default class BattlePhase extends AbstractPhase<Map> {
         this.rendererService.addMapTile(this.gameApp.getBattleContainer(), tile)
       );
 
-    //this.mapRepository.getMap().monsters.push(...this.playerService.getMonsters());
-
     map.monsters.forEach((monster) => {
       const monsterFamily = this.monsterIndexService.getMonster(
         monster.modelId

@@ -17,6 +17,7 @@ import MapIndex from "../map/MapIndex";
 import GameLoop from "../GameLoop";
 import MapRepository from "../map/MapRepository";
 import PlayerService from "../PlayerService";
+import MonsterData from "../monster/MonsterData";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -88,11 +89,12 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
   }
 
-  protected healMonster(monster: Monster): void {
+  protected healMonster(monster: MonsterData): void {
     this.logger.debug(`${monster.uuid}: remove status/stats alterations`);
     monster.activeEffects = [];
     this.logger.debug(`${monster.uuid}: restore stats`);
-    this.statsService.updateMonsterAttributes(monster, true);
+    monster.hp = null;
+    monster.activeEffects = [];
     this.logger.debug(`${monster.uuid}: restore abilities usages`);
     monster.abilities.forEach((a) => (a.currentUsages = a.maxUsages));
   }
@@ -117,16 +119,14 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected async selectMap(menu: LeftMenu, map: MapIndex): Promise<void> {
     this.logger.info(`Chosen: ${map}`);
 
-    menu.hide();
-    const monstersMenuBuilder = new SelectMonstersMenu(
-      this.playerRepository.getPlayerData().monsters,
-      6,
-      1
+    const playerMonsters = await this.monsterService.createExistingMonsters(
+      this.playerService.getPlayerMonsters()
     );
+
+    menu.hide();
+    const monstersMenuBuilder = new SelectMonstersMenu(playerMonsters, 6, 1);
     const menu2 = monstersMenuBuilder.createMenu(
-      (selected: Monster[]) => {
-        this.createGame(map, selected);
-      },
+      (selected: Monster[]) => this.createGame(map, selected),
       () => {
         menu.show();
         menu2.destroy();
@@ -151,17 +151,19 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
     );
     map.monsters.push(...monsters);
+
     this.phaseService.goToBattle(
       map,
       mapIndex.id,
-      () => this.onWin(mapIndex.id),
+      () => this.onWin(mapIndex.id, monsters),
       () => this.onLoss()
     );
   }
 
-  protected async onWin(id: string): Promise<void> {
+  protected async onWin(id: string, monsters: Monster[]): Promise<void> {
     this.logger.info("Player wins");
     this.playerService.completeMap(id);
+    monsters.forEach((monster) => this.playerService.updateMonster(monster));
     this.phaseService.goToSelectNextBattle();
   }
   protected async onLoss(): Promise<void> {

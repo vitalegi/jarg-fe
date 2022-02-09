@@ -1,6 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
+import MonsterData from "./monster/MonsterData";
 import PlayerData from "./PlayerData";
 import PlayerRepository from "./repositories/PlayerRepository";
 
@@ -30,11 +31,14 @@ export default class PlayerService {
       playerData.lastDefeatedTowerMap = level;
     }
   }
-  public getMonsters(): Monster[] {
-    return this.playerRepository.getMonsters();
-  }
   public addMonster(monster: Monster): void {
     monster.ownerId = this.getPlayerId();
-    this.playerRepository.getMonsters().push(monster);
+    this.playerRepository.addMonster(monster);
+  }
+  public updateMonster(monster: Monster): void {
+    this.playerRepository.updateMonster(monster);
+  }
+  public getPlayerMonsters(): MonsterData[] {
+    return this.getPlayerData().monsters;
   }
 }
