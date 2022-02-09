@@ -90,7 +90,7 @@ export default class TowerMapService {
     tiles: Tile[],
     playerSpawn: Point[]
   ): LocalizedEncounters[] {
-    const totalEnemies = this.randomService.randomInt(3, 10);
+    const totalEnemies = this.randomService.randomInt(2, 6);
     const encounters: LocalizedEncounters[] = [];
     for (let i = 0; i < totalEnemies; i++) {
       const boss = level % 10 === 0 && i === 0;
@@ -166,6 +166,9 @@ export default class TowerMapService {
     return Math.floor(3 + level * 1.1);
   }
   protected getMonsterLevelMax(level: number): number {
+    if (level < 5) {
+      return this.getMonsterLevelMin(level) + 2;
+    }
     return this.getMonsterLevelMin(level) + 5;
   }
 
