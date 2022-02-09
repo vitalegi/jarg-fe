@@ -10,6 +10,7 @@ import MonsterIndex from "./monster/MonsterIndex";
 import AbilityRepository from "./repositories/AbilityRepository";
 import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
 import TileRepository from "./repositories/TileRepository";
+import TowerModeRepository from "./repositories/TowerModeRepository";
 import TypeRepository from "./repositories/TypeRepository";
 
 @Service()
@@ -29,6 +30,8 @@ export default class GameAppDataLoader {
   protected rendererService = Container.get<RendererService>(RendererService);
   protected mapModelRepository =
     Container.get<MapModelRepository>(MapModelRepository);
+  protected towerModeRepository =
+    Container.get<TowerModeRepository>(TowerModeRepository);
 
   public async loadMonsters(): Promise<void> {
     // pre-requisites
@@ -137,6 +140,13 @@ export default class GameAppDataLoader {
       this.gameAssetService
         .getMaps()
         .then((maps) => this.mapModelRepository.init(maps))
+    );
+  }
+  public async loadTowerMaps(): Promise<void> {
+    await this.loadOnce("towerMaps", () =>
+      this.gameAssetService
+        .getTowerConfigs()
+        .then((configs) => this.towerModeRepository.init(configs))
     );
   }
   protected async _loadMonstersAnimationsMetadata(

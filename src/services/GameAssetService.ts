@@ -8,6 +8,7 @@ import Bonus from "@/game-engine/types/Bonus";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import MapModel from "@/game-engine/map/MapModel";
 import MapIndex from "@/game-engine/map/MapIndex";
+import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
 
 @Service()
 export default class GameAssetService {
@@ -27,7 +28,14 @@ export default class GameAssetService {
       .call();
     return MapModel.fromJson(result.data);
   }
-
+  public async getTowerConfigs(): Promise<TowerModeConfig[]> {
+    const result = await BackendWebService.url(
+      `${process.env.VUE_APP_BACKEND}/maps/tower-mode.json`
+    )
+      .get()
+      .call();
+    return result.data.map(TowerModeConfig.fromJson);
+  }
   public async getMonstersData(): Promise<MonsterIndex[]> {
     const result = await BackendWebService.url(
       `${process.env.VUE_APP_BACKEND}/monsters/monsters.json`

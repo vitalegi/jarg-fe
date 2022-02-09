@@ -13,7 +13,7 @@ import PhaseService from "./PhaseService";
 import StatsService from "../monster/stats/StatsService";
 import MapModelRepository from "../map/MapModelRepository";
 import GameLoop from "../GameLoop";
-import TowerMapService from "../map/TowerMapService";
+import TowerMapService from "../map/tower-mode/TowerMapService";
 import PlayerService from "../PlayerService";
 
 @Service()
