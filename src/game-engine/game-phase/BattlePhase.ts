@@ -19,8 +19,15 @@ import GameApp from "../GameApp";
 import HistoryRepository from "../battle/turns/HistoryRepository";
 import TileRepository from "../repositories/TileRepository";
 
+interface Map {
+  id: string;
+  map: MapContainer;
+  onWin: () => Promise<void>;
+  onLoss: () => Promise<void>;
+}
+
 @Service()
-export default class BattlePhase extends AbstractPhase<MapContainer> {
+export default class BattlePhase extends AbstractPhase<Map> {
   protected gameApp = Container.get<GameApp>(GameApp);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
   protected monsterIndexService =
@@ -41,11 +48,28 @@ export default class BattlePhase extends AbstractPhase<MapContainer> {
   public getName(): string {
     return "BattlePhase";
   }
-  protected async doStart(map: MapContainer | null): Promise<void> {
-    if (!map) {
+  protected async doStart(options: Map | null): Promise<void> {
+    if (!options) {
+      throw Error(`Options undefined.`);
+    }
+    if (!options.map) {
       throw Error(`Map is null`);
     }
-    this.mapRepository.setMap(map);
+    if (!options.id) {
+      throw Error(`ID is null`);
+    }
+    if (!options.onWin) {
+      throw Error(`onWin is null`);
+    }
+    if (!options.onLoss) {
+      throw Error(`onLoss is null`);
+    }
+    const map = options.map;
+    const id = options.id;
+    const onWin = options.onWin;
+    const onLoss = options.onLoss;
+    this.mapRepository.setMap(map, id, onWin, onLoss);
+
     await this.getGameAppDataLoader().loadMonsters();
 
     const requiredMonsterIds = map.monsters.map((m) => m.modelId);

@@ -14,6 +14,7 @@ import StatsService from "../monster/stats/StatsService";
 import MapModelRepository from "../map/MapModelRepository";
 import GameLoop from "../GameLoop";
 import TowerMapService from "../map/TowerMapService";
+import PlayerService from "../PlayerService";
 
 @Service()
 export default class TowerModeEntryPhase extends AbstractPhase<never> {
@@ -32,6 +33,7 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
     Container.get<MapModelRepository>(MapModelRepository);
   protected gameLoop = Container.get<GameLoop>(GameLoop);
   private towerMapService = Container.get<TowerMapService>(TowerMapService);
+  protected playerService = Container.get<PlayerService>(PlayerService);
 
   public getName(): string {
     return "TowerModeEntryPhase";
@@ -40,8 +42,10 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
     await this.getGameAppDataLoader().loadMonsters();
 
     const menu = new LeftMenu();
-    for (let level = 1; level < 20; level++) {
+    let level = 1;
+    while (this.isAvailable(level)) {
       menu.addEntry(this.level(menu, level));
+      level++;
     }
     menu.draw();
     this.getApp().ticker.add(() => this.gameLoop.gameLoop());
@@ -51,8 +55,16 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
     return new MenuEntry(
       `${level}`,
       () => this.selectLevel(menu, level),
-      () => true // TODO enable level when previous one is defeated
+      () => true
     );
+  }
+
+  protected isAvailable(level: number): boolean {
+    if (level === 1) {
+      return true;
+    }
+    const data = this.playerService.getPlayerData();
+    return level <= data.lastDefeatedTowerMap + 1;
   }
 
   protected async selectLevel(menu: LeftMenu, level: number): Promise<void> {
@@ -91,6 +103,21 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
     );
     map.monsters.push(...monsters);
-    this.phaseService.goToBattle(map);
+    this.phaseService.goToBattle(
+      map,
+      `${level}`,
+      () => this.onWin(level),
+      () => this.onLoss()
+    );
+  }
+
+  protected async onWin(level: number): Promise<void> {
+    this.logger.info("Player wins");
+    this.playerService.completeTowerMap(level);
+    this.phaseService.goToSelectNextBattle();
+  }
+  protected async onLoss(): Promise<void> {
+    this.logger.info(`Player is defeated, end.`);
+    this.phaseService.goToGameOver();
   }
 }

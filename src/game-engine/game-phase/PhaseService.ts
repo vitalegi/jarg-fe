@@ -21,9 +21,19 @@ export default class PhaseService {
   public async goToHome(): Promise<void> {
     await Container.get<HomePhase>(HomePhase).start();
   }
-  public async goToBattle(map: MapContainer): Promise<void> {
+  public async goToBattle(
+    map: MapContainer,
+    id: string,
+    onWin: () => Promise<void>,
+    onLoss: () => Promise<void>
+  ): Promise<void> {
     await this.transition();
-    await Container.get<BattlePhase>(BattlePhase).start(map);
+    await Container.get<BattlePhase>(BattlePhase).start({
+      map: map,
+      id: id,
+      onWin: onWin,
+      onLoss: onLoss,
+    });
   }
   public async goToSelectNextBattle(): Promise<void> {
     await Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();

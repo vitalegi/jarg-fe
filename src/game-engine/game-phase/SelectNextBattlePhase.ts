@@ -15,6 +15,8 @@ import { gameLabel } from "@/services/LocalizationService";
 import MapModelRepository from "../map/MapModelRepository";
 import MapIndex from "../map/MapIndex";
 import GameLoop from "../GameLoop";
+import MapRepository from "../map/MapRepository";
+import PlayerService from "../PlayerService";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -29,6 +31,8 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   protected gameAssetService =
     Container.get<GameAssetService>(GameAssetService);
   protected mapService = Container.get<MapService>(MapService);
+  protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected playerService = Container.get<PlayerService>(PlayerService);
   protected phaseService = Container.get<PhaseService>(PhaseService);
   protected statsService = Container.get<StatsService>(StatsService);
   protected mapModelRepository =
@@ -147,6 +151,21 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
     );
     map.monsters.push(...monsters);
-    this.phaseService.goToBattle(map);
+    this.phaseService.goToBattle(
+      map,
+      mapIndex.id,
+      () => this.onWin(mapIndex.id),
+      () => this.onLoss()
+    );
+  }
+
+  protected async onWin(id: string): Promise<void> {
+    this.logger.info("Player wins");
+    this.playerService.completeMap(id);
+    this.phaseService.goToSelectNextBattle();
+  }
+  protected async onLoss(): Promise<void> {
+    this.logger.info(`Player is defeated, end.`);
+    this.phaseService.goToGameOver();
   }
 }

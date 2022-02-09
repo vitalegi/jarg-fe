@@ -7,9 +7,20 @@ import Tile from "./Tile";
 @Service()
 export default class MapRepository {
   map: MapContainer | null = null;
+  id = "";
+  onWin?: () => Promise<void>;
+  onLoss?: () => Promise<void>;
 
-  public setMap(map: MapContainer): void {
+  public setMap(
+    map: MapContainer,
+    id: string,
+    onWin: () => Promise<void>,
+    onLoss: () => Promise<void>
+  ): void {
     this.map = map;
+    this.id = id;
+    this.onWin = onWin;
+    this.onLoss = onLoss;
   }
   public getMap(): MapContainer {
     if (this.map) {

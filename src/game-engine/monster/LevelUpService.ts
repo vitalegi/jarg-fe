@@ -8,10 +8,12 @@ export class LevelUpService {
   logger = LoggerFactory.getLogger("GameEngine.Monster.LevelUpService");
   protected statsService = Container.get<StatsService>(StatsService);
 
+  // TODO move to FormulaService
   public getKillExperience(monster: Monster): number {
     return Math.round(6 + this.getNextLevelExp(monster.level) / 7);
   }
 
+  // TODO move to FormulaService
   public getNextLevelExp(level: number): number {
     return Math.round(
       0.04 * Math.pow(level, 3) + 0.8 * Math.pow(level, 2) + 2 * level

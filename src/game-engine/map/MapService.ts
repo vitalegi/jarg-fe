@@ -26,8 +26,6 @@ export default class MapService {
     name: string
   ): Promise<MapContainer> {
     const map = new MapContainer();
-    map.id = id;
-    map.name = name;
     map.tiles = model.tiles.map((tile) => tile.clone());
 
     for (let i = 0; i < model.randomEncounters.length; i++) {

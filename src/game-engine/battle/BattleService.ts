@@ -186,14 +186,15 @@ export default class BattleService {
 
   public completeBattle(): void {
     if (this.isGameOver(this.playerService.getPlayerId())) {
-      this.logger.info(`Player is defeated, end.`);
-      this.phaseService.goToGameOver();
+      if (this.mapRepository.onLoss) {
+        this.mapRepository.onLoss();
+      }
       return;
     }
     if (this.isGameWin(this.playerService.getPlayerId())) {
-      this.logger.info("Player wins");
-      this.playerService.completeMap(this.mapRepository.getMap().id);
-      Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();
+      if (this.mapRepository.onWin) {
+        this.mapRepository.onWin();
+      }
       return;
     }
     this.logger.error(

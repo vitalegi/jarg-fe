@@ -6,12 +6,14 @@ export default class PlayerData {
   playerId = "";
   monsters: Monster[] = [];
   defeatedMaps: string[] = [];
+  lastDefeatedTowerMap = 0;
   lastSaveDate = new Date();
 
   public static fromJson(json: any): PlayerData {
     const out = new PlayerData();
     out.version = json.version;
     out.playerId = json.playerId;
+    out.lastDefeatedTowerMap = json.lastDefeatedTowerMap;
     out.lastSaveDate = new Date(json.lastSaveDate);
     if (json.monsters) {
       out.monsters = json.monsters.map(Monster.fromJson);
@@ -25,6 +27,7 @@ export default class PlayerData {
     const out: any = {};
     out.version = this.version;
     out.playerId = this.playerId;
+    out.lastDefeatedTowerMap = this.lastDefeatedTowerMap;
     out.lastSaveDate = this.lastSaveDate.toISOString();
     out.monsters = this.monsters.map((m) => m);
     out.defeatedMaps = this.defeatedMaps.map((m) => m);
