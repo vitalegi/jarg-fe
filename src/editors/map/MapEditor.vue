@@ -252,7 +252,7 @@ export default Vue.extend({
       }
       if (this.isMonsterSpawningMode) {
         const split = this.mode.split("_");
-        const index = NumberUtil.parse(split[2]);
+        const index = NumberUtil.parseAsInt(split[2]);
         return this.isMonsterSpawning(index, row, col);
       }
 
@@ -318,7 +318,7 @@ export default Vue.extend({
         }
       } else if (this.isMonsterSpawningMode) {
         const split = this.mode.split("_");
-        const index = NumberUtil.parse(split[2]);
+        const index = NumberUtil.parseAsInt(split[2]);
         const topLeft = split[3] === "1";
         this.changeMonsterSpawningArea(index, topLeft, row, col);
       }

@@ -1,5 +1,6 @@
 import TypeConstants from "@/game-engine/types/TypeConstants";
 import { LocalizationUtil } from "@/services/LocalizationService";
+import { asBoolean, asInt, asString } from "@/utils/JsonUtil";
 import NumberUtil from "@/utils/NumberUtil";
 import RechargeFamily from "../../battle/RechargeFamily";
 import StatsConstants from "../../monster/stats/StatsContants";
@@ -32,17 +33,17 @@ export default class Ability {
 
   public static fromJson(json: any): Ability {
     const out = new Ability();
-    out.id = json.id;
-    out.label = json.label;
-    out.description = json.description;
-    out.notes = json.notes;
-    out.power = parseInt(json.power, 10);
-    out.precision = parseInt(json.precision, 10);
+    out.id = asString(json.id);
+    out.label = asString(json.label);
+    out.description = asString(json.description);
+    out.notes = asString(json.notes, "");
+    out.power = asInt(json.power, 0);
+    out.precision = asInt(json.precision, 0);
     if (json.types) {
-      out.types.push(...(json.types as string[]));
+      out.types.push(...json.types.map(asString));
     }
-    out.rechargeFamily = NumberUtil.parse(json.rechargeFamily);
-    out.atkStat = json.atkStat;
+    out.rechargeFamily = asInt(json.rechargeFamily);
+    out.atkStat = asString(json.atkStat, "");
     if (out.atkStat === "") {
       out.atkStat = null;
     }
@@ -54,7 +55,7 @@ export default class Ability {
       out.usages = Usages.fromJson(json.usages);
     }
     out.abilityTarget = AbilityTarget.fromJson(json.abilityTarget);
-    out.damage = json.damage;
+    out.damage = asBoolean(json.damage, false);
     if (json.additionalEffects) {
       out.additionalEffects = json.additionalEffects.map(
         EffectFactory.fromJson

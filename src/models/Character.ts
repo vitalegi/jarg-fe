@@ -1,3 +1,4 @@
+import { asString } from "@/utils/JsonUtil";
 import Move from "./Move";
 import Point from "./Point";
 
@@ -15,10 +16,10 @@ export default class Character {
   movements = new Move();
 
   public static fromJsonCharacter(data: any, out: Character): Character {
-    out.uuid = data.uuid;
-    out.name = data.name;
-    out.type = data.type;
-    out.modelId = data.modelId;
+    out.uuid = asString(data.uuid);
+    out.name = asString(data.name);
+    out.type = asString(data.type);
+    out.modelId = asString(data.modelId);
     out.coordinates = Point.fromJson(data.coordinates);
     out.movements = Move.fromJson(data.movements);
     return out;

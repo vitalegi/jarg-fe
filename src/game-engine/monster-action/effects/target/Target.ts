@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import { asString } from "@/utils/JsonUtil";
 import TargetType from "./TargetType";
 
 export default class Target {
@@ -6,7 +7,7 @@ export default class Target {
 
   public static fromJson(json: any): Target {
     const out = new Target();
-    out.type = json.type;
+    out.type = asString(json.type);
     return out;
   }
 

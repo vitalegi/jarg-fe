@@ -1,3 +1,5 @@
+import { asDecimal, asString } from "@/utils/JsonUtil";
+
 export default class Bonus {
   source;
   target;
@@ -10,7 +12,11 @@ export default class Bonus {
   }
 
   public static fromJson(json: any): Bonus {
-    return new Bonus(json.source, json.target, json.ratio);
+    return new Bonus(
+      asString(json.source),
+      asString(json.target),
+      asDecimal(json.ratio)
+    );
   }
 
   public clone(): Bonus {

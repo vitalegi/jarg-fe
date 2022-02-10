@@ -1,9 +1,11 @@
+import { asInt } from "@/utils/JsonUtil";
+
 export default class AbilityTarget {
   range = 0;
 
   public static fromJson(json: any): AbilityTarget {
     const out = new AbilityTarget();
-    out.range = json.range;
+    out.range = asInt(json.range);
     return out;
   }
   public clone(): AbilityTarget {

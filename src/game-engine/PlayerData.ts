@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import { asInt, asString } from "@/utils/JsonUtil";
 import MonsterData from "./monster/MonsterData";
 import SaveDataVersion from "./save-data/SaveDataVersion";
 
@@ -12,9 +12,11 @@ export default class PlayerData {
 
   public static fromJson(json: any): PlayerData {
     const out = new PlayerData();
-    out.version = json.version;
-    out.playerId = json.playerId;
-    out.lastDefeatedTowerMap = json.lastDefeatedTowerMap;
+    out.version = asString(json.version);
+    out.playerId = asString(json.playerId);
+    out.lastDefeatedTowerMap = asInt(json.lastDefeatedTowerMap, 0);
+
+    // TODO handle dates
     out.lastSaveDate = new Date(json.lastSaveDate);
     if (json.monsters) {
       out.monsters = json.monsters.map(MonsterData.fromJson);

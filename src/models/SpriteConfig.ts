@@ -1,3 +1,5 @@
+import { asBoolean, asString } from "@/utils/JsonUtil";
+
 export class SpriteType {
   public static ANIMATED = "ANIMATED";
   public static STATIC = "STATIC";
@@ -12,11 +14,13 @@ export default class SpriteConfig {
 
   public static fromJson(sprite: any): SpriteConfig {
     const out = new SpriteConfig();
-    out.name = sprite.name;
-    out.type = sprite.type;
-    out.sprites = sprite.sprites;
-    out.walkable = sprite.walkable;
-    out.swimmable = sprite.swimmable;
+    out.name = asString(sprite.name);
+    out.type = asString(sprite.type);
+    if (sprite.sprites) {
+      out.sprites = sprite.sprites.map(asString);
+    }
+    out.walkable = asBoolean(sprite.walkable, false);
+    out.swimmable = asBoolean(sprite.swimmable, false);
     return out;
   }
   public clone(): SpriteConfig {

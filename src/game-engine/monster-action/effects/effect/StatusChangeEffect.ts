@@ -7,6 +7,7 @@ import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
 import { LocalizationUtil } from "@/services/LocalizationService";
+import { asString } from "@/utils/JsonUtil";
 
 export default class StatusChangeEffect extends Effect {
   public static KEY = "STATUS_CHANGE";
@@ -23,7 +24,7 @@ export default class StatusChangeEffect extends Effect {
   }
 
   public static fromJson(json: any): StatusChangeEffect {
-    const effect = new StatusChangeEffect(json.status);
+    const effect = new StatusChangeEffect(asString(json.status));
     Effect.fromJson(effect, json);
     return effect;
   }

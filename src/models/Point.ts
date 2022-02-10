@@ -1,3 +1,5 @@
+import { asInt } from "@/utils/JsonUtil";
+
 export default class Point {
   x: number;
   y: number;
@@ -13,12 +15,8 @@ export default class Point {
 
   public static fromJson(obj: any): Point {
     const out = new Point();
-    if (obj.x) {
-      out.x = obj.x;
-    }
-    if (obj.y) {
-      out.y = obj.y;
-    }
+    out.x = asInt(obj.x);
+    out.y = asInt(obj.y);
     return out;
   }
 

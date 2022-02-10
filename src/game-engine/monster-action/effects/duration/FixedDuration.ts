@@ -1,3 +1,4 @@
+import { asInt } from "@/utils/JsonUtil";
 import Duration from "./Duration";
 
 export class FixedDuration extends Duration {
@@ -12,7 +13,7 @@ export class FixedDuration extends Duration {
   }
 
   public static fromJson(json: any): Duration {
-    return new FixedDuration(json.end, 0);
+    return new FixedDuration(asInt(json.end), 0);
   }
   public clone(): Duration {
     return new FixedDuration(this.end, this.counter);

@@ -1,3 +1,5 @@
+import { asString } from "@/utils/JsonUtil";
+
 export default class MapIndex {
   id;
   name;
@@ -18,11 +20,11 @@ export default class MapIndex {
 
   public static fromJson(json: any): MapIndex {
     const out = new MapIndex();
-    out.id = json.id;
-    out.name = json.name;
-    out.url = json.url;
+    out.id = asString(json.id);
+    out.name = asString(json.name);
+    out.url = asString(json.url);
     if (json.prerequisites) {
-      out.prerequisites = json.prerequisites;
+      out.prerequisites = json.prerequisites.map(asString);
     }
     return out;
   }

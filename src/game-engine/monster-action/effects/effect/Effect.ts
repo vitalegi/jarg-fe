@@ -1,5 +1,6 @@
 import Monster from "@/game-engine/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import { asInt } from "@/utils/JsonUtil";
 import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import Condition from "../condition/Condition";

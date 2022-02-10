@@ -1,11 +1,13 @@
+import { asInt } from "@/utils/JsonUtil";
+
 export default class Usages {
   current = 0;
   max = 0;
 
   public static fromJson(json: any): Usages {
     const out = new Usages();
-    out.current = parseInt(json.current, 10);
-    out.max = parseInt(json.max, 10);
+    out.current = asInt(json.current);
+    out.max = asInt(json.max);
     return out;
   }
   public clone(): Usages {

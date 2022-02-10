@@ -1,3 +1,5 @@
+import { asInt, asString } from "@/utils/JsonUtil";
+
 export default class AbilityLearned {
   abilityId = "";
   maxUsages = 0;
@@ -5,9 +7,9 @@ export default class AbilityLearned {
 
   public static fromJson(json: any): AbilityLearned {
     const out = new AbilityLearned();
-    out.abilityId = json.abilityId;
-    out.maxUsages = json.maxUsages;
-    out.currentUsages = json.currentUsages;
+    out.abilityId = asString(json.abilityId);
+    out.maxUsages = asInt(json.maxUsages);
+    out.currentUsages = asInt(json.currentUsages);
     return out;
   }
 

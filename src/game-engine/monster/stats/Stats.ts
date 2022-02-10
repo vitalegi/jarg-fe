@@ -1,3 +1,5 @@
+import { asInt } from "@/utils/JsonUtil";
+
 export default class Stats {
   hp = 0;
   maxHP = 0;
@@ -36,15 +38,15 @@ export default class Stats {
     if (!data) {
       return out;
     }
-    out.hp = data.hp;
-    out.maxHP = data.maxHP;
-    out.atk = data.atk;
-    out.def = data.def;
-    out.int = data.int;
-    out.res = data.res;
-    out.hit = data.hit;
-    out.dex = data.dex;
-    out.speed = data.speed;
+    out.hp = asInt(data.hp);
+    out.maxHP = asInt(data.maxHP);
+    out.atk = asInt(data.atk);
+    out.def = asInt(data.def);
+    out.int = asInt(data.int);
+    out.res = asInt(data.res);
+    out.hit = asInt(data.hit);
+    out.dex = asInt(data.dex);
+    out.speed = asInt(data.speed);
 
     return out;
   }

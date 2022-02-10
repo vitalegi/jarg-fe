@@ -1,11 +1,13 @@
+import { asInt, asString } from "@/utils/JsonUtil";
+
 class Size {
   width = 0;
   height = 0;
 
   public static fromJson(json: any): Size {
     const out = new Size();
-    out.width = json.width;
-    out.height = json.height;
+    out.width = asInt(json.width);
+    out.height = asInt(json.height);
     return out;
   }
 
@@ -23,8 +25,8 @@ class Frame {
 
   public static fromJson(json: any): Frame {
     const out = new Frame();
-    out.file = json.file;
-    out.duration = json.duration;
+    out.file = asString(json.file);
+    out.duration = asInt(json.duration);
     return out;
   }
 
@@ -43,9 +45,9 @@ export class AnimationSrc {
 
   public static fromJson(json: any): AnimationSrc {
     const out = new AnimationSrc();
-    out.key = json.key;
-    out.metadata = json.metadata;
-    out.sprites = json.sprites;
+    out.key = asString(json.key);
+    out.metadata = asString(json.metadata);
+    out.sprites = asString(json.sprites);
     return out;
   }
 
@@ -66,11 +68,11 @@ export class Animation {
 
   public static fromJson(key: string, json: any): Animation {
     const out = new Animation();
-    out.key = key;
-    out.name = json.name;
+    out.key = asString(key);
+    out.name = asString(json.name);
     out.data = Size.fromJson(json.data);
     if (json.frames) {
-      out.frames = json.frames.map((frame: any) => Frame.fromJson(frame));
+      out.frames = json.frames.map(Frame.fromJson);
     }
     return out;
   }

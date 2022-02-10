@@ -1,4 +1,5 @@
 import Monster from "@/game-engine/monster/Monster";
+import { asInt } from "@/utils/JsonUtil";
 import Ability from "../../ability/Ability";
 import ComputedEffect from "../../computed-effect/ComputedEffect";
 import HpDamageComputed from "../../computed-effect/HpDamageComputed";
@@ -20,7 +21,7 @@ export default class HpDamageEffect extends Effect {
   public static fromJson(json: any): HpDamageEffect {
     const effect = new HpDamageEffect();
     Effect.fromJson(effect, json);
-    effect.damage = json.damage;
+    effect.damage = asInt(json.damage);
     return effect;
   }
   public clone(): Effect {

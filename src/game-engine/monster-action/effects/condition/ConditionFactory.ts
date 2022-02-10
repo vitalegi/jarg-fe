@@ -1,3 +1,4 @@
+import { asDecimal } from "@/utils/JsonUtil";
 import Condition from "./Condition";
 import HitCondition from "./HitCondition";
 import RandomCondition from "./RandomCondition";
@@ -8,7 +9,7 @@ export default class ConditionFactory {
       return new HitCondition();
     }
     if (json.type === RandomCondition.KEY) {
-      return new RandomCondition(json.threshold);
+      return new RandomCondition(asDecimal(json.threshold));
     }
     throw Error(`Unknown condition ${JSON.stringify(json)}`);
   }

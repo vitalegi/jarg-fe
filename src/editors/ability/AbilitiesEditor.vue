@@ -80,7 +80,7 @@ export default Vue.extend({
       const maxId = NumberUtil.max(
         this.getAbilities()
           .filter((a) => NumberUtil.isNumber(a.id))
-          .map((a) => NumberUtil.parse(a.id))
+          .map((a) => NumberUtil.parseAsInt(a.id))
       );
       ability.id = StringUtil.leftPad(`${maxId + 1}`, 3, "0");
       ability.rechargeFamily = RechargeFamily.DEFAULT_VALUE;

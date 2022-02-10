@@ -1,4 +1,5 @@
 import Point from "@/models/Point";
+import { asString } from "@/utils/JsonUtil";
 
 export default class Tile {
   spriteModel = "";
@@ -6,7 +7,7 @@ export default class Tile {
 
   public static fromJson(tile: any): Tile {
     const out = new Tile();
-    out.spriteModel = tile.spriteModel;
+    out.spriteModel = asString(tile.spriteModel);
     out.coordinates = Point.fromJson(tile.coordinates);
     return out;
   }

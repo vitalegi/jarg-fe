@@ -213,7 +213,7 @@ export default Vue.extend({
         .split(",")
         .map((s) => s.trim())
         .filter(NumberUtil.isNumber)
-        .map(NumberUtil.parse);
+        .map(NumberUtil.parseAsInt);
     },
     monstersWithLevels(): { monster: MonsterIndex; level: number }[] {
       const monsters = [this.sourceMonster, ...this.targetMonsters]

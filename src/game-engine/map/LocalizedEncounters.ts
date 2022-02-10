@@ -1,4 +1,5 @@
 import Point from "@/models/Point";
+import { asInt } from "@/utils/JsonUtil";
 import RandomEncounter from "./RandomEncounter";
 
 export default class LocalizedEncounters {
@@ -21,8 +22,8 @@ export default class LocalizedEncounters {
     if (json.area) {
       out.area = json.area.map((p: any) => Point.fromJson(p));
     }
-    out.minMonsters = json.minMonsters;
-    out.maxMonsters = json.maxMonsters;
+    out.minMonsters = asInt(json.minMonsters);
+    out.maxMonsters = asInt(json.maxMonsters);
     if (json.encounters) {
       out.encounters = json.encounters.map((e: any) =>
         RandomEncounter.fromJson(e)

@@ -1,3 +1,5 @@
+import { asInt, asString } from "@/utils/JsonUtil";
+
 export default class MonsterEvolution {
   public static LEVEL_TYPE = "BY_LEVEL";
 
@@ -14,9 +16,9 @@ export default class MonsterEvolution {
 
   public static fromJson(data: any): MonsterEvolution {
     const out = new MonsterEvolution();
-    out.evolutionId = data.evolutionId;
-    out.type = data.type;
-    out.level = data.level;
+    out.evolutionId = asString(data.evolutionId);
+    out.type = asString(data.type);
+    out.level = asInt(data.level);
     return out;
   }
 

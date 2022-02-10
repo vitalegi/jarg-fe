@@ -5,6 +5,7 @@ import Effect from "./Effect";
 import AbsorbLifeComputed from "../../computed-effect/AbsorbLifeComputed";
 import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
+import { asDecimal } from "@/utils/JsonUtil";
 
 export default class AbsorbLifeEffect extends Effect {
   public static KEY = "ABSORB_LIFE";
@@ -22,7 +23,7 @@ export default class AbsorbLifeEffect extends Effect {
   }
 
   public static fromJson(json: any): AbsorbLifeEffect {
-    const effect = new AbsorbLifeEffect(json.percentage);
+    const effect = new AbsorbLifeEffect(asDecimal(json.percentage));
     Effect.fromJson(effect, json);
     return effect;
   }

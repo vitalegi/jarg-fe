@@ -1,3 +1,5 @@
+import { asDecimal, asString } from "@/utils/JsonUtil";
+
 export default class StatAlteration {
   stat;
   percentage;
@@ -8,7 +10,7 @@ export default class StatAlteration {
   }
 
   public static fromJson(json: any): StatAlteration {
-    return new StatAlteration(json.stat, json.percentage);
+    return new StatAlteration(asString(json.stat), asDecimal(json.percentage));
   }
 
   public clone(): StatAlteration {

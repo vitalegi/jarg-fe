@@ -153,7 +153,7 @@ export default Vue.extend({
           monsterId: monsterId,
           type: type,
           abilityId: ability.id,
-          level: NumberUtil.parse(level),
+          level: NumberUtil.parseAsInt(level),
         };
       } else {
         throw Error(`Type ${type} not recognized`);

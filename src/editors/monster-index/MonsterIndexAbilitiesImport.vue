@@ -140,7 +140,7 @@ export default Vue.extend({
         if (!NumberUtil.isNumber(level)) {
           throw Error(`Not a number ${level}`);
         }
-        out.level = NumberUtil.parse(level);
+        out.level = NumberUtil.parseAsInt(level);
       } else {
         throw Error(`Type ${type} not recognized`);
       }

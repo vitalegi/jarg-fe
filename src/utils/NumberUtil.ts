@@ -5,10 +5,13 @@ export default class NumberUtil {
     });
   }
   public static isNumber(s: string): boolean {
-    return !isNaN(NumberUtil.parse(s));
+    return !isNaN(NumberUtil.parseAsInt(s));
   }
-  public static parse(s: string): number {
+  public static parseAsInt(s: string): number {
     return parseInt(s, 10);
+  }
+  public static parseAsDecimal(s: string): number {
+    return parseFloat(s);
   }
 
   public static parseHex(s: string): number {

@@ -1,3 +1,4 @@
+import { asInt, asString } from "@/utils/JsonUtil";
 import Character from "../../models/Character";
 import AbilityLearned from "../monster-action/ability/AbilityLearned";
 import ComputedEffect from "../monster-action/computed-effect/ComputedEffect";
@@ -24,10 +25,10 @@ export default class Monster extends Character {
   public static fromJson(monster: any): Monster {
     const out = new Monster();
     Character.fromJsonCharacter(monster, out);
-    out.ownerId = monster.ownerId;
-    out.level = monster.level;
-    out.experience = monster.experience;
-    out.currentLevelExperience = monster.currentLevelExperience;
+    out.ownerId = asString(monster.ownerId);
+    out.level = asInt(monster.level);
+    out.experience = asInt(monster.experience);
+    out.currentLevelExperience = asInt(monster.currentLevelExperience);
     out.baseStats = Stats.fromJson(monster.baseStats);
     out.stats = Stats.fromJson(monster.stats);
     out.growthRates = Stats.fromJson(monster.growthRates);
@@ -35,6 +36,7 @@ export default class Monster extends Character {
       out.abilities = monster.abilities.map(AbilityLearned.fromJson);
     }
     if (monster.activeEffects) {
+      // TODO check implementation
       out.activeEffects = monster.activeEffects.map((e: ComputedEffect) =>
         e.clone()
       );

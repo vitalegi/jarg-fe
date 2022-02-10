@@ -3,6 +3,7 @@ import Stats from "@/game-engine/monster/stats/Stats";
 import AbilityLearnable from "../monster-action/ability/AbilityLearnable";
 import MonsterEvolution from "./monster-evolution/MonsterEvolution";
 import TypeConstants from "../types/TypeConstants";
+import { asString } from "@/utils/JsonUtil";
 
 export default class MonsterIndex {
   monsterId = "";
@@ -18,7 +19,7 @@ export default class MonsterIndex {
 
   public static fromJson(data: any): MonsterIndex {
     const out = new MonsterIndex();
-    out.monsterId = data.monsterId;
+    out.monsterId = asString(data.monsterId);
     out.name = data.name;
 
     if (data.animationsSrc) {
@@ -31,7 +32,7 @@ export default class MonsterIndex {
     out.backupBaseStats = Stats.fromJson(data.backupBaseStats);
 
     if (data.types) {
-      out.types = data.types.map((t: any) => t);
+      out.types = data.types.map((t: any) => asString(t));
     }
     if (data.learnableAbilities) {
       out.learnableAbilities = data.learnableAbilities.map(

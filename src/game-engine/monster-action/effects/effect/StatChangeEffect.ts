@@ -6,6 +6,7 @@ import StatChangeComputed from "../../computed-effect/StatChangeComputed";
 import { FixedDuration } from "../duration/FixedDuration";
 import { RandomDuration } from "../duration/RandomDuration";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
+import { asDecimal, asString } from "@/utils/JsonUtil";
 
 export default class StatChangeEffect extends Effect {
   public static KEY = "STATS_PERCENTAGE";
@@ -27,7 +28,10 @@ export default class StatChangeEffect extends Effect {
   }
 
   public static fromJson(json: any): StatChangeEffect {
-    const effect = new StatChangeEffect(json.stat, json.percentage);
+    const effect = new StatChangeEffect(
+      asString(json.stat),
+      asDecimal(json.percentage)
+    );
     Effect.fromJson(effect, json);
     return effect;
   }

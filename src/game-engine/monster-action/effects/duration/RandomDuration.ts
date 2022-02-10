@@ -1,4 +1,5 @@
 import RandomService from "@/services/RandomService";
+import { asDecimal } from "@/utils/JsonUtil";
 import Container from "typedi";
 import Duration from "./Duration";
 
@@ -15,7 +16,7 @@ export class RandomDuration extends Duration {
   }
 
   public static fromJson(json: any): Duration {
-    return new RandomDuration(json.threshold, false);
+    return new RandomDuration(asDecimal(json.threshold), false);
   }
   public clone(): Duration {
     return new RandomDuration(this.threshold, this.exit);

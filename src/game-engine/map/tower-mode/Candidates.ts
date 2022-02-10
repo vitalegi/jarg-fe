@@ -1,3 +1,5 @@
+import { asDecimal, asString } from "@/utils/JsonUtil";
+
 export default class Candidates {
   ids: string[] = [];
   probability = 0;
@@ -5,9 +7,9 @@ export default class Candidates {
   public static fromJson(json: any): Candidates {
     const out = new Candidates();
     if (json.ids) {
-      out.ids = json.ids.map((id: any) => id);
+      out.ids = json.ids.map((id: any) => asString(id));
     }
-    out.probability = json.probability;
+    out.probability = asDecimal(json.probability);
     return out;
   }
   public clone(): Candidates {

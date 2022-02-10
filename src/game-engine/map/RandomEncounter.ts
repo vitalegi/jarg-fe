@@ -1,3 +1,5 @@
+import { asDecimal, asInt, asString } from "@/utils/JsonUtil";
+
 export default class RandomEncounter {
   monsterId = "";
   levelMin = 0;
@@ -6,10 +8,10 @@ export default class RandomEncounter {
 
   public static fromJson(json: any): RandomEncounter {
     const out = new RandomEncounter();
-    out.monsterId = json.monsterId;
-    out.levelMin = json.levelMin;
-    out.levelMax = json.levelMax;
-    out.probability = json.probability;
+    out.monsterId = asString(json.monsterId);
+    out.levelMin = asInt(json.levelMin);
+    out.levelMax = asInt(json.levelMax);
+    out.probability = asDecimal(json.probability);
     return out;
   }
 
