@@ -10,7 +10,7 @@ export class LevelUpService {
 
   // TODO move to FormulaService
   public getKillExperience(monster: Monster): number {
-    return Math.round(6 + this.getNextLevelExp(monster.level) / 7);
+    return Math.round(6 + this.getNextLevelExp(monster.level) / 4);
   }
 
   // TODO move to FormulaService
