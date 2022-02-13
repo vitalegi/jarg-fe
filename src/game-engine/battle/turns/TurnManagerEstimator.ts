@@ -1,6 +1,6 @@
 import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
-import Tick from "@/game-engine/battle/turns/Tick";
 import TurnManager from "@/game-engine/battle/turns/TurnManager";
+import Tick from "@/game-engine/model/turn/Tick";
 import Container, { Service } from "typedi";
 
 @Service()

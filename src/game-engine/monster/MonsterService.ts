@@ -11,13 +11,13 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import ObjectUtil from "@/utils/ObjectUtil";
 import CoordinateService from "@/game-engine/CoordinateService";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
-import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import MonsterData from "@/game-engine/monster/MonsterData";
 import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
-import ActionType from "@/game-engine/battle/turns/ActionType";
-import AbilityService from "@/game-engine/ability/model/AbilityService";
+import AbilityService from "@/game-engine/ability/AbilityService";
+import ActionType from "@/game-engine/model/turn/ActionType";
+import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
 
 const names = [
   "Cino",

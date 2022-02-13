@@ -1,11 +1,11 @@
 import Monster from "@/game-engine/monster/Monster";
-import MapContainer from "@/game-engine/map/MapContainer";
+import MapContainer from "@/game-engine/model/map/MapContainer";
 import Point from "@/models/Point";
 import TimeUtil from "@/utils/TimeUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
 import GraphBuilder from "@/game-engine/map/traversal/GraphBuilder";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
-import Tile from "@/game-engine/map/Tile";
+import Tile from "@/game-engine/model/map/Tile";
 
 export default class MapTraversal {
   logger = LoggerFactory.getLogger("GameEngine.Map.Traversal");

@@ -1,4 +1,4 @@
-import Tile from "@/game-engine/map/Tile";
+import Tile from "@/game-engine/model/map/Tile";
 import Monster from "@/game-engine/monster/Monster";
 
 export default class MapContainer {

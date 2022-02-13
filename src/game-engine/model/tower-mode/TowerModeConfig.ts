@@ -1,4 +1,4 @@
-import Candidates from "@/game-engine/map/tower-mode/Candidates";
+import Candidates from "@/game-engine/model/tower-mode/Candidates";
 import { asInt, asIntNullable, asString } from "@/utils/JsonUtil";
 
 export default class TowerModeConfig {

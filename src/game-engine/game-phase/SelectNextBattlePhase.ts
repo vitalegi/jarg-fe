@@ -15,7 +15,7 @@ import MapModelRepository from "@/game-engine/map/MapModelRepository";
 import GameLoop from "@/game-engine/GameLoop";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import MonsterData from "@/game-engine/monster/MonsterData";
-import MapIndex from "@/game-engine/map/MapIndex";
+import MapIndex from "@/game-engine/model/map/MapIndex";
 import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
 import Monster from "@/game-engine/monster/Monster";
 

@@ -3,7 +3,7 @@ import * as PIXI from "pixi.js";
 import Drawer from "@/game-engine/ui/Drawer";
 import CoordinateService from "@/game-engine/CoordinateService";
 import GameApp from "@/game-engine/GameApp";
-import Tile from "@/game-engine/map/Tile";
+import Tile from "@/game-engine/model/map/Tile";
 import GameConfig from "@/game-engine/GameConfig";
 
 export default class TileFocusableDrawer extends Drawer {

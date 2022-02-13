@@ -1,4 +1,4 @@
-import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 import Point from "@/models/Point";
 import { asInt } from "@/utils/JsonUtil";
 

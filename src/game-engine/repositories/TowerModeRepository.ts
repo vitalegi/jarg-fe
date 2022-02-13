@@ -1,4 +1,4 @@
-import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
+import TowerModeConfig from "@/game-engine/model/tower-mode/TowerModeConfig";
 import { Service } from "typedi";
 
 @Service()

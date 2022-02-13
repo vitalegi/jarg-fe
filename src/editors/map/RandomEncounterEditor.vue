@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 import LoggerFactory from "@/logger/LoggerFactory";
 import SelectMonsterIndex from "@/editors/monster-index/SelectMonsterIndex.vue";
 import Vue from "vue";

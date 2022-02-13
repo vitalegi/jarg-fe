@@ -1,5 +1,5 @@
-import ActionType from "@/game-engine/battle/turns/ActionType";
-import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
+import ActionType from "@/game-engine/model/turn/ActionType";
+import { PerformedAction } from "@/game-engine/model/turn/PerformedAction";
 import Monster from "@/game-engine/monster/Monster";
 import UuidUtil from "@/utils/UuidUtil";
 

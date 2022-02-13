@@ -1,4 +1,4 @@
-import MapIndex from "@/game-engine/map/MapIndex";
+import MapIndex from "@/game-engine/model/map/MapIndex";
 import { Service } from "typedi";
 
 @Service()

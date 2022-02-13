@@ -4,10 +4,10 @@ import Ability from "@/game-engine/model/ability/Ability";
 import { Animation } from "@/models/Animation";
 import Bonus from "@/game-engine/types/Bonus";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import MapModel from "@/game-engine/map/MapModel";
-import MapIndex from "@/game-engine/map/MapIndex";
-import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
 import { BackendWebService } from "@/services/BackendService";
+import TowerModeConfig from "@/game-engine/model/tower-mode/TowerModeConfig";
+import MapModel from "@/game-engine/model/map/MapModel";
+import MapIndex from "@/game-engine/model/map/MapIndex";
 
 @Service()
 export default class GameAssetService {

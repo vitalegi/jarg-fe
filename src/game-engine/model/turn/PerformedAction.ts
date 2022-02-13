@@ -1,4 +1,4 @@
-import ActionType from "@/game-engine/battle/turns/ActionType";
+import ActionType from "@/game-engine/model/turn/ActionType";
 import Ability from "@/game-engine/model/ability/Ability";
 import Point from "@/models/Point";
 import UuidUtil from "@/utils/UuidUtil";

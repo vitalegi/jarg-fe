@@ -1,10 +1,10 @@
 import AbstractProcessor from "@/game-engine/ability/ability-processor/AbstractProcessor";
 import DefaultProcessor from "@/game-engine/ability/ability-processor/DefaultProcessor";
-import AbilityTarget from "@/game-engine/ability/ability-target/AbilityTarget";
+import AbilityTarget from "@/game-engine/ability/target/AbilityTarget";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import EffectFactory from "@/game-engine/ability/effects/effect/EffectFactory";
 import Usages from "@/game-engine/ability/Usages";
-import RechargeFamily from "@/game-engine/battle/RechargeFamily";
+import RechargeFamily from "@/game-engine/model/ability/RechargeFamily";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import TypeConstants from "@/game-engine/types/TypeConstants";
 import { LocalizationUtil } from "@/services/LocalizationService";

@@ -1,4 +1,4 @@
-import MapContainer from "@/game-engine/map/MapContainer";
+import MapContainer from "@/game-engine/model/map/MapContainer";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
 

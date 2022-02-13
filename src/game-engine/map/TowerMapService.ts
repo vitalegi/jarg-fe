@@ -7,10 +7,10 @@ import Container, { Service } from "typedi";
 import CONFIG from "@/assets/tower-mode.json";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
-import MapModel from "@/game-engine/map/MapModel";
-import Tile from "@/game-engine/map/Tile";
-import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
-import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import MapModel from "@/game-engine/model/map/MapModel";
+import Tile from "@/game-engine/model/map/Tile";
+import LocalizedEncounters from "@/game-engine/model/map/LocalizedEncounters";
+import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 
 interface MapConfig {
   preconditions: {

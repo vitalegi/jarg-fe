@@ -1,8 +1,8 @@
-import AbilityService from "@/game-engine/ability/model/AbilityService";
-import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
-import MapContainer from "@/game-engine/map/MapContainer";
-import MapModel from "@/game-engine/map/MapModel";
-import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import AbilityService from "@/game-engine/ability/AbilityService";
+import LocalizedEncounters from "@/game-engine/model/map/LocalizedEncounters";
+import MapContainer from "@/game-engine/model/map/MapContainer";
+import MapModel from "@/game-engine/model/map/MapModel";
+import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import Monster from "@/game-engine/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";

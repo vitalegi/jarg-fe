@@ -62,7 +62,7 @@ import Vue from "vue";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Container from "typedi";
 import MapModelRepository from "@/game-engine/map/MapModelRepository";
-import MapIndex from "@/game-engine/map/MapIndex";
+import MapIndex from "@/game-engine/model/map/MapIndex";
 
 export default Vue.extend({
   name: "MapEditor",

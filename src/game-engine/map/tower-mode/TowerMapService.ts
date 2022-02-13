@@ -7,11 +7,11 @@ import Container, { Service } from "typedi";
 import TowerModeRepository from "@/game-engine/repositories/TowerModeRepository";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
-import MapModel from "@/game-engine/map/MapModel";
-import Tile from "@/game-engine/map/Tile";
-import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
-import RandomEncounter from "@/game-engine/map/RandomEncounter";
-import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
+import MapModel from "@/game-engine/model/map/MapModel";
+import Tile from "@/game-engine/model/map/Tile";
+import LocalizedEncounters from "@/game-engine/model/map/LocalizedEncounters";
+import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
+import TowerModeConfig from "@/game-engine/model/tower-mode/TowerModeConfig";
 
 @Service()
 export default class TowerMapService {

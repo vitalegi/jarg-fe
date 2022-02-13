@@ -1,4 +1,4 @@
-import MapContainer from "@/game-engine/map/MapContainer";
+import MapContainer from "@/game-engine/model/map/MapContainer";
 import CanTraverse from "@/game-engine/map/traversal/CanTraverse";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
 import Monster from "@/game-engine/monster/Monster";

@@ -7,9 +7,9 @@ import ICV from "@/assets/turn-manager/icv.json";
 import TimeUtil from "@/utils/TimeUtil";
 import Ability from "@/game-engine/model/ability/Ability";
 import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
-import Tick from "@/game-engine/battle/turns/Tick";
-import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
-import ActionType from "@/game-engine/battle/turns/ActionType";
+import Tick from "@/game-engine/model/turn/Tick";
+import { PerformedAction } from "@/game-engine/model/turn/PerformedAction";
+import ActionType from "@/game-engine/model/turn/ActionType";
 
 const DECIMAL_PRECISION = 0.00001;
 

@@ -1,7 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
-import Tile from "@/game-engine/map/Tile";
+import Tile from "@/game-engine/model/map/Tile";
 import MapRepository from "@/game-engine/map/MapRepository";
 import { SpriteType } from "@/models/SpriteConfig";
 import CoordinateService from "@/game-engine/CoordinateService";

@@ -5,7 +5,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import BattleService from "@/game-engine/battle/BattleService";
 import GameLoop from "@/game-engine/GameLoop";
 import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
-import AbilityService from "@/game-engine/ability/model/AbilityService";
+import AbilityService from "@/game-engine/ability/AbilityService";
 import PlayerService from "@/game-engine/PlayerService";
 import Ability from "@/game-engine/model/ability/Ability";
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";

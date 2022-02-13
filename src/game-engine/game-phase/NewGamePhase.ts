@@ -9,7 +9,7 @@ import MonsterService from "@/game-engine/monster/MonsterService";
 import MapService from "@/game-engine/map/MapService";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhase";
-import AbilityService from "@/game-engine/ability/model/AbilityService";
+import AbilityService from "@/game-engine/ability/AbilityService";
 import PhaseService from "@/game-engine/game-phase/PhaseService";
 import GameLoop from "@/game-engine/GameLoop";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";

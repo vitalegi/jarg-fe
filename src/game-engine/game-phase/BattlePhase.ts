@@ -3,21 +3,21 @@ import GameAssetService from "@/services/GameAssetService";
 import RendererService from "@/services/RendererService";
 import Container, { Service } from "typedi";
 import GameLoop from "@/game-engine/GameLoop";
-import MapContainer from "@/game-engine/map/MapContainer";
+import MapContainer from "@/game-engine/model/map/MapContainer";
 import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
 import GameApp from "@/game-engine/GameApp";
 import MapRepository from "@/game-engine/map/MapRepository";
 import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
 import PlayerService from "@/game-engine/PlayerService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
-import TurnManager from "@/game-engine/battle/turns/TurnManager";
-import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import BattleService from "@/game-engine/battle/BattleService";
 import DragScreenUserActionHandler from "@/game-engine/user-action-handler/DragScreenUserActionHandler";
 import CharacterStatsUserActionHandler from "@/game-engine/user-action-handler/CharacterStatsUserActionHandler";
 import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import TurnBoxDrawer from "@/game-engine/ui/TurnBoxDrawer";
+import TurnManager from "@/game-engine/battle/turns/TurnManager";
+import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
 
 interface Map {
   id: string;

@@ -1,5 +1,5 @@
 import MapRepository from "@/game-engine/map/MapRepository";
-import Tile from "@/game-engine/map/Tile";
+import Tile from "@/game-engine/model/map/Tile";
 import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
 import UserInput from "@/game-engine/user-action-handler/UserInput";
 import Point from "@/models/Point";

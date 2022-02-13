@@ -78,7 +78,7 @@
 
 <script lang="ts">
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import Stats from "@/game-engine/monster/stats/Stats";
+import Stats from "@/game-engine/model/monster/stats/Stats";
 import Vue from "vue";
 import StatsEditor from "@/editors/monster-index/StatsEditor.vue";
 import StatsOverview from "@/editors/monster-index/StatsOverview.vue";
@@ -88,7 +88,7 @@ import Container from "typedi";
 import StatsService from "@/game-engine/monster/stats/StatsService";
 import MonsterIndexAbilitiesLearnableEditor from "@/editors/monster-index/MonsterIndexAbilitiesLearnableEditor.vue";
 import MonsterIndexEvolutionsEditor from "@/editors/monster-index/MonsterIndexEvolutionsEditor.vue";
-import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
+import MonsterEvolution from "@/game-engine/model/monster/evolution/MonsterEvolution";
 import Ability from "@/game-engine/model/ability/Ability";
 import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
 

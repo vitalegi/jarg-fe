@@ -3,7 +3,7 @@ import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/monster/Monster";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
-import Stats from "@/game-engine/monster/stats/Stats";
+import Stats from "@/game-engine/model/monster/stats/Stats";
 import StatsService from "@/game-engine/monster/stats/StatsService";
 import TypeService from "@/game-engine/types/TypeService";
 import LoggerFactory from "@/logger/LoggerFactory";

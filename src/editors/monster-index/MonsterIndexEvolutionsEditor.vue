@@ -47,7 +47,7 @@
 <script lang="ts">
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
 import Ability from "@/game-engine/model/ability/Ability";
-import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
+import MonsterEvolution from "@/game-engine/model/monster/evolution/MonsterEvolution";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";

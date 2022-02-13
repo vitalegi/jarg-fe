@@ -1,5 +1,5 @@
-import HistoryTurn from "@/game-engine/battle/turns/HistoryTurn";
-import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
+import HistoryTurn from "@/game-engine/model/turn/HistoryTurn";
+import { PerformedAction } from "@/game-engine/model/turn/PerformedAction";
 import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/monster/Monster";
 import Point from "@/models/Point";

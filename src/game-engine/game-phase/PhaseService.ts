@@ -6,7 +6,7 @@ import NewGamePhase from "@/game-engine/game-phase/NewGamePhase";
 import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhase";
 import TowerModeEntryPhase from "@/game-engine/game-phase/TowerModeEntryPhase";
 import GameLoop from "@/game-engine/GameLoop";
-import MapContainer from "@/game-engine/map/MapContainer";
+import MapContainer from "@/game-engine/model/map/MapContainer";
 import SquaredTransitionDrawer from "@/game-engine/ui/scene-transition/SquaredTransitionDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";

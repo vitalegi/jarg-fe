@@ -43,7 +43,7 @@ import AbilitySearch from "@/editors/ability/AbilitySearch.vue";
 import ImportDialog from "@/components/ImportDialog.vue";
 import NumberUtil from "@/utils/NumberUtil";
 import StringUtil from "@/utils/StringUtil";
-import RechargeFamily from "@/game-engine/battle/RechargeFamily";
+import RechargeFamily from "@/game-engine/model/ability/RechargeFamily";
 import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
 import Ability from "@/game-engine/model/ability/Ability";
 
