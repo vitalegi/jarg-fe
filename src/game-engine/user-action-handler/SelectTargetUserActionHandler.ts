@@ -1,9 +1,9 @@
+import MapRepository from "@/game-engine/map/MapRepository";
+import Tile from "@/game-engine/map/Tile";
+import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
+import UserInput from "@/game-engine/user-action-handler/UserInput";
 import Point from "@/models/Point";
 import Container from "typedi";
-import MapRepository from "../map/MapRepository";
-import Tile from "../map/Tile";
-import UserActionHandler from "./UserActionHandler";
-import UserInput from "./UserInput";
 
 export default class SelectTargetUserActionHandler extends UserActionHandler {
   protected mapRepository = Container.get<MapRepository>(MapRepository);

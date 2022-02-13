@@ -1,10 +1,10 @@
-import AbilityService from "@/game-engine/monster-action/ability/AbilityService";
+import AbilityService from "@/game-engine/ability/model/AbilityService";
 import Monster from "@/game-engine/monster/Monster";
+import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
+import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
+import StatsService from "@/game-engine/monster/stats/StatsService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
-import MonsterIndexService from "../MonsterIndexService";
-import StatsService from "../stats/StatsService";
-import MonsterEvolution from "./MonsterEvolution";
 
 @Service()
 export default class MonsterEvolutionService {

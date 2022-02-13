@@ -1,12 +1,12 @@
 import Monster from "@/game-engine/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
-import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
-import CoordinateService from "../CoordinateService";
-import MapRepository from "../map/MapRepository";
-import GameApp from "../GameApp";
+import Drawer from "@/game-engine/ui/Drawer";
+import MapRepository from "@/game-engine/map/MapRepository";
+import GameApp from "@/game-engine/GameApp";
+import CoordinateService from "@/game-engine/CoordinateService";
 
 export default class MonsterMoveDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);

@@ -1,13 +1,13 @@
 import Container from "typedi";
-import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import WindowSizeProxy from "../WindowSizeProxy";
-import FontService from "./FontService";
-import MapRepository from "../map/MapRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
-import Tick from "../battle/turns/Tick";
-import Monster from "../monster/Monster";
-import TurnManagerEstimator from "../battle/turns/TurnManagerEstimator";
+import Drawer from "@/game-engine/ui/Drawer";
+import TurnManagerEstimator from "@/game-engine/battle/turns/TurnManagerEstimator";
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import FontService from "@/game-engine/ui/FontService";
+import MapRepository from "@/game-engine/map/MapRepository";
+import Tick from "@/game-engine/battle/turns/Tick";
+import Monster from "@/game-engine/monster/Monster";
 
 export default class TurnBoxDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.TurnBoxDrawer");

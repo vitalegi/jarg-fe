@@ -1,6 +1,6 @@
+import RandomEncounter from "@/game-engine/map/RandomEncounter";
 import Point from "@/models/Point";
 import { asInt } from "@/utils/JsonUtil";
-import RandomEncounter from "./RandomEncounter";
 
 export default class LocalizedEncounters {
   area: Point[] = [];

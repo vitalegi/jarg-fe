@@ -1,5 +1,5 @@
+import Candidates from "@/game-engine/map/tower-mode/Candidates";
 import { asInt, asIntNullable, asString } from "@/utils/JsonUtil";
-import Candidates from "./Candidates";
 
 export default class TowerModeConfig {
   preconditions: { level_ge: number; level_le: null | number } = {

@@ -4,14 +4,14 @@ import SpriteConfig from "@/models/SpriteConfig";
 import RandomService from "@/services/RandomService";
 import NumberUtil from "@/utils/NumberUtil";
 import Container, { Service } from "typedi";
-import TileRepository from "../../repositories/TileRepository";
-import LocalizedEncounters from "../LocalizedEncounters";
-import MapModel from "../MapModel";
-import RandomEncounter from "../RandomEncounter";
-import Tile from "../Tile";
-import GameAppDataLoader from "../../GameAppDataLoader";
 import TowerModeRepository from "@/game-engine/repositories/TowerModeRepository";
-import TowerModeConfig from "./TowerModeConfig";
+import TileRepository from "@/game-engine/repositories/TileRepository";
+import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
+import MapModel from "@/game-engine/map/MapModel";
+import Tile from "@/game-engine/map/Tile";
+import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
+import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
 
 @Service()
 export default class TowerMapService {

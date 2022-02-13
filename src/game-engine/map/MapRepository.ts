@@ -1,8 +1,8 @@
+import MapContainer from "@/game-engine/map/MapContainer";
+import Tile from "@/game-engine/map/Tile";
 import Monster from "@/game-engine/monster/Monster";
 import Point from "@/models/Point";
 import { Service } from "typedi";
-import MapContainer from "./MapContainer";
-import Tile from "./Tile";
 
 @Service()
 export default class MapRepository {

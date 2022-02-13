@@ -1,8 +1,8 @@
 import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
 import Monster from "@/game-engine/monster/Monster";
-import PlayerService from "../PlayerService";
-import GameConfig from "../GameConfig";
+import GameConfig from "@/game-engine/GameConfig";
+import PlayerService from "@/game-engine/PlayerService";
 
 @Service()
 export default class HealthBarService {

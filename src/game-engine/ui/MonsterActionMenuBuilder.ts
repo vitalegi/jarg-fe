@@ -1,20 +1,20 @@
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import Monster from "@/game-engine/monster/Monster";
 import Container, { Service } from "typedi";
-import Ability from "../ability/Ability";
-import AbilityExecutor from "../AbilityExecutor";
-import MonsterMove from "../MonsterMove";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import MapRepository from "@/game-engine/map/MapRepository";
 import BattleService from "@/game-engine/battle/BattleService";
-import SelectTargetMove from "../SelectTargetMove";
-import SelectTargetAbility from "../SelectTargetAbility";
 import LoggerFactory from "@/logger/LoggerFactory";
-import AbilityLearned from "../ability/AbilityLearned";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import { gameLabel } from "@/services/LocalizationService";
-import SelectTargetCatch from "../SelectTargetCatch";
-import MonsterCatch from "../MonsterCatch";
+import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
+import SelectTargetMove from "@/game-engine/ability/SelectTargetMove";
+import MonsterMove from "@/game-engine/ability/MonsterMove";
+import SelectTargetCatch from "@/game-engine/ability/SelectTargetCatch";
+import MonsterCatch from "@/game-engine/ability/MonsterCatch";
+import Ability from "@/game-engine/model/ability/Ability";
+import SelectTargetAbility from "@/game-engine/ability/SelectTargetAbility";
+import AbilityExecutor from "@/game-engine/ability/AbilityExecutor";
 
 @Service()
 export default class MonsterActionMenuBuilder {

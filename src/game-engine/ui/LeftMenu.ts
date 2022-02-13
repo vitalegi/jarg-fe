@@ -1,12 +1,12 @@
 import Container from "typedi";
 import * as PIXI from "pixi.js";
-import FrameImpl from "./FrameImpl";
-import DetectEvent from "./DetectEvent";
 import { TextStyle } from "pixi.js";
-import GameApp from "../GameApp";
-import FontService from "./FontService";
 import UuidUtil from "@/utils/UuidUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
+import FontService from "@/game-engine/ui/FontService";
+import GameApp from "@/game-engine/GameApp";
+import FrameImpl from "@/game-engine/ui/FrameImpl";
+import DetectEvent from "@/game-engine/ui/DetectEvent";
 
 export class MenuEntry {
   label: string;

@@ -1,9 +1,9 @@
 import { Animation, AnimationSrc } from "@/models/Animation";
 import Stats from "@/game-engine/monster/stats/Stats";
-import AbilityLearnable from "../monster-action/ability/AbilityLearnable";
-import MonsterEvolution from "./monster-evolution/MonsterEvolution";
-import TypeConstants from "../types/TypeConstants";
 import { asString } from "@/utils/JsonUtil";
+import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
+import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
+import TypeConstants from "@/game-engine/types/TypeConstants";
 
 export default class MonsterIndex {
   monsterId = "";

@@ -1,7 +1,7 @@
 import Monster from "@/game-engine/monster/Monster";
+import StatsService from "@/game-engine/monster/stats/StatsService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
-import StatsService from "./stats/StatsService";
 
 @Service()
 export class LevelUpService {

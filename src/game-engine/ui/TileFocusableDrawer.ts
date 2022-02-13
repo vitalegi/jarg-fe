@@ -1,10 +1,10 @@
 import Container from "typedi";
 import * as PIXI from "pixi.js";
-import Drawer from "./Drawer";
-import GameApp from "../GameApp";
-import Tile from "../map/Tile";
-import CoordinateService from "../CoordinateService";
-import GameConfig from "../GameConfig";
+import Drawer from "@/game-engine/ui/Drawer";
+import CoordinateService from "@/game-engine/CoordinateService";
+import GameApp from "@/game-engine/GameApp";
+import Tile from "@/game-engine/map/Tile";
+import GameConfig from "@/game-engine/GameConfig";
 
 export default class TileFocusableDrawer extends Drawer {
   protected static NAME = "TileFocusableDrawer";

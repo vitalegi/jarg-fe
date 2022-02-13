@@ -1,6 +1,6 @@
+import Move from "@/models/Move";
+import Point from "@/models/Point";
 import { asString } from "@/utils/JsonUtil";
-import Move from "./Move";
-import Point from "./Point";
 
 export class CharacterType {
   public static MONSTER = "MONSTER";

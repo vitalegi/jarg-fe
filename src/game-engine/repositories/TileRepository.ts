@@ -1,6 +1,6 @@
+import MapContainer from "@/game-engine/map/MapContainer";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
-import MapContainer from "../map/MapContainer";
 
 @Service()
 export default class TileRepository {

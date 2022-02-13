@@ -1,8 +1,8 @@
+import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
+import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
+import Stats from "@/game-engine/monster/stats/Stats";
+import Character from "@/models/Character";
 import { asInt, asString } from "@/utils/JsonUtil";
-import Character from "../../models/Character";
-import AbilityLearned from "../monster-action/ability/AbilityLearned";
-import ComputedEffect from "../monster-action/computed-effect/ComputedEffect";
-import Stats from "./stats/Stats";
 
 export default class Monster extends Character {
   ownerId: string | null = "";

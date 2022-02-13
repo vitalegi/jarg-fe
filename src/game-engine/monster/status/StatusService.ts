@@ -1,7 +1,7 @@
-import ComputedEffectUtil from "@/game-engine/monster-action/computed-effect/ComputedEffectUtil";
+import ComputedEffectUtil from "@/game-engine/ability/computed-effect/ComputedEffectUtil";
+import Monster from "@/game-engine/monster/Monster";
+import StatusContants from "@/game-engine/monster/status/StatusContants";
 import { Service } from "typedi";
-import Monster from "../Monster";
-import StatusContants from "./StatusContants";
 
 @Service()
 export default class StatusService {

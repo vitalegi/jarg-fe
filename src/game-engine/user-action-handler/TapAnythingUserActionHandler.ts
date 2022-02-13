@@ -1,5 +1,5 @@
-import UserActionHandler from "./UserActionHandler";
-import UserInput from "./UserInput";
+import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
+import UserInput from "@/game-engine/user-action-handler/UserInput";
 
 export default class TapAnythingUserActionHandler extends UserActionHandler {
   public getName(): string {

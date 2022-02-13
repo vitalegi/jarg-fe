@@ -1,8 +1,8 @@
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
+import UserInput from "@/game-engine/user-action-handler/UserInput";
 import Point from "@/models/Point";
 import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
-import UserInput from "./UserInput";
 
 export default abstract class UserActionHandler {
   private _uuid = UuidUtil.nextId();

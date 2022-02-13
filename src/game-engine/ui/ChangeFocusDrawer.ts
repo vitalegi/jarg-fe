@@ -1,13 +1,13 @@
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
-import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
-import CoordinateService from "../CoordinateService";
-import MapRepository from "../map/MapRepository";
-import GameApp from "../GameApp";
-import WindowSizeProxy from "../WindowSizeProxy";
-import GameConfig from "../GameConfig";
+import Drawer from "@/game-engine/ui/Drawer";
+import MapRepository from "@/game-engine/map/MapRepository";
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import CoordinateService from "@/game-engine/CoordinateService";
+import GameApp from "@/game-engine/GameApp";
+import GameConfig from "@/game-engine/GameConfig";
 
 export default class ChangeFocusDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);

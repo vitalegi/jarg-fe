@@ -1,9 +1,9 @@
+import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
+import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import Tile from "@/game-engine/map/Tile";
 import Point from "@/models/Point";
 import ArrayUtil from "@/utils/ArrayUtil";
 import NumberUtil from "@/utils/NumberUtil";
-import LocalizedEncounters from "./LocalizedEncounters";
-import RandomEncounter from "./RandomEncounter";
-import Tile from "./Tile";
 
 export default class MapModel {
   tiles: Tile[] = [];

@@ -1,5 +1,5 @@
+import MapIndex from "@/game-engine/map/MapIndex";
 import { Service } from "typedi";
-import MapIndex from "./MapIndex";
 
 @Service()
 export default class MapModelRepository {

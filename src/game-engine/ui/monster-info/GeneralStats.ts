@@ -1,14 +1,14 @@
-import ComputedEffectUtil from "@/game-engine/monster-action/computed-effect/ComputedEffectUtil";
+import ComputedEffectUtil from "@/game-engine/ability/computed-effect/ComputedEffectUtil";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import Monster from "@/game-engine/monster/Monster";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import FontService from "@/game-engine/ui/FontService";
 import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import LoggerFactory from "@/logger/LoggerFactory";
 import ArrayUtil from "@/utils/ArrayUtil";
 import NumberUtil from "@/utils/NumberUtil";
 import * as PIXI from "pixi.js";
 import Container from "typedi";
-import FontService from "../FontService";
 
 export default class GeneralStats {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfo.GeneralStats");

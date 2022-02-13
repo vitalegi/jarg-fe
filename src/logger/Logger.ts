@@ -1,5 +1,5 @@
-import LoggerCore from "./LoggerCore";
-import LoggerLevel from "./LoggerLevel";
+import LoggerCore from "@/logger/LoggerCore";
+import LoggerLevel from "@/logger/LoggerLevel";
 
 export default class Logger {
   private name;

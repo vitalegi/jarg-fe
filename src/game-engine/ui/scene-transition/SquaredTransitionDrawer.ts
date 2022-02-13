@@ -1,12 +1,12 @@
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
-import Drawer from "../Drawer";
 import * as PIXI from "pixi.js";
-import GameApp from "../../GameApp";
 import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import CONFIG from "@/assets/transitions/squared-transition-config.json";
 import NumberUtil from "@/utils/NumberUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Drawer from "@/game-engine/ui/Drawer";
+import GameApp from "@/game-engine/GameApp";
 
 export default class SquaredTransitionDrawer extends Drawer {
   logger = LoggerFactory.getLogger(

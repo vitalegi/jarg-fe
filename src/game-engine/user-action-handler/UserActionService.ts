@@ -3,8 +3,8 @@ import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
 import UserInput from "@/game-engine/user-action-handler/UserInput";
-import DetectEvent from "../ui/DetectEvent";
 import LoggerFactory from "@/logger/LoggerFactory";
+import DetectEvent from "@/game-engine/ui/DetectEvent";
 
 @Service()
 export default class UserActionService {

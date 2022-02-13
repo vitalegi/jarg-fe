@@ -1,6 +1,6 @@
+import TypeRepository from "@/game-engine/repositories/TypeRepository";
+import TypeConstants from "@/game-engine/types/TypeConstants";
 import Container, { Service } from "typedi";
-import TypeRepository from "../repositories/TypeRepository";
-import TypeConstants from "./TypeConstants";
 
 @Service()
 export default class TypeService {

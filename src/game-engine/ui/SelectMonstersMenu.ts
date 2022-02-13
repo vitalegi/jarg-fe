@@ -1,6 +1,6 @@
+import Monster from "@/game-engine/monster/Monster";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import { gameLabel } from "@/services/LocalizationService";
-import Monster from "../monster/Monster";
-import LeftMenu, { MenuEntry } from "./LeftMenu";
 
 export default class SelectMonstersMenu {
   monsters;

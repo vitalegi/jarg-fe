@@ -4,10 +4,10 @@ import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import LoggerFactory from "@/logger/LoggerFactory";
 import * as PIXI from "pixi.js";
 import Container from "typedi";
-import FontService from "../FontService";
 import { gameLabel } from "@/services/LocalizationService";
-import AbilityLearned from "@/game-engine/monster-action/ability/AbilityLearned";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
+import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
+import FontService from "@/game-engine/ui/FontService";
 
 export default class Abilities {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfo.GeneralStats");

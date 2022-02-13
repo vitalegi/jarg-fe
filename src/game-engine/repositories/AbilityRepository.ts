@@ -1,5 +1,5 @@
+import Ability from "@/game-engine/model/ability/Ability";
 import { Service } from "typedi";
-import Ability from "../monster-action/ability/Ability";
 
 @Service()
 export default class AbilityRepository {

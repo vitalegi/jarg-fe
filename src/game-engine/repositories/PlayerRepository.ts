@@ -1,8 +1,8 @@
+import Monster from "@/game-engine/monster/Monster";
+import MonsterData from "@/game-engine/monster/MonsterData";
+import PlayerData from "@/game-engine/PlayerData";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { Service } from "typedi";
-import Monster from "../monster/Monster";
-import MonsterData from "../monster/MonsterData";
-import PlayerData from "../PlayerData";
 
 @Service()
 export default class PlayerRepository {

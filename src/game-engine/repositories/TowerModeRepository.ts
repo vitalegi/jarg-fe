@@ -1,5 +1,5 @@
+import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
 import { Service } from "typedi";
-import TowerModeConfig from "../map/tower-mode/TowerModeConfig";
 
 @Service()
 export default class TowerModeRepository {

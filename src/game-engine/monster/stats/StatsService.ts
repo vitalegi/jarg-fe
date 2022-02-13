@@ -1,11 +1,11 @@
-import ComputedEffect from "@/game-engine/monster-action/computed-effect/ComputedEffect";
-import ComputedEffectUtil from "@/game-engine/monster-action/computed-effect/ComputedEffectUtil";
+import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
+import ComputedEffectUtil from "@/game-engine/ability/computed-effect/ComputedEffectUtil";
+import Monster from "@/game-engine/monster/Monster";
+import Stats from "@/game-engine/monster/stats/Stats";
+import StatsConstants from "@/game-engine/monster/stats/StatsContants";
+import StatusService from "@/game-engine/monster/status/StatusService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
-import Monster from "../Monster";
-import StatusService from "../status/StatusService";
-import Stats from "./Stats";
-import StatsConstants from "./StatsContants";
 
 @Service()
 export default class StatsService {

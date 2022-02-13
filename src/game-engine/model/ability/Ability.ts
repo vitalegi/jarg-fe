@@ -1,15 +1,14 @@
+import AbstractProcessor from "@/game-engine/ability/ability-processor/AbstractProcessor";
+import DefaultProcessor from "@/game-engine/ability/ability-processor/DefaultProcessor";
+import AbilityTarget from "@/game-engine/ability/ability-target/AbilityTarget";
+import Effect from "@/game-engine/ability/effects/effect/Effect";
+import EffectFactory from "@/game-engine/ability/effects/effect/EffectFactory";
+import Usages from "@/game-engine/ability/Usages";
+import RechargeFamily from "@/game-engine/battle/RechargeFamily";
+import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import TypeConstants from "@/game-engine/types/TypeConstants";
 import { LocalizationUtil } from "@/services/LocalizationService";
 import { asBoolean, asInt, asString } from "@/utils/JsonUtil";
-import NumberUtil from "@/utils/NumberUtil";
-import RechargeFamily from "../../battle/RechargeFamily";
-import StatsConstants from "../../monster/stats/StatsContants";
-import AbstractProcessor from "../ability-processor/AbstractProcessor";
-import DefaultProcessor from "../ability-processor/DefaultProcessor";
-import AbilityTarget from "../ability-target/AbilityTarget";
-import Effect from "../effects/effect/Effect";
-import EffectFactory from "../effects/effect/EffectFactory";
-import Usages from "../Usages";
 
 export default class Ability {
   id = "";

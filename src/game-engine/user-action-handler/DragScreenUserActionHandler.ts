@@ -1,9 +1,9 @@
+import GameApp from "@/game-engine/GameApp";
+import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
+import UserInput from "@/game-engine/user-action-handler/UserInput";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import Container from "typedi";
-import GameApp from "../GameApp";
-import UserActionHandler from "./UserActionHandler";
-import UserInput from "./UserInput";
 
 export default class DragScreenUserActionHandler extends UserActionHandler {
   logger = LoggerFactory.getLogger(

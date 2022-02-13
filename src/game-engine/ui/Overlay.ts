@@ -1,12 +1,12 @@
+import GameApp from "@/game-engine/GameApp";
+import DetectEvent from "@/game-engine/ui/DetectEvent";
+import Drawer from "@/game-engine/ui/Drawer";
+import FontService from "@/game-engine/ui/FontService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import * as PIXI from "pixi.js";
 import { InteractionEvent } from "pixi.js";
 import Container from "typedi";
-import GameApp from "../GameApp";
-import DetectEvent from "./DetectEvent";
-import Drawer from "./Drawer";
-import FontService from "./FontService";
 
 export default class Overlay extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.Overlay");

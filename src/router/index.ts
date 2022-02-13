@@ -1,10 +1,9 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/views/Home.vue";
 import store from "@/store";
 import LoggerFactory from "@/logger/LoggerFactory";
 import CookieUtil from "@/utils/CookieUtil";
-import EncryptionUtil from "@/utils/EncryptionUtil";
 
 Vue.use(VueRouter);
 

@@ -1,5 +1,5 @@
-import NumberUtil from "./NumberUtil";
-import ObjectUtil from "./ObjectUtil";
+import NumberUtil from "@/utils/NumberUtil";
+import ObjectUtil from "@/utils/ObjectUtil";
 
 export const asIntNullable = (value: any): number | null => {
   if (ObjectUtil.isNullOrUndefined(value)) {

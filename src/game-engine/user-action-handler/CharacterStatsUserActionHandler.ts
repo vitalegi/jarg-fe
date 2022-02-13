@@ -1,11 +1,11 @@
+import GameApp from "@/game-engine/GameApp";
+import GameLoop from "@/game-engine/GameLoop";
+import MapRepository from "@/game-engine/map/MapRepository";
+import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
+import MonsterInfoDrawer from "@/game-engine/ui/MonsterInfoDrawer";
+import UserActionHandler from "@/game-engine/user-action-handler/UserActionHandler";
+import UserInput from "@/game-engine/user-action-handler/UserInput";
 import Container from "typedi";
-import GameApp from "../GameApp";
-import GameLoop from "../GameLoop";
-import MapRepository from "../map/MapRepository";
-import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
-import MonsterInfoDrawer from "../ui/MonsterInfoDrawer";
-import UserActionHandler from "./UserActionHandler";
-import UserInput from "./UserInput";
 
 export default class CharacterStatsUserActionHandler extends UserActionHandler {
   protected gameLoop = Container.get<GameLoop>(GameLoop);

@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 import TimeUtil from "@/utils/TimeUtil";
 import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
-import WindowSizeProxy from "../WindowSizeProxy";
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 
 // TODO delete and use standard WindowProxy
 class IsWindowSizeChanged {

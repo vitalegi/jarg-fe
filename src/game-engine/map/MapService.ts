@@ -1,16 +1,15 @@
+import AbilityService from "@/game-engine/ability/model/AbilityService";
+import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
+import MapContainer from "@/game-engine/map/MapContainer";
+import MapModel from "@/game-engine/map/MapModel";
+import RandomEncounter from "@/game-engine/map/RandomEncounter";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import Monster from "@/game-engine/monster/Monster";
+import MonsterService from "@/game-engine/monster/MonsterService";
+import TileRepository from "@/game-engine/repositories/TileRepository";
 import Point from "@/models/Point";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
-import AbilityService from "../monster-action/ability/AbilityService";
-import { LevelUpService } from "../monster/LevelUpService";
-import Monster from "../monster/Monster";
-import MonsterService from "../monster/MonsterService";
-import TileRepository from "../repositories/TileRepository";
-import LocalizedEncounters from "./LocalizedEncounters";
-import MapContainer from "./MapContainer";
-import MapIndex from "./MapIndex";
-import MapModel from "./MapModel";
-import RandomEncounter from "./RandomEncounter";
 
 @Service()
 export default class MapService {

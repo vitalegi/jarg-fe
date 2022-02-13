@@ -1,4 +1,4 @@
-import Appender from "./Appender";
+import Appender from "@/logger/appender/Appender";
 
 export default class ConsoleAppender implements Appender {
   append(log: string): void {

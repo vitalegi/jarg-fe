@@ -1,6 +1,6 @@
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import Container, { Service } from "typedi";
-import MonsterIndexRepository from "../repositories/MonsterIndexRepository";
-import MonsterIndex from "./MonsterIndex";
 
 @Service()
 export default class MonsterIndexService {

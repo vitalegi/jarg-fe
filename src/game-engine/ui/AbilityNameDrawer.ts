@@ -1,10 +1,10 @@
 import Container from "typedi";
 import * as PIXI from "pixi.js";
-import Drawer from "./Drawer";
 import TimeUtil from "@/utils/TimeUtil";
-import GameApp from "../GameApp";
-import FontService from "./FontService";
 import LoggerFactory from "@/logger/LoggerFactory";
+import FontService from "@/game-engine/ui/FontService";
+import Drawer from "@/game-engine/ui/Drawer";
+import GameApp from "@/game-engine/GameApp";
 
 export default class AbilityNameDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.AbilityNameDrawer");

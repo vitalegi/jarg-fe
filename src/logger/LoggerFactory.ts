@@ -1,5 +1,5 @@
-import Logger from "./Logger";
-import LoggerCore from "./LoggerCore";
+import Logger from "@/logger/Logger";
+import LoggerCore from "@/logger/LoggerCore";
 
 export default class LoggerFactory {
   private static core = new LoggerCore();

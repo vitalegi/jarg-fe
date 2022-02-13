@@ -1,14 +1,13 @@
-import MapContainer from "@/game-engine/map/MapContainer";
 import SpriteConfig from "@/models/SpriteConfig";
 import { Service } from "typedi";
-import { BackendWebService } from "./BackendService";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
 import { Animation } from "@/models/Animation";
 import Bonus from "@/game-engine/types/Bonus";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import MapModel from "@/game-engine/map/MapModel";
 import MapIndex from "@/game-engine/map/MapIndex";
 import TowerModeConfig from "@/game-engine/map/tower-mode/TowerModeConfig";
+import { BackendWebService } from "@/services/BackendService";
 
 @Service()
 export default class GameAssetService {

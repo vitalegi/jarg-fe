@@ -2,7 +2,6 @@ import Monster from "@/game-engine/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
 import Tile from "@/game-engine/map/Tile";
-import GameAssetService from "./GameAssetService";
 import MapRepository from "@/game-engine/map/MapRepository";
 import { SpriteType } from "@/models/SpriteConfig";
 import CoordinateService from "@/game-engine/CoordinateService";
@@ -12,6 +11,7 @@ import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import GameConfig from "@/game-engine/GameConfig";
 import LoggerFactory from "@/logger/LoggerFactory";
 import TileRepository from "@/game-engine/repositories/TileRepository";
+import GameAssetService from "@/services/GameAssetService";
 
 export class Asset {
   name = "";

@@ -1,5 +1,5 @@
-import LoggerLevel from "./LoggerLevel";
 import RULES from "@/assets/logger.json";
+import LoggerLevel from "@/logger/LoggerLevel";
 
 export default class LoggerEnabler {
   protected cache = new Map<string, number>();

@@ -1,5 +1,5 @@
+import Bonus from "@/game-engine/types/Bonus";
 import { Service } from "typedi";
-import Bonus from "../types/Bonus";
 
 @Service()
 export default class TypeRepository {

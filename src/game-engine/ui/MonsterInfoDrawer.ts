@@ -1,20 +1,18 @@
 import Monster from "@/game-engine/monster/Monster";
-import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import FrameImpl from "./FrameImpl";
 import Container from "typedi";
-import WindowSizeProxy from "../WindowSizeProxy";
-import MonsterIndex from "../monster/MonsterIndex";
-import FontService from "./FontService";
-import { LevelUpService } from "../monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";
-import AbilityLearned from "../monster-action/ability/AbilityLearned";
-import AbilityRepository from "../repositories/AbilityRepository";
-import TapAnythingUserActionHandler from "../user-action-handler/TapAnythingUserActionHandler";
-import UserActionService from "../user-action-handler/UserActionService";
-import { gameLabel } from "@/services/LocalizationService";
-import GeneralStats from "./monster-info/GeneralStats";
-import Abilities from "./monster-info/Abilities";
+import Drawer from "@/game-engine/ui/Drawer";
+import FontService from "@/game-engine/ui/FontService";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import UserActionService from "@/game-engine/user-action-handler/UserActionService";
+import FrameImpl from "@/game-engine/ui/FrameImpl";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import TapAnythingUserActionHandler from "@/game-engine/user-action-handler/TapAnythingUserActionHandler";
+import GeneralStats from "@/game-engine/ui/monster-info/GeneralStats";
+import Abilities from "@/game-engine/ui/monster-info/Abilities";
 
 export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");

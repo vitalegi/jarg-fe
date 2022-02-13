@@ -1,12 +1,12 @@
 import Monster from "@/game-engine/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
-import Drawer from "./Drawer";
 import * as PIXI from "pixi.js";
-import HealthBarService from "../monster/HealthBarService";
-import MapRepository from "../map/MapRepository";
-import GameApp from "../GameApp";
-import GameLoop from "../GameLoop";
+import Drawer from "@/game-engine/ui/Drawer";
+import MapRepository from "@/game-engine/map/MapRepository";
+import GameApp from "@/game-engine/GameApp";
+import HealthBarService from "@/game-engine/monster/HealthBarService";
+import GameLoop from "@/game-engine/GameLoop";
 
 export default class HealthBarUpdateDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);

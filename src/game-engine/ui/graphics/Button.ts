@@ -1,8 +1,8 @@
 import * as PIXI from "pixi.js";
 import CONFIG from "@/assets/styles/button.json";
-import DetectEvent from "../DetectEvent";
 import NumberUtil from "@/utils/NumberUtil";
 import { LINE_JOIN } from "pixi.js";
+import DetectEvent from "@/game-engine/ui/DetectEvent";
 
 declare interface Border extends Partial<PIXI.ILineStyleOptions> {
   radius?: number;

@@ -1,6 +1,6 @@
-import ConsoleAppender from "./appender/ConsoleAppender";
-import LoggerEnabler from "./LoggerEnabler";
-import LoggerLevel from "./LoggerLevel";
+import ConsoleAppender from "@/logger/appender/ConsoleAppender";
+import LoggerEnabler from "@/logger/LoggerEnabler";
+import LoggerLevel from "@/logger/LoggerLevel";
 
 export default class LoggerCore {
   protected appender = new ConsoleAppender();
