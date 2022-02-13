@@ -18,13 +18,11 @@ export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
   protected static NAME = "MonsterInfoDrawer";
 
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
-  protected fontService = Container.get<FontService>(FontService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
+  protected screenProxy = Container.get(ScreenProxy);
+  protected fontService = Container.get(FontService);
+  protected levelUpService = Container.get(LevelUpService);
+  protected abilityRepository = Container.get(AbilityRepository);
+  protected userActionService = Container.get(UserActionService);
 
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;

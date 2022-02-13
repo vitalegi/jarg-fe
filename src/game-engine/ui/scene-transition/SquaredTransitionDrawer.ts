@@ -12,8 +12,8 @@ export default class SquaredTransitionDrawer extends Drawer {
   logger = LoggerFactory.getLogger(
     "GameEngine.UI.SceneTransition.SquaredTransitionDrawer"
   );
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
+  protected gameApp = Container.get(GameApp);
+  protected screenProxy = Container.get(ScreenProxy);
 
   protected container;
 

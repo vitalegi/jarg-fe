@@ -11,12 +11,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     gameMode: true,
-    monsterIndexEditor: Container.get<MonsterIndexEditorRepository>(
-      MonsterIndexEditorRepository
-    ).load(),
-    abilitiesEditor: Container.get<AbilityEditorRepository>(
-      AbilityEditorRepository
-    ).load(),
+    monsterIndexEditor: Container.get(MonsterIndexEditorRepository).load(),
+    abilitiesEditor: Container.get(AbilityEditorRepository).load(),
   },
   mutations: {
     setGameMode(state: any, gameMode: boolean) {
@@ -27,16 +23,12 @@ export default new Vuex.Store({
       monsterIndexEditor: MonsterIndex[]
     ): void {
       const monsters = monsterIndexEditor.map((m) => m.clone());
-      const repo = Container.get<MonsterIndexEditorRepository>(
-        MonsterIndexEditorRepository
-      );
+      const repo = Container.get(MonsterIndexEditorRepository);
       repo.save(monsters);
       state.monsterIndexEditor = monsters;
     },
     setAbilitiesEditor(state: any, abilities: Ability[]): void {
-      const repo = Container.get<AbilityEditorRepository>(
-        AbilityEditorRepository
-      );
+      const repo = Container.get(AbilityEditorRepository);
       repo.save(abilities);
       state.abilitiesEditor = abilities;
     },

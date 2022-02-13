@@ -12,10 +12,9 @@ export default class MonsterEvolutionService {
     "GameEngine.Monster.MonsterEvolution.MonsterEvolutionService"
   );
 
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected statsService = Container.get<StatsService>(StatsService);
+  protected monsterIndexService = Container.get(MonsterIndexService);
+  protected abilityService = Container.get(AbilityService);
+  protected statsService = Container.get(StatsService);
 
   public canEvolve(monster: Monster): boolean {
     return this.getAvailableEvolutions(monster).length > 0;

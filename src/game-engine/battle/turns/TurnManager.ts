@@ -19,9 +19,8 @@ const DECIMAL_PRECISION = 0.00001;
 export default class TurnManager {
   logger = LoggerFactory.getLogger("GameEngine.Battle.TurnManager");
 
-  protected randomService = Container.get<RandomService>(RandomService);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
+  protected randomService = Container.get(RandomService);
+  protected historyRepository = Container.get(HistoryRepository);
 
   // TODO retrieve by mapRepository
   protected monsters: Monster[] = [];

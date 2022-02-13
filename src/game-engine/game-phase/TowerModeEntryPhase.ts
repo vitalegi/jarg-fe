@@ -15,25 +15,23 @@ import TowerMapService from "@/game-engine/map/TowerMapService";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
 import Monster from "@/game-engine/model/monster/Monster";
+import TransitionFactory from "@/game-engine/ui/scene-transition/TransitionFactory";
 
 @Service()
 export default class TowerModeEntryPhase extends AbstractPhase<never> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.TowerModeEntryPhase");
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected playerRepository =
-    Container.get<PlayerRepository>(PlayerRepository);
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected mapService = Container.get<MapService>(MapService);
-  protected phaseService = Container.get<PhaseService>(PhaseService);
-  protected statsService = Container.get<StatsService>(StatsService);
-  protected mapModelRepository =
-    Container.get<MapModelRepository>(MapModelRepository);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  private towerMapService = Container.get<TowerMapService>(TowerMapService);
-  protected playerService = Container.get<PlayerService>(PlayerService);
+  protected monsterIndexService = Container.get(MonsterIndexService);
+  protected playerRepository = Container.get(PlayerRepository);
+  protected monsterService = Container.get(MonsterService);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected mapService = Container.get(MapService);
+  protected phaseService = Container.get(PhaseService);
+  protected statsService = Container.get(StatsService);
+  protected mapModelRepository = Container.get(MapModelRepository);
+  protected gameLoop = Container.get(GameLoop);
+  private towerMapService = Container.get(TowerMapService);
+  protected playerService = Container.get(PlayerService);
+  private transitionFactory = Container.get(TransitionFactory);
 
   public getName(): string {
     return "TowerModeEntryPhase";
@@ -104,6 +102,7 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())
     );
     map.monsters.push(...monsters);
+    await this.transitionFactory.transition("squared");
     this.phaseService.goToBattle(
       map,
       `${level}`,
@@ -114,12 +113,14 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
 
   protected async onWin(level: number, monsters: Monster[]): Promise<void> {
     this.logger.info("Player wins");
+    await this.transitionFactory.transition("squared");
     this.playerService.completeTowerMap(level);
     monsters.forEach((monster) => this.playerService.updateMonster(monster));
     this.phaseService.goToSelectNextBattle();
   }
   protected async onLoss(): Promise<void> {
     this.logger.info(`Player is defeated, end.`);
+    await this.transitionFactory.transition("squared");
     this.phaseService.goToGameOver();
   }
 }

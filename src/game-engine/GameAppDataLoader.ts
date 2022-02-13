@@ -9,7 +9,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import { AnimationSrc } from "@/models/Animation";
 import SpriteConfig from "@/models/SpriteConfig";
 import GameAssetService from "@/services/GameAssetService";
-import RendererService, { Asset } from "@/services/RendererService";
+import RendererService, { Asset } from "@/game-engine/ui/RendererService";
 import ArrayUtil from "@/utils/ArrayUtil";
 import Container, { Service } from "typedi";
 
@@ -18,20 +18,14 @@ export default class GameAppDataLoader {
   logger = LoggerFactory.getLogger("GameEngine.GameAppDataLoader");
   protected _loaded = new Array<string>();
 
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
-    MonsterIndexRepository
-  );
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
-  protected typeRepository = Container.get<TypeRepository>(TypeRepository);
-  protected tileRepository = Container.get<TileRepository>(TileRepository);
-  protected rendererService = Container.get<RendererService>(RendererService);
-  protected mapModelRepository =
-    Container.get<MapModelRepository>(MapModelRepository);
-  protected towerModeRepository =
-    Container.get<TowerModeRepository>(TowerModeRepository);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected monsterIndexRepository = Container.get(MonsterIndexRepository);
+  protected abilityRepository = Container.get(AbilityRepository);
+  protected typeRepository = Container.get(TypeRepository);
+  protected tileRepository = Container.get(TileRepository);
+  protected rendererService = Container.get(RendererService);
+  protected mapModelRepository = Container.get(MapModelRepository);
+  protected towerModeRepository = Container.get(TowerModeRepository);
 
   public async loadMonsters(): Promise<void> {
     // pre-requisites

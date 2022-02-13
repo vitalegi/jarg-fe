@@ -17,11 +17,10 @@ export default class SelectTargetCatch {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.SelectTargetCatch"
   );
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected monsterService = Container.get(MonsterService);
+  protected mapRepository = Container.get(MapRepository);
+  protected userActionService = Container.get(UserActionService);
+  protected gameLoop = Container.get(GameLoop);
 
   public async selectTarget(
     source: Monster,

@@ -13,11 +13,10 @@ import Container, { Service } from "typedi";
 @Service()
 export default class FormulaService {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.FormulaService");
-  protected randomService = Container.get<RandomService>(RandomService);
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected typeService = Container.get<TypeService>(TypeService);
-  protected statsService = Container.get<StatsService>(StatsService);
+  protected randomService = Container.get(RandomService);
+  protected monsterIndexService = Container.get(MonsterIndexService);
+  protected typeService = Container.get(TypeService);
+  protected statsService = Container.get(StatsService);
 
   public hit(source: Monster, target: Monster, ability: Ability): boolean {
     return this.doHit(source.stats, target.stats, ability.precision);
@@ -181,5 +180,15 @@ export default class FormulaService {
       }
     }
     return PAIRS[PAIRS.length - 1].probability;
+  }
+
+  public getKillExperience(monster: Monster): number {
+    return Math.round(6 + this.getNextLevelExp(monster.level) / 4);
+  }
+
+  public getNextLevelExp(level: number): number {
+    return Math.round(
+      0.04 * Math.pow(level, 3) + 0.8 * Math.pow(level, 2) + 2 * level
+    );
   }
 }

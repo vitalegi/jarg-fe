@@ -87,7 +87,7 @@ export default class HealthBarService {
   }
 
   protected barColor(monster: Monster): number {
-    const playerService = Container.get<PlayerService>(PlayerService);
+    const playerService = Container.get(PlayerService);
     if (monster.ownerId === playerService.getPlayerId()) {
       return this.options.fillColor.player;
     }

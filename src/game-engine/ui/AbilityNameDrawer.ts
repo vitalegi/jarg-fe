@@ -10,8 +10,8 @@ export default class AbilityNameDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.AbilityNameDrawer");
 
   protected static NAME = "AbilityNameDrawer";
-  protected fontService = Container.get<FontService>(FontService);
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected fontService = Container.get(FontService);
+  protected gameApp = Container.get(GameApp);
   protected label = "";
   protected options = {
     duration: 1500,

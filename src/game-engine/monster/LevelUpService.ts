@@ -1,3 +1,4 @@
+import FormulaService from "@/game-engine/FormulaService";
 import Monster from "@/game-engine/model/monster/Monster";
 import StatsService from "@/game-engine/monster/stats/StatsService";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -6,19 +7,8 @@ import Container, { Service } from "typedi";
 @Service()
 export class LevelUpService {
   logger = LoggerFactory.getLogger("GameEngine.Monster.LevelUpService");
-  protected statsService = Container.get<StatsService>(StatsService);
-
-  // TODO move to FormulaService
-  public getKillExperience(monster: Monster): number {
-    return Math.round(6 + this.getNextLevelExp(monster.level) / 4);
-  }
-
-  // TODO move to FormulaService
-  public getNextLevelExp(level: number): number {
-    return Math.round(
-      0.04 * Math.pow(level, 3) + 0.8 * Math.pow(level, 2) + 2 * level
-    );
-  }
+  protected statsService = Container.get(StatsService);
+  protected formulaService = Container.get(FormulaService);
 
   public async gainExperience(monster: Monster, exp: number): Promise<void> {
     const toNextLevel = this.toNextLevel(monster);
@@ -65,7 +55,7 @@ export class LevelUpService {
   }
 
   public toNextLevel(monster: Monster): number {
-    const levelExp = this.getNextLevelExp(monster.level);
+    const levelExp = this.formulaService.getNextLevelExp(monster.level);
     return levelExp - monster.currentLevelExperience;
   }
 }

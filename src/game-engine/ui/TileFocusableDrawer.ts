@@ -8,9 +8,8 @@ import GameConfig from "@/game-engine/GameConfig";
 
 export default class TileFocusableDrawer extends Drawer {
   protected static NAME = "TileFocusableDrawer";
-  protected coordinateService =
-    Container.get<CoordinateService>(CoordinateService);
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected coordinateService = Container.get(CoordinateService);
+  protected gameApp = Container.get(GameApp);
 
   protected tiles;
 

@@ -10,7 +10,7 @@ class IsWindowSizeChanged {
   protected _lastHeight = 0;
 
   public isChanged(): boolean {
-    const windowSize = Container.get<ScreenProxy>(ScreenProxy);
+    const windowSize = Container.get(ScreenProxy);
     const width = windowSize.width();
     const height = windowSize.height();
 

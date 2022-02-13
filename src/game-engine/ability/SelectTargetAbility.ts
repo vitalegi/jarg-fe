@@ -18,11 +18,10 @@ export default class SelectTargetAbility {
   logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.SelectTargetAbility"
   );
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected monsterService = Container.get(MonsterService);
+  protected mapRepository = Container.get(MapRepository);
+  protected userActionService = Container.get(UserActionService);
+  protected gameLoop = Container.get(GameLoop);
 
   targetHandlerProvider: (
     monster: Monster,

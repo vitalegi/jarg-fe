@@ -12,10 +12,9 @@ import FontService from "@/game-engine/ui/graphics/FontService";
 export default class Abilities {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfo.GeneralStats");
 
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
-  protected fontService = Container.get<FontService>(FontService);
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
+  protected screenProxy = Container.get(ScreenProxy);
+  protected fontService = Container.get(FontService);
+  protected abilityRepository = Container.get(AbilityRepository);
   protected monster;
   protected monsterIndex;
 

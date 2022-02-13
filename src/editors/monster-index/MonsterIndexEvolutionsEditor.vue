@@ -67,9 +67,7 @@ export default Vue.extend({
     SelectMonsterIndex,
   },
   data: () => ({
-    monsters: Container.get<MonsterIndexEditorRepository>(
-      MonsterIndexEditorRepository
-    ).load(),
+    monsters: Container.get(MonsterIndexEditorRepository).load(),
     logger: LoggerFactory.getLogger(
       "Editors.MonsterIndex.MonsterIndexEvolutionsEditor"
     ),

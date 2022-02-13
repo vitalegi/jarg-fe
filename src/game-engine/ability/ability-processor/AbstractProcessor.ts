@@ -6,9 +6,8 @@ import TypeService from "@/game-engine/type/TypeService";
 import Container from "typedi";
 
 export default abstract class AbstractProcessor {
-  protected typeService = Container.get<TypeService>(TypeService);
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
+  protected typeService = Container.get(TypeService);
+  protected monsterIndexService = Container.get(MonsterIndexService);
 
   public abstract execute(
     source: Monster,

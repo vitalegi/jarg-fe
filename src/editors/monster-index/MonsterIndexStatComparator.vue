@@ -168,7 +168,7 @@ import StatsService from "@/game-engine/monster/stats/StatsService";
 import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
 import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import Stats from "@/game-engine/model/monster/stats/Stats";
-import FormulaService from "@/game-engine/ability/FormulaService";
+import FormulaService from "@/game-engine/FormulaService";
 import NumberUtil from "@/utils/NumberUtil";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
 import SelectMonsterIndex from "@/editors/monster-index/SelectMonsterIndex.vue";
@@ -180,11 +180,9 @@ export default Vue.extend({
   },
   props: {},
   data: () => ({
-    statsService: Container.get<StatsService>(StatsService),
-    monsters: Container.get<MonsterIndexEditorRepository>(
-      MonsterIndexEditorRepository
-    ).load(),
-    formulaService: Container.get<FormulaService>(FormulaService),
+    statsService: Container.get(StatsService),
+    monsters: Container.get(MonsterIndexEditorRepository).load(),
+    formulaService: Container.get(FormulaService),
     source: "001",
     target1: "004",
     target2: "007",

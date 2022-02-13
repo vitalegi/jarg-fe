@@ -4,7 +4,7 @@ import HpDamageComputed from "@/game-engine/ability/computed-effect/HpDamageComp
 import MissComputed from "@/game-engine/ability/computed-effect/MissComputed";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
-import FormulaService from "@/game-engine/ability/FormulaService";
+import FormulaService from "@/game-engine/FormulaService";
 import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -13,7 +13,7 @@ import Container from "typedi";
 export default class DefaultProcessor extends AbstractProcessor {
   public static NAME = "DEFAULT_SINGLE_TARGET";
 
-  protected formulaService = Container.get<FormulaService>(FormulaService);
+  protected formulaService = Container.get(FormulaService);
   protected logger = LoggerFactory.getLogger(
     "GameEngine.MonsterAction.AbilityProcessor.DefaultProcessor"
   );

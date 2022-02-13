@@ -9,7 +9,7 @@ export default interface CanTraverse {
 }
 
 export class CanTraverseWalking implements CanTraverse {
-  tileRepository = Container.get<TileRepository>(TileRepository);
+  tileRepository = Container.get(TileRepository);
   public canTraverse(map: MapContainer, monster: Monster, tile: Tile): boolean {
     if (!tile) {
       return false;

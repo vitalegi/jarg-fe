@@ -4,9 +4,7 @@ import Container, { Service } from "typedi";
 
 @Service()
 export default class MonsterIndexService {
-  protected repo = Container.get<MonsterIndexRepository>(
-    MonsterIndexRepository
-  );
+  protected repo = Container.get(MonsterIndexRepository);
 
   public getMonster(monsterId: string): MonsterIndex {
     return this.repo.getMonster(monsterId);

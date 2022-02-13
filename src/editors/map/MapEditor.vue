@@ -518,9 +518,8 @@ export default Vue.extend({
     },
   },
   async mounted(): Promise<void> {
-    const gameAppDataLoader =
-      Container.get<GameAppDataLoader>(GameAppDataLoader);
-    const tileRepository = Container.get<TileRepository>(TileRepository);
+    const gameAppDataLoader = Container.get(GameAppDataLoader);
+    const tileRepository = Container.get(TileRepository);
     await gameAppDataLoader.loadSpriteConfigs();
     this.sprites.push(...tileRepository.getAllTiles());
   },

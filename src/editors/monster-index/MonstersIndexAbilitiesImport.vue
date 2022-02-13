@@ -60,9 +60,7 @@ export default Vue.extend({
   props: {},
   components: {},
   data: () => ({
-    abilityEditorRepository: Container.get<AbilityEditorRepository>(
-      AbilityEditorRepository
-    ),
+    abilityEditorRepository: Container.get(AbilityEditorRepository),
     logger: LoggerFactory.getLogger(
       "Editors.MonsterIndex.MonsterIndexAbilitiesImport"
     ),

@@ -7,7 +7,6 @@ import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhas
 import TowerModeEntryPhase from "@/game-engine/game-phase/TowerModeEntryPhase";
 import GameLoop from "@/game-engine/GameLoop";
 import MapContainer from "@/game-engine/model/map/MapContainer";
-import SquaredTransitionDrawer from "@/game-engine/ui/scene-transition/SquaredTransitionDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
 
@@ -16,10 +15,10 @@ export default class PhaseService {
   protected logger = LoggerFactory.getLogger(
     "GameEngine.GamePhase.PhaseService"
   );
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected gameLoop = Container.get(GameLoop);
 
   public async goToHome(): Promise<void> {
-    await Container.get<HomePhase>(HomePhase).start();
+    await Container.get(HomePhase).start();
   }
   public async goToBattle(
     map: MapContainer,
@@ -27,8 +26,7 @@ export default class PhaseService {
     onWin: () => Promise<void>,
     onLoss: () => Promise<void>
   ): Promise<void> {
-    await this.transition();
-    await Container.get<BattlePhase>(BattlePhase).start({
+    await Container.get(BattlePhase).start({
       map: map,
       id: id,
       onWin: onWin,
@@ -36,24 +34,18 @@ export default class PhaseService {
     });
   }
   public async goToSelectNextBattle(): Promise<void> {
-    await Container.get<SelectNextBattlePhase>(SelectNextBattlePhase).start();
+    await Container.get(SelectNextBattlePhase).start();
   }
   public async goToNewGame(): Promise<void> {
-    await Container.get<NewGamePhase>(NewGamePhase).start();
+    await Container.get(NewGamePhase).start();
   }
   public async goToLoadGame(): Promise<void> {
-    await Container.get<LoadGamePhase>(LoadGamePhase).start();
+    await Container.get(LoadGamePhase).start();
   }
   public async goToGameOver(): Promise<void> {
-    await Container.get<GameOverPhase>(GameOverPhase).start();
+    await Container.get(GameOverPhase).start();
   }
   public async goToTowerMode(): Promise<void> {
-    await Container.get<TowerModeEntryPhase>(TowerModeEntryPhase).start();
-  }
-
-  protected async transition(): Promise<void> {
-    const drawer = new SquaredTransitionDrawer();
-    this.gameLoop.addGameLoopHandler(drawer);
-    await drawer.notifyWhenCompleted();
+    await Container.get(TowerModeEntryPhase).start();
   }
 }

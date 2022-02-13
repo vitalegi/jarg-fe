@@ -5,9 +5,8 @@ import Container, { Service } from "typedi";
 
 @Service()
 export default class TurnManagerEstimator {
-  protected turnManager = Container.get<TurnManager>(TurnManager);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
+  protected turnManager = Container.get(TurnManager);
+  protected historyRepository = Container.get(HistoryRepository);
 
   protected cache: Tick[] = [];
   protected lastHash = "";

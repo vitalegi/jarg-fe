@@ -4,7 +4,7 @@ import Container, { Service } from "typedi";
 
 @Service()
 export default class TypeService {
-  protected repo = Container.get<TypeRepository>(TypeRepository);
+  protected repo = Container.get(TypeRepository);
 
   public getBonus(source: string, target: string): number {
     return this.repo.getBonus(source, target);

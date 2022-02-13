@@ -37,10 +37,10 @@ export default class LeftMenu {
   logger = LoggerFactory.getLogger("GameEngine.UI.LeftMenu");
   private static NAME = "LeftMenu";
 
-  protected fontService = Container.get<FontService>(FontService);
+  protected fontService = Container.get(FontService);
 
   protected container: PIXI.Container | null = null;
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected gameApp = Container.get(GameApp);
   protected entries: MenuEntry[] = [];
   protected frame: FrameImpl;
 
@@ -57,7 +57,7 @@ export default class LeftMenu {
   }
 
   public destroy(): void {
-    const gameApp = Container.get<GameApp>(GameApp);
+    const gameApp = Container.get(GameApp);
     if (this.container) {
       gameApp.getApp().stage.removeChild(this.container);
     }

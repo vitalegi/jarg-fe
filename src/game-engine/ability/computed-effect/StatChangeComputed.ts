@@ -56,7 +56,7 @@ export default class StatChangeComputed extends ComputedEffect {
     // TODO add duration
     this.target.activeEffects.push(this);
 
-    const statsService = Container.get<StatsService>(StatsService);
+    const statsService = Container.get(StatsService);
     statsService.updateMonsterAttributes(this.target, false);
   }
 }

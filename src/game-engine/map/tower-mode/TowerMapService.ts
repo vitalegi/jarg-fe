@@ -17,12 +17,10 @@ import TowerModeConfig from "@/game-engine/model/tower-mode/TowerModeConfig";
 export default class TowerMapService {
   logger = LoggerFactory.getLogger("GameEngine.Map.TowerMapService");
 
-  private tileRepository = Container.get<TileRepository>(TileRepository);
-  private randomService = Container.get<RandomService>(RandomService);
-  private gameAppDataLoader =
-    Container.get<GameAppDataLoader>(GameAppDataLoader);
-  private towerModeRepository =
-    Container.get<TowerModeRepository>(TowerModeRepository);
+  private tileRepository = Container.get(TileRepository);
+  private randomService = Container.get(RandomService);
+  private gameAppDataLoader = Container.get(GameAppDataLoader);
+  private towerModeRepository = Container.get(TowerModeRepository);
 
   public async create(level: number): Promise<MapModel> {
     await Promise.all([

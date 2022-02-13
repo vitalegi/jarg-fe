@@ -22,10 +22,9 @@ export default class MonsterActionMenuBuilder {
     "GameEngine.MonsterAction.UI.MonsterActionMenuBUilder"
   );
 
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
+  protected monsterService = Container.get(MonsterService);
+  protected mapRepository = Container.get(MapRepository);
+  protected abilityRepository = Container.get(AbilityRepository);
 
   public build(monster: Monster): LeftMenu {
     const leftMenu = new LeftMenu();
@@ -145,6 +144,6 @@ export default class MonsterActionMenuBuilder {
   }
 
   protected getBattleService(): BattleService {
-    return Container.get<BattleService>(BattleService);
+    return Container.get(BattleService);
   }
 }

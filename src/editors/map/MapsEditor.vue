@@ -93,9 +93,9 @@ export default Vue.extend({
     },
   },
   async mounted(): Promise<void> {
-    const loader = Container.get<GameAppDataLoader>(GameAppDataLoader);
+    const loader = Container.get(GameAppDataLoader);
     await loader.loadMaps();
-    const repo = Container.get<MapModelRepository>(MapModelRepository);
+    const repo = Container.get(MapModelRepository);
     this.maps.push(...repo.getMaps());
   },
 });

@@ -53,7 +53,7 @@ export default abstract class ComputedEffect {
   }
 
   protected getGameLoop(): GameLoop {
-    return Container.get<GameLoop>(GameLoop);
+    return Container.get(GameLoop);
   }
 
   protected async safeUpdateHealth(

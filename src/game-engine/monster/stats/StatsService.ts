@@ -12,7 +12,7 @@ export default class StatsService {
   protected logger = LoggerFactory.getLogger(
     "GameEngine.Monster.Stats.StatsService"
   );
-  protected statusService = Container.get<StatusService>(StatusService);
+  protected statusService = Container.get(StatusService);
 
   public isStat(stat: string): boolean {
     return StatsConstants.COLLECTION.indexOf(stat) !== -1;

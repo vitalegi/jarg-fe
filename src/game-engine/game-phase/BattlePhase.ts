@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js";
 import GameAssetService from "@/services/GameAssetService";
-import RendererService from "@/services/RendererService";
+import RendererService from "@/game-engine/ui/RendererService";
 import Container, { Service } from "typedi";
 import GameLoop from "@/game-engine/GameLoop";
 import MapContainer from "@/game-engine/model/map/MapContainer";
@@ -28,22 +28,18 @@ interface Map {
 
 @Service()
 export default class BattlePhase extends AbstractPhase<Map> {
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected playerService = Container.get<PlayerService>(PlayerService);
-  protected rendererService = Container.get<RendererService>(RendererService);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
-  protected battleService = Container.get<BattleService>(BattleService);
-  protected tileRepository = Container.get<TileRepository>(TileRepository);
+  protected gameApp = Container.get(GameApp);
+  protected mapRepository = Container.get(MapRepository);
+  protected monsterIndexService = Container.get(MonsterIndexService);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected playerService = Container.get(PlayerService);
+  protected rendererService = Container.get(RendererService);
+  protected userActionService = Container.get(UserActionService);
+  protected gameLoop = Container.get(GameLoop);
+  protected turnManager = Container.get(TurnManager);
+  protected historyRepository = Container.get(HistoryRepository);
+  protected battleService = Container.get(BattleService);
+  protected tileRepository = Container.get(TileRepository);
 
   public getName(): string {
     return "BattlePhase";

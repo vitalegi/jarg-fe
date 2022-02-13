@@ -29,10 +29,9 @@ interface MapConfig {
 export default class TowerMapService {
   logger = LoggerFactory.getLogger("GameEngine.Map.TowerMapService");
 
-  private tileRepository = Container.get<TileRepository>(TileRepository);
-  private randomService = Container.get<RandomService>(RandomService);
-  private gameAppDataLoader =
-    Container.get<GameAppDataLoader>(GameAppDataLoader);
+  private tileRepository = Container.get(TileRepository);
+  private randomService = Container.get(RandomService);
+  private gameAppDataLoader = Container.get(GameAppDataLoader);
 
   public async create(level: number): Promise<MapModel> {
     await this.gameAppDataLoader.loadSpriteConfigs();

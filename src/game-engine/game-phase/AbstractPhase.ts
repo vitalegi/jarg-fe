@@ -7,9 +7,8 @@ import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 export default abstract class AbstractPhase<E> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.AbstractPhase");
 
-  private _gameApp = Container.get<GameApp>(GameApp);
-  private _gameAppDataLoader =
-    Container.get<GameAppDataLoader>(GameAppDataLoader);
+  private _gameApp = Container.get(GameApp);
+  private _gameAppDataLoader = Container.get(GameAppDataLoader);
 
   public async start(options: E | null = null): Promise<void> {
     this.logger.info(`${this.getName()} start`);

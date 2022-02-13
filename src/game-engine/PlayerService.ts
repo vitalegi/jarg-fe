@@ -8,8 +8,7 @@ import Container, { Service } from "typedi";
 @Service()
 export default class PlayerService {
   protected logger = LoggerFactory.getLogger("GameEngine.PlayerService");
-  protected playerRepository =
-    Container.get<PlayerRepository>(PlayerRepository);
+  protected playerRepository = Container.get(PlayerRepository);
 
   public getPlayerId(): string {
     return this.playerRepository.getPlayerId();

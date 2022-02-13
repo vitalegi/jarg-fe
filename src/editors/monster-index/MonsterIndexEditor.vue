@@ -114,7 +114,7 @@ export default Vue.extend({
     abilities: Array,
   },
   data: () => ({
-    statsService: Container.get<StatsService>(StatsService),
+    statsService: Container.get(StatsService),
   }),
   computed: {
     hasErrors(): boolean {

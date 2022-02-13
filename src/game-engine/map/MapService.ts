@@ -13,11 +13,11 @@ import Container, { Service } from "typedi";
 
 @Service()
 export default class MapService {
-  protected randomService = Container.get<RandomService>(RandomService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected tileRepository = Container.get<TileRepository>(TileRepository);
+  protected randomService = Container.get(RandomService);
+  protected levelUpService = Container.get(LevelUpService);
+  protected monsterService = Container.get(MonsterService);
+  protected abilityService = Container.get(AbilityService);
+  protected tileRepository = Container.get(TileRepository);
 
   public async generate(
     model: MapModel,

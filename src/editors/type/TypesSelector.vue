@@ -20,7 +20,7 @@ export default Vue.extend({
   components: { ComboBoxInput },
   props: ["label", "values"],
   data: () => ({
-    typeService: Container.get<TypeService>(TypeService),
+    typeService: Container.get(TypeService),
   }),
   computed: {},
   methods: {

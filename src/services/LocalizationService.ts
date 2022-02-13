@@ -29,12 +29,12 @@ export class LocalizationUtil {
     return LocalizationUtil.getLocalizationService().getType(type);
   }
   protected static getLocalizationService(): LocalizationService {
-    return Container.get<LocalizationService>(LocalizationService);
+    return Container.get(LocalizationService);
   }
 }
 
 const getLocalizationService = (): LocalizationService => {
-  return Container.get<LocalizationService>(LocalizationService);
+  return Container.get(LocalizationService);
 };
 
 export const gameLabel = (id: string): string => {

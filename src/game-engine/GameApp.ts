@@ -5,7 +5,7 @@ import Container, { Service } from "typedi";
 @Service()
 export default class GameApp {
   protected app: PIXI.Application | null = null;
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
+  protected screenProxy = Container.get(ScreenProxy);
 
   public init(): void {
     PIXI.utils.skipHello();

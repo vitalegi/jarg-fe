@@ -22,11 +22,10 @@ import MonsterAction from "@/game-engine/ai/MonsterAction";
 
 export default class MonsterAI {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AI.MonsterAI");
-  protected randomService = Container.get<RandomService>(RandomService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
+  protected randomService = Container.get(RandomService);
+  protected mapRepository = Container.get(MapRepository);
+  protected monsterService = Container.get(MonsterService);
+  protected abilityRepository = Container.get(AbilityRepository);
 
   protected source: Monster;
 

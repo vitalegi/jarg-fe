@@ -3,7 +3,7 @@ import Container from "typedi";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { gameLabel } from "@/services/LocalizationService";
 import GameLoop from "@/game-engine/GameLoop";
-import FormulaService from "@/game-engine/ability/FormulaService";
+import FormulaService from "@/game-engine/FormulaService";
 import MapRepository from "@/game-engine/map/MapRepository";
 import BattleService from "@/game-engine/battle/BattleService";
 import PlayerService from "@/game-engine/PlayerService";
@@ -12,13 +12,12 @@ import AbilityNameDrawer from "@/game-engine/ui/AbilityNameDrawer";
 
 export default class MonsterCatch {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.MonsterCatch");
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected formulaService = Container.get<FormulaService>(FormulaService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected battleService = Container.get<BattleService>(BattleService);
-  protected playerService = Container.get<PlayerService>(PlayerService);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
+  protected gameLoop = Container.get(GameLoop);
+  protected formulaService = Container.get(FormulaService);
+  protected mapRepository = Container.get(MapRepository);
+  protected battleService = Container.get(BattleService);
+  protected playerService = Container.get(PlayerService);
+  protected historyRepository = Container.get(HistoryRepository);
   protected source;
   protected targetId;
 

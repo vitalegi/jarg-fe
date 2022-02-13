@@ -7,7 +7,7 @@ import Container from "typedi";
 export default class RandomCondition extends Condition {
   public static KEY = "RANDOM";
 
-  protected randomService = Container.get<RandomService>(RandomService);
+  protected randomService = Container.get(RandomService);
 
   threshold;
 

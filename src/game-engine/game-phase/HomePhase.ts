@@ -9,8 +9,8 @@ import Container, { Service } from "typedi";
 @Service()
 export default class HomePhase extends AbstractPhase<never> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.HomePhse");
-  protected phaseService = Container.get<PhaseService>(PhaseService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected phaseService = Container.get(PhaseService);
+  protected gameLoop = Container.get(GameLoop);
 
   public getName(): string {
     return "HomePhase";

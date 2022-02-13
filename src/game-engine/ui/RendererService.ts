@@ -28,16 +28,12 @@ export default class RendererService {
   logger = LoggerFactory.getLogger("Services.RendererService");
   private static MONSTER_SPRITE_NAME = "monsterSprite";
 
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected coordinateService =
-    Container.get<CoordinateService>(CoordinateService);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected healthBarService =
-    Container.get<HealthBarService>(HealthBarService);
-  protected tileRepository = Container.get<TileRepository>(TileRepository);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected mapRepository = Container.get(MapRepository);
+  protected coordinateService = Container.get(CoordinateService);
+  protected userActionService = Container.get(UserActionService);
+  protected healthBarService = Container.get(HealthBarService);
+  protected tileRepository = Container.get(TileRepository);
 
   public async addImages(images: Asset[]): Promise<void> {
     const newResources = images.filter((image) => {

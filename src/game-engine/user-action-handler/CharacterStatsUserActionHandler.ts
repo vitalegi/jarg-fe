@@ -8,9 +8,9 @@ import UserInput from "@/game-engine/user-action-handler/UserInput";
 import Container from "typedi";
 
 export default class CharacterStatsUserActionHandler extends UserActionHandler {
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected gameLoop = Container.get(GameLoop);
+  protected gameApp = Container.get(GameApp);
+  protected mapRepository = Container.get(MapRepository);
 
   public getName(): string {
     return "CharacterStatsUserActionHandler";
@@ -22,9 +22,7 @@ export default class CharacterStatsUserActionHandler extends UserActionHandler {
 
   public processTap(input: UserInput): void {
     if (input.isMonster()) {
-      const monsterIndexRepository = Container.get<MonsterIndexRepository>(
-        MonsterIndexRepository
-      );
+      const monsterIndexRepository = Container.get(MonsterIndexRepository);
       const monster = this.mapRepository.getMonsterById(input.getMonsterId());
       const monsterIndex = monsterIndexRepository.getMonster(monster.modelId);
 

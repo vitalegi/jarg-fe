@@ -11,15 +11,11 @@ import Container, { Service } from "typedi";
 
 @Service()
 export default class LoadGamePhase extends AbstractPhase<never> {
-  protected playerRepository =
-    Container.get<PlayerRepository>(PlayerRepository);
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected selectNextBattlePhase = Container.get<SelectNextBattlePhase>(
-    SelectNextBattlePhase
-  );
-  protected phaseService = Container.get<PhaseService>(PhaseService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected playerRepository = Container.get(PlayerRepository);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected selectNextBattlePhase = Container.get(SelectNextBattlePhase);
+  protected phaseService = Container.get(PhaseService);
+  protected gameLoop = Container.get(GameLoop);
 
   public getName(): string {
     return "LoadGamePhase";

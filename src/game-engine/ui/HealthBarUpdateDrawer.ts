@@ -9,10 +9,9 @@ import HealthBarService from "@/game-engine/monster/HealthBarService";
 import GameLoop from "@/game-engine/GameLoop";
 
 export default class HealthBarUpdateDrawer extends Drawer {
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected healthBarService =
-    Container.get<HealthBarService>(HealthBarService);
+  protected mapRepository = Container.get(MapRepository);
+  protected gameApp = Container.get(GameApp);
+  protected healthBarService = Container.get(HealthBarService);
 
   monster;
   from;
@@ -36,7 +35,7 @@ export default class HealthBarUpdateDrawer extends Drawer {
     toHP: number
   ): Promise<void> {
     const healthUpdater = new HealthBarUpdateDrawer(monster, fromHP, toHP);
-    Container.get<GameLoop>(GameLoop).addGameLoopHandler(healthUpdater);
+    Container.get(GameLoop).addGameLoopHandler(healthUpdater);
     return healthUpdater.notifyWhenCompleted();
   }
 

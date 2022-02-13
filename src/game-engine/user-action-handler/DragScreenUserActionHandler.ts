@@ -9,7 +9,7 @@ export default class DragScreenUserActionHandler extends UserActionHandler {
   logger = LoggerFactory.getLogger(
     "GameEngine.UserActionHandler.DragScreenUserActionHandler"
   );
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected gameApp = Container.get(GameApp);
   protected _dragStart: Point | null = null;
   protected _lastPoint: Point | null = null;
 

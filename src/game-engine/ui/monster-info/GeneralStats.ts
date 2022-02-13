@@ -13,9 +13,9 @@ import Container from "typedi";
 export default class GeneralStats {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfo.GeneralStats");
 
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
-  protected fontService = Container.get<FontService>(FontService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
+  protected screenProxy = Container.get(ScreenProxy);
+  protected fontService = Container.get(FontService);
+  protected levelUpService = Container.get(LevelUpService);
 
   protected monster;
   protected monsterIndex;

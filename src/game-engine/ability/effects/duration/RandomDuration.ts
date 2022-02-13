@@ -32,7 +32,7 @@ export class RandomDuration extends Duration {
   }
 
   public nextTurn(): void {
-    const randomService = Container.get<RandomService>(RandomService);
+    const randomService = Container.get(RandomService);
     if (!this.exit) {
       this.exit = randomService.randomBool(this.threshold);
     }

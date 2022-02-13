@@ -16,11 +16,10 @@ import { CanTraverseWalking } from "@/game-engine/map/traversal/CanTraverse";
 
 export default class SelectTargetMove {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.SelectTargetMove");
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected monsterService = Container.get(MonsterService);
+  protected mapRepository = Container.get(MapRepository);
+  protected userActionService = Container.get(UserActionService);
+  protected gameLoop = Container.get(GameLoop);
 
   // TODO refactor, too much complexity unused. Also, merge select target/select move/select catch
   targetHandlerProvider: (monster: Monster) => SelectTargetUserActionHandler = (

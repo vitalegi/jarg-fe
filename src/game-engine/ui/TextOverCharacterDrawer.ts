@@ -10,8 +10,8 @@ import FontService from "@/game-engine/ui/graphics/FontService";
 export default class TextOverCharacterDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.TextOverCharacterDrawer");
   protected static NAME = "TextOverCharacterDrawer";
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected fontService = Container.get<FontService>(FontService);
+  protected gameApp = Container.get(GameApp);
+  protected fontService = Container.get(FontService);
   monster;
   text;
 

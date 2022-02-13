@@ -12,8 +12,8 @@ export default Vue.extend({
   name: "GameEngine",
 
   data: () => ({
-    gameApp: Container.get<GameApp>(GameApp),
-    homePhase: Container.get<HomePhase>(HomePhase),
+    gameApp: Container.get(GameApp),
+    homePhase: Container.get(HomePhase),
   }),
   methods: {},
   async mounted() {

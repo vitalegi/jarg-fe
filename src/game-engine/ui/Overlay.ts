@@ -11,8 +11,8 @@ import Container from "typedi";
 export default class Overlay extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.Overlay");
 
-  protected fontService = Container.get<FontService>(FontService);
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected fontService = Container.get(FontService);
+  protected gameApp = Container.get(GameApp);
 
   protected parent: PIXI.Container;
   protected frame: PIXI.Container;

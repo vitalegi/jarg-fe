@@ -7,10 +7,9 @@ import PhaseService from "@/game-engine/game-phase/PhaseService";
 
 @Service()
 export default class GameOverPhase extends AbstractPhase<never> {
-  protected playerRepository =
-    Container.get<PlayerRepository>(PlayerRepository);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected phaseService = Container.get<PhaseService>(PhaseService);
+  protected playerRepository = Container.get(PlayerRepository);
+  protected gameLoop = Container.get(GameLoop);
+  protected phaseService = Container.get(PhaseService);
 
   public getName(): string {
     return "GameOverPhase";

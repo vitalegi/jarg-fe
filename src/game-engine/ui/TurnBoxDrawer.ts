@@ -15,11 +15,10 @@ export default class TurnBoxDrawer extends Drawer {
 
   protected parent: PIXI.Container;
   protected container: PIXI.Container | null = null;
-  protected turnManagerEstimator =
-    Container.get<TurnManagerEstimator>(TurnManagerEstimator);
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
-  protected fontService = Container.get<FontService>(FontService);
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected turnManagerEstimator = Container.get(TurnManagerEstimator);
+  protected screenProxy = Container.get(ScreenProxy);
+  protected fontService = Container.get(FontService);
+  protected mapRepository = Container.get(MapRepository);
 
   options = {
     entries: 10,

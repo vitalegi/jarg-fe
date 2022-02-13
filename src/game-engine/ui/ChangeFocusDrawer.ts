@@ -10,11 +10,10 @@ import GameApp from "@/game-engine/GameApp";
 import GameConfig from "@/game-engine/GameConfig";
 
 export default class ChangeFocusDrawer extends Drawer {
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
-  protected coordinateService =
-    Container.get<CoordinateService>(CoordinateService);
-  protected gameApp = Container.get<GameApp>(GameApp);
+  protected mapRepository = Container.get(MapRepository);
+  protected screenProxy = Container.get(ScreenProxy);
+  protected coordinateService = Container.get(CoordinateService);
+  protected gameApp = Container.get(GameApp);
 
   target;
   startingOffset: Point | null = null;

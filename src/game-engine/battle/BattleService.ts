@@ -2,56 +2,35 @@ import * as PIXI from "pixi.js";
 import Monster from "@/game-engine/model/monster/Monster";
 import Container, { Service } from "typedi";
 import LoggerFactory from "@/logger/LoggerFactory";
-import RendererService from "@/services/RendererService";
 import GameApp from "@/game-engine/GameApp";
 import TurnManager from "@/game-engine/battle/turns/TurnManager";
 import PlayerService from "@/game-engine/PlayerService";
 import GameLoop from "@/game-engine/GameLoop";
 import MonsterActionMenuBuilder from "@/game-engine/ui/MonsterActionMenuBuilder";
 import MapRepository from "@/game-engine/map/MapRepository";
-import PhaseService from "@/game-engine/game-phase/PhaseService";
 import StatusService from "@/game-engine/monster/status/StatusService";
-import { LevelUpService } from "@/game-engine/monster/LevelUpService";
-import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
-import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
-import AbilityService from "@/game-engine/ability/AbilityService";
-import MonsterEvolutionService from "@/game-engine/monster/MonsterEvolutionService";
-import HealthBarService from "@/game-engine/monster/HealthBarService";
 import StatsService from "@/game-engine/monster/stats/StatsService";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import GameConfig from "@/game-engine/GameConfig";
 import MonsterAI from "@/game-engine/ai/MonsterAI";
-import TextOverCharacterDrawer from "@/game-engine/ui/TextOverCharacterDrawer";
-import AbilityNameDrawer from "@/game-engine/ui/AbilityNameDrawer";
 import HealthBarUpdateDrawer from "@/game-engine/ui/HealthBarUpdateDrawer";
+import FormulaService from "@/game-engine/FormulaService";
+import GainExpFlow from "@/game-engine/battle/GainExpFlow";
 
 @Service()
 export default class BattleService {
   logger = LoggerFactory.getLogger("GameEngine.Battle.BattleService");
 
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected turnManager = Container.get<TurnManager>(TurnManager);
-  protected playerService = Container.get<PlayerService>(PlayerService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected monsterActionMenuBuilder = Container.get<MonsterActionMenuBuilder>(
-    MonsterActionMenuBuilder
-  );
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected phaseService = Container.get<PhaseService>(PhaseService);
-  protected statusService = Container.get<StatusService>(StatusService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected gameAppDataLoader =
-    Container.get<GameAppDataLoader>(GameAppDataLoader);
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected monsterEvolutionService = Container.get<MonsterEvolutionService>(
-    MonsterEvolutionService
-  );
-  protected rendererService = Container.get<RendererService>(RendererService);
-  protected healthBarService =
-    Container.get<HealthBarService>(HealthBarService);
-  protected statsService = Container.get<StatsService>(StatsService);
+  private gameApp = Container.get(GameApp);
+  private turnManager = Container.get(TurnManager);
+  private playerService = Container.get(PlayerService);
+  private gameLoop = Container.get(GameLoop);
+  private monsterActionMenuBuilder = Container.get(MonsterActionMenuBuilder);
+  private mapRepository = Container.get(MapRepository);
+  private statusService = Container.get(StatusService);
+  private statsService = Container.get(StatsService);
+  private formulaService = Container.get(FormulaService);
+  private gainExpFlow = Container.get(GainExpFlow);
 
   public async startCharacterTurn(): Promise<void> {
     if (!this.turnManager.hasCharacters()) {
@@ -215,7 +194,7 @@ export default class BattleService {
     );
   }
 
-  public getMonstersInBattle(): Monster[] {
+  private getMonstersInBattle(): Monster[] {
     return this.mapRepository.getMap().monsters;
   }
 
@@ -244,7 +223,7 @@ export default class BattleService {
   public async gainExp(monster: Monster, exp: number): Promise<void> {
     const allies = this.mapRepository.getAllies(monster);
     if (allies.length === 1) {
-      await this.gainExpMonster(monster, exp);
+      await this.gainExpFlow.gainExpMonster(monster, exp);
     } else {
       const uniqueExp = Math.ceil(exp / 2);
       const spreadedToOthers = exp - uniqueExp;
@@ -252,104 +231,20 @@ export default class BattleService {
 
       const gainExp: Promise<void>[] = [];
       gainExp.push(
-        this.gainExpMonster(monster, uniqueExp + spreadedExpPerMonster)
+        this.gainExpFlow.gainExpMonster(
+          monster,
+          uniqueExp + spreadedExpPerMonster
+        )
       );
       for (const ally of allies) {
         if (ally.uuid !== monster.uuid) {
-          gainExp.push(this.gainExpMonster(ally, spreadedExpPerMonster));
+          gainExp.push(
+            this.gainExpFlow.gainExpMonster(ally, spreadedExpPerMonster)
+          );
         }
       }
       await Promise.all(gainExp);
     }
-  }
-
-  public async gainExpMonster(monster: Monster, exp: number): Promise<void> {
-    if (exp <= 0.0001) {
-      return;
-    }
-    const levelUp = this.levelUpService.canLevelUp(monster, exp);
-    await this.levelUpService.gainExperience(monster, exp);
-    if (!levelUp) {
-      return;
-    }
-    this.logger.debug(`Show level up for ${monster.uuid}`);
-    const drawer = new TextOverCharacterDrawer(monster, "LEVEL UP!");
-    this.gameLoop.addGameLoopHandler(drawer);
-    await drawer.notifyWhenCompleted();
-
-    // refresh health bar
-    const monsterContainer = this.gameApp
-      .getBattleContainer()
-      .getChildByName(monster.uuid) as PIXI.Container;
-    this.healthBarService.updateBar(
-      monsterContainer,
-      monster,
-      monster.stats.hp
-    );
-
-    const newAbilities = this.abilityService.getNewLearnableAbilities(monster);
-    if (newAbilities.length > 0) {
-      if (monster.ownerId === this.playerService.getPlayerId()) {
-        this.logger.debug(
-          `A monster owned by the player (${monster.uuid}) learned new abilities, show message`
-        );
-        for (const newAbility of newAbilities) {
-          const ability = this.abilityService.getAbility(newAbility.abilityId);
-          const newAbilityMessage = new AbilityNameDrawer(ability.label);
-          this.gameLoop.addGameLoopHandler(newAbilityMessage);
-          await newAbilityMessage.notifyWhenCompleted();
-        }
-      }
-      for (const newAbility of newAbilities) {
-        this.abilityService.learnAbility(monster, newAbility.abilityId);
-      }
-    }
-    await this.evolve(monster);
-  }
-
-  public async evolve(monster: Monster): Promise<void> {
-    if (monster.ownerId !== this.playerService.getPlayerId()) {
-      return;
-    }
-    if (!this.monsterEvolutionService.canEvolve(monster)) {
-      return;
-    }
-    const evolutions =
-      this.monsterEvolutionService.getAvailableEvolutions(monster);
-    this.logger.info(`Monster ${monster.uuid} can evolve.`);
-    // TODO allow the user to select which evolution
-    const target = evolutions[0];
-    const newIndex = this.monsterIndexService.getMonster(target.evolutionId);
-
-    const evolutionName = new AbilityNameDrawer(
-      `${monster.name} evolves in ${newIndex.name}`
-    );
-    this.gameLoop.addGameLoopHandler(evolutionName);
-    await evolutionName.notifyWhenCompleted();
-
-    await this.gameAppDataLoader.loadMonstersSpriteSheets([newIndex]);
-    this.monsterEvolutionService.evolve(monster, evolutions[0]);
-
-    // replace sprites
-    const battleContainer = this.gameApp.getBattleContainer();
-    const oldContainer = battleContainer.getChildByName(monster.uuid);
-    const newContainer = this.rendererService.createMonsterContainer(
-      monster,
-      newIndex,
-      "normal"
-    );
-
-    // track new sprite
-    const handler = this.gameLoop.getMonsterAnimationDrawer();
-    handler.removeMonster(monster.uuid);
-    handler.addMonster(
-      monster.uuid,
-      this.monsterIndexService.getMonster(monster.modelId),
-      this.rendererService.getMonsterSprite(newContainer),
-      "normal"
-    );
-    battleContainer.removeChild(oldContainer);
-    battleContainer.addChild(newContainer);
   }
 
   protected async applyStatusEffects(monster: Monster): Promise<void> {
@@ -360,7 +255,7 @@ export default class BattleService {
     monster.stats.hp = toHP;
 
     if (monster.isDead()) {
-      const totalExp = this.levelUpService.getKillExperience(monster);
+      const totalExp = this.formulaService.getKillExperience(monster);
       await this.die(monster.uuid);
       const monsters = this.mapRepository
         .getMap()
@@ -377,7 +272,7 @@ export default class BattleService {
       );
       const exp = Math.ceil(totalExp / monsters.length);
       for (const m of monsters) {
-        await this.gainExpMonster(m, exp);
+        await this.gainExpFlow.gainExpMonster(m, exp);
       }
     }
   }

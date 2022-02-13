@@ -22,21 +22,16 @@ const starters = ["001", "004", "007"];
 export default class NewGamePhase extends AbstractPhase<never> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.NewGamePhase");
 
-  protected monsterIndexService =
-    Container.get<MonsterIndexService>(MonsterIndexService);
-  protected playerRepository =
-    Container.get<PlayerRepository>(PlayerRepository);
-  protected monsterService = Container.get<MonsterService>(MonsterService);
-  protected gameAssetService =
-    Container.get<GameAssetService>(GameAssetService);
-  protected mapService = Container.get<MapService>(MapService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected selectNextBattlePhase = Container.get<SelectNextBattlePhase>(
-    SelectNextBattlePhase
-  );
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected phaseService = Container.get<PhaseService>(PhaseService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
+  protected monsterIndexService = Container.get(MonsterIndexService);
+  protected playerRepository = Container.get(PlayerRepository);
+  protected monsterService = Container.get(MonsterService);
+  protected gameAssetService = Container.get(GameAssetService);
+  protected mapService = Container.get(MapService);
+  protected levelUpService = Container.get(LevelUpService);
+  protected selectNextBattlePhase = Container.get(SelectNextBattlePhase);
+  protected abilityService = Container.get(AbilityService);
+  protected phaseService = Container.get(PhaseService);
+  protected gameLoop = Container.get(GameLoop);
 
   public getName(): string {
     return "NewGamePhase";

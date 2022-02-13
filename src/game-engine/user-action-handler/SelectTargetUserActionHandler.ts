@@ -6,7 +6,7 @@ import Point from "@/models/Point";
 import Container from "typedi";
 
 export default class SelectTargetUserActionHandler extends UserActionHandler {
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
+  protected mapRepository = Container.get(MapRepository);
 
   protected skipUUIDs: string[] | null = [];
   protected allowTerrains = false;

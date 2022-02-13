@@ -1,6 +1,5 @@
 import Monster from "@/game-engine/model/monster/Monster";
 import Container from "typedi";
-import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import BattleService from "@/game-engine/battle/BattleService";
 import GameLoop from "@/game-engine/GameLoop";
@@ -11,16 +10,16 @@ import Ability from "@/game-engine/model/ability/Ability";
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import AbilityNameDrawer from "@/game-engine/ui/AbilityNameDrawer";
+import FormulaService from "@/game-engine/FormulaService";
 
 export default class AbilityExecutor {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
-  protected battleService = Container.get<BattleService>(BattleService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected playerService = Container.get<PlayerService>(PlayerService);
+  protected battleService = Container.get(BattleService);
+  protected gameLoop = Container.get(GameLoop);
+  protected historyRepository = Container.get(HistoryRepository);
+  protected abilityService = Container.get(AbilityService);
+  protected playerService = Container.get(PlayerService);
+  protected formulaService = Container.get(FormulaService);
 
   protected source: Monster;
   protected target: Monster;
@@ -66,7 +65,7 @@ export default class AbilityExecutor {
       await effects[i].onHitAfter();
     }
     if (this.target.isDead()) {
-      const exp = this.levelUpService.getKillExperience(this.target);
+      const exp = this.formulaService.getKillExperience(this.target);
       await this.battleService.die(this.target.uuid);
       // if you killed an ally, you don't earn any exp.
       if (this.source.ownerId !== this.target.ownerId) {

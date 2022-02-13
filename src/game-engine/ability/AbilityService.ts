@@ -13,12 +13,9 @@ export default class AbilityService {
     "GameEngine.MonsterAction.Ability.AbilityService"
   );
 
-  protected abilityRepository =
-    Container.get<AbilityRepository>(AbilityRepository);
+  protected abilityRepository = Container.get(AbilityRepository);
 
-  protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
-    MonsterIndexRepository
-  );
+  protected monsterIndexRepository = Container.get(MonsterIndexRepository);
 
   public getAbility(abilityId: string): Ability {
     return this.abilityRepository.getAbility(abilityId);

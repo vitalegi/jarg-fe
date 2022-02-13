@@ -9,10 +9,9 @@ import GameApp from "@/game-engine/GameApp";
 import CoordinateService from "@/game-engine/CoordinateService";
 
 export default class MonsterMoveDrawer extends Drawer {
-  protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected gameApp = Container.get<GameApp>(GameApp);
-  protected coordinateService =
-    Container.get<CoordinateService>(CoordinateService);
+  protected mapRepository = Container.get(MapRepository);
+  protected gameApp = Container.get(GameApp);
+  protected coordinateService = Container.get(CoordinateService);
 
   monster;
   from;

@@ -64,9 +64,7 @@ export default Vue.extend({
     MonsterIndexAbilitiesImport,
   },
   data: () => ({
-    abilityEditorRepository: Container.get<AbilityEditorRepository>(
-      AbilityEditorRepository
-    ),
+    abilityEditorRepository: Container.get(AbilityEditorRepository),
     logger: LoggerFactory.getLogger(
       "Editors.MonsterIndex.MonsterIndexAbilitiesLearnableEditor"
     ),

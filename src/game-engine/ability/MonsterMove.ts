@@ -7,9 +7,8 @@ import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
 import MonsterMoveDrawer from "@/game-engine/ui/MonsterMoveDrawer";
 export default class MonsterMove {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.MonsterMove");
-  protected gameLoop = Container.get<GameLoop>(GameLoop);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
+  protected gameLoop = Container.get(GameLoop);
+  protected historyRepository = Container.get(HistoryRepository);
 
   protected source;
   protected path;

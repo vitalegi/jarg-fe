@@ -64,8 +64,7 @@ export default abstract class UserActionHandler {
   }
 
   private removeHandler(): void {
-    const userActionService =
-      Container.get<UserActionService>(UserActionService);
+    const userActionService = Container.get(UserActionService);
     userActionService.removeActionHandler(this);
   }
 

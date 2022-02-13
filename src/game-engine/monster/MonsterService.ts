@@ -1,6 +1,6 @@
 import { CharacterType } from "@/models/Character";
 import RandomService from "@/services/RandomService";
-import RendererService from "@/services/RendererService";
+import RendererService from "@/game-engine/ui/RendererService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
@@ -36,17 +36,12 @@ const names = [
 export default class MonsterService {
   logger = LoggerFactory.getLogger("GameEngine.Monster.MonsterService");
   protected rendererService = Container.get(RendererService);
-  protected userActionService =
-    Container.get<UserActionService>(UserActionService);
-  protected coordinateService =
-    Container.get<CoordinateService>(CoordinateService);
-  protected monsterIndexRepository = Container.get<MonsterIndexRepository>(
-    MonsterIndexRepository
-  );
-  protected abilityService = Container.get<AbilityService>(AbilityService);
-  protected levelUpService = Container.get<LevelUpService>(LevelUpService);
-  protected historyRepository =
-    Container.get<HistoryRepository>(HistoryRepository);
+  protected userActionService = Container.get(UserActionService);
+  protected coordinateService = Container.get(CoordinateService);
+  protected monsterIndexRepository = Container.get(MonsterIndexRepository);
+  protected abilityService = Container.get(AbilityService);
+  protected levelUpService = Container.get(LevelUpService);
+  protected historyRepository = Container.get(HistoryRepository);
 
   public async createExistingMonsters(data: MonsterData[]): Promise<Monster[]> {
     return await Promise.all(data.map((m) => this.createExistingMonster(m)));
@@ -57,7 +52,7 @@ export default class MonsterService {
     monsterIndexId: string,
     name: string | null = null
   ): Promise<Monster> {
-    const random = Container.get<RandomService>(RandomService);
+    const random = Container.get(RandomService);
     const monsterIndex = this.monsterIndexRepository.getMonster(monsterIndexId);
     if (!name) {
       name =
