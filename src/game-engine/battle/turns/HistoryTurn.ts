@@ -1,7 +1,7 @@
+import ActionType from "@/game-engine/battle/turns/ActionType";
+import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
 import Monster from "@/game-engine/monster/Monster";
 import UuidUtil from "@/utils/UuidUtil";
-import ActionType from "./ActionType";
-import { PerformedAction } from "./PerformedAction";
 
 export default class HistoryTurn {
   id = UuidUtil.nextId();

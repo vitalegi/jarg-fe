@@ -17,7 +17,7 @@ const routes: Array<RouteConfig> = [
     path: "/game",
     name: "Game",
     component: () =>
-      import(/* webpackChunkName: "gameview" */ "../views/GameView.vue"),
+      import(/* webpackChunkName: "gameview" */ "@/views/GameView.vue"),
   },
   {
     path: "/about",
@@ -26,14 +26,14 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/About.vue"),
   },
   {
     path: "/editor/monsters",
     name: "MonsterIndexEditor",
     component: () =>
       import(
-        /* webpackChunkName: "editor-monsters" */ "../views/MonsterIndexEditorView.vue"
+        /* webpackChunkName: "editor-monsters" */ "@/views/MonsterIndexEditorView.vue"
       ),
   },
   {
@@ -41,7 +41,7 @@ const routes: Array<RouteConfig> = [
     name: "MonsterIndexStatComparator",
     component: () =>
       import(
-        /* webpackChunkName: "comparator" */ "../views/MonsterIndexStatComparatorView.vue"
+        /* webpackChunkName: "comparator" */ "@/views/MonsterIndexStatComparatorView.vue"
       ),
   },
   {
@@ -49,14 +49,14 @@ const routes: Array<RouteConfig> = [
     name: "AbilitiesEditor",
     component: () =>
       import(
-        /* webpackChunkName: "editor-abilities" */ "../views/AbilitiesEditorView.vue"
+        /* webpackChunkName: "editor-abilities" */ "@/views/AbilitiesEditorView.vue"
       ),
   },
   {
     path: "/editor/maps",
     name: "MapGeneratorView",
     component: () =>
-      import(/* webpackChunkName: "editor-map" */ "../views/MapEditorView.vue"),
+      import(/* webpackChunkName: "editor-map" */ "@/views/MapEditorView.vue"),
   },
 ];
 

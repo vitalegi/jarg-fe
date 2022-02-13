@@ -1,13 +1,13 @@
+import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
+import PhaseService from "@/game-engine/game-phase/PhaseService";
+import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhase";
+import GameLoop from "@/game-engine/GameLoop";
+import PlayerData from "@/game-engine/PlayerData";
+import PlayerRepository from "@/game-engine/repositories/PlayerRepository";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import GameAssetService from "@/services/GameAssetService";
 import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
-import GameLoop from "../GameLoop";
-import PlayerData from "../PlayerData";
-import PlayerRepository from "../repositories/PlayerRepository";
-import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
-import AbstractPhase from "./AbstractPhase";
-import PhaseService from "./PhaseService";
-import SelectNextBattlePhase from "./SelectNextBattlePhase";
 
 @Service()
 export default class LoadGamePhase extends AbstractPhase<never> {

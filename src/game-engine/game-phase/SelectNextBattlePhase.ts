@@ -1,23 +1,23 @@
 import GameAssetService from "@/services/GameAssetService";
 import Container, { Service } from "typedi";
-import MonsterIndexService from "../monster/MonsterIndexService";
-import MonsterService from "../monster/MonsterService";
-import PlayerRepository from "../repositories/PlayerRepository";
-import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
-import AbstractPhase from "./AbstractPhase";
-import MapService from "../map/MapService";
 import LoggerFactory from "@/logger/LoggerFactory";
-import SelectMonstersMenu from "../ui/SelectMonstersMenu";
-import Monster from "../monster/Monster";
-import PhaseService from "./PhaseService";
-import StatsService from "../monster/stats/StatsService";
 import { gameLabel } from "@/services/LocalizationService";
-import MapModelRepository from "../map/MapModelRepository";
-import MapIndex from "../map/MapIndex";
-import GameLoop from "../GameLoop";
-import MapRepository from "../map/MapRepository";
-import PlayerService from "../PlayerService";
-import MonsterData from "../monster/MonsterData";
+import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
+import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
+import PlayerRepository from "@/game-engine/repositories/PlayerRepository";
+import MonsterService from "@/game-engine/monster/MonsterService";
+import MapService from "@/game-engine/map/MapService";
+import MapRepository from "@/game-engine/map/MapRepository";
+import PlayerService from "@/game-engine/PlayerService";
+import PhaseService from "@/game-engine/game-phase/PhaseService";
+import StatsService from "@/game-engine/monster/stats/StatsService";
+import MapModelRepository from "@/game-engine/map/MapModelRepository";
+import GameLoop from "@/game-engine/GameLoop";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
+import MonsterData from "@/game-engine/monster/MonsterData";
+import MapIndex from "@/game-engine/map/MapIndex";
+import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
+import Monster from "@/game-engine/monster/Monster";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {

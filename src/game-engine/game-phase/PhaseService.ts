@@ -1,15 +1,15 @@
+import BattlePhase from "@/game-engine/game-phase/BattlePhase";
+import GameOverPhase from "@/game-engine/game-phase/GameOverPhase";
+import HomePhase from "@/game-engine/game-phase/HomePhase";
+import LoadGamePhase from "@/game-engine/game-phase/LoadGamePhase";
+import NewGamePhase from "@/game-engine/game-phase/NewGamePhase";
+import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhase";
+import TowerModeEntryPhase from "@/game-engine/game-phase/TowerModeEntryPhase";
+import GameLoop from "@/game-engine/GameLoop";
+import MapContainer from "@/game-engine/map/MapContainer";
+import SquaredTransitionDrawer from "@/game-engine/ui/scene-transition/SquaredTransitionDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container, { Service } from "typedi";
-import GameLoop from "../GameLoop";
-import MapContainer from "../map/MapContainer";
-import SquaredTransitionDrawer from "../ui/scene-transition/SquaredTransitionDrawer";
-import BattlePhase from "./BattlePhase";
-import GameOverPhase from "./GameOverPhase";
-import HomePhase from "./HomePhase";
-import LoadGamePhase from "./LoadGamePhase";
-import NewGamePhase from "./NewGamePhase";
-import SelectNextBattlePhase from "./SelectNextBattlePhase";
-import TowerModeEntryPhase from "./TowerModeEntryPhase";
 
 @Service()
 export default class PhaseService {

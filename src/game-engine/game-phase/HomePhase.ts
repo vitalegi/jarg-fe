@@ -1,10 +1,10 @@
+import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
+import PhaseService from "@/game-engine/game-phase/PhaseService";
+import GameLoop from "@/game-engine/GameLoop";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { gameLabel } from "@/services/LocalizationService";
 import Container, { Service } from "typedi";
-import GameLoop from "../GameLoop";
-import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
-import AbstractPhase from "./AbstractPhase";
-import PhaseService from "./PhaseService";
 
 @Service()
 export default class HomePhase extends AbstractPhase<never> {

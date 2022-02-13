@@ -1,8 +1,8 @@
 import Container from "typedi";
-import GameApp from "../GameApp";
 import * as PIXI from "pixi.js";
-import GameAppDataLoader from "../GameAppDataLoader";
 import LoggerFactory from "@/logger/LoggerFactory";
+import GameApp from "@/game-engine/GameApp";
+import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 
 export default abstract class AbstractPhase<E> {
   logger = LoggerFactory.getLogger("GameEngine.GamePhase.AbstractPhase");

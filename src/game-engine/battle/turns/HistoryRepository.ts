@@ -1,9 +1,9 @@
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import HistoryTurn from "@/game-engine/battle/turns/HistoryTurn";
+import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
+import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/monster/Monster";
 import Point from "@/models/Point";
 import { Service } from "typedi";
-import HistoryTurn from "./HistoryTurn";
-import { PerformedAction } from "./PerformedAction";
 
 @Service()
 export default class HistoryRepository {

@@ -4,12 +4,12 @@ import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";
 import TS from "@/assets/turn-manager/ts.json";
 import ICV from "@/assets/turn-manager/icv.json";
-import Tick from "./Tick";
-import HistoryRepository from "./HistoryRepository";
-import { PerformedAction } from "./PerformedAction";
 import TimeUtil from "@/utils/TimeUtil";
-import ActionType from "./ActionType";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
+import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
+import Tick from "@/game-engine/battle/turns/Tick";
+import { PerformedAction } from "@/game-engine/battle/turns/PerformedAction";
+import ActionType from "@/game-engine/battle/turns/ActionType";
 
 const DECIMAL_PRECISION = 0.00001;
 

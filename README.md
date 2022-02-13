@@ -28,13 +28,17 @@ If you find issues, please open a ticket on [GitHub](https://github.com/vitalegi
 npm install
 ```
 
+If you are working with VSC, `File` &rarr; `Preferences` &rarr; `Settings` &rarr; `User Settings`, search `typescript.preferences.importModuleSpecifier` and set to `non-relative`.
+
 ### Compiles and hot-reloads for development
 
-### One time activity
+#### One time activity
 
 ```
 npm install http-server -g
 ```
+
+#### Development start-up
 
 ```
 # Starts the appliction

@@ -1,9 +1,9 @@
 import Container, { Service } from "typedi";
-import PlayerRepository from "../repositories/PlayerRepository";
-import AbstractPhase from "./AbstractPhase";
 import AbilityNameDrawer from "@/game-engine/ui/AbilityNameDrawer";
-import GameLoop from "../GameLoop";
-import PhaseService from "./PhaseService";
+import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
+import PlayerRepository from "@/game-engine/repositories/PlayerRepository";
+import GameLoop from "@/game-engine/GameLoop";
+import PhaseService from "@/game-engine/game-phase/PhaseService";
 
 @Service()
 export default class GameOverPhase extends AbstractPhase<never> {

@@ -1,20 +1,20 @@
 import GameAssetService from "@/services/GameAssetService";
 import UuidUtil from "@/utils/UuidUtil";
 import Container, { Service } from "typedi";
-import PlayerData from "../PlayerData";
-import MonsterIndexService from "../monster/MonsterIndexService";
-import MonsterService from "../monster/MonsterService";
-import PlayerRepository from "../repositories/PlayerRepository";
-import LeftMenu, { MenuEntry } from "../ui/LeftMenu";
-import AbstractPhase from "./AbstractPhase";
-import MonsterIndex from "../monster/MonsterIndex";
-import MapService from "../map/MapService";
-import { LevelUpService } from "../monster/LevelUpService";
-import SelectNextBattlePhase from "./SelectNextBattlePhase";
 import LoggerFactory from "@/logger/LoggerFactory";
-import AbilityService from "../monster-action/ability/AbilityService";
-import PhaseService from "./PhaseService";
-import GameLoop from "../GameLoop";
+import AbstractPhase from "@/game-engine/game-phase/AbstractPhase";
+import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
+import PlayerRepository from "@/game-engine/repositories/PlayerRepository";
+import MonsterService from "@/game-engine/monster/MonsterService";
+import MapService from "@/game-engine/map/MapService";
+import { LevelUpService } from "@/game-engine/monster/LevelUpService";
+import SelectNextBattlePhase from "@/game-engine/game-phase/SelectNextBattlePhase";
+import AbilityService from "@/game-engine/ability/model/AbilityService";
+import PhaseService from "@/game-engine/game-phase/PhaseService";
+import GameLoop from "@/game-engine/GameLoop";
+import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import PlayerData from "@/game-engine/PlayerData";
 
 const starters = ["001", "004", "007"];
 

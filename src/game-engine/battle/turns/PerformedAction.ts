@@ -1,7 +1,7 @@
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import ActionType from "@/game-engine/battle/turns/ActionType";
+import Ability from "@/game-engine/model/ability/Ability";
 import Point from "@/models/Point";
 import UuidUtil from "@/utils/UuidUtil";
-import ActionType from "./ActionType";
 
 export class PerformedAction {
   id = UuidUtil.nextId();

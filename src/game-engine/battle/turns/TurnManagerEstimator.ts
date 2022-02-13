@@ -1,7 +1,7 @@
+import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
+import Tick from "@/game-engine/battle/turns/Tick";
+import TurnManager from "@/game-engine/battle/turns/TurnManager";
 import Container, { Service } from "typedi";
-import HistoryRepository from "./HistoryRepository";
-import Tick from "./Tick";
-import TurnManager from "./TurnManager";
 
 @Service()
 export default class TurnManagerEstimator {
