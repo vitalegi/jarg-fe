@@ -17,39 +17,35 @@ export default class DetectEvent {
   protected _onDrag: ((e: InteractionEvent) => void) | null = null;
   protected _onDragEnd: ((e: InteractionEvent) => void) | null = null;
 
-  public constructor(
-    element: PIXI.DisplayObject,
-    onTap: ((e: InteractionEvent) => void) | null = null,
-    onDragStart: ((e: InteractionEvent) => void) | null = null,
-    onDrag: ((e: InteractionEvent) => void) | null = null,
-    onDragEnd: ((e: InteractionEvent) => void) | null = null
-  ) {
+  public constructor(element: PIXI.DisplayObject) {
     this.element = element;
     this.init();
-    this._onTap = onTap;
-    this._onDragStart = onDragStart;
-    this._onDrag = onDrag;
-    this._onDragEnd = onDragEnd;
   }
 
-  public onTap(action: (e: InteractionEvent) => void): void {
+  public onTap(action: (e: InteractionEvent) => void): DetectEvent {
     this._onTap = action;
+    return this;
   }
-  public onDragStart(action: (e: InteractionEvent) => void): void {
+  public onDragStart(action: (e: InteractionEvent) => void): DetectEvent {
     this._onDragStart = action;
+    return this;
   }
-  public onDrag(action: (e: InteractionEvent) => void): void {
+  public onDrag(action: (e: InteractionEvent) => void): DetectEvent {
     this._onDrag = action;
+    return this;
   }
 
-  public onDragEnd(action: (e: InteractionEvent) => void): void {
+  public onDragEnd(action: (e: InteractionEvent) => void): DetectEvent {
     this._onDragEnd = action;
+    return this;
   }
-  public onTapUp(action: (e: InteractionEvent) => void): void {
+  public onTapUp(action: (e: InteractionEvent) => void): DetectEvent {
     this._onTapUp = action;
+    return this;
   }
-  public onTapDown(action: (e: InteractionEvent) => void): void {
+  public onTapDown(action: (e: InteractionEvent) => void): DetectEvent {
     this._onTapDown = action;
+    return this;
   }
 
   protected init(): void {

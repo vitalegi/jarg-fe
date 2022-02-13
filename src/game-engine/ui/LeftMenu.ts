@@ -122,7 +122,7 @@ export default class LeftMenu {
     rectangle.endFill();
 
     if (entry.enabled()) {
-      new DetectEvent(rectangle, () => entry.action());
+      new DetectEvent(rectangle).onTap(() => entry.action());
     }
     this.container?.addChild(rectangle);
 
@@ -131,7 +131,7 @@ export default class LeftMenu {
     message.position.y = this.menuEntryHeight() * index + 5;
 
     if (entry.enabled()) {
-      new DetectEvent(message, () => entry.action());
+      new DetectEvent(message).onTap(() => entry.action());
     }
     this.container?.addChild(message);
   }
