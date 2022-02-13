@@ -166,7 +166,7 @@ import Vue from "vue";
 import Container from "typedi";
 import StatsService from "@/game-engine/monster/stats/StatsService";
 import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import Stats from "@/game-engine/model/monster/stats/Stats";
 import FormulaService from "@/game-engine/ability/FormulaService";
 import NumberUtil from "@/utils/NumberUtil";

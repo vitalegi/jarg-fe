@@ -1,11 +1,11 @@
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
 
 @Service()
 export default class GameApp {
   protected app: PIXI.Application | null = null;
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
 
   public init(): void {
     PIXI.utils.skipHello();
@@ -14,7 +14,7 @@ export default class GameApp {
       height: window.innerHeight,
       resolution: 1,
     });
-    this.windowSizeProxy.setApp(this.app);
+    this.screenProxy.setApp(this.app);
 
     this.app.renderer.view.style.position = "absolute";
     this.app.renderer.view.style.display = "block";

@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import Container from "typedi";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import LoggerFactory from "@/logger/LoggerFactory";

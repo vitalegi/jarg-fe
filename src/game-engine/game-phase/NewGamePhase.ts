@@ -13,8 +13,8 @@ import AbilityService from "@/game-engine/ability/AbilityService";
 import PhaseService from "@/game-engine/game-phase/PhaseService";
 import GameLoop from "@/game-engine/GameLoop";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import PlayerData from "@/game-engine/PlayerData";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
+import PlayerData from "@/game-engine/model/player-data/PlayerData";
 
 const starters = ["001", "004", "007"];
 

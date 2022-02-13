@@ -1,6 +1,6 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import Duration from "@/game-engine/ability/effects/duration/Duration";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
 import LoggerFactory from "@/logger/LoggerFactory";
 

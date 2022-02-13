@@ -6,7 +6,7 @@ import MonsterService from "@/game-engine/monster/MonsterService";
 import MapRepository from "@/game-engine/map/MapRepository";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import GameLoop from "@/game-engine/GameLoop";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import SelectTargetUserActionHandler from "@/game-engine/user-action-handler/SelectTargetUserActionHandler";
 import TileFocusableDrawer from "@/game-engine/ui/TileFocusableDrawer";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";

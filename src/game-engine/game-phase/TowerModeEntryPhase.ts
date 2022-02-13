@@ -14,7 +14,7 @@ import PlayerService from "@/game-engine/PlayerService";
 import TowerMapService from "@/game-engine/map/TowerMapService";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 
 @Service()
 export default class TowerModeEntryPhase extends AbstractPhase<never> {

@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import { gameLabel } from "@/services/LocalizationService";
 

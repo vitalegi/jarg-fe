@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
-import TypeService from "@/game-engine/types/TypeService";
+import TypeService from "@/game-engine/type/TypeService";
 import Container from "typedi";
 import Vue from "vue";
 

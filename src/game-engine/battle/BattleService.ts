@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import Container, { Service } from "typedi";
 import LoggerFactory from "@/logger/LoggerFactory";
 import RendererService from "@/services/RendererService";

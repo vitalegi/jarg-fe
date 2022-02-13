@@ -1,5 +1,5 @@
 import MonsterAction from "@/game-engine/ai/MonsterAction";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 
 export default class ScoreFunction {
   public async getScore(

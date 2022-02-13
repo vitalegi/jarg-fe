@@ -1,7 +1,7 @@
 import HistoryTurn from "@/game-engine/model/turn/HistoryTurn";
 import { PerformedAction } from "@/game-engine/model/turn/PerformedAction";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import Point from "@/models/Point";
 import { Service } from "typedi";
 

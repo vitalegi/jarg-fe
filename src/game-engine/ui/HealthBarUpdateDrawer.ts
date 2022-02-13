@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import * as PIXI from "pixi.js";

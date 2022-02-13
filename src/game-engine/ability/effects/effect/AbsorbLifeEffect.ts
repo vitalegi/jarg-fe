@@ -4,7 +4,7 @@ import { FixedDuration } from "@/game-engine/ability/effects/duration/FixedDurat
 import { RandomDuration } from "@/game-engine/ability/effects/duration/RandomDuration";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import { asDecimal } from "@/utils/JsonUtil";
 
 export default class AbsorbLifeEffect extends Effect {

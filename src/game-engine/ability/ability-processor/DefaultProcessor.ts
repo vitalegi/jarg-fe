@@ -6,7 +6,7 @@ import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import FormulaService from "@/game-engine/ability/FormulaService";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 

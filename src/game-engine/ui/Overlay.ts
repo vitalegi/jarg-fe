@@ -1,7 +1,7 @@
 import GameApp from "@/game-engine/GameApp";
 import DetectEvent from "@/game-engine/ui/DetectEvent";
 import Drawer from "@/game-engine/ui/Drawer";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import * as PIXI from "pixi.js";

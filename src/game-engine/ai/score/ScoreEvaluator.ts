@@ -1,6 +1,6 @@
 import MonsterAction from "@/game-engine/ai/MonsterAction";
 import ScoreFunction from "@/game-engine/ai/score/score-evaluator/ScoreFunction";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import ArrayUtil from "@/utils/ArrayUtil";
 

@@ -3,7 +3,7 @@ import * as PIXI from "pixi.js";
 import { TextStyle } from "pixi.js";
 import UuidUtil from "@/utils/UuidUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 import GameApp from "@/game-engine/GameApp";
 import FrameImpl from "@/game-engine/ui/FrameImpl";
 import DetectEvent from "@/game-engine/ui/DetectEvent";

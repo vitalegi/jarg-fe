@@ -41,7 +41,7 @@ import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 import LoggerFactory from "@/logger/LoggerFactory";
 import SelectMonsterIndex from "@/editors/monster-index/SelectMonsterIndex.vue";
 import Vue from "vue";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 
 export default Vue.extend({
   name: "RandomEncounterEditor",

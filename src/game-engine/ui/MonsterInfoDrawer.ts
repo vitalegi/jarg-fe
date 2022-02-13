@@ -1,15 +1,15 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container from "typedi";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Drawer from "@/game-engine/ui/Drawer";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import FrameImpl from "@/game-engine/ui/FrameImpl";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import TapAnythingUserActionHandler from "@/game-engine/user-action-handler/TapAnythingUserActionHandler";
 import GeneralStats from "@/game-engine/ui/monster-info/GeneralStats";
 import Abilities from "@/game-engine/ui/monster-info/Abilities";
@@ -18,7 +18,7 @@ export default class MonsterInfoDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfoDrawer");
   protected static NAME = "MonsterInfoDrawer";
 
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
   protected fontService = Container.get<FontService>(FontService);
   protected levelUpService = Container.get<LevelUpService>(LevelUpService);
   protected abilityRepository =
@@ -116,11 +116,11 @@ export default class MonsterInfoDrawer extends Drawer {
   }
 
   protected x(): number {
-    return (this.windowSizeProxy.width() - this.width()) / 2;
+    return (this.screenProxy.width() - this.width()) / 2;
   }
 
   protected y(): number {
-    return (this.windowSizeProxy.height() - this.height()) / 2;
+    return (this.screenProxy.height() - this.height()) / 2;
   }
 
   protected width(): number {

@@ -1,11 +1,11 @@
 import StatusChangeComputed from "@/game-engine/ability/computed-effect/StatusChangeComputed";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import Monster from "@/game-engine/model/monster/Monster";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
 import Stats from "@/game-engine/model/monster/stats/Stats";
 import StatsService from "@/game-engine/monster/stats/StatsService";
-import TypeService from "@/game-engine/types/TypeService";
+import TypeService from "@/game-engine/type/TypeService";
 import LoggerFactory from "@/logger/LoggerFactory";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";

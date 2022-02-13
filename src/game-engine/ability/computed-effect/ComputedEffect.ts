@@ -1,6 +1,6 @@
 import Duration from "@/game-engine/ability/effects/duration/Duration";
 import GameLoop from "@/game-engine/GameLoop";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import HealthBarUpdateDrawer from "@/game-engine/ui/HealthBarUpdateDrawer";
 import TextOverCharacterDrawer from "@/game-engine/ui/TextOverCharacterDrawer";
 import Container from "typedi";

@@ -3,7 +3,7 @@ import MapRepository from "@/game-engine/map/MapRepository";
 import { CanTraverseAbility } from "@/game-engine/map/traversal/CanTraverse";
 import GraphBuilder from "@/game-engine/map/traversal/GraphBuilder";
 import MapTraversal from "@/game-engine/map/traversal/MapTraversal";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import TileFocusableDrawer from "@/game-engine/ui/TileFocusableDrawer";

@@ -4,14 +4,14 @@ import * as PIXI from "pixi.js";
 import Point from "@/models/Point";
 import Drawer from "@/game-engine/ui/Drawer";
 import MapRepository from "@/game-engine/map/MapRepository";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 import CoordinateService from "@/game-engine/CoordinateService";
 import GameApp from "@/game-engine/GameApp";
 import GameConfig from "@/game-engine/GameConfig";
 
 export default class ChangeFocusDrawer extends Drawer {
   protected mapRepository = Container.get<MapRepository>(MapRepository);
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
   protected coordinateService =
     Container.get<CoordinateService>(CoordinateService);
   protected gameApp = Container.get<GameApp>(GameApp);
@@ -41,8 +41,8 @@ export default class ChangeFocusDrawer extends Drawer {
     const tilePosition = this.coordinateService.getTileCoordinates(this.target);
 
     const screen = new Point(
-      this.windowSizeProxy.width(),
-      this.windowSizeProxy.height()
+      this.screenProxy.width(),
+      this.screenProxy.height()
     );
 
     const targetOffset = new Point(

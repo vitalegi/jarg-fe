@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 import TimeUtil from "@/utils/TimeUtil";
 import UuidUtil from "@/utils/UuidUtil";
 import Container from "typedi";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 
 // TODO delete and use standard WindowProxy
 class IsWindowSizeChanged {
@@ -10,7 +10,7 @@ class IsWindowSizeChanged {
   protected _lastHeight = 0;
 
   public isChanged(): boolean {
-    const windowSize = Container.get<WindowSizeProxy>(WindowSizeProxy);
+    const windowSize = Container.get<ScreenProxy>(ScreenProxy);
     const width = windowSize.width();
     const height = windowSize.height();
 

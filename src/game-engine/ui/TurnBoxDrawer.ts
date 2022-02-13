@@ -2,11 +2,11 @@ import Container from "typedi";
 import * as PIXI from "pixi.js";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Drawer from "@/game-engine/ui/Drawer";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
-import FontService from "@/game-engine/ui/FontService";
+import ScreenProxy from "@/game-engine/ScreenProxy";
+import FontService from "@/game-engine/ui/graphics/FontService";
 import MapRepository from "@/game-engine/map/MapRepository";
 import Tick from "@/game-engine/model/turn/Tick";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import TurnManagerEstimator from "@/game-engine/battle/turns/TurnManagerEstimator";
 
 export default class TurnBoxDrawer extends Drawer {
@@ -17,7 +17,7 @@ export default class TurnBoxDrawer extends Drawer {
   protected container: PIXI.Container | null = null;
   protected turnManagerEstimator =
     Container.get<TurnManagerEstimator>(TurnManagerEstimator);
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
   protected fontService = Container.get<FontService>(FontService);
   protected mapRepository = Container.get<MapRepository>(MapRepository);
 
@@ -94,7 +94,7 @@ export default class TurnBoxDrawer extends Drawer {
   }
   protected x(): number {
     return (
-      this.windowSizeProxy.width() -
+      this.screenProxy.width() -
       this.options.style.rightMargin -
       this.options.style.width
     );

@@ -42,7 +42,7 @@
 </template>
 
 <script lang="ts">
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import Vue from "vue";
 import Container from "typedi";
 

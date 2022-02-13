@@ -1,6 +1,6 @@
 import Condition from "@/game-engine/ability/effects/condition/Condition";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import RandomService from "@/services/RandomService";
 import Container from "typedi";
 

@@ -1,5 +1,5 @@
 import TargetType from "@/game-engine/ability/effects/target/TargetType";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import { asString } from "@/utils/JsonUtil";
 
 export default class Target {

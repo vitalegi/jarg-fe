@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 import TimeUtil from "@/utils/TimeUtil";
 import { Animation } from "@/models/Animation";
 import Drawer from "@/game-engine/ui/Drawer";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 
 class MonsterSprite {
   monsterId;

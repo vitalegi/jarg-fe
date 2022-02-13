@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import Container from "typedi";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { gameLabel } from "@/services/LocalizationService";

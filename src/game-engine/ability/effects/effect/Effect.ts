@@ -8,7 +8,7 @@ import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import { RandomDuration } from "@/game-engine/ability/effects/duration/RandomDuration";
 import Target from "@/game-engine/ability/effects/target/Target";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 
 export type EffectComputeType = "percentage" | "abs";

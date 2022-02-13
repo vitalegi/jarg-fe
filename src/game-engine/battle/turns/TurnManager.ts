@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
 import RandomService from "@/services/RandomService";
 import Container, { Service } from "typedi";

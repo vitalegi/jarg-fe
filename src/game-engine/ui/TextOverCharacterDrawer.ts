@@ -1,11 +1,11 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
 import LoggerFactory from "@/logger/LoggerFactory";
 import GameApp from "@/game-engine/GameApp";
 import Drawer from "@/game-engine/ui/Drawer";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 
 export default class TextOverCharacterDrawer extends Drawer {
   logger = LoggerFactory.getLogger("GameEngine.UI.TextOverCharacterDrawer");

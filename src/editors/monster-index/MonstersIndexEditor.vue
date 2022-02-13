@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts">
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import Vue from "vue";
 import MonsterIndexEditor from "@/editors/monster-index/MonsterIndexEditor.vue";
 import ImportDialog from "@/components/ImportDialog.vue";

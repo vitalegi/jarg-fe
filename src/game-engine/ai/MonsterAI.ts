@@ -6,7 +6,7 @@ import { CanTraverseWalking } from "@/game-engine/map/traversal/CanTraverse";
 import GraphBuilder from "@/game-engine/map/traversal/GraphBuilder";
 import MapTraversal from "@/game-engine/map/traversal/MapTraversal";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import LoggerFactory from "@/logger/LoggerFactory";

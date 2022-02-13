@@ -2,7 +2,7 @@ import Container from "typedi";
 import * as PIXI from "pixi.js";
 import TimeUtil from "@/utils/TimeUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 import Drawer from "@/game-engine/ui/Drawer";
 import GameApp from "@/game-engine/GameApp";
 

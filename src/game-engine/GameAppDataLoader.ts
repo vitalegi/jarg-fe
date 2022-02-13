@@ -1,5 +1,5 @@
 import MapModelRepository from "@/game-engine/map/MapModelRepository";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import TileRepository from "@/game-engine/repositories/TileRepository";

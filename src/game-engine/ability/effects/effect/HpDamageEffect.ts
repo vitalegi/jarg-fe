@@ -4,7 +4,7 @@ import MissComputed from "@/game-engine/ability/computed-effect/MissComputed";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import Ability from "@/game-engine/model/ability/Ability";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import { asInt } from "@/utils/JsonUtil";
 
 export default class HpDamageEffect extends Effect {
