@@ -3,7 +3,7 @@ import Stats from "@/game-engine/model/monster/stats/Stats";
 import { asString } from "@/utils/JsonUtil";
 import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
 import MonsterEvolution from "@/game-engine/model/monster/evolution/MonsterEvolution";
-import TypeConstants from "@/game-engine/types/TypeConstants";
+import TypeConstants from "@/game-engine/type/TypeConstants";
 
 export default class MonsterIndex {
   monsterId = "";

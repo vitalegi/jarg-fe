@@ -1,5 +1,5 @@
 import AbilityService from "@/game-engine/ability/AbilityService";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import MonsterEvolution from "@/game-engine/model/monster/evolution/MonsterEvolution";
 import MonsterIndexService from "@/game-engine/monster/MonsterIndexService";
 import StatsService from "@/game-engine/monster/stats/StatsService";

@@ -1,6 +1,6 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import { CharacterType } from "@/models/Character";
 import Move from "@/models/Move";
 import { asInt, asIntNullable, asString } from "@/utils/JsonUtil";

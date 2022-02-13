@@ -1,6 +1,6 @@
-import Monster from "@/game-engine/monster/Monster";
-import MonsterData from "@/game-engine/monster/MonsterData";
-import PlayerData from "@/game-engine/PlayerData";
+import Monster from "@/game-engine/model/monster/Monster";
+import MonsterData from "@/game-engine/model/monster/MonsterData";
+import PlayerData from "@/game-engine/model/player-data/PlayerData";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { Service } from "typedi";
 

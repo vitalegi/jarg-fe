@@ -1,6 +1,6 @@
 import Container, { Service } from "typedi";
 import * as PIXI from "pixi.js";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import GameConfig from "@/game-engine/GameConfig";
 import PlayerService from "@/game-engine/PlayerService";
 

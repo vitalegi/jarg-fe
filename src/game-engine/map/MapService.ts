@@ -4,7 +4,7 @@ import MapContainer from "@/game-engine/model/map/MapContainer";
 import MapModel from "@/game-engine/model/map/MapModel";
 import RandomEncounter from "@/game-engine/model/map/RandomEncounter";
 import { LevelUpService } from "@/game-engine/monster/LevelUpService";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import MonsterService from "@/game-engine/monster/MonsterService";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import Point from "@/models/Point";

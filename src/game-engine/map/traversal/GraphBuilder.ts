@@ -1,7 +1,7 @@
 import MapContainer from "@/game-engine/model/map/MapContainer";
 import CanTraverse from "@/game-engine/map/traversal/CanTraverse";
 import TraversalPoint from "@/game-engine/map/traversal/TraversalPoint";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import Point from "@/models/Point";
 
 export default class GraphBuilder {

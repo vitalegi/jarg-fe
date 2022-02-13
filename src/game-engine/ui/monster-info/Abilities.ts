@@ -1,18 +1,18 @@
-import Monster from "@/game-engine/monster/Monster";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import Monster from "@/game-engine/model/monster/Monster";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 import LoggerFactory from "@/logger/LoggerFactory";
 import * as PIXI from "pixi.js";
 import Container from "typedi";
 import { gameLabel } from "@/services/LocalizationService";
 import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
 import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
-import FontService from "@/game-engine/ui/FontService";
+import FontService from "@/game-engine/ui/graphics/FontService";
 
 export default class Abilities {
   logger = LoggerFactory.getLogger("GameEngine.UI.MonsterInfo.GeneralStats");
 
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
   protected fontService = Container.get<FontService>(FontService);
   protected abilityRepository =
     Container.get<AbilityRepository>(AbilityRepository);

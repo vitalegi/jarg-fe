@@ -1,6 +1,6 @@
 import MapContainer from "@/game-engine/model/map/MapContainer";
 import Tile from "@/game-engine/model/map/Tile";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import TileRepository from "@/game-engine/repositories/TileRepository";
 import Container from "typedi";
 

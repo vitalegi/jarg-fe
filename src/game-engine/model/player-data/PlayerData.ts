@@ -1,4 +1,4 @@
-import MonsterData from "@/game-engine/monster/MonsterData";
+import MonsterData from "@/game-engine/model/monster/MonsterData";
 import SaveDataVersion from "@/game-engine/save-data/SaveDataVersion";
 import { asInt, asString } from "@/utils/JsonUtil";
 

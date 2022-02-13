@@ -1,4 +1,4 @@
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
 import Container, { Service } from "typedi";
 

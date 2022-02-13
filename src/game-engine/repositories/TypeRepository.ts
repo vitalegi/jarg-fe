@@ -1,4 +1,4 @@
-import Bonus from "@/game-engine/types/Bonus";
+import Bonus from "@/game-engine/model/type/Bonus";
 import { Service } from "typedi";
 
 @Service()

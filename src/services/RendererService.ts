@@ -1,4 +1,4 @@
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
 import Tile from "@/game-engine/model/map/Tile";
@@ -7,7 +7,7 @@ import { SpriteType } from "@/models/SpriteConfig";
 import CoordinateService from "@/game-engine/CoordinateService";
 import UserActionService from "@/game-engine/user-action-handler/UserActionService";
 import HealthBarService from "@/game-engine/monster/HealthBarService";
-import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import MonsterIndex from "@/game-engine/model/monster/MonsterIndex";
 import GameConfig from "@/game-engine/GameConfig";
 import LoggerFactory from "@/logger/LoggerFactory";
 import TileRepository from "@/game-engine/repositories/TileRepository";

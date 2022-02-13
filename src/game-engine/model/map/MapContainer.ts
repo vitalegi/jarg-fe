@@ -1,5 +1,5 @@
 import Tile from "@/game-engine/model/map/Tile";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 
 export default class MapContainer {
   tiles: Tile[] = [];

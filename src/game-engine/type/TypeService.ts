@@ -1,5 +1,5 @@
 import TypeRepository from "@/game-engine/repositories/TypeRepository";
-import TypeConstants from "@/game-engine/types/TypeConstants";
+import TypeConstants from "@/game-engine/type/TypeConstants";
 import Container, { Service } from "typedi";
 
 @Service()

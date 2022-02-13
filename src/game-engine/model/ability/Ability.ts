@@ -6,7 +6,7 @@ import EffectFactory from "@/game-engine/ability/effects/effect/EffectFactory";
 import Usages from "@/game-engine/ability/Usages";
 import RechargeFamily from "@/game-engine/model/ability/RechargeFamily";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
-import TypeConstants from "@/game-engine/types/TypeConstants";
+import TypeConstants from "@/game-engine/type/TypeConstants";
 import { LocalizationUtil } from "@/services/LocalizationService";
 import { asBoolean, asInt, asString } from "@/utils/JsonUtil";
 

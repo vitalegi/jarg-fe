@@ -1,7 +1,7 @@
 import TimeUtil from "@/utils/TimeUtil";
 import Container from "typedi";
 import * as PIXI from "pixi.js";
-import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
+import ScreenProxy from "@/game-engine/ScreenProxy";
 import CONFIG from "@/assets/transitions/squared-transition-config.json";
 import NumberUtil from "@/utils/NumberUtil";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -13,7 +13,7 @@ export default class SquaredTransitionDrawer extends Drawer {
     "GameEngine.UI.SceneTransition.SquaredTransitionDrawer"
   );
   protected gameApp = Container.get<GameApp>(GameApp);
-  protected windowSizeProxy = Container.get<WindowSizeProxy>(WindowSizeProxy);
+  protected screenProxy = Container.get<ScreenProxy>(ScreenProxy);
 
   protected container;
 
@@ -38,8 +38,8 @@ export default class SquaredTransitionDrawer extends Drawer {
     const totalSteps = CONFIG.steps.length;
 
     const lastStep = Math.round(percentage * totalSteps);
-    const w = this.windowSizeProxy.width();
-    const h = this.windowSizeProxy.height();
+    const w = this.screenProxy.width();
+    const h = this.screenProxy.height();
     this.logger.debug(
       `percentage: ${Math.round(100 * percentage)}, step: ${lastStep}`
     );
@@ -70,11 +70,11 @@ export default class SquaredTransitionDrawer extends Drawer {
   }
 
   protected rectWidth(): number {
-    const w = this.windowSizeProxy.width();
+    const w = this.screenProxy.width();
     return Math.ceil(w / this.horizontalSteps()) + 1;
   }
   protected rectHeight(): number {
-    const h = this.windowSizeProxy.height();
+    const h = this.screenProxy.height();
     return Math.ceil(h / this.verticalSteps()) + 1;
   }
 

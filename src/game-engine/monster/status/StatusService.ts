@@ -1,5 +1,5 @@
 import ComputedEffectUtil from "@/game-engine/ability/computed-effect/ComputedEffectUtil";
-import Monster from "@/game-engine/monster/Monster";
+import Monster from "@/game-engine/model/monster/Monster";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
 import { Service } from "typedi";
 
