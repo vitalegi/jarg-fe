@@ -1,6 +1,6 @@
+import WindowSizeProxy from "@/game-engine/WindowSizeProxy";
 import * as PIXI from "pixi.js";
 import Container, { Service } from "typedi";
-import WindowSizeProxy from "./WindowSizeProxy";
 
 @Service()
 export default class GameApp {

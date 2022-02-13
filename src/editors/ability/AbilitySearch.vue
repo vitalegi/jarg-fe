@@ -48,8 +48,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Ability from "@/game-engine/monster-action/ability/Ability";
 import StringUtil from "@/utils/StringUtil";
+import Ability from "@/game-engine/model/ability/Ability";
 
 export default Vue.extend({
   name: "AbilitySearch",

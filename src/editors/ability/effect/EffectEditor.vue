@@ -102,20 +102,20 @@ import Vue from "vue";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
-import Effect from "@/game-engine/monster-action/effects/effect/Effect";
-import TargetType from "@/game-engine/monster-action/effects/target/TargetType";
-import ConditionsEditor from "./ConditionsEditor.vue";
-import Condition from "@/game-engine/monster-action/effects/condition/Condition";
-import Target from "@/game-engine/monster-action/effects/target/Target";
-import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
-import StatChangeEffect from "@/game-engine/monster-action/effects/effect/StatChangeEffect";
-import HpDamageEffect from "@/game-engine/monster-action/effects/effect/HpDamageEffect";
+import Effect from "@/game-engine/ability/effects/effect/Effect";
+import TargetType from "@/game-engine/ability/effects/target/TargetType";
+import ConditionsEditor from "@/editors/ability/effect/ConditionsEditor.vue";
+import Condition from "@/game-engine/ability/effects/condition/Condition";
+import Target from "@/game-engine/ability/effects/target/Target";
+import HitCondition from "@/game-engine/ability/effects/condition/HitCondition";
+import StatChangeEffect from "@/game-engine/ability/effects/effect/StatChangeEffect";
+import HpDamageEffect from "@/game-engine/ability/effects/effect/HpDamageEffect";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
-import StatusChangeEffect from "@/game-engine/monster-action/effects/effect/StatusChangeEffect";
+import StatusChangeEffect from "@/game-engine/ability/effects/effect/StatusChangeEffect";
 import StatusContants from "@/game-engine/monster/status/StatusContants";
-import { Immediate } from "@/game-engine/monster-action/effects/duration/Immediate";
-import { FixedDuration } from "@/game-engine/monster-action/effects/duration/FixedDuration";
-import { RandomDuration } from "@/game-engine/monster-action/effects/duration/RandomDuration";
+import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
+import { FixedDuration } from "@/game-engine/ability/effects/duration/FixedDuration";
+import { RandomDuration } from "@/game-engine/ability/effects/duration/RandomDuration";
 
 export default Vue.extend({
   name: "EffectEditor",

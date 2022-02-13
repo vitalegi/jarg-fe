@@ -39,14 +39,14 @@
 <script lang="ts">
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
-import MonsterIndexEditor from "./MonsterIndexEditor.vue";
-import ImportDialog from "../../components/ImportDialog.vue";
-import MonsterIndexSearch from "./MonsterIndexSearch.vue";
-import MonstersIndexAbilitiesImport from "./MonstersIndexAbilitiesImport.vue";
+import MonsterIndexEditor from "@/editors/monster-index/MonsterIndexEditor.vue";
+import ImportDialog from "@/components/ImportDialog.vue";
+import MonsterIndexSearch from "@/editors/monster-index/MonsterIndexSearch.vue";
+import MonstersIndexAbilitiesImport from "@/editors/monster-index/MonstersIndexAbilitiesImport.vue";
 import LoggerFactory from "@/logger/LoggerFactory";
-import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
 import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
+import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
 
 export default Vue.extend({
   name: "MonstersIndexEditor",

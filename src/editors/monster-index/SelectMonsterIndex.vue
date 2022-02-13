@@ -48,7 +48,7 @@
 <script lang="ts">
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Vue from "vue";
-import MonsterIndexSearch from "./MonsterIndexSearch.vue";
+import MonsterIndexSearch from "@/editors/monster-index/MonsterIndexSearch.vue";
 
 export default Vue.extend({
   name: "SelectMonsterIndex",

@@ -41,9 +41,9 @@
 </template>
 
 <script lang="ts">
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
 import Vue from "vue";
-import AbilitySearch from "./AbilitySearch.vue";
+import AbilitySearch from "@/editors/ability/AbilitySearch.vue";
 
 export default Vue.extend({
   name: "SelectAbility",

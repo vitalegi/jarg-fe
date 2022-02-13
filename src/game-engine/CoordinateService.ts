@@ -1,8 +1,7 @@
-import MapContainer from "@/game-engine/map/MapContainer";
 import Point from "@/models/Point";
 import { Service } from "typedi";
 import * as PIXI from "pixi.js";
-import GameConfig from "./GameConfig";
+import GameConfig from "@/game-engine/GameConfig";
 
 @Service()
 export default class CoordinateService {

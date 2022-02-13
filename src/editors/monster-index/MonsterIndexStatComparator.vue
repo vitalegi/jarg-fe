@@ -165,13 +165,13 @@
 import Vue from "vue";
 import Container from "typedi";
 import StatsService from "@/game-engine/monster/stats/StatsService";
-import MonsterIndexEditorRepository from "./MonsterIndexEditorRepository";
+import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Stats from "@/game-engine/monster/stats/Stats";
-import FormulaService from "@/game-engine/monster-action/FormulaService";
+import FormulaService from "@/game-engine/ability/FormulaService";
 import NumberUtil from "@/utils/NumberUtil";
 import StatsConstants from "@/game-engine/monster/stats/StatsContants";
-import SelectMonsterIndex from "./SelectMonsterIndex.vue";
+import SelectMonsterIndex from "@/editors/monster-index/SelectMonsterIndex.vue";
 
 export default Vue.extend({
   name: "MonsterIndexStatComparator",

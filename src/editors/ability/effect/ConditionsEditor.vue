@@ -20,9 +20,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
-import ConditionEditor from "./ConditionEditor.vue";
-import Condition from "@/game-engine/monster-action/effects/condition/Condition";
+import ConditionEditor from "@/editors/ability/effect/ConditionEditor.vue";
+import Condition from "@/game-engine/ability/effects/condition/Condition";
 
 export default Vue.extend({
   name: "EffectEditor",

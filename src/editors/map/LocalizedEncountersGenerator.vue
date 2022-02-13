@@ -73,7 +73,7 @@
 
 <script lang="ts">
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import RandomEncounterEditor from "./RandomEncounterEditor.vue";
+import RandomEncounterEditor from "@/editors/map/RandomEncounterEditor.vue";
 import LocalizedEncounters from "@/game-engine/map/LocalizedEncounters";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
@@ -81,7 +81,7 @@ import NumberUtil from "@/utils/NumberUtil";
 import Vue from "vue";
 import RandomEncounter from "@/game-engine/map/RandomEncounter";
 import MapModel from "@/game-engine/map/MapModel";
-import OpenCloseBtn from "./OpenCloseBtn.vue";
+import OpenCloseBtn from "@/editors/map/OpenCloseBtn.vue";
 
 export default Vue.extend({
   name: "LocalizedEncountersGenerator",

@@ -38,7 +38,7 @@
 import LoggerFactory from "@/logger/LoggerFactory";
 import Vue from "vue";
 import SpriteConfig from "@/models/SpriteConfig";
-import OpenCloseBtn from "./OpenCloseBtn.vue";
+import OpenCloseBtn from "@/editors/map/OpenCloseBtn.vue";
 import EditableTextField from "@/components/EditableTextField.vue";
 
 export default Vue.extend({

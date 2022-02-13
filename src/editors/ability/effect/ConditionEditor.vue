@@ -28,9 +28,9 @@
 <script lang="ts">
 import Vue from "vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import Condition from "@/game-engine/monster-action/effects/condition/Condition";
-import HitCondition from "@/game-engine/monster-action/effects/condition/HitCondition";
-import RandomCondition from "@/game-engine/monster-action/effects/condition/RandomCondition";
+import Condition from "@/game-engine/ability/effects/condition/Condition";
+import HitCondition from "@/game-engine/ability/effects/condition/HitCondition";
+import RandomCondition from "@/game-engine/ability/effects/condition/RandomCondition";
 import ComboBoxInput from "@/components/ComboBoxInput.vue";
 
 export default Vue.extend({

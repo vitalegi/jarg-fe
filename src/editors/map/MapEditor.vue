@@ -113,7 +113,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import Point from "@/models/Point";
 import Vue from "vue";
 import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
-import LocalizedEncountersGenerator from "./LocalizedEncountersGenerator.vue";
+import LocalizedEncountersGenerator from "@/editors/map/LocalizedEncountersGenerator.vue";
 import MapModel from "@/game-engine/map/MapModel";
 import SpriteConfig from "@/models/SpriteConfig";
 import Tile from "@/game-engine/map/Tile";
@@ -121,10 +121,10 @@ import NumberUtil from "@/utils/NumberUtil";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Container from "typedi";
 import TileRepository from "@/game-engine/repositories/TileRepository";
-import BackgroundEditor from "./BackgroundEditor.vue";
-import PlayerSpawnEditor from "./PlayerSpawnEditor.vue";
+import BackgroundEditor from "@/editors/map/BackgroundEditor.vue";
+import PlayerSpawnEditor from "@/editors/map/PlayerSpawnEditor.vue";
 import RandomEncounter from "@/game-engine/map/RandomEncounter";
-import ImportDialog from "../../components/ImportDialog.vue";
+import ImportDialog from "@/components/ImportDialog.vue";
 
 const DEFAULT_POINT = new Point(-1000, -1000);
 

@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import TypesSelector from "../type/TypesSelector.vue";
+import TypesSelector from "@/editors/type/TypesSelector.vue";
 import EditableTextField from "@/components/EditableTextField.vue";
 export default Vue.extend({
   name: "MonsterIndexBaseInfoEditor",

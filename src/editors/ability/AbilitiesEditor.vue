@@ -38,14 +38,14 @@
 
 <script lang="ts">
 import Vue from "vue";
-import AbilityEditor from "./AbilityEditor.vue";
-import AbilitySearch from "./AbilitySearch.vue";
-import ImportDialog from "../../components/ImportDialog.vue";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import AbilityEditor from "@/editors/ability/AbilityEditor.vue";
+import AbilitySearch from "@/editors/ability/AbilitySearch.vue";
+import ImportDialog from "@/components/ImportDialog.vue";
 import NumberUtil from "@/utils/NumberUtil";
 import StringUtil from "@/utils/StringUtil";
 import RechargeFamily from "@/game-engine/battle/RechargeFamily";
 import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
+import Ability from "@/game-engine/model/ability/Ability";
 
 export default Vue.extend({
   name: "AbilitiesEditor",

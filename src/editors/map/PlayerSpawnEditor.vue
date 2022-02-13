@@ -23,7 +23,7 @@
 import LoggerFactory from "@/logger/LoggerFactory";
 import Vue from "vue";
 import Point from "@/models/Point";
-import OpenCloseBtn from "./OpenCloseBtn.vue";
+import OpenCloseBtn from "@/editors/map/OpenCloseBtn.vue";
 
 export default Vue.extend({
   name: "PlayerSpawnEditor",

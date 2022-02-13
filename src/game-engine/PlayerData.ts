@@ -1,6 +1,6 @@
+import MonsterData from "@/game-engine/monster/MonsterData";
+import SaveDataVersion from "@/game-engine/save-data/SaveDataVersion";
 import { asInt, asString } from "@/utils/JsonUtil";
-import MonsterData from "./monster/MonsterData";
-import SaveDataVersion from "./save-data/SaveDataVersion";
 
 export default class PlayerData {
   version = SaveDataVersion.LATEST;

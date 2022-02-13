@@ -1,8 +1,8 @@
+import Drawer from "@/game-engine/ui/Drawer";
+import MonsterAnimationDrawer from "@/game-engine/ui/MonsterAnimationDrawer";
 import LoggerFactory from "@/logger/LoggerFactory";
 import TimeUtil from "@/utils/TimeUtil";
 import { Service } from "typedi";
-import Drawer from "./ui/Drawer";
-import MonsterAnimationDrawer from "./ui/MonsterAnimationDrawer";
 
 @Service()
 export default class GameLoop {

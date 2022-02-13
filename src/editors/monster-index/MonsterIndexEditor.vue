@@ -80,17 +80,17 @@
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import Stats from "@/game-engine/monster/stats/Stats";
 import Vue from "vue";
-import StatsEditor from "./StatsEditor.vue";
-import StatsOverview from "./StatsOverview.vue";
-import MonsterIndexBaseInfoEditor from "./MonsterIndexBaseInfoEditor.vue";
+import StatsEditor from "@/editors/monster-index/StatsEditor.vue";
+import StatsOverview from "@/editors/monster-index/StatsOverview.vue";
+import MonsterIndexBaseInfoEditor from "@/editors/monster-index/MonsterIndexBaseInfoEditor.vue";
 import ConfirmDeletion from "@/components/ConfirmDeletion.vue";
 import Container from "typedi";
 import StatsService from "@/game-engine/monster/stats/StatsService";
-import MonsterIndexAbilitiesLearnableEditor from "./MonsterIndexAbilitiesLearnableEditor.vue";
-import MonsterIndexEvolutionsEditor from "./MonsterIndexEvolutionsEditor.vue";
-import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
+import MonsterIndexAbilitiesLearnableEditor from "@/editors/monster-index/MonsterIndexAbilitiesLearnableEditor.vue";
+import MonsterIndexEvolutionsEditor from "@/editors/monster-index/MonsterIndexEvolutionsEditor.vue";
 import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
+import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
 
 export default Vue.extend({
   name: "MonsterIndexEditor",

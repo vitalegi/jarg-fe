@@ -59,8 +59,6 @@
 <script lang="ts">
 import LoggerFactory from "@/logger/LoggerFactory";
 import Vue from "vue";
-import CopyToClipboardBtn from "@/components/CopyToClipboardBtn.vue";
-import ImportDialog from "../../components/ImportDialog.vue";
 import GameAppDataLoader from "@/game-engine/GameAppDataLoader";
 import Container from "typedi";
 import MapModelRepository from "@/game-engine/map/MapModelRepository";

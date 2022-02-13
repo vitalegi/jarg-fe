@@ -45,13 +45,13 @@
 </template>
 
 <script lang="ts">
-import Ability from "@/game-engine/monster-action/ability/Ability";
-import AbilityLearnable from "@/game-engine/monster-action/ability/AbilityLearnable";
+import Ability from "@/game-engine/model/ability/Ability";
+import AbilityLearnable from "@/game-engine/model/ability/AbilityLearnable";
 import LoggerFactory from "@/logger/LoggerFactory";
 import NumberUtil from "@/utils/NumberUtil";
 import Container from "typedi";
 import Vue from "vue";
-import AbilityEditorRepository from "../ability/AbilityEditorRepository";
+import AbilityEditorRepository from "@/editors/ability/AbilityEditorRepository";
 
 const DEFAULT_VALUE = "001;BY_LEVEL;Azione;1\n002;BY_LEVEL;Ruggito;5";
 

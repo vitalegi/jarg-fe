@@ -1,3 +1,10 @@
+import MapModelRepository from "@/game-engine/map/MapModelRepository";
+import MonsterIndex from "@/game-engine/monster/MonsterIndex";
+import AbilityRepository from "@/game-engine/repositories/AbilityRepository";
+import MonsterIndexRepository from "@/game-engine/repositories/MonsterIndexRepository";
+import TileRepository from "@/game-engine/repositories/TileRepository";
+import TowerModeRepository from "@/game-engine/repositories/TowerModeRepository";
+import TypeRepository from "@/game-engine/repositories/TypeRepository";
 import LoggerFactory from "@/logger/LoggerFactory";
 import { AnimationSrc } from "@/models/Animation";
 import SpriteConfig from "@/models/SpriteConfig";
@@ -5,13 +12,6 @@ import GameAssetService from "@/services/GameAssetService";
 import RendererService, { Asset } from "@/services/RendererService";
 import ArrayUtil from "@/utils/ArrayUtil";
 import Container, { Service } from "typedi";
-import MapModelRepository from "./map/MapModelRepository";
-import MonsterIndex from "./monster/MonsterIndex";
-import AbilityRepository from "./repositories/AbilityRepository";
-import MonsterIndexRepository from "./repositories/MonsterIndexRepository";
-import TileRepository from "./repositories/TileRepository";
-import TowerModeRepository from "./repositories/TowerModeRepository";
-import TypeRepository from "./repositories/TypeRepository";
 
 @Service()
 export default class GameAppDataLoader {

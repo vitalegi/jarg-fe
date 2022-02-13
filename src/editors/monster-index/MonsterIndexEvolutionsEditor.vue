@@ -46,14 +46,14 @@
 
 <script lang="ts">
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
-import Ability from "@/game-engine/monster-action/ability/Ability";
+import Ability from "@/game-engine/model/ability/Ability";
 import MonsterEvolution from "@/game-engine/monster/monster-evolution/MonsterEvolution";
 import MonsterIndex from "@/game-engine/monster/MonsterIndex";
 import LoggerFactory from "@/logger/LoggerFactory";
 import Container from "typedi";
 import Vue from "vue";
-import MonsterIndexEditorRepository from "./MonsterIndexEditorRepository";
-import SelectMonsterIndex from "./SelectMonsterIndex.vue";
+import MonsterIndexEditorRepository from "@/editors/monster-index/MonsterIndexEditorRepository";
+import SelectMonsterIndex from "@/editors/monster-index/SelectMonsterIndex.vue";
 
 export default Vue.extend({
   name: "MonsterIndexEvolutionsEditor",
