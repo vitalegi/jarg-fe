@@ -3,6 +3,7 @@ import CONFIG from "@/assets/styles/button.json";
 import NumberUtil from "@/utils/NumberUtil";
 import { LINE_JOIN } from "pixi.js";
 import DetectEvent from "@/game-engine/ui/DetectEvent";
+import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
 
 declare interface Border extends Partial<PIXI.ILineStyleOptions> {
   radius?: number;
@@ -26,30 +27,52 @@ declare interface Style {
 
 declare interface Options {
   name: string;
-  label: string;
-  disabled: boolean;
+  label(): string;
+  disabled(): boolean;
+  onTap?(): void;
   style: Style;
   onClickStyle: Style;
-  onTap?: () => void;
 }
 
-export default class Button {
+export default class Button implements DisplayObj {
   private static LABEL_NAME = "BTN_LABEL";
   private static SHAPE_NAME = "BTN_SHAPE";
 
   protected container;
+  protected originalOptions: Partial<Options>;
   protected options: Partial<Options>;
 
   public constructor(options: Partial<Options>) {
-    this.options = options;
+    this.originalOptions = options;
+    this.options = {};
     this.initOptions();
     this.container = new PIXI.Container();
-    this.initGraphics(options.style);
+    this.initGraphics(this.options.style);
     this.initListeners();
+  }
+
+  public update(): void {
+    this.initOptions();
+    this.initGraphics(this.options.style);
   }
 
   public getContainer(): PIXI.Container {
     return this.container;
+  }
+  public setX(x: number): void {
+    this.container.x = x;
+  }
+  public setY(y: number): void {
+    this.container.y = y;
+  }
+  public disabled(): boolean {
+    return this.isDisabled();
+  }
+  public getWidth(): number {
+    return this.getContainer().width;
+  }
+  public getHeight(): number {
+    return this.getContainer().height;
   }
 
   protected initGraphics(style?: Style): void {
@@ -64,10 +87,11 @@ export default class Button {
     if (!this.options.label) {
       return;
     }
+    const label = this.options.label();
     this.container.removeChild(
       this.container.getChildByName(Button.LABEL_NAME)
     );
-    const text = new PIXI.Text(this.options.label, style?.font);
+    const text = new PIXI.Text(label, style?.font);
     text.name = Button.LABEL_NAME;
     if (style?.border?.width) {
       text.x = style.border.width;
@@ -176,20 +200,20 @@ export default class Button {
   }
 
   protected initOptions(): void {
-    if (!this.options.style) {
-      this.options.style = {};
-    }
+    this.options = {};
+    this.options.name = this.originalOptions.name;
+    this.options.label = this.originalOptions.label;
+    this.options.onTap = this.originalOptions.onTap;
+    this.options.disabled = this.originalOptions.disabled;
+
     this.options.style = this.createStyle([
-      this.options.style,
-      this.options.disabled ? CONFIG.disabledStyle : undefined,
+      this.originalOptions.style,
+      this.isDisabled() ? CONFIG.disabledStyle : undefined,
       CONFIG.defaultStyle,
     ]);
-    if (!this.options.onClickStyle) {
-      this.options.onClickStyle = {};
-    }
     this.options.onClickStyle = this.createStyle([
-      this.options.onClickStyle,
-      this.options.disabled ? CONFIG.disabledStyle : undefined,
+      this.originalOptions.onClickStyle,
+      this.isDisabled() ? CONFIG.disabledStyle : undefined,
       CONFIG.onClickStyle,
       CONFIG.defaultStyle,
     ]);
@@ -233,5 +257,12 @@ export default class Button {
         target[key] = source[key];
       }
     }
+  }
+
+  protected isDisabled(): boolean {
+    if (this.options.disabled) {
+      return this.options.disabled();
+    }
+    return false;
   }
 }

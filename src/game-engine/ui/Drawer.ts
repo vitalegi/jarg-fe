@@ -6,13 +6,14 @@ import ScreenProxy from "@/game-engine/ScreenProxy";
 
 // TODO delete and use standard WindowProxy
 class IsWindowSizeChanged {
+  protected screenProxy = Container.get(ScreenProxy);
   protected _lastWidth = 0;
   protected _lastHeight = 0;
 
   public isChanged(): boolean {
-    const windowSize = Container.get(ScreenProxy);
-    const width = windowSize.width();
-    const height = windowSize.height();
+    const screenProxy = Container.get(ScreenProxy);
+    const width = screenProxy.width();
+    const height = screenProxy.height();
 
     const diffW = width - this._lastWidth;
     const diffH = height - this._lastHeight;
@@ -23,20 +24,22 @@ class IsWindowSizeChanged {
 }
 
 export default abstract class Drawer {
+  protected screenProxy = Container.get(ScreenProxy);
+  private _isResized = new IsWindowSizeChanged();
+
   private _id;
   private _completed = false;
   private _drawCount = 0;
   private _startTime = 0;
 
-  private _promises: ((value: void | PromiseLike<void>) => void)[] = [];
-  private _isResized = new IsWindowSizeChanged();
+  private _promises: ((value: any | PromiseLike<any>) => void)[] = [];
 
   public constructor() {
     this._id = UuidUtil.nextId();
   }
 
-  public notifyWhenCompleted(): Promise<void> {
-    return new Promise<void>((resolve) => {
+  public notifyWhenCompleted(): Promise<any> {
+    return new Promise<any>((resolve) => {
       this._promises.push(resolve);
     });
   }
@@ -69,9 +72,9 @@ export default abstract class Drawer {
     return this._startTime;
   }
 
-  protected complete(): void {
+  protected complete(payload: any | undefined = undefined): void {
     this._completed = true;
-    this._promises.forEach((promise) => promise());
+    this._promises.forEach((promise) => promise(payload));
   }
 
   protected isResized(): boolean {
