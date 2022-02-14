@@ -5,10 +5,17 @@ export default class StringUtil {
     }
     return str;
   }
-  public static isNullOrEmpty(str: string): boolean {
+  public static isNullOrEmpty(str: string | undefined | null): boolean {
     if (str === null || str === undefined) {
       return true;
     }
     return str.trim() === "";
+  }
+
+  public static isEmpty(str: string | undefined | null): boolean {
+    if (str === undefined) {
+      return true;
+    }
+    return StringUtil.isNullOrEmpty(str) || str === "";
   }
 }

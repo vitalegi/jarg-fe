@@ -1,8 +1,11 @@
 {
   "defaultStyle": {
     "font": {
+      "fontFamily": "Courier",
       "fontSize": 20,
-      "fill": "0x2c2c2c"
+      "fill": "0x2c2c2c",
+      "lineJoin": "round",
+      "fontWeight": "700"
     },
     "background": {
       "color": "0xf6f6f6"
@@ -32,5 +35,32 @@
       "color": "0xa0a0a0"
     },
     "margin": 5
+  },
+
+  "text": {
+    "defaultStyle": {
+      "font": {
+        "fontFamily": "Courier",
+        "fontSize": 20,
+        "fill": "0x2c2c2c",
+        "lineJoin": "round",
+        "fontWeight": "700"
+      },
+      "margin": 5
+    },
+    "disabledStyle": {
+      "font": {
+        "fill": "0xa3a3a3"
+      },
+      "background": {}
+    },
+    "onClickStyle": {
+      "font": {
+        "fill": "0x4b4b4b"
+      },
+      "background": {},
+      "border": {},
+      "margin": 5
+    }
   }
 }

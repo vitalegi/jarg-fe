@@ -10,11 +10,19 @@ export default class LoggerCore {
     logLevel: number,
     name: string,
     message: string,
-    ...params: any[]
+    params: any[]
   ): void {
     if (this.enabler.isEnabled(logLevel, name)) {
       const log = this.format(logLevel, name, message, params);
-      this.appender.append(log);
+      if (logLevel === LoggerLevel.ERROR) {
+        let e = null;
+        if (params.length > 0) {
+          e = params[params.length - 1];
+        }
+        this.appender.error(log, e);
+      } else {
+        this.appender.append(log);
+      }
     }
   }
 

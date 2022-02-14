@@ -1,7 +1,6 @@
 import GameApp from "@/game-engine/GameApp";
 import MapRepository from "@/game-engine/map/MapRepository";
 import DetectEvent from "@/game-engine/ui/DetectEvent";
-import Drawer from "@/game-engine/ui/Drawer";
 import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
 import SingleLineFrame from "@/game-engine/ui/graphics/frame/SingleLineFrame";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -10,12 +9,13 @@ import * as PIXI from "pixi.js";
 import { LINE_JOIN } from "pixi.js";
 import Container from "typedi";
 
-export default abstract class Canvas extends Drawer implements DisplayObj {
+export default class Canvas implements DisplayObj {
   private logger = LoggerFactory.getLogger("GameEngine.UI.Graphics.Canvas");
   protected mapRepository = Container.get(MapRepository);
   protected gameApp = Container.get(GameApp);
 
   container?: PIXI.Container;
+  content?: DisplayObj;
   visibleWidth = 0;
   visibleHeight = 0;
   x = 0;
@@ -29,15 +29,17 @@ export default abstract class Canvas extends Drawer implements DisplayObj {
     return "CanvasDrawer";
   }
 
-  protected doDraw(): void {
-    if (this.isFirstDraw()) {
-      this.logger.info(`Initialize canvas`);
-      const app = this.gameApp.getApp();
-      const content = this.createContent();
-      if (this.container) {
-        app.stage.removeChild(this.container);
-      }
-      this.container = this.createCanvas(content);
+  public draw(): void {
+    this.logger.debug(`Initialize canvas`);
+    const app = this.gameApp.getApp();
+    if (this.container) {
+      app.stage.removeChild(this.container);
+    }
+    if (this.content) {
+      this.content.draw();
+      this.container = this.createCanvas(this.content.getContainer());
+    }
+    if (this.container) {
       app.stage.addChild(this.container);
     }
   }
@@ -70,8 +72,6 @@ export default abstract class Canvas extends Drawer implements DisplayObj {
     content.mask = this.mask();
     return container;
   }
-
-  protected abstract createContent(): PIXI.Container;
 
   protected mask(): PIXI.Graphics {
     const mask = new PIXI.Graphics();
@@ -145,7 +145,7 @@ export default abstract class Canvas extends Drawer implements DisplayObj {
     return false;
   }
   update(): void {
-    return;
+    this.draw();
   }
   getWidth(): number {
     return this.container ? this.container.width : 0;

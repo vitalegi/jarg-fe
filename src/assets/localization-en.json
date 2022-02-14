@@ -46,6 +46,8 @@
     "precision": "Precision",
     "precision-short": "Prec.",
     "save": "Save",
+    "sort-by-id": "By ID",
+    "sort-by-level": "By Lv.",
     "tower-mode": "Tower Mode",
     "usages-short": "PP"
   }

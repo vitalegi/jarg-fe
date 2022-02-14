@@ -2,22 +2,20 @@ import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
 import LoggerFactory from "@/logger/LoggerFactory";
 import * as PIXI from "pixi.js";
 
-export default class List implements DisplayObj {
-  protected logger = LoggerFactory.getLogger("GameEngine.UI.Graphics.List");
+export default class Row implements DisplayObj {
+  protected logger = LoggerFactory.getLogger("GameEngine.UI.Graphics.Row");
   protected container?: PIXI.Container;
   protected elements: DisplayObj[] = [];
-  protected x = 0;
-  protected y = 0;
   draw(): void {
-    this.logger.debug(`Draw list with ${this.elements.length} elements`);
+    this.logger.debug(`Draw row with ${this.elements.length} elements`);
     this.container = new PIXI.Container();
     this.container.name = this.getContentName();
-    let y = 0;
+    let x = 0;
     for (const element of this.elements) {
       element.draw();
-      element.setY(y);
+      element.setX(x);
       this.container.addChild(element.getContainer());
-      y += element.getHeight();
+      x += element.getWidth();
     }
   }
   addElement(element: DisplayObj): void {
@@ -27,10 +25,10 @@ export default class List implements DisplayObj {
     this.elements.forEach((e) => e.update());
   }
   setX(x: number): void {
-    this.x = x;
+    this.getContainer().x = x;
   }
   setY(y: number): void {
-    this.y = y;
+    this.getContainer().y = y;
   }
   disabled(): boolean {
     return false;
@@ -47,6 +45,6 @@ export default class List implements DisplayObj {
   }
 
   protected getContentName(): string {
-    return "LIST";
+    return "ROW";
   }
 }
