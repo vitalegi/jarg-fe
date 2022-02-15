@@ -2,17 +2,31 @@ import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
 import LoggerFactory from "@/logger/LoggerFactory";
 import * as PIXI from "pixi.js";
 
+interface Options {
+  offsets?: number[];
+}
+
 export default class Row implements DisplayObj {
   protected logger = LoggerFactory.getLogger("GameEngine.UI.Graphics.Row");
   protected container?: PIXI.Container;
   protected elements: DisplayObj[] = [];
+  protected options: Options;
+
+  public constructor(options: Options) {
+    this.options = options;
+  }
+
   draw(): void {
     this.logger.debug(`Draw row with ${this.elements.length} elements`);
     this.container = new PIXI.Container();
     this.container.name = this.getContentName();
     let x = 0;
-    for (const element of this.elements) {
+    for (let i = 0; i < this.elements.length; i++) {
+      const element = this.elements[i];
       element.draw();
+      if (this.options.offsets && this.options.offsets.length > i) {
+        x += this.options.offsets[i];
+      }
       element.setX(x);
       this.container.addChild(element.getContainer());
       x += element.getWidth();

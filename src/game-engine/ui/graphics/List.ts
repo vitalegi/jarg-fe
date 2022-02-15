@@ -2,6 +2,7 @@ import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
 import LoggerFactory from "@/logger/LoggerFactory";
 import * as PIXI from "pixi.js";
 
+// TODO add padding, margin
 export default class List implements DisplayObj {
   protected logger = LoggerFactory.getLogger("GameEngine.UI.Graphics.List");
   protected container?: PIXI.Container;

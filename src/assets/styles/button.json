@@ -2,7 +2,7 @@
   "defaultStyle": {
     "font": {
       "fontFamily": "Courier",
-      "fontSize": 20,
+      "fontSize": 24,
       "fill": "0x2c2c2c",
       "lineJoin": "round",
       "fontWeight": "700"
@@ -41,7 +41,7 @@
     "defaultStyle": {
       "font": {
         "fontFamily": "Courier",
-        "fontSize": 20,
+        "fontSize": 24,
         "fill": "0x2c2c2c",
         "lineJoin": "round",
         "fontWeight": "700"

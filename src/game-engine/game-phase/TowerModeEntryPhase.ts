@@ -13,9 +13,9 @@ import GameLoop from "@/game-engine/GameLoop";
 import PlayerService from "@/game-engine/PlayerService";
 import TowerMapService from "@/game-engine/map/TowerMapService";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
-import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
 import Monster from "@/game-engine/model/monster/Monster";
 import TransitionFactory from "@/game-engine/ui/scene-transition/TransitionFactory";
+import SelectMonsters from "@/game-engine/ui/monster-selection/SelectMonsters";
 
 @Service()
 export default class TowerModeEntryPhase extends AbstractPhase<never> {
@@ -73,17 +73,15 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
       this.playerService.getPlayerMonsters()
     );
 
-    const monstersMenuBuilder = new SelectMonstersMenu(playerMonsters, 6, 1);
-    const menu2 = monstersMenuBuilder.createMenu(
-      (selected: Monster[]) => {
-        this.createGame(level, selected);
-      },
-      () => {
-        menu.show();
-        menu2.destroy();
-      }
-    );
-    menu2.draw();
+    menu.hide();
+    const selector = new SelectMonsters(playerMonsters, 6, 1);
+    this.gameLoop.addGameLoopHandler(selector);
+    const out = await selector.notifyWhenCompleted();
+    if (out.confirm) {
+      this.createGame(level, out.selected);
+    } else {
+      menu.show();
+    }
   }
 
   protected async createGame(

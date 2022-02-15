@@ -121,11 +121,6 @@ export default class MonsterService {
     monster.ownerId = ownerId;
     monster.type = CharacterType.MONSTER;
 
-    // TODO move to MonsterIndex
-    monster.movements = new Move();
-    monster.movements.steps = 3;
-    monster.movements.canWalk = true;
-
     monster.baseStats = monsterIndex.baseStats.clone();
     monster.growthRates = monsterIndex.growthRates.clone();
 

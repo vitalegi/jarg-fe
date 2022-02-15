@@ -13,8 +13,6 @@ import ActionType from "@/game-engine/model/turn/ActionType";
 
 const DECIMAL_PRECISION = 0.00001;
 
-// TODO move to dedicated file
-
 @Service()
 export default class TurnManager {
   logger = LoggerFactory.getLogger("GameEngine.Battle.TurnManager");

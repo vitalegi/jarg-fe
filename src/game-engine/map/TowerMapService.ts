@@ -172,7 +172,6 @@ export default class TowerMapService {
   }
 
   protected getConfig(level: number): MapConfig {
-    // TODO move CONFIG to assets
     const cfg = CONFIG.filter(
       (c) =>
         c.preconditions.level_ge <= level && level <= c.preconditions.level_le

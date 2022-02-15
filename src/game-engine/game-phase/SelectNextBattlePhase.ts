@@ -16,9 +16,9 @@ import GameLoop from "@/game-engine/GameLoop";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import MonsterData from "@/game-engine/model/monster/MonsterData";
 import MapIndex from "@/game-engine/model/map/MapIndex";
-import SelectMonstersMenu from "@/game-engine/ui/SelectMonstersMenu";
 import Monster from "@/game-engine/model/monster/Monster";
 import TransitionFactory from "@/game-engine/ui/scene-transition/TransitionFactory";
+import SelectMonsters from "@/game-engine/ui/monster-selection/SelectMonsters";
 
 @Service()
 export default class SelectNextBattlePhase extends AbstractPhase<never> {
@@ -122,15 +122,14 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     );
 
     menu.hide();
-    const monstersMenuBuilder = new SelectMonstersMenu(playerMonsters, 6, 1);
-    const menu2 = monstersMenuBuilder.createMenu(
-      (selected: Monster[]) => this.createGame(map, selected),
-      () => {
-        menu.show();
-        menu2.destroy();
-      }
-    );
-    menu2.draw();
+    const selector = new SelectMonsters(playerMonsters, 6, 1);
+    this.gameLoop.addGameLoopHandler(selector);
+    const out = await selector.notifyWhenCompleted();
+    if (out.confirm) {
+      this.createGame(map, out.selected);
+    } else {
+      menu.show();
+    }
   }
 
   protected async createGame(

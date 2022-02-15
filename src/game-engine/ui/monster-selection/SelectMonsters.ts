@@ -11,6 +11,7 @@ import LoggerFactory from "@/logger/LoggerFactory";
 import { gameLabel } from "@/services/LocalizationService";
 import * as PIXI from "pixi.js";
 import Container from "typedi";
+import StringUtil from "@/utils/StringUtil";
 
 export default class SelectMonsters extends Drawer {
   private logger = LoggerFactory.getLogger(
@@ -22,12 +23,11 @@ export default class SelectMonsters extends Drawer {
   monsters;
   max;
   min;
-  x = 10;
-  y = 10;
-  visibleWidth = 250;
-  visibleHeight = 280;
   selected: Monster[] = [];
   canvas?: Canvas;
+
+  sortBy?: "level" | "model";
+  asc = false;
 
   public getName(): string {
     return "SelectMonsters";
@@ -43,10 +43,11 @@ export default class SelectMonsters extends Drawer {
   protected doDraw(): void {
     if (this.isFirstDraw()) {
       this.canvas = new Canvas();
-      this.canvas.x = this.x;
-      this.canvas.y = this.y;
-      this.canvas.visibleWidth = this.visibleWidth;
-      this.canvas.visibleHeight = this.visibleHeight;
+      this.canvas.scrollStep = this.getVisibleHeight() / 5;
+      this.canvas.x = this.getX();
+      this.canvas.y = this.getY();
+      this.canvas.visibleWidth = this.getVisibleWidth();
+      this.canvas.visibleHeight = this.getVisibleHeight();
 
       this.canvas.content = this.createList(this.monsters);
 
@@ -61,12 +62,12 @@ export default class SelectMonsters extends Drawer {
     const list = new List();
 
     const confirmBtn = this.confirmBtn();
-    const line1 = new Row();
+    const line1 = new Row({ offsets: [0, 10] });
     line1.addElement(confirmBtn);
     line1.addElement(this.cancelBtn());
     list.addElement(line1);
 
-    const line2 = new Row();
+    const line2 = new Row({ offsets: [0, 10] });
     line2.addElement(this.byID());
     line2.addElement(this.byLevel());
     list.addElement(line2);
@@ -114,7 +115,7 @@ export default class SelectMonsters extends Drawer {
       label: () => gameLabel("sort-by-id"),
       disabled: () => false,
       onTap: () => {
-        this.monsters.sort((a, b) => (a.modelId > b.modelId ? 1 : -1));
+        this.sortMonsters("model");
         const list = this.createList(this.monsters);
         if (this.canvas) {
           this.canvas.content = list;
@@ -131,7 +132,7 @@ export default class SelectMonsters extends Drawer {
       label: () => gameLabel("sort-by-level"),
       disabled: () => false,
       onTap: () => {
-        this.monsters.sort((a, b) => (a.level > b.level ? 1 : -1));
+        this.sortMonsters("level");
         const list = this.createList(this.monsters);
         if (this.canvas) {
           this.canvas.content = list;
@@ -141,13 +142,51 @@ export default class SelectMonsters extends Drawer {
     });
   }
 
+  protected sortMonsters(sortBy: "level" | "model"): void {
+    if (this.sortBy === sortBy) {
+      this.asc = !this.asc;
+    } else {
+      this.sortBy = sortBy;
+      this.asc = true;
+    }
+    this.monsters.sort(this.getSortAlgorithm(this.sortBy));
+    if (!this.asc) {
+      this.monsters.reverse();
+    }
+  }
+
+  protected getSortAlgorithm(
+    sortBy: "level" | "model"
+  ): (a: Monster, b: Monster) => number {
+    if (sortBy === "level") {
+      return (a, b) => {
+        if (a.level !== b.level) {
+          return a.level > b.level ? 1 : -1;
+        }
+        return a.uuid > b.uuid ? 1 : -1;
+      };
+    }
+    if (sortBy === "model") {
+      return (a, b) => {
+        if (a.modelId !== b.modelId) {
+          return a.modelId > b.modelId ? 1 : -1;
+        }
+        return a.uuid > b.uuid ? 1 : -1;
+      };
+    }
+    throw Error(`Sort algorithm not available for ${sortBy}`);
+  }
+
   protected monster(monster: Monster, confirmBtn: DisplayObj): DisplayObj {
     return new Button({
       name: monster.uuid,
       type: "text",
       label: (): string => {
         const selected = this.isSelected(monster);
-        return `${selected ? "✔" : " "} ${monster.name}`;
+        const id = monster.modelId;
+        const name = monster.name;
+        const level = `${monster.level}`;
+        return `${selected ? "✔" : " "}${id} (${level}) ${name}`;
       },
       disabled: () => false,
       onTap: () => {
@@ -170,5 +209,23 @@ export default class SelectMonsters extends Drawer {
 
   protected isSelected(monster: Monster): boolean {
     return this.selected.includes(monster);
+  }
+
+  protected getVisibleWidth(): number {
+    if (this.screenProxy.isSmallScreen()) {
+      return 0.9 * this.screenProxy.width();
+    }
+    return Math.min(600, 0.9 * this.screenProxy.width());
+  }
+
+  protected getVisibleHeight(): number {
+    return Math.min(800, 0.9 * this.screenProxy.height());
+  }
+
+  protected getX(): number {
+    return (this.screenProxy.width() - this.getVisibleWidth()) / 2;
+  }
+  protected getY(): number {
+    return (this.screenProxy.height() - this.getVisibleHeight()) / 2;
   }
 }
