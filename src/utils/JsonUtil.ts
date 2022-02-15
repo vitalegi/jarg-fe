@@ -90,3 +90,22 @@ export const asBoolean = (value: any, defaultValue: boolean): boolean => {
   }
   throw Error(`Value is not a boolean ${value}: ${typeof value}`);
 };
+
+export const asDateOptional = (
+  value: any,
+  defaultValue?: Date
+): Date | undefined => {
+  if (ObjectUtil.isNullOrUndefined(value)) {
+    if (defaultValue) {
+      return defaultValue;
+    }
+    return undefined;
+  }
+  if (value instanceof Date) {
+    return value;
+  }
+  if (typeof value === "string") {
+    return new Date(Date.parse(value));
+  }
+  throw Error(`Value is not a Date ${value}: ${typeof value}`);
+};

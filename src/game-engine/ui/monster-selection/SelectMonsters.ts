@@ -26,7 +26,7 @@ export default class SelectMonsters extends Drawer {
   selected: Monster[] = [];
   canvas?: Canvas;
 
-  sortBy?: "level" | "model";
+  sortBy?: "level" | "model" | "recent";
   asc = false;
 
   public getName(): string {
@@ -62,17 +62,20 @@ export default class SelectMonsters extends Drawer {
     const list = new List();
 
     const confirmBtn = this.confirmBtn();
-    const line1 = new Row({ offsets: [0, 10] });
+    const line1 = new Row({ offsets: [0, 10, 10] });
     line1.addElement(confirmBtn);
     line1.addElement(this.cancelBtn());
     list.addElement(line1);
 
-    const line2 = new Row({ offsets: [0, 10] });
+    const line2 = new Row({ offsets: [0, 10, 10] });
+    line2.addElement(this.byRecentlyUsed());
     line2.addElement(this.byID());
     line2.addElement(this.byLevel());
     list.addElement(line2);
 
     monsters
+      .sort(this.getSortAlgorithm("recent"))
+      .reverse()
       .map((m) => this.monster(m, confirmBtn))
       .forEach((m) => list.addElement(m));
 
@@ -141,13 +144,33 @@ export default class SelectMonsters extends Drawer {
       },
     });
   }
+  protected byRecentlyUsed(): DisplayObj {
+    return new Button({
+      name: "BY_LAST_TIME_USED",
+      type: "normal",
+      label: () => gameLabel("sort-by-recently-used"),
+      disabled: () => false,
+      onTap: () => {
+        this.sortMonsters("recent");
+        const list = this.createList(this.monsters);
+        if (this.canvas) {
+          this.canvas.content = list;
+          this.canvas?.update();
+        }
+      },
+    });
+  }
 
-  protected sortMonsters(sortBy: "level" | "model"): void {
+  protected sortMonsters(sortBy: "level" | "model" | "recent"): void {
     if (this.sortBy === sortBy) {
       this.asc = !this.asc;
     } else {
       this.sortBy = sortBy;
-      this.asc = true;
+      if (sortBy === "level" || sortBy === "recent") {
+        this.asc = false;
+      } else {
+        this.asc = true;
+      }
     }
     this.monsters.sort(this.getSortAlgorithm(this.sortBy));
     if (!this.asc) {
@@ -156,7 +179,7 @@ export default class SelectMonsters extends Drawer {
   }
 
   protected getSortAlgorithm(
-    sortBy: "level" | "model"
+    sortBy: "level" | "model" | "recent"
   ): (a: Monster, b: Monster) => number {
     if (sortBy === "level") {
       return (a, b) => {
@@ -170,6 +193,20 @@ export default class SelectMonsters extends Drawer {
       return (a, b) => {
         if (a.modelId !== b.modelId) {
           return a.modelId > b.modelId ? 1 : -1;
+        }
+        return a.uuid > b.uuid ? 1 : -1;
+      };
+    }
+    if (sortBy === "recent") {
+      return (a, b) => {
+        if (a.lastTimePlayed && b.lastTimePlayed) {
+          return a.lastTimePlayed.getTime() - b.lastTimePlayed.getTime();
+        }
+        if (a.lastTimePlayed) {
+          return 1;
+        }
+        if (b.lastTimePlayed) {
+          return -1;
         }
         return a.uuid > b.uuid ? 1 : -1;
       };

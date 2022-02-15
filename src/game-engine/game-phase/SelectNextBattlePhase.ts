@@ -126,6 +126,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
     this.gameLoop.addGameLoopHandler(selector);
     const out = await selector.notifyWhenCompleted();
     if (out.confirm) {
+      this.playerService.updateRecentlyPlayedMonsters(out.selected);
       this.createGame(map, out.selected);
     } else {
       menu.show();

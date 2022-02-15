@@ -30,6 +30,11 @@ export default class PlayerService {
       playerData.lastDefeatedTowerMap = level;
     }
   }
+  public updateRecentlyPlayedMonsters(monsters: Monster[]): void {
+    this.logger.info(`Update recently played monsters`);
+    const now = new Date();
+    monsters.forEach((m) => (m.lastTimePlayed = new Date(now.getTime())));
+  }
   public addMonster(monster: Monster): void {
     monster.ownerId = this.getPlayerId();
     this.playerRepository.addMonster(monster);

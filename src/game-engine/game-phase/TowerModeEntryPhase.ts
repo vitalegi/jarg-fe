@@ -78,6 +78,7 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
     this.gameLoop.addGameLoopHandler(selector);
     const out = await selector.notifyWhenCompleted();
     if (out.confirm) {
+      this.playerService.updateRecentlyPlayedMonsters(out.selected);
       this.createGame(level, out.selected);
     } else {
       menu.show();

@@ -3,7 +3,12 @@ import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
 import Monster from "@/game-engine/model/monster/Monster";
 import { CharacterType } from "@/models/Character";
 import Move from "@/models/Move";
-import { asInt, asIntNullable, asString } from "@/utils/JsonUtil";
+import {
+  asDateOptional,
+  asInt,
+  asIntNullable,
+  asString,
+} from "@/utils/JsonUtil";
 
 export default class MonsterData {
   ownerId: string | null = "";
@@ -18,6 +23,7 @@ export default class MonsterData {
   type = CharacterType.MONSTER;
   modelId = "";
   movements = new Move();
+  lastTimePlayed?: Date;
 
   public static fromJson(data: any): MonsterData {
     const out = new MonsterData();
@@ -41,6 +47,7 @@ export default class MonsterData {
         e.clone()
       );
     }
+    out.lastTimePlayed = asDateOptional(data.lastTimePlayed);
     return out;
   }
 
@@ -57,6 +64,7 @@ export default class MonsterData {
     out.level = data.level;
     out.experience = data.experience;
     out.currentLevelExperience = data.currentLevelExperience;
+    out.lastTimePlayed = data.lastTimePlayed;
     if (data.abilities) {
       out.abilities = data.abilities.map(AbilityLearned.fromJson);
     }
