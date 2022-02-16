@@ -18,19 +18,7 @@ import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect
 import AbilityService from "@/game-engine/ability/AbilityService";
 import ActionType from "@/game-engine/model/turn/ActionType";
 import HistoryRepository from "@/game-engine/battle/turns/HistoryRepository";
-
-const names = [
-  "Cino",
-  "Dino",
-  "Gino",
-  "Lino",
-  "Mino",
-  "Nino",
-  "Pino",
-  "Rino",
-  "Tino",
-  "Franco",
-];
+import NAMES from "@/assets/names.json";
 
 @Service()
 export default class MonsterService {
@@ -53,10 +41,8 @@ export default class MonsterService {
     name: string | null = null
   ): Promise<Monster> {
     const random = Container.get(RandomService);
-    const monsterIndex = this.monsterIndexRepository.getMonster(monsterIndexId);
     if (!name) {
-      name =
-        names[random.randomInt(0, names.length - 1)] + " " + monsterIndex.name;
+      name = NAMES[random.randomInt(0, NAMES.length - 1)];
     }
 
     // TODO move to MonsterIndex

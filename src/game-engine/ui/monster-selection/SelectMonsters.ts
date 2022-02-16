@@ -48,7 +48,9 @@ export default class SelectMonsters extends Drawer {
       this.canvas.y = this.getY();
       this.canvas.visibleWidth = this.getVisibleWidth();
       this.canvas.visibleHeight = this.getVisibleHeight();
-
+      this.sortBy = "recent";
+      this.asc = false;
+      this.sortMonsters(this.sortBy);
       this.canvas.content = this.createList(this.monsters);
 
       this.logger.debug(`Initialize canvas`);
@@ -74,8 +76,6 @@ export default class SelectMonsters extends Drawer {
     list.addElement(line2);
 
     monsters
-      .sort(this.getSortAlgorithm("recent"))
-      .reverse()
       .map((m) => this.monster(m, confirmBtn))
       .forEach((m) => list.addElement(m));
 
