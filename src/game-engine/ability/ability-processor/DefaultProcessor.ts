@@ -47,7 +47,9 @@ export default class DefaultProcessor extends AbstractProcessor {
       hit
     );
     computedEffects.push(...additionalEffects);
-
+    if (computedEffects.length === 0) {
+      computedEffects.push(new MissComputed(new Immediate(), target));
+    }
     return computedEffects;
   }
 

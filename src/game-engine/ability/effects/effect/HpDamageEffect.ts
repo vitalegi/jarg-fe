@@ -1,6 +1,5 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import HpDamageComputed from "@/game-engine/ability/computed-effect/HpDamageComputed";
-import MissComputed from "@/game-engine/ability/computed-effect/MissComputed";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import Ability from "@/game-engine/model/ability/Ability";
@@ -58,7 +57,7 @@ export default class HpDamageEffect extends Effect {
         new HpDamageComputed(this.duration.create(), effectTarget, this.damage),
       ];
     }
-    return [new MissComputed(this.duration.create(), effectTarget)];
+    return [];
   }
   public supportedDurations(): string[] {
     return [Immediate.TYPE];

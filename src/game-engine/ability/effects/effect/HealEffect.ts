@@ -1,6 +1,5 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import HealComputed from "@/game-engine/ability/computed-effect/HealComputed";
-import MissComputed from "@/game-engine/ability/computed-effect/MissComputed";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
 import FormulaService from "@/game-engine/FormulaService";
@@ -58,7 +57,7 @@ export default class HealEffect extends Effect {
       const heal = this.getFormulaService().heal(source.stats.int, this.power);
       return [new HealComputed(this.duration.create(), effectTarget, heal)];
     }
-    return [new MissComputed(this.duration.create(), effectTarget)];
+    return [];
   }
   public supportedDurations(): string[] {
     return [Immediate.TYPE];
