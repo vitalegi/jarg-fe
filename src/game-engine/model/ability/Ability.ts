@@ -24,6 +24,7 @@ export default class Ability {
   usages = new Usages();
   abilityTarget = new AbilityTarget();
   damage = false;
+  concentration = false;
   additionalEffects: Effect[] = [];
 
   public constructor(label = "") {
@@ -55,6 +56,7 @@ export default class Ability {
     }
     out.abilityTarget = AbilityTarget.fromJson(json.abilityTarget);
     out.damage = asBoolean(json.damage, false);
+    out.concentration = asBoolean(json.concentration, false);
     if (json.additionalEffects) {
       out.additionalEffects = json.additionalEffects.map(
         EffectFactory.fromJson
@@ -78,6 +80,7 @@ export default class Ability {
     out.usages = this.usages.clone();
     out.abilityTarget = this.abilityTarget.clone();
     out.damage = this.damage;
+    out.concentration = this.concentration;
     out.additionalEffects = this.additionalEffects.map((e) => e.clone());
     return out;
   }
@@ -98,6 +101,7 @@ export default class Ability {
     out.usages = this.usages.toJson();
     out.abilityTarget = this.abilityTarget.toJson();
     out.damage = this.damage;
+    out.concentration = this.concentration;
     out.additionalEffects = this.additionalEffects.map((e) => e.toJson());
     return out;
   }
@@ -164,6 +168,11 @@ export default class Ability {
 
     if (this.damage) {
       summary += `Attack with power ${this.power}, ${this.precision}%. `;
+    }
+    if (this.concentration) {
+      summary += "With Concentration. ";
+    } else {
+      summary += "Without Concentration. ";
     }
     if (this.additionalEffects.length > 0) {
       if (this.damage) {

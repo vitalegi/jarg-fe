@@ -11,6 +11,7 @@ import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect
 import ChangeFocusDrawer from "@/game-engine/ui/ChangeFocusDrawer";
 import AbilityNameDrawer from "@/game-engine/ui/AbilityNameDrawer";
 import FormulaService from "@/game-engine/FormulaService";
+import MapRepository from "@/game-engine/map/MapRepository";
 
 export default class AbilityExecutor {
   logger = LoggerFactory.getLogger("GameEngine.MonsterAction.AbilityExecutor");
@@ -20,6 +21,7 @@ export default class AbilityExecutor {
   protected abilityService = Container.get(AbilityService);
   protected playerService = Container.get(PlayerService);
   protected formulaService = Container.get(FormulaService);
+  protected mapRepository = Container.get(MapRepository);
 
   protected source: Monster;
   protected target: Monster;
@@ -40,6 +42,11 @@ export default class AbilityExecutor {
       `AbilityExecutor - START ability=${this.ability.id}/${this.ability.label}`
     );
     this.historyRepository.usesAbility(this.ability);
+
+    if (this.ability.concentration) {
+      this.logger.info(`Ability has concentration, remove effects`);
+      this.applyConcentration();
+    }
     const effects = await this.ability
       .getProcessor()
       .execute(this.source, this.target, this.ability);
@@ -50,7 +57,8 @@ export default class AbilityExecutor {
     const exp = await this.processEffects(effects);
     await abilityName;
 
-    await this.battleService.gainExp(this.source, exp);
+    const allies = this.mapRepository.getAllies(this.source);
+    await this.battleService.gainExp(allies, exp);
     this.logger.info("AbilityExecutor - END");
   }
 
@@ -99,5 +107,25 @@ export default class AbilityExecutor {
     monster: Monster
   ): ComputedEffect[] {
     return effects.filter((effect) => effect.hasEffectOn(monster));
+  }
+
+  protected applyConcentration(): void {
+    const monsters = this.mapRepository.getMap().monsters;
+    monsters.forEach((m) => {
+      m.activeEffects = m.activeEffects.filter((e) => {
+        const sameSource = e.sourceId === this.source.uuid;
+        const concentration = this.usesConcentration(e.abilityId);
+        const toBeRemoved = sameSource && concentration;
+        this.logger.info(
+          `Active effect on ${m.uuid} applied with concentration from ${this.source.uuid}, remove.`
+        );
+        return toBeRemoved;
+      });
+    });
+  }
+
+  protected usesConcentration(abilityId: string): boolean {
+    const ability = this.abilityService.getAbility(abilityId);
+    return ability.concentration;
   }
 }

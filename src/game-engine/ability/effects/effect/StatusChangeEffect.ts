@@ -58,7 +58,9 @@ export default class StatusChangeEffect extends Effect {
         new StatusChangeComputed(
           this.duration.create(),
           effectTarget,
-          this.status
+          this.status,
+          source.uuid,
+          ability.id
         ),
       ];
     }

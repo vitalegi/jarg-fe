@@ -70,7 +70,9 @@ export default class StatChangeEffect extends Effect {
           this.duration.create(),
           effectTarget,
           this.stat,
-          this.percentage
+          this.percentage,
+          source.uuid,
+          ability.id
         ),
       ];
     }

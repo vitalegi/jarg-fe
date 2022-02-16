@@ -203,4 +203,30 @@ export default class FormulaService {
     );
     return hp;
   }
+
+  public getPercentageDamage(
+    source: Monster,
+    target: Monster,
+    ability: Ability,
+    percentage: number
+  ): number {
+    const sourceModel = this.monsterIndexService.getMonster(source.modelId);
+    const targetModel = this.monsterIndexService.getMonster(target.modelId);
+
+    const atkModifier = this.attackBonus(
+      sourceModel,
+      targetModel,
+      ability.types
+    );
+    const adjustedPercentage = atkModifier * percentage;
+
+    const damage = Math.round(
+      Math.max(target.stats.maxHP * adjustedPercentage, 1)
+    );
+
+    this.logger.debug(
+      `Source: ${source.uuid}, target: ${target.uuid}, percentage: ${percentage}, adjusted: ${adjustedPercentage}. Damage: ${damage}`
+    );
+    return damage;
+  }
 }

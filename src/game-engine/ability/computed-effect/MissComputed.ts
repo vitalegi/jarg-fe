@@ -10,13 +10,23 @@ export default class MissComputed extends ComputedEffect {
   public static TYPE = "MISS";
 
   target;
-  public constructor(duration: Duration, target: Monster) {
-    super(MissComputed.TYPE, duration);
+  public constructor(
+    duration: Duration,
+    target: Monster,
+    sourceId: string,
+    abilityId: string
+  ) {
+    super(MissComputed.TYPE, duration, sourceId, abilityId);
     this.target = target;
   }
 
   protected doClone(): ComputedEffect {
-    return new MissComputed(this.duration, this.target);
+    return new MissComputed(
+      this.duration,
+      this.target,
+      this.sourceId,
+      this.abilityId
+    );
   }
 
   public hasEffectOn(monster: Monster): boolean {

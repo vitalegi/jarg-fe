@@ -79,7 +79,7 @@ export default class MonsterService {
         m.level,
         m.experience,
         m.currentLevelExperience,
-        m.activeEffects,
+        [],
         m.abilities,
         m.movements,
         m.hp,

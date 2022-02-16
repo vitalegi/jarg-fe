@@ -1,8 +1,11 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import ComputedEffectUtil from "@/game-engine/ability/computed-effect/ComputedEffectUtil";
 import Duration from "@/game-engine/ability/effects/duration/Duration";
+import FormulaService from "@/game-engine/FormulaService";
+import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/model/monster/Monster";
 import LoggerFactory from "@/logger/LoggerFactory";
+import Container from "typedi";
 
 export default class AbsorbLifeComputed extends ComputedEffect {
   logger = LoggerFactory.getLogger(
@@ -12,18 +15,23 @@ export default class AbsorbLifeComputed extends ComputedEffect {
 
   source;
   target;
+  ability;
   percentage;
+  nextDamage;
 
   public constructor(
     duration: Duration,
     source: Monster,
     target: Monster,
+    ability: Ability,
     percentage: number
   ) {
-    super(AbsorbLifeComputed.TYPE, duration);
+    super(AbsorbLifeComputed.TYPE, duration, source.uuid, ability.id);
     this.source = source;
     this.target = target;
     this.percentage = percentage;
+    this.ability = ability;
+    this.nextDamage = 0;
   }
 
   protected doClone(): ComputedEffect {
@@ -31,6 +39,7 @@ export default class AbsorbLifeComputed extends ComputedEffect {
       this.duration,
       this.source,
       this.target,
+      this.ability,
       this.percentage
     );
   }
@@ -51,6 +60,7 @@ export default class AbsorbLifeComputed extends ComputedEffect {
     this.target.activeEffects.push(this);
   }
   public async turnStartBefore(): Promise<void> {
+    this.nextDamage = this.getDamage();
     if (this.source.isDead()) {
       this.logger.info(
         `Monster ${this.source.name} - ${this.source.uuid} is dead, effects of AbsorbLife no longer apply`
@@ -66,37 +76,38 @@ export default class AbsorbLifeComputed extends ComputedEffect {
     }
   }
   public async turnStartRender(): Promise<void> {
-    const n = this.formatNumber(this.getDamage());
+    const n = this.formatNumber(this.nextDamage);
     await Promise.all([
       super.showTextOverMonster(this.target, `-${n} HP`),
       super.showTextOverMonster(this.source, `${n} HP`),
     ]);
     await Promise.all([
-      this.safeUpdateHealth(this.source, this.getDamage()),
-      this.safeUpdateHealth(this.target, -this.getDamage()),
+      this.safeUpdateHealth(this.source, this.nextDamage),
+      this.safeUpdateHealth(this.target, -this.nextDamage),
     ]);
   }
   public async turnStartAfter(): Promise<void> {
     this.logger.info(
-      `${this.source.name} absorbs ${this.getDamage()}HP from ${
-        this.target.name
-      }`
+      `${this.source.name} absorbs ${this.nextDamage}HP from ${this.target.name}`
     );
-    this.logger.info(
-      `Change HP of ${
-        this.target.name
-      }: ${-this.getDamage()} HP, starting from ${this.target.stats.hp}`
+    this.logger.debug(
+      `Change HP of ${this.target.name}: ${-this
+        .nextDamage} HP, starting from ${this.target.stats.hp}`
     );
-    this.target.stats.hp = this.getHealthChange(this.target, -this.getDamage());
-    this.logger.info(
-      `Change HP of ${
-        this.source.name
-      }: ${this.getDamage()} HP, starting from ${this.target.stats.hp}`
+    this.target.stats.hp = this.getHealthChange(this.target, -this.nextDamage);
+    this.logger.debug(
+      `Change HP of ${this.source.name}: ${this.nextDamage} HP, starting from ${this.target.stats.hp}`
     );
-    this.source.stats.hp = this.getHealthChange(this.source, this.getDamage());
+    this.source.stats.hp = this.getHealthChange(this.source, this.nextDamage);
   }
 
   protected getDamage(): number {
-    return Math.max(1, Math.round(this.target.stats.maxHP * this.percentage));
+    const formulaService = Container.get(FormulaService);
+    return formulaService.getPercentageDamage(
+      this.source,
+      this.target,
+      this.ability,
+      this.percentage
+    );
   }
 }

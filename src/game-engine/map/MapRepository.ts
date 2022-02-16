@@ -45,4 +45,7 @@ export default class MapRepository {
   public getAllies(monster: Monster): Monster[] {
     return this.getMap().monsters.filter((m) => m.ownerId === monster.ownerId);
   }
+  public getEnemies(monster: Monster): Monster[] {
+    return this.getMap().monsters.filter((m) => m.ownerId !== monster.ownerId);
+  }
 }

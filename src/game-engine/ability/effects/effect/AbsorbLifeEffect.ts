@@ -60,6 +60,7 @@ export default class AbsorbLifeEffect extends Effect {
           this.duration.create(),
           source,
           effectTarget,
+          ability,
           this.percentage
         ),
       ];

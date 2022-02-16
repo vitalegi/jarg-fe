@@ -8,16 +8,27 @@ import Container from "typedi";
 export default abstract class ComputedEffect {
   type;
   duration;
+  sourceId;
+  abilityId;
 
-  public constructor(type: string, duration: Duration) {
+  public constructor(
+    type: string,
+    duration: Duration,
+    sourceId: string,
+    abilityId: string
+  ) {
     this.type = type;
     this.duration = duration;
+    this.sourceId = sourceId;
+    this.abilityId = abilityId;
   }
 
   public clone(): ComputedEffect {
     const out = this.doClone();
     out.type = this.type;
     out.duration = this.duration;
+    out.sourceId = this.sourceId;
+    out.abilityId = this.abilityId;
     return out;
   }
 

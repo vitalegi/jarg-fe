@@ -84,6 +84,9 @@ export default class BattleService {
       this.logger.info(
         `Monster died due to bad status effects, go to next turn`
       );
+      const enemies = this.mapRepository.getEnemies(monster);
+      const exp = this.formulaService.getKillExperience(monster);
+      await this.gainExp(enemies, exp);
       this.nextTurn();
       return;
     }
@@ -220,31 +223,17 @@ export default class BattleService {
     this.turnManager.removeCharacter(uuid);
   }
 
-  public async gainExp(monster: Monster, exp: number): Promise<void> {
-    const allies = this.mapRepository.getAllies(monster);
-    if (allies.length === 1) {
-      await this.gainExpFlow.gainExpMonster(monster, exp);
-    } else {
-      const uniqueExp = Math.ceil(exp / 2);
-      const spreadedToOthers = exp - uniqueExp;
-      const spreadedExpPerMonster = Math.ceil(spreadedToOthers / allies.length);
-
-      const gainExp: Promise<void>[] = [];
-      gainExp.push(
-        this.gainExpFlow.gainExpMonster(
-          monster,
-          uniqueExp + spreadedExpPerMonster
-        )
-      );
-      for (const ally of allies) {
-        if (ally.uuid !== monster.uuid) {
-          gainExp.push(
-            this.gainExpFlow.gainExpMonster(ally, spreadedExpPerMonster)
-          );
-        }
-      }
-      await Promise.all(gainExp);
+  public async gainExp(monsters: Monster[], exp: number): Promise<void> {
+    if (monsters.length === 0) {
+      return;
     }
+    const expPerUnit = Math.ceil(exp / monsters.length);
+    const monstersExp = monsters.map((m) => {
+      return { monster: m, exp: expPerUnit };
+    });
+    await Promise.all(
+      monstersExp.map((m) => this.gainExpFlow.gainExpMonster(m.monster, m.exp))
+    );
   }
 
   protected async applyStatusEffects(monster: Monster): Promise<void> {

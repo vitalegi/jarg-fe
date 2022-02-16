@@ -16,7 +16,6 @@ export default class MonsterData {
   experience = 0;
   hp: number | null = 0;
   currentLevelExperience = 0;
-  activeEffects: ComputedEffect[] = [];
   abilities: AbilityLearned[] = [];
   uuid = "";
   name = "";
@@ -41,12 +40,6 @@ export default class MonsterData {
     if (data.abilities) {
       out.abilities = data.abilities.map(AbilityLearned.fromJson);
     }
-    if (data.activeEffects) {
-      // TODO check implementation
-      out.activeEffects = data.activeEffects.map((e: ComputedEffect) =>
-        e.clone()
-      );
-    }
     out.lastTimePlayed = asDateOptional(data.lastTimePlayed);
     return out;
   }
@@ -67,11 +60,6 @@ export default class MonsterData {
     out.lastTimePlayed = data.lastTimePlayed;
     if (data.abilities) {
       out.abilities = data.abilities.map(AbilityLearned.fromJson);
-    }
-    if (data.activeEffects) {
-      out.activeEffects = data.activeEffects.map((e: ComputedEffect) =>
-        e.clone()
-      );
     }
     return out;
   }

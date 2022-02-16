@@ -55,7 +55,15 @@ export default class HealEffect extends Effect {
     this.logger.info(`Against ${target.uuid} passed: ${pass}`);
     if (pass) {
       const heal = this.getFormulaService().heal(source.stats.int, this.power);
-      return [new HealComputed(this.duration.create(), effectTarget, heal)];
+      return [
+        new HealComputed(
+          this.duration.create(),
+          effectTarget,
+          heal,
+          source.uuid,
+          ability.id
+        ),
+      ];
     }
     return [];
   }

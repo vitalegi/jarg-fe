@@ -47,6 +47,13 @@
               @change="changeDescription"
             />
           </v-col>
+          <v-col cols="3">
+            <SwitchInput
+              label="Concentration?"
+              :value="ability.concentration"
+              @change="changeConcentration"
+            />
+          </v-col>
           <v-col cols="9">
             <EditableTextField
               label="Notes"
@@ -267,6 +274,9 @@ export default Vue.extend({
     },
     changeRange(value: number): void {
       this.update((a) => (a.abilityTarget.range = value));
+    },
+    changeConcentration(value: boolean): void {
+      this.update((a) => (a.concentration = value));
     },
     changeDamage(value: boolean): void {
       this.update((a) => (a.damage = value));

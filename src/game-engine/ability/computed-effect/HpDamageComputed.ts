@@ -12,13 +12,25 @@ export default class HpDamageComputed extends ComputedEffect {
   target;
   damage;
 
-  public constructor(duration: Duration, target: Monster, damage: number) {
-    super(HpDamageComputed.TYPE, duration);
+  public constructor(
+    duration: Duration,
+    target: Monster,
+    damage: number,
+    sourceId: string,
+    abilityId: string
+  ) {
+    super(HpDamageComputed.TYPE, duration, sourceId, abilityId);
     this.target = target;
     this.damage = damage;
   }
   protected doClone(): ComputedEffect {
-    return new HpDamageComputed(this.duration, this.target, this.damage);
+    return new HpDamageComputed(
+      this.duration,
+      this.target,
+      this.damage,
+      this.sourceId,
+      this.abilityId
+    );
   }
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;

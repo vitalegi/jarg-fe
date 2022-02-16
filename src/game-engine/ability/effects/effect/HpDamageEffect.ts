@@ -54,7 +54,13 @@ export default class HpDamageEffect extends Effect {
     this.logger.info(`Against ${target.uuid} passed: ${pass}`);
     if (pass) {
       return [
-        new HpDamageComputed(this.duration.create(), effectTarget, this.damage),
+        new HpDamageComputed(
+          this.duration.create(),
+          effectTarget,
+          this.damage,
+          source.uuid,
+          ability.id
+        ),
       ];
     }
     return [];

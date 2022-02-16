@@ -19,9 +19,11 @@ export default class StatChangeComputed extends ComputedEffect {
     duration: Duration,
     target: Monster,
     stat: string,
-    percentage: number
+    percentage: number,
+    sourceId: string,
+    abilityId: string
   ) {
-    super(StatChangeComputed.TYPE, duration);
+    super(StatChangeComputed.TYPE, duration, sourceId, abilityId);
     this.target = target;
     this.stat = stat;
     this.percentage = percentage;
@@ -31,7 +33,9 @@ export default class StatChangeComputed extends ComputedEffect {
       this.duration,
       this.target,
       this.stat,
-      this.percentage
+      this.percentage,
+      this.sourceId,
+      this.abilityId
     );
   }
 

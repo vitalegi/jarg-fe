@@ -13,13 +13,25 @@ export default class StatusChangeComputed extends ComputedEffect {
   target;
   status;
 
-  public constructor(duration: Duration, target: Monster, status: string) {
-    super(StatusChangeComputed.TYPE, duration);
+  public constructor(
+    duration: Duration,
+    target: Monster,
+    status: string,
+    sourceId: string,
+    abilityId: string
+  ) {
+    super(StatusChangeComputed.TYPE, duration, sourceId, abilityId);
     this.target = target;
     this.status = status;
   }
   protected doClone(): ComputedEffect {
-    return new StatusChangeComputed(this.duration, this.target, this.status);
+    return new StatusChangeComputed(
+      this.duration,
+      this.target,
+      this.status,
+      this.sourceId,
+      this.abilityId
+    );
   }
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;

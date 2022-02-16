@@ -13,13 +13,25 @@ export default class HealComputed extends ComputedEffect {
   target;
   value;
 
-  public constructor(duration: Duration, target: Monster, value: number) {
-    super(HealComputed.TYPE, duration);
+  public constructor(
+    duration: Duration,
+    target: Monster,
+    value: number,
+    sourceId: string,
+    abilityId: string
+  ) {
+    super(HealComputed.TYPE, duration, sourceId, abilityId);
     this.target = target;
     this.value = value;
   }
   protected doClone(): ComputedEffect {
-    return new HealComputed(this.duration, this.target, this.value);
+    return new HealComputed(
+      this.duration,
+      this.target,
+      this.value,
+      this.sourceId,
+      this.abilityId
+    );
   }
   public hasEffectOn(monster: Monster): boolean {
     return monster.uuid === this.target.uuid;

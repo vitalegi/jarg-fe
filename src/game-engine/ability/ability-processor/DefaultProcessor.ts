@@ -32,11 +32,22 @@ export default class DefaultProcessor extends AbstractProcessor {
       const damage = this.formulaService.damage(source, target, ability);
       if (hit) {
         computedEffects.push(
-          new HpDamageComputed(new Immediate().create(), target, damage)
+          new HpDamageComputed(
+            new Immediate().create(),
+            target,
+            damage,
+            source.uuid,
+            ability.id
+          )
         );
       } else {
         computedEffects.push(
-          new MissComputed(new Immediate().create(), target)
+          new MissComputed(
+            new Immediate().create(),
+            target,
+            source.uuid,
+            ability.id
+          )
         );
       }
     }
@@ -48,7 +59,9 @@ export default class DefaultProcessor extends AbstractProcessor {
     );
     computedEffects.push(...additionalEffects);
     if (computedEffects.length === 0) {
-      computedEffects.push(new MissComputed(new Immediate(), target));
+      computedEffects.push(
+        new MissComputed(new Immediate(), target, source.uuid, ability.id)
+      );
     }
     return computedEffects;
   }
