@@ -31,7 +31,6 @@ export default class StatusChangeEffect extends Effect {
   public clone(): Effect {
     const out = new StatusChangeEffect(this.status);
     super._clone(out);
-    out.type = this.type;
     out.status = this.status;
     return out;
   }

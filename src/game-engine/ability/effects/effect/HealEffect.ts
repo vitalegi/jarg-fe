@@ -1,46 +1,47 @@
 import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
-import HpDamageComputed from "@/game-engine/ability/computed-effect/HpDamageComputed";
+import HealComputed from "@/game-engine/ability/computed-effect/HealComputed";
 import MissComputed from "@/game-engine/ability/computed-effect/MissComputed";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
+import FormulaService from "@/game-engine/FormulaService";
 import Ability from "@/game-engine/model/ability/Ability";
 import Monster from "@/game-engine/model/monster/Monster";
 import { asInt } from "@/utils/JsonUtil";
+import Container from "typedi";
 
-export default class HpDamageEffect extends Effect {
-  public static KEY = "HP_DAMAGE";
-  damage = 0;
+export default class HealEffect extends Effect {
+  public static KEY = "HP_HEAL";
+
+  power;
 
   public constructor() {
-    super(HpDamageEffect.KEY);
+    super(HealEffect.KEY);
+    this.power = 0;
   }
   protected doValidate(): void {
     return;
   }
 
-  public static fromJson(json: any): HpDamageEffect {
-    const effect = new HpDamageEffect();
+  public static fromJson(json: any): HealEffect {
+    const effect = new HealEffect();
     Effect.fromJson(effect, json);
-    effect.damage = asInt(json.damage);
+    effect.power = asInt(json.power);
     return effect;
   }
   public clone(): Effect {
-    const out = new HpDamageEffect();
+    const out = new HealEffect();
     super._clone(out);
-    out.damage = this.damage;
+    out.power = this.power;
     return out;
   }
   public toJson(): any {
     const out: any = {};
     super._toJson(out);
-    out.type = this.type;
-    out.damage = this.damage;
+    out.power = this.power;
     return out;
   }
   public summary(): string {
-    return `${super.conditionsSummary()} apply ${this.damage}HP damage to ${
-      this.target.type
-    }`;
+    return `${super.conditionsSummary()} heal ${this.target.type}`;
   }
 
   apply(
@@ -54,13 +55,16 @@ export default class HpDamageEffect extends Effect {
 
     this.logger.info(`Against ${target.uuid} passed: ${pass}`);
     if (pass) {
-      return [
-        new HpDamageComputed(this.duration.create(), effectTarget, this.damage),
-      ];
+      const heal = this.getFormulaService().heal(source.stats.int, this.power);
+      return [new HealComputed(this.duration.create(), effectTarget, heal)];
     }
     return [new MissComputed(this.duration.create(), effectTarget)];
   }
   public supportedDurations(): string[] {
     return [Immediate.TYPE];
+  }
+
+  protected getFormulaService(): FormulaService {
+    return Container.get(FormulaService);
   }
 }

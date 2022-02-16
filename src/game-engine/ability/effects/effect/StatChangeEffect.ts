@@ -38,7 +38,6 @@ export default class StatChangeEffect extends Effect {
   public clone(): Effect {
     const out = new StatChangeEffect(this.stat, this.percentage);
     super._clone(out);
-    out.type = this.type;
     out.stat = this.stat;
     out.percentage = this.percentage;
     return out;

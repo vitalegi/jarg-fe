@@ -191,4 +191,16 @@ export default class FormulaService {
       0.04 * Math.pow(level, 3) + 0.8 * Math.pow(level, 2) + 2 * level
     );
   }
+
+  public heal(atk: number, abilityPower: number): number {
+    const atkRandom = this.randomService.randomDecimal(0.9, 1.1);
+    const abilityPowerBonus = 1 + abilityPower / 100;
+    const heal = (abilityPowerBonus * atk * atkRandom) / 3;
+
+    const hp = Math.max(Math.round(heal), 0);
+    this.logger.debug(
+      `power: ${abilityPower}, INT: ${atk}, bonus: ${abilityPowerBonus} random: ${atkRandom}. HEAL: ${hp}`
+    );
+    return hp;
+  }
 }

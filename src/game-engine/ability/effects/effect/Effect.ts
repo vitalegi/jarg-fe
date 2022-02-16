@@ -55,6 +55,7 @@ export default abstract class Effect {
   protected abstract doValidate(): void;
 
   protected _clone(obj: Effect): void {
+    obj.type = this.type;
     obj.target = this.target.clone();
     obj.conditions = this.conditions.map((c) => c.clone());
     obj.duration = this.duration.clone();
@@ -64,6 +65,7 @@ export default abstract class Effect {
     obj.target = this.target.toJson();
     obj.conditions = this.conditions.map((c) => c.toJson());
     obj.duration = this.duration.toJson();
+    obj.type = this.type;
   }
 
   protected conditionsSummary(): string {

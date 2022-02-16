@@ -1,5 +1,6 @@
 import AbsorbLifeEffect from "@/game-engine/ability/effects/effect/AbsorbLifeEffect";
 import Effect from "@/game-engine/ability/effects/effect/Effect";
+import HealEffect from "@/game-engine/ability/effects/effect/HealEffect";
 import HpDamageEffect from "@/game-engine/ability/effects/effect/HpDamageEffect";
 import StatChangeEffect from "@/game-engine/ability/effects/effect/StatChangeEffect";
 import StatusChangeEffect from "@/game-engine/ability/effects/effect/StatusChangeEffect";
@@ -17,6 +18,9 @@ export default class EffectFactory {
     }
     if (json.type === AbsorbLifeEffect.KEY) {
       return AbsorbLifeEffect.fromJson(json);
+    }
+    if (json.type === HealEffect.KEY) {
+      return HealEffect.fromJson(json);
     }
     throw Error(`Unknown effect ${JSON.stringify(json)}`);
   }

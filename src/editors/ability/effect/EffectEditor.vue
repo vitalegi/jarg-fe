@@ -67,6 +67,13 @@
             @change="changeDamage"
           />
         </v-col>
+        <v-col v-if="isHealEffect" cols="2">
+          <EditableIntegerField
+            label="Power"
+            :value="effect.power"
+            @change="changeHealPower"
+          />
+        </v-col>
       </v-row>
       <v-row>
         <v-col cols="1" style="text-align: left"> Duration </v-col>
@@ -116,6 +123,7 @@ import StatusContants from "@/game-engine/monster/status/StatusContants";
 import { Immediate } from "@/game-engine/ability/effects/duration/Immediate";
 import { FixedDuration } from "@/game-engine/ability/effects/duration/FixedDuration";
 import { RandomDuration } from "@/game-engine/ability/effects/duration/RandomDuration";
+import HealEffect from "@/game-engine/ability/effects/effect/HealEffect";
 
 export default Vue.extend({
   name: "EffectEditor",
@@ -141,6 +149,7 @@ export default Vue.extend({
         { value: StatChangeEffect.KEY, text: "Change stat" },
         { value: StatusChangeEffect.KEY, text: "Alter status" },
         { value: HpDamageEffect.KEY, text: "Change HP of fixed amount" },
+        { value: HealEffect.KEY, text: "Heal HP" },
       ];
     },
     durations(): { text: string; value: string }[] {
@@ -159,6 +168,9 @@ export default Vue.extend({
     },
     isHpDamageEffect(): boolean {
       return this.getEffect().type === HpDamageEffect.KEY;
+    },
+    isHealEffect(): boolean {
+      return this.getEffect().type === HealEffect.KEY;
     },
     isImmediate(): boolean {
       return this.getEffect().duration.type === Immediate.TYPE;
@@ -225,6 +237,9 @@ export default Vue.extend({
       if (type.value === StatusChangeEffect.KEY) {
         newEffect = new StatusChangeEffect(StatusContants.POISON);
       }
+      if (type.value === HealEffect.KEY) {
+        newEffect = new HealEffect();
+      }
       if (newEffect) {
         newEffect.target = this.getEffect().target.clone();
         newEffect.conditions = this.getEffect().conditions.map((c) =>
@@ -256,6 +271,11 @@ export default Vue.extend({
     changeDamage(damage: number): void {
       const e = this.getEffect().clone();
       (e as HpDamageEffect).damage = damage;
+      this.$emit("change", e);
+    },
+    changeHealPower(power: number): void {
+      const e = this.getEffect().clone();
+      (e as HealEffect).power = power;
       this.$emit("change", e);
     },
     changeDuration(type: { text: string; value: string }): void {
