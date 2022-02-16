@@ -38,7 +38,9 @@ export default class MonsterService {
   public async createMonster(
     ownerId: string | null,
     monsterIndexId: string,
-    name: string | null = null
+    name: string | null,
+    level: number,
+    catchable: boolean
   ): Promise<Monster> {
     const random = Container.get(RandomService);
     if (!name) {
@@ -55,14 +57,15 @@ export default class MonsterService {
       ownerId,
       monsterIndexId,
       name,
-      1,
+      level,
       null,
       null,
       [],
       [],
       movements,
       null,
-      undefined
+      undefined,
+      catchable
     );
   }
 
@@ -80,7 +83,8 @@ export default class MonsterService {
         m.abilities,
         m.movements,
         m.hp,
-        m.lastTimePlayed
+        m.lastTimePlayed,
+        false
       );
     } catch (e) {
       this.logger.error(`Can't process monster ${JSON.stringify(m)}: ${e}`);
@@ -100,7 +104,8 @@ export default class MonsterService {
     abilities: AbilityLearned[],
     movement: Move,
     hp: number | null,
-    lastTimePlayed?: Date
+    lastTimePlayed: Date | undefined,
+    catchable: boolean
   ): Promise<Monster> {
     const monster = new Monster();
     monster.uuid = uuid;
@@ -113,6 +118,7 @@ export default class MonsterService {
     monster.baseStats = monsterIndex.baseStats.clone();
     monster.growthRates = monsterIndex.growthRates.clone();
     monster.lastTimePlayed = lastTimePlayed;
+    monster.catchable = catchable;
     monster.level = 0;
     await this.levelUpService.levelUps(monster, level, true);
     if (ObjectUtil.isNotNullOrUndefined(hp)) {

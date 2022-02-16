@@ -19,11 +19,7 @@ export default class MapService {
   protected abilityService = Container.get(AbilityService);
   protected tileRepository = Container.get(TileRepository);
 
-  public async generate(
-    model: MapModel,
-    id: string,
-    name: string
-  ): Promise<MapContainer> {
+  public async generate(model: MapModel): Promise<MapContainer> {
     const map = new MapContainer();
     map.tiles = model.tiles.map((tile) => tile.clone());
 
@@ -85,19 +81,17 @@ export default class MapService {
   protected async createMonster(
     randomEncounter: RandomEncounter
   ): Promise<Monster> {
-    const monster = await this.monsterService.createMonster(
-      null,
-      randomEncounter.monsterId
-    );
-
     const min = randomEncounter.levelMin;
     const max = randomEncounter.levelMax;
     const level = this.randomService.randomInt(min, max);
 
-    while (monster.level < level) {
-      await this.levelUpService.levelUp(monster, true);
-    }
-    return monster;
+    return await this.monsterService.createMonster(
+      null,
+      randomEncounter.monsterId,
+      null,
+      level,
+      randomEncounter.catchable
+    );
   }
 
   protected getRandomEncounter(

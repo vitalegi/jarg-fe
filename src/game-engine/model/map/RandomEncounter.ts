@@ -1,10 +1,11 @@
-import { asDecimal, asInt, asString } from "@/utils/JsonUtil";
+import { asBoolean, asDecimal, asInt, asString } from "@/utils/JsonUtil";
 
 export default class RandomEncounter {
   monsterId = "";
   levelMin = 0;
   levelMax = 0;
   probability = 0;
+  catchable = false;
 
   public static fromJson(json: any): RandomEncounter {
     const out = new RandomEncounter();
@@ -12,6 +13,7 @@ export default class RandomEncounter {
     out.levelMin = asInt(json.levelMin);
     out.levelMax = asInt(json.levelMax);
     out.probability = asDecimal(json.probability);
+    out.catchable = asBoolean(json.catchable, false);
     return out;
   }
 
@@ -21,10 +23,11 @@ export default class RandomEncounter {
     out.levelMin = this.levelMin;
     out.levelMax = this.levelMax;
     out.probability = this.probability;
+    out.catchable = this.catchable;
     return out;
   }
 
   public toString(): string {
-    return `monsterId=${this.monsterId}, levelMin=${this.levelMin}, levelMax=${this.levelMax}, probability=${this.probability}`;
+    return `monsterId=${this.monsterId}, levelMin=${this.levelMin}, levelMax=${this.levelMax}, probability=${this.probability}, catchable=${this.catchable}`;
   }
 }

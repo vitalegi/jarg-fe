@@ -91,11 +91,7 @@ export default class TowerModeEntryPhase extends AbstractPhase<never> {
   ): Promise<void> {
     await this.getGameAppDataLoader().loadSpriteConfigs();
     const model = await this.towerMapService.create(level);
-    const map = await this.mapService.generate(
-      model,
-      `TOWER_${level}`,
-      `Tower - ${level}`
-    );
+    const map = await this.mapService.generate(model);
 
     monsters.forEach(
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())

@@ -139,11 +139,7 @@ export default class SelectNextBattlePhase extends AbstractPhase<never> {
   ): Promise<void> {
     await this.getGameAppDataLoader().loadSpriteConfigs();
     const model = await this.gameAssetService.getMap(mapIndex);
-    const map = await this.mapService.generate(
-      model,
-      mapIndex.id,
-      mapIndex.name
-    );
+    const map = await this.mapService.generate(model);
 
     monsters.forEach(
       (m, index) => (m.coordinates = model.playerEntryPoints[index].clone())

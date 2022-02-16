@@ -2,7 +2,7 @@ import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect
 import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
 import Stats from "@/game-engine/model/monster/stats/Stats";
 import Character from "@/models/Character";
-import { asDateOptional, asInt, asString } from "@/utils/JsonUtil";
+import { asBoolean, asDateOptional, asInt, asString } from "@/utils/JsonUtil";
 
 export default class Monster extends Character {
   ownerId: string | null = "";
@@ -22,6 +22,7 @@ export default class Monster extends Character {
   activeEffects: ComputedEffect[] = [];
   abilities: AbilityLearned[] = [];
   lastTimePlayed?: Date;
+  catchable = false;
 
   public static fromJson(monster: any): Monster {
     const out = new Monster();
@@ -34,6 +35,7 @@ export default class Monster extends Character {
     out.stats = Stats.fromJson(monster.stats);
     out.growthRates = Stats.fromJson(monster.growthRates);
     out.lastTimePlayed = asDateOptional(monster.lastTimePlayed);
+    out.catchable = asBoolean(monster.catchable, false);
     if (monster.abilities) {
       out.abilities = monster.abilities.map(AbilityLearned.fromJson);
     }

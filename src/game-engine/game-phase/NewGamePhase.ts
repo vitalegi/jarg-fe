@@ -65,7 +65,10 @@ export default class NewGamePhase extends AbstractPhase<never> {
 
     const monster = await this.monsterService.createMonster(
       playerData.playerId,
-      starter.monsterId
+      starter.monsterId,
+      null, // TODO ask user for the name of the monster
+      1,
+      false
     );
     await this.levelUpService.levelUps(monster, 5, true);
     this.abilityService

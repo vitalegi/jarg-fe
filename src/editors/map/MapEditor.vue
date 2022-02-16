@@ -24,16 +24,6 @@
     </v-row>
     <v-row>
       <v-col cols="2">
-        <EditableTextField label="ID" :value="id" @change="(v) => (id = v)" />
-      </v-col>
-      <v-col cols="2">
-        <EditableTextField
-          label="Name"
-          :value="name"
-          @change="(v) => (name = v)"
-        />
-      </v-col>
-      <v-col cols="2">
         <EditableIntegerField
           label="Width"
           :value="width"
@@ -106,7 +96,6 @@
 </template>
 
 <script lang="ts">
-import EditableTextField from "@/components/EditableTextField.vue";
 import EditableIntegerField from "@/components/EditableIntegerField.vue";
 import LocalizedEncounters from "@/game-engine/model/map/LocalizedEncounters";
 import LoggerFactory from "@/logger/LoggerFactory";
@@ -131,7 +120,6 @@ const DEFAULT_POINT = new Point(-1000, -1000);
 export default Vue.extend({
   name: "MapEditor",
   components: {
-    EditableTextField,
     EditableIntegerField,
     LocalizedEncountersGenerator,
     CopyToClipboardBtn,
@@ -142,8 +130,6 @@ export default Vue.extend({
   data: () => ({
     logger: LoggerFactory.getLogger("Editors.Map.MapEditor"),
     sprites: new Array<SpriteConfig>(),
-    id: "",
-    name: "",
     width: 20,
     height: 10,
     mode: "",

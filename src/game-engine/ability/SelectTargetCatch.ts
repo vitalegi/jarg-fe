@@ -78,8 +78,13 @@ export default class SelectTargetCatch {
       .getPoints(maxRange)
       .map((p) => p.point);
     const allies = this.mapRepository.getAllies(source).map((m) => m.uuid);
+    const uncatchable = this.mapRepository
+      .getMap()
+      .monsters.filter((m) => !m.catchable)
+      .map((m) => m.uuid);
+
     return new SelectTargetUserActionHandler(
-      allies,
+      [...allies, ...uncatchable],
       false,
       true,
       acceptablePoints
