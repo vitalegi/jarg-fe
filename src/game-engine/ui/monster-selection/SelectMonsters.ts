@@ -225,7 +225,12 @@ export default class SelectMonsters extends Drawer {
         const level = `${monster.level}`;
         return `${selected ? "✔" : " "}${id} (${level}) ${name}`;
       },
-      disabled: () => false,
+      disabled: () => {
+        if (this.selected.includes(monster)) {
+          return false;
+        }
+        return this.selected.length >= this.max;
+      },
       onTap: () => {
         if (this.isSelected(monster)) {
           this.logger.info(`Deselect ${monster.name}`);

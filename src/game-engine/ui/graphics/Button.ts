@@ -4,7 +4,6 @@ import NumberUtil from "@/utils/NumberUtil";
 import { LINE_JOIN } from "pixi.js";
 import DetectEvent from "@/game-engine/ui/DetectEvent";
 import DisplayObj from "@/game-engine/ui/graphics/DisplayObj";
-import StringUtil from "@/utils/StringUtil";
 
 declare interface Border extends Partial<PIXI.ILineStyleOptions> {
   radius?: number;
