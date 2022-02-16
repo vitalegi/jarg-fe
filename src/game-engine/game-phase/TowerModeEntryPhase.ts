@@ -11,11 +11,11 @@ import StatsService from "@/game-engine/monster/stats/StatsService";
 import MapModelRepository from "@/game-engine/map/MapModelRepository";
 import GameLoop from "@/game-engine/GameLoop";
 import PlayerService from "@/game-engine/PlayerService";
-import TowerMapService from "@/game-engine/map/TowerMapService";
 import LeftMenu, { MenuEntry } from "@/game-engine/ui/LeftMenu";
 import Monster from "@/game-engine/model/monster/Monster";
 import TransitionFactory from "@/game-engine/ui/scene-transition/TransitionFactory";
 import SelectMonsters from "@/game-engine/ui/monster-selection/SelectMonsters";
+import TowerMapService from "@/game-engine/map/tower-mode/TowerMapService";
 
 @Service()
 export default class TowerModeEntryPhase extends AbstractPhase<never> {

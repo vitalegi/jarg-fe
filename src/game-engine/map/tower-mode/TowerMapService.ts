@@ -98,6 +98,7 @@ export default class TowerMapService {
       const monster = new RandomEncounter();
       monster.monsterId = this.getRandomEnemy(level);
       monster.probability = 1;
+      monster.catchable = true;
       if (boss) {
         monster.levelMin = this.getMonsterLevelMax(level);
       } else {

@@ -13,7 +13,7 @@ export default class TowerModeRepository {
     const cfg = this.configs
       .filter((c) => c.preconditions.level_ge <= level)
       .filter(
-        (c) => c.preconditions.level_le && level <= c.preconditions.level_le
+        (c) => !c.preconditions.level_le || level <= c.preconditions.level_le
       );
     if (cfg.length === 0) {
       throw Error(`No configuration available for level ${level}`);
