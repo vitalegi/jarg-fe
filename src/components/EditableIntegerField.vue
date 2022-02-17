@@ -10,6 +10,7 @@
 </template>
 
 <script lang="ts">
+import NumberUtil from "@/utils/NumberUtil";
 import Vue from "vue";
 
 export default Vue.extend({
@@ -26,12 +27,20 @@ export default Vue.extend({
   computed: {},
   methods: {
     change(value: string): void {
-      const number = parseInt(value, 10);
+      const number = NumberUtil.parseAsInt(value);
+      if (Number.isNaN(number)) {
+        return;
+      }
       this.$emit("change", number);
     },
   },
   mounted() {
     this.model = `${this.value}`;
+  },
+  watch: {
+    value(v) {
+      this.model = v;
+    },
   },
 });
 </script>

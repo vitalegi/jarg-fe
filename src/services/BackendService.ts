@@ -98,14 +98,14 @@ export abstract class WebService {
     });
     instance.interceptors.response.use(
       (response: AxiosResponse<any>) => {
-        const duration = TimeUtil.timestamp() - startTime;
+        const duration = Math.round(TimeUtil.timestamp() - startTime);
         this.logger.info(
           `WS_CALL_DONE url=${response.config.url} time_taken=${duration} status=${response.status} status_mesage=${response.statusText}`
         );
         return response;
       },
       (error: any) => {
-        const duration = TimeUtil.timestamp() - startTime;
+        const duration = Math.round(TimeUtil.timestamp() - startTime);
         this.logger.error(
           `WS_CALL_DONE url=${error.config.url} time_taken=${duration} status=${error.status} status_mesage=${error.statusText}`
         );

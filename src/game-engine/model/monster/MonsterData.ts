@@ -1,4 +1,3 @@
-import ComputedEffect from "@/game-engine/ability/computed-effect/ComputedEffect";
 import AbilityLearned from "@/game-engine/model/ability/AbilityLearned";
 import Monster from "@/game-engine/model/monster/Monster";
 import { CharacterType } from "@/models/Character";
@@ -42,6 +41,10 @@ export default class MonsterData {
     }
     out.lastTimePlayed = asDateOptional(data.lastTimePlayed);
     return out;
+  }
+
+  public clone(): MonsterData {
+    return MonsterData.fromJson(JSON.parse(JSON.stringify(this)));
   }
 
   public static fromMonster(data: Monster): MonsterData {

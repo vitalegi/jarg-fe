@@ -58,6 +58,14 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "editor-map" */ "@/views/MapEditorView.vue"),
   },
+  {
+    path: "/editor/playerData",
+    name: "PlayerDataView",
+    component: () =>
+      import(
+        /* webpackChunkName: "editor-map" */ "@/views/PlayerDataEditorView.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({

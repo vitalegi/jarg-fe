@@ -5,6 +5,7 @@
     v-model="model"
     @change="change"
     @keyup="keyup"
+    :disabled="disabled"
   ></v-text-field>
 </template>
 
@@ -16,6 +17,7 @@ export default Vue.extend({
   props: {
     label: String,
     value: String,
+    disabled: { type: Boolean, default: false },
   },
   data: () => ({
     model: "",
@@ -31,6 +33,11 @@ export default Vue.extend({
   },
   mounted() {
     this.model = this.value;
+  },
+  watch: {
+    value(v) {
+      this.model = v;
+    },
   },
 });
 </script>

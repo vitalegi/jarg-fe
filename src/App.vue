@@ -11,6 +11,7 @@
         <router-link to="/editor/abilities">Abilities</router-link> |
         <router-link to="/editor/maps">Maps</router-link> |
         <router-link to="/monsters/comparator">Compare</router-link> |
+        <router-link to="/editor/playerData">Player Data</router-link> |
         <router-link to="/about">About</router-link>
       </div>
     </v-app-bar>

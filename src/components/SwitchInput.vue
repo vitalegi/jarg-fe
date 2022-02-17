@@ -20,6 +20,11 @@ export default Vue.extend({
   mounted() {
     this.model = this.value;
   },
+  watch: {
+    value(v) {
+      this.model = v;
+    },
+  },
 });
 </script>
 

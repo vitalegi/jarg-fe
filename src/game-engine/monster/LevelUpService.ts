@@ -16,6 +16,7 @@ export class LevelUpService {
       `Monster ${monster.uuid} gains ${exp} EXP. Level EXP: ${monster.currentLevelExperience}, to next level: ${toNextLevel}.`
     );
     if (this.canLevelUp(monster, exp)) {
+      this.logger.info(`${monster.uuid} performs level up.`);
       await this.levelUp(monster);
       if (exp - toNextLevel > 0) {
         await this.gainExperience(monster, exp - toNextLevel);
@@ -35,27 +36,22 @@ export class LevelUpService {
     toLevel: number,
     restoreHP = false
   ): Promise<void> {
+    this.logger.info(`${monster.uuid} levels up to level ${toLevel}.`);
     while (monster.level < toLevel) {
       await this.levelUp(monster, restoreHP);
     }
   }
 
-  public async levelUp(monster: Monster, restoreHP = false): Promise<void> {
+  public toNextLevel(monster: Monster): number {
+    const levelExp = this.formulaService.getNextLevelExp(monster.level);
+    return levelExp - monster.currentLevelExperience;
+  }
+
+  private async levelUp(monster: Monster, restoreHP = false): Promise<void> {
     const toNextLevel = this.toNextLevel(monster);
     monster.experience += toNextLevel;
     monster.currentLevelExperience = 0;
     monster.level += 1;
     this.statsService.updateMonsterAttributes(monster, restoreHP);
-
-    this.logger.info(
-      `${monster.uuid} performs level up. New level ${
-        monster.level
-      }, new stats: ${monster.stats.toString()}`
-    );
-  }
-
-  public toNextLevel(monster: Monster): number {
-    const levelExp = this.formulaService.getNextLevelExp(monster.level);
-    return levelExp - monster.currentLevelExperience;
   }
 }
