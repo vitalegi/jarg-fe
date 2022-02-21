@@ -14,22 +14,15 @@ export default class LoggerEnabler {
     return value <= logLevel;
   }
 
+  public isAppenderEnabled(appenderLevel: number, logLevel: number): boolean {
+    return appenderLevel <= logLevel;
+  }
+
   protected retrieveLogLevel(name: string): number {
-    const level = RULES.filter((rule) => this.matches(name, rule.name))[0]
-      .level;
-    if (level === "ERROR") {
-      return LoggerLevel.ERROR;
-    }
-    if (level === "TRACE") {
-      return LoggerLevel.TRACE;
-    }
-    if (level === "INFO") {
-      return LoggerLevel.INFO;
-    }
-    if (level === "DEBUG") {
-      return LoggerLevel.DEBUG;
-    }
-    throw Error(`Unknown logger level ${level}`);
+    const level = RULES.loggers.filter((rule) =>
+      this.matches(name, rule.name)
+    )[0].level;
+    return LoggerLevel.getLogLevel(level);
   }
 
   protected matches(name: string, rule: string): boolean {

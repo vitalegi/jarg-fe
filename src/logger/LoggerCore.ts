@@ -1,9 +1,11 @@
+import Appender from "@/logger/appender/Appender";
 import ConsoleAppender from "@/logger/appender/ConsoleAppender";
 import LoggerEnabler from "@/logger/LoggerEnabler";
 import LoggerLevel from "@/logger/LoggerLevel";
+import RULES from "@/assets/logger.json";
 
 export default class LoggerCore {
-  protected appender = new ConsoleAppender();
+  protected appenders: Appender[] = this.getAppenders();
   protected enabler = new LoggerEnabler();
 
   public log(
@@ -14,14 +16,17 @@ export default class LoggerCore {
   ): void {
     if (this.enabler.isEnabled(logLevel, name)) {
       const log = this.format(logLevel, name, message, params);
+      const appenders = this.appenders.filter((a) =>
+        this.enabler.isAppenderEnabled(a.getLevel(), logLevel)
+      );
       if (logLevel === LoggerLevel.ERROR) {
-        let e = null;
+        let e: any = null;
         if (params.length > 0) {
           e = params[params.length - 1];
         }
-        this.appender.error(log, e);
+        appenders.forEach((a) => a.error(log, e));
       } else {
-        this.appender.append(log);
+        appenders.forEach((a) => a.append(log));
       }
     }
   }
@@ -82,5 +87,14 @@ export default class LoggerCore {
     const hours = Math.floor(offset / 60);
     const minutes = offset % 60;
     return `${sign}${this.pad(hours, 2)}:${this.pad(minutes, 2)}`;
+  }
+
+  protected getAppenders(): Appender[] {
+    return RULES.appenders.map((a) => {
+      if (a.name === "console") {
+        return new ConsoleAppender(LoggerLevel.getLogLevel(a.level));
+      }
+      throw Error(`Appender ${a.name} not recognized.`);
+    });
   }
 }

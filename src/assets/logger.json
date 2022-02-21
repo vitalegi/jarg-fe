@@ -1,4 +1,12 @@
-[
-  { "name": "GameEngine\\.MonsterAction\\.AI\\.MonsterAI", "level": "INFO" },
-  { "name": ".*", "level": "INFO" }
-]
+{
+  "loggers": [
+    { "name": "GameEngine\\.MonsterAction\\.AI\\.MonsterAI", "level": "INFO" },
+    { "name": ".*", "level": "INFO" }
+  ],
+  "appenders": [
+    {
+      "name": "console",
+      "level": "INFO"
+    }
+  ]
+}
