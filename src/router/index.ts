@@ -76,21 +76,12 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const logger = LoggerFactory.getLogger("Router");
   const secret = CookieUtil.getValue("secret");
-  const authorized = secret === process.env.VUE_APP_SECRET;
-  if (!authorized && to.name !== "Home") {
-    logger.debug(
-      `Navition from ${from.fullPath} to ${to.fullPath} not allowed`
-    );
-    next("/");
-  } else {
-    const isGameView = to.name === "Game";
-    store.commit("setGameMode", isGameView);
-
-    logger.info(
+  const isGameView = to.name === "Game";
+  store.commit("setGameMode", isGameView);
+  logger.info(
       `Navigating from ${from.fullPath} to ${to.fullPath}. GameMode: ${isGameView}`
     );
-    next();
-  }
+  next();
 });
 
 export default router;
